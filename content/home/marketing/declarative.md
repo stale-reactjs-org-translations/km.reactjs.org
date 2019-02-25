@@ -1,8 +1,8 @@
 ---
-title: Declarative
+title: ការប្រកាស
 order: 0
 ---
 
-React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
+React ផ្តល់នូវភាពងាយស្រួលបំផុតក្នុងការបង្កើត User Interfaces. ជាមួយនិងការ design views ដ៏សាមញ្ញសម្រាប់ state នីមួយៗនៅក្នុង application របស់អ្នក ហើយជាពិសេស React update និង​ render ទៅលើ components ទាំងឡាយណាដែលមាន data ផ្លាស់ប្តូរតែប៉ុណ្ណេាះ។
 
-Declarative views make your code more predictable and easier to debug.
+ការប្រកាស views អាចធ្វើអោយ​ code របស់អ្នកងាយស្រួលក្នុងការថែទាំហើយនិង debug។
