@@ -1,8 +1,8 @@
 ---
-title: Learn Once, Write Anywhere
+title: រៀនតែម្តង, ប្រើបានគ្រប់ទីកន្លែង
 order: 2
 ---
 
-We don't make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code.
+អ្នកអាចប្រើគ្រប់ភាសា programming ហើយនិងគ្រប់ technology ជាមួយនិង React, ដូច្នេះអ្នកអាចបង្កើត features ថ្មីៗ នៅក្នុង React ដោយមិនតម្រូវអោយសរសេរកូដឡើងវិញ។
 
-React can also render on the server using Node and power mobile apps using [React Native](https://facebook.github.io/react-native/).
+React អាច render នៅលើ server ដោយប្រើ Node ហើយនិងអាចបង្កើតកម្មវិធីទូរស័ព្ដោយប្រើ [React Native](https://facebook.github.io/react-native/)។
