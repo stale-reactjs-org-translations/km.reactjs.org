@@ -12,7 +12,7 @@ redirect_from:
   - "docs/tutorial-zh-CN.html"
 ---
 
-This tutorial doesn't assume any existing React knowledge.
+Tutorial នេះសម្រាប់ទាំងអ្នកដែលមានហើយនិងគ្មានចំណេះដឹងពី React។
 
 ## Before We Start the Tutorial {#before-we-start-the-tutorial}
 
