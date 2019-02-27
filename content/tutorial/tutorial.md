@@ -14,24 +14,24 @@ redirect_from:
 
 Tutorial នេះសម្រាប់ទាំងអ្នកដែលមានហើយនិងគ្មានចំណេះដឹងពី React។
 
-## Before We Start the Tutorial {#before-we-start-the-tutorial}
+## មុនពេលដែលយើងចាប់ផ្តើម tutorial {#before-we-start-the-tutorial}
 
-We will build a small game during this tutorial. **You might be tempted to skip it because you're not building games -- but give it a chance.** The techniques you'll learn in the tutorial are fundamental to building any React apps, and mastering it will give you a deep understanding of React.
+យើងនិងបង្កើតហ្គេមដ៏តូចមួយនៅក្នុង tutorial នេះ។ **អ្នកអាច skip វាបានពីព្រេាះអ្នកមិនមែនជាអ្នកបង្កើតហ្គេមនេាះទេ -- ប៉ុន្តែអ្នកគួរតែសាកល្បងវា។**  Techniques ដែលអ្នកនិងរៀននៅក្នុង tutorial នេះគឺមូលដ្ឋានគ្រឺះដើម្បីបង្កើត React apps, ហើយនិងការយល់ដឹងយ៉ាងសុីជម្រៅពី React។
 
->Tip
+>ពត៌មានជំនួយ
 >
->This tutorial is designed for people who prefer to **learn by doing**. If you prefer learning concepts from the ground up, check out our [step-by-step guide](/docs/hello-world.html). You might find this tutorial and the guide complementary to each other.
+>Tutorial នេះគេ design សម្រាប់អ្នកដែលចូលចិត្ត**រៀនដោយការអនុវត្តន៍**។ ប្រសិនជាអ្នកចង់រៀន concept មូលដ្ឋានតំបូងរបស់​ React, អ្នកអាចឆែកមើល [step-by-step guide](/docs/hello-world.html) របស់យើងបាន។ អ្នកប្រាកដជាយល់ឃើញថា​​ tutorail នេះហើយនិង step-by-step guid គឺបំពេញឱ្យគ្នាទៅវិញទៅមក
 
-The tutorial is divided into several sections:
+Tutorail នេះត្រូវបានគេបែងចែកជាច្រើនផ្នែក​ដូចខាងក្រោម​៖
 
-* [Setup for the Tutorial](#setup-for-the-tutorial) will give you **a starting point** to follow the tutorial.
-* [Overview](#overview) will teach you **the fundamentals** of React: components, props, and state.
-* [Completing the Game](#completing-the-game) will teach you **the most common techniques** in React development.
-* [Adding Time Travel](#adding-time-travel) will give you **a deeper insight** into the unique strengths of React.
+* [រៀបចំសម្រាប់ ​Tutorial](#setup-for-the-tutorial) នឹងផ្តល់ឱ្យអ្នកនូវ**ចំណុចចាប់ផ្តើមមួយ**ដើម្បីអនុវត្តតាមការបង្រៀន។
+* [ទិដ្ឋភាពទូទៅ](#overview) នឹងបង្រៀនអ្នកនូវ**មូលដ្ឋានគ្រឹះ**ពី React ដូចជា៖ components, props, and state។
+* [Completing the Game](#completing-the-game) នឹងបង្រៀនអ្នកនូវ**បច្ចេកទេសទូទៅបំផុត**ក្នុងការ develop React។
+* [Adding Time Travel](#adding-time-travel) នឹងផ្តល់ឱ្យអ្នកនូវ**ការយល់ដឹងកាន់តែស៊ីជម្រៅ**នៃចំណុចខ្លាំងតែមួយគត់របស់ React។
 
-You don't have to complete all of the sections at once to get the value out of this tutorial. Try to get as far as you can -- even if it's one or two sections.
+អ្នកមិនចាំបាច់រៀនគ្រប់ផ្នែកទាំងអស់ក្នុងពេលតែមួយនេាះទេ។ អ្នកអាចរៀនផ្នែកណាមួយតាមតែអ្នកអាចធ្វើទៅបាន -- អ្នកអាចរៀនមួយផ្នែកឬក៏ពីរផ្នែក។
 
-It's fine to copy and paste code as you're following along the tutorial, but we recommend to type it by hand. This will help you develop a muscle memory and a stronger understanding.
+អ្នកអាច copy ហើយ paste កូដនៅពេលដែលអ្នកកំពុងអនុវត្តតាម tutorial, ប៉ុន្តែយើងសូមផ្តល់អនុសាសន៍អោយអ្នកវាយកូដដោយខ្លួនឯងផ្ទាល់។ ព្រេាះវាអាចជួយអ្នកឱ្យកាន់តែចងចាំនិងយល់កាន់តែច្បាស់។
 
 ### What Are We Building? {#what-are-we-building}
 
