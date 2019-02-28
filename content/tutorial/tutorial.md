@@ -49,9 +49,9 @@ Tutorail នេះត្រូវបានគេបែងចែកជាច្�
 
 បើសិនជាអ្នកត្រូវការ review JavaScript, យើងសូមផ្តល់យោបល់ឱ្យអាន [this guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)។ សូមកត់ចំណាំថាយើងនឹងប្រើ features មួយចំនួនរបស់ ES6 ផងដែរ -- កំណែទំរង់ថ្មីរបស់ JavaScript. នៅក្នុង tutorial នេះ, យើងនឹងប្រើ [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let), ហើយនិង [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) statements. អ្នកអាចប្រើ [Babel REPL](babel://es5-syntax-example) ដើម្បីឆែកមើលថាតើ code របស់ ES6 នឹង compile ទៅជាអ្វី។
 
-## Setup for the Tutorial {#setup-for-the-tutorial}
+## ការរៀបចំសម្រាប់ ​Tutorial {#setup-for-the-tutorial}
 
-There are two ways to complete this tutorial: you can either write the code in your browser, or you can set up a local development environment on your computer.
+មានពីរវិធីដើម្បីអនុវត្តការសរសេរកូដនៅក្នុង tutorial នេះ៖ អ្នកអាចសរសេរកូដនៅលើ browser របស់អ្នកផ្ទាល់, ឬក៏អ្នកអាចរៀបចំ environment ក្នុងការ development នៅក្នុងកុំព្យូទ័ររបស់អ្នក។
 
 ### Setup Option 1: Write Code in the Browser {#setup-option-1-write-code-in-the-browser}
 
