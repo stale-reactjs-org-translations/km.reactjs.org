@@ -69,42 +69,45 @@ Tutorail នេះត្រូវបានគេបែងចែកជាច្�
 
 <details>
 
-<summary><b>Optional: Instructions for following along locally using your preferred text editor</b></summary>
+<summary><b>Optional: សេចក្តីណែនាំខាងក្រោមគឺភ្ជាប់ជាមួយការប្រើ text editor ដែលអ្នកចូលចិត្តនៅក្នុងកុំព្យូទ័ររបស់អ្នក</b></summary>
 
-This setup requires more work but allows you to complete the tutorial using an editor of your choice. Here are the steps to follow:
+ការតំឡើងនេះតម្រូវអោយអ្នកធ្វើការងារធ្ងន់បន្តិច ប៉ុន្តែអាចអោយអ្នកអនុវត្តការសរសេរកូដនៅក្នុង tutorial នេះដោយប្រើ​ text editor ដែលអ្នកចូលចិត្តបាន។ ខាងក្រោមគឺជាជំហានដែលត្រូវអនុវត្តតាម៖
 
-1. Make sure you have a recent version of [Node.js](https://nodejs.org/en/) installed.
-2. Follow the [installation instructions for Create React App](/docs/create-a-new-react-app.html#create-react-app) to make a new project.
+១. ត្រូវប្រាកដថាអ្នកបាន install [Node.js](https://nodejs.org/en/) ដែលមានកំណែទំរង់ថ្មី។
+<br>
+២. អនុវត្តតាម [installation instructions for Create React App](/docs/create-a-new-react-app.html#create-react-app) ដើម្បីបង្កើត project ថ្មីមួយ។
 
 ```bash
 npx create-react-app my-app
 ```
 
-3. Delete all files in the `src/` folder of the new project 
+៣. លុប files ទាំងអស់នៅក្នុងថតឯកសារ `src/` របស់ project ថ្មីនេាះ
 
-> Note:
+> ចំណាំ៖
 >
->**Don't delete the entire `src` folder, just the original source files inside it.** We'll replace the default source files with examples for this project in the next step.
+>**កុំលុបថតថតឯកសារ `src` ទាំងមូល, លុបតែ files ដែលនៅក្នុងវាទៅបានហើយ។**  យើងនឹងជំនួសឯកសារដើមដោយឧទាហរណ៍វិញសម្រាប់ project មួយនេះ។
 
 ```bash
 cd my-app
 cd src
 
-# If you're using a Mac or Linux:
+# ប្រសិនជាអ្នកប្រើ Mac ឬក៏Linux៖
 rm -f *
 
-# Or, if you're on Windows:
+# ឬក៏, អ្នកប្រើ Window៖
 del *
 
-# Then, switch back to the project folder
+# បន្ទាប់មក, ត្រឡប់ទៅកាន់ថតឯកសាររបស់ project វិញ
 cd ..
 ```
 
-4. Add a file named `index.css` in the `src/` folder with [this CSS code](https://codepen.io/gaearon/pen/oWWQNa?editors=0100).
+៤. បន្ថែម file មួយដោយដាក់ឈ្មេាះថា `index.css` ចូលទៅក្នុងថតឯកសារ `src/` ជាមួយនិង [this CSS code](https://codepen.io/gaearon/pen/oWWQNa?editors=0100)។
 
-5. Add a file named `index.js` in the `src/` folder with [this JS code](https://codepen.io/gaearon/pen/oWWQNa?editors=0010).
+៥. បន្ថែម file មួយដោយដាក់ឈ្មេាះថា `index.js` ចូលទៅក្នុងថតឯកសារ `src/` ជាមួយនិង [this JS code](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)។
 
 6. Add these three lines to the top of `index.js` in the `src/` folder:
+
+៦. បន្ថែមកូដបីបន្ទាត់ខាងក្រោមទៅផ្នែកខាងលើគេនៃ `index.js` ដែលស្ថិតនៅក្នុងថតឯកសារ `src/`៖
 
 ```js
 import React from 'react';
@@ -112,9 +115,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 ```
 
-Now if you run `npm start` in the project folder and open `http://localhost:3000` in the browser, you should see an empty tic-tac-toe field.
+ឥឡូវនេះប្រសិនបើអ្នក run `npm start` នៅក្នុងថតឯកសាររបស់ project ហើយបើក `http://localhost:3000` នៅលើ browser, អ្នកគួរតែឃើញ tic-tac-toe ហ្គេមទទេមួយ។
 
-We recommend following [these instructions](https://babeljs.io/docs/editors/) to configure syntax highlighting for your editor.
+យើងសូមផ្តល់អនុសាសន៍ [these instructions](https://babeljs.io/docs/editors/) ដើម្បីកំណត់ syntax highlighting សម្រាប់ editor របស់អ្នក។
 
 </details>
 
