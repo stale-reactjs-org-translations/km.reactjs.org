@@ -125,9 +125,9 @@ import './index.css';
 
 ប្រសិនជាអ្នកជាប់គាំង, អ្នកអាចឆែកមើល [community support resources](/community/support.html). ជាពិសេស, [Reactiflux Chat](https://discord.gg/0ZcbPKXt5bZjGY5n) គឺជាវិធីដ៏ល្អមួយដើម្បីទទួលបានជំនួយយ៉ាងឆាប់រហ័ស។ ប្រសិនបើអ្នកមិនទទួលបានចម្លើយទេ, ឬប្រសិនបើអ្នកនៅជាប់គាំង, សូមរាយការណ៍នូវបញ្ហា, ហើយយើងនឹងជួយអ្នក។
 
-## Overview {#overview}
+## ទិដ្ឋភាពទូទៅ   {#overview}
 
-Now that you're set up, let's get an overview of React!
+ឥឡូវនេះអ្នកបានធ្វើការរៀបចំសម្រាប់ tutorial នេះរួចរាល់ហើយ, តេាះចាប់ផ្តើមនូវទិដ្ឋភាពទូទៅរបស់ React!
 
 ### What Is React? {#what-is-react}
 
