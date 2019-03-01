@@ -61,9 +61,9 @@ Tutorail នេះត្រូវបានគេបែងចែកជាច្�
 
 ឥឡូវអ្នកអាចរំលងជម្រើសទី២ក្នុងការតំឡើង, ហើយចូលទៅក្នុងផ្នែក [ទិដ្ឋភាពទូទៅ](#overview) ដើម្បីទទួលបាននូវមូលដ្ឋានគ្រឹះពី React។
 
-### Setup Option 2: Local Development Environment {#setup-option-2-local-development-environment}
+### ជម្រើសទី២៖  តំឡើង environment ក្នុងការ development នៅក្នុងកុំព្យូទ័រ {#setup-option-2-local-development-environment}
 
-This is completely optional and not required for this tutorial!
+នេះគឺជាជម្រើសដែលមិនចាំបាច់សម្រាប់ tutorial នេះទេ! ហើយក៏មិនតម្រូវអោយអ្នកត្រូវតែធ្វើការតំឡើងវាដែរ!
 
 <br>
 
@@ -118,9 +118,9 @@ We recommend following [these instructions](https://babeljs.io/docs/editors/) to
 
 </details>
 
-### Help, I'm Stuck! {#help-im-stuck}
+### ជំនួយ, ខ្ញុំជាប់គាំងហើយ!   {#help-im-stuck}
 
-If you get stuck, check out the [community support resources](/community/support.html). In particular, [Reactiflux Chat](https://discord.gg/0ZcbPKXt5bZjGY5n) is a great way to get help quickly. If you don't receive an answer, or if you remain stuck, please file an issue, and we'll help you out.
+ប្រសិនជាអ្នកជាប់គាំង, អ្នកអាចឆែកមើល [community support resources](/community/support.html). ជាពិសេស, [Reactiflux Chat](https://discord.gg/0ZcbPKXt5bZjGY5n) គឺជាវិធីដ៏ល្អមួយដើម្បីទទួលបានជំនួយយ៉ាងឆាប់រហ័ស។ ប្រសិនបើអ្នកមិនទទួលបានចម្លើយទេ, ឬប្រសិនបើអ្នកនៅជាប់គាំង, សូមរាយការណ៍នូវបញ្ហា, ហើយយើងនឹងជួយអ្នក។
 
 ## Overview {#overview}
 
