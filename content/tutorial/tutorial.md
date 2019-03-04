@@ -131,7 +131,7 @@ import './index.css';
 
 ### តើអ្វីជា React? {#what-is-react}
 
-React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called "components".
+React គឺជាការប្រកាស, ប្រសិទ្ធិភាព, ហើយនិង JavaScript library ដែល flexible មួយសម្រាប់បង្កើត user interfaces។ វាអនុញ្ញាតឱ្យអ្នកបង្កើត UIs ដែលស្មុគស្មាញ ពីបំណែកតូចៗនិងដាច់ពីគ្នានៃកូដដែលគេហៅថា "components"។
 
 React has a few different kinds of components, but we'll start with `React.Component` subclasses:
 
