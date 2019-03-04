@@ -129,7 +129,7 @@ import './index.css';
 
 ឥឡូវនេះអ្នកបានធ្វើការរៀបចំសម្រាប់ tutorial នេះរួចរាល់ហើយ, តេាះចាប់ផ្តើមនូវទិដ្ឋភាពទូទៅរបស់ React!
 
-### What Is React? {#what-is-react}
+### តើអ្វីជា React? {#what-is-react}
 
 React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called "components".
 
