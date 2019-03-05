@@ -231,10 +231,9 @@ class Square extends React.Component {
 
 អបអរសាទរ! អ្នកទើបតែបាន "បញ្ជូន prop មួយ" ពី parent Board component ទៅកាន់ child Square component។ ការបញ្ជូន props គឺជារបៀបដែលពត៌មានហូរនៅក្នុង React apps, ពី parent ទៅកាន់ children។
 
-### Making an Interactive Component {#making-an-interactive-component}
+### ការបង្កើត Interactive Component មួយ {#making-an-interactive-component}
 
-Let's fill the Square component with an "X" when we click it.
-First, change the button tag that is returned from the Square component's `render()` function to this:
+តេាះបំពេញ Square component ជាមួយនិង "X" នៅពេលដែលយើង click វា។ តំបូង, ផ្លាស់ប្តូរ button tag ដែលត្រូវបានគេ return ពី `render()` function របស់ Square component​ ដូចខាងក្រោម៖
 
 ```javascript{4}
 class Square extends React.Component {
@@ -248,11 +247,13 @@ class Square extends React.Component {
 }
 ```
 
-If we click on a Square now, we should get an alert in our browser.
+ប្រសិនជាយើង click លើ Square ឥឡូវ​នេះ, យើងគួរតែទទួលបាននូវ alert មួយនៅក្នុង browser យើង។
 
->Note
+សម្រាប់ event handlers 
+
+>ចំណាំ
 >
->To save typing and avoid the [confusing behavior of `this`](https://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/), we will use the [arrow function syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for event handlers here and further below:
+>ដើម្បីជាជំនួយក្នុងការ typing ហើយនិងជៀសវាង [ការភាន់ច្រឡំនូវ behavior របស់ `this`](https://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/), យើងនឹងប្រើ​ [arrow function syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) សម្រាប់ event handlers នៅទីនេះហើយនិងពេលខាងមុខទៀត៖
 >
 >```javascript{4}
 >class Square extends React.Component {
