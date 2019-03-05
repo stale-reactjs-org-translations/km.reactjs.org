@@ -267,13 +267,13 @@ class Square extends React.Component {
 >}
 >```
 >
->Notice how with `onClick={() => alert('click')}`, we're passing *a function* as the `onClick` prop. It only fires after a click. Forgetting `() =>` and writing `onClick={alert('click')}` is a common mistake, and would fire the alert every time the component re-renders.
+>សូមកត់សម្គាល់ពីបៀបជាមួយ `onClick={() => alert('click')}`, យើងនឹងបញ្ជូន *function មួយ* ជា `onClick` prop។ វា fire តែពេលបន្ទាប់ពី click តែប៉ុណ្ណោះ។ បំភ្លេច `() =>` ហើយសរសេរ `onClick={alert('click')}` គឺជាកំហុសធម្មតា, ហើយនិង fire ការ alert រាល់ពេលដែល component ធ្វើការ re-renders។
 
-As a next step, we want the Square component to "remember" that it got clicked, and fill it with an "X" mark. To "remember" things, components use **state**.
+ជំហានបន្ទាប់, យើងចង់អោយ Square component "ចងចាំ" ថាវាត្រូវបានគេ click, ហើយនិងបំពេញវាជាមួយនិងសញ្ញា "X"។ ដើម្បី "ចងចាំ" អ្វីមួយ, component ប្រើ **state**។
 
-React components can have state by setting `this.state` in their constructors. `this.state` should be considered as private to a React component that it's defined in. Let's store the current value of the Square in `this.state`, and change it when the Square is clicked.
+React components អាចមាន state ដោយការកំណត់ `this.state` នៅក្នុង constructors។ `this.state` គួរតែត្រូវបានចាត់ទុកជា private នៅក្នុង React component។ តេាះរក្សារតម្លៃបច្ចុប្បន្នរបស់ Square នៅក្នុង `this.state`, ហើយផ្លាស់ប្តូរវានៅពេលដែល Square ត្រូវបាន click.
 
-First, we'll add a constructor to the class to initialize the state:
+តំបូង, យើងនឹង add constructor មួយទៅអោយ class ដើម្បីកំណត់តម្លៃ state៖
 
 ```javascript{2-7}
 class Square extends React.Component {
@@ -294,17 +294,17 @@ class Square extends React.Component {
 }
 ```
 
->Note
+>ចំណាំ
 >
->In [JavaScript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), you need to always call `super` when defining the constructor of a subclass. All React component classes that have a `constructor` should start it with a `super(props)` call.
+>នៅក្នុង [JavaScript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), អ្នកតម្រូវអោយ call `super` នៅពេលធ្វើការកំណត់ constructor នៃ subclass។ React component classes ទាំងអស់ដែលមាន constructor គួរតែចាប់ផ្តើមជាមួយនិងការ call `super(props)`។
 
-Now we'll change the Square's `render` method to display the current state's value when clicked:
+ឥឡូវ​នេះយើងនឹងផ្លាស់ប្តូរ `render` method របស់ Square ដើម្បីបង្ហាយតម្លៃ​បច្ចុប្បន្របស់ state នៅពេលដែលត្រូវបាន click៖
 
-* Replace `this.props.value` with `this.state.value` inside the `<button>` tag.
-* Replace the `() => alert()` event handler with `() => this.setState({value: 'X'})`.
-* Put the `className` and `onClick` props on separate lines for better readability.
+* ជំនួស `this.props.value` ជាមួយនិង `this.state.value` នៅខាងក្នុង `<button>` tag។
+* ជំនួស `() => alert()` event handler ជាមួយនិង `() => this.setState({value: 'X'})`។
+* ដាក់ `className` ហើយនិង `onClick` props នៅលើបន្ទាត់ដាច់ដោយឡែកសម្រាប់ភាពងាយស្រួលក្នុងការអាន។
 
-After these changes, the `<button>` tag that is returned by the Square's `render` method looks like this:
+បន្ទាប់ពីការផ្លាស់ប្តូរទាំងនេះ, `<button>` tag ដែលត្រូវបាន return ដោយ `render` method របស់ Square នឹងមើលទៅដូចនេះ៖
 
 ```javascript{12-13,15}
 class Square extends React.Component {
@@ -328,9 +328,9 @@ class Square extends React.Component {
 }
 ```
 
-By calling `this.setState` from an `onClick` handler in the Square's `render` method, we tell React to re-render that Square whenever its `<button>` is clicked. After the update, the Square's `this.state.value` will be `'X'`, so we'll see the `X` on the game board. If you click on any Square, an `X` should show up.
+តាមរយៈការ call `this.setState` ពី `onClick` handler នៅក្នុង `render` method របស់ Square, យើងប្រាប់ React ធ្វើការ re-render Square គ្រប់ពេលដែល `<button>` ត្រូវបាន click។ បន្ទាប់ពីការ update, `this.state.value` របស់ Square នឹងប្តូរទៅជា `'X'`, ដូច្នេះយើងនឹងឃើញ `X` នៅលើ board របស់ហ្គេម។ បើអ្នក click លើ​​ Square ផ្សេងៗទៀត, `X` គួរតែបង្ហាយ។
 
-When you call `setState` in a component, React automatically updates the child components inside of it too.
+នៅពេលដែលអ្នក call `setState` នៅក្នុង component មួយ, React នឹង update child component ដែលនៅក្នុងវាដោយស្វ័យប្រវត្តិ.
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/VbbVLg?editors=0010)**
 
