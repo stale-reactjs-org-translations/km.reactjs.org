@@ -178,19 +178,19 @@ JSX ភ្ជាប់មកជាមួយនូវអានុភាពរប�
 `ShoppingList` component ដែលនៅខាងលើគឺ renders តែ built-in DOM components តែប៉ុណ្ណេះដូចជា `<div />` ហើយនិ `<li />`។ ប៉ុន្តែអ្នកអាចបង្កើតហើយនិង render custom React components ផងដែរ។ ឧទាហរណ៍, ឥឡូវ​នេះយើងអាចយោងទៅលើ shopping list ដោយសរសេរ `<ShoppingList />`។ React component នីមួយៗគឺ encapsulated ហើយនិង
 អាចដំណើរការដោយឯករាជ្យ; នេះអនុញ្ញាតឱ្យអ្នកបង្កើត UI ដែលស្មុគ្រស្មាញពី components ដែលសាមញ្ញ។
 
-## Inspecting the Starter Code {#inspecting-the-starter-code}
+## ការត្រួតពិនិត្យ   Starter Code {#inspecting-the-starter-code}
 
-If you're going to work on the tutorial **in your browser,** open this code in a new tab: **[Starter Code](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)**. If you're going to work on the tutorial **locally,** instead open `src/index.js` in your project folder (you have already touched this file during the [setup](#setup-option-2-local-development-environment)).
+បើសិនជាអ្នកនិងធ្វើការលើ tutorial **នៅក្នុង  browser,** បើកកូដនេះក្នុងផ្ទាំងថ្មី៖ **[Starter Code](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)**។ បើសិនជាអ្នកនឹងធ្វើការលើ tutorial **នៅក្នុងកុំព្យូទ័ររបស់អ្នក**, បើក `src/index.js` នៅក្នុងថតឯកសាររបស់ project (អ្នកបានប៉ះឯកសារនេះរួចហើយកំឡុងពេល [setup](#setup-option-2-local-development-environment))
 
-This Starter Code is the base of what we're building. We've provided the CSS styling so that you only need to focus on learning React and programming the tic-tac-toe game.
+Starter Code នេះគឺជាមូលដ្ឋាននៃអ្វីដែលយើងនឹងបង្កើត។ យើងបានផ្តល់នូវ CSS styling ដូច្នេះអ្នកត្រូវតែផ្តោតលើការរៀន React ហើយនិង programming ហ្គេម tic-tac-toe។
 
-By inspecting the code, you'll notice that we have three React components:
+តាមរយៈការត្រួតពិនិត្យកូដ, អ្នកនឹងកត់សម្គាល់ថាយើងមាន React components ចំនួន៣៖
 
 * Square
 * Board
 * Game
 
-The Square component renders a single `<button>` and the Board renders 9 squares. The Game component renders a board with placeholder values which we'll modify later. There are currently no interactive components.
+Square component renders `<button>` តែមួយហើយ Board renders squares ចំនួន៩។ Game component render board មួយជាមួយនិង តម្លៃរបស់ placeholder ដែលយើងនឹងកែប្រែនៅពេលក្រោយ។ បច្ចុប្បន្នគឺអត់ទាន់មាន interactive components ទេ។
 
 ### Passing Data Through Props {#passing-data-through-props}
 
