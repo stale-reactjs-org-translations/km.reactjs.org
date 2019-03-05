@@ -334,22 +334,24 @@ class Square extends React.Component {
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/VbbVLg?editors=0010)**
 
-### Developer Tools {#developer-tools}
+### Tools របស់ Developer {#developer-tools}
 
-The React Devtools extension for [Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) lets you inspect a React component tree with your browser's developer tools.
+React Devtools extension សម្រាប់ [Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) ហើយនិង [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) អាចអោយអ្នកត្រួតពិនិត្យ React component tree ជាមួយ developer tools របស់ browser បាន។
 
 <img src="../images/tutorial/devtools.png" alt="React Devtools" style="max-width: 100%">
 
-The React DevTools let you check the props and the state of your React components.
+React DevTools អាចអោយអ្នកឆែកមើល props ហើយនិង state របស់ React components បាន។
 
 After installing React DevTools, you can right-click on any element on the page, click "Inspect" to open the developer tools, and the React tab will appear as the last tab to the right.
 
-**However, note there are a few extra steps to get it working with CodePen:**
+បន្ទាប់ពីដំឡើង React DevTools, អ្នកអាច right-click លើ element ដែលមាននៅលើ page, click "Inspect" ដើម្បីបើក developer tools, ហើយ React tab នឹងលេចឡើងនៅផ្ទាំងចុងក្រោយខាងស្តាំ។
 
-1. Log in or register and confirm your email (required to prevent spam).
-2. Click the "Fork" button.
-3. Click "Change View" and then choose "Debug mode".
-4. In the new tab that opens, the devtools should now have a React tab.
+**ទោះជាយ៉ាងណាក៏ដោយ, សូមកត់សម្គាល់ថាមានជំហានបន្ថែមមួយចំនួនទៀតដើម្បីអោយវាដំណើរការជាមួយ CodePen​៖**
+
+1. ចូល log in ឬក៏ចុះឈ្មោះ ហើយបញ្ជាក់ email របស់អ្នក (ទាមទារដើម្បីទប់ស្កាត់សារឥតបានការ)។
+2. Click លើ "Fork" ប៊ូតុង។
+3. Click លើ "Change View" ហើយបន្ទាប់មកជ្រើសរើស "Debug mode"។​
+4. នៅក្នុងផ្ទាំងថ្មីដែលបើក, devtools ឥឡូវនេះគួរតែមានផ្ទាំង React។
 
 ## Completing the Game {#completing-the-game}
 
