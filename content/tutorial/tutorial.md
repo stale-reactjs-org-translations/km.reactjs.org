@@ -192,11 +192,11 @@ Starter Code នេះគឺជាមូលដ្ឋាននៃអ្វីដ�
 
 Square component renders `<button>` តែមួយហើយ Board renders squares ចំនួន៩។ Game component render board មួយជាមួយនិង តម្លៃរបស់ placeholder ដែលយើងនឹងកែប្រែនៅពេលក្រោយ។ បច្ចុប្បន្នគឺអត់ទាន់មាន interactive components ទេ។
 
-### Passing Data Through Props {#passing-data-through-props}
+### ការបញ្ជូន  Data តាមរយៈ  Props {#passing-data-through-props}
 
-Just to get our feet wet, let's try passing some data from our Board component to our Square component.
+ចាប់ផ្តើមទទួលបានបទពិសោធ, តេាះសាកល្បងបញ្ជូន data ពី Board component ទៅកាន់ Square component។
 
-In Board's `renderSquare` method, change the code to pass a prop called `value` to the Square:
+នៅក្នុង `renderSquare` method របស់ Board component, ផ្លាស់ប្តូរកូដដើម្បីបញ្ជូន props មួយដែលមានឈ្មេាះ `value` ទៅកាន់ Square component។
 
 ```js{3}
 class Board extends React.Component {
@@ -205,7 +205,7 @@ class Board extends React.Component {
   }
 ```
 
-Change Square's `render` method to show that value by replacing `{/* TODO */}` with `{this.props.value}`:
+ផ្លាស់ប្តូរ `render` method របស់ Square component ដើម្បីបង្ហាយ value ដោយការជំនួសដោយ `{/* TODO */}` ជាមួយនិង `{this.props.value}`​៖
 
 ```js{5}
 class Square extends React.Component {
@@ -219,17 +219,17 @@ class Square extends React.Component {
 }
 ```
 
-Before:
+ពីមុន​៖
 
 ![React Devtools](../images/tutorial/tictac-empty.png)
 
-After: You should see a number in each square in the rendered output.
+អ្នកគួរតែឃើញលេខនៅក្នុង square នីមួយៗចំនួន១នៅក្នុងលទ្ធផលបង្ហាញ។
 
 ![React Devtools](../images/tutorial/tictac-numbers.png)
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/aWWQOG?editors=0010)**
 
-Congratulations! You've just "passed a prop" from a parent Board component to a child Square component. Passing props is how information flows in React apps, from parents to children.
+អបអរសាទរ! អ្នកទើបតែបាន "បញ្ជូន prop មួយ" ពី parent Board component ទៅកាន់ child Square component។ ការបញ្ជូន props គឺជារបៀបដែលពត៌មានហូរនៅក្នុង React apps, ពី parent ទៅកាន់ children។
 
 ### Making an Interactive Component {#making-an-interactive-component}
 
