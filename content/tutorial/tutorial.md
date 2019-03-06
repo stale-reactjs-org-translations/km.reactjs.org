@@ -359,9 +359,9 @@ After installing React DevTools, you can right-click on any element on the page,
 
 ### Lifting State Up {#lifting-state-up}
 
-Currently, each Square component maintains the game's state. To check for a winner, we'll maintain the value of each of the 9 squares in one location.
+បច្ចុប្បន្ន, Square component នីមួយៗរក្សារនូវ state របស់ហ្គេម។ ដើម្បីពិនិត្យរកអ្នកឈ្នះ, យើងនឹងរក្សារតម្លៃនីមួយៗរបស់ squares ទាំង៩នៅក្នុងទីតាំងមួយ។
 
-We may think that Board should just ask each Square for the Square's state. Although this approach is possible in React, we discourage it because the code becomes difficult to understand, susceptible to bugs, and hard to refactor. Instead, the best approach is to store the game's state in the parent Board component instead of in each Square. The Board component can tell each Square what to display by passing a prop, [just like we did when we passed a number to each Square](#passing-data-through-props).
+យើងប្រហែលជាគិតថា Board គួរតែស្នើរសុំនូវតម្លៃ state របស់Square នីមួយៗ។ បើទោះបីជាវិធីសាស្រ្តនេះគឺអាចធ្វើទៅបាន សម្រាប់ React, យើងមិនលើកទឹកចិត្តអោយធ្វើតាមវិធីនេះទេពីព្រេាះកូដនឹងក្លាយទៅជាពិបាកយល់​, ងាយនិងមាន bugs, ហើយពិបាកក្នុការ refactor។ ជំនួសវិញ, វិធីសាស្រ្តដ៏ល្អបំផុតគឺត្រូវរក្សាទុក state របស់ហ្គេម នៅក្នុង parent Board component ជំនួសអោយការរក្សារទុកនៅក្នុង Square នីមួយៗ។ Board component អាចប្រាប់ Square នីមួយៗនូវអ្វីដែលត្រូវបង្ហាយដោយការបញ្ជូន props មួយ, [just like we did when we passed a number to each Square](#passing-data-through-props)។
 
 **To collect data from multiple children, or to have two child components communicate with each other, you need to declare the shared state in their parent component instead. The parent component can pass the state back down to the children by using props; this keeps the child components in sync with each other and with the parent component.**
 
