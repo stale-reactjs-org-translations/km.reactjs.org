@@ -355,7 +355,7 @@ After installing React DevTools, you can right-click on any element on the page,
 
 ## Completing the Game {#completing-the-game}
 
-We now have the basic building blocks for our tic-tac-toe game. To have a complete game, we now need to alternate placing "X"s and "O"s on the board, and we need a way to determine a winner.
+ឥឡូវនេះយើងមានមូលដ្ឋានក្នុងការបង្កើត blocks សម្រាប់ tic-tac-toe ហ្គេមរបស់យើង។ ដើម្បីអោយបានហ្គេមមួយអោយពេញលេញ, ឥឡូវនេះយើងត្រូវដាក់ជំនួស "X"s ហើយនិង "O"s ទៅលើ board, ហើយយើងត្រូវការវិធីមួយដើម្បីកំណត់អ្នកឈ្នះ។
 
 ### Lifting State Up {#lifting-state-up}
 
