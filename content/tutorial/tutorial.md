@@ -365,9 +365,7 @@ After installing React DevTools, you can right-click on any element on the page,
 
 **ដើម្បីប្រមូល data ពី children ជាច្រើន, ឬក៏ដើម្បីអោយ child components ២ទំនាក់ទំនងជាមួយគ្នាទៅវិញទៅមក, អ្នកត្រូវ declare state នៅក្នុង parent component។ Parent component អាចបញ្ជូន state ចុះទៅ់ children ដោយការប្រើ props; នេះអាចអោយ child components syn ជាមួយគ្នាទៅវិញទៅមក, ហើយនិង syn ជាមួយ parent component ផងដែរ។**
 
-
-
-Lifting state into a parent component is common when React components are refactored -- let's take this opportunity to try it out. We'll add a constructor to the Board and set the Board's initial state to contain an array with 9 nulls. These 9 nulls correspond to the 9 squares:
+ការយក​ state ដាក់ចូលទៅក្នុង parent component គឺជាការធម្មតា​ នៅពេលដែល React components ត្រូវបាន refactor -- សូមឆ្លៀតឱកាសនេះដើម្បីសាកល្បងវា។ យើងនឹងបន្ថែម constructor ទៅអោយ Board ហើយនិងកំណត់តម្លៃ state របស់ Board ដោយផ្ទុកនូវ array មួយជាមួយនិង​ nulls ចំនួន៩។ nulls ទាំង៩នេះទាក់ទងទៅនឹង៩ squares៖
 
 ```javascript{2-7}
 class Board extends React.Component {
@@ -409,7 +407,7 @@ class Board extends React.Component {
 }
 ```
 
-When we fill the board in later, the board will look something like this:
+នៅពេលដែលយើងបំពេញ board នៅពេលក្រោយ, board នឹងមើលទៅដូចនេះ៖
 
 ```javascript
 [
@@ -419,7 +417,7 @@ When we fill the board in later, the board will look something like this:
 ]
 ```
 
-The Board's `renderSquare` method currently looks like this:
+`renderSquare` method របស់ Board បច្ចុប្បន្នមើលទៅដូចនេះ៖
 
 ```javascript
   renderSquare(i) {
@@ -428,6 +426,8 @@ The Board's `renderSquare` method currently looks like this:
 ```
 
 In the beginning, we [passed the `value` prop down](#passing-data-through-props) from the Board to show numbers from 0 to 8 in every Square. In a different previous step, we replaced the numbers with an "X" mark [determined by Square's own state](#making-an-interactive-component). This is why Square currently ignores the `value` prop passed to it by the Board.
+
+នៅពេលចាប់ផ្តើម, យើង[បានបញ្ជូន `value` របស់ prop ចុះក្រោម](#passing-data-through-props)ពី Board ដើម្បីបង្ហាយចំនួនលេខពី០ទៅ៨នៅក្នុង Square ទាំងអស់។ នៅក្នុងជំហានមុនផ្សេងគ្នា, យើងបានជំនួសលេខដោយសញ្ញា "X" [determined by Square's own state](#making-an-interactive-component)។ នេះជាមូលហេតុដែល Square បច្ចុប្បន្នមិនអើពើ `value` របស់ prop ដែលបានបញ្ជួនអោយវាដោយ Board។
 
 We will now use the prop passing mechanism again. We will modify the Board to instruct each individual Square about its current value (`'X'`, `'O'`, or `null`). We have already defined the `squares` array in the Board's constructor, and we will modify the Board's `renderSquare` method to read from it:
 
