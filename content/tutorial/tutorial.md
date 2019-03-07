@@ -442,7 +442,7 @@ Square នីមួយៗនឹងទទួលបាននូវ `value` រប�
 
 បន្ទាប់, យើងត្រូវការផ្លាស់ប្តូរអ្វីដែលកើតឡើងនៅពេលដែល Square ត្រូវបាន click។ ឥឡូវនេះ Board component រក្សារទុកនូវ squares ដែលត្រូវបានបំពេញ។​ យើងត្រូវបង្កើតវិធីដើម្បីអោយ Square អាច update state របស់ Board បាន។ ដែល state ត្រូវបានចាត់ទុកជា private សម្រាប់ component, យើងមិនអាច update state របស់ Board ដោយផ្ទាល់ពី Square។
 
-To maintain the Board's state's privacy, we'll pass down a function from the Board to the Square. This function will get called when a Square is clicked. We'll change the `renderSquare` method in Board to:
+ដើម្បីរក្សារភាពឯកជនរបស់ state ដែលមាននៅក្នុង Board, យើងនឹងបញ្ជួន function មួយពី Board ចុះទៅ Square។ function នេះនឹងត្រូវបានហៅនៅពេលដែល​ Square ត្រូវបាន click។ យើងនឹងផ្លាស់ប្តូរ `renderSquare` method ដែលមាននៅក្នុង Board ផងដែរ៖
 
 ```javascript{5}
   renderSquare(i) {
@@ -455,17 +455,21 @@ To maintain the Board's state's privacy, we'll pass down a function from the Boa
   }
 ```
 
->Note
+>ចំណាំ
 >
 >We split the returned element into multiple lines for readability, and added parentheses so that JavaScript doesn't insert a semicolon after `return` and break our code.
 
+យើងបំបែកការ return element ទៅជាច្រើនបន្ទាត់ដើម្បីងាយស្រួលក្នុងការអាន, ហើយបានបន្ថែមវង់ក្រចកដូច្នេះ JavaScript មិនបញ្ចូលសញ្ញា semicolon បន្ទាប់ពី `return` ហើយនិង break កូដ របស់យើង។
+
 Now we're passing down two props from Board to Square: `value` and `onClick`. The `onClick` prop is a function that Square can call when clicked. We'll make the following changes to Square:
 
-* Replace `this.state.value` with `this.props.value` in Square's `render` method
-* Replace `this.setState()` with `this.props.onClick()` in Square's `render` method
-* Delete the `constructor` from Square because Square no longer keeps track of the game's state
+ឥឡូវ​នេះយើងកំពុងបញ្ជួនចុះនូវ props ចំនួន២ពី Board ទៅកាន់ Square៖ `value` ហើយនិង `onClick`។ `onClick` គឺជា function ដែល Square អាចហៅនៅពេលត្រូវបាន click។ យើងនឹងធ្វើការផ្លាស់ប្តូរ Square ដូចខាងក្រោម៖
 
-After these changes, the Square component looks like this:
+* ជំនួស `this.state.value` ជាមួយ `this.props.value` នៅក្នុង `render` method របស់ Square
+* ជំនួស `this.setState()` ជាមួយ `this.props.onClick()` នៅក្នុង `render` method របស់ Square
+* លុប `constructor` ពី Square ពីព្រេាះ Square លែងបន្តតាមដាន state របស់ហ្គេម
+
+បន្ទាប់ពីការផ្លាស់ប្តូរទាំងនេះ, Square component មើលទៅដូចនេះ៖
 
 ```javascript{1,2,6,8}
 class Square extends React.Component {
@@ -482,13 +486,14 @@ class Square extends React.Component {
 }
 ```
 
-When a Square is clicked, the `onClick` function provided by the Board is called. Here's a review of how this is achieved:
+នៅពេលដែល Square ត្រូវបាន click, `onClick` function ដែលត្រូវបានផ្តល់ដោយ Board ត្រូវបានហៅ។ 
+នេះគឺជាការពិនិត្យឡើងវិញនូវរបៀបដែលវាសម្រេច៖
 
-1. The `onClick` prop on the built-in DOM `<button>` component tells React to set up a click event listener.
-2. When the button is clicked, React will call the `onClick` event handler that is defined in Square's `render()` method.
-3. This event handler calls `this.props.onClick()`. The Square's `onClick` prop was specified by the Board.
-4. Since the Board passed `onClick={() => this.handleClick(i)}` to Square, the Square calls `this.handleClick(i)` when clicked.
-5. We have not defined the `handleClick()` method yet, so our code crashes.
+១. `onClick` prop នៅលើ built-in DOM `<button>` component ប្រាប់ React ដើម្បីបង្កើត click event listener មួយ។<br>
+២. នៅពេលដែល​ button ត្រូវបាន click, React នឹងហៅ `onClick` event handler ដែលបានកំណត់នៅក្នុង `render()` method របស់ Square។<br>
+៣. event handler នេះហៅថា `this.props.onClick()`។ `onClick` prop របស់ Square ត្រូវបានបញ្ជាក់ដោយ Board។<br>
+៤. ដែល Board ​បានបញ្ជូន `onClick={() => this.handleClick(i)}` ទៅអោយ Square, Square ហៅ `this.handleClick(i)` ត្រូវបាន click។<br>
+៥. យើងមិនបានកំណត់ `handleClick()` method នៅឡើយទេ, ដូច្នេះកូដរបស់យើងគាំង។
 
 >Note
 >
