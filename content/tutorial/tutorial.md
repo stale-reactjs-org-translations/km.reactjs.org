@@ -499,7 +499,7 @@ class Square extends React.Component {
 >
 >គុណលក្ខណៈ `onClick` របស់ DOM `<button>` element មានអត្ថន័យពិសេសចំពោះ React ពីព្រេាះវាគឺជា built-in component។ សម្រាប់ custom components ដូច Square, ការដាក់ឈ្មោះគឺអាស្រ័យលើអ្នក។ យើងអាចដាក់ឈ្មេាះ `onClick` prop របស់ Square ឬក៏ `handleClick` method របស់ Board ខុសគ្នាបាន។ នៅក្នុង React, ទោះជាយ៉ាងណា, វាគឺជា convention ដើម្បីប្រើឈ្មេាះ `on[Event]` សម្រាប់ props ដែលតំណាងអោយ events ហើយនិង `handle[Event]` សម្រាប់ methods ដែល handle events.
 
-When we try to click a Square, we should get an error because we haven't defined `handleClick` yet. We'll now add `handleClick` to the Board class:
+នៅពេលយើងព្យាយាម click Square មួយ, យើងគួរតែទទួលបាន error មួយពីព្រេាះយើងមិនបានកំណត់ `handleClick` នៅឡើយទេ។ ឥឡូវនេះយើងនឹងបន្ថែម `handleClick` អោយ Board class៖
 
 ```javascript{9-13}
 class Board extends React.Component {
@@ -554,11 +554,11 @@ class Board extends React.Component {
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/ybbQJX?editors=0010)**
 
-After these changes, we're again able to click on the Squares to fill them. However, now the state is stored in the Board component instead of the individual Square components. When the Board's state changes, the Square components re-render automatically. Keeping the state of all squares in the Board component will allow it to determine the winner in the future.
+បន្ទាប់ពីការផ្លាស់ប្តូរទាំងនេះ, យើងអាច click ម្តងទៀតទៅលើ Squares ដើម្បីបំពេញពួកវា។​ ទោះយ៉ាងណា, ឥឡូវ​នេះ state ត្រូវបានរក្សារទុកនៅក្នុង Board component ជំនួសអោយការរក្សារទុកនៅក្នុង Square components នីមួយៗ។ នៅពេលដែល state របស់ Board ផ្លាស់ប្តូរ, Square components re-render ដោយស្វ័យប្រវត្តិ។ ការរក្សារ state របស់ squares ទាំងអស់នៅក្នុង Board component នឹងអនុញ្ញាតឱ្យវាកំណត់អ្នកឈ្នះនៅថ្ងៃអនាគត។
 
-Since the Square components no longer maintain state, the Square components receive values from the Board component and inform the Board component when they're clicked. In React terms, the Square components are now **controlled components**. The Board has full control over them.
+នៅពេលដែល Square components លែងរក្សា state, Square components ទទួលបានតម្លៃពី Board component និងជូនដំណឹងអោយ Board component នៅពេលពួកវាត្រូវបាន click។ នៅក្នុង React terms, ឥឡូវ​នេះ Square components គឺជា **controlled components**។ Board មានការគ្រប់គ្រងពេញលេញលើពួកវា។
 
-Note how in `handleClick`, we call `.slice()` to create a copy of the `squares` array to modify instead of modifying the existing array. We will explain why we create a copy of the `squares` array in the next section.
+ចំណាំរបៀបនៅក្នុង `handleClick`, យើងហៅ `.slice()` ដើម្បីបង្កើតច្បាប់ចម្លង `squares` array ដើម្បីកែប្រែ ជំនួសអោយការកែប្រែ array ដែលមានស្រាប់។ យើងនឹងពន្យល់ពីមូលហេតុដែលយើងបង្កើតច្បាប់ចម្លង `squares` array នៅផ្នែកបន្ទាប់។
 
 ### Why Immutability Is Important {#why-immutability-is-important}
 
