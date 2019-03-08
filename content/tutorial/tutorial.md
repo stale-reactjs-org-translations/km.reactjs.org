@@ -495,9 +495,9 @@ class Square extends React.Component {
 ៤. ដែល Board ​បានបញ្ជូន `onClick={() => this.handleClick(i)}` ទៅអោយ Square, Square ហៅ `this.handleClick(i)` ត្រូវបាន click។<br>
 ៥. យើងមិនបានកំណត់ `handleClick()` method នៅឡើយទេ, ដូច្នេះកូដរបស់យើងគាំង។
 
->Note
+>ចំណាំ
 >
->The DOM `<button>` element's `onClick` attribute has a special meaning to React because it is a built-in component. For custom components like Square, the naming is up to you. We could name the Square's `onClick` prop or Board's `handleClick` method differently. In React, however, it is a convention to use `on[Event]` names for props which represent events and `handle[Event]` for the methods which handle the events.
+>គុណលក្ខណៈ `onClick` របស់ DOM `<button>` element មានអត្ថន័យពិសេសចំពោះ React ពីព្រេាះវាគឺជា built-in component។ សម្រាប់ custom components ដូច Square, ការដាក់ឈ្មោះគឺអាស្រ័យលើអ្នក។ យើងអាចដាក់ឈ្មេាះ `onClick` prop របស់ Square ឬក៏ `handleClick` method របស់ Board ខុសគ្នាបាន។ នៅក្នុង React, ទោះជាយ៉ាងណា, វាគឺជា convention ដើម្បីប្រើឈ្មេាះ `on[Event]` សម្រាប់ props ដែលតំណាងអោយ events ហើយនិង `handle[Event]` សម្រាប់ methods ដែល handle events.
 
 When we try to click a Square, we should get an error because we haven't defined `handleClick` yet. We'll now add `handleClick` to the Board class:
 
