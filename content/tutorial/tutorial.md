@@ -586,21 +586,21 @@ var newPlayer = Object.assign({}, player, {score: 2});
 
 លទ្ធផលចុងក្រោយគឺដូចគ្នាប៉ុន្តែដោយមិនផ្លាស់ប្តូរដោយផ្ទាល់ (ឬការផ្លាស់ប្តូរទិន្នន័យមូលដ្ឋាន), យើងទទួលអត្ថប្រយោជន៍ជាច្រើនដូចបានរៀបរាប់ខាងក្រោម។
 
-#### Complex Features Become Simple {#complex-features-become-simple}
+#### លក្ខណៈពិសេសស្មុគស្មាញក្លាយជាធម្មតា      {#complex-features-become-simple}
 
-Immutability makes complex features much easier to implement. Later in this tutorial, we will implement a "time travel" feature that allows us to review the tic-tac-toe game's history and "jump back" to previous moves. This functionality isn't specific to games -- an ability to undo and redo certain actions is a common requirement in applications. Avoiding direct data mutation lets us keep previous versions of the game's history intact, and reuse them later.
+ភាពមិនចេះប្រែប្រួលធ្វើឱ្យ features ដែលស្មុគ្រស្មាញកាន់តែងាយស្រួលក្នុងការ implement។ នៅក្នុង tutorial បន្ទាប់, យើងនឹង implement "time travel" feature ដែលអនុញ្ញាតឱ្យយើងពិនិត្យឡើងវិញនូវ history របស់ tic-tac-toe ហ្គេម ហើយនិង "jump back" ត្រឡប់ទៅកាន់ការផ្លាស់ទីពីមុន។ មុខងារនេះមិនជាក់លាក់ចំពោះហ្គេមទេ -- សមត្ថភាពក្នុងការ undo ហើយនិង redo ដែលជាសកម្មភាពជាក់លាក់គឺជាតម្រូវការទូទៅនៅក្នុង​ applications។ ការជៀសវាងការផ្លាស់ប្តូរទិន្នន័យដោយផ្ទាល់អនុញ្ញាតឱ្យយើងរក្សាកំណែមុននៃ history របស់ហ្គេមអោយនៅដដែល, ហើយប្រើវាឡើងវិញនៅពេលក្រោយ។
 
-#### Detecting Changes {#detecting-changes}
+#### ការរកឃើញការផ្លាស់ប្តូរ    {#detecting-changes}
 
-Detecting changes in mutable objects is difficult because they are modified directly. This detection requires the mutable object to be compared to previous copies of itself and the entire object tree to be traversed.
+រកឃើញការផ្លាស់ប្តូរនៅក្នុង objects ដែលអាចប្ដូរបានគឺពិបាកពីព្រោះពួកគេត្រូវបានកែប្រែដោយផ្ទាល់។ ការរកឃើញនេះទាមទារអោយ objects ដែលអាចប្ដូរបានប្រៀបធៀបទៅនឹងច្បាប់ចម្លងពីមុនរបស់ខ្លួន ហើយនិង object tree ទាំងមូលត្រូវបាន traverse។
 
-Detecting changes in immutable objects is considerably easier. If the immutable object that is being referenced is different than the previous one, then the object has changed.
+ការរកឃើញការផ្លាស់ប្តូរ objects ដែល​មិនប្រែប្រួលគឺចាត់ទុកថាងាយស្រួលជាង។ ប្រសិនជា objects ដែល​មិនប្រែប្រួលដែលកំពុងតែ reference គឺខុសពីមុន, អញ្ចឹង object ត្រូវបានផ្លាស់ប្តូ។
 
-#### Determining When to Re-render in React {#determining-when-to-re-render-in-react}
+#### ការកំណត់នៅពេល re-render នៅក្នុង React {#determining-when-to-re-render-in-react}
 
-The main benefit of immutability is that it helps you build _pure components_ in React. Immutable data can easily determine if changes have been made which helps to determine when a component requires re-rendering.
+អត្ថប្រយោជន៍សំខាន់នៃភាពមិនប្រែប្រួលគឺថាវាជួយអ្នកបង្កើត _pure components_ នៅក្នុង React។ ទិន្នន័យដែលអាចផ្លាស់ប្តូរបានអាចកំណត់បានយ៉ាងងាយស្រួលប្រសិនបើការផ្លាស់ប្តូរត្រូវបានធ្វើឡើងដែលជួយកំណត់នៅពេល component តម្រូវការ re-rendering។
 
-You can learn more about `shouldComponentUpdate()` and how you can build *pure components* by reading [Optimizing Performance](/docs/optimizing-performance.html#examples).
+អ្នកអាចស្វែងយល់បន្ថែមអំពី `shouldComponentUpdate()` និងរបៀបដែលអ្នកអាចបង្កើត *pure components* ដោយការអាន [Optimizing Performance](/docs/optimizing-performance.html#examples)។
 
 ### Function Components {#function-components}
 
