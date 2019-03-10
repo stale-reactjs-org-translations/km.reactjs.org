@@ -566,14 +566,14 @@ class Board extends React.Component {
 
 មានវិធីពីរយ៉ាងក្នុងការផ្លាស់ប្តូរទិន្នន័យ។ វិធីសាស្រ្តដំបូងគឺ *ផ្លាស់ប្តូរ* ទិន្នន័យ ដោយការផ្លាស់ប្តូរតម្លៃទិន្នន័យដោយផ្ទាល់។ វិធីសាស្ត្រទីពីរគឺជំនួសទិន្នន័យជាមួយច្បាប់ចម្លងថ្មីដែលមានការផ្លាស់ប្តូរតាមដែលអ្នកចង់បាន។
 
-#### Data Change with Mutation {#data-change-with-mutation}
+#### ការផ្លាស់ប្តូរទិន្នន័យជាមួយការផ្លាស់ប្តូរដោយផ្ទាល់         {#data-change-with-mutation}
 ```javascript
 var player = {score: 1, name: 'Jeff'};
 player.score = 2;
 // Now player is {score: 2, name: 'Jeff'}
 ```
 
-#### Data Change without Mutation {#data-change-without-mutation}
+#### ការផ្លាស់ប្តូរទិន្នន័យដោយគ្មានការផ្លាស់ប្តូរដោយផ្ទាល់         {#data-change-without-mutation}
 ```javascript
 var player = {score: 1, name: 'Jeff'};
 
@@ -584,7 +584,7 @@ var newPlayer = Object.assign({}, player, {score: 2});
 // var newPlayer = {...player, score: 2};
 ```
 
-The end result is the same but by not mutating (or changing the underlying data) directly, we gain several benefits described below.
+លទ្ធផលចុងក្រោយគឺដូចគ្នាប៉ុន្តែដោយមិនផ្លាស់ប្តូរដោយផ្ទាល់ (ឬការផ្លាស់ប្តូរទិន្នន័យមូលដ្ឋាន), យើងទទួលអត្ថប្រយោជន៍ជាច្រើនដូចបានរៀបរាប់ខាងក្រោម។
 
 #### Complex Features Become Simple {#complex-features-become-simple}
 
