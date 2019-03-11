@@ -604,11 +604,14 @@ var newPlayer = Object.assign({}, player, {score: 2});
 
 ### Function Components {#function-components}
 
-We'll now change the Square to be a **function component**.
+ឥឡូវនេះយើងនឹងផ្លាស់ប្តូរ Square អោយក្លាយជា **function component**។
 
-In React, **function components** are a simpler way to write components that only contain a `render` method and don't have their own state. Instead of defining a class which extends `React.Component`, we can write a function that takes `props` as input and returns what should be rendered. Function components are less tedious to write than classes, and many components can be expressed this way.
+នៅក្នុង React, **function components** គឺជាវិធីសាមញ្ញក្នុងការសរសេរ components ដែលមានតែ `render` method ហើយមិនមាន state ដែលជារបស់ពួកគេផ្ទាល់។ ជំនួសឱ្យការកំណត់ class មួយដែល extends `React.Component`, យើងអាចសរសេរ function មួយដែលទទួល `props` ជា input ហើយ returns នូវអ្វីដែលគួរត្រូវបាន​ render។ Function components 
+មានការធុញទ្រាន់តិចតួចក្នុងការសរសេរជាង classes, និង components ជាច្រើនអាចត្រូវបានបញ្ជាក់តាមវិធីនេះ។
 
 Replace the Square class with this function:
+
+ជំនួស Square class ជាមួយ function នេះ៖
 
 ```javascript
 function Square(props) {
@@ -620,13 +623,14 @@ function Square(props) {
 }
 ```
 
-We have changed `this.props` to `props` both times it appears.
+យើងបានផ្លាស់ប្តូរ `this.props` ជា `props` ចំនួនពីរ។
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/QvvJOv?editors=0010)**
 
->Note
+>ចំណាំ
 >
->When we modified the Square to be a function component, we also changed `onClick={() => this.props.onClick()}` to a shorter `onClick={props.onClick}` (note the lack of parentheses on *both* sides). In a class, we used an arrow function to access the correct `this` value, but in a function component we don't need to worry about `this`.
+>នៅពេលយើងបានកែប្រែ Square អោយក្លាយជា function component, យើងក៏បានផ្លាស់ប្តូរផងដែរនូវ `onClick={() => this.props.onClick()}` អោយទៅជាខ្លី `onClick={props.onClick}` (ចំណាំការខ្វះវង់ក្រចក*ទាំងពីរ*ខាង)។ នៅក្នុង class, យើងបានប្រើ arrow function មួយដើម្បីចូលប្រើ តម្លៃ `this` ដែលត្រឹមត្រូវ, បន្តែនៅក្នុង function component 
+យើងមិនចាំបាច់ព្រួយបារម្ភពី `this` ទេ។
 
 ### Taking Turns {#taking-turns}
 
