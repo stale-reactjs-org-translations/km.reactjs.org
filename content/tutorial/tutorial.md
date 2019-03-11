@@ -634,9 +634,9 @@ function Square(props) {
 
 ### Taking Turns {#taking-turns}
 
-We now need to fix an obvious defect in our tic-tac-toe game: the "O"s cannot be marked on the board.
+ឥឡូវនេះយើងចាំបាច់ត្រូវជួសជុលកំហុសឆ្គងជាក់ស្តែងនៅក្នុង tic-tac-toe ហ្គេមរបស់យើង៖ "O"s មិនអាចត្រូវបានសម្គាល់នៅលើក្តារ។
 
-We'll set the first move to be "X" by default. We can set this default by modifying the initial state in our Board constructor:
+យើងនឹងកំណត់ការផ្លាស់ប្តូរដំបូងឱ្យក្លាយជា "X" ជាលំនាំដើម។ យើងអាចកំណត់លំនាំដើមនេះដោយការកែប្រែ initial state នៅក្នុង constructor របស់​ Board៖
 
 ```javascript{6}
 class Board extends React.Component {
@@ -649,7 +649,7 @@ class Board extends React.Component {
   }
 ```
 
-Each time a player moves, `xIsNext` (a boolean) will be flipped to determine which player goes next and the game's state will be saved. We'll update the Board's `handleClick` function to flip the value of `xIsNext`:
+រាល់ពេលដែលអ្នកលេងផ្លាស់ទី, `xIsNext` (a boolean) នឹងត្រូវបានត្រឡប់ដើម្បីកំណត់ថាអ្នកលេងណាម្នាក់ទៅបន្ទាប់ហើយ state របស់ game និងត្រូវបានស​​ save។ យើងនឹង update `handleClick` function របស់ Board ដើម្បីត្រឡប់តម្លៃរបស់ `xIsNext`៖
 
 ```javascript{3,6}
   handleClick(i) {
@@ -662,7 +662,7 @@ Each time a player moves, `xIsNext` (a boolean) will be flipped to determine whi
   }
 ```
 
-With this change, "X"s and "O"s can take turns. Let's also change the "status" text in Board's `render` so that it displays which player has the next turn:
+ជាមួយនឹងការផ្លាស់ប្តូរនេះ, "X"s និង "O"s អាចផ្លាស់ប្តូរគ្នា។ ចូរផ្លាស់ប្តូរផងដែរនូវ "status" text នៅក្នុង​ `render` របស់ Board ដូច្នេះវាបង្ហាញថាវេនបន្ទាប់ជារបស់អ្នកលេងម្នាក់ណា៖
 
 ```javascript{2}
   render() {
@@ -672,7 +672,7 @@ With this change, "X"s and "O"s can take turns. Let's also change the "status" t
       // the rest has not changed
 ```
 
-After applying these changes, you should have this Board component:
+បន្ទាប់ពីអនុវត្តការផ្លាស់ប្តូរទាំងនេះអ្នកគួរតែមាន Board component នេះ៖
 
 ```javascript{6,11-16,29}
 class Board extends React.Component {
