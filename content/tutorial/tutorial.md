@@ -733,7 +733,7 @@ class Board extends React.Component {
 
 ### Declaring a Winner {#declaring-a-winner}
 
-Now that we show which player's turn is next, we should also show when the game is won and there are no more turns to make. We can determine a winner by adding this helper function to the end of the file:
+ឥឡូវនេះយើងបង្ហាញអ្នកលេងដែលមានវេនបន្ទាប់, យើងក៏គួរបង្ហាញផងដែរថានៅពេលដែលហ្គេមត្រូវបានឈ្នះ ហើយមិនមានវេនបន្ទាប់ទៀតទេ។ យើងអាចកំណត់អ្នកឈ្នះដោយបន្ថែម function ជំនួយមួយនេះទៅចុងបញ្ចប់នៃ files៖
 
 ```javascript
 function calculateWinner(squares) {
@@ -757,7 +757,7 @@ function calculateWinner(squares) {
 }
 ```
 
-We will call `calculateWinner(squares)` in the Board's `render` function to check if a player has won. If a player has won, we can display text such as "Winner: X" or "Winner: O". We'll replace the `status` declaration in Board's `render` function with this code:
+យើងនឹងហៅ `calculateWinner(squares)` នៅក្នុង `render` function របស់ Board ដើម្បីពិនិត្យថាតើអ្នកលេងបានឈ្នះឬយ៉ាងណា។ ប្រសិនបើអ្នកលេងបានឈ្នះ, យើងអាចបង្ហាញអត្ថបទដូចជា "អ្នកឈ្នះ: X" ឬ "អ្នកឈ្នះ: អូរ"។ យើងនឹងជំនួសការប្រកាស `status` នៅក្នុង `render` function របស់ Board ជាមួយកូដនេះ៖
 
 ```javascript{2-8}
   render() {
