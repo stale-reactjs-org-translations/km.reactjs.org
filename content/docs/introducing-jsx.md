@@ -1,34 +1,33 @@
 ---
 id: introducing-jsx
-title: Introducing JSX
+title: ការណែនាំស្តីអំពី JSX
 permalink: docs/introducing-jsx.html
 prev: hello-world.html
 next: rendering-elements.html
 ---
 
-Consider this variable declaration:
+ពិចារណាអំពីការប្រកាសអថេរ(variable):
 
 ```js
 const element = <h1>Hello, world!</h1>;
 ```
 
-This funny tag syntax is neither a string nor HTML.
+វាដូចជាកំប្លែងដែលវាក្យសម្ពន្ធ(Syntax)មិនមែនជា String ឬ HTML។
 
-It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.
+វាត្រូវបានគេហៅថា JSX ហើយវាជាការបន្ថែមវាក្យសម្ព័ន្ធ(Syntax)ទៅក្នុង JavaScript ។ យើងសូមផ្តល់អនុសាសន៍ប្រើវាជាមួយ React ដើម្បីពណ៌នាអំពីអ្វីដែល UI គួរតែមាន។ JSX អាចរំលឹកអ្នកពីភាសាគំរូមួយប៉ុន្តែវាមកជាមួយភាពថាមពលពេញនៃ JavaScript ។
 
-JSX produces React "elements". We will explore rendering them to the DOM in the [next section](/docs/rendering-elements.html). Below, you can find the basics of JSX necessary to get you started.
+ប្រើ JSX ដើម្បីបង្កើតធាតុ React. យើងនឹងធ្វើការបង្ហាញពួកវាទៅ DOM នៅក្នុង [ផ្នែកបន្ទាប់](/docs/rendering-elements.html)។  ផ្នែកខាងក្រោមនេះអ្នកអាចរកឃើញមូលដ្ឋានគ្រឹះនៃ JSX ដែលចាំបាច់ដើម្បីអាចឱ្យអ្នកចាប់ផ្តើម។
+### ហេតុអ្វី JSX? {#why-jsx}
 
-### Why JSX? {#why-jsx}
+React បានបញ្ចូលនូវផ្នែកគណនានៃការបង្ហាញត្រូវបានផ្សំជាមួយនឹងតក្កវិជ្ជា UI ផ្សេងទៀត: របៀបដែលព្រឹត្តិការណ៍ត្រូវបានដោះស្រាយ របៀបដែល State ផ្លាស់ប្តូរតាមពេលវេលា និង របៀបដែលទិន្នន័យត្រូវបានរៀបចំសម្រាប់ការបង្ហាញ។
 
-React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.
+ជំនួសឱ្យការបំបែកសិប្បនិម្មិត *បច្ចេកវិទ្យា* ដោយដាក់ការសម្គាល់និងតក្កឬការគណនានៅក្នុងឯកសារដាច់ដោយឡែក, React [បំបែក *ការព្រួយបារម្ភ*](https://en.wikipedia.org/wiki/Separation_of_concerns) ជាមួយនឹងឯកតាគូរលុងដែលហៅថា "components" ដែលមានទាំងពីរ. យើងនឹងត្រលប់ទៅ components វិញ[ផ្នែកបន្ថែមទៀត](/docs/components-and-props.html) ប៉ុន្តែប្រសិនបើអ្នកមិនទាន់មានយល់ច្បាស់អំពីការដាក់ការសម្គាល់នៅក្នុង JS [this talk](https://www.youtube.com/watch?v=x7cQ3mrcKaY) ដែលអាចធ្វើអោយអ្នកឆាប់យល់បានកាន់តែច្បាស់។
 
-Instead of artificially separating *technologies* by putting markup and logic in separate files, React [separates *concerns*](https://en.wikipedia.org/wiki/Separation_of_concerns) with loosely coupled units called "components" that contain both. We will come back to components in a [further section](/docs/components-and-props.html), but if you're not yet comfortable putting markup in JS, [this talk](https://www.youtube.com/watch?v=x7cQ3mrcKaY) might convince you otherwise.
+React [មិនត្រូវការ](/docs/react-without-jsx.html) ប្រើប្រាស់ JSX, ប៉ុន្តែមនុស្សភាគច្រើនយល់ឃើញថាវាមានប្រយោជន៍ជាជំនួយនៅពេលធ្វើការជាមួយ UI នៅក្នុងកូដ JavaScript។ វាក៏អនុញ្ញាតឱ្យ React ដើម្បីបង្ហាញពីកំហុសនិងសារព្រមានដែលមានប្រយោជន៍ជាងមុន។
 
-React [doesn't require](/docs/react-without-jsx.html) using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages.
+ជាមួយនឹងការណែនាំខាងលើនោះ ចូរយើងចាប់ផ្ដើម!
 
-With that out of the way, let's get started!
-
-### Embedding Expressions in JSX {#embedding-expressions-in-jsx}
+### ការបង្កប់កន្សោមនៅក្នុង JSX {#embedding-expressions-in-jsx}
 
 In the example below, we declare a variable called `name` and then use it inside JSX by wrapping it in curly braces:
 
