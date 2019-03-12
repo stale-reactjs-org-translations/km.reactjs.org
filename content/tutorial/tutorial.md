@@ -799,11 +799,11 @@ function calculateWinner(squares) {
 
 ### Storing a History of Moves {#storing-a-history-of-moves}
 
-If we mutated the `squares` array, implementing time travel would be very difficult.
+ប្រសិនបើយើងបានផ្លាស់ប្តូរ `squares` array, ការ implement time travel នឹងមានការលំបាកខ្លាំងណាស់។
 
-However, we used `slice()` to create a new copy of the `squares` array after every move, and [treated it as immutable](#why-immutability-is-important). This will allow us to store every past version of the `squares` array, and navigate between the turns that have already happened.
+ទោះយ៉ាងណា, យើងបានប្រើ `slice()` ដើម្បីបង្កើតច្បាប់ចម្លងថ្មី នៃ `squares` array បន្ទាប់ពីរាល់ការ move,​ និង [ចាត់ទុកវាជាមិនប្រែប្រួល](#why-immutability-is-important)។ នេះនឹងអនុញ្ញាតិឱ្យយើងរក្សាទុករាល់កំណែដែលកន្លងមកនៃ `squares` array, និងរុករករវាងវេនដែលបានកើតឡើងរួចហើយ។
 
-We'll store the past `squares` arrays in another array called `history`. The `history` array represents all board states, from the first to the last move, and has a shape like this:
+យើងនឹងរក្សាទុកអតីតកាលរបស់ `squares` arrays នៅក្នុង array ផ្សេងដែលបានហៅថា `history`។ `history` array តំណាងអោយ board states ទាំងអស់, ពីដំបូងទៅការផ្លាស់ទីចុងក្រោយ, និងមានរាងដូចនេះ៖
 
 ```javascript
 history = [
@@ -835,7 +835,7 @@ history = [
 ]
 ```
 
-Now we need to decide which component should own the `history` state.
+ឥឡូវនេះយើងត្រូវសម្រេច component មួយណាគួរតែជាម្ចាស់ `history` state។
 
 ### Lifting State Up, Again {#lifting-state-up-again}
 
