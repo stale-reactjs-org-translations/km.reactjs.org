@@ -773,7 +773,7 @@ function calculateWinner(squares) {
       // the rest has not changed
 ```
 
-We can now change the Board's `handleClick` function to return early by ignoring a click if someone has won the game or if a Square is already filled:
+ឥឡូវនេះយើងអាចផ្លាស់ប្តូរ `handleClick` function របស់Board ដើម្បី​​​ return early ដោយការមិនអើពើការ click ប្រសិនជាអ្នកណាម្នាក់បាន​ឈ្នះការប្រកួតឬក៏ Square ត្រូវបានបំពេញរួចហើយ៖
 
 ```javascript{3-5}
   handleClick(i) {
@@ -791,7 +791,7 @@ We can now change the Board's `handleClick` function to return early by ignoring
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/LyyXgK?editors=0010)**
 
-Congratulations! You now have a working tic-tac-toe game. And you've just learned the basics of React too. So *you're* probably the real winner here.
+សូមអបអរសាទរ! ឥឡូវអ្នកមាន tic-tac-toe ហ្គេមមួយដែលកំពុងដំណើរការ។ ហើយអ្នកទើបតែរៀនពីមូលដ្ឋានគ្រឹះនៃ React ផងដែរ។ ដូច្នេះ *អ្នកគឺ* ប្រហែលជាអ្នកឈ្នះពិតប្រាកដនៅទីនេះ។
 
 ## Adding Time Travel {#adding-time-travel}
 
