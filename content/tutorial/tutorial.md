@@ -795,7 +795,7 @@ function calculateWinner(squares) {
 
 ## Adding Time Travel {#adding-time-travel}
 
-As a final exercise, let's make it possible to "go back in time" to the previous moves in the game.
+នេះជាលំហាត់ចុងក្រោយ, សូមធ្វើឱ្យវាអាចទៅរួច "ត្រឡប់ទៅពេលវេលាមួយ" ទៅកាន់ការផ្លាស់ប្តូរពីមុននៅក្នុងហ្គេម។
 
 ### Storing a History of Moves {#storing-a-history-of-moves}
 
