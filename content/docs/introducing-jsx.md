@@ -21,7 +21,7 @@ const element = <h1>Hello, world!</h1>;
 
 React បានបញ្ចូលនូវផ្នែកគណនានៃការបង្ហាញត្រូវបានផ្សំជាមួយនឹងតក្កវិជ្ជា UI ផ្សេងទៀត: របៀបដែលព្រឹត្តិការណ៍ត្រូវបានដោះស្រាយ របៀបដែល State ផ្លាស់ប្តូរតាមពេលវេលា និង របៀបដែលទិន្នន័យត្រូវបានរៀបចំសម្រាប់ការបង្ហាញ។
 
-ជំនួសឱ្យការបំបែកសិប្បនិម្មិត *បច្ចេកវិទ្យា* ដោយដាក់ការសម្គាល់និងតក្កឬការគណនានៅក្នុងឯកសារដាច់ដោយឡែក, React [បំបែក *ការព្រួយបារម្ភ*](https://en.wikipedia.org/wiki/Separation_of_concerns) ជាមួយនឹងឯកតាគូរលុងដែលហៅថា "components" ដែលមានទាំងពីរ. យើងនឹងត្រលប់ទៅ components វិញ[ផ្នែកបន្ថែមទៀត](/docs/components-and-props.html) ប៉ុន្តែប្រសិនបើអ្នកមិនទាន់មានយល់ច្បាស់អំពីការដាក់ការសម្គាល់នៅក្នុង JS [this talk](https://www.youtube.com/watch?v=x7cQ3mrcKaY) ដែលអាចធ្វើអោយអ្នកឆាប់យល់បានកាន់តែច្បាស់។
+ជំនួសឱ្យការបំបែកសិប្បនិម្មិត *បច្ចេកវិទ្យា* ដោយដាក់ការសម្គាល់និងតក្កឬការគណនានៅក្នុងឯកសារដាច់ដោយឡែក, React [បំបែក *ការព្រួយបារម្ភ*](https://en.wikipedia.org/wiki/Separation_of_concerns) ជាមួយនឹងឯកតាគូរលុងដែលហៅថា "components" ដែលមានទាំងពីរ. យើងនឹងត្រលប់ទៅ components វិញ[ផ្នែកបន្ថែមទៀត](/docs/components-and-props.html) ប៉ុន្តែប្រសិនបើអ្នកមិនទាន់មានយល់ច្បាស់អំពីការដាក់ការសម្គាល់នៅក្នុង JS [ការពិភាក្សានេះ](https://www.youtube.com/watch?v=x7cQ3mrcKaY) ដែលអាចធ្វើអោយអ្នកឆាប់យល់បានកាន់តែច្បាស់។
 
 React [មិនត្រូវការ](/docs/react-without-jsx.html) ប្រើប្រាស់ JSX, ប៉ុន្តែមនុស្សភាគច្រើនយល់ឃើញថាវាមានប្រយោជន៍ជាជំនួយនៅពេលធ្វើការជាមួយ UI នៅក្នុងកូដ JavaScript។ វាក៏អនុញ្ញាតឱ្យ React ដើម្បីបង្ហាញពីកំហុសនិងសារព្រមានដែលមានប្រយោជន៍ជាងមុន។
 
@@ -71,11 +71,11 @@ ReactDOM.render(
 
 យើងធ្វើការបំបែក JSX នៅលើបន្ទាត់ជាច្រើនដើម្បីឲមានភាពងាយស្រួលសម្រាប់ការអាន។ ខណៈពេលដែលវាមិនត្រូវបានទាមទារ នៅពេលធ្វើដូចនេះ យើងក៏សូមផ្តល់អនុសាសន៍រុំវានៅក្នុងវង់ក្រចកដើម្បីជៀសវាងពីចំនុចគ្រោះថ្នាក់នៃ [បញ្ចូល semicolon ស្វ័យប្រវត្តិ](https://stackoverflow.com/q/2846283).
 
-### JSX is an Expression Too {#jsx-is-an-expression-too}
+### JSX ក៏ជាកន្សោមផងដែរ {#jsx-is-an-expression-too}
 
-After compilation, JSX expressions become regular JavaScript function calls and evaluate to JavaScript objects.
+បន្ទាប់ពីការចងក្រងកន្សោម JSX ក្លាយជាការហៅមុខងារ JavaScript ធម្មតានិងវាយតម្លៃទៅជាវត្ថុ JavaScript ។
 
-This means that you can use JSX inside of `if` statements and `for` loops, assign it to variables, accept it as arguments, and return it from functions:
+នេះគឺមានន័យថា អ្នកអាចប្រើប្រាស់ JSX នៅខាងក្នុង ប្រយោគ `if`  និង `for` loops ការប្រកាសអថេរ ការទទួលនូវតម្លៃ និងការទទួលពីមុខងារណាមួយ
 
 ```js{3,5}
 function getGreeting(user) {
@@ -86,7 +86,7 @@ function getGreeting(user) {
 }
 ```
 
-### Specifying Attributes with JSX {#specifying-attributes-with-jsx}
+### ការបញ្ជាក់លក្ខណៈជាមួយ JSX {#specifying-attributes-with-jsx}
 
 You may use quotes to specify string literals as attributes:
 
@@ -108,15 +108,15 @@ Don't put quotes around curly braces when embedding a JavaScript expression in a
 >
 >For example, `class` becomes [`className`](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) in JSX, and `tabindex` becomes [`tabIndex`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/tabIndex).
 
-### Specifying Children with JSX {#specifying-children-with-jsx}
+### ការបញ្ជាក់ Children ជាមួយ JSX {#specifying-children-with-jsx}
 
-If a tag is empty, you may close it immediately with `/>`, like XML:
+ប្រសិនបើស្លាក (Tag) ទទេ អ្នកអាចបិទវាភ្លាមៗជាមួយ `/>` ដូចជា XML:
 
 ```js
 const element = <img src={user.avatarUrl} />;
 ```
 
-JSX tags may contain children:
+ស្លាក JSX អាចមាន children:
 
 ```js
 const element = (
@@ -127,9 +127,9 @@ const element = (
 );
 ```
 
-### JSX Prevents Injection Attacks {#jsx-prevents-injection-attacks}
+### JSX បង្ការការវាយប្រហារ {#jsx-prevents-injection-attacks}
 
-It is safe to embed user input in JSX:
+វាគឺមានសុវត្ថិភាពក្នុងការបង្កប់នូវទិន្ន័យរបស់អ្នកប្រើប្រាស់ដែលបានបញ្ចូលទៅក្នុង JSX:
 
 ```js
 const title = response.potentiallyMaliciousInput;
@@ -139,11 +139,11 @@ const element = <h1>{title}</h1>;
 
 By default, React DOM [escapes](https://stackoverflow.com/questions/7381974/which-characters-need-to-be-escaped-on-html) any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that's not explicitly written in your application. Everything is converted to a string before being rendered. This helps prevent [XSS (cross-site-scripting)](https://en.wikipedia.org/wiki/Cross-site_scripting) attacks.
 
-### JSX Represents Objects {#jsx-represents-objects}
+### JSX វត្ថុតំណាង {#jsx-represents-objects}
 
-Babel compiles JSX down to `React.createElement()` calls.
+Babel  ធ្វើការបំលែង JSX នៅពេល `React.createElement()` ត្រូវបានហៅ។
 
-These two examples are identical:
+ឧទាហរណ៍ទាំងពីរនេះគឺដូចគ្នា:
 
 ```js
 const element = (
@@ -161,7 +161,7 @@ const element = React.createElement(
 );
 ```
 
-`React.createElement()` performs a few checks to help you write bug-free code but essentially it creates an object like this:
+`React.createElement()` ធ្វើការត្រួតពិនិត្យមួយចំនួនដើម្បីជួយអ្នកសរសេរកូដដោយមិនចាំបាច់មានកំហុសប៉ុន្តែសំខាន់វាបង្កើតវត្ថុដូចនេះ:
 
 ```js
 // Note: this structure is simplified
@@ -176,7 +176,7 @@ const element = {
 
 These objects are called "React elements". You can think of them as descriptions of what you want to see on the screen. React reads these objects and uses them to construct the DOM and keep it up to date.
 
-We will explore rendering React elements to the DOM in the next section.
+យើងនឹងធ្វើការស្វែងយល់ពីធាតុផ្សំ React ក្នុងការឆ្លើយតបទៅ DOM នៅក្នុងផ្នែកបន្ទាប់។
 
 >**Tip:**
 >
