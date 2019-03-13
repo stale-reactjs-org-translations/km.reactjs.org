@@ -839,7 +839,7 @@ history = [
 
 ### Lifting State Up, Again {#lifting-state-up-again}
 
-We'll want the top-level Game component to display a list of past moves. It will need access to the `history` to do that, so we will place the `history` state in the top-level Game component.
+យើងនឹងចង់បាន top-level Game component ដើម្បីបង្ហាញបញ្ជីនៃការផ្លាស់ប្តូរពីមុន។ វានឹងត្រូវការសិទ្ធិចូលប្រើ `history` ដើម្បីធ្វើដូច្នោះ, ដូច្នេះយើងនឹងដាក់ `history` state ទៅក្នុង top-level Game component។
 
 Placing the `history` state into the Game component lets us remove the `squares` state from its child Board component. Just like we ["lifted state up"](#lifting-state-up) from the Square component into the Board component, we are now lifting it up from the Board into the top-level Game component. This gives the Game component full control over the Board's data, and lets it instruct the Board to render previous turns from the `history`.
 
