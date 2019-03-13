@@ -29,7 +29,7 @@ React [មិនត្រូវការ](/docs/react-without-jsx.html) ប្�
 
 ### ការបង្កប់កន្សោមនៅក្នុង JSX {#embedding-expressions-in-jsx}
 
-In the example below, we declare a variable called `name` and then use it inside JSX by wrapping it in curly braces:
+នៅក្នុងឧទាហរណ៍ខាងក្រោម យើងប្រកាសអថេរ(variable)ហៅថា `name` ហើយបន្ទាប់មកប្រើវានៅខាងក្នុង JSX ដោយរុំវាក្នុងដង្កៀបអង្កាញ់(curly braces):
 
 ```js{1,2}
 const name = 'Josh Perez';
@@ -41,9 +41,9 @@ ReactDOM.render(
 );
 ```
 
-You can put any valid [JavaScript expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions) inside the curly braces in JSX. For example, `2 + 2`, `user.firstName`, or `formatName(user)` are all valid JavaScript expressions.
+អ្នកអាចដាក់ [កន្សោម JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions) ដែលត្រឺមត្រូវទាំងអស់ នៅខាងក្នុងដង្កៀបអង្កាញ់(curly braces) JSX. ឧទាហរណ៍, `2 + 2`, `user.firstName`, or `formatName(user)` ជាកន្សោម JavaScript ត្រឹមត្រូវទាំងអស់។
 
-In the example below, we embed the result of calling a JavaScript function, `formatName(user)`, into an `<h1>` element.
+នៅក្នុងឧទាហរណ៍ខាងក្រោមយើងបានបង្កប់នូវលទ្ធផលនៃការហៅមុខងារ JavaScript `formatName(user)`, ចូលទៅក្នុង `<h1>` ធាតុ.
 
 ```js{12}
 function formatName(user) {
@@ -67,9 +67,9 @@ ReactDOM.render(
 );
 ```
 
-[](codepen://introducing-jsx)
+[សាកល្បងនៅលើ Codepen](codepen://introducing-jsx)
 
-We split JSX over multiple lines for readability. While it isn't required, when doing this, we also recommend wrapping it in parentheses to avoid the pitfalls of [automatic semicolon insertion](https://stackoverflow.com/q/2846283).
+យើងធ្វើការបំបែក JSX នៅលើបន្ទាត់ជាច្រើនដើម្បីឲមានភាពងាយស្រួលសម្រាប់ការអាន។ ខណៈពេលដែលវាមិនត្រូវបានទាមទារ នៅពេលធ្វើដូចនេះ យើងក៏សូមផ្តល់អនុសាសន៍រុំវានៅក្នុងវង់ក្រចកដើម្បីជៀសវាងពីចំនុចគ្រោះថ្នាក់នៃ [បញ្ចូល semicolon ស្វ័យប្រវត្តិ](https://stackoverflow.com/q/2846283).
 
 ### JSX is an Expression Too {#jsx-is-an-expression-too}
 
