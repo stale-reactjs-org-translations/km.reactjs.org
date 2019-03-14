@@ -16,14 +16,14 @@ const element = <h1>Hello, world!</h1>;
 
 វាត្រូវបានគេហៅថា JSX ហើយវាជាការបន្ថែមវាក្យសម្ព័ន្ធ(Syntax)ទៅក្នុង JavaScript ។ យើងសូមផ្តល់អនុសាសន៍ប្រើវាជាមួយ React ដើម្បីពណ៌នាអំពីអ្វីដែល UI គួរតែមាន។ JSX អាចរំលឹកអ្នកពីភាសាគំរូមួយប៉ុន្តែវាមកជាមួយភាពថាមពលពេញនៃ JavaScript ។
 
-ប្រើ JSX ដើម្បីបង្កើតធាតុ React. យើងនឹងធ្វើការបង្ហាញពួកវាទៅ DOM នៅក្នុង [ផ្នែកបន្ទាប់](/docs/rendering-elements.html)។  ផ្នែកខាងក្រោមនេះអ្នកអាចរកឃើញមូលដ្ឋានគ្រឹះនៃ JSX ដែលចាំបាច់ដើម្បីអាចឱ្យអ្នកចាប់ផ្តើម។
+ប្រើ JSX ដើម្បីបង្កើតធាតុ React ។ យើងនឹងធ្វើការបង្ហាញពួកវាទៅ DOM នៅក្នុង [ផ្នែកបន្ទាប់](/docs/rendering-elements.html)។  ផ្នែកខាងក្រោមនេះអ្នកអាចរកឃើញមូលដ្ឋានគ្រឹះនៃ JSX ដែលចាំបាច់ដើម្បីអាចឱ្យអ្នកចាប់ផ្តើម។
 ### ហេតុអ្វី JSX? {#why-jsx}
 
 React បានបញ្ចូលនូវផ្នែកគណនានៃការបង្ហាញត្រូវបានផ្សំជាមួយនឹងតក្កវិជ្ជា UI ផ្សេងទៀត: របៀបដែលព្រឹត្តិការណ៍ត្រូវបានដោះស្រាយ របៀបដែល State ផ្លាស់ប្តូរតាមពេលវេលា និង របៀបដែលទិន្នន័យត្រូវបានរៀបចំសម្រាប់ការបង្ហាញ។
 
-ជំនួសឱ្យការបំបែកសិប្បនិម្មិត *បច្ចេកវិទ្យា* ដោយដាក់ការសម្គាល់និងតក្កឬការគណនានៅក្នុងឯកសារដាច់ដោយឡែក, React [បំបែក *ការព្រួយបារម្ភ*](https://en.wikipedia.org/wiki/Separation_of_concerns) ជាមួយនឹងឯកតាគូរលុងដែលហៅថា "components" ដែលមានទាំងពីរ. យើងនឹងត្រលប់ទៅ components វិញ[ផ្នែកបន្ថែមទៀត](/docs/components-and-props.html) ប៉ុន្តែប្រសិនបើអ្នកមិនទាន់មានយល់ច្បាស់អំពីការដាក់ការសម្គាល់នៅក្នុង JS [ការពិភាក្សានេះ](https://www.youtube.com/watch?v=x7cQ3mrcKaY) ដែលអាចធ្វើអោយអ្នកឆាប់យល់បានកាន់តែច្បាស់។
+ជំនួសឱ្យការបំបែកសិប្បនិម្មិត *បច្ចេកវិទ្យា* ដោយដាក់ការសម្គាល់និងតក្កឬការគណនានៅក្នុងឯកសារដាច់ដោយឡែក React [បំបែក *ការព្រួយបារម្ភ*](https://en.wikipedia.org/wiki/Separation_of_concerns) ជាមួយនឹងឯកតាគូរលុងដែលហៅថា "components" ដែលមានទាំងពីរ. យើងនឹងត្រលប់ទៅ components វិញ[ផ្នែកបន្ថែមទៀត](/docs/components-and-props.html) ប៉ុន្តែប្រសិនបើអ្នកមិនទាន់មានយល់ច្បាស់អំពីការដាក់ការសម្គាល់នៅក្នុង JS [ការពិភាក្សានេះ](https://www.youtube.com/watch?v=x7cQ3mrcKaY) ដែលអាចធ្វើអោយអ្នកឆាប់យល់បានកាន់តែច្បាស់។
 
-React [មិនត្រូវការ](/docs/react-without-jsx.html) ប្រើប្រាស់ JSX, ប៉ុន្តែមនុស្សភាគច្រើនយល់ឃើញថាវាមានប្រយោជន៍ជាជំនួយនៅពេលធ្វើការជាមួយ UI នៅក្នុងកូដ JavaScript។ វាក៏អនុញ្ញាតឱ្យ React ដើម្បីបង្ហាញពីកំហុសនិងសារព្រមានដែលមានប្រយោជន៍ជាងមុន។
+React [មិនត្រូវការ](/docs/react-without-jsx.html) ប្រើប្រាស់ JSX ប៉ុន្តែមនុស្សភាគច្រើនយល់ឃើញថាវាមានប្រយោជន៍ជាជំនួយនៅពេលធ្វើការជាមួយ UI នៅក្នុងកូដ JavaScript។ វាក៏អនុញ្ញាតឱ្យ React ដើម្បីបង្ហាញពីកំហុសនិងសារព្រមានដែលមានប្រយោជន៍ជាងមុន។
 
 ជាមួយនឹងការណែនាំខាងលើនោះ ចូរយើងចាប់ផ្ដើម!
 
@@ -88,25 +88,25 @@ function getGreeting(user) {
 
 ### ការបញ្ជាក់លក្ខណៈជាមួយ JSX {#specifying-attributes-with-jsx}
 
-You may use quotes to specify string literals as attributes:
+អ្នកអាចប្រើ quotes ដើម្បីបញ្ជាក់ string ជាគុណលក្ខណៈ:
 
 ```js
 const element = <div tabIndex="0"></div>;
 ```
 
-You may also use curly braces to embed a JavaScript expression in an attribute:
+អ្នកក៏អាចប្រើដង្កៀបអង្កាញ់({})ដើម្បីបង្កប់កន្សោម JavaScript នៅក្នុងគុណលក្ខណៈ:
 
 ```js
 const element = <img src={user.avatarUrl}></img>;
 ```
 
-Don't put quotes around curly braces when embedding a JavaScript expression in an attribute. You should either use quotes (for string values) or curly braces (for expressions), but not both in the same attribute.
+កុំដាក់សញ្ញាសម្រង់(quotes)ជុំវិញដង្កៀបអង្កាញ់({})នៅពេលបង្កប់កន្សោម JavaScript នៅក្នុងគុណលក្ខណៈ។ អ្នកគួរប្រើសម្រង់ (សម្រាប់តម្លៃ string) ឬដង្កៀបអង្កាញ់ (សម្រាប់កន្សោម)  ប៉ុន្តែមិនមែនទាំងពីរនៅក្នុងគុណលក្ខណៈ(attribute)ដូចគ្នា។
 
->**Warning:**
+>**សារព្រមាន:**
 >
->Since JSX is closer to JavaScript than to HTML, React DOM uses `camelCase` property naming convention instead of HTML attribute names.
+>ចាប់តាំងពី JSX ខិតទៅជិត JavaScript ជាង HTML, React DOM ប្រើ `camelCase` អនុសញ្ញាការដាក់ឈ្មោះទ្រព្យសម្បត្តិ(property)ជំនួសឱ្យឈ្មោះគុណលក្ខណៈ (attribute)HTML ។
 >
->For example, `class` becomes [`className`](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) in JSX, and `tabindex` becomes [`tabIndex`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/tabIndex).
+>ឧទាហរណ៍, `class` ក្លាយជា [`className`](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) ក្នុង JSX, និង `tabindex` ក្លាយជា [`tabIndex`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/tabIndex).
 
 ### ការបញ្ជាក់ Children ជាមួយ JSX {#specifying-children-with-jsx}
 
@@ -137,7 +137,7 @@ const title = response.potentiallyMaliciousInput;
 const element = <h1>{title}</h1>;
 ```
 
-By default, React DOM [escapes](https://stackoverflow.com/questions/7381974/which-characters-need-to-be-escaped-on-html) any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that's not explicitly written in your application. Everything is converted to a string before being rendered. This helps prevent [XSS (cross-site-scripting)](https://en.wikipedia.org/wiki/Cross-site_scripting) attacks.
+តាម​លំនាំដើម, React DOM [escapes](https://stackoverflow.com/questions/7381974/which-characters-need-to-be-escaped-on-html) តម្លៃដែលបានបង្កប់នៅក្នុង JSX មុនពេលបង្ហាញវា។ ដូច្នេះវាធានាថាអ្នកមិនអាចបញ្ចូលបអ្វីដែលត្រូវបានសរសេរមិនជាក់លាក់នៅក្នុងកម្មវិធីរបស់អ្នកទេ។ អ្វីគ្រប់យ៉ាងត្រូវបានបម្លែងទៅជា String មុនពេលត្រូវបានបង្ហាញ។ វាជួយការពារការវាយប្រហារ [XSS (cross-site-scripting)](https://en.wikipedia.org/wiki/Cross-site_scripting)។
 
 ### JSX វត្ថុតំណាង {#jsx-represents-objects}
 
@@ -174,10 +174,10 @@ const element = {
 };
 ```
 
-These objects are called "React elements". You can think of them as descriptions of what you want to see on the screen. React reads these objects and uses them to construct the DOM and keep it up to date.
+វត្ថុ(Object)ទាំងនេះត្រូវបានគេហៅថា "React elements" ។ អ្នកអាចគិតថាពួកគេជាការពិពណ៌នាអំពីអ្វីដែលអ្នកចង់ឃើញនៅលើអេក្រង់។ React បានអានវត្ថុ(Object)ទាំងនេះហើយប្រើពួកវាដើម្បីបង្កើត DOM និងរក្សាវាឱ្យទាន់សម័យ(up to date)។
 
 យើងនឹងធ្វើការស្វែងយល់ពីធាតុផ្សំ React ក្នុងការឆ្លើយតបទៅ DOM នៅក្នុងផ្នែកបន្ទាប់។
 
->**Tip:**
+>**ព័ត៌មានជំនួយ:**
 >
->We recommend using the ["Babel" language definition](https://babeljs.io/docs/editors) for your editor of choice so that both ES6 and JSX code is properly highlighted. This website uses the [Oceanic Next](https://labs.voronianski.com/oceanic-next-color-scheme/) color scheme which is compatible with it.
+>យើងសូមណែនាំឱ្យប្រើ ["Babel" និយមន័យភាសា](https://babeljs.io/docs/editors) សម្រាប់កម្មវិធីកែសម្រួល(Text Editor)របស់អ្នក ដូច្នេះកូដ ES6 និង JSX ត្រូវបានបន្លិចឱ្យបានត្រឹមត្រូវ។ តំបន់បណ្តាញនេះប្រើពណ៌ចម្រុះ [Oceanic Next](https://labs.voronianski.com/oceanic-next-color-scheme/) ដែលអាចប្រើជាមួយវា។
