@@ -1,6 +1,6 @@
 ---
 id: rendering-elements
-title: Rendering Elements
+title: ការបង្ហាញធាតុ
 permalink: docs/rendering-elements.html
 redirect_from:
   - "docs/displaying-data.html"
@@ -8,47 +8,47 @@ prev: introducing-jsx.html
 next: components-and-props.html
 ---
 
-Elements are the smallest building blocks of React apps.
+ធាតុផ្សំគឺជាប្លុកដែលតូចជាងគេបំផុតនៃកម្មវិធីReact។
 
-An element describes what you want to see on the screen:
+ធាតុ(element)ពិពណ៌នាអំពីអ្វីដែលអ្នកចង់ឃើញនៅលើអេក្រង់:
 
 ```js
 const element = <h1>Hello, world</h1>;
 ```
 
-Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.
+មិនដូចធាតុbrowser DOM, ធាតុ Reactគឺជាវត្ថុធម្មតាហើយងាយស្រួលក្នុងការដើម្បីបង្កើត។ React DOM យកចិត្តទុកដាក់ធ្វើឱ្យទាន់សម័យ DOM ដើម្បីផ្គូផ្គងធាតុ React ។
 
 >**Note:**
 >
->One might confuse elements with a more widely known concept of "components". We will introduce components in the [next section](/docs/components-and-props.html). Elements are what components are "made of", and we encourage you to read this section before jumping ahead.
+>យើងអាចច្រឡំធាតុជាមួយនឹងគំនិតដែលគេស្គាល់កាន់តែច្រើនអំពី "components"។ យើងនឹងណែនាំ components នៅក្នុង [ផ្នែកបន្ទាប់](/docs/components-and-props.html). ធាតុគឺជាអ្វីដែលcomponentsត្រូវបាន "ធ្វើពី", ហើយយើងលើកជំរុញឱ្យអ្នកអានផ្នែកនេះមុនពេលលោតទៅផ្នែកបន្ទាប់។
 
-## Rendering an Element into the DOM {#rendering-an-element-into-the-dom}
+## ការបង្ហាញធាតុទៅក្នុង DOM {#rendering-an-element-into-the-dom}
 
-Let's say there is a `<div>` somewhere in your HTML file:
+តោះនិយាយថាមាន `<div>` កន្លែងណាមួយនៅក្នុងឯកសារ HTML របស់អ្នក:
 
 ```html
 <div id="root"></div>
 ```
 
-We call this a "root" DOM node because everything inside it will be managed by React DOM.
+យើងហៅវាថាជា "root" DOM node ពីព្រោះអ្វីគ្រប់យ៉ាងដែកនៅក្នុងវានឹងត្រូវបានគ្រប់គ្រងដោយ React DOM ។
 
-Applications built with just React usually have a single root DOM node. If you are integrating React into an existing app, you may have as many isolated root DOM nodes as you like.
+កម្មវិធីដែលបានបង្កើតឡើងដោយគ្រាន់តែមានReactធម្មតាមាន root DOM តែមួយ។ ប្រសិនបើអ្នកកំពុងដាក់បញ្ចូលReactទៅក្នុងកម្មវិធីដែលមានស្រាប់ អ្នកប្រហែលជាអាចមាន root DOM ជាច្រើនទៅតាមចំណងចង់បានរបស់អ្នក។
 
-To render a React element into a root DOM node, pass both to `ReactDOM.render()`:
+ដើម្បីបង្ហាញធាតុReactទៅក្នុង root DOM សូមធ្វើការផ្តល់ទៅឱ្យ `ReactDOM.render()`:
 
 `embed:rendering-elements/render-an-element.js`
 
-[](codepen://rendering-elements/render-an-element)
+[សាកល្បងវានៅលើ CodePen](codepen://rendering-elements/render-an-element)
 
-It displays "Hello, world" on the page.
+វាបង្ហាញ "ជំរាបសួរពិភពលោក" នៅលើទំព័រនេះ។
 
-## Updating the Rendered Element {#updating-the-rendered-element}
+## ធ្វើបច្ចុប្បន្នភាពធាតុបង្ហាញ {#updating-the-rendered-element}
 
 React elements are [immutable](https://en.wikipedia.org/wiki/Immutable_object). Once you create an element, you can't change its children or attributes. An element is like a single frame in a movie: it represents the UI at a certain point in time.
 
-With our knowledge so far, the only way to update the UI is to create a new element, and pass it to `ReactDOM.render()`.
+ជាមួយនឹងចំណេះដឹងរបស់យើង, វិធីតែមួយគត់ដើម្បីធ្វើឱ្យ UI ទាន់សម័យគឺបង្កើតធាតុថ្មីt, ហើយបញ្ជូនវាទៅ `ReactDOM.render()`.
 
-Consider this ticking clock example:
+សូមពិចារណាអំពីគំរូម៉ោងនាឡិកានេះ:
 
 `embed:rendering-elements/update-rendered-element.js`
 
@@ -62,7 +62,7 @@ It calls `ReactDOM.render()` every second from a [`setInterval()`](https://devel
 >
 >We recommend that you don't skip topics because they build on each other.
 
-## React Only Updates What's Necessary {#react-only-updates-whats-necessary}
+## Reactធ្វើបច្ចុប្បន្នភាពអ្វីដែលចាំបាច់ប៉ុណ្ណោះ {#react-only-updates-whats-necessary}
 
 React DOM compares the element and its children to the previous one, and only applies the DOM updates necessary to bring the DOM to the desired state.
 
