@@ -1,6 +1,6 @@
 ---
 id: components-and-props
-title: Components and Props
+title: Components និង Props
 permalink: docs/components-and-props.html
 redirect_from:
   - "docs/reusable-components.html"
@@ -16,13 +16,13 @@ prev: rendering-elements.html
 next: state-and-lifecycle.html
 ---
 
-Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a [detailed component API reference here](/docs/react-component.html).
+Componentsអនុញ្ញាតឱ្យអ្នកបំបែក UI ទៅជាបំណែកឯករាជ្យ ដែលអាចប្រើឡើងវិញបាន ហើយគិតអំពីបំណែកនីមួយៗនៅក្នុងភាពឯកោ(isolation)។ ទំព័រនេះផ្តល់ការណែនាំអំពីគំនិតនៃcomponents. អ្នកអាចរក [លំអិត component API លំអិតនៅទីនេះ](/docs/react-component.html).
 
-Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called "props") and return React elements describing what should appear on the screen.
+គំនិត, components គឺដូចមុខងារ JavaScript. ពួកគេទទួលយកធាតុចូល (ហៅថា "props") ហើយត្រឡប់ធាតុ React ពិពណ៌នាអំពីអ្វីដែលគួរលេចឡើងនៅលើអេក្រង់។
 
-## Function and Class Components {#function-and-class-components}
+## Function និង Class Components {#function-and-class-components}
 
-The simplest way to define a component is to write a JavaScript function:
+វិធីសាមញ្ញបំផុតដើម្បីកំណត់ component គឺត្រូវសរសេរមុខងារ JavaScript:
 
 ```js
 function Welcome(props) {
@@ -30,9 +30,8 @@ function Welcome(props) {
 }
 ```
 
-This function is a valid React component because it accepts a single "props" (which stands for properties) object argument with data and returns a React element. We call such components "function components" because they are literally JavaScript functions.
-
-You can also use an [ES6 class](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes) to define a component:
+មុខងារនេះគឺជា React component ត្រឹមត្រូវ ដោយសារតែវាទទួលយក "props" តែមួយ(ដែលតំណាងឱ្យអចលនទ្រព្យ) objectជាមួយទិន្នន័យនិងត្រឡប់ធាតុReact ។ យើងហៅcomponentsដូចជា "function components" ដោយសារតែពួកគេគឺជាមុខងារព្យញ្ជនៈ JavaScript ។
+អ្នកក៏អាចប្រើ[ES6 class](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes) ដើម្បីកំណត់component:
 
 ```js
 class Welcome extends React.Component {
@@ -42,27 +41,27 @@ class Welcome extends React.Component {
 }
 ```
 
-The above two components are equivalent from React's point of view.
+componentsខាងលើនេះគឺសមមូលនឹងចំនុច React ។
 
-Classes have some additional features that we will discuss in the [next sections](/docs/state-and-lifecycle.html). Until then, we will use function components for their conciseness.
+Classesមានលក្ខណៈពិសេសបន្ថែមមួយចំនួនដែលយើងនឹងពិភាក្សានៅក្នុង[ផ្នែកបន្ទាប់](/docs/state-and-lifecycle.html). រហូតមកដល់ពេលនេះយើងនឹងប្រើមុខងារ components សម្រាប់ភាពស៊ីជំរៅរបស់វា។
 
-## Rendering a Component {#rendering-a-component}
+## ការបង្កើតComponent {#rendering-a-component}
 
-Previously, we only encountered React elements that represent DOM tags:
+កាលពីមុនយើងទើបតែជួបReactធាតុដែលតំណាងឱ្យស្លាក(tags) DOM:
 
 ```js
 const element = <div />;
 ```
 
-However, elements can also represent user-defined components:
+ទោះយ៉ាងណាធាតុក៏អាចតំណាងឱ្យcomponentsដែលកំណត់ដោយអ្នកប្រើ:
 
 ```js
 const element = <Welcome name="Sara" />;
 ```
 
-When React sees an element representing a user-defined component, it passes JSX attributes to this component as a single object. We call this object "props".
+នៅពេលដែលមាន React មឃើញធាតុតំណាងឱ្យcomponentកំណត់ដោយអ្នកប្រើ, វាបញ្ជូនគុណលក្ខណៈ JSX ទៅcomponentនេះជាវត្ថុតែមួយ. យើងហៅវត្ថុនេះថា "props" ។
 
-For example, this code renders "Hello, Sara" on the page:
+ឧទាហរណ៏, កូដនេះធ្វើការមំលែងទៅជា "Hello, Sara" នៅលើទំព័រ:
 
 ```js{1,5}
 function Welcome(props) {
@@ -76,20 +75,20 @@ ReactDOM.render(
 );
 ```
 
-[](codepen://components-and-props/rendering-a-component)
+[សាកល្បងនៅលើ CodePen](codepen://components-and-props/rendering-a-component)
 
-Let's recap what happens in this example:
+ចូរយើងសង្ខេបនូវអ្វីដែលកើតឡើងនៅក្នុងឧទាហរណ៍នេះ:
 
-1. We call `ReactDOM.render()` with the `<Welcome name="Sara" />` element.
-2. React calls the `Welcome` component with `{name: 'Sara'}` as the props.
-3. Our `Welcome` component returns a `<h1>Hello, Sara</h1>` element as the result.
-4. React DOM efficiently updates the DOM to match `<h1>Hello, Sara</h1>`.
+1. យើង​ហៅ `ReactDOM.render()` ជាមួយនឹង `<Welcome name="Sara" />` ធាតុ។
+2. React ហៅ `Welcome` component ជាមួយ `{name: 'Sara'}` ជា props។
+3. `Welcome` component របស់យើង ត្រឡប់ជាមួយ `<h1>Hello, Sara</h1>` ជាលទ្ធផល។
+4. React DOM ធ្វើឱ្យទាន់សម័យមានប្រសិទ្ធិភាព DOM ដើម្បីផ្គូផ្គង `<h1>Hello, Sara</h1>`.
 
->**Note:** Always start component names with a capital letter.
+>**ចំណាំ:** តែងតែចាប់ផ្ដើមឈ្មោះ component ជាមួយអក្សរធំ។
 >
->React treats components starting with lowercase letters as DOM tags. For example, `<div />` represents an HTML div tag, but `<Welcome />` represents a component and requires `Welcome` to be in scope.
+>Reactទាក់ទងនឹងcomponentsដែលចាប់ផ្ដើមដោយអក្សរតូចជាស្លាក DOM។ ឧទាហរណ៍ `<div />` តំណាងឱ្យស្លាក HTML div ប៉ុន្តែ `<Welcome />` តំណាងឱ្យcomponentនិងតម្រូវ `Welcome` នៅក្នុង scope។
 >
->To learn more about the reasoning behind this convention, please read [JSX In Depth](/docs/jsx-in-depth.html#user-defined-components-must-be-capitalized).
+>ដើម្បីរៀនថែមទៀតអំពីហេតុផលដែលនៅពីក្រោយអនុសញ្ញានេះ, សូម​អាន [JSX In Depth](/docs/jsx-in-depth.html#user-defined-components-must-be-capitalized).
 
 ## Composing Components {#composing-components}
 
@@ -118,7 +117,7 @@ ReactDOM.render(
 );
 ```
 
-[](codepen://components-and-props/composing-components)
+[សាកល្បងនៅលើ CodePen](codepen://components-and-props/composing-components)
 
 Typically, new React apps have a single `App` component at the very top. However, if you integrate React into an existing app, you might start bottom-up with a small component like `Button` and gradually work your way to the top of the view hierarchy.
 
@@ -152,7 +151,7 @@ function Comment(props) {
 }
 ```
 
-[](codepen://components-and-props/extracting-components)
+[សាកល្បងនៅលើ CodePen](codepen://components-and-props/extracting-components)
 
 It accepts `author` (an object), `text` (a string), and `date` (a date) as props, and describes a comment on a social media website.
 
@@ -231,11 +230,11 @@ function Comment(props) {
 }
 ```
 
-[](codepen://components-and-props/extracting-components-continued)
+[សាកល្បងនៅលើ CodePen](codepen://components-and-props/extracting-components-continued)
 
 Extracting components might seem like grunt work at first, but having a palette of reusable components pays off in larger apps. A good rule of thumb is that if a part of your UI is used several times (`Button`, `Panel`, `Avatar`), or is complex enough on its own (`App`, `FeedStory`, `Comment`), it is a good candidate to be a reusable component.
 
-## Props are Read-Only {#props-are-read-only}
+## Props គឺមិនអាចកែសម្រួល {#props-are-read-only}
 
 Whether you declare a component [as a function or a class](#function-and-class-components), it must never modify its own props. Consider this `sum` function:
 
