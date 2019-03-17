@@ -969,7 +969,7 @@ class Board extends React.Component {
   }
 ```
 
-Since the Game component is now rendering the game's status, we can remove the corresponding code from the Board's `render` method. After refactoring, the Board's `render` function looks like this:
+Game component ឥឡូវ​នេះគឺកំពុង render status របស់ game, យើងអាចដកចេញកូដដែលត្រូវគ្នាពី `render` method របស់ Board។ បន្ទាប់ពីការ refactor, `render` function របស់​​ Board មើលទៅដូចនេះ៖
 
 ```js{1-4}
   render() {
@@ -997,6 +997,8 @@ Since the Game component is now rendering the game's status, we can remove the c
 
 Finally, we need to move the `handleClick` method from the Board component to the Game component. We also need to modify `handleClick` because the Game component's state is structured differently. Within the Game's `handleClick` method, we concatenate new history entries onto `history`.
 
+ទីបំផុត, យើងត្រូវផ្លាស់ទី `handleClick` method ពី Board component ទៅក្នុង Game component។ យើងក៏ត្រូវកែប្រែ `handleClick` ផងដែរពីព្រេាះ state របស់ Game component គឺត្រូវបានរៀបរចនាសម្ព័ន្ធខុសគ្នា។
+
 ```javascript{2-4,10-12}
   handleClick(i) {
     const history = this.state.history;
@@ -1015,11 +1017,11 @@ Finally, we need to move the `handleClick` method from the Board component to th
   }
 ```
 
->Note
+>ចំណាំ
 >
->Unlike the array `push()` method you might be more familiar with, the `concat()` method doesn't mutate the original array, so we prefer it.
+>មិន​ដូច array `push()` method ដែលអ្នកអាចនឹងស្គាល់កាន់តែច្បាស់ជាមួយ, `concat()` method មិនផ្លាស់ប្តូរ original array, ដូច្នេះយើងចូលចិត្តវា។
 
-At this point, the Board component only needs the `renderSquare` and `render` methods. The game's state and the `handleClick` method should be in the Game component.
+នៅចំណុចនេះ, Board component ត្រូវការតែ `renderSquare` ហើយនិង `render` methods។ State របស់ game ហើយនិង `handleClick` method គួរតែនៅក្នុង Game component។
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/EmmOqJ?editors=0010)**
 
