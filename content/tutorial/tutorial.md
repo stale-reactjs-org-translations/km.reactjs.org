@@ -843,7 +843,7 @@ history = [
 
 ការដាក់ `history` state ចូលក្នុង Game component អនុញ្ញាតឱ្យយើងដកចេញ `squares` state ពី child Board component។ ដូចជាយើង ["lifted state up"](#lifting-state-up) ពី Square component ទៅក្នុង Board component, ឥឡូវនេះយើងកំពុងលើកវាឡើងពី Board ទៅ top-level Game component។ នេះផ្តល់ឱ្យ Game component នូវការគ្រប់គ្រងពេញលេញទៅលើ data របស់ Board, និងអនុញ្ញាតឱ្យវាណែនាំ Board អោយ render វេនមុន ពី `history`។
 
-First, we'll set up the initial state for the Game component within its constructor:
+ដំបូង, យើងនឹងរៀបចំ initial state សម្រាប់ Game component នៅក្នុង constructor របស់ខ្លួនវា៖
 
 ```javascript{2-10}
 class Game extends React.Component {
@@ -873,13 +873,13 @@ class Game extends React.Component {
 }
 ```
 
-Next, we'll have the Board component receive `squares` and `onClick` props from the Game component. Since we now have a single click handler in Board for many Squares, we'll need to pass the location of each Square into the `onClick` handler to indicate which Square was clicked. Here are the required steps to transform the Board component:
+បន្ទាប់, យើងនឹងមាន Board component ដែលទទួលយក `squares` ហើយនិង `onClick` props ពី Game component។ ដែលឥឡូវនេះយើងមាន​ click handler តែមួយក្នុង Board សម្រាប់ Squares ជាច្រើន, យើងនឹងត្រូវតែ pass ទីតាំងនៃ Square នីមួយៗទៅក្នុង `onClick` handler ដើម្បីបង្ហាញថា Square មួយណាដែលត្រូវបាន click។ នេះគឺជាជំហានចាំបាច់ដើម្បីផ្លាស់ប្តូរ Board component៖
 
-* Delete the `constructor` in Board.
-* Replace `this.state.squares[i]` with `this.props.squares[i]` in Board's `renderSquare`.
-* Replace `this.handleClick(i)` with `this.props.onClick(i)` in Board's `renderSquare`.
+* លុប `constructor` ក្នុង Board។
+* ជំនួស `this.state.squares[i]` ជាមួយ `this.props.squares[i]` ក្នុង `renderSquare` របស់ Board។
+* ជំនួស `this.handleClick(i)` ជាមួយ `this.props.onClick(i)` ក្នុង `renderSquare` របស់ Board។
 
-The Board component now looks like this:
+Board component ឥឡូវនេះមើលទៅដូចនេះ៖
 
 ```javascript{17,18}
 class Board extends React.Component {
@@ -937,7 +937,7 @@ class Board extends React.Component {
 }
 ```
 
-We'll update the Game component's `render` function to use the most recent history entry to determine and display the game's status:
+យើងនឹងធ្វើបច្ចុប្បន្នភាព​ `render` function របស់ Game component ដើម្បី history entry ថ្មី​បំផុតដើម្បីកំណត់និងបង្ហាញ status របស់ game៖
 
 ```javascript{2-11,16-19,22}
   render() {
