@@ -1,6 +1,6 @@
 ---
 id: state-and-lifecycle
-title: State and Lifecycle
+title: State និង Lifecycle
 permalink: docs/state-and-lifecycle.html
 redirect_from:
   - "docs/interactivity-and-dynamic-uis.html"
@@ -8,7 +8,7 @@ prev: components-and-props.html
 next: handling-events.html
 ---
 
-This page introduces the concept of state and lifecycle in a React component. You can find a [detailed component API reference here](/docs/react-component.html).
+ទំព័រនេះបង្ហាញពីគំនិតនៃ state និង lifecycle នៅក្នុង React component. អ្នកអាចរកឃើញ [លំអិត API component លំអិតនៅទីនេះ](/docs/react-component.html).
 
 Consider the ticking clock example from [one of the previous sections](/docs/rendering-elements.html#updating-the-rendered-element). In [Rendering Elements](/docs/rendering-elements.html#rendering-an-element-into-the-dom), we have only learned one way to update the UI. We call `ReactDOM.render()` to change the rendered output:
 
@@ -29,7 +29,7 @@ function tick() {
 setInterval(tick, 1000);
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/gwoJZk?editors=0010)
+[**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/gwoJZk?editors=0010)
 
 In this section, we will learn how to make the `Clock` component truly reusable and encapsulated. It will set up its own timer and update itself every second.
 
@@ -55,7 +55,7 @@ function tick() {
 setInterval(tick, 1000);
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/dpdoYR?editors=0010)
+[**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/dpdoYR?editors=0010)
 
 However, it misses a crucial requirement: the fact that the `Clock` sets up a timer and updates the UI every second should be an implementation detail of the `Clock`.
 
@@ -74,7 +74,7 @@ State is similar to props, but it is private and fully controlled by the compone
 
 We [mentioned before](/docs/components-and-props.html#functional-and-class-components) that components defined as classes have some additional features. Local state is exactly that: a feature available only to classes.
 
-## Converting a Function to a Class {#converting-a-function-to-a-class}
+## បម្លែង Function ទៅ Class {#converting-a-function-to-a-class}
 
 You can convert a function component like `Clock` to a class in five steps:
 
@@ -101,13 +101,13 @@ class Clock extends React.Component {
 }
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/zKRGpo?editors=0010)
+[**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/zKRGpo?editors=0010)
 
 `Clock` is now defined as a class rather than a function.
 
 The `render` method will be called each time an update happens, but as long as we render `<Clock />` into the same DOM node, only a single instance of the `Clock` class will be used. This lets us use additional features such as local state and lifecycle methods.
 
-## Adding Local State to a Class {#adding-local-state-to-a-class}
+## បន្ថែម Local State ទៅ Class {#adding-local-state-to-a-class}
 
 We will move the `date` from props to state in three steps:
 
@@ -193,11 +193,11 @@ ReactDOM.render(
 );
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/KgQpJd?editors=0010)
+[**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/KgQpJd?editors=0010)
 
 Next, we'll make the `Clock` set up its own timer and update itself every second.
 
-## Adding Lifecycle Methods to a Class {#adding-lifecycle-methods-to-a-class}
+## បន្ថែម វិធីសាស្រ្ត Lifecycle ទៅ Class {#adding-lifecycle-methods-to-a-class}
 
 In applications with many components, it's very important to free up resources taken by the components when they are destroyed.
 
@@ -302,7 +302,7 @@ ReactDOM.render(
 );
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/amqdNA?editors=0010)
+[**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/amqdNA?editors=0010)
 
 Now the clock ticks every second.
 
@@ -318,11 +318,11 @@ Let's quickly recap what's going on and the order in which the methods are calle
 
 5) If the `Clock` component is ever removed from the DOM, React calls the `componentWillUnmount()` lifecycle method so the timer is stopped.
 
-## Using State Correctly {#using-state-correctly}
+## ការប្រើប្រាស់ State ឲបានត្រឹមត្រូវ {#using-state-correctly}
 
 There are three things you should know about `setState()`.
 
-### Do Not Modify State Directly {#do-not-modify-state-directly}
+### កុំកែប្រែ State ដោយផ្ទាល់ {#do-not-modify-state-directly}
 
 For example, this will not re-render a component:
 
@@ -340,7 +340,7 @@ this.setState({comment: 'Hello'});
 
 The only place where you can assign `this.state` is the constructor.
 
-### State Updates May Be Asynchronous {#state-updates-may-be-asynchronous}
+### ការបន្ទាន់សម័យរបស់ State អាចជា Asynchronous {#state-updates-may-be-asynchronous}
 
 React may batch multiple `setState()` calls into a single update for performance.
 
@@ -375,7 +375,7 @@ this.setState(function(state, props) {
 });
 ```
 
-### State Updates are Merged {#state-updates-are-merged}
+### ការបន្ទាន់សម័យ State ត្រូវបានបញ្ចូលគ្នា {#state-updates-are-merged}
 
 When you call `setState()`, React merges the object you provide into the current state.
 
@@ -411,7 +411,7 @@ Then you can update them independently with separate `setState()` calls:
 
 The merging is shallow, so `this.setState({comments})` leaves `this.state.posts` intact, but completely replaces `this.state.comments`.
 
-## The Data Flows Down {#the-data-flows-down}
+## ទិន្នន័យ Flows Down {#the-data-flows-down}
 
 Neither parent nor child components can know if a certain component is stateful or stateless, and they shouldn't care whether it is defined as a function or a class.
 
@@ -437,7 +437,7 @@ function FormattedDate(props) {
 }
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/zKRqNB?editors=0010)
+[**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/zKRqNB?editors=0010)
 
 This is commonly called a "top-down" or "unidirectional" data flow. Any state is always owned by some specific component, and any data or UI derived from that state can only affect components "below" them in the tree.
 
@@ -462,7 +462,7 @@ ReactDOM.render(
 );
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/vXdGmd?editors=0010)
+[**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/vXdGmd?editors=0010)
 
 Each `Clock` sets up its own timer and updates independently.
 
