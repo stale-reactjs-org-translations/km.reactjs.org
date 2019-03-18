@@ -1111,7 +1111,7 @@ const doubled = numbers.map(x => x * 2); // [2, 4, 6]
 <li>Alexa: 5 tasks left</li>
 ```
 
-In addition to the updated counts, a human reading this would probably say that we swapped Alexa and Ben's ordering and inserted Claudia between Alexa and Ben. However, React is a computer program and does not know what we intended. Because React cannot know our intentions, we need to specify a *key* property for each list item to differentiate each list item from its siblings. One option would be to use the strings `alexa`, `ben`, `claudia`. If we were displaying data from a database, Alexa, Ben, and Claudia's database IDs could be used as keys.
+បន្ថែមពីលើការធ្វើបច្ចុប្បន្នភាព counts, នៅពេលដែលអ្នកណាម្នាក់អានវាប្រហែលជានិយាយថា យើងបានផ្លាស់ប្តូរតម្រៀបរបស់ Alex និង Ben ហើយបានបញ្ចូល Claudia នៅចន្លេាះ Alexa និង Ben។ ទោះយ៉ាងណា React គឺជា computer program និង មិនដឹងថាយើងចង់បានអ្វីទេ។ ពីព្រេាះ React មិនអាចដឹងពីបំណងរបស់យើងទេ, ជម្រើសមួយគឺត្រូវប្រើ strings `alexa`, `ben`, `claudia`។ ប្រសិនបើយើងបង្ហាញ data ពី database, database IDs របស់ Alexa, Ben, និង Claudia អាចត្រូវបានប្រើជា keys។
 
 ```html
 <li key={user.id}>{user.name}: {user.taskCount} tasks left</li>
