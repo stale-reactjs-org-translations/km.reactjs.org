@@ -1029,18 +1029,18 @@ Finally, we need to move the `handleClick` method from the Board component to th
 
 យើងកំពុងថតទុកនូវ history របស់ tic-tac-toe​ ហ្គេម, ឥឡូវនេះយើងអាចបង្ហាញវាដល់អ្នកលេងជា list នៃការផ្លាស់ប្តូរពីមុនៗ។
 
-We learned earlier that React elements are first-class JavaScript objects; we can pass them around in our applications. To render multiple items in React, we can use an array of React elements.
+យើងបានរៀនពីមុនមកហើយថា React elements គឺជា first-class JavaScript objects; យើងអាចបញ្ជូនពួកវាទៅវិញទៅមកក្នុង applications របស់យើង។ ដើម្បី render items ច្រើនក្នុង React, យើងអាចប្រើ array នៃ React elements។
 
-In JavaScript, arrays have a [`map()` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) that is commonly used for mapping data to other data, for example:
+ក្នុង JavaScript, arrays មាន [`map()` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) មួយដែលត្រូវបានប្រើជាទូទៅសម្រាប់ការ map data ទៅកាន់ data ផ្សេងទៀត៖
 
 ```js
 const numbers = [1, 2, 3];
 const doubled = numbers.map(x => x * 2); // [2, 4, 6]
 ```
 
-Using the `map` method, we can map our history of moves to React elements representing buttons on the screen, and display a list of buttons to "jump" to past moves.
+ការប្រើ `map` method, យើងអាច​​ map history នៃការផ្លាស់ទី history ទៅកាន់ React elements ដែលតំណាងឱ្យប៊ូតុងនៅលើអេក្រង់, ហើយនិងបង្ហាញ list នៃប៊ូតុងដើម្បី "លោត" ទៅកាន់ការផ្លាស់ប្តូរពីមុនៗ។
 
-Let's `map` over the `history` in the Game's `render` method:
+តោះ `map` ទៅលើ `history` ក្នុង `render` method របស់ Game៖
 
 ```javascript{6-15,34}
   render() {
