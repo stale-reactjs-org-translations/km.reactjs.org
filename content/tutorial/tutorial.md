@@ -1094,16 +1094,16 @@ const doubled = numbers.map(x => x * 2); // [2, 4, 6]
 
 ### Picking a Key {#picking-a-key}
 
-When we render a list, React stores some information about each rendered list item. When we update a list, React needs to determine what has changed. We could have added, removed, re-arranged, or updated the list's items.
+នៅពេលដែលយើង render list មួយ, React រក្សារទុកព័ត៌មានមួយចំនួនពី list item នីមួយៗដែលបាន render។ នៅពេលយើងធ្វើបច្ចុប្បន្នភាព list, React ត្រូវការកំណត់នូវអ្វីដែលបានផ្លាស់ប្តូរ។ យើងអាចបន្ថែមបាន, យកចេញបាន, រៀបចំឡើងវិញបាន, ឬក៏ធ្វើបច្ចុប្បន្នភាពបាននូវ​ items របស់​​ list។
 
-Imagine transitioning from
+ស្រមៃពីការផ្លាស់ប្តូរពី
 
 ```html
 <li>Alexa: 7 tasks left</li>
 <li>Ben: 5 tasks left</li>
 ```
 
-to
+ទៅជា
 
 ```html
 <li>Ben: 9 tasks left</li>
