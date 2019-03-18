@@ -1027,7 +1027,7 @@ Finally, we need to move the `handleClick` method from the Board component to th
 
 ### Showing the Past Moves {#showing-the-past-moves}
 
-Since we are recording the tic-tac-toe game's history, we can now display it to the player as a list of past moves.
+យើងកំពុងថតទុកនូវ history របស់ tic-tac-toe​ ហ្គេម, ឥឡូវនេះយើងអាចបង្ហាញវាដល់អ្នកលេងជា list នៃការផ្លាស់ប្តូរពីមុនៗ។
 
 We learned earlier that React elements are first-class JavaScript objects; we can pass them around in our applications. To render multiple items in React, we can use an array of React elements.
 
