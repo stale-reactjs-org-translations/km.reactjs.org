@@ -1121,11 +1121,11 @@ const doubled = numbers.map(x => x * 2); // [2, 4, 6]
 
 `key` គឺ property ដែលពិសេសនៅក្នុង React (ភ្ជាប់មកជាមួយ `ref`, លក្ខណៈពិសេសកម្រិតខ្ពស់)។ នៅពេលដែល element ត្រូវបានបង្កើត, React ទាញយក `key` property ហើយនិងរក្សារទុក key ដោយផ្ទាល់នៅលើ element ដែលត្រូវបាន return។ ទោះ​បី​ជា `key` អាចមើលទៅដូចជាវាស្ថិតនៅក្នុង `props`, `key` មិនអាចត្រូវបាន reference ដោយការប្រើ `this.props.key`។ React ប្រើ `key` ដោយស្វ័យប្រវត្តិដើម្បីសម្រេចថាតើ componenet មួយណាដែលត្រូវធ្វើបច្ចុប្បន្នភាព។ Component មិនអាចសួរអំពី `key` របស់ខ្លួនវាទេ។
 
-**It's strongly recommended that you assign proper keys whenever you build dynamic lists.** If you don't have an appropriate key, you may want to consider restructuring your data so that you do.
+**វាត្រូវបានផ្ដល់អនុសាសន៍យ៉ាងមុតមាំថាអ្នក assign proper keys គ្រប់ពេលដែលអ្នកបង្កើត dynamic list។** ប្រសិនបើអ្នកមិនមាន key ដែលសមរម្យអាចប្រើការបាន, អ្នកប្រហែលចង់ពិចារណារៀបចំរចនាសម្ព័ន្ធទិន្នន័យរបស់អ្នកឡើងវិញដូច្នេះអ្នកធ្វើវាទៅ។
 
-If no key is specified, React will present a warning and use the array index as a key by default. Using the array index as a key is problematic when trying to re-order a list's items or inserting/removing list items. Explicitly passing `key={i}` silences the warning but has the same problems as array indices and is not recommended in most cases.
+ប្រសិនបើមិនមាន key ត្រូវបានបញ្ជាក់, React នឹងបង្ហាញការព្រមាននិងការប្រើប្រាស់ array index ជា key ដោយ default។ ការប្រើ array index ជា key គឺមានបញ្ហានៅពេលព្យាយាម re-order items របស់ list ឬក៏ បញ្ចូល/យកចេញ នូវ list items។ ជាក់ស្តែងការបញ្ជូន `key={i}` អាចបំបាត់ការព្រមាន ប៉ុន្តែមានបញ្ហាដូចគ្នាដូចជា array indices ហើយនិងមិនត្រូវបានណែនាំនៅក្នុងករណីភាគច្រើន។
 
-Keys do not need to be globally unique; they only need to be unique between components and their siblings.
+Keys មិនចាំបាច់ជា globally unique; ពួកគេគ្រាន់តែត្រូវការជា unique រវាង components ហើយនិង siblings របស់ពួកវា។
 
 
 ### Implementing Time Travel {#implementing-time-travel}
