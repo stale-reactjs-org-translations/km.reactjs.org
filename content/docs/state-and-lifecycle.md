@@ -10,7 +10,7 @@ next: handling-events.html
 
 ទំព័រនេះបង្ហាញពីគំនិតនៃ state និង lifecycle នៅក្នុង React component. អ្នកអាចរកឃើញ [លំអិត API component លំអិតនៅទីនេះ](/docs/react-component.html).
 
-Consider the ticking clock example from [one of the previous sections](/docs/rendering-elements.html#updating-the-rendered-element). In [Rendering Elements](/docs/rendering-elements.html#rendering-an-element-into-the-dom), we have only learned one way to update the UI. We call `ReactDOM.render()` to change the rendered output:
+សូមពិចារណាគំរូនាឡិកាពី [ផ្នែកមួយនៃផ្នែកមុន](/docs/rendering-elements.html#updating-the-rendered-element). នៅក្នុង [ការបង្ហាញធាតុ](/docs/rendering-elements.html#rendering-an-element-into-the-dom),យើងទើបតែរៀនវិធីដើម្បីធ្វើបច្ចុប្បន្នភាព UI តែមួយប៉ុណ្ណោះ. យើង​ហៅ `ReactDOM.render()` ដើម្បីផ្លាស់ប្តូរលទ្ធផលបង្ហាញ:
 
 ```js{8-11}
 function tick() {
@@ -31,9 +31,9 @@ setInterval(tick, 1000);
 
 [**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/gwoJZk?editors=0010)
 
-In this section, we will learn how to make the `Clock` component truly reusable and encapsulated. It will set up its own timer and update itself every second.
+នៅក្នុងផ្នែកនេះ យើងនឹងរៀនពីរបៀបបង្កើត component `Clock` ដែលអាចប្រើឡើងវិញបាន និង encapsulated. វានឹងបង្កើតកម្មវិធីកំណត់ពេលវេលាផ្ទាល់ខ្លួនរបស់វាហើយធ្វើបច្ចុប្បន្នភាពរៀងរាល់វិនាទី។
 
-We can start by encapsulating how the clock looks:
+យើងអាចចាប់ផ្ដើមដោយ encapsulating របៀបមើលនាឡិកា:
 
 ```js{3-6,12}
 function Clock(props) {
@@ -57,9 +57,9 @@ setInterval(tick, 1000);
 
 [**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/dpdoYR?editors=0010)
 
-However, it misses a crucial requirement: the fact that the `Clock` sets up a timer and updates the UI every second should be an implementation detail of the `Clock`.
+ទោះយ៉ាងណា, វានឹកនូវតម្រូវការដ៏សំខាន់មួយ:ការពិតដែលថា `Clock` កំណត់កម្មវិធីកំណត់ពេលវេលាមួយនិងធ្វើបច្ចុប្បន្នភាព UI ជារៀងរាល់វិនាទីគួរតែជាការអនុវត្ដន៍លម្អិតនៃ `Clock`.
 
-Ideally we want to write this once and have the `Clock` update itself:
+ជាគំនិត យើងចង់សរសេរវាម្តងនិងមានការធ្វើឱ្យទាន់សម័យ 'Clock' ខ្លួនវាផ្ទាល់:
 
 ```js{2}
 ReactDOM.render(
@@ -68,25 +68,25 @@ ReactDOM.render(
 );
 ```
 
-To implement this, we need to add "state" to the `Clock` component.
+ដើម្បីអនុវត្ត យើងត្រូវបន្ថែម "state" ទៅcomponent `Clock` ។
 
-State is similar to props, but it is private and fully controlled by the component.
+State គឺស្រដៀងទៅនឹង props ប៉ុន្តែវាមានលក្ខណៈឯកជនហើយត្រូវបានគ្រប់គ្រងយ៉ាងពេញលេញដោយ component។
 
-We [mentioned before](/docs/components-and-props.html#functional-and-class-components) that components defined as classes have some additional features. Local state is exactly that: a feature available only to classes.
+យើង [បានរៀបរាប់ពីមុន](/docs/components-and-props.html#functional-and-class-components) components ដែលបានកំណត់ជា classes មានលក្ខណៈពិសេសបន្ថែមមួយចំនួន. Local state គឺពិតប្រាកដណាស់: អាចប្រើបានតែចំពោះ classes.
 
 ## បម្លែង Function ទៅ Class {#converting-a-function-to-a-class}
 
-You can convert a function component like `Clock` to a class in five steps:
+អ្នកអាចបម្លែង function component ដូច `Clock` ទៅ class ក្នុងប្រាំជំហាន:
 
-1. Create an [ES6 class](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes), with the same name, that extends `React.Component`.
+1. បង្កើត [ES6 class](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes), ជាមួយឈ្មោះដូចគ្នា, នោះ extends `React.Component`.
 
-2. Add a single empty method to it called `render()`.
+2. បន្ថែមវិធីសាស្ត្រទទេមួយទៅវា `render()`.
 
-3. Move the body of the function into the `render()` method.
+3. ផ្លាស់ទីនៃតួ function ចូលទៅក្នុង `render()`.
 
-4. Replace `props` with `this.props` in the `render()` body.
+4. ជំនួស `props` ជាមួយ `this.props` ក្នុង `render()` body.
 
-5. Delete the remaining empty function declaration.
+5. លុបការប្រកាស function ទទេដែលនៅសល់។
 
 ```js
 class Clock extends React.Component {
@@ -103,15 +103,15 @@ class Clock extends React.Component {
 
 [**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/zKRGpo?editors=0010)
 
-`Clock` is now defined as a class rather than a function.
+`Clock` ឥឡូវត្រូវបានកំណត់ជា class ជាជាង function។
 
-The `render` method will be called each time an update happens, but as long as we render `<Clock />` into the same DOM node, only a single instance of the `Clock` class will be used. This lets us use additional features such as local state and lifecycle methods.
+វិធីសាស្ត្រ `render` នឹងត្រូវបានហៅរាល់ពេលដែលការធ្វើបច្ចុប្បន្នភាពកើតឡើង, ប៉ុន្តែដរាបណាយើងបង្ហាញ `<Clock />` ចូលទៅក្នុង DOM node ដូចគ្នា, មានតែវត្ថុតែមួយនៃ `Clock` class នឹងត្រូវបានប្រើ. នេះអនុញ្ញាតឱ្យយើងប្រើលក្ខណៈពិសេសបន្ថែមដូចជា local state និង lifecycle methods។
 
 ## បន្ថែម Local State ទៅ Class {#adding-local-state-to-a-class}
 
-We will move the `date` from props to state in three steps:
+យើងនឹងផ្លាស់ទី `date` ពី props ទៅ state ក្នុងបីជំហាន:
 
-1) Replace `this.props.date` with `this.state.date` in the `render()` method:
+1) ជំនួស `this.props.date` ជាមួយ `this.state.date` ក្នុង `render()`:
 
 ```js{6}
 class Clock extends React.Component {
@@ -126,7 +126,7 @@ class Clock extends React.Component {
 }
 ```
 
-2) Add a [class constructor](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes#Constructor) that assigns the initial `this.state`:
+2) បន្ថែម [class constructor](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes#Constructor) ដែលកំណត់ដំបូង `this.state`:
 
 ```js{4}
 class Clock extends React.Component {
@@ -146,7 +146,7 @@ class Clock extends React.Component {
 }
 ```
 
-Note how we pass `props` to the base constructor:
+ចំណាំពីរបៀបដែលយើងហុច `props` ទៅ constructor:
 
 ```js{2}
   constructor(props) {
@@ -155,9 +155,9 @@ Note how we pass `props` to the base constructor:
   }
 ```
 
-Class components should always call the base constructor with `props`.
+Class components គួរតែហៅ constructor ជាមួយ `props`.
 
-3) Remove the `date` prop from the `<Clock />` element:
+3) យក `date` ចេញពីធាតុ `<Clock />`:
 
 ```js{2}
 ReactDOM.render(
@@ -166,9 +166,9 @@ ReactDOM.render(
 );
 ```
 
-We will later add the timer code back to the component itself.
+ក្រោយមកយើងនឹងបន្ថែមកូដកំណត់ពេលវេលាទៅ component ខ្លួនឯងវិញ។
 
-The result looks like this:
+លទ្ធផលមើលទៅដូចនេះ:
 
 ```js{2-5,11,18}
 class Clock extends React.Component {
@@ -195,7 +195,7 @@ ReactDOM.render(
 
 [**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/KgQpJd?editors=0010)
 
-Next, we'll make the `Clock` set up its own timer and update itself every second.
+បន្ទាប់មក យើងនឹងបង្កើត `Clock` បង្កើតដោយផ្ទាល់ខ្លួនរបស់វាហើយធ្វើបច្ចុប្បន្នភាពរៀងរាល់វិនាទី។
 
 ## បន្ថែម វិធីសាស្រ្ត Lifecycle ទៅ Class {#adding-lifecycle-methods-to-a-class}
 
