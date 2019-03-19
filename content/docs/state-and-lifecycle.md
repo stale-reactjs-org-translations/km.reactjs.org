@@ -199,13 +199,13 @@ ReactDOM.render(
 
 ## បន្ថែម វិធីសាស្រ្ត Lifecycle ទៅ Class {#adding-lifecycle-methods-to-a-class}
 
-In applications with many components, it's very important to free up resources taken by the components when they are destroyed.
+នៅក្នុងកម្មវិធីដែលមាន components ជាច្រើន វាមានសារៈសំខាន់ខ្លាំងណាស់ក្នុងការធ្វើអោយមានភាពទំនេរ  នៅពេលដែល components បានប្រើប្រាស់ត្រូវបានបំផ្លាញ។
 
-We want to [set up a timer](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval) whenever the `Clock` is rendered to the DOM for the first time. This is called "mounting" in React.
+យើង​ចង់ [ធ្វើការកំណត់ពេល(timer)](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval) នៅពេលណាដែល `Clock` ត្រូវបានបង្ហាញទៅ DOM ជាលើកដំបូង. នេះត្រូវបានគេហៅ "mounting" នៅ React.
 
-We also want to [clear that timer](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/clearInterval) whenever the DOM produced by the `Clock` is removed. This is called "unmounting" in React.
+យើងក៏ចង់ [ជម្រះការកំណត់ម៉ោង(timer)](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/clearInterval) នៅពេលណាដែល DOM ដែលបានផលិតដោយ`Clock` បានយកចេញ. នេះត្រូវបានគេហៅ "unmounting" នៅ React.
 
-We can declare special methods on the component class to run some code when a component mounts and unmounts:
+យើងអាចប្រកាសវិធីសាស្រ្តពិសេសនៅលើ component class ដើម្បីដំណើរការកូដមួយចំនួននៅពេលណា component mounts និង unmounts:
 
 ```js{7-9,11-13}
 class Clock extends React.Component {
@@ -233,9 +233,9 @@ class Clock extends React.Component {
 }
 ```
 
-These methods are called "lifecycle methods".
+វិធីសាស្រ្តទាំងនេះត្រូវបានហៅ "lifecycle methods".
 
-The `componentDidMount()` method runs after the component output has been rendered to the DOM. This is a good place to set up a timer:
+`componentDidMount()` ដំណើរការបន្ទាប់ពីទិន្នផលcomponentត្រូវបានបង្ហាញទៅ DOM។ នេះគឺជាទីកន្លែងល្អដើម្បីធ្វើការកំណត់ពេល(timer):
 
 ```js{2-5}
   componentDidMount() {
