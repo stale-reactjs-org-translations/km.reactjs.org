@@ -1228,12 +1228,12 @@ If we click on any step in the game's history, the tic-tac-toe board should imme
 
 ### Wrapping Up {#wrapping-up}
 
-Congratulations! You've created a tic-tac-toe game that:
+សូមអបអរសាទរ! អ្នកបានបង្កើតហ្គេម tic-tac-toe មួយដែល៖
 
-* Lets you play tic-tac-toe,
-* Indicates when a player has won the game,
-* Stores a game's history as a game progresses,
-* Allows players to review a game's history and see previous versions of a game's board.
+* អនុញ្ញាតឱ្យអ្នកលេង tic-tac-toe,
+* បង្ហាញប្រាប់នៅពេលដែលអ្នកលេងបានឈ្នះការប្រកួត,
+* រក្សារ history របស់ហ្គេមដែលជាដំណើរការហ្គេម,
+* អនុញ្ញាតឱ្យអ្នកលេងពិនិត្យឡើងវិញនូវ history របស់ហ្គេម ហើយនិងមើលឃើញនូវ versions នៃ board របស់ហ្គេ​ម។
 
 Nice work! We hope you now feel like you have a decent grasp on how React works.
 
