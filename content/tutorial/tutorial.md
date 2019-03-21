@@ -1241,11 +1241,11 @@ If we click on any step in the game's history, the tic-tac-toe board should imme
 
 ប្រសិនបើអ្នកមានពេលបន្ថែមឬចង់អនុវត្តជំនាញថ្មី React របស់អ្នក, នៅទីនេះគឺមានគំនិតមួយចំនួនសម្រាប់ការប្រសើរឡើងរបស់អ្នក, អ្នកអាចបង្កើត tic-tac-toe ហ្គេម ដែលត្រូវបានមានការបង្កើនការលំបាកដូចខាងក្រោម៖
 
-1. Display the location for each move in the format (col, row) in the move history list.
-2. Bold the currently selected item in the move list.
-3. Rewrite Board to use two loops to make the squares instead of hardcoding them.
-4. Add a toggle button that lets you sort the moves in either ascending or descending order.
-5. When someone wins, highlight the three squares that caused the win.
-6. When no one wins, display a message about the result being a draw.
+1. បង្ហាញទីតាំងនៃការផ្លាស់ប្តូរទីជាមួយទំរង់ (ជួរឈរ, ជួរដេក) នៅក្នុងបញ្ជី history នៃការផ្លាស់ប្តូរទី។
+2. Bold នូវ item ដែលបានកំពុង​ select នៅក្នុង list។
+3. សរសេរ Board ឡើងវិញដោយប្រើ loops ពីរដើម្បីបង្កើត squares ជំនួសអោយ hardcoding ពួកវា។
+4. បន្ថែមប៊ូតុងបិទ/បើកមួយ ដែលអនុញ្ញាតឱ្យអ្នកតម្រៀបការផ្លាស់ទីក្នុងលំដាប់ឡើងឬចុះក្រោម។
+5. នៅពេលមានអ្នកណាម្នាក់ឈ្នះ, highlight squares បី ដែលបណ្តាលឱ្យឈ្នះ។
+6. នៅពេលគ្មាននរណាម្នាក់ឈ្នះ, បង្ហាញសារអំពីលទ្ធផលស្មើ។
 
 តាមរយៈ tutorial នេះ, យើងបានប៉ះ React concepts រួមទាំង elements, components, props, and state។ សម្រាប់ការពន្យល់លម្អិតបន្ថែមលើប្រធានបទនីមួយៗ, សូមឆែក [the rest of the documentation](/docs/hello-world.html)។ ដើម្បីស្វែងយល់បន្ថែមពីការកំណត់ components, សូមឆែក [`React.Component` API reference](/docs/react-component.html)។
