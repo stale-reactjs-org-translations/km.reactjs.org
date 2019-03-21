@@ -1239,8 +1239,6 @@ If we click on any step in the game's history, the tic-tac-toe board should imme
 
 មើលលទ្ធផលចុងក្រោយនៅទីនេះ៖ **[Final Result](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)**។
 
-If you have extra time or want to practice your new React skills, here are some ideas for improvements that you could make to the tic-tac-toe game which are listed in order of increasing difficulty:
-
 ប្រសិនបើអ្នកមានពេលបន្ថែមឬចង់អនុវត្តជំនាញថ្មី React របស់អ្នក, នៅទីនេះគឺមានគំនិតមួយចំនួនសម្រាប់ការប្រសើរឡើងរបស់អ្នក, អ្នកអាចបង្កើត tic-tac-toe ហ្គេម ដែលត្រូវបានមានការបង្កើនការលំបាកដូចខាងក្រោម៖
 
 1. Display the location for each move in the format (col, row) in the move history list.
@@ -1250,4 +1248,4 @@ If you have extra time or want to practice your new React skills, here are some 
 5. When someone wins, highlight the three squares that caused the win.
 6. When no one wins, display a message about the result being a draw.
 
-Throughout this tutorial, we touched on React concepts including elements, components, props, and state. For a more detailed explanation of each of these topics, check out [the rest of the documentation](/docs/hello-world.html). To learn more about defining components, check out the [`React.Component` API reference](/docs/react-component.html).
+តាមរយៈ tutorial នេះ, យើងបានប៉ះ React concepts រួមទាំង elements, components, props, and state។ សម្រាប់ការពន្យល់លម្អិតបន្ថែមលើប្រធានបទនីមួយៗ, សូមឆែក [the rest of the documentation](/docs/hello-world.html)។ ដើម្បីស្វែងយល់បន្ថែមពីការកំណត់ components, សូមឆែក [`React.Component` API reference](/docs/react-component.html)។
