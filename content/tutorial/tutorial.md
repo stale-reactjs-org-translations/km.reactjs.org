@@ -1235,11 +1235,13 @@ If we click on any step in the game's history, the tic-tac-toe board should imme
 * រក្សារ history របស់ហ្គេមដែលជាដំណើរការហ្គេម,
 * អនុញ្ញាតឱ្យអ្នកលេងពិនិត្យឡើងវិញនូវ history របស់ហ្គេម ហើយនិងមើលឃើញនូវ versions នៃ board របស់ហ្គេ​ម។
 
-Nice work! We hope you now feel like you have a decent grasp on how React works.
+ការងារល្អ! យើងសង្ឃឹមថាឥឡូវនេះអ្នកមានអារម្មណ៍ថាអ្នកមានការយល់ដឹងសមរម្យពីរបៀបដែល React ធ្វើការ។
 
-Check out the final result here: **[Final Result](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)**.
+មើលលទ្ធផលចុងក្រោយនៅទីនេះ៖ **[Final Result](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)**។
 
 If you have extra time or want to practice your new React skills, here are some ideas for improvements that you could make to the tic-tac-toe game which are listed in order of increasing difficulty:
+
+ប្រសិនបើអ្នកមានពេលបន្ថែមឬចង់អនុវត្តជំនាញថ្មី React របស់អ្នក, នៅទីនេះគឺមានគំនិតមួយចំនួនសម្រាប់ការប្រសើរឡើងរបស់អ្នក, អ្នកអាចបង្កើត tic-tac-toe ហ្គេម ដែលត្រូវបានមានការបង្កើនការលំបាកដូចខាងក្រោម៖
 
 1. Display the location for each move in the format (col, row) in the move history list.
 2. Bold the currently selected item in the move list.
