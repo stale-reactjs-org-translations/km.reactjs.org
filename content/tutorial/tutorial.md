@@ -20,9 +20,9 @@ Tutorial នេះសម្រាប់ទាំងអ្នកដែលមា�
 
 >ពត៌មានជំនួយ
 >
->Tutorial នេះគេ design សម្រាប់អ្នកដែលចូលចិត្ត**រៀនដោយការអនុវត្តន៍**។ ប្រសិនជាអ្នកចង់រៀន concept មូលដ្ឋានតំបូងរបស់​ React, អ្នកអាចឆែកមើល [step-by-step guide](/docs/hello-world.html) របស់យើងបាន។ អ្នកប្រាកដជាយល់ឃើញថា​​ tutorail នេះហើយនិង step-by-step guid គឺបំពេញឱ្យគ្នាទៅវិញទៅមក។
+>tutorial នេះគេ design សម្រាប់អ្នកដែលចូលចិត្ត**រៀនដោយការអនុវត្តន៍**។ ប្រសិនជាអ្នកចង់រៀន concept មូលដ្ឋានតំបូងរបស់​ React, អ្នកអាចឆែកមើល [step-by-step guide](/docs/hello-world.html) របស់យើងបាន។ អ្នកប្រាកដជាយល់ឃើញថា​​ tutorial នេះហើយនិង step-by-step guide គឺបំពេញឱ្យគ្នាទៅវិញទៅមក។
 
-Tutorail នេះត្រូវបានគេបែងចែកជាច្រើនផ្នែក​ដូចខាងក្រោម​៖
+Tutorial នេះត្រូវបានគេបែងចែកជាច្រើនផ្នែក​ដូចខាងក្រោម​៖
 
 * [ការរៀបចំសម្រាប់ ​Tutorial](#setup-for-the-tutorial) នឹងផ្តល់ឱ្យអ្នកនូវ**ចំណុចចាប់ផ្តើមមួយ**ដើម្បីអនុវត្តតាមការបង្រៀន។
 * [ទិដ្ឋភាពទូទៅ](#overview) នឹងបង្រៀនអ្នកនូវ**មូលដ្ឋានគ្រឹះ**ពី React ដូចជា៖ components, props, and state។
@@ -35,7 +35,7 @@ Tutorail នេះត្រូវបានគេបែងចែកជាច្�
 
 ### តើយើងនឹងបង្កើតអ្វី?    {#what-are-we-building}
 
-នៅក្នុង tutorial នេះ, យើងនឹងបង្ហាយពីរបៀបបង្កើតហ្គេម tic-tac-toe ជាមួយនិង React។
+នៅក្នុង tutorial នេះ, យើងនឹងបង្ហាញពីរបៀបបង្កើតហ្គេម tic-tac-toe ជាមួយនិង React។
 
 អ្នកអាចឃើញអ្វីដែលយើងនឹងបង្កើតនៅទីនេះ៖ **[Final Result](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)**។ ប្រសិនជាអ្នកមិនយល់ពីកូដ, ឬក៏អ្នកមិនច្បាស់ជាមួយនិង syntax របស់កូដ, សូមកុំបារម្មណ៏អី! គោលដៅនៃ tutorial នេះគឺជួយអ្នកឱ្យយល់ច្បាស់ពី React ហើយនិង syntax របស់ React។
 
@@ -45,7 +45,7 @@ Tutorail នេះត្រូវបានគេបែងចែកជាច្�
 
 ### តម្រូវការជាមុន   {#prerequisites}
 
-យើងនឹងសន្មតថាអ្នកមានចំណេះដឹងខ្លះៗពី HTML ហើយនិង JavaScript, ប៉ុន្តែអ្នកគួរតែអាចអនុវត្តវាបានបើទេាះបីជាអ្នកមានចំណេះដឹងពីភាសា programming ផ្សេងៗក៏ដោយ។ យើងនឹងសន្មតផងដែរថាអ្នកមានចំណេះដឹងពី concept របស់ programming ដូចជា៖ functions, objects, arrays, and to a lesser extent, classes។
+យើងនឹងសន្មត់ថាអ្នកមានចំណេះដឹងខ្លះៗពី HTML ហើយនិង JavaScript, ប៉ុន្តែអ្នកគួរតែអាចអនុវត្តវាបានបើទេាះបីជាអ្នកមានចំណេះដឹងពីភាសា programming ផ្សេងៗក៏ដោយ។ យើងនឹងសន្មតផងដែរថាអ្នកមានចំណេះដឹងពី concept របស់ programming ដូចជា៖ functions, objects, arrays, and to a lesser extent, classes។
 
 បើសិនជាអ្នកត្រូវការ review JavaScript, យើងសូមផ្តល់យោបល់ឱ្យអាន [this guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)។ សូមកត់ចំណាំថាយើងនឹងប្រើ features មួយចំនួនរបស់ ES6 ផងដែរ -- កំណែទំរង់ថ្មីរបស់ JavaScript. នៅក្នុង tutorial នេះ, យើងនឹងប្រើ [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let), ហើយនិង [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) statements. អ្នកអាចប្រើ [Babel REPL](babel://es5-syntax-example) ដើម្បីឆែកមើលថាតើ code របស់ ES6 នឹង compile ទៅជាអ្វី។
 
@@ -57,7 +57,7 @@ Tutorail នេះត្រូវបានគេបែងចែកជាច្�
 
 នេះជាវិធីលឿនបំផុតក្នុងការចាប់ផ្តើម!
 
-តំបូង, សូមបើក **[Starter Code](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)** នេះនៅក្នុងផ្ទាំងថ្មីមួយរបស់ browser​។ ផ្ទាំថ្មីគួរតែបង្ហាយ board ទទេមួយរបស់ហ្គេម tic-tac-toe ហើយនិងកូដ React. យើងនឹង edit កូដ​ របស់ React នៅក្នុង tutorial នេះ។
+តំបូង, សូមបើក **[Starter Code](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)** នេះនៅក្នុងផ្ទាំងថ្មីមួយរបស់ browser​។ ផ្ទាំថ្មីគួរតែបង្ហាញ board ទទេមួយរបស់ហ្គេម tic-tac-toe ហើយនិងកូដ React. យើងនឹង edit កូដ​ របស់ React នៅក្នុង tutorial នេះ។
 
 ឥឡូវអ្នកអាចរំលងជម្រើសទី២ក្នុងការតំឡើង, ហើយចូលទៅក្នុងផ្នែក [ទិដ្ឋភាពទូទៅ](#overview) ដើម្បីទទួលបាននូវមូលដ្ឋានគ្រឹះពី React។
 
@@ -156,9 +156,9 @@ class ShoppingList extends React.Component {
 
 យើងនឹងទទួលបាននូវ tags ដែលដូចទៅនិង XML tags។ យើងប្រើ components ដើម្បីប្រាប់ React នូវអ្វីដែលយើងចង់ឃើញនៅលើ screen។ នៅពេលដែល data ផ្លាស់ប្តូរ, React នឹង update ហើយនិង re-render components របស់យើង។
 
-នេះ, ShoppingList គឺជា **React component class** មួយ, ឬក៏ **React component type** មួយ។ component ទទួលយក parameters, ដែលគេហៅថា `props` (ពាក្យពេញ "properties"), ហើយ returns នូវ hierarchy នៃ views មួយដើម្បីបង្ហាយតាមរយៈ `render` method។
+នេះ, ShoppingList គឺជា **React component class** មួយ, ឬក៏ **React component type** មួយ។ component ទទួលយក parameters, ដែលគេហៅថា `props` (ពាក្យពេញ "properties"), ហើយ returns នូវ hierarchy នៃ views មួយដើម្បីបង្ហាញតាមរយៈ `render` method។
 
-`render` method return នូវ *description* នៃអ្វីដែលអ្នកចង់ឃើញនៅលើអេក្រង់។​ React ទទួលយក description ហើយបង្ហាយលទ្ធផល។ ជាពិសេស, `render` return នូវ **React element** មួយ, ដែលជា description ដ៏ស្រាលមួយដែលត្រូវ render។ React developers ភាគច្រើនប្រើនូវ special syntax ដែលគេហៅថា "JSX"​ ដែលបង្កើតជា structures ងាយស្រួលក្នុងការសរសេរ។  `<div />` syntax គឺត្រូវបានគេបំលែងទៅជា `React.createElement('div')` នៅពេល build time។ ឧទាហរណ៍ខាងលើគឺស្មើទៅនឹង៖
+`render` method return នូវ *description* នៃអ្វីដែលអ្នកចង់ឃើញនៅលើអេក្រង់។​ React ទទួលយក description ហើយបង្ហាញលទ្ធផល។ ជាពិសេស, `render` return នូវ **React element** មួយ, ដែលជា description ដ៏ស្រាលមួយដែលត្រូវ render។ React developers ភាគច្រើនប្រើនូវ special syntax ដែលគេហៅថា "JSX"​ ដែលបង្កើតជា structures ងាយស្រួលក្នុងការសរសេរ។  `<div />` syntax គឺត្រូវបានគេបំលែងទៅជា `React.createElement('div')` នៅពេល build time។ ឧទាហរណ៍ខាងលើគឺស្មើទៅនឹង៖
 
 ```javascript
 return React.createElement('div', {className: 'shopping-list'},
@@ -180,7 +180,7 @@ JSX ភ្ជាប់មកជាមួយនូវអានុភាពរប�
 
 ## ការត្រួតពិនិត្យ   Starter Code {#inspecting-the-starter-code}
 
-បើសិនជាអ្នកនិងធ្វើការលើ tutorial **នៅក្នុង  browser,** បើកកូដនេះក្នុងផ្ទាំងថ្មី៖ **[Starter Code](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)**។ បើសិនជាអ្នកនឹងធ្វើការលើ tutorial **នៅក្នុងកុំព្យូទ័ររបស់អ្នក**, បើក `src/index.js` នៅក្នុងថតឯកសាររបស់ project (អ្នកបានប៉ះឯកសារនេះរួចហើយកំឡុងពេល [setup](#setup-option-2-local-development-environment))
+បើសិនជាអ្នកនិងធ្វើការលើ tutorial **នៅក្នុង  browser,** បើកកូដនេះក្នុងផ្ទាំងថ្មី៖ **[Starter Code](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)**។ បើសិនជាអ្នកនឹងធ្វើការលើ tutorial **នៅក្នុងកុំព្យូទ័ររបស់អ្នក**, បើក `src/index.js` នៅក្នុង project folder (អ្នកបានប៉ះឯកសារនេះរួចហើយកំឡុងពេល [setup](#setup-option-2-local-development-environment))
 
 Starter Code នេះគឺជាមូលដ្ឋាននៃអ្វីដែលយើងនឹងបង្កើត។ យើងបានផ្តល់នូវ CSS styling ដូច្នេះអ្នកត្រូវតែផ្តោតលើការរៀន React ហើយនិង programming ហ្គេម tic-tac-toe។
 
@@ -205,7 +205,7 @@ class Board extends React.Component {
   }
 ```
 
-ផ្លាស់ប្តូរ `render` method របស់ Square component ដើម្បីបង្ហាយ value ដោយការជំនួសដោយ `{/* TODO */}` ជាមួយនិង `{this.props.value}`​៖
+ផ្លាស់ប្តូរ `render` method របស់ Square component ដើម្បីបង្ហាញ value ដោយការជំនួសដោយ `{/* TODO */}` ជាមួយនិង `{this.props.value}`​៖
 
 ```js{5}
 class Square extends React.Component {
@@ -273,7 +273,7 @@ class Square extends React.Component {
 
 React components អាចមាន state ដោយការកំណត់ `this.state` នៅក្នុង constructors។ `this.state` គួរតែត្រូវបានចាត់ទុកជា private នៅក្នុង React component។ តេាះរក្សារតម្លៃបច្ចុប្បន្នរបស់ Square នៅក្នុង `this.state`, ហើយផ្លាស់ប្តូរវានៅពេលដែល Square ត្រូវបាន click.
 
-តំបូង, យើងនឹង add constructor មួយទៅអោយ class ដើម្បីកំណត់តម្លៃ state៖
+ដំបូង, យើងនឹង add constructor មួយទៅអោយ class ដើម្បីកំណត់តម្លៃ state៖
 
 ```javascript{2-7}
 class Square extends React.Component {
@@ -298,7 +298,7 @@ class Square extends React.Component {
 >
 >នៅក្នុង [JavaScript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), អ្នកតម្រូវអោយ call `super` នៅពេលធ្វើការកំណត់ constructor នៃ subclass។ React component classes ទាំងអស់ដែលមាន constructor គួរតែចាប់ផ្តើមជាមួយនិងការ call `super(props)`។
 
-ឥឡូវ​នេះយើងនឹងផ្លាស់ប្តូរ `render` method របស់ Square ដើម្បីបង្ហាយតម្លៃ​បច្ចុប្បន្របស់ state នៅពេលដែលត្រូវបាន click៖
+ឥឡូវ​នេះយើងនឹងផ្លាស់ប្តូរ `render` method របស់ Square ដើម្បីបង្ហាញតម្លៃ​បច្ចុប្ប​ន្នរបស់ state នៅពេលដែលត្រូវបាន click៖
 
 * ជំនួស `this.props.value` ជាមួយនិង `this.state.value` នៅខាងក្នុង `<button>` tag។
 * ជំនួស `() => alert()` event handler ជាមួយនិង `() => this.setState({value: 'X'})`។
@@ -328,7 +328,7 @@ class Square extends React.Component {
 }
 ```
 
-តាមរយៈការ call `this.setState` ពី `onClick` handler នៅក្នុង `render` method របស់ Square, យើងប្រាប់ React ធ្វើការ re-render Square គ្រប់ពេលដែល `<button>` ត្រូវបាន click។ បន្ទាប់ពីការ update, `this.state.value` របស់ Square នឹងប្តូរទៅជា `'X'`, ដូច្នេះយើងនឹងឃើញ `X` នៅលើ board របស់ហ្គេម។ បើអ្នក click លើ​​ Square ផ្សេងៗទៀត, `X` គួរតែបង្ហាយ។
+តាមរយៈការ call `this.setState` ពី `onClick` handler នៅក្នុង `render` method របស់ Square, យើងប្រាប់ React ធ្វើការ re-render Square គ្រប់ពេលដែល `<button>` ត្រូវបាន click។ បន្ទាប់ពីការ update, `this.state.value` របស់ Square នឹងប្តូរទៅជា `'X'`, ដូច្នេះយើងនឹងឃើញ `X` នៅលើ board របស់ហ្គេម។ បើអ្នក click លើ​​ Square ផ្សេងៗទៀត, `X` គួរតែបង្ហាញ។
 
 នៅពេលដែលអ្នក call `setState` នៅក្នុង component មួយ, React នឹង update child component ដែលនៅក្នុងវាដោយស្វ័យប្រវត្តិ.
 
@@ -361,7 +361,7 @@ After installing React DevTools, you can right-click on any element on the page,
 
 បច្ចុប្បន្ន, Square component នីមួយៗរក្សារនូវ state របស់ហ្គេម។ ដើម្បីពិនិត្យរកអ្នកឈ្នះ, យើងនឹងរក្សារតម្លៃនីមួយៗរបស់ squares ទាំង៩នៅក្នុងទីតាំងមួយ។
 
-យើងប្រហែលជាគិតថា Board គួរតែស្នើរសុំនូវតម្លៃ state របស់Square នីមួយៗ។ បើទោះបីជាវិធីសាស្រ្តនេះគឺអាចធ្វើទៅបាន សម្រាប់ React, យើងមិនលើកទឹកចិត្តអោយធ្វើតាមវិធីនេះទេពីព្រេាះកូដនឹងក្លាយទៅជាពិបាកយល់​, ងាយនិងមាន bugs, ហើយពិបាកក្នុការ refactor។ ជំនួសវិញ, វិធីសាស្រ្តដ៏ល្អបំផុតគឺត្រូវរក្សាទុក state របស់ហ្គេម នៅក្នុង parent Board component ជំនួសអោយការរក្សារទុកនៅក្នុង Square នីមួយៗ។ Board component អាចប្រាប់ Square នីមួយៗនូវអ្វីដែលត្រូវបង្ហាយដោយការបញ្ជូន props មួយ, [just like we did when we passed a number to each Square](#passing-data-through-props)។
+យើងប្រហែលជាគិតថា Board គួរតែស្នើរសុំនូវតម្លៃ state របស់Square នីមួយៗ។ បើទោះបីជាវិធីសាស្រ្តនេះគឺអាចធ្វើទៅបាន សម្រាប់ React, យើងមិនលើកទឹកចិត្តអោយធ្វើតាមវិធីនេះទេពីព្រេាះកូដនឹងក្លាយទៅជាពិបាកយល់​, ងាយនិងមាន bugs, ហើយពិបាកក្នុងការ refactor។ ជំនួសវិញ, វិធីសាស្រ្តដ៏ល្អបំផុតគឺត្រូវរក្សាទុក state របស់ហ្គេម នៅក្នុង parent Board component ជំនួសអោយការរក្សារទុកនៅក្នុង Square នីមួយៗ។ Board component អាចប្រាប់ Square នីមួយៗនូវអ្វីដែលត្រូវបង្ហាញដោយការបញ្ជូន props មួយ, [just like we did when we passed a number to each Square](#passing-data-through-props)។
 
 **ដើម្បីប្រមូល data ពី children ជាច្រើន, ឬក៏ដើម្បីអោយ child components ២ទំនាក់ទំនងជាមួយគ្នាទៅវិញទៅមក, អ្នកត្រូវ declare state នៅក្នុង parent component។ Parent component អាចបញ្ជូន state ចុះទៅ់ children ដោយការប្រើ props; នេះអាចអោយ child components syn ជាមួយគ្នាទៅវិញទៅមក, ហើយនិង syn ជាមួយ parent component ផងដែរ។**
 
@@ -425,7 +425,7 @@ class Board extends React.Component {
   }
 ```
 
-នៅពេលចាប់ផ្តើម, យើង[បានបញ្ជូន `value` របស់ prop ចុះក្រោម](#passing-data-through-props)ពី Board ដើម្បីបង្ហាយចំនួនលេខពី០ទៅ៨នៅក្នុង Square ទាំងអស់។ នៅក្នុងជំហានមុនផ្សេងគ្នា, យើងបានជំនួសលេខដោយសញ្ញា "X" [determined by Square's own state](#making-an-interactive-component)។ នេះជាមូលហេតុដែល Square បច្ចុប្បន្នមិនអើពើ `value` របស់ prop ដែលបានបញ្ជួនអោយវាដោយ Board។
+នៅពេលចាប់ផ្តើម, យើង[បានបញ្ជូន `value` របស់ prop ចុះក្រោម](#passing-data-through-props)ពី Board ដើម្បីបង្ហាញចំនួនលេខពី០ទៅ៨នៅក្នុង Square ទាំងអស់។ នៅក្នុងជំហានមុនផ្សេងគ្នា, យើងបានជំនួសលេខដោយសញ្ញា "X" [determined by Square's own state](#making-an-interactive-component)។ នេះជាមូលហេតុដែល Square បច្ចុប្បន្នមិនអើពើ `value` របស់ prop ដែលបានបញ្ជួនអោយវាដោយ Board។
 
 ឥលូវយើងនឹងប្រើប្រាស់យន្ដការក្នុងការបញ្ជូន​ props ម្តងទៀត។ យើងនឹងកែប្រែ Board ដើម្បីណែនាំដល់ Square នីមួយៗពីតម្លៃបច្ចុប្បន្នរបស់វា (`'X'`, `'O'`, ឬក៏ `null`)។ យើងបានកំណត់រួចហើយនូវ `squares` array នៅក្នុង constructor របស់ Board, ហើយយើងនឹងកែប្រែ `renderSquare` method របស់ Board ដើម្បីអានពីវា៖
 
@@ -460,8 +460,6 @@ Square នីមួយៗនឹងទទួលបាននូវ `value` រប�
 >We split the returned element into multiple lines for readability, and added parentheses so that JavaScript doesn't insert a semicolon after `return` and break our code.
 
 យើងបំបែកការ return element ទៅជាច្រើនបន្ទាត់ដើម្បីងាយស្រួលក្នុងការអាន, ហើយបានបន្ថែមវង់ក្រចកដូច្នេះ JavaScript មិនបញ្ចូលសញ្ញា semicolon បន្ទាប់ពី `return` ហើយនិង break កូដ របស់យើង។
-
-Now we're passing down two props from Board to Square: `value` and `onClick`. The `onClick` prop is a function that Square can call when clicked. We'll make the following changes to Square:
 
 ឥឡូវ​នេះយើងកំពុងបញ្ជួនចុះនូវ props ចំនួន២ពី Board ទៅកាន់ Square៖ `value` ហើយនិង `onClick`។ `onClick` គឺជា function ដែល Square អាចហៅនៅពេលត្រូវបាន click។ យើងនឹងធ្វើការផ្លាស់ប្តូរ Square ដូចខាងក្រោម៖
 
