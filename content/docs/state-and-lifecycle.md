@@ -246,11 +246,11 @@ class Clock extends React.Component {
   }
 ```
 
-Note how we save the timer ID right on `this`.
+ចំណាំ របៀបដែលយើងរក្សាទុក timer ID អោយបានត្រឹមត្រូវលើ `this`.
 
-While `this.props` is set up by React itself and `this.state` has a special meaning, you are free to add additional fields to the class manually if you need to store something that doesn’t participate in the data flow (like a timer ID).
+ខណៈពេល `this.props` ត្រូវបានបង្កើតឡើងដោយ React ខ្លួនឯង និង `this.state` មានអត្ថន័យពិសេស, អ្នកមានសិទ្ធិបន្ថែម fields ទៅ class ដោយខ្លួនឯង ប្រសិនបើអ្នកត្រូវការរក្សាទុកអ្វីមួយដែលមិនចូលរួមនៅក្នុង data flow (ដូចជា timer ID).
 
-We will tear down the timer in the `componentWillUnmount()` lifecycle method:
+យើងនឹងលុបចេញនូវកម្មវិធីកំណត់ម៉ោងក្នុង `componentWillUnmount()` lifecycle method:
 
 ```js{2}
   componentWillUnmount() {
@@ -258,9 +258,9 @@ We will tear down the timer in the `componentWillUnmount()` lifecycle method:
   }
 ```
 
-Finally, we will implement a method called `tick()` that the `Clock` component will run every second.
+ទីបំផុត យើងនឹងអនុវត្តវិធីសាស្ត្រមួយដែលហៅថា `tick()` ដែលថា `Clock` component នឹងដំណើរការរាល់វិនាទី។
 
-It will use `this.setState()` to schedule updates to the component local state:
+វានឹងប្រើ `this.setState()` ដើម្បីកំណត់ពេលធ្វើឱ្យទាន់សម័យទៅ component local state៖
 
 ```js{18-22}
 class Clock extends React.Component {
@@ -304,41 +304,41 @@ ReactDOM.render(
 
 [**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/amqdNA?editors=0010)
 
-Now the clock ticks every second.
+ឥឡូវនេះនាឡិកាដំណើរការរាល់វិនាទី។
 
-Let's quickly recap what's going on and the order in which the methods are called:
+តោះសង្ខេបឡើងវិញ អ្វីដែលកើតឡើងនិងលំដាប់ដែលវិធីសាស្រ្តត្រូវបានគេហៅថា:
 
-1) When `<Clock />` is passed to `ReactDOM.render()`, React calls the constructor of the `Clock` component. Since `Clock` needs to display the current time, it initializes `this.state` with an object including the current time. We will later update this state.
+1) ពេលណា​ `<Clock />` ត្រូវបានបញ្ជូនទៅ `ReactDOM.render()`, React ហៅ constructor នៃ `Clock` component. ចាប់តាំងពី `Clock` ត្រូវការបង្ហាញពេលវេលាបច្ចុប្បន្ន, វាចាប់ផ្ដើម `this.state` ជាមួយ object រួមទាំងពេលបច្ចុប្បន្ន។ ក្រោយមកយើងនឹងធ្វើបច្ចុប្បន្នភាព state។
 
-2) React then calls the `Clock` component's `render()` method. This is how React learns what should be displayed on the screen. React then updates the DOM to match the `Clock`'s render output.
+2) React បន្ទាប់មកហៅ `Clock` component's `render()` method. នេះ​គឺជា​របៀបដែល React រៀនអ្វីដែលគួរត្រូវបានបង្ហាញនៅលើអេក្រង់។ React បន្ទាប់មកធ្វើឱ្យទាន់សម័យ DOM ដើម្បីផ្គូផ្គងទៅការបង្ហាញរបស់ `Clock`។
 
-3) When the `Clock` output is inserted in the DOM, React calls the `componentDidMount()` lifecycle method. Inside it, the `Clock` component asks the browser to set up a timer to call the component's `tick()` method once a second.
+3) នៅពេល​ដែល `Clock` លទ្ធផលត្រូវបានបញ្ចូលក្នុង DOM, React ហៅទៅ `componentDidMount()` lifecycle method. នៅខាងក្នុង, `Clock` សួរកម្មវិធីរុករកដើម្បីបង្កើតកម្មវិធីកំណត់ពេលវេលា ដែលអាចធ្វើការហៅទៅ `tick()` method ម្តងក្នុងមួយវិនាទី។
 
-4) Every second the browser calls the `tick()` method. Inside it, the `Clock` component schedules a UI update by calling `setState()` with an object containing the current time. Thanks to the `setState()` call, React knows the state has changed, and calls the `render()` method again to learn what should be on the screen. This time, `this.state.date` in the `render()` method will be different, and so the render output will include the updated time. React updates the DOM accordingly.
+4) រៀងរាល់វិនាទី កម្មវិធីរុករក ធ្វើការហៅទៅកាន់ `tick()` method. នៅខាងក្នុង, the `Clock` component កំណត់ពេលវេលាធ្វើបច្ចុប្បន្នភាព UI តាមការហៅ `setState()` ជាមួយ object ដែលមានពេលបច្ចុប្បន្ន. សូមអរគុណដល់ការហៅទៅកាន់ `setState()`, React ដឹងថា state បានផ្លាស់ប្តូរ, ហើយធ្វើការហៅទៅកាន់ `render()` method ជាថ្មីម្តងទៀតដើម្បសិក្សាថាអ្វីដែលគួរនៅលើអេក្រង់. ពេលនេះ, `this.state.date` ក្នុង `render()` method នឹងខុសគ្នា, ដូច្នេះការបង្ហាញទិន្នផលនឹងរួមបញ្ចូលពេលវេលាដែលបានធ្វើឱ្យទាន់សម័យ។ React ធ្វើបច្ចុប្បន្នភាពតាម DOM។
 
-5) If the `Clock` component is ever removed from the DOM, React calls the `componentWillUnmount()` lifecycle method so the timer is stopped.
+5) ប្រសិនបើ `Clock` component ត្រូវបានយកចេញពី DOM, React ហៅទៅកាន់ `componentWillUnmount()` lifecycle method ដូច្នេះកម្មវិធីកំណត់ពេលវេលាត្រូវបានបញ្ឈប់។
 
 ## ការប្រើប្រាស់ State ឲបានត្រឹមត្រូវ {#using-state-correctly}
 
-There are three things you should know about `setState()`.
+មានរឿងបីដែលអ្នកគួរដឹងពី `setState()`.
 
 ### កុំកែប្រែ State ដោយផ្ទាល់ {#do-not-modify-state-directly}
 
-For example, this will not re-render a component:
+ឧទាហរណ៍, នេះនឹងមិន re-render a component:
 
 ```js
 // Wrong
 this.state.comment = 'Hello';
 ```
 
-Instead, use `setState()`:
+ជំនួសដោយ, ការប្រើ `setState()`:
 
 ```js
 // Correct
 this.setState({comment: 'Hello'});
 ```
 
-The only place where you can assign `this.state` is the constructor.
+ជាកន្លែងតែមួយគត់ដែលអ្នកអាចចាត់តាំង(assign) `this.state` គឺជា constructor.
 
 ### ការបន្ទាន់សម័យរបស់ State អាចជា Asynchronous {#state-updates-may-be-asynchronous}
 
