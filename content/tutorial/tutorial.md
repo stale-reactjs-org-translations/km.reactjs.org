@@ -1187,9 +1187,9 @@ class Game extends React.Component {
 
 ឥឡូវនេះយើងនឹងធ្វើការផ្លាស់ប្តូរមួយចំនួនជាមួយនិង `handleClick` method របស់ Game ដែលវានិង fires នៅពេលដែលអ្នកចុចលើ square។
 
-The `stepNumber` state we've added reflects the move displayed to the user now. After we make a new move, we need to update `stepNumber` by adding `stepNumber: history.length` as part of the `this.setState` argument. This ensures we don't get stuck showing the same move after a new one has been made.
+`stepNumber` state ដែលយើងបានបន្ថែម វាឆ្លុះបញ្ចាំងពីការផ្លាស់ទីដែលបានបង្ហាញដល់អ្នកប្រើប្រាស់ឥឡូវនេះ។ បន្ទាប់ពីយើងធ្វើការផ្លាស់ទីថ្មី, យើងត្រូវ update `stepNumber` ដោយបន្ថែម `stepNumber: history.length` ជាផ្នែកមួយនៃ `this.setState` argument។ នេះធានាថាយើងមិនជាប់គាំងក្នុងការបង្ហាញការផ្លាស់ទី​ដូចគ្នាបន្ទាប់ពីការផ្លាស់ទីថ្មីមួយត្រូវបានបង្កើត។
 
-We will also replace reading `this.state.history` with `this.state.history.slice(0, this.state.stepNumber + 1)`. This ensures that if we "go back in time" and then make a new move from that point, we throw away all the "future" history that would now become incorrect.
+យើងក៏នឹងជំនួស `this.state.history` ជាមួយ `this.state.history.slice(0, this.state.stepNumber + 1)`។ នេះធានាថា ប្រសិនបើយើង "ត្រឡប់ទៅវិញទាន់ពេល" ហើយបន្ទាប់មកទៀតបង្កើតការផ្លាស់ទីថ្មីពីចំនុចនេាះ, យើងបោះចោលនូវ "future" history ដែលនឹងក្លាយទៅជាមិនត្រឹមត្រូវពេលឥឡូវ​នេះ។
 
 ```javascript{2,13}
   handleClick(i) {
@@ -1210,7 +1210,7 @@ We will also replace reading `this.state.history` with `this.state.history.slice
   }
 ```
 
-Finally, we will modify the Game component's `render` method from always rendering the last move to rendering the currently selected move according to `stepNumber`:
+ទីបំផុត, យើងនឹងកែប្ `render` method របស់ Game component ដែលតែងតែ render ការផ្លាស់ទីចុងក្រោយ ទៅជា render ការផ្លាស់ទីដែលត្រូវបានជ្រើសរើសដោយយោងតាម `stepNumber`៖
 
 ```javascript{3}
   render() {
@@ -1221,7 +1221,7 @@ Finally, we will modify the Game component's `render` method from always renderi
     // the rest has not changed
 ```
 
-If we click on any step in the game's history, the tic-tac-toe board should immediately update to show what the board looked like after that step occurred.
+ប្រសិនបើយើងចុចលើជំហានណាមួយនៅក្នុង history របស់ game, tic-tac-toe board គួរធ្វើបច្ចុប្បន្នភាពភ្លាមៗដើម្បីបង្ហាញថា board មើលទៅដូចជាអ្វីបន្ទាប់ពីជំហាននោះបានកើតឡើង។
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)**
 
