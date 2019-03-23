@@ -1128,9 +1128,10 @@ Keys មិនចាំបាច់ជា globally unique; ពួកគេគ្
 
 ### Implementing Time Travel {#implementing-time-travel}
 
-In the tic-tac-toe game's history, each past move has a unique ID associated with it: it's the sequential number of the move. The moves are never re-ordered, deleted, or inserted in the middle, so it's safe to use the move index as a key.
+នៅក្នុង history រ​បស់ tic-tac-toe ហ្គេម, រាល់ការផ្លាស់ទីនីមួយៗពីមុនគឺមាន unique ID ដែលទាក់ទងជាមួយវា៖ វាជាចំនួនលេខតគ្នានៃការផ្លាស់ទី។ 
+ការផ្លាស់ទីគឺមិនដែលត្រូវបាន re-order , លុប, ឬបញ្ចូលនៅកណ្តាល, ដូច្នេះវាមានសុវត្ថិភាពក្នុងការប្រើ move index ជា key។
 
-In the Game component's `render` method, we can add the key as `<li key={move}>` and React's warning about keys should disappear:
+នៅក្នុង `render` method របស់ Game component, យើងអាចបន្ថែម key ដូចនេះ `<li key={move}>` ហើយការព្រមានរបស់ React ពី keys គួរតែបាត់៖
 
 ```js{6}
     const moves = history.map((step, move) => {
