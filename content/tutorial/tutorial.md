@@ -993,9 +993,7 @@ Game component ឥឡូវ​នេះគឺកំពុង render status រ�
   }
 ```
 
-Finally, we need to move the `handleClick` method from the Board component to the Game component. We also need to modify `handleClick` because the Game component's state is structured differently. Within the Game's `handleClick` method, we concatenate new history entries onto `history`.
-
-ទីបំផុត, យើងត្រូវផ្លាស់ទី `handleClick` method ពី Board component ទៅក្នុង Game component។ យើងក៏ត្រូវកែប្រែ `handleClick` ផងដែរពីព្រេាះ state របស់ Game component គឺត្រូវបានរៀបរចនាសម្ព័ន្ធខុសគ្នា។
+ទីបំផុត, យើងត្រូវផ្លាស់ទី `handleClick` method ពី Board component ទៅក្នុង Game component។ យើងក៏ត្រូវកែប្រែ `handleClick` ផងដែរពីព្រេាះ state របស់ Game component គឺត្រូវបានរៀបរចនាសម្ព័ន្ធខុសគ្នា។ នៅក្នុង `handleClick` method របស់ Game, យើងបានដាក់បញ្ចូលនូវ history ថ្មីទៅក្នុង `history`។
 
 ```javascript{2-4,10-12}
   handleClick(i) {
