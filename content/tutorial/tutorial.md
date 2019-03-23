@@ -1148,9 +1148,9 @@ Keys មិនចាំបាច់ជា globally unique; ពួកគេគ្
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/PmmXRE?editors=0010)**
 
-Clicking any of the list item's buttons throws an error because the `jumpTo` method is undefined. Before we implement `jumpTo`, we'll add `stepNumber` to the Game component's state to indicate which step we're currently viewing.
+ការចុចប៊ូតុងណាមួយរបស់ item នៅក្នុង list វានឹងបោះនូវ error ពីព្រេាះ `jumpTo` method មិនត្រូវបានកំណត់។​ មុនពេលដែលយើង implement `jumpTo`, យើងនឹងបន្ថែម `stepNumber` ទៅកាន់ state របស់ Game component ដើម្បីចង្អុលបង្ហាញថាជំហានមួយណាដែលយើងកំពុងមើល។
 
-First, add `stepNumber: 0` to the initial state in Game's `constructor`:
+ដំបូង, បន្ថែម `stepNumber: 0` ជា state ដំបូងនៅក្នុង `constructor` របស់ Game៖
 
 ```js{8}
 class Game extends React.Component {
@@ -1166,7 +1166,7 @@ class Game extends React.Component {
   }
 ```
 
-Next, we'll define the `jumpTo` method in Game to update that `stepNumber`. We also set `xIsNext` to true if the number that we're changing `stepNumber` to is even:
+បន្ទាប់មកទៀត, យើងនឹងកំណត់ `jumpTo` method ក្នុង Game ដើម្បី update `stepNumber`។ យើងក៏កំណត់ `xIsNext` ជា true ផងដែរប្រសិនបើលេខដែលយើងកំពុងផ្លាស់ប្តូរ `stepNumber` ជាចំនួនសេស៖
 
 ```javascript{5-10}
   handleClick(i) {
@@ -1185,7 +1185,7 @@ Next, we'll define the `jumpTo` method in Game to update that `stepNumber`. We a
   }
 ```
 
-We will now make a few changes to the Game's `handleClick` method which fires when you click on a square.
+ឥឡូវនេះយើងនឹងធ្វើការផ្លាស់ប្តូរមួយចំនួនជាមួយនិង `handleClick` method របស់ Game ដែលវានិង fires នៅពេលដែលអ្នកចុចលើ square។
 
 The `stepNumber` state we've added reflects the move displayed to the user now. After we make a new move, we need to update `stepNumber` by adding `stepNumber: history.length` as part of the `this.setState` argument. This ensures we don't get stuck showing the same move after a new one has been made.
 
