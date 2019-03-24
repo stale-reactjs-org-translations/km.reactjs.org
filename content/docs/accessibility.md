@@ -4,19 +4,20 @@ title: Accessibility
 permalink: docs/accessibility.html
 ---
 
-## Why Accessibility? {#why-accessibility}
+## ហេតុអ្វីបានជា Accessibility? {#why-accessibility}
 
-Web accessibility (also referred to as [**a11y**](https://en.wiktionary.org/wiki/a11y)) is the design and creation of websites that can be used by everyone. Accessibility support is necessary to allow assistive technology to interpret web pages.
+Web accessibility (ក៏អាចហៅបានជា[**a11y**](https://en.wiktionary.org/wiki/a11y)) គឺជាការរចនានិងបង្កើតគេហទំព័រដែលអាចប្រើប្រាស់បានដោយមនុស្សគ្រប់គ្នា។ Accessibility supportគឺចាំបាច់សំរាប់ឱ្យបច្ចេកវិទ្យាជំនួយបកប្រែទៅជាគេហទំព័រ។
 
 React fully supports building accessible websites, often by using standard HTML techniques.
+Reactគាំទ្រយ៉ាងពេញលេញក្នុងការបង្កើតគេហទំព័រដែលអាចចូលដំណើរការបានដោយប្រើបច្ចេកទេសស្តង់ដាររបស់ HTML។
 
-## Standards and Guidelines {#standards-and-guidelines}
+## ស្តង់ដារ និង ការណែនាំ {#standards-and-guidelines}
 
 ### WCAG {#wcag}
 
-The [Web Content Accessibility Guidelines](https://www.w3.org/WAI/intro/wcag) provides guidelines for creating accessible web sites.
+[Web Content Accessibility Guidelines](https://www.w3.org/WAI/intro/wcag) | [ការណែនាំមាតិកាលទ្ធភាពប្រើប្រាស់គេហទំព័រ](https://www.w3.org/WAI/intro/wcag) ផ្តល់នូវគោលការណ៍ណែនាំសម្រាប់បង្កើតគេហទំព័រដែលអាចចូលដំណើរការបាន។
 
-The following WCAG checklists provide an overview:
+បញ្ជីផ្ទៀងផ្ទាត់ WCAG ខាងក្រោមនេះនឹងផ្តល់នូវសេចក្តីសង្ខេបទូទៅ:
 
 - [WCAG checklist from Wuhcag](https://www.wuhcag.com/wcag-checklist/)
 - [WCAG checklist from WebAIM](https://webaim.org/standards/wcag/checklist)
@@ -24,9 +25,9 @@ The following WCAG checklists provide an overview:
 
 ### WAI-ARIA {#wai-aria}
 
-The [Web Accessibility Initiative - Accessible Rich Internet Applications](https://www.w3.org/WAI/intro/aria) document contains techniques for building fully accessible JavaScript widgets.
+[Web Accessibility Initiative - Accessible Rich Internet Applications](https://www.w3.org/WAI/intro/aria) គឺជាឯកសារដែលមាននូវបច្ចេកទេសសំរាប់បង្កើត(ធាតុក្រាហ្វិក JavaScript ឬ JavaScript widgets) យ៉ាងពេញលេញមួយ។
 
-Note that all `aria-*` HTML attributes are fully supported in JSX. Whereas most DOM properties and attributes in React are camelCased, these attributes should be hyphen-cased (also known as kebab-case, lisp-case, etc) as they are in plain HTML:
+ចំណាំថា attribute `aria-*` ទាំងអស់របស់ HTML អាចប្រើប្រាស់យ៉ាងពេញលេញនៅក្នុង JSX ។ ខណៈពេលដែល properties និង attibutes ភាគច្រើនរបស់ DOM ក្នុង React ប្រើប្រាស់ជាស្ទីល camelCased ដែល attributes ទាំងនោះគួរតែសរសេរបែប hyphen-cased (ត្រូវបានគេស្គាល់ដូចជា kebab-case, lisp-case ជាដើម) ដែលដូចទៅនឹងការសរសេរក្នុង HTML ធម្មតា:
 
 ```javascript{3,4}
 <input
@@ -40,13 +41,14 @@ Note that all `aria-*` HTML attributes are fully supported in JSX. Whereas most 
 ```
 
 ## Semantic HTML {#semantic-html}
-Semantic HTML is the foundation of accessibility in a web application. Using the various HTML elements to reinforce the meaning of information
-in our websites will often give us accessibility for free.
+Semantic HTML គឺជាមូលដ្ឋានគ្រឹះនៃភាពងាយស្រួលនៅក្នុងកម្មវិធីបណ្តាញ។ ការប្រើធាតុ HTML ផ្សេងៗដើម្បីពង្រឹងអត្ថន័យនៃពត៌មាន
+នៅក្នុងគេហទំព័ររបស់យើងនឹងផ្តល់អោយយើងប្រើប្រាស់ដោយឥតគិតថ្លៃ។
 
-- [MDN HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+- [MDN HTML elements reference | អត្ថបទយោងរបស់ធាតុ MDN HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
 Sometimes we break HTML semantics when we add `<div>` elements to our JSX to make our React code work, especially when working with lists (`<ol>`, `<ul>` and `<dl>`) and the HTML `<table>`.
 In these cases we should rather use [React Fragments](/docs/fragments.html) to group together multiple elements.
+ពេលខ្លះដើម្បីអោយកូត React របស់យើងដើរ យើងបាន
 
 For example,
 
