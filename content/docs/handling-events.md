@@ -8,12 +8,12 @@ redirect_from:
   - "docs/events-ko-KR.html"
 ---
 
-Handling events with React elements is very similar to handling events on DOM elements. There are some syntactic differences:
+ការ Handle event ជាមួយReact elements គឺមានការស្រដៀងគ្នាទៅនឹងការ​Handle events ជាមួយ​DOM elemments ដែរ។ វាមានការខុសគ្នាមួយចំនួនដូចជា៖ 
 
-* React events are named using camelCase, rather than lowercase.
-* With JSX you pass a function as the event handler, rather than a string.
+* ឈ្មោះរបស់ events ក្នុងReact ត្រូវប្រើជាទម្រង់ camelCast ដោយមិនប្រើទម្រង់ lowercase ទេ។
+* ក្នុង JSX អ្នកត្រូវ pass function ជា​ event handler ដោយគេមិនប្រើ​ String នោះទេ​។
 
-For example, the HTML:
+ឧទាហរណ៍​ នៅក្នុង HTML៖
 
 ```html
 <button onclick="activateLasers()">
@@ -21,7 +21,7 @@ For example, the HTML:
 </button>
 ```
 
-is slightly different in React:
+មានភាពខុសគ្នាបន្តិចបន្តួចនៅក្នុង React:
 
 ```js{1}
 <button onClick={activateLasers}>
@@ -29,7 +29,7 @@ is slightly different in React:
 </button>
 ```
 
-Another difference is that you cannot return `false` to prevent default behavior in React. You must call `preventDefault` explicitly. For example, with plain HTML, to prevent the default link behavior of opening a new page, you can write:
+ចំនុចដែលខុសគ្នាមួយទៀតគឺអ្នកមិនអាច return `false` ដើម្បីការពារ default behavior នៅក្នុង React បានឡើយ។ អ្នកត្រូវតែហៅ `preventDefault`។ ឧទាហរណ៍​ ជាទម្រង់ HTML ដើម្បីការពារ​ កុំអោយ browser បើកទំព័រថ្មីនៅពេលគេចុចលើ​​តំណភ្ជាប់ អ្នកអាចសរសេរដូចខាងក្រោម៖ 
 
 ```html
 <a href="#" onclick="console.log('The link was clicked.'); return false">
@@ -37,7 +37,7 @@ Another difference is that you cannot return `false` to prevent default behavior
 </a>
 ```
 
-In React, this could instead be:
+នៅក្នុង React គួរតែត្រូវបានជំនួសដូចខាងក្រោម៖ 
 
 ```js{2-5,8}
 function ActionLink() {
@@ -54,11 +54,11 @@ function ActionLink() {
 }
 ```
 
-Here, `e` is a synthetic event. React defines these synthetic events according to the [W3C spec](https://www.w3.org/TR/DOM-Level-3-Events/), so you don't need to worry about cross-browser compatibility. See the [`SyntheticEvent`](/docs/events.html) reference guide to learn more.
+`e`នៅត្រង់ចំនុចនេះគឺជា synthetic event។ React កំណត់​​ synthetic events ទាំងនោះអាស្រ័យទៅតាម​​ [W3C spec](https://www.w3.org/TR/DOM-Level-3-Events/)ដូចនេះអ្នកកុំបារម្ភពី cross-browser compatibility។ មើលឯកសារអំពី [`SyntheticEvent`](/docs/events.html) ដើម្បីរៀនបន្ថែមទៀត។
 
-When using React you should generally not need to call `addEventListener` to add listeners to a DOM element after it is created. Instead, just provide a listener when the element is initially rendered.
+នៅពេលអ្នកប្រើ React អ្នកពុំគួរហៅ `addEventListener` ដើម្បី add listeners ទៅកាន់ DOM element បន្ទាប់ពេលវាត្រូវបានបង្តើត។ ជំនួសមកវិញ អ្នកគ្រាន់តែដាក់ listener នៅពេលដែល element render ដំបូង។
 
-When you define a component using an [ES6 class](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes), a common pattern is for an event handler to be a method on the class. For example, this `Toggle` component renders a button that lets the user toggle between "ON" and "OFF" states:
+នៅពេលអ្នកបង្កើត component ដោយប្រើ [ES6 class](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes)អ្នកអាចប្រើ event handler ជា method នៅក្នុង​ class។​​ ឧទាហរណ៍​៖ `Toggle` component​ នឹង renders button មួយដែលអនុញ្ញាតិអោយ user ប្តូរstatesពី "ON" ទៅ "OFF" :
 
 ```js{6,7,10-14,18}
 class Toggle extends React.Component {
