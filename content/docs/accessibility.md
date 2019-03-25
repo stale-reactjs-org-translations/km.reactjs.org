@@ -15,7 +15,7 @@ Reactគាំទ្រយ៉ាងពេញលេញក្នុងការប
 
 ### WCAG {#wcag}
 
-[Web Content Accessibility Guidelines](https://www.w3.org/WAI/intro/wcag) | [ការណែនាំមាតិកាលទ្ធភាពប្រើប្រាស់គេហទំព័រ](https://www.w3.org/WAI/intro/wcag) ផ្តល់នូវគោលការណ៍ណែនាំសម្រាប់បង្កើតគេហទំព័រដែលអាចចូលដំណើរការបាន។
+[ការណែនាំមាតិកាលទ្ធភាពប្រើប្រាស់គេហទំព័រ | Web Content Accessibility Guidelines](https://www.w3.org/WAI/intro/wcag) ផ្តល់នូវគោលការណ៍ណែនាំសម្រាប់បង្កើតគេហទំព័រដែលអាចចូលដំណើរការបាន។
 
 បញ្ជីផ្ទៀងផ្ទាត់ WCAG ខាងក្រោមនេះនឹងផ្តល់នូវសេចក្តីសង្ខេបទូទៅ:
 
@@ -44,17 +44,15 @@ Reactគាំទ្រយ៉ាងពេញលេញក្នុងការប
 Semantic HTML គឺជាមូលដ្ឋានគ្រឹះនៃភាពងាយស្រួលនៅក្នុងកម្មវិធីបណ្តាញ។ ការប្រើធាតុ HTML ផ្សេងៗដើម្បីពង្រឹងអត្ថន័យនៃពត៌មាន
 នៅក្នុងគេហទំព័ររបស់យើងនឹងផ្តល់អោយយើងប្រើប្រាស់ដោយឥតគិតថ្លៃ។
 
-- [MDN HTML elements reference | អត្ថបទយោងរបស់ធាតុ MDN HTML](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+- [អត្ថបទយោងរបស់ធាតុ MDN HTML | MDN HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
-Sometimes we break HTML semantics when we add `<div>` elements to our JSX to make our React code work, especially when working with lists (`<ol>`, `<ul>` and `<dl>`) and the HTML `<table>`.
-In these cases we should rather use [React Fragments](/docs/fragments.html) to group together multiple elements.
-ពេលខ្លះដើម្បីអោយកូត React របស់យើងដើរ យើងបាន
+ពេលខ្លះដើម្បីអោយកូត React របស់យើងដើរ យើងបានបន្ថែមធាតុ `<div>` ទៅកាន់ JSX ដែលអាចបំបែក HTML semantics ជាពិសេសនៅពេលដែលធ្វើការជាមួយ(បញ្ជី | lists) (`<ol>`, `<ul>` និង `<dl>`) និង HTML `<table>`។
+ក្នុងករណីនេះយើងគួរតែប្រើ [React Fragments](/docs/fragments.html) ដើម្បីដាក់ធាតុច្រើនរួមបញ្ចូលជាក្រុម។
 
-For example,
+ឧទាហរណ៍៖
 
 ```javascript{1,5,8}
 import React, { Fragment } from 'react';
-
 function ListItem({ item }) {
   return (
     <Fragment>
@@ -75,7 +73,7 @@ function Glossary(props) {
 }
 ```
 
-You can map a collection of items to an array of fragments as you would any other type of element as well:
+អ្នកអាចធ្វើការ map ក្រុមនៃធាតុទៅជាអារេនៃបំណែកដូចដែលអ្នកចង់បានប្រភេទធាតុផ្សេងៗទៀតផងដែរ៖
 
 ```javascript{6,9}
 function Glossary(props) {
@@ -93,7 +91,7 @@ function Glossary(props) {
 }
 ```
 
-When you don't need any props on the Fragment tag you can use the [short syntax](/docs/fragments.html#short-syntax), if your tooling supports it:
+នៅពេលដែលអ្នកមិនត្រូវការ props លើ(ស្លាកFragment | Fragment tag) អ្នកអាចប្រើបែប [short syntax](/docs/fragments.html#short-syntax) បើសិនជាឧបករណ៍របស់អ្នកគាំទ្រ៖
 
 ```javascript{3,6}
 function ListItem({ item }) {
@@ -106,7 +104,7 @@ function ListItem({ item }) {
 }
 ```
 
-For more info, see [the Fragments documentation](/docs/fragments.html).
+សូមចូលទៅកាន់ [the Fragments documentation](/docs/fragments.html) សំរាប់ព័ត៌មានបន្ថែម។
 
 ## Accessible Forms {#accessible-forms}
 
