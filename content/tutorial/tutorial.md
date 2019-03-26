@@ -16,7 +16,7 @@ Tutorial នេះសម្រាប់ទាំងអ្នកដែលមា�
 
 ## មុនពេលដែលយើងចាប់ផ្តើម tutorial {#before-we-start-the-tutorial}
 
-យើងនិងបង្កើតហ្គេមដ៏តូចមួយនៅក្នុង tutorial នេះ។ **អ្នកអាច skip វាបានពីព្រេាះអ្នកមិនមែនជាអ្នកបង្កើតហ្គេមនេាះទេ -- ប៉ុន្តែអ្នកគួរតែសាកល្បងវា។**  Techniques ដែលអ្នកនិងរៀននៅក្នុង tutorial នេះគឺមូលដ្ឋានគ្រឺះដើម្បីបង្កើត React apps, ហើយនិងការយល់ដឹងយ៉ាងសុីជម្រៅពី React។
+យើងនិងបង្កើតហ្គេមដ៏តូចមួយនៅក្នុង tutorial នេះ។ **អ្នកអាច skip វាបានពីព្រេាះអ្នកមិនមែនជាអ្នកបង្កើតហ្គេមនេាះទេ -- ប៉ុន្តែអ្នកគួរតែសាកល្បងវា។**  Techniques ដែលអ្នកនិងរៀននៅក្នុង tutorial នេះគឺមូលដ្ឋានគ្រឺះដើម្បីបង្កើត React apps ហើយនិងការយល់ដឹងយ៉ាងសុីជម្រៅពី React។
 
 >ពត៌មានជំនួយ
 >
@@ -25,7 +25,7 @@ Tutorial នេះសម្រាប់ទាំងអ្នកដែលមា�
 Tutorial នេះត្រូវបានគេបែងចែកជាច្រើនផ្នែក​ដូចខាងក្រោម​៖
 
 * [ការរៀបចំសម្រាប់ ​Tutorial](#setup-for-the-tutorial) នឹងផ្តល់ឱ្យអ្នកនូវ**ចំណុចចាប់ផ្តើមមួយ**ដើម្បីអនុវត្តតាមការបង្រៀន។
-* [ទិដ្ឋភាពទូទៅ](#overview) នឹងបង្រៀនអ្នកនូវ**មូលដ្ឋានគ្រឹះ**ពី React ដូចជា៖ components, props, and state។
+* [ទិដ្ឋភាពទូទៅ](#overview) នឹងបង្រៀនអ្នកនូវ**មូលដ្ឋានគ្រឹះ**ពី React ដូចជា៖ components, props, និង state។
 * [Completing the Game](#completing-the-game) នឹងបង្រៀនអ្នកនូវ**បច្ចេកទេសទូទៅបំផុត**ក្នុងការ develop React។
 * [Adding Time Travel](#adding-time-travel) នឹងផ្តល់ឱ្យអ្នកនូវ**ការយល់ដឹងកាន់តែស៊ីជម្រៅ**នៃចំណុចខ្លាំងតែមួយគត់របស់ React។
 
@@ -35,19 +35,19 @@ Tutorial នេះត្រូវបានគេបែងចែកជាច្�
 
 ### តើយើងនឹងបង្កើតអ្វី?    {#what-are-we-building}
 
-នៅក្នុង tutorial នេះ, យើងនឹងបង្ហាញពីរបៀបបង្កើតហ្គេម tic-tac-toe ជាមួយនិង React។
+នៅក្នុង tutorial នេះ យើងនឹងបង្ហាញពីរបៀបបង្កើតហ្គេម tic-tac-toe ជាមួយនិង React។
 
-អ្នកអាចឃើញអ្វីដែលយើងនឹងបង្កើតនៅទីនេះ៖ **[Final Result](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)**។ ប្រសិនជាអ្នកមិនយល់ពីកូដ, ឬក៏អ្នកមិនច្បាស់ជាមួយនិង syntax របស់កូដ, សូមកុំបារម្មណ៏អី! គោលដៅនៃ tutorial នេះគឺជួយអ្នកឱ្យយល់ច្បាស់ពី React ហើយនិង syntax របស់ React។
+អ្នកអាចឃើញអ្វីដែលយើងនឹងបង្កើតនៅទីនេះ៖ **[Final Result](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)**។ ប្រសិនជាអ្នកមិនយល់ពីកូដ, ឬក៏អ្នកមិនច្បាស់ជាមួយនិង syntax របស់កូដ សូមកុំបារម្មណ៏អី! គោលដៅនៃ tutorial នេះគឺជួយអ្នកឱ្យយល់ច្បាស់ពី React ហើយនិង syntax របស់ React។
 
-យើងសូមផ្តល់អនុសាសន៍អោយអ្នកឆែកមើលហ្គេម​ tic-tac-toe នេះជាមុនសិនមុនពេលដែលបន្តជាមួយនិង tutorial ទៅមុខទៀត។ លក្ខណៈពិសេសមួយដែលអ្នកនឹងសម្គាល់គឺថាមានតារាងលេខនៅខាងស្តាំនៃ board របស់ហ្គេម។ តារាងនេះកត់ត្រានូវ history នៃការលេងរបស់ user, ហើយ​ history វានិង update នៅពេលដែលហ្គេមដំណើរការ។
+យើងសូមផ្តល់អនុសាសន៍អោយអ្នកឆែកមើលហ្គេម​ tic-tac-toe នេះជាមុនសិនមុនពេលដែលបន្តជាមួយនិង tutorial ទៅមុខទៀត។ លក្ខណៈពិសេសមួយដែលអ្នកនឹងសម្គាល់គឺថាមានតារាងលេខនៅខាងស្តាំនៃ board របស់ហ្គេម។ តារាងនេះកត់ត្រានូវ history នៃការលេងរបស់ user ហើយ​ history វានិង update នៅពេលដែលហ្គេមដំណើរការ។
 
 អ្នកអាចបិទហ្គេម tic-tac-toe នេះបាននៅពេលដែលអ្នកយល់ពីដំណើរការរបស់វា។ យើងនឹងចាប់ផ្តើមជាមួយនិង template ដ៏សាមញ្ញមួយនៅក្នុង tutorial នេះ។​​ ជំហានបន្ទាប់របស់យើងគឺរៀបចំអោយអ្នកអាចចាប់ផ្តើមបង្កើតហ្គេមនេះបាន។
 
 ### តម្រូវការជាមុន   {#prerequisites}
 
-យើងនឹងសន្មត់ថាអ្នកមានចំណេះដឹងខ្លះៗពី HTML ហើយនិង JavaScript, ប៉ុន្តែអ្នកគួរតែអាចអនុវត្តវាបានបើទេាះបីជាអ្នកមានចំណេះដឹងពីភាសា programming ផ្សេងៗក៏ដោយ។ យើងនឹងសន្មតផងដែរថាអ្នកមានចំណេះដឹងពី concept របស់ programming ដូចជា៖ functions, objects, arrays, and to a lesser extent, classes។
+យើងនឹងសន្មត់ថាអ្នកមានចំណេះដឹងខ្លះៗពី HTML ហើយនិង JavaScript ប៉ុន្តែអ្នកគួរតែអាចអនុវត្តវាបានបើទេាះបីជាអ្នកមានចំណេះដឹងពីភាសា programming ផ្សេងៗក៏ដោយ។ យើងនឹងសន្មតផងដែរថាអ្នកមានចំណេះដឹងពី concept របស់ programming ដូចជា៖ functions, objects, arrays, and to a lesser extent, classes។
 
-បើសិនជាអ្នកត្រូវការ review JavaScript, យើងសូមផ្តល់យោបល់ឱ្យអាន [this guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)។ សូមកត់ចំណាំថាយើងនឹងប្រើ features មួយចំនួនរបស់ ES6 ផងដែរ -- កំណែទំរង់ថ្មីរបស់ JavaScript. នៅក្នុង tutorial នេះ, យើងនឹងប្រើ [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let), ហើយនិង [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) statements. អ្នកអាចប្រើ [Babel REPL](babel://es5-syntax-example) ដើម្បីឆែកមើលថាតើ code របស់ ES6 នឹង compile ទៅជាអ្វី។
+បើសិនជាអ្នកត្រូវការ review JavaScript យើងសូមផ្តល់យោបល់ឱ្យអាន [this guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)។ សូមកត់ចំណាំថាយើងនឹងប្រើ features មួយចំនួនរបស់ ES6 ផងដែរ -- កំណែទំរង់ថ្មីរបស់ JavaScript។ នៅក្នុង tutorial នេះ យើងនឹងប្រើ [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) ហើយនិង [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) statements។ អ្នកអាចប្រើ [Babel REPL](babel://es5-syntax-example) ដើម្បីឆែកមើលថាតើ code របស់ ES6 នឹង compile ទៅជាអ្វី។
 
 ## ការរៀបចំសម្រាប់ ​Tutorial {#setup-for-the-tutorial}
 
@@ -105,8 +105,6 @@ cd ..
 
 ៥. បន្ថែម file មួយដោយដាក់ឈ្មេាះថា `index.js` ចូលទៅក្នុងថតឯកសារ `src/` ជាមួយនិង [this JS code](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)។
 
-6. Add these three lines to the top of `index.js` in the `src/` folder:
-
 ៦. បន្ថែមកូដបីបន្ទាត់ខាងក្រោមទៅផ្នែកខាងលើគេនៃ `index.js` ដែលស្ថិតនៅក្នុងថតឯកសារ `src/`៖
 
 ```js
@@ -115,7 +113,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 ```
 
-ឥឡូវនេះប្រសិនបើអ្នក run `npm start` នៅក្នុងថតឯកសាររបស់ project ហើយបើក `http://localhost:3000` នៅលើ browser, អ្នកគួរតែឃើញ tic-tac-toe ហ្គេមទទេមួយ។
+ឥឡូវនេះប្រសិនបើអ្នក run `npm start` នៅក្នុងថតឯកសាររបស់ project ហើយបើក `http://localhost:3000` នៅលើ browser អ្នកគួរតែឃើញ tic-tac-toe ហ្គេមទទេមួយ។
 
 យើងសូមផ្តល់អនុសាសន៍ [these instructions](https://babeljs.io/docs/editors/) ដើម្បីកំណត់ syntax highlighting សម្រាប់ editor របស់អ្នក។
 
@@ -123,17 +121,17 @@ import './index.css';
 
 ### ជំនួយ, ខ្ញុំជាប់គាំងហើយ!   {#help-im-stuck}
 
-ប្រសិនជាអ្នកជាប់គាំង, អ្នកអាចឆែកមើល [community support resources](/community/support.html). ជាពិសេស, [Reactiflux Chat](https://discord.gg/0ZcbPKXt5bZjGY5n) គឺជាវិធីដ៏ល្អមួយដើម្បីទទួលបានជំនួយយ៉ាងឆាប់រហ័ស។ ប្រសិនបើអ្នកមិនទទួលបានចម្លើយទេ, ឬប្រសិនបើអ្នកនៅជាប់គាំង, សូមរាយការណ៍នូវបញ្ហា, ហើយយើងនឹងជួយអ្នក។
+ប្រសិនជាអ្នកជាប់គាំង អ្នកអាចឆែកមើល [community support resources](/community/support.html)។ ជាពិសេស [Reactiflux Chat](https://discord.gg/0ZcbPKXt5bZjGY5n) គឺជាវិធីដ៏ល្អមួយដើម្បីទទួលបានជំនួយយ៉ាងឆាប់រហ័ស។ ប្រសិនបើអ្នកមិនទទួលបានចម្លើយទេ ឬប្រសិនបើអ្នកនៅជាប់គាំង សូមរាយការណ៍នូវបញ្ហា ហើយយើងនឹងជួយអ្នក។
 
 ## ទិដ្ឋភាពទូទៅ   {#overview}
 
-ឥឡូវនេះអ្នកបានធ្វើការរៀបចំសម្រាប់ tutorial នេះរួចរាល់ហើយ, តេាះចាប់ផ្តើមនូវទិដ្ឋភាពទូទៅរបស់ React!
+ឥឡូវនេះអ្នកបានធ្វើការរៀបចំសម្រាប់ tutorial នេះរួចរាល់ហើយ តេាះចាប់ផ្តើមនូវទិដ្ឋភាពទូទៅរបស់ React!
 
 ### តើអ្វីជា React? {#what-is-react}
 
-React គឺជាការប្រកាស, ប្រសិទ្ធិភាព, ហើយនិង JavaScript library ដែល flexible មួយសម្រាប់បង្កើត user interfaces។ វាអនុញ្ញាតឱ្យអ្នកបង្កើត UIs ដែលស្មុគស្មាញ ពីបំណែកតូចៗនិងដាច់ពីគ្នានៃកូដដែលគេហៅថា "components"។
+React គឺជាការប្រកាស ប្រសិទ្ធិភាព ហើយនិង JavaScript library ដែល flexible មួយសម្រាប់បង្កើត user interfaces។ វាអនុញ្ញាតឱ្យអ្នកបង្កើត UIs ដែលស្មុគស្មាញ ពីបំណែកតូចៗនិងដាច់ពីគ្នានៃកូដដែលគេហៅថា "components"។
 
-React មាន component ដែលមានប្រភេទផ្សេងៗពីគ្នាផងដែរ, ប៉ុន្តែយើងនឹងចាប់ផ្តើមជាមួយនិង `React.Component` subclasses​៖
+React មាន component ដែលមានប្រភេទផ្សេងៗពីគ្នាផងដែរ ប៉ុន្តែយើងនឹងចាប់ផ្តើមជាមួយនិង `React.Component` subclasses​៖
 
 ```javascript
 class ShoppingList extends React.Component {
@@ -156,9 +154,9 @@ class ShoppingList extends React.Component {
 
 យើងនឹងទទួលបាននូវ tags ដែលដូចទៅនិង XML tags។ យើងប្រើ components ដើម្បីប្រាប់ React នូវអ្វីដែលយើងចង់ឃើញនៅលើ screen។ នៅពេលដែល data ផ្លាស់ប្តូរ, React នឹង update ហើយនិង re-render components របស់យើង។
 
-នេះ, ShoppingList គឺជា **React component class** មួយ, ឬក៏ **React component type** មួយ។ component ទទួលយក parameters, ដែលគេហៅថា `props` (ពាក្យពេញ "properties"), ហើយ returns នូវ hierarchy នៃ views មួយដើម្បីបង្ហាញតាមរយៈ `render` method។
+នេះ ShoppingList គឺជា **React component class** មួយ, ឬក៏ **React component type** មួយ។ component ទទួលយក parameters ដែលគេហៅថា `props` (ពាក្យពេញ "properties") ហើយ returns នូវ hierarchy នៃ views មួយដើម្បីបង្ហាញតាមរយៈ `render` method។
 
-`render` method return នូវ *description* នៃអ្វីដែលអ្នកចង់ឃើញនៅលើអេក្រង់។​ React ទទួលយក description ហើយបង្ហាញលទ្ធផល។ ជាពិសេស, `render` return នូវ **React element** មួយ, ដែលជា description ដ៏ស្រាលមួយដែលត្រូវ render។ React developers ភាគច្រើនប្រើនូវ special syntax ដែលគេហៅថា "JSX"​ ដែលបង្កើតជា structures ងាយស្រួលក្នុងការសរសេរ។  `<div />` syntax គឺត្រូវបានគេបំលែងទៅជា `React.createElement('div')` នៅពេល build time។ ឧទាហរណ៍ខាងលើគឺស្មើទៅនឹង៖
+`render` method return នូវ *description* នៃអ្វីដែលអ្នកចង់ឃើញនៅលើអេក្រង់។​ React ទទួលយក description ហើយបង្ហាញលទ្ធផល។ ជាពិសេស `render` return នូវ **React element** មួយ ដែលជា description ដ៏ស្រាលមួយដែលត្រូវ render។ React developers ភាគច្រើនប្រើនូវ special syntax ដែលគេហៅថា "JSX"​ ដែលបង្កើតជា structures ងាយស្រួលក្នុងការសរសេរ។  `<div />` syntax គឺត្រូវបានគេបំលែងទៅជា `React.createElement('div')` នៅពេល build time។ ឧទាហរណ៍ខាងលើគឺស្មើទៅនឹង៖
 
 ```javascript
 return React.createElement('div', {className: 'shopping-list'},
@@ -169,18 +167,16 @@ return React.createElement('div', {className: 'shopping-list'},
 
 [See full expanded version.](babel://tutorial-expanded-version)
 
-ប្រសិនជាអ្នកចង់ដឹងចង់ឃើញ, `createElement()` ត្រូវបានគេរៀបរាប់លម្អិតបន្ថែមនៅក្នុង [API reference](/docs/react-api.html#createelement), ប៉ុន្តែយើងនឹងមិនប្រើវានៅក្នុង tutorial នេះទេ។ ផ្ទយទៅវិញ, យើងនឹងបន្តប្រើ JSX.
-
-JSX comes with the full power of JavaScript. You can put *any* JavaScript expressions within braces inside JSX. Each React element is a JavaScript object that you can store in a variable or pass around in your program.
+ប្រសិនជាអ្នកចង់ដឹងចង់ឃើញ, `createElement()` ត្រូវបានគេរៀបរាប់លម្អិតបន្ថែមនៅក្នុង [API reference](/docs/react-api.html#createelement), ប៉ុន្តែយើងនឹងមិនប្រើវានៅក្នុង tutorial នេះទេ។ ផ្ទយទៅវិញ យើងនឹងបន្តប្រើ JSX។
 
 JSX ភ្ជាប់មកជាមួយនូវអានុភាពរបស់ JavaScript។ អ្នកអាចដាក់ expressions *ណាមួយ* របស់ JavaScript នៅក្នុងដង្កៀបខាងក្នុង​ JSX។ React element នីមួយៗគឺជា JavaScript object ដែលអ្នកអាចផ្ទុកនៅក្នុង variable ឬក៏អាច pass នៅក្នុង program របស់អ្នក។
 
-`ShoppingList` component ដែលនៅខាងលើគឺ renders តែ built-in DOM components តែប៉ុណ្ណេះដូចជា `<div />` ហើយនិ `<li />`។ ប៉ុន្តែអ្នកអាចបង្កើតហើយនិង render custom React components ផងដែរ។ ឧទាហរណ៍, ឥឡូវ​នេះយើងអាចយោងទៅលើ shopping list ដោយសរសេរ `<ShoppingList />`។ React component នីមួយៗគឺ encapsulated ហើយនិង
+`ShoppingList` component ដែលនៅខាងលើគឺ renders តែ built-in DOM components តែប៉ុណ្ណេះដូចជា `<div />` ហើយនិ `<li />`។ ប៉ុន្តែអ្នកអាចបង្កើតហើយនិង render custom React components ផងដែរ។ ឧទាហរណ៍ ឥឡូវ​នេះយើងអាចយោងទៅលើ shopping list ដោយសរសេរ `<ShoppingList />`។ React component នីមួយៗគឺ encapsulated ហើយនិង
 អាចដំណើរការដោយឯករាជ្យ; នេះអនុញ្ញាតឱ្យអ្នកបង្កើត UI ដែលស្មុគ្រស្មាញពី components ដែលសាមញ្ញ។
 
 ## ការត្រួតពិនិត្យ   Starter Code {#inspecting-the-starter-code}
 
-បើសិនជាអ្នកនិងធ្វើការលើ tutorial **នៅក្នុង  browser,** បើកកូដនេះក្នុងផ្ទាំងថ្មី៖ **[Starter Code](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)**។ បើសិនជាអ្នកនឹងធ្វើការលើ tutorial **នៅក្នុងកុំព្យូទ័ររបស់អ្នក**, បើក `src/index.js` នៅក្នុង project folder (អ្នកបានប៉ះឯកសារនេះរួចហើយកំឡុងពេល [setup](#setup-option-2-local-development-environment))
+បើសិនជាអ្នកនិងធ្វើការលើ tutorial **នៅក្នុង  browser** បើកកូដនេះក្នុងផ្ទាំងថ្មី៖ **[Starter Code](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)**។ បើសិនជាអ្នកនឹងធ្វើការលើ tutorial **នៅក្នុងកុំព្យូទ័ររបស់អ្នក** បើក `src/index.js` នៅក្នុង project folder (អ្នកបានប៉ះឯកសារនេះរួចហើយកំឡុងពេល [setup](#setup-option-2-local-development-environment))។
 
 Starter Code នេះគឺជាមូលដ្ឋាននៃអ្វីដែលយើងនឹងបង្កើត។ យើងបានផ្តល់នូវ CSS styling ដូច្នេះអ្នកត្រូវតែផ្តោតលើការរៀន React ហើយនិង programming ហ្គេម tic-tac-toe។
 
@@ -229,7 +225,7 @@ class Square extends React.Component {
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/aWWQOG?editors=0010)**
 
-អបអរសាទរ! អ្នកទើបតែបាន "បញ្ជូន prop មួយ" ពី parent Board component ទៅកាន់ child Square component។ ការបញ្ជូន props គឺជារបៀបដែលពត៌មានហូរនៅក្នុង React apps, ពី parent ទៅកាន់ children។
+អបអរសាទរ! អ្នកទើបតែបាន "បញ្ជូន prop មួយ" ពី parent Board component ទៅកាន់ child Square component។ ការបញ្ជូន props គឺជារបៀបដែលពត៌មានហូរនៅក្នុង React apps ពី parent ទៅកាន់ children។
 
 ### ការបង្កើត Interactive Component មួយ {#making-an-interactive-component}
 
@@ -247,13 +243,13 @@ class Square extends React.Component {
 }
 ```
 
-ប្រសិនជាយើង click លើ Square ឥឡូវ​នេះ, យើងគួរតែទទួលបាននូវ alert មួយនៅក្នុង browser យើង។
+ប្រសិនជាយើង click លើ Square ឥឡូវ​នេះ យើងគួរតែទទួលបាននូវ alert មួយនៅក្នុង browser យើង។
 
 សម្រាប់ event handlers 
 
 >ចំណាំ
 >
->ដើម្បីជាជំនួយក្នុងការ typing ហើយនិងជៀសវាង [ការភាន់ច្រឡំនូវ behavior របស់ `this`](https://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/), យើងនឹងប្រើ​ [arrow function syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) សម្រាប់ event handlers នៅទីនេះហើយនិងពេលខាងមុខទៀត៖
+>ដើម្បីជាជំនួយក្នុងការ typing ហើយនិងជៀសវាង [ការភាន់ច្រឡំនូវ behavior របស់ `this`](https://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/) យើងនឹងប្រើ​ [arrow function syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) សម្រាប់ event handlers នៅទីនេះហើយនិងពេលខាងមុខទៀត៖
 >
 >```javascript{4}
 >class Square extends React.Component {
@@ -269,9 +265,9 @@ class Square extends React.Component {
 >
 >សូមកត់សម្គាល់ពីបៀបជាមួយ `onClick={() => alert('click')}`, យើងនឹងបញ្ជូន *function មួយ* ជា `onClick` prop។ វា fire តែពេលបន្ទាប់ពី click តែប៉ុណ្ណោះ។ បំភ្លេច `() =>` ហើយសរសេរ `onClick={alert('click')}` គឺជាកំហុសធម្មតា, ហើយនិង fire ការ alert រាល់ពេលដែល component ធ្វើការ re-renders។
 
-ជំហានបន្ទាប់, យើងចង់អោយ Square component "ចងចាំ" ថាវាត្រូវបានគេ click, ហើយនិងបំពេញវាជាមួយនិងសញ្ញា "X"។ ដើម្បី "ចងចាំ" អ្វីមួយ, component ប្រើ **state**។
+ជំហានបន្ទាប់, យើងចង់អោយ Square component "ចងចាំ" ថាវាត្រូវបានគេ click ហើយនិងបំពេញវាជាមួយនិងសញ្ញា "X"។ ដើម្បី "ចងចាំ" អ្វីមួយ, component ប្រើ **state**។
 
-React components អាចមាន state ដោយការកំណត់ `this.state` នៅក្នុង constructors។ `this.state` គួរតែត្រូវបានចាត់ទុកជា private នៅក្នុង React component។ តេាះរក្សារតម្លៃបច្ចុប្បន្នរបស់ Square នៅក្នុង `this.state`, ហើយផ្លាស់ប្តូរវានៅពេលដែល Square ត្រូវបាន click.
+React components អាចមាន state ដោយការកំណត់ `this.state` នៅក្នុង constructors។ `this.state` គួរតែត្រូវបានចាត់ទុកជា private នៅក្នុង React component។ តេាះរក្សារតម្លៃបច្ចុប្បន្នរបស់ Square នៅក្នុង `this.state` ហើយផ្លាស់ប្តូរវានៅពេលដែល Square ត្រូវបាន click.
 
 ដំបូង, យើងនឹង add constructor មួយទៅអោយ class ដើម្បីកំណត់តម្លៃ state៖
 
@@ -296,7 +292,7 @@ class Square extends React.Component {
 
 >ចំណាំ
 >
->នៅក្នុង [JavaScript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), អ្នកតម្រូវអោយ call `super` នៅពេលធ្វើការកំណត់ constructor នៃ subclass។ React component classes ទាំងអស់ដែលមាន constructor គួរតែចាប់ផ្តើមជាមួយនិងការ call `super(props)`។
+>នៅក្នុង [JavaScript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) អ្នកតម្រូវអោយ call `super` នៅពេលធ្វើការកំណត់ constructor នៃ subclass។ React component classes ទាំងអស់ដែលមាន constructor គួរតែចាប់ផ្តើមជាមួយនិងការ call `super(props)`។
 
 ឥឡូវ​នេះយើងនឹងផ្លាស់ប្តូរ `render` method របស់ Square ដើម្បីបង្ហាញតម្លៃ​បច្ចុប្ប​ន្នរបស់ state នៅពេលដែលត្រូវបាន click៖
 
@@ -328,9 +324,9 @@ class Square extends React.Component {
 }
 ```
 
-តាមរយៈការ call `this.setState` ពី `onClick` handler នៅក្នុង `render` method របស់ Square, យើងប្រាប់ React ធ្វើការ re-render Square គ្រប់ពេលដែល `<button>` ត្រូវបាន click។ បន្ទាប់ពីការ update, `this.state.value` របស់ Square នឹងប្តូរទៅជា `'X'`, ដូច្នេះយើងនឹងឃើញ `X` នៅលើ board របស់ហ្គេម។ បើអ្នក click លើ​​ Square ផ្សេងៗទៀត, `X` គួរតែបង្ហាញ។
+តាមរយៈការ call `this.setState` ពី `onClick` handler នៅក្នុង `render` method របស់ Square យើងប្រាប់ React ធ្វើការ re-render Square គ្រប់ពេលដែល `<button>` ត្រូវបាន click។ បន្ទាប់ពីការ update `this.state.value` របស់ Square នឹងប្តូរទៅជា `'X'` ដូច្នេះយើងនឹងឃើញ `X` នៅលើ board របស់ហ្គេម។ បើអ្នក click លើ​​ Square ផ្សេងៗទៀត `X` គួរតែបង្ហាញ។
 
-នៅពេលដែលអ្នក call `setState` នៅក្នុង component មួយ, React នឹង update child component ដែលនៅក្នុងវាដោយស្វ័យប្រវត្តិ.
+នៅពេលដែលអ្នក call `setState` នៅក្នុង component មួយ React នឹង update child component ដែលនៅក្នុងវាដោយស្វ័យប្រវត្តិ។
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/VbbVLg?editors=0010)**
 
@@ -342,8 +338,6 @@ React Devtools extension សម្រាប់ [Chrome](https://chrome.google.co
 
 React DevTools អាចអោយអ្នកឆែកមើល props ហើយនិង state របស់ React components បាន។
 
-After installing React DevTools, you can right-click on any element on the page, click "Inspect" to open the developer tools, and the React tab will appear as the last tab to the right.
-
 បន្ទាប់ពីដំឡើង React DevTools, អ្នកអាច right-click លើ element ដែលមាននៅលើ page, click "Inspect" ដើម្បីបើក developer tools, ហើយ React tab នឹងលេចឡើងនៅផ្ទាំងចុងក្រោយខាងស្តាំ។
 
 **ទោះជាយ៉ាងណាក៏ដោយ, សូមកត់សម្គាល់ថាមានជំហានបន្ថែមមួយចំនួនទៀតដើម្បីអោយវាដំណើរការជាមួយ CodePen​៖**
@@ -351,19 +345,19 @@ After installing React DevTools, you can right-click on any element on the page,
 1. ចូល log in ឬក៏ចុះឈ្មោះ ហើយបញ្ជាក់ email របស់អ្នក (ទាមទារដើម្បីទប់ស្កាត់សារឥតបានការ)។
 2. Click លើ "Fork" ប៊ូតុង។
 3. Click លើ "Change View" ហើយបន្ទាប់មកជ្រើសរើស "Debug mode"។​
-4. នៅក្នុងផ្ទាំងថ្មីដែលបើក, devtools ឥឡូវនេះគួរតែមានផ្ទាំង React។
+4. នៅក្នុងផ្ទាំងថ្មីដែលបើក devtools ឥឡូវនេះគួរតែមានផ្ទាំង React។
 
 ## Completing the Game {#completing-the-game}
 
-ឥឡូវនេះយើងមានមូលដ្ឋានក្នុងការបង្កើត blocks សម្រាប់ tic-tac-toe ហ្គេមរបស់យើង។ ដើម្បីអោយបានហ្គេមមួយអោយពេញលេញ, ឥឡូវនេះយើងត្រូវដាក់ជំនួស "X"s ហើយនិង "O"s ទៅលើ board, ហើយយើងត្រូវការវិធីមួយដើម្បីកំណត់អ្នកឈ្នះ។
+ឥឡូវនេះយើងមានមូលដ្ឋានក្នុងការបង្កើត blocks សម្រាប់ tic-tac-toe ហ្គេមរបស់យើង។ ដើម្បីអោយបានហ្គេមមួយអោយពេញលេញ ឥឡូវនេះយើងត្រូវដាក់ជំនួស "X"s ហើយនិង "O"s ទៅលើ board ហើយយើងត្រូវការវិធីមួយដើម្បីកំណត់អ្នកឈ្នះ។
 
 ### Lifting State Up {#lifting-state-up}
 
-បច្ចុប្បន្ន, Square component នីមួយៗរក្សារនូវ state របស់ហ្គេម។ ដើម្បីពិនិត្យរកអ្នកឈ្នះ, យើងនឹងរក្សារតម្លៃនីមួយៗរបស់ squares ទាំង៩នៅក្នុងទីតាំងមួយ។
+បច្ចុប្បន្ន Square component នីមួយៗរក្សារនូវ state របស់ហ្គេម។ ដើម្បីពិនិត្យរកអ្នកឈ្នះ យើងនឹងរក្សារតម្លៃនីមួយៗរបស់ squares ទាំង៩នៅក្នុងទីតាំងមួយ។
 
-យើងប្រហែលជាគិតថា Board គួរតែស្នើរសុំនូវតម្លៃ state របស់Square នីមួយៗ។ បើទោះបីជាវិធីសាស្រ្តនេះគឺអាចធ្វើទៅបាន សម្រាប់ React, យើងមិនលើកទឹកចិត្តអោយធ្វើតាមវិធីនេះទេពីព្រេាះកូដនឹងក្លាយទៅជាពិបាកយល់​, ងាយនិងមាន bugs, ហើយពិបាកក្នុងការ refactor។ ជំនួសវិញ, វិធីសាស្រ្តដ៏ល្អបំផុតគឺត្រូវរក្សាទុក state របស់ហ្គេម នៅក្នុង parent Board component ជំនួសអោយការរក្សារទុកនៅក្នុង Square នីមួយៗ។ Board component អាចប្រាប់ Square នីមួយៗនូវអ្វីដែលត្រូវបង្ហាញដោយការបញ្ជូន props មួយ, [just like we did when we passed a number to each Square](#passing-data-through-props)។
+យើងប្រហែលជាគិតថា Board គួរតែស្នើរសុំនូវតម្លៃ state របស់Square នីមួយៗ។ បើទោះបីជាវិធីសាស្រ្តនេះគឺអាចធ្វើទៅបាន សម្រាប់ React, យើងមិនលើកទឹកចិត្តអោយធ្វើតាមវិធីនេះទេពីព្រេាះកូដនឹងក្លាយទៅជាពិបាកយល់​ ងាយនិងមាន bugs ហើយពិបាកក្នុងការ refactor។ ជំនួសវិញ វិធីសាស្រ្តដ៏ល្អបំផុតគឺត្រូវរក្សាទុក state របស់ហ្គេម នៅក្នុង parent Board component ជំនួសអោយការរក្សារទុកនៅក្នុង Square នីមួយៗ។ Board component អាចប្រាប់ Square នីមួយៗនូវអ្វីដែលត្រូវបង្ហាញដោយការបញ្ជូន props មួយ [just like we did when we passed a number to each Square](#passing-data-through-props)។
 
-**ដើម្បីប្រមូល data ពី children ជាច្រើន, ឬក៏ដើម្បីអោយ child components ២ទំនាក់ទំនងជាមួយគ្នាទៅវិញទៅមក, អ្នកត្រូវ declare state នៅក្នុង parent component។ Parent component អាចបញ្ជូន state ចុះទៅ់ children ដោយការប្រើ props; នេះអាចអោយ child components syn ជាមួយគ្នាទៅវិញទៅមក, ហើយនិង syn ជាមួយ parent component ផងដែរ។**
+**ដើម្បីប្រមូល data ពី children ជាច្រើន ឬក៏ដើម្បីអោយ child components ២ទំនាក់ទំនងជាមួយគ្នាទៅវិញទៅមក, អ្នកត្រូវ declare state នៅក្នុង parent component។ Parent component អាចបញ្ជូន state ចុះទៅ់ children ដោយការប្រើ props; នេះអាចអោយ child components syn ជាមួយគ្នាទៅវិញទៅមក, ហើយនិង syn ជាមួយ parent component ផងដែរ។**
 
 ការយក​ state ដាក់ចូលទៅក្នុង parent component គឺជាការធម្មតា​ នៅពេលដែល React components ត្រូវបាន refactor -- សូមឆ្លៀតឱកាសនេះដើម្បីសាកល្បងវា។ យើងនឹងបន្ថែម constructor ទៅអោយ Board ហើយនិងកំណត់តម្លៃ state របស់ Board ដោយផ្ទុកនូវ array មួយជាមួយនិង​ nulls ចំនួន៩។ nulls ទាំង៩នេះទាក់ទងទៅនឹង៩ squares៖
 
@@ -407,7 +401,7 @@ class Board extends React.Component {
 }
 ```
 
-នៅពេលដែលយើងបំពេញ board នៅពេលក្រោយ, board នឹងមើលទៅដូចនេះ៖
+នៅពេលដែលយើងបំពេញ board នៅពេលក្រោយ board នឹងមើលទៅដូចនេះ៖
 
 ```javascript
 [
@@ -425,7 +419,7 @@ class Board extends React.Component {
   }
 ```
 
-នៅពេលចាប់ផ្តើម, យើង[បានបញ្ជូន `value` របស់ prop ចុះក្រោម](#passing-data-through-props)ពី Board ដើម្បីបង្ហាញចំនួនលេខពី០ទៅ៨នៅក្នុង Square ទាំងអស់។ នៅក្នុងជំហានមុនផ្សេងគ្នា, យើងបានជំនួសលេខដោយសញ្ញា "X" [determined by Square's own state](#making-an-interactive-component)។ នេះជាមូលហេតុដែល Square បច្ចុប្បន្នមិនអើពើ `value` របស់ prop ដែលបានបញ្ជួនអោយវាដោយ Board។
+នៅពេលចាប់ផ្តើម យើង[បានបញ្ជូន `value` របស់ prop ចុះក្រោម](#passing-data-through-props)ពី Board ដើម្បីបង្ហាញចំនួនលេខពី០ទៅ៨នៅក្នុង Square ទាំងអស់។ នៅក្នុងជំហានមុនផ្សេងគ្នា, យើងបានជំនួសលេខដោយសញ្ញា "X" [determined by Square's own state](#making-an-interactive-component)។ នេះជាមូលហេតុដែល Square បច្ចុប្បន្នមិនអើពើ `value` របស់ prop ដែលបានបញ្ជួនអោយវាដោយ Board។
 
 ឥលូវយើងនឹងប្រើប្រាស់យន្ដការក្នុងការបញ្ជូន​ props ម្តងទៀត។ យើងនឹងកែប្រែ Board ដើម្បីណែនាំដល់ Square នីមួយៗពីតម្លៃបច្ចុប្បន្នរបស់វា (`'X'`, `'O'`, ឬក៏ `null`)។ យើងបានកំណត់រួចហើយនូវ `squares` array នៅក្នុង constructor របស់ Board, ហើយយើងនឹងកែប្រែ `renderSquare` method របស់ Board ដើម្បីអានពីវា៖
 
@@ -440,9 +434,9 @@ class Board extends React.Component {
 
 Square នីមួយៗនឹងទទួលបាននូវ `value` របស់ props ដែលអាចជា `'X'`, `'O'`, ឬក៏ `null` សម្រាប់ squares ទទេ។
 
-បន្ទាប់, យើងត្រូវការផ្លាស់ប្តូរអ្វីដែលកើតឡើងនៅពេលដែល Square ត្រូវបាន click។ ឥឡូវនេះ Board component រក្សារទុកនូវ squares ដែលត្រូវបានបំពេញ។​ យើងត្រូវបង្កើតវិធីដើម្បីអោយ Square អាច update state របស់ Board បាន។ ដែល state ត្រូវបានចាត់ទុកជា private សម្រាប់ component, យើងមិនអាច update state របស់ Board ដោយផ្ទាល់ពី Square។
+បន្ទាប់មកទៀត យើងត្រូវការផ្លាស់ប្តូរអ្វីដែលកើតឡើងនៅពេលដែល Square ត្រូវបាន click។ ឥឡូវនេះ Board component រក្សារទុកនូវ squares ដែលត្រូវបានបំពេញ។​ យើងត្រូវបង្កើតវិធីដើម្បីអោយ Square អាច update state របស់ Board បាន។ ដែល state ត្រូវបានចាត់ទុកជា private សម្រាប់ component យើងមិនអាច update state របស់ Board ដោយផ្ទាល់ពី Square។
 
-ដើម្បីរក្សារភាពឯកជនរបស់ state ដែលមាននៅក្នុង Board, យើងនឹងបញ្ជួន function មួយពី Board ចុះទៅ Square។ function នេះនឹងត្រូវបានហៅនៅពេលដែល​ Square ត្រូវបាន click។ យើងនឹងផ្លាស់ប្តូរ `renderSquare` method ដែលមាននៅក្នុង Board ផងដែរ៖
+ដើម្បីរក្សារភាពឯកជនរបស់ state ដែលមាននៅក្នុង Board យើងនឹងបញ្ជួន function មួយពី Board ចុះទៅ Square។ function នេះនឹងត្រូវបានហៅនៅពេលដែល​ Square ត្រូវបាន click។ យើងនឹងផ្លាស់ប្តូរ `renderSquare` method ដែលមាននៅក្នុង Board ផងដែរ៖
 
 ```javascript{5}
   renderSquare(i) {
@@ -457,9 +451,7 @@ Square នីមួយៗនឹងទទួលបាននូវ `value` រប�
 
 >ចំណាំ
 >
->We split the returned element into multiple lines for readability, and added parentheses so that JavaScript doesn't insert a semicolon after `return` and break our code.
-
-យើងបំបែកការ return element ទៅជាច្រើនបន្ទាត់ដើម្បីងាយស្រួលក្នុងការអាន, ហើយបានបន្ថែមវង់ក្រចកដូច្នេះ JavaScript មិនបញ្ចូលសញ្ញា semicolon បន្ទាប់ពី `return` ហើយនិង break កូដ របស់យើង។
+>យើងបំបែកការ return element ទៅជាច្រើនបន្ទាត់ដើម្បីងាយស្រួលក្នុងការអាន, ហើយបានបន្ថែមវង់ក្រចកដូច្នេះ JavaScript មិនបញ្ចូលសញ្ញា semicolon បន្ទាប់ពី `return` ហើយនិង break កូដ របស់យើង។
 
 ឥឡូវ​នេះយើងកំពុងបញ្ជួនចុះនូវ props ចំនួន២ពី Board ទៅកាន់ Square៖ `value` ហើយនិង `onClick`។ `onClick` គឺជា function ដែល Square អាចហៅនៅពេលត្រូវបាន click។ យើងនឹងធ្វើការផ្លាស់ប្តូរ Square ដូចខាងក្រោម៖
 
@@ -484,14 +476,14 @@ class Square extends React.Component {
 }
 ```
 
-នៅពេលដែល Square ត្រូវបាន click, `onClick` function ដែលត្រូវបានផ្តល់ដោយ Board ត្រូវបានហៅ។ 
+នៅពេលដែល Square ត្រូវបាន click `onClick` function ដែលត្រូវបានផ្តល់ដោយ Board ត្រូវបានហៅ។ 
 នេះគឺជាការពិនិត្យឡើងវិញនូវរបៀបដែលវាសម្រេច៖
 
 ១. `onClick` prop នៅលើ built-in DOM `<button>` component ប្រាប់ React ដើម្បីបង្កើត click event listener មួយ។<br>
-២. នៅពេលដែល​ button ត្រូវបាន click, React នឹងហៅ `onClick` event handler ដែលបានកំណត់នៅក្នុង `render()` method របស់ Square។<br>
+២. នៅពេលដែល​ button ត្រូវបាន click React នឹងហៅ `onClick` event handler ដែលបានកំណត់នៅក្នុង `render()` method របស់ Square។<br>
 ៣. event handler នេះហៅថា `this.props.onClick()`។ `onClick` prop របស់ Square ត្រូវបានបញ្ជាក់ដោយ Board។<br>
-៤. ដែល Board ​បានបញ្ជូន `onClick={() => this.handleClick(i)}` ទៅអោយ Square, Square ហៅ `this.handleClick(i)` ត្រូវបាន click។<br>
-៥. យើងមិនបានកំណត់ `handleClick()` method នៅឡើយទេ, ដូច្នេះកូដរបស់យើងគាំង។
+៤. ដែល Board ​បានបញ្ជូន `onClick={() => this.handleClick(i)}` ទៅអោយ Square Square ហៅ `this.handleClick(i)` ត្រូវបាន click។<br>
+៥. យើងមិនបានកំណត់ `handleClick()` method នៅឡើយទេ ដូច្នេះកូដរបស់យើងគាំង។
 
 >ចំណាំ
 >
@@ -552,15 +544,15 @@ class Board extends React.Component {
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/ybbQJX?editors=0010)**
 
-បន្ទាប់ពីការផ្លាស់ប្តូរទាំងនេះ, យើងអាច click ម្តងទៀតទៅលើ Squares ដើម្បីបំពេញពួកវា។​ ទោះយ៉ាងណា, ឥឡូវ​នេះ state ត្រូវបានរក្សារទុកនៅក្នុង Board component ជំនួសអោយការរក្សារទុកនៅក្នុង Square components នីមួយៗ។ នៅពេលដែល state របស់ Board ផ្លាស់ប្តូរ, Square components re-render ដោយស្វ័យប្រវត្តិ។ ការរក្សារ state របស់ squares ទាំងអស់នៅក្នុង Board component នឹងអនុញ្ញាតឱ្យវាកំណត់អ្នកឈ្នះនៅថ្ងៃអនាគត។
+បន្ទាប់ពីការផ្លាស់ប្តូរទាំងនេះ យើងអាច click ម្តងទៀតទៅលើ Squares ដើម្បីបំពេញពួកវា។​ ទោះយ៉ាងណា ឥឡូវ​នេះ state ត្រូវបានរក្សារទុកនៅក្នុង Board component ជំនួសអោយការរក្សារទុកនៅក្នុង Square components នីមួយៗ។ នៅពេលដែល state របស់ Board ផ្លាស់ប្តូរ Square components re-render ដោយស្វ័យប្រវត្តិ។ ការរក្សារ state របស់ squares ទាំងអស់នៅក្នុង Board component នឹងអនុញ្ញាតឱ្យវាកំណត់អ្នកឈ្នះនៅថ្ងៃអនាគត។
 
-នៅពេលដែល Square components លែងរក្សា state, Square components ទទួលបានតម្លៃពី Board component និងជូនដំណឹងអោយ Board component នៅពេលពួកវាត្រូវបាន click។ នៅក្នុង React terms, ឥឡូវ​នេះ Square components គឺជា **controlled components**។ Board មានការគ្រប់គ្រងពេញលេញលើពួកវា។
+នៅពេលដែល Square components លែងរក្សា state Square components ទទួលបានតម្លៃពី Board component និងជូនដំណឹងអោយ Board component នៅពេលពួកវាត្រូវបាន click។ នៅក្នុង React terms ឥឡូវ​នេះ Square components គឺជា **controlled components**។ Board មានការគ្រប់គ្រងពេញលេញលើពួកវា។
 
-ចំណាំរបៀបនៅក្នុង `handleClick`, យើងហៅ `.slice()` ដើម្បីបង្កើតច្បាប់ចម្លង `squares` array ដើម្បីកែប្រែ ជំនួសអោយការកែប្រែ array ដែលមានស្រាប់។ យើងនឹងពន្យល់ពីមូលហេតុដែលយើងបង្កើតច្បាប់ចម្លង `squares` array នៅផ្នែកបន្ទាប់។
+ចំណាំរបៀបនៅក្នុង `handleClick` យើងហៅ `.slice()` ដើម្បីបង្កើតច្បាប់ចម្លង `squares` array ដើម្បីកែប្រែ ជំនួសអោយការកែប្រែ array ដែលមានស្រាប់។ យើងនឹងពន្យល់ពីមូលហេតុដែលយើងបង្កើតច្បាប់ចម្លង `squares` array នៅផ្នែកបន្ទាប់។
 
 ### ហេតុអ្វីបានជាភាពមិនអាចប្រែប្រួលបានមានសារះសំខាន់?        {#why-immutability-is-important}
 
-នៅក្នុងឧទាហរណ៍របស់កូដមុន, យើងបានស្នើឱ្យអ្នកប្រើ `.slice()` operator ដើម្បីបង្កើតច្បាប់ចម្លងនៃ `squares` array ដើម្បីកែប្រែជំនួសអោយការកែប្រែ array ដែលមានស្រាប់។ ឥឡូវនេះយើងនឹងពិភាក្សាគ្នាអំពីភាពមិនចេះប្រែប្រួលហើយហេតុអ្វីក៏ភាពមិនប្រែប្រួលជាការសំខាន់ក្នុងការរៀនសូត្រ។
+នៅក្នុងឧទាហរណ៍របស់កូដមុន យើងបានស្នើឱ្យអ្នកប្រើ `.slice()` operator ដើម្បីបង្កើតច្បាប់ចម្លងនៃ `squares` array ដើម្បីកែប្រែជំនួសអោយការកែប្រែ array ដែលមានស្រាប់។ ឥឡូវនេះយើងនឹងពិភាក្សាគ្នាអំពីភាពមិនចេះប្រែប្រួលហើយហេតុអ្វីក៏ភាពមិនប្រែប្រួលជាការសំខាន់ក្នុងការរៀនសូត្រ។
 
 មានវិធីពីរយ៉ាងក្នុងការផ្លាស់ប្តូរទិន្នន័យ។ វិធីសាស្រ្តដំបូងគឺ *ផ្លាស់ប្តូរ* ទិន្នន័យ ដោយការផ្លាស់ប្តូរតម្លៃទិន្នន័យដោយផ្ទាល់។ វិធីសាស្ត្រទីពីរគឺជំនួសទិន្នន័យជាមួយច្បាប់ចម្លងថ្មីដែលមានការផ្លាស់ប្តូរតាមដែលអ្នកចង់បាន។
 
@@ -586,13 +578,13 @@ var newPlayer = Object.assign({}, player, {score: 2});
 
 #### លក្ខណៈពិសេសស្មុគស្មាញក្លាយជាធម្មតា      {#complex-features-become-simple}
 
-ភាពមិនចេះប្រែប្រួលធ្វើឱ្យ features ដែលស្មុគ្រស្មាញកាន់តែងាយស្រួលក្នុងការ implement។ នៅក្នុង tutorial បន្ទាប់, យើងនឹង implement "time travel" feature ដែលអនុញ្ញាតឱ្យយើងពិនិត្យឡើងវិញនូវ history របស់ tic-tac-toe ហ្គេម ហើយនិង "jump back" ត្រឡប់ទៅកាន់ការផ្លាស់ទីពីមុន។ មុខងារនេះមិនជាក់លាក់ចំពោះហ្គេមទេ -- សមត្ថភាពក្នុងការ undo ហើយនិង redo ដែលជាសកម្មភាពជាក់លាក់គឺជាតម្រូវការទូទៅនៅក្នុង​ applications។ ការជៀសវាងការផ្លាស់ប្តូរទិន្នន័យដោយផ្ទាល់អនុញ្ញាតឱ្យយើងរក្សាកំណែមុននៃ history របស់ហ្គេមអោយនៅដដែល, ហើយប្រើវាឡើងវិញនៅពេលក្រោយ។
+ភាពមិនចេះប្រែប្រួលធ្វើឱ្យ features ដែលស្មុគ្រស្មាញកាន់តែងាយស្រួលក្នុងការ implement។ នៅក្នុង tutorial បន្ទាប់ យើងនឹង implement "time travel" feature ដែលអនុញ្ញាតឱ្យយើងពិនិត្យឡើងវិញនូវ history របស់ tic-tac-toe ហ្គេម ហើយនិង "jump back" ត្រឡប់ទៅកាន់ការផ្លាស់ទីពីមុន។ មុខងារនេះមិនជាក់លាក់ចំពោះហ្គេមទេ -- សមត្ថភាពក្នុងការ undo ហើយនិង redo ដែលជាសកម្មភាពជាក់លាក់គឺជាតម្រូវការទូទៅនៅក្នុង​ applications។ ការជៀសវាងការផ្លាស់ប្តូរទិន្នន័យដោយផ្ទាល់អនុញ្ញាតឱ្យយើងរក្សាកំណែមុននៃ history របស់ហ្គេមអោយនៅដដែល ហើយប្រើវាឡើងវិញនៅពេលក្រោយ។
 
 #### ការរកឃើញការផ្លាស់ប្តូរ    {#detecting-changes}
 
 រកឃើញការផ្លាស់ប្តូរនៅក្នុង objects ដែលអាចប្ដូរបានគឺពិបាកពីព្រោះពួកគេត្រូវបានកែប្រែដោយផ្ទាល់។ ការរកឃើញនេះទាមទារអោយ objects ដែលអាចប្ដូរបានប្រៀបធៀបទៅនឹងច្បាប់ចម្លងពីមុនរបស់ខ្លួន ហើយនិង object tree ទាំងមូលត្រូវបាន traverse។
 
-ការរកឃើញការផ្លាស់ប្តូរ objects ដែល​មិនប្រែប្រួលគឺចាត់ទុកថាងាយស្រួលជាង។ ប្រសិនជា objects ដែល​មិនប្រែប្រួលដែលកំពុងតែ reference គឺខុសពីមុន, អញ្ចឹង object ត្រូវបានផ្លាស់ប្តូ។
+ការរកឃើញការផ្លាស់ប្តូរ objects ដែល​មិនប្រែប្រួលគឺចាត់ទុកថាងាយស្រួលជាង។ ប្រសិនជា objects ដែល​មិនប្រែប្រួលដែលកំពុងតែ reference គឺខុសពីមុន អញ្ចឹង object ត្រូវបានផ្លាស់ប្តូ។
 
 #### ការកំណត់នៅពេល re-render នៅក្នុង React {#determining-when-to-re-render-in-react}
 
@@ -604,8 +596,8 @@ var newPlayer = Object.assign({}, player, {score: 2});
 
 ឥឡូវនេះយើងនឹងផ្លាស់ប្តូរ Square អោយក្លាយជា **function component**។
 
-នៅក្នុង React, **function components** គឺជាវិធីសាមញ្ញក្នុងការសរសេរ components ដែលមានតែ `render` method ហើយមិនមាន state ដែលជារបស់ពួកគេផ្ទាល់។ ជំនួសឱ្យការកំណត់ class មួយដែល extends `React.Component`, យើងអាចសរសេរ function មួយដែលទទួល `props` ជា input ហើយ returns នូវអ្វីដែលគួរត្រូវបាន​ render។ Function components 
-មានការធុញទ្រាន់តិចតួចក្នុងការសរសេរជាង classes, និង components ជាច្រើនអាចត្រូវបានបញ្ជាក់តាមវិធីនេះ។
+នៅក្នុង React **function components** គឺជាវិធីសាមញ្ញក្នុងការសរសេរ components ដែលមានតែ `render` method ហើយមិនមាន state ដែលជារបស់ពួកគេផ្ទាល់។ ជំនួសឱ្យការកំណត់ class មួយដែល extends `React.Component`, យើងអាចសរសេរ function មួយដែលទទួល `props` ជា input ហើយ returns នូវអ្វីដែលគួរត្រូវបាន​ render។ Function components 
+មានការធុញទ្រាន់តិចតួចក្នុងការសរសេរជាង classes និង components ជាច្រើនអាចត្រូវបានបញ្ជាក់តាមវិធីនេះ។
 
 Replace the Square class with this function:
 
@@ -627,7 +619,7 @@ function Square(props) {
 
 >ចំណាំ
 >
->នៅពេលយើងបានកែប្រែ Square អោយក្លាយជា function component, យើងក៏បានផ្លាស់ប្តូរផងដែរនូវ `onClick={() => this.props.onClick()}` អោយទៅជាខ្លី `onClick={props.onClick}` (ចំណាំការខ្វះវង់ក្រចក*ទាំងពីរ*ខាង)។ នៅក្នុង class, យើងបានប្រើ arrow function មួយដើម្បីចូលប្រើ តម្លៃ `this` ដែលត្រឹមត្រូវ, បន្តែនៅក្នុង function component 
+>នៅពេលយើងបានកែប្រែ Square អោយក្លាយជា function component យើងក៏បានផ្លាស់ប្តូរផងដែរនូវ `onClick={() => this.props.onClick()}` អោយទៅជាខ្លី `onClick={props.onClick}` (ចំណាំការខ្វះវង់ក្រចក*ទាំងពីរ*ខាង)។ នៅក្នុង class, យើងបានប្រើ arrow function មួយដើម្បីចូលប្រើ តម្លៃ `this` ដែលត្រឹមត្រូវ បន្តែនៅក្នុង function component 
 យើងមិនចាំបាច់ព្រួយបារម្ភពី `this` ទេ។
 
 ### Taking Turns {#taking-turns}
@@ -647,7 +639,7 @@ class Board extends React.Component {
   }
 ```
 
-រាល់ពេលដែលអ្នកលេងផ្លាស់ទី, `xIsNext` (a boolean) នឹងត្រូវបានត្រឡប់ដើម្បីកំណត់ថាអ្នកលេងណាម្នាក់ទៅបន្ទាប់ហើយ state របស់ game និងត្រូវបានស​​ save។ យើងនឹង update `handleClick` function របស់ Board ដើម្បីត្រឡប់តម្លៃរបស់ `xIsNext`៖
+រាល់ពេលដែលអ្នកលេងផ្លាស់ទី `xIsNext` (a boolean) នឹងត្រូវបានត្រឡប់ដើម្បីកំណត់ថាអ្នកលេងណាម្នាក់ទៅបន្ទាប់ហើយ state របស់ game និងត្រូវបានស​​ save។ យើងនឹង update `handleClick` function របស់ Board ដើម្បីត្រឡប់តម្លៃរបស់ `xIsNext`៖
 
 ```javascript{3,6}
   handleClick(i) {
@@ -731,7 +723,7 @@ class Board extends React.Component {
 
 ### Declaring a Winner {#declaring-a-winner}
 
-ឥឡូវនេះយើងបង្ហាញអ្នកលេងដែលមានវេនបន្ទាប់, យើងក៏គួរបង្ហាញផងដែរថានៅពេលដែលហ្គេមត្រូវបានឈ្នះ ហើយមិនមានវេនបន្ទាប់ទៀតទេ។ យើងអាចកំណត់អ្នកឈ្នះដោយបន្ថែម function ជំនួយមួយនេះទៅចុងបញ្ចប់នៃ files៖
+ឥឡូវនេះយើងបង្ហាញអ្នកលេងដែលមានវេនបន្ទាប់ យើងក៏គួរបង្ហាញផងដែរថានៅពេលដែលហ្គេមត្រូវបានឈ្នះ ហើយមិនមានវេនបន្ទាប់ទៀតទេ។ យើងអាចកំណត់អ្នកឈ្នះដោយបន្ថែម function ជំនួយមួយនេះទៅចុងបញ្ចប់នៃ files៖
 
 ```javascript
 function calculateWinner(squares) {
@@ -755,7 +747,7 @@ function calculateWinner(squares) {
 }
 ```
 
-យើងនឹងហៅ `calculateWinner(squares)` នៅក្នុង `render` function របស់ Board ដើម្បីពិនិត្យថាតើអ្នកលេងបានឈ្នះឬយ៉ាងណា។ ប្រសិនបើអ្នកលេងបានឈ្នះ, យើងអាចបង្ហាញអត្ថបទដូចជា "អ្នកឈ្នះ: X" ឬ "អ្នកឈ្នះ: អូរ"។ យើងនឹងជំនួសការប្រកាស `status` នៅក្នុង `render` function របស់ Board ជាមួយកូដនេះ៖
+យើងនឹងហៅ `calculateWinner(squares)` នៅក្នុង `render` function របស់ Board ដើម្បីពិនិត្យថាតើអ្នកលេងបានឈ្នះឬយ៉ាងណា។ ប្រសិនបើអ្នកលេងបានឈ្នះ យើងអាចបង្ហាញអត្ថបទដូចជា "អ្នកឈ្នះ: X" ឬ "អ្នកឈ្នះ: អូរ"។ យើងនឹងជំនួសការប្រកាស `status` នៅក្នុង `render` function របស់ Board ជាមួយកូដនេះ៖
 
 ```javascript{2-8}
   render() {
@@ -793,15 +785,15 @@ function calculateWinner(squares) {
 
 ## Adding Time Travel {#adding-time-travel}
 
-នេះជាលំហាត់ចុងក្រោយ, សូមធ្វើឱ្យវាអាចទៅរួច "ត្រឡប់ទៅពេលវេលាមួយ" ទៅកាន់ការផ្លាស់ប្តូរពីមុននៅក្នុងហ្គេម។
+នេះជាលំហាត់ចុងក្រោយ សូមធ្វើឱ្យវាអាចទៅរួច "ត្រឡប់ទៅពេលវេលាមួយ" ទៅកាន់ការផ្លាស់ប្តូរពីមុននៅក្នុងហ្គេម។
 
 ### Storing a History of Moves {#storing-a-history-of-moves}
 
 ប្រសិនបើយើងបានផ្លាស់ប្តូរ `squares` array, ការ implement time travel នឹងមានការលំបាកខ្លាំងណាស់។
 
-ទោះយ៉ាងណា, យើងបានប្រើ `slice()` ដើម្បីបង្កើតច្បាប់ចម្លងថ្មី នៃ `squares` array បន្ទាប់ពីរាល់ការ move,​ និង [ចាត់ទុកវាជាមិនប្រែប្រួល](#why-immutability-is-important)។ នេះនឹងអនុញ្ញាតិឱ្យយើងរក្សាទុករាល់កំណែដែលកន្លងមកនៃ `squares` array, និងរុករករវាងវេនដែលបានកើតឡើងរួចហើយ។
+ទោះយ៉ាងណា យើងបានប្រើ `slice()` ដើម្បីបង្កើតច្បាប់ចម្លងថ្មី នៃ `squares` array បន្ទាប់ពីរាល់ការ move​ និង [ចាត់ទុកវាជាមិនប្រែប្រួល](#why-immutability-is-important)។ នេះនឹងអនុញ្ញាតិឱ្យយើងរក្សាទុករាល់កំណែដែលកន្លងមកនៃ `squares` array និងរុករករវាងវេនដែលបានកើតឡើងរួចហើយ។
 
-យើងនឹងរក្សាទុកអតីតកាលរបស់ `squares` arrays នៅក្នុង array ផ្សេងដែលបានហៅថា `history`។ `history` array តំណាងអោយ board states ទាំងអស់, ពីដំបូងទៅការផ្លាស់ទីចុងក្រោយ, និងមានរាងដូចនេះ៖
+យើងនឹងរក្សាទុកអតីតកាលរបស់ `squares` arrays នៅក្នុង array ផ្សេងដែលបានហៅថា `history`។ `history` array តំណាងអោយ board states ទាំងអស់, ពីដំបូងទៅការផ្លាស់ទីចុងក្រោយ និងមានរាងដូចនេះ៖
 
 ```javascript
 history = [
@@ -837,11 +829,11 @@ history = [
 
 ### Lifting State Up, Again {#lifting-state-up-again}
 
-យើងនឹងចង់បាន top-level Game component ដើម្បីបង្ហាញបញ្ជីនៃការផ្លាស់ប្តូរពីមុន។ វានឹងត្រូវការសិទ្ធិចូលប្រើ `history` ដើម្បីធ្វើដូច្នោះ, ដូច្នេះយើងនឹងដាក់ `history` state ទៅក្នុង top-level Game component។
+យើងនឹងចង់បាន top-level Game component ដើម្បីបង្ហាញបញ្ជីនៃការផ្លាស់ប្តូរពីមុន។ វានឹងត្រូវការសិទ្ធិចូលប្រើ `history` ដើម្បីធ្វើដូច្នោះ ដូច្នេះយើងនឹងដាក់ `history` state ទៅក្នុង top-level Game component។
 
-ការដាក់ `history` state ចូលក្នុង Game component អនុញ្ញាតឱ្យយើងដកចេញ `squares` state ពី child Board component។ ដូចជាយើង ["lifted state up"](#lifting-state-up) ពី Square component ទៅក្នុង Board component, ឥឡូវនេះយើងកំពុងលើកវាឡើងពី Board ទៅ top-level Game component។ នេះផ្តល់ឱ្យ Game component នូវការគ្រប់គ្រងពេញលេញទៅលើ data របស់ Board, និងអនុញ្ញាតឱ្យវាណែនាំ Board អោយ render វេនមុន ពី `history`។
+ការដាក់ `history` state ចូលក្នុង Game component អនុញ្ញាតឱ្យយើងដកចេញ `squares` state ពី child Board component។ ដូចជាយើង ["lifted state up"](#lifting-state-up) ពី Square component ទៅក្នុង Board component ឥឡូវនេះយើងកំពុងលើកវាឡើងពី Board ទៅ top-level Game component។ នេះផ្តល់ឱ្យ Game component នូវការគ្រប់គ្រងពេញលេញទៅលើ data របស់ Board និងអនុញ្ញាតឱ្យវាណែនាំ Board អោយ render វេនមុន ពី `history`។
 
-ដំបូង, យើងនឹងរៀបចំ initial state សម្រាប់ Game component នៅក្នុង constructor របស់ខ្លួនវា៖
+ដំបូង យើងនឹងរៀបចំ initial state សម្រាប់ Game component នៅក្នុង constructor របស់ខ្លួនវា៖
 
 ```javascript{2-10}
 class Game extends React.Component {
@@ -871,7 +863,7 @@ class Game extends React.Component {
 }
 ```
 
-បន្ទាប់, យើងនឹងមាន Board component ដែលទទួលយក `squares` ហើយនិង `onClick` props ពី Game component។ ដែលឥឡូវនេះយើងមាន​ click handler តែមួយក្នុង Board សម្រាប់ Squares ជាច្រើន, យើងនឹងត្រូវតែ pass ទីតាំងនៃ Square នីមួយៗទៅក្នុង `onClick` handler ដើម្បីបង្ហាញថា Square មួយណាដែលត្រូវបាន click។ នេះគឺជាជំហានចាំបាច់ដើម្បីផ្លាស់ប្តូរ Board component៖
+បន្ទាប់មកទៀត យើងនឹងមាន Board component ដែលទទួលយក `squares` ហើយនិង `onClick` props ពី Game component។ ដែលឥឡូវនេះយើងមាន​ click handler តែមួយក្នុង Board សម្រាប់ Squares ជាច្រើន, យើងនឹងត្រូវតែ pass ទីតាំងនៃ Square នីមួយៗទៅក្នុង `onClick` handler ដើម្បីបង្ហាញថា Square មួយណាដែលត្រូវបាន click។ នេះគឺជាជំហានចាំបាច់ដើម្បីផ្លាស់ប្តូរ Board component៖
 
 * លុប `constructor` ក្នុង Board។
 * ជំនួស `this.state.squares[i]` ជាមួយ `this.props.squares[i]` ក្នុង `renderSquare` របស់ Board។
@@ -967,7 +959,7 @@ class Board extends React.Component {
   }
 ```
 
-Game component ឥឡូវ​នេះគឺកំពុង render status របស់ game, យើងអាចដកចេញកូដដែលត្រូវគ្នាពី `render` method របស់ Board។ បន្ទាប់ពីការ refactor, `render` function របស់​​ Board មើលទៅដូចនេះ៖
+Game component ឥឡូវ​នេះគឺកំពុង render status របស់ game, យើងអាចដកចេញកូដដែលត្រូវគ្នាពី `render` method របស់ Board។ បន្ទាប់ពីការ refactor `render` function របស់​​ Board មើលទៅដូចនេះ៖
 
 ```js{1-4}
   render() {
@@ -993,7 +985,7 @@ Game component ឥឡូវ​នេះគឺកំពុង render status រ�
   }
 ```
 
-ទីបំផុត, យើងត្រូវផ្លាស់ទី `handleClick` method ពី Board component ទៅក្នុង Game component។ យើងក៏ត្រូវកែប្រែ `handleClick` ផងដែរពីព្រេាះ state របស់ Game component គឺត្រូវបានរៀបរចនាសម្ព័ន្ធខុសគ្នា។ នៅក្នុង `handleClick` method របស់ Game, យើងបានដាក់បញ្ចូលនូវ history ថ្មីទៅក្នុង `history`។
+ទីបំផុត យើងត្រូវផ្លាស់ទី `handleClick` method ពី Board component ទៅក្នុង Game component។ យើងក៏ត្រូវកែប្រែ `handleClick` ផងដែរពីព្រេាះ state របស់ Game component គឺត្រូវបានរៀបរចនាសម្ព័ន្ធខុសគ្នា។ នៅក្នុង `handleClick` method របស់ Game យើងបានដាក់បញ្ចូលនូវ history ថ្មីទៅក្នុង `history`។
 
 ```javascript{2-4,10-12}
   handleClick(i) {
@@ -1015,26 +1007,26 @@ Game component ឥឡូវ​នេះគឺកំពុង render status រ�
 
 >ចំណាំ
 >
->មិន​ដូច array `push()` method ដែលអ្នកអាចនឹងស្គាល់កាន់តែច្បាស់ជាមួយ, `concat()` method មិនផ្លាស់ប្តូរ original array, ដូច្នេះយើងចូលចិត្តវា។
+>មិន​ដូច array `push()` method ដែលអ្នកអាចនឹងស្គាល់កាន់តែច្បាស់ជាមួយ, `concat()` method មិនផ្លាស់ប្តូរ original array ដូច្នេះយើងចូលចិត្តវា។
 
-នៅចំណុចនេះ, Board component ត្រូវការតែ `renderSquare` ហើយនិង `render` methods។ State របស់ game ហើយនិង `handleClick` method គួរតែនៅក្នុង Game component។
+នៅចំណុចនេះ Board component ត្រូវការតែ `renderSquare` ហើយនិង `render` methods។ State របស់ game ហើយនិង `handleClick` method គួរតែនៅក្នុង Game component។
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/EmmOqJ?editors=0010)**
 
 ### Showing the Past Moves {#showing-the-past-moves}
 
-យើងកំពុងថតទុកនូវ history របស់ tic-tac-toe​ ហ្គេម, ឥឡូវនេះយើងអាចបង្ហាញវាដល់អ្នកលេងជា list នៃការផ្លាស់ប្តូរពីមុនៗ។
+យើងកំពុងថតទុកនូវ history របស់ tic-tac-toe​ ហ្គេម ឥឡូវនេះយើងអាចបង្ហាញវាដល់អ្នកលេងជា list នៃការផ្លាស់ប្តូរពីមុនៗ។
 
-យើងបានរៀនពីមុនមកហើយថា React elements គឺជា first-class JavaScript objects; យើងអាចបញ្ជូនពួកវាទៅវិញទៅមកក្នុង applications របស់យើង។ ដើម្បី render items ច្រើនក្នុង React, យើងអាចប្រើ array នៃ React elements។
+យើងបានរៀនពីមុនមកហើយថា React elements គឺជា first-class JavaScript objects; យើងអាចបញ្ជូនពួកវាទៅវិញទៅមកក្នុង applications របស់យើង។ ដើម្បី render items ច្រើនក្នុង React យើងអាចប្រើ array នៃ React elements។
 
-ក្នុង JavaScript, arrays មាន [`map()` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) មួយដែលត្រូវបានប្រើជាទូទៅសម្រាប់ការ map data ទៅកាន់ data ផ្សេងទៀត៖
+ក្នុង JavaScript arrays មាន [`map()` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) មួយដែលត្រូវបានប្រើជាទូទៅសម្រាប់ការ map data ទៅកាន់ data ផ្សេងទៀត៖
 
 ```js
 const numbers = [1, 2, 3];
 const doubled = numbers.map(x => x * 2); // [2, 4, 6]
 ```
 
-ការប្រើ `map` method, យើងអាច​​ map history នៃការផ្លាស់ទី history ទៅកាន់ React elements ដែលតំណាងឱ្យប៊ូតុងនៅលើអេក្រង់, ហើយនិងបង្ហាញ list នៃប៊ូតុងដើម្បី "លោត" ទៅកាន់ការផ្លាស់ប្តូរពីមុនៗ។
+ការប្រើ `map` method យើងអាច​​ map history នៃការផ្លាស់ទី history ទៅកាន់ React elements ដែលតំណាងឱ្យប៊ូតុងនៅលើអេក្រង់ ហើយនិងបង្ហាញ list នៃប៊ូតុងដើម្បី "លោត" ទៅកាន់ការផ្លាស់ប្តូរពីមុនៗ។
 
 តោះ `map` ទៅលើ `history` ក្នុង `render` method របស់ Game៖
 
@@ -1081,7 +1073,7 @@ const doubled = numbers.map(x => x * 2); // [2, 4, 6]
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/EmmGEa?editors=0010)**
 
-សម្រាប់ការផ្លាស់ប្តូរនីមួយៗក្នុង history របស់ tic-tac-toes ហ្គេម, យើងបង្កើត list នៃ item `<li>` ដែលមានប៊ូតុងមួយ `<button>`។ ប៊ូតុងមាន `onClick` handler មួយដែល calls method មួយមានឈ្មេាះថា `this.jumpTo()`។ យើងមិនបាន implement `jumpTo()` method នៅឡើយទេ។ សម្រាប់ពេលនេះយើងគួរតែមើលឃើញ list នៃការផ្លាស់ទីដែលបានកើតឡើងនៅក្នុងហ្គេមហើយនិង warning ក្នុង developer tools console ដែលនិយាយថា៖
+សម្រាប់ការផ្លាស់ប្តូរនីមួយៗក្នុង history របស់ tic-tac-toes ហ្គេម យើងបង្កើត list នៃ item `<li>` ដែលមានប៊ូតុងមួយ `<button>`។ ប៊ូតុងមាន `onClick` handler មួយដែល calls method មួយមានឈ្មេាះថា `this.jumpTo()`។ យើងមិនបាន implement `jumpTo()` method នៅឡើយទេ។ សម្រាប់ពេលនេះយើងគួរតែមើលឃើញ list នៃការផ្លាស់ទីដែលបានកើតឡើងនៅក្នុងហ្គេមហើយនិង warning ក្នុង developer tools console ដែលនិយាយថា៖
 
 >  Warning:
 >  Each child in an array or iterator should have a unique "key" prop. Check the render method of "Game".
@@ -1090,7 +1082,7 @@ const doubled = numbers.map(x => x * 2); // [2, 4, 6]
 
 ### Picking a Key {#picking-a-key}
 
-នៅពេលដែលយើង render list មួយ, React រក្សារទុកព័ត៌មានមួយចំនួនពី list item នីមួយៗដែលបាន render។ នៅពេលយើងធ្វើបច្ចុប្បន្នភាព list, React ត្រូវការកំណត់នូវអ្វីដែលបានផ្លាស់ប្តូរ។ យើងអាចបន្ថែមបាន, យកចេញបាន, រៀបចំឡើងវិញបាន, ឬក៏ធ្វើបច្ចុប្បន្នភាពបាននូវ​ items របស់​​ list។
+នៅពេលដែលយើង render list មួយ React រក្សារទុកព័ត៌មានមួយចំនួនពី list item នីមួយៗដែលបាន render។ នៅពេលយើងធ្វើបច្ចុប្បន្នភាព list React ត្រូវការកំណត់នូវអ្វីដែលបានផ្លាស់ប្តូរ។ យើងអាចបន្ថែមបាន៖ យកចេញបាន រៀបចំឡើងវិញបាន ឬក៏ធ្វើបច្ចុប្បន្នភាពបាននូវ​ items របស់​​ list។
 
 ស្រមៃពីការផ្លាស់ប្តូរពី
 
@@ -1113,23 +1105,23 @@ const doubled = numbers.map(x => x * 2); // [2, 4, 6]
 <li key={user.id}>{user.name}: {user.taskCount} tasks left</li>
 ```
 
-នៅពេលដែល list ត្រូវបាន re-render, React ទទួលយក key របស់ item list នីមួយៗហើយស្វែងរក items របស់ list ពីមុនៗសម្រាប់ការផ្គូផ្គង key។ ប្រសិនបើ list ​បច្ចុប្បន្នមាន key ដែលមិនមានពីមុនមក, React នឹងបង្កើត component មួយ។ ប្រសិនបើ list ​បច្ចុប្បន្នមិនមាន key ដែលមានក្នុង list ពីមុនៗ, React នឹងបំផ្លាញ component ពីមុន។ ប្រសិនបើ keys ផ្គូផ្គងត្រូវ, component ដែលត្រូវគ្នាត្រូវបានផ្លាស់ប្តូរ។ Keys ប្រាប់ React ពីអត្តសញ្ញាណនៃ component នីមួយៗដែលអនុញ្ញាតឱ្យ React រក្សាទុក state នៅពេល re-renders។ ​ប្រសិនបើ key របស់ component ផ្លាស់ប្តូរ, component នឹងត្រូវបានបំផ្លាញហើយនិងត្រូវបានបង្កើតឡើងវិញជាមួយ state ថ្មី។
+នៅពេលដែល list ត្រូវបាន re-render React ទទួលយក key របស់ item list នីមួយៗហើយស្វែងរក items របស់ list ពីមុនៗសម្រាប់ការផ្គូផ្គង key។ ប្រសិនបើ list ​បច្ចុប្បន្នមាន key ដែលមិនមានពីមុនមក React នឹងបង្កើត component មួយ។ ប្រសិនបើ list ​បច្ចុប្បន្នមិនមាន key ដែលមានក្នុង list ពីមុនៗ React នឹងបំផ្លាញ component ពីមុន។ ប្រសិនបើ keys ផ្គូផ្គងត្រូវ component ដែលត្រូវគ្នាត្រូវបានផ្លាស់ប្តូរ។ Keys ប្រាប់ React ពីអត្តសញ្ញាណនៃ component នីមួយៗដែលអនុញ្ញាតឱ្យ React រក្សាទុក state នៅពេល re-renders។ ​ប្រសិនបើ key របស់ component ផ្លាស់ប្តូរ component នឹងត្រូវបានបំផ្លាញហើយនិងត្រូវបានបង្កើតឡើងវិញជាមួយ state ថ្មី។
 
-`key` គឺ property ដែលពិសេសនៅក្នុង React (ភ្ជាប់មកជាមួយ `ref`, លក្ខណៈពិសេសកម្រិតខ្ពស់)។ នៅពេលដែល element ត្រូវបានបង្កើត, React ទាញយក `key` property ហើយនិងរក្សារទុក key ដោយផ្ទាល់នៅលើ element ដែលត្រូវបាន return។ ទោះ​បី​ជា `key` អាចមើលទៅដូចជាវាស្ថិតនៅក្នុង `props`, `key` មិនអាចត្រូវបាន reference ដោយការប្រើ `this.props.key`។ React ប្រើ `key` ដោយស្វ័យប្រវត្តិដើម្បីសម្រេចថាតើ componenet មួយណាដែលត្រូវធ្វើបច្ចុប្បន្នភាព។ Component មិនអាចសួរអំពី `key` របស់ខ្លួនវាទេ។
+`key` គឺ property ដែលពិសេសនៅក្នុង React (ភ្ជាប់មកជាមួយ `ref`, លក្ខណៈពិសេសកម្រិតខ្ពស់)។ នៅពេលដែល element ត្រូវបានបង្កើត React ទាញយក `key` property ហើយនិងរក្សារទុក key ដោយផ្ទាល់នៅលើ element ដែលត្រូវបាន return។ ទោះ​បី​ជា `key` អាចមើលទៅដូចជាវាស្ថិតនៅក្នុង `props`, `key` មិនអាចត្រូវបាន reference ដោយការប្រើ `this.props.key`។ React ប្រើ `key` ដោយស្វ័យប្រវត្តិដើម្បីសម្រេចថាតើ componenet មួយណាដែលត្រូវធ្វើបច្ចុប្បន្នភាព។ Component មិនអាចសួរអំពី `key` របស់ខ្លួនវាទេ។
 
-**វាត្រូវបានផ្ដល់អនុសាសន៍យ៉ាងមុតមាំថាអ្នក assign proper keys គ្រប់ពេលដែលអ្នកបង្កើត dynamic list។** ប្រសិនបើអ្នកមិនមាន key ដែលសមរម្យអាចប្រើការបាន, អ្នកប្រហែលចង់ពិចារណារៀបចំរចនាសម្ព័ន្ធទិន្នន័យរបស់អ្នកឡើងវិញដូច្នេះអ្នកធ្វើវាទៅ។
+**វាត្រូវបានផ្ដល់អនុសាសន៍យ៉ាងមុតមាំថាអ្នក assign proper keys គ្រប់ពេលដែលអ្នកបង្កើត dynamic list។** ប្រសិនបើអ្នកមិនមាន key ដែលសមរម្យអាចប្រើការបាន អ្នកប្រហែលចង់ពិចារណារៀបចំរចនាសម្ព័ន្ធទិន្នន័យរបស់អ្នកឡើងវិញដូច្នេះអ្នកធ្វើវាទៅ។
 
-ប្រសិនបើមិនមាន key ត្រូវបានបញ្ជាក់, React នឹងបង្ហាញការព្រមាននិងការប្រើប្រាស់ array index ជា key ដោយ default។ ការប្រើ array index ជា key គឺមានបញ្ហានៅពេលព្យាយាម re-order items របស់ list ឬក៏ បញ្ចូល/យកចេញ នូវ list items។ ជាក់ស្តែងការបញ្ជូន `key={i}` អាចបំបាត់ការព្រមាន ប៉ុន្តែមានបញ្ហាដូចគ្នាដូចជា array indices ហើយនិងមិនត្រូវបានណែនាំនៅក្នុងករណីភាគច្រើន។
+ប្រសិនបើមិនមាន key ត្រូវបានបញ្ជាក់ React នឹងបង្ហាញការព្រមាននិងការប្រើប្រាស់ array index ជា key ដោយ default។ ការប្រើ array index ជា key គឺមានបញ្ហានៅពេលព្យាយាម re-order items របស់ list ឬក៏ បញ្ចូល/យកចេញ នូវ list items។ ជាក់ស្តែងការបញ្ជូន `key={i}` អាចបំបាត់ការព្រមាន ប៉ុន្តែមានបញ្ហាដូចគ្នាដូចជា array indices ហើយនិងមិនត្រូវបានណែនាំនៅក្នុងករណីភាគច្រើន។
 
 Keys មិនចាំបាច់ជា globally unique; ពួកគេគ្រាន់តែត្រូវការជា unique រវាង components ហើយនិង siblings របស់ពួកវា។
 
 
 ### Implementing Time Travel {#implementing-time-travel}
 
-នៅក្នុង history រ​បស់ tic-tac-toe ហ្គេម, រាល់ការផ្លាស់ទីនីមួយៗពីមុនគឺមាន unique ID ដែលទាក់ទងជាមួយវា៖ វាជាចំនួនលេខតគ្នានៃការផ្លាស់ទី។ 
-ការផ្លាស់ទីគឺមិនដែលត្រូវបាន re-order , លុប, ឬបញ្ចូលនៅកណ្តាល, ដូច្នេះវាមានសុវត្ថិភាពក្នុងការប្រើ move index ជា key។
+នៅក្នុង history រ​បស់ tic-tac-toe ហ្គេម រាល់ការផ្លាស់ទីនីមួយៗពីមុនគឺមាន unique ID ដែលទាក់ទងជាមួយវា៖ វាជាចំនួនលេខតគ្នានៃការផ្លាស់ទី។ 
+ការផ្លាស់ទីគឺមិនដែលត្រូវបាន re-order  លុប ឬបញ្ចូលនៅកណ្តាល ដូច្នេះវាមានសុវត្ថិភាពក្នុងការប្រើ move index ជា key។
 
-នៅក្នុង `render` method របស់ Game component, យើងអាចបន្ថែម key ដូចនេះ `<li key={move}>` ហើយការព្រមានរបស់ React ពី keys គួរតែបាត់៖
+នៅក្នុង `render` method របស់ Game component យើងអាចបន្ថែម key ដូចនេះ `<li key={move}>` ហើយការព្រមានរបស់ React ពី keys គួរតែបាត់៖
 
 ```js{6}
     const moves = history.map((step, move) => {
@@ -1208,7 +1200,7 @@ class Game extends React.Component {
   }
 ```
 
-ទីបំផុត, យើងនឹងកែប្ `render` method របស់ Game component ដែលតែងតែ render ការផ្លាស់ទីចុងក្រោយ ទៅជា render ការផ្លាស់ទីដែលត្រូវបានជ្រើសរើសដោយយោងតាម `stepNumber`៖
+ទីបំផុត យើងនឹងកែប្ `render` method របស់ Game component ដែលតែងតែ render ការផ្លាស់ទីចុងក្រោយ ទៅជា render ការផ្លាស់ទីដែលត្រូវបានជ្រើសរើសដោយយោងតាម `stepNumber`៖
 
 ```javascript{3}
   render() {
@@ -1227,22 +1219,22 @@ class Game extends React.Component {
 
 សូមអបអរសាទរ! អ្នកបានបង្កើតហ្គេម tic-tac-toe មួយដែល៖
 
-* អនុញ្ញាតឱ្យអ្នកលេង tic-tac-toe,
-* បង្ហាញប្រាប់នៅពេលដែលអ្នកលេងបានឈ្នះការប្រកួត,
-* រក្សារ history របស់ហ្គេមដែលជាដំណើរការហ្គេម,
+* អនុញ្ញាតឱ្យអ្នកលេង tic-tac-toe
+* បង្ហាញប្រាប់នៅពេលដែលអ្នកលេងបានឈ្នះការប្រកួត
+* រក្សារ history របស់ហ្គេមដែលជាដំណើរការហ្គេម
 * អនុញ្ញាតឱ្យអ្នកលេងពិនិត្យឡើងវិញនូវ history របស់ហ្គេម ហើយនិងមើលឃើញនូវ versions នៃ board របស់ហ្គេ​ម។
 
 ការងារល្អ! យើងសង្ឃឹមថាឥឡូវនេះអ្នកមានអារម្មណ៍ថាអ្នកមានការយល់ដឹងសមរម្យពីរបៀបដែល React ធ្វើការ។
 
 មើលលទ្ធផលចុងក្រោយនៅទីនេះ៖ **[Final Result](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)**។
 
-ប្រសិនបើអ្នកមានពេលបន្ថែមឬចង់អនុវត្តជំនាញថ្មី React របស់អ្នក, នៅទីនេះគឺមានគំនិតមួយចំនួនសម្រាប់ការប្រសើរឡើងរបស់អ្នក, អ្នកអាចបង្កើត tic-tac-toe ហ្គេម ដែលត្រូវបានមានការបង្កើនការលំបាកដូចខាងក្រោម៖
+ប្រសិនបើអ្នកមានពេលបន្ថែមឬចង់អនុវត្តជំនាញថ្មី React របស់អ្នក នៅទីនេះគឺមានគំនិតមួយចំនួនសម្រាប់ការប្រសើរឡើងរបស់អ្នក អ្នកអាចបង្កើត tic-tac-toe ហ្គេម ដែលត្រូវបានមានការបង្កើនការលំបាកដូចខាងក្រោម៖
 
 1. បង្ហាញទីតាំងនៃការផ្លាស់ប្តូរទីជាមួយទំរង់ (ជួរឈរ, ជួរដេក) នៅក្នុងបញ្ជី history នៃការផ្លាស់ប្តូរទី។
 2. Bold នូវ item ដែលបានកំពុង​ select នៅក្នុង list។
 3. សរសេរ Board ឡើងវិញដោយប្រើ loops ពីរដើម្បីបង្កើត squares ជំនួសអោយ hardcoding ពួកវា។
 4. បន្ថែមប៊ូតុងបិទ/បើកមួយ ដែលអនុញ្ញាតឱ្យអ្នកតម្រៀបការផ្លាស់ទីក្នុងលំដាប់ឡើងឬចុះក្រោម។
-5. នៅពេលមានអ្នកណាម្នាក់ឈ្នះ, highlight squares បី ដែលបណ្តាលឱ្យឈ្នះ។
-6. នៅពេលគ្មាននរណាម្នាក់ឈ្នះ, បង្ហាញសារអំពីលទ្ធផលស្មើ។
+5. នៅពេលមានអ្នកណាម្នាក់ឈ្នះ highlight squares បី ដែលបណ្តាលឱ្យឈ្នះ។
+6. នៅពេលគ្មាននរណាម្នាក់ឈ្នះ បង្ហាញសារអំពីលទ្ធផលស្មើ។
 
-តាមរយៈ tutorial នេះ, យើងបានប៉ះ React concepts រួមទាំង elements, components, props, and state។ សម្រាប់ការពន្យល់លម្អិតបន្ថែមលើប្រធានបទនីមួយៗ, សូមឆែក [the rest of the documentation](/docs/hello-world.html)។ ដើម្បីស្វែងយល់បន្ថែមពីការកំណត់ components, សូមឆែក [`React.Component` API reference](/docs/react-component.html)។
+តាមរយៈ tutorial នេះ យើងបានប៉ះ React concepts រួមទាំង elements, components, props, and state។ សម្រាប់ការពន្យល់លម្អិតបន្ថែមលើប្រធានបទនីមួយៗ សូមឆែក [the rest of the documentation](/docs/hello-world.html)។ ដើម្បីស្វែងយល់បន្ថែមពីការកំណត់ components សូមឆែក [`React.Component` API reference](/docs/react-component.html)។
