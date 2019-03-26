@@ -18,9 +18,9 @@ redirect_from:
   - "docs/environments.html"
 ---
 
-This page is an overview of the React documentation and related resources.
+ទំព័រនេះគឺទិដ្ឋភាពទូទៅនៃឯកសាររបស់ React ហើយនិង ធនធានផ្សេងៗពាក់ព័ន្ធនៃ React។
 
-**React** is a JavaScript library for building user interfaces. Learn what React is all about on [our homepage](/) or [in the tutorial](/tutorial/tutorial.html).
+**React** គឺជា JavaScript library សម្រាប់បង្កើត user interfaces។ រៀនអ្វីទាំងអស់ពី React នៅលើ [ទំព័រដើមរបស់យើង](/) ឬក៏ [នៅក្នុង tutorial](/tutorial/tutorial.html)។
 
 ---
 
