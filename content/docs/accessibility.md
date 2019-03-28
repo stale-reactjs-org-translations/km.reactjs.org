@@ -73,7 +73,7 @@ function Glossary(props) {
 }
 ```
 
-អ្នកអាចធ្វើការ map ក្រុមនៃធាតុទៅជាអារេនៃបំណែកដូចដែលអ្នកចង់បានប្រភេទធាតុផ្សេងៗទៀតផងដែរ៖
+អ្នកអាចធ្វើការ map ក្រុមនៃធាតុទៅជាអារេនៃ fragment ដូចដែលអ្នកចង់បានប្រភេទធាតុផ្សេងៗទៀតផងដែរ៖
 
 ```javascript{6,9}
 function Glossary(props) {
@@ -91,7 +91,7 @@ function Glossary(props) {
 }
 ```
 
-នៅពេលដែលអ្នកមិនត្រូវការ props លើ(ស្លាកFragment | Fragment tag) អ្នកអាចប្រើបែប [short syntax](/docs/fragments.html#short-syntax) បើសិនជាឧបករណ៍របស់អ្នកគាំទ្រ៖
+នៅពេលដែលអ្នកមិនត្រូវការ props លើ Fragment tag អ្នកអាចប្រើបែប [short syntax](/docs/fragments.html#short-syntax) បើសិនជាឧបករណ៍របស់អ្នកគាំទ្រ៖
 
 ```javascript{3,6}
 function ListItem({ item }) {
@@ -108,51 +108,50 @@ function ListItem({ item }) {
 
 ## Accessible Forms {#accessible-forms}
 
-### Labeling {#labeling}
-Every HTML form control, such as `<input>` and `<textarea>`, needs to be labeled accessibly. We need to provide descriptive labels that are also exposed to screen readers.
+### ការដាក់ស្លាកឈ្មោះ {#labeling}
+គ្រប់ HTML form control ទាំងអស់ដូចជា `<input>` និង `<textarea>` ត្រូវការការដាក់ឈ្មោះដែលងាយល់។
+យើងត្រូវតែផ្តល់ឬមានការពិពណ៌នានៃស្លាក ដែលអាចអោយអ្នកប្រើប្រាស់មើលឃើញ។
 
-The following resources show us how to do this:
+ធនធានខាងក្រោមនេះនឹងបង្ហាញយើងពីរបៀបដាក់ឈ្មោះ៖
 
 - [The W3C shows us how to label elements](https://www.w3.org/WAI/tutorials/forms/labels/)
 - [WebAIM shows us how to label elements](https://webaim.org/techniques/forms/controls)
 - [The Paciello Group explains accessible names](https://www.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/)
 
-Although these standard HTML practices can be directly used in React, note that the `for` attribute is written as `htmlFor` in JSX:
+
+យើងក៏អាចប្រើប្រាស់នៅក្នុង React ដូចទៅនឹងការអនុវត្តតាមស្តង់ដាររបស់ HTML ខាងលើផងដែរ។ ចំណាំថា នៅក្នុង JSX `for` attribute គឺសរសេរទៅជា `htmlFor`៖
 
 ```javascript{1}
 <label htmlFor="namedInput">Name:</label>
 <input id="namedInput" type="text" name="name"/>
 ```
 
-### Notifying the user of errors {#notifying-the-user-of-errors}
+### ផ្តល់ដំណឹងដល់អ្នកប្រើប្រាស់ពេលដែលមាន errors {#notifying-the-user-of-errors}
 
-Error situations need to be understood by all users. The following link shows us how to expose error texts to screen readers as well:
+គ្រប់ស្ថានភាព Error ទាំងអស់ត្រូវតែយល់ដោយអ្នកប្រើប្រាស់ទាំងអស់។ link ខាងក្រោមនឹងប្រាប់យើងពីរបៀបបង្ហាញសារ error ទៅកាន់អេក្រង់អ្នកអាន៖
 
 - [The W3C demonstrates user notifications](https://www.w3.org/WAI/tutorials/forms/notifications/)
 - [WebAIM looks at form validation](https://webaim.org/techniques/formvalidation/)
 
 ## Focus Control {#focus-control}
 
-Ensure that your web application can be fully operated with the keyboard only:
+ត្រូវប្រាកដថាកម្មវិធីគេហទំព័ររបស់អ្នកអាចដំណើរការបានតែជាមួយក្តារចុចប៉ុណ្ណោះ៖
 
 - [WebAIM talks about keyboard accessibility](https://webaim.org/techniques/keyboard/)
 
 ### Keyboard focus and focus outline {#keyboard-focus-and-focus-outline}
 
-Keyboard focus refers to the current element in the DOM that is selected to accept input from the keyboard. We see it everywhere as a focus outline similar to that shown in the following image:
+Keyboard focus សំដៅទៅលើ element នៅក្នុង DOM ដែលបានត្រូវ selected ឬឈរលើសំរាប់ចាំទទួលការបញ្ចូលពី keybaord។ យើងអាចឃើញសន្ថានលក្ខណៈរបស់វាគ្រប់ទីកន្លែង ដែលដូចនឹងរូបភាពបានបង្ហាញខាងក្រោម៖
 
 <img src="../images/docs/keyboard-focus.png" alt="Blue keyboard focus outline around a selected link." />
 
-Only ever use CSS that removes this outline, for example by setting `outline: 0`, if you are replacing it with another focus outline implementation.
+ប្រសិនបើអ្នកជំនួស focus outline ជាមួយនឹងការដាក់ focus outline ផ្សេងទៀត មានតែប្រើ CSS ដើម្បីដក outline នេះចេញ។ ឧទាហរណ៍ដូចជាការដាក់ `outline: 0`។
 
 ### Mechanisms to skip to desired content {#mechanisms-to-skip-to-desired-content}
 
-Provide a mechanism to allow users to skip past navigation sections in your application as this assists and speeds up keyboard navigation.
+ផ្តល់វិធីសាស្រ្តដែលអនុញ្ញាតឱ្យអ្នកប្រើប្រាស់អាចរំលង ផ្នែក navigation ពីមុនក្នុងកម្មវិធីរបស់អ្នក ដែលអាចជួយនិងពន្លឿនល្បឿន navigation របស់ក្តាចុច។
 
-Skiplinks or Skip Navigation Links are hidden navigation links that only become visible when keyboard users interact with the page. They are very easy to implement with
-internal page anchors and some styling:
-
-- [WebAIM - Skip Navigation Links](https://webaim.org/techniques/skipnav/)
+Skiplinks or Skip Navigation Links គឺជា navigation links មើលមិនឃើញដែលអាចឃើញវិញនៅពេលដែលក្តារចុចរបស់អ្នកប្រើប្រាស់មានទំនាក់ទំនងជាមួួយ page។ ក្នុងការអនុវត្តឬសរសេរជាមួយនឹង page anchors ផ្ទាល់ខ្លួនគឺមានភាពងាយស្រួលក៏ដូចជាការដាក់ស្ទីល៖
 
 Also use landmark elements and roles, such as `<main>` and `<aside>`, to demarcate page regions as assistive technology allow the user to quickly navigate to these sections.
 
