@@ -32,7 +32,7 @@ redirect_from:
 
 ## Try React {#try-react}
 
-React has been designed from the start for gradual adoption, and **you can use as little or as much React as you need.** Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the links in this section will help you get started.
+React ត្រូវបានគេរចនាឡើងតាំងពីដំបូងសម្រាប់ការប្រើអនុម័តជាលំដាប់ ហើយ**អ្នកអាចប្រើ React តិចឬច្រើនតាមដែលអ្នកត្រូវការ**។ ប្រសិនបើអ្នកចង់ទទួលបានរសជាតិរបស់ React បន្ថែមអន្តរកម្មទៅកាន់ HTML page សាមញ្មួយ ឬក៏ចាប់ផ្តើម React-powered app ដែលស្មុគស្មាញមួយ តំណ links នៅក្នុងផ្នែកនេះនឹងជួយអ្នកចាប់ផ្តើម។
 
 ### Online Playgrounds {#online-playgrounds}
 
