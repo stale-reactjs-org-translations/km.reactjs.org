@@ -48,9 +48,10 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 ### Create a New React App {#create-a-new-react-app}
 
-When starting a React project, [a simple HTML page with script tags](/docs/add-react-to-a-website.html) might still be the best option. It only takes a minute to set up!
+នៅពេលចាប់ផ្តើម React project [HTML page សាមញ្ញមួយជាមួយនិង script tags](/docs/add-react-to-a-website.html) នៅតែជាជំរើសល្អបំផុត។ 
+វាត្រូវការពេលតែមួយនាទីប៉ុណ្ណោះដើម្បីដំឡើង!
 
-As your application grows, you might want to consider a more integrated setup. There are [several JavaScript toolchains](/docs/create-a-new-react-app.html) we recommend for larger applications. Each of them can work with little to no configuration and lets you take full advantage of the rich React ecosystem.
+នៅពេលកម្មវិធីរបស់អ្នកលូតលាស់ធំទៅៗ អ្នកប្រហែលជាចង់ពិចារណាក្នុងការរៀបចំដំឡើងអោយកាន់តែល្អ។ មាន [JavaScript toolchains ជាច្រើន](/docs/create-a-new-react-app.html) ដែលយើងណែនាំអោយប្រើសម្រាប់កម្មវិធីធំៗ។ ពួកវាអាចដំណើការជាមួយនិងការ configuration តិចបំផុត ហើយអនុញ្ញាតឱ្យអ្នកទទួលបានផលប្រយោជន៍ពេញលេញពី rich React ecosystem។
 
 ## Learn React {#learn-react}
 
