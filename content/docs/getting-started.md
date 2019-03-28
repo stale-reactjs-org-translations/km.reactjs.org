@@ -36,9 +36,10 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 ### Online Playgrounds {#online-playgrounds}
 
-If you're interested in playing around with React, you can use an online code playground. Try a Hello World template on [CodePen](codepen://hello-world), [CodeSandbox](https://codesandbox.io/s/new), or [Glitch](https://glitch.com/edit/#!/remix/starter-react-template).
+ប្រសិនបើអ្នកចាប់អារម្មណ៍លេងជាមួយ React អ្នកអាចប្រើ online កូដ playground។ សូមសាកល្បងគំរូ Hello World នៅលើ [CodePen](codepen://hello-world), [CodeSandbox](https://codesandbox.io/s/new), ឬក៏ [Glitch](https://glitch.com/edit/#!/remix/starter-react-template)។
 
-If you prefer to use your own text editor, you can also [download this HTML file](https://raw.githubusercontent.com/reactjs/reactjs.org/master/static/html/single-file-example.html), edit it, and open it from the local filesystem in your browser. It does a slow runtime code transformation, so we'd only recommend using this for simple demos.
+ប្រសិនបើអ្នកចូលចិត្តប្រើ text editor របស់អ្នកជាង អ្នកអាច [ដោនឡូដ HTML file](https://raw.githubusercontent.com/reactjs/reactjs.org/master/static/html/single-file-example.html), កែសម្រួលវា ហើយនិងបើកវាពីប្រព័ន្ធឯកសារក្នុង browser កុំព្យូទ័របស់អ្នក។ ការបម្លែងកូដនឹងរត់យឺត 
+ដូច្នេះយើងសូមណែនាំក្នុងការប្រើវាសម្រាប់តែ demos ដែលសាមញ្ញ។
 
 ### Add React to a Website {#add-react-to-a-website}
 
