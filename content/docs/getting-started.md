@@ -43,7 +43,8 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 ### Add React to a Website {#add-react-to-a-website}
 
-You can [add React to an HTML page in one minute](/docs/add-react-to-a-website.html). You can then either gradually expand its presence, or keep it contained to a few dynamic widgets.
+អ្នកអាច [បញ្ចូល React ទៅកាន់ HTML page ក្នុងពេលមួយនាទី](/docs/add-react-to-a-website.html)។ អ្នកអាចពង្រីកវត្តមានរបស់វា (React) 
+បន្តិចម្តងៗ ឬក៏រក្សាវានៅក្នុង dynamic widgets។
 
 ### Create a New React App {#create-a-new-react-app}
 
