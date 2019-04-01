@@ -64,7 +64,7 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 ### First Examples {#first-examples}
 
-The [React homepage](/) contains a few small React examples with a live editor. Even if you don't know anything about React yet, try changing their code and see how it affects the result.
+[គេហទំព័រដើមរបស់ React](/) មានផ្ទុកទៅដោយ React ឧទាហរណ៍តូចៗមួយចំនួនជាមួយនិង live editor។ ទេាះបីជាប្រសិនបើអ្នកមិនដឹងអ្វីទាំងអស់ពី React នៅឡើយក៏ដោយ សូមព្យាយាមផ្លាស់ប្តូរកូដហើយសង្កេតមើលថាតើវាប៉ះពាល់ដល់លទ្ធផលយ៉ាងណា។
 
 ### React for Beginners {#react-for-beginners}
 
