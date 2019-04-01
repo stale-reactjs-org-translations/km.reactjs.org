@@ -6,9 +6,12 @@ layout: docs
 category: FAQ
 ---
 
-### How can I make an AJAX call? {#how-can-i-make-an-ajax-call}
+### តើខ្ញ៉ំអាចហៅAJAX មកប្រើតាមរបៀបណា? {#how-can-i-make-an-ajax-call}
 
-You can use any AJAX library you like with React. Some popular ones are [Axios](https://github.com/axios/axios), [jQuery AJAX](https://api.jquery.com/jQuery.ajax/), and the browser built-in [window.fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+ជាមូួយReact អ្នកអាចប្រើAJAX library មួយណាក៏បានតាមដែលអ្នកចង់ប្រើ។ ខាងក្រោមនេះ គីជាlibrary មួយចំនូនដែលត្រូវបានគេប្រើប្រាស់ច្រើនក្នុងពេលបច្ចុប្បន្ន:
+  1. [Axios](https://github.com/axios/axios)
+  2. [jQuery AJAX](https://api.jquery.com/jQuery.ajax/)
+  3. [window.fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) ដែលជាមុខងារ មានស្រាប់ក្នុងកម្មវិធីសម្រាប់បើកវែបសាយ(browser)
 
 ### Where in the component lifecycle should I make an AJAX call? {#where-in-the-component-lifecycle-should-i-make-an-ajax-call}
 
@@ -16,7 +19,7 @@ You should populate data with AJAX calls in the [`componentDidMount`](/docs/reac
 
 ### Example: Using AJAX results to set local state {#example-using-ajax-results-to-set-local-state}
 
-The component below demonstrates how to make an AJAX call in `componentDidMount` to populate local component state. 
+The component below demonstrates how to make an AJAX call in `componentDidMount` to populate local component state.
 
 The example API returns a JSON object like this:
 
@@ -25,7 +28,7 @@ The example API returns a JSON object like this:
   "items": [
     { "id": 1, "name": "Apples",  "price": "$2" },
     { "id": 2, "name": "Peaches", "price": "$5" }
-  ] 
+  ]
 }
 ```
 
