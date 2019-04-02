@@ -90,7 +90,7 @@ If you prefer to **learn by doing,** check out our [practical tutorial](/tutoria
 
 ### Step-by-Step Guide {#step-by-step-guide}
 
-If you prefer to **learn concepts step by step,** our [guide to main concepts](/docs/hello-world.html) is the best place to start. Every next chapter in it builds on the knowledge introduced in the previous chapters so you won't miss anything as you go along.
+ប្រសិនបើអ្នកចូលចិត្ត **រៀនពី concepts មួយជំហានម្តងៗ** [ការណែនាំពីគំនិតសំខាន់](/docs/hello-world.html) របស់យើងគឺជាកន្លែងដ៏ល្អបំផុតដើម្បីចាប់ផ្តើម។ រាល់ជំពូកបន្ទាប់គឺមាននៅក្នុងការកសាងចំណេះដឹងដែលបានណែនាំនៅក្នុងជំពូកមុនៗ ដូច្នេះអ្នកនឹងមិនខកខានអ្វីទេនៅពេលអ្នកបន្តទៅមុខទៀត។
 
 ### Thinking in React {#thinking-in-react}
 
