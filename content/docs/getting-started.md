@@ -72,7 +72,7 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 ### React for Designers {#react-for-designers}
 
-If you're coming from a design background, [these resources](https://reactfordesigners.com/) are a great place to get started.
+ប្រសិនបើអ្នកមកពី background ខាង design [ធនធានទាំងនេះ](https://reactfordesigners.com/) គឺជាកន្លែងដ៏ល្អមួយដើម្បីចាប់ផ្តើម។
 
 ### JavaScript Resources {#javascript-resources}
 
