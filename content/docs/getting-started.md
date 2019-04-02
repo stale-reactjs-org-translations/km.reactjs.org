@@ -68,7 +68,7 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 ### React for Beginners {#react-for-beginners}
 
-If you feel that the React documentation goes at a faster pace than you're comfortable with, check out [this overview of React by Tania Rascia](https://www.taniarascia.com/getting-started-with-react/). It introduces the most important React concepts in a detailed, beginner-friendly way. Once you're done, give the documentation another try!
+ប្រសិនបើអ្នកមានអារម្មណ៍ថាឯកសាររបស់ React ទៅក្នុងល្បឿនលឿនដែលអ្នកតាមមិនទាន់ សូមពិនិត្យមើល [this overview of React by Tania Rascia](https://www.taniarascia.com/getting-started-with-react/)។ វាបង្ហាញពីគំនិតសំខាន់បំផុតរបស់ React យ៉ាងក្បេាះក្បាយ ហើយវាជាចំណុចចាប់ផ្តើមដ៏ល្អ។ នៅពេលអ្នកបញ្ចប់វា​ សូមព្យាយាមសាកល្បងមើលឯកសាររបស់ React ម្តងទៀត!
 
 ### React for Designers {#react-for-designers}
 
