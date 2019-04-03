@@ -94,7 +94,7 @@ If you prefer to **learn by doing,** check out our [practical tutorial](/tutoria
 
 ### Thinking in React {#thinking-in-react}
 
-Many React users credit reading [Thinking in React](/docs/thinking-in-react.html) as the moment React finally "clicked" for them. It's probably the oldest React walkthrough but it's still just as relevant.
+អ្នកប្រើប្រាស់ React ជាច្រើនលើកសរសើរក្នុងការអាន [Thinking in React](/docs/thinking-in-react.html)។ វាប្រហែលជា React version ចាស់បំផុតប៉ុន្តែវានៅតែត្រូវបានគេប្រើ។
 
 ### Recommended Courses {#recommended-courses}
 
