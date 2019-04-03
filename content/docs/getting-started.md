@@ -98,7 +98,7 @@ If you prefer to **learn by doing,** check out our [practical tutorial](/tutoria
 
 ### Recommended Courses {#recommended-courses}
 
-Sometimes people find third-party books and video courses more helpful than the official documentation. We maintain [a list of commonly recommended resources](/community/courses.html), some of which are free.
+ពេលខ្លះមនុស្ស្វែងរកសៀវភៅភាគីទីបីហើយនិងវីដេអូសិក្សាដែលជួយក្នុងការរៀនបានច្រៀនជាងឯកសារផ្លូវការ។ យើងបានថែរក្សា [បញ្ជីនៃធនធានដែលបានណែនាំជាទូទៅ](/community/courses.html) ដែលមួយចំនួនគឺឥតគិតថ្លៃ។
 
 ### Advanced Concepts {#advanced-concepts}
 
