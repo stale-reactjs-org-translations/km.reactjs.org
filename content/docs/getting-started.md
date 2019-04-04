@@ -122,7 +122,7 @@ Not every React release deserves its own blog post, but you can find a detailed 
 
 ## Versioned Documentation {#versioned-documentation}
 
-This documentation always reflects the latest stable version of React. Since React 16, you can find older versions of the documentation [on a separate page](/versions). Note that documentation for past versions is snapshotted at the time of the release, and isn't being continuously updated.
+ឯកសារនេះតែងតែឆ្លុះបញ្ចាំងពីកំណែដែលមានស្ថេរភាពចុងក្រោយបំផុតរបស់ React។ តាំងពី​ React 16 អ្នកអាចរកកំណែចាស់របស់ឯកសារ [នៅលើទំព័រដាច់ដោយឡែក](/versions)។ សូមចំណាំថាឯកសារសម្រាប់កំណែមុនៗគឺត្រូវបានគេកត់ត្រាទុក ប៉ុន្តែមិនត្រូវបានគេធ្វើបច្ចុប្បន្នភាពនេាះទេ។
 
 ## Something Missing? {#something-missing}
 
