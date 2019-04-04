@@ -106,7 +106,7 @@ Once you're comfortable with the [main concepts](#main-concepts) and played with
 
 ### API Reference {#api-reference}
 
-This documentation section is useful when you want to learn more details about a particular React API. For example, [`React.Component` API reference](/docs/react-component.html) can provide you with details on how `setState()` works, and what different lifecycle methods are useful for.
+ផ្នែករបស់ឯកសារនេះគឺប្រយោជន៍នៅពេលដែលអ្នកចង់រៀនកាន់តែលម្អិតពីផ្នកែពិសេសណាមួយរបស់ React API។ ឧទាហរណ៍ [`React.Component` API reference](/docs/react-component.html) អាចផ្តល់ឱ្យអ្នកនូវព័ត៌មានលម្អិតពីរបៀបដែល `setState()` ធ្វើការ ហើយនិងខុសគ្នានៃ lifecycle methods ដែលមានប្រយោជន៍។
 
 ### Glossary and FAQ {#glossary-and-faq}
 
