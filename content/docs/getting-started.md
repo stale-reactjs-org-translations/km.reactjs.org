@@ -126,4 +126,4 @@ This documentation always reflects the latest stable version of React. Since Rea
 
 ## Something Missing? {#something-missing}
 
-If something is missing in the documentation or if you found some part confusing, please [file an issue for the documentation repository](https://github.com/reactjs/reactjs.org/issues/new) with your suggestions for improvement, or tweet at the [@reactjs account](https://twitter.com/reactjs). We love hearing from you!
+ប្រសិនបើមានអ្វីមួយខ្វះខាតនៅក្នុងឯកសារឬក៏ ប្រសិនបើអ្នកបានរកឃើញផ្នែកមួយចំនួនមានការយល់ច្រឡំ សូម [file an issue for the documentation repository](https://github.com/reactjs/reactjs.org/issues/new) ជាមួយនិងការស្នើសុំរបស់អ្នកដើម្បីកែលម្អ ឬក៏ tweet ទៅកាន់ [@reactjs account](https://twitter.com/reactjs)។ ពួកយើងរង់ចាំការកែលម្អពីអ្នកដោយក្តីស្រលាញ់!
