@@ -86,7 +86,7 @@ We recommend going through [this JavaScript overview](https://developer.mozilla.
 
 ### Practical Tutorial {#practical-tutorial}
 
-If you prefer to **learn by doing,** check out our [practical tutorial](/tutorial/tutorial.html). In this tutorial, we build a tic-tac-toe game in React. You might be tempted to skip it because you're not building games -- but give it a chance. The techniques you'll learn in the tutorial are fundamental to building *any* React apps, and mastering it will give you a much deeper understanding.
+ប្រសិនបើអ្នកចូលចិត្ត **រៀនដោយការអនុវត្ត** សូមពិនិត្តមើល [practical tutorial](/tutorial/tutorial.html)។ នៅក្នុង tutorial នេះយើងបង្កើត tic-tac-toe ហ្គេមជាមួយ React។ អ្នកអាចរំលងវាបានពីព្រេាះអ្នកមិនមែនជាអ្នកបង្កើតហ្គេមនេាះទេ -- ប៉ុន្តែអ្នកគួរតែសាកល្បងវា។ បច្ចេកទេសដែលអ្នកនឹងរៀនក្នុង tutorial គឺមូលដ្ឋានគ្រឺះក្នុងការបង្កើត React apps *ណាមួយ* ហើយនិងក្លាយជាអ្នកជំនាញ វានឹងផ្តល់ឱ្យអ្នកនូវការយល់ដឹងកាន់តែសុីជ្រៅ។
 
 ### Step-by-Step Guide {#step-by-step-guide}
 
