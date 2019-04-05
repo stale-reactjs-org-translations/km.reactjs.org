@@ -110,7 +110,7 @@ Once you're comfortable with the [main concepts](#main-concepts) and played with
 
 ### Glossary and FAQ {#glossary-and-faq}
 
-The [glossary](/docs/glossary.html) contains an overview of the most common terms you'll see in the React documentation. There is also a FAQ section dedicated to short questions and answers about common topics, including [making AJAX requests](/docs/faq-ajax.html), [component state](/docs/faq-state.html), and [file structure](/docs/faq-structure.html).
+[Glossary](/docs/glossary.html) ភ្ជាប់ជាមួយនិងទិដ្ឋភាពទូទៅនៃលក្ខខណ្ឌទូទៅបំផុត ដែលអ្នកនិងឃើញនៅក្នុងឯកសាររបស់ React។ វាក៏មានផងដែរនូវផ្នកែក FAQ ដែលសំនួរហើយនិងចំលើយនិយាយពីប្រធានបទទូទៅ រួមបញ្ចូលទាំង [making AJAX requests](/docs/faq-ajax.html) [component state](/docs/faq-state.html) ហើយនិង [file structure](/docs/faq-structure.html)។
 
 ## Staying Informed {#staying-informed}
 
