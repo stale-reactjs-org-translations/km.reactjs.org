@@ -76,13 +76,13 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 ### JavaScript Resources {#javascript-resources}
 
-The React documentation assumes some familiarity with programming in the JavaScript language. You don't have to be an expert, but it's harder to learn both React and JavaScript at the same time.
+ក្នុងការអានឯកសាររបស់ React តម្រូវអោយអ្នកមានចំណេះដឹងខ្លះៗពី JavaScript language។ អ្នកមិនចាំបាច់ត្រូវតែជាអ្នកជំនាញទេ ប៉ុន្តែវាកាន់តែពិបាកក្នុងការរៀនទាំង React ហើយនិង JavaScript ក្នុងពេលតែមួយ។
 
-We recommend going through [this JavaScript overview](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript) to check your knowledge level. It will take you between 30 minutes and an hour but you will feel more confident learning React.
+យើងសូមណែនាំ [this JavaScript overview](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript) ដើម្បីពិនិត្យមើលកម្រិតចំណេះដឹងរបស់អ្នក។ អ្នកនឹងចំណាយពេលពី៣០នាទីទៅ១ម៉ោង ប៉ុន្តែអ្នកនឹងមានអារម្មណ៍ថាមានទំនុកចិត្តចំពោះការរៀន React។
 
->Tip
+>ព័ត៌មានជំនួយ
 >
->Whenever you get confused by something in JavaScript, [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and [javascript.info](https://javascript.info/) are great websites to check. There are also [community support forums](/community/support.html) where you can ask for help.
+>នៅពេលណាដែលអ្នកមិនច្បាស់ពីអ្វីមួយពី JavaScript [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript) និង [javascript.info](https://javascript.info/) គឺជាវេបសាយដ៏អស្ចារ្យដើម្បីពិនិត្យមើល។ អ្នកអាចសុំជំនួយជាមួយ [community support forums](/community/support.html) ផងដែរ។
 
 ### Practical Tutorial {#practical-tutorial}
 
