@@ -98,7 +98,7 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 ### Recommended Courses {#recommended-courses}
 
-ពេលខ្លះមនុស្ស្វែងរកសៀវភៅភាគីទីបីហើយនិងវីដេអូសិក្សាដែលជួយក្នុងការរៀនបានច្រៀនជាងឯកសារផ្លូវការ។ យើងបានថែរក្សា [បញ្ជីនៃធនធានដែលបានណែនាំជាទូទៅ](/community/courses.html) ដែលមួយចំនួនគឺឥតគិតថ្លៃ។
+ពេលខ្លះមនុស្សស្វែងរកសៀវភៅភាគីទីបីហើយនិងវីដេអូសិក្សាដែលជួយក្នុងការរៀនបានច្រើនជាងឯកសារផ្លូវការ។ យើងបានថែរក្សា [បញ្ជីនៃធនធានដែលបានណែនាំជាទូទៅ](/community/courses.html) ដែលមួយចំនួនគឺឥតគិតថ្លៃ។
 
 ### Advanced Concepts {#advanced-concepts}
 
@@ -114,11 +114,11 @@ The [glossary](/docs/glossary.html) contains an overview of the most common term
 
 ## Staying Informed {#staying-informed}
 
-The [React blog](/blog/) is the official source for the updates from the React team. Anything important, including release notes or deprecation notices, will be posted there first.
+[React blog](/blog/) គឺជាប្រភពផ្លូវការសម្រាប់ការធ្វើបច្ចុប្បន្នភាពពីក្រុម React។ អ្វីៗដែលសំខាន់ រួមបញ្ចូលទាំងការកំណត់ចំណាំពីការចេញផ្សាយ (release) ឬក៏ការកំណត់ចំណាំពីការបដិសេធ នឹងត្រូវបានបង្ហោះនៅទីនោះមុនគេ។
 
-You can also follow the [@reactjs account](https://twitter.com/reactjs) on Twitter, but you won't miss anything essential if you only read the blog.
+អ្នកក៏អាច follow [@reactjs account](https://twitter.com/reactjs) នៅលើ Twitter ប៉ុន្តែអ្នកនឹងមិនខកខានអ្វីដែលចាំបាច់ប្រសិនបើអ្នកគ្រាន់តែអាន blog។
 
-Not every React release deserves its own blog post, but you can find a detailed changelog for every release [in the `CHANGELOG.md` file in the React repository](https://github.com/facebook/react/blob/master/CHANGELOG.md), as well as on the [Releases](https://github.com/facebook/react) page.
+មិនមែនគ្រប់ការចេញផ្សាយ (release) របស់ React ត្រូវបានប្រកាសប្រាប់នៅក្នុង blog នេាះទេ ប៉ុន្តែអ្នកអាចរកឃើញការផ្លាស់ប្តូរលម្អិតសម្រាប់រៀងរាល់ការចេញផ្សាយ (release) [នៅក្នុង `CHANGELOG.md` file ក្នុង React repository](https://github.com/facebook/react/blob/master/CHANGELOG.md) ក៏ដូចជានៅលើទំព័រ [Releases](https://github.com/facebook/react)។
 
 ## Versioned Documentation {#versioned-documentation}
 
