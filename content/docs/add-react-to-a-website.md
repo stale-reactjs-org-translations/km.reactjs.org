@@ -29,7 +29,7 @@ Optional: [ទាញយកឧទាហរណ៍ពេញលេញ (2KB zipped)](
 
 ### Step 1: Add a DOM Container to the HTML {#step-1-add-a-dom-container-to-the-html}
 
-First, open the HTML page you want to edit. Add an empty `<div>` tag to mark the spot where you want to display something with React. For example:
+ដំបូង បើក HTML page ដែលអ្នកចង់កែសម្រួល។ បន្ថែម `<div>` tag ទទេមួយដើម្បីសម្គាល់ទីកន្លែងដែលអ្នកចង់បង្ហាញអ្វីមួយជាមួយ React។ ឧទាហរណ៍​៖
 
 ```html{3}
 <!-- ... existing HTML ... -->
@@ -39,11 +39,11 @@ First, open the HTML page you want to edit. Add an empty `<div>` tag to mark the
 <!-- ... existing HTML ... -->
 ```
 
-We gave this `<div>` a unique `id` HTML attribute. This will allow us to find it from the JavaScript code later and display a React component inside of it.
+យើងបានផ្ដល់ឱ្យ `<div>` នូវ unique `id` HTML attribute មួយ។ នេះនឹងអនុញ្ញាតឱ្យយើងរកវាឃើញដោយប្រើ JavaScript កូដនៅពេលក្រោយ ហើយនិងបង្ហាញ React component នៅខាងក្នុងវា (`<div>`)។
 
->Tip
+>ព័ត៌មានជំនួយ
 >
->You can place a "container" `<div>` like this **anywhere** inside the `<body>` tag. You may have as many independent DOM containers on one page as you need. They are usually empty -- React will replace any existing content inside DOM containers.
+>អ្នកអាចដាក់ "container" `<div>` មួយដូចនេះ **គ្រប់ទីកន្លែង** នៅខាងក្នុង `<body>` tag។ អ្នកប្រហែលមាន DOM containers ឯករាជ្យមួយចំនួននៅលើ page មួយដែលអ្នកត្រូវការ។ ជាទូទៅវាគឺទទេ -- React នឹងជំនួស content ដែលមានស្រាប់ណាមួយនៅខាងក្នុង DOM containers។
 
 ### Step 2: Add the Script Tags {#step-2-add-the-script-tags}
 
