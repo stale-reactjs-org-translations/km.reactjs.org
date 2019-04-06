@@ -47,7 +47,7 @@ Optional: [ទាញយកឧទាហរណ៍ពេញលេញ (2KB zipped)](
 
 ### Step 2: Add the Script Tags {#step-2-add-the-script-tags}
 
-Next, add three `<script>` tags to the HTML page right before the closing `</body>` tag:
+បន្ទាប់មកទៀត បន្ថែម `<script>` tags ចំនួនបីទៅកាន់ HTML page មុនការបិទ `</body>` tag៖
 
 ```html{5,6,9}
   <!-- ... other HTML ... -->
@@ -63,7 +63,7 @@ Next, add three `<script>` tags to the HTML page right before the closing `</bod
 </body>
 ```
 
-The first two tags load React. The third one will load your component code.
+ពីរ tags តំបូង load React។ tag ទីបី load component កូដរបស់អ្នក។
 
 ### Step 3: Create a React Component {#step-3-create-a-react-component}
 
