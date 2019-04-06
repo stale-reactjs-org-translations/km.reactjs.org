@@ -21,11 +21,11 @@ React មត្រូវបានរចនាឡើងពីការចាប�
 
 ## Add React in One Minute {#add-react-in-one-minute}
 
-In this section, we will show how to add a React component to an existing HTML page. You can follow along with your own website, or create an empty HTML file to practice.
+នៅក្នុងផ្នែកនេះ យើងនឹងបង្ហាញអ្នកពីរបៀបបន្ថែម React component ទៅក្នុង HTML page ដែលមានស្រាប់។ អ្នកអាចអនុវត្តជាមួយនិងគេហទំព័រផ្ទាល់ខ្លួនរបស់អ្នក ឬក៏បង្កើត HTML file ដែលទទេមួយដើម្បីអនុវត្ត។
 
-There will be no complicated tools or install requirements -- **to complete this section, you only need an internet connection, and a minute of your time.**
+វានឹងមិនមានឧបករណ៍ស្មុគស្មាញឬក៏ការតម្រូវអោយតំឡើង -- **ដើម្បីបំពេញផ្នែកនេះ អ្នកត្រូវការតែការតភ្ជាប់អ៊ីធឺណិតប៉ុណ្ណោះ ហើយនិងពេលវេលារបស់អ្នករយៈពេល១នាទី។**
 
-Optional: [Download the full example (2KB zipped)](https://gist.github.com/gaearon/6668a1f6986742109c00a581ce704605/archive/f6c882b6ae18bde42dcf6fdb751aae93495a2275.zip)
+Optional: [ទាញយកឧទាហរណ៍ពេញលេញ (2KB zipped)](https://gist.github.com/gaearon/6668a1f6986742109c00a581ce704605/archive/f6c882b6ae18bde42dcf6fdb751aae93495a2275.zip)
 
 ### Step 1: Add a DOM Container to the HTML {#step-1-add-a-dom-container-to-the-html}
 
