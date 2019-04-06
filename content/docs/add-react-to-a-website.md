@@ -8,11 +8,11 @@ prev: getting-started.html
 next: create-a-new-react-app.html
 ---
 
-Use as little or as much React as you need.
+ប្រើ React តិចឬក៏ច្រើនតាមតែអ្នកត្រូវការ។
 
-React has been designed from the start for gradual adoption, and **you can use as little or as much React as you need**. Perhaps you only want to add some "sprinkles of interactivity" to an existing page. React components are a great way to do that.
+React មត្រូវបានរចនាឡើងពីការចាប់ផ្តើមប្រើបន្តិចម្តងៗ ហើយ **អ្នកអាចប្រើ React តិចឬក៏ច្រើនតាមតែអ្នកត្រូវការ**។ ប្រហែលជាអ្នកគ្រាន់តែចង់បន្ថែម "ផ្នកែតូចមួយនៃ User Interface" ទៅលើ page ដែលមានស្រាប់។ React components គឺជាវិធីដ៏ល្អមួយដើម្បីធ្វើដូចនោះ។
 
-The majority of websites aren't, and don't need to be, single-page apps. With **a few lines of code and no build tooling**, try React in a small part of your website. You can then either gradually expand its presence, or keep it contained to a few dynamic widgets.
+គេហទំព័រភាគច្រើនមិនមែន, ហើយនិងមិនចាំបាច់ត្រូវតែជា single-page apps។ ជាមួយ **បន្ទាត់មួយចំនួននៃកូដនិងគ្មានឧបករណ៍ស្ថាបនា (no build tooling)** សាកល្បង React នៅក្នុងផ្នែកតូចមួយនៃគេហទំព័ររបស់អ្នក។ អ្នកអាចពង្រីកវត្តមានរបស់វា (React) ជាបណ្តើរ ឬក៏រក្សាវានៅក្នុង dynamic widgets មួយចំនួន។
 
 ---
 
