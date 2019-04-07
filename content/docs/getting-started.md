@@ -24,13 +24,13 @@ redirect_from:
 
 ---
 
-- [Try React](#try-react)
-- [Learn React](#learn-react)
+- [សាកល្បង React](#try-react)
+- [រៀន React](#learn-react)
 - [Staying Informed](#staying-informed)
-- [Versioned Documentation](#versioned-documentation)
-- [Something Missing?](#something-missing)
+- [កំណែឯកសារ](#versioned-documentation)
+- [មានអ្វីដែលខ្វះខាត?](#something-missing)
 
-## Try React {#try-react}
+## សាកល្បង React {#try-react}
 
 React ត្រូវបានគេរចនាឡើងតាំងពីដំបូងសម្រាប់ការប្រើអនុម័តជាលំដាប់ ហើយ**អ្នកអាចប្រើ React តិចឬច្រើនតាមដែលអ្នកត្រូវការ**។ ប្រសិនបើអ្នកចង់ទទួលបានរសជាតិរបស់ React បន្ថែមអន្តរកម្មទៅកាន់ HTML page សាមញ្មួយ ឬក៏ចាប់ផ្តើម React-powered app ដែលស្មុគស្មាញមួយ តំណ links នៅក្នុងផ្នែកនេះនឹងជួយអ្នកចាប់ផ្តើម។
 
@@ -41,7 +41,7 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 ប្រសិនបើអ្នកចូលចិត្តប្រើ text editor របស់អ្នកជាង អ្នកអាច [ដោនឡូដ HTML file](https://raw.githubusercontent.com/reactjs/reactjs.org/master/static/html/single-file-example.html), កែសម្រួលវា ហើយនិងបើកវាពីប្រព័ន្ធឯកសារក្នុង browser កុំព្យូទ័របស់អ្នក។ ការបម្លែងកូដនឹងរត់យឺត 
 ដូច្នេះយើងសូមណែនាំក្នុងការប្រើវាសម្រាប់តែ demos ដែលសាមញ្ញ។
 
-### Add React to a Website {#add-react-to-a-website}
+### បន្ថែម React ទៅកាន់វេបសាយមួយ {#add-react-to-a-website}
 
 អ្នកអាច [បញ្ចូល React ទៅកាន់ HTML page ក្នុងពេលមួយនាទី](/docs/add-react-to-a-website.html)។ អ្នកអាចពង្រីកវត្តមានរបស់វា (React) 
 បន្តិចម្តងៗ ឬក៏រក្សាវានៅក្នុង dynamic widgets។
@@ -53,7 +53,7 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 នៅពេលកម្មវិធីរបស់អ្នកលូតលាស់ធំទៅៗ អ្នកប្រហែលជាចង់ពិចារណាក្នុងការរៀបចំដំឡើងអោយកាន់តែល្អ។ មាន [JavaScript toolchains ជាច្រើន](/docs/create-a-new-react-app.html) ដែលយើងណែនាំអោយប្រើសម្រាប់កម្មវិធីធំៗ។ ពួកវាអាចដំណើការជាមួយនិងការ configuration តិចបំផុត ហើយអនុញ្ញាតឱ្យអ្នកទទួលបានផលប្រយោជន៍ពេញលេញពី rich React ecosystem។
 
-## Learn React {#learn-react}
+## រៀន React {#learn-react}
 
 មនុស្សចូលមក React មកពី backgrounds ផ្សេងៗគ្នាហើយនិងជាមួយរចនាប័ទ្មសិក្សាខុសៗគ្នា។ មិនថាអ្នកចូលចិត្តទ្រឹស្តីឬក៏វិធីសាស្រ្តអនុវត្តជាក់ស្តែង យើងសង្ឃឹមថាអ្នកនឹងរកឃើញផ្នែកនេះមានប្រយោជន៍សម្រាប់អ្នក។
 
@@ -66,11 +66,11 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 [គេហទំព័រដើមរបស់ React](/) មានផ្ទុកទៅដោយ React ឧទាហរណ៍តូចៗមួយចំនួនជាមួយនិង live editor។ ទេាះបីជាប្រសិនបើអ្នកមិនដឹងអ្វីទាំងអស់ពី React នៅឡើយក៏ដោយ សូមព្យាយាមផ្លាស់ប្តូរកូដហើយសង្កេតមើលថាតើវាប៉ះពាល់ដល់លទ្ធផលយ៉ាងណា។
 
-### React for Beginners {#react-for-beginners}
+### React សម្រាប់អ្នកចាប់ផ្តើមរៀនដំបូង {#react-for-beginners}
 
 ប្រសិនបើអ្នកមានអារម្មណ៍ថាឯកសាររបស់ React ទៅក្នុងល្បឿនលឿនដែលអ្នកតាមមិនទាន់ សូមពិនិត្យមើល [this overview of React by Tania Rascia](https://www.taniarascia.com/getting-started-with-react/)។ វាបង្ហាញពីគំនិតសំខាន់បំផុតរបស់ React យ៉ាងក្បេាះក្បាយ ហើយវាជាចំណុចចាប់ផ្តើមដ៏ល្អ។ នៅពេលអ្នកបញ្ចប់វា​ សូមព្យាយាមសាកល្បងមើលឯកសាររបស់ React ម្តងទៀត!
 
-### React for Designers {#react-for-designers}
+### React សម្រាប់អ្នករចនា (Designers) {#react-for-designers}
 
 ប្រសិនបើអ្នកមកពី background ខាង design [ធនធានទាំងនេះ](https://reactfordesigners.com/) គឺជាកន្លែងដ៏ល្អមួយដើម្បីចាប់ផ្តើម។
 
@@ -120,10 +120,10 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 មិនមែនគ្រប់ការចេញផ្សាយ (release) របស់ React ត្រូវបានប្រកាសប្រាប់នៅក្នុង blog នេាះទេ ប៉ុន្តែអ្នកអាចរកឃើញការផ្លាស់ប្តូរលម្អិតសម្រាប់រៀងរាល់ការចេញផ្សាយ (release) [នៅក្នុង `CHANGELOG.md` file ក្នុង React repository](https://github.com/facebook/react/blob/master/CHANGELOG.md) ក៏ដូចជានៅលើទំព័រ [Releases](https://github.com/facebook/react)។
 
-## Versioned Documentation {#versioned-documentation}
+## កំណែឯកសារ {#versioned-documentation}
 
 ឯកសារនេះតែងតែឆ្លុះបញ្ចាំងពីកំណែដែលមានស្ថេរភាពចុងក្រោយបំផុតរបស់ React។ តាំងពី​ React 16 អ្នកអាចរកកំណែចាស់របស់ឯកសារ [នៅលើទំព័រដាច់ដោយឡែក](/versions)។ សូមចំណាំថាឯកសារសម្រាប់កំណែមុនៗគឺត្រូវបានគេកត់ត្រាទុក ប៉ុន្តែមិនត្រូវបានគេធ្វើបច្ចុប្បន្នភាពនេាះទេ។
 
-## Something Missing? {#something-missing}
+## មានអ្វីដែលខ្វះខាត?  {#something-missing}
 
 ប្រសិនបើមានអ្វីមួយខ្វះខាតនៅក្នុងឯកសារឬក៏ ប្រសិនបើអ្នកបានរកឃើញផ្នែកមួយចំនួនមានការយល់ច្រឡំ សូម [file an issue for the documentation repository](https://github.com/reactjs/reactjs.org/issues/new) ជាមួយនិងការស្នើសុំរបស់អ្នកដើម្បីកែលម្អ ឬក៏ tweet ទៅកាន់ [@reactjs account](https://twitter.com/reactjs)។ ពួកយើងរង់ចាំការកែលម្អពីអ្នកដោយក្តីស្រលាញ់!
