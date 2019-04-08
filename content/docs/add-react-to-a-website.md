@@ -88,13 +88,13 @@ These two lines of code find the `<div>` we added to our HTML in the first step,
 
 ### That's It! {#thats-it}
 
-There is no step four. **You have just added the first React component to your website.**
+អត់មានជំហ៊ានទីបួនទេ។ **អ្នកទើបតែបានបន្ថែម React component ដំបូងទៅកាន់គេហទំព័រ​របស់​អ្នក។**
 
-Check out the next sections for more tips on integrating React.
+ពិនិត្យមើលផ្នែកបន្ទាប់ដើម្បីទទួលបានគន្លឹះបន្ថែមទៀតស្តីពីការ integrate React។
 
-**[View the full example source code](https://gist.github.com/gaearon/6668a1f6986742109c00a581ce704605)**
+**[មើល source កូដរបស់ឧទាហរណ៍ពេញលេញ ](https://gist.github.com/gaearon/6668a1f6986742109c00a581ce704605)**
 
-**[Download the full example (2KB zipped)](https://gist.github.com/gaearon/6668a1f6986742109c00a581ce704605/archive/f6c882b6ae18bde42dcf6fdb751aae93495a2275.zip)**
+**[ទាញយកឧទាហរណ៍ពេញលេញ (2KB zipped)](https://gist.github.com/gaearon/6668a1f6986742109c00a581ce704605/archive/f6c882b6ae18bde42dcf6fdb751aae93495a2275.zip)**
 
 ### Tip: Reuse a Component {#tip-reuse-a-component}
 
