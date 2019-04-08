@@ -67,11 +67,11 @@ Optional: [ទាញយកឧទាហរណ៍ពេញលេញ (2KB zipped)](
 
 ### Step 3: Create a React Component {#step-3-create-a-react-component}
 
-Create a file called `like_button.js` next to your HTML page.
+បង្កើត file មួយហៅថា `like_button.js` ជាប់និង HTML page របស់អ្នក។
 
-Open **[this starter code](https://cdn.rawgit.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js)** and paste it into the file you created.
+បើក **[this starter code](https://cdn.rawgit.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js)** ហើយ paste វាចូលក្នុង file ដែលអ្នកបានបង្កើត។
 
->Tip
+>ពត៌មានជំនួយ
 >
 >This code defines a React component called `LikeButton`. Don't worry if you don't understand it yet -- we'll cover the building blocks of React later in our [hands-on tutorial](/tutorial/tutorial.html) and [main concepts guide](/docs/hello-world.html). For now, let's just get it showing on the screen!
 
