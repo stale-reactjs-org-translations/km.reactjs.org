@@ -73,9 +73,9 @@ Optional: [ទាញយកឧទាហរណ៍ពេញលេញ (2KB zipped)](
 
 >ពត៌មានជំនួយ
 >
->This code defines a React component called `LikeButton`. Don't worry if you don't understand it yet -- we'll cover the building blocks of React later in our [hands-on tutorial](/tutorial/tutorial.html) and [main concepts guide](/docs/hello-world.html). For now, let's just get it showing on the screen!
+>កូដនេះកំណត់ React component ហៅថា `LikeButton`។ កុំបារម្ភប្រសិនបើអ្នកមិនទាន់យល់វានៅឡើយ -- យើងនឹង cover ពីការបង្កើត blocks នៃ React នៅពេលក្រោយនៅក្នុង [hands-on tutorial](/tutorial/tutorial.html) និង [main concepts guide](/docs/hello-world.html)។ សម្រាប់ពេល​ឥលូវ​នេះ តោះយើងគ្រាន់តែបង្ហាញវានៅលើអេក្រង់!
 
-After **[the starter code](https://cdn.rawgit.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js)**, add two lines to the bottom of `like_button.js`:
+បន្ទាប់ **[the starter code](https://cdn.rawgit.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js)**, បន្ថែមពីរបន្ទាត់នៅក្រោមបាតនៃ `like_button.js`៖
 
 ```js{3,4}
 // ... the starter code you pasted ...
@@ -84,7 +84,7 @@ const domContainer = document.querySelector('#like_button_container');
 ReactDOM.render(e(LikeButton), domContainer);
 ```
 
-These two lines of code find the `<div>` we added to our HTML in the first step, and then display our "Like" button React component inside of it. 
+ពីរបន្ទាត់នៃកូដនេះគឺថាការស្វែងរក `<div>` ដែលយើងបានបន្ថែមទៅកាន់ HTML នៅក្នុងជំហ៊ានដំបូងរបស់យើង ហើយបន្ទាប់មកបង្ហាញ "Like" ប៊ូតុង React component របស់យើងនៅខាងក្នុងវា។
 
 ### That's It! {#thats-it}
 
