@@ -153,15 +153,16 @@ return (
 
 ### Quickly Try JSX {#quickly-try-jsx}
 
-The quickest way to try JSX in your project is to add this `<script>` tag to your page:
+មធ្យោបាយលឿនបំផុតដើម្បីសាកល្បង JSX ក្នុង project របស់អ្នកគឺបន្ថែម `<script>` tag នេះទៅកាន់ page របស់អ្នក៖
 
 ```html
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 ```
 
-Now you can use JSX in any `<script>` tag by adding `type="text/babel"` attribute to it. Here is [an example HTML file with JSX](https://raw.githubusercontent.com/reactjs/reactjs.org/master/static/html/single-file-example.html) that you can download and play with.
+ឥឡូវ​នេះអ្នកអាចប្រើ JSX នៅក្នុង `<script>` tag ណាមួយដោយការបន្ថែមនូវ `type="text/babel"` attribute ទៅកាន់វា។ នេះគឺជា [ឧទាហរណ៍ HTML file ជាមួយ JSX](https://raw.githubusercontent.com/reactjs/reactjs.org/master/static/html/single-file-example.html) ដែលអ្នកអាចទាញយកនិងលេងជាមួយវា។
 
-This approach is fine for learning and creating simple demos. However, it makes your website slow and **isn't suitable for production**. When you're ready to move forward, remove this new `<script>` tag and the `type="text/babel"` attributes you've added. Instead, in the next section you will set up a JSX preprocessor to convert all your `<script>` tags automatically.
+វិធីសាស្រ្តនេះគឺល្អសម្រាប់ការរៀននិងការបង្កើត demos ដែលសាមញ្ញ។ ទោះជាយ៉ាងណាវាធ្វើឱ្យគេហទំព័ររបស់អ្នកយឺត ហើយ **មិនសមរម្យសម្រាប់ production**។ 
+នៅពេលអ្នកត្រៀមខ្លួនរួចរាល់ដើម្បីបន្តទៅមុខទៀត, លុប `<script>` tag នេះនិង `type="text/babel"` attributes ដេលអ្នកបានបន្ថេម។ ជំនួសវិញ, នៅផ្នែកបន្ទាប់អ្នកនឹងរៀបចំ JSX preprocessor មួយដើម្បីបម្លែង (convert) `<script>` tags ទាំងអស់របស់អ្នកដោយស្វ័យប្រវត្តិ។
 
 ### Add JSX to a Project {#add-jsx-to-a-project}
 
