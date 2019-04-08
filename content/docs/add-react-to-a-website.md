@@ -166,18 +166,20 @@ return (
 
 ### Add JSX to a Project {#add-jsx-to-a-project}
 
-Adding JSX to a project doesn't require complicated tools like a bundler or a development server. Essentially, adding JSX **is a lot like adding a CSS preprocessor.** The only requirement is to have [Node.js](https://nodejs.org/) installed on your computer.
+ការបន្ថែម JSX ទៅកាន់ project មួយមិនទាមទារនូវឧបករណ៍ស្មុគស្មាញ (complicated tools) ដូច bundler ឬក៏ development server នេាះទេ។ សំខាន់, ការបន្ថែម JSX **គឺច្រើនដូចជាការបន្ថែម CSS preprocessor មួយ។** តម្រូវការតែមួយគត់គឺត្រូវមាន [Node.js](https://nodejs.org/) ដែលបានដំឡើងនៅលើកុំព្យូទ័ររបស់អ្នក។
 
-Go to your project folder in the terminal, and paste these two commands:
+ទៅថតគម្រោងរបស់អ្នកនៅក្នុង terminal ហើយ paste ពីរ commands នេះ៖
 
-1. **Step 1:** Run `npm init -y` (if it fails, [here's a fix](https://gist.github.com/gaearon/246f6380610e262f8a648e3e51cad40d))
-2. **Step 2:** Run `npm install babel-cli@6 babel-preset-react-app@3`
+1. **ជំហ៊ាន​ ១៖** Run `npm init -y` (ប្រសិនបើវាបរាជ័យ, [នេះគឺជាការជួសជុល](https://gist.github.com/gaearon/246f6380610e262f8a648e3e51cad40d))
+2. **ជំហ៊ាន​ ២៖** Run `npm install babel-cli@6 babel-preset-react-app@3`
 
->Tip
+>ពត៌មានជំនួយ
 >
->We're **using npm here only to install the JSX preprocessor;** you won't need it for anything else. Both React and the application code can stay as `<script>` tags with no changes.
+>យើង **កំពុងប្រើ npm នៅទីនេះសម្រាប់តែការដំឡើង JSX preprocessor ប៉ុណ្ណេាះ** អ្នកនឹងមិនត្រូវការវាសម្រាប់អ្វីផ្សេងទេ។ ទាំង react និង application កូដអាចរក្សារជា `<script>` tags ដដែលដោយគ្មានការផ្លាស់ប្តូរ។
 
 Congratulations! You just added a **production-ready JSX setup** to your project.
+
+អបអរសាទរ! អ្នកទើបតែបានបន្ថែមនូវ **production-ready JSX setup** ទៅកាន់ project របស់អ្នក។
 
 
 ### Run JSX Preprocessor {#run-jsx-preprocessor}
