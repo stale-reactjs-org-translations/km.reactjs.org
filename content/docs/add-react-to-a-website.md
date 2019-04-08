@@ -110,16 +110,16 @@ ReactDOM.render(e(LikeButton), domContainer);
 
 ### Tip: Minify JavaScript for Production {#tip-minify-javascript-for-production}
 
-Before deploying your website to production, be mindful that unminified JavaScript can significantly slow down the page for your users.
+មុនពេល deploy គេហទំព័រ​របស់​អ្នកទៅកាន់ production ត្រូវចាំថា unminified JavaScript អាចធ្វើអោយ page ដើរយឺតយ៉ាងខ្លាំងសម្រាប់អ្នកប្រើរបស់អ្នក។
 
-If you already minify the application scripts, **your site will be production-ready** if you ensure that the deployed HTML loads the versions of React ending in `production.min.js`:
+ប្រសិនបើអ្នក minify scripts របស់ application រួចហើយ, **គេហទំព័រ​របស់​អ្នកនឹងរួចរាល់សម្រាប់ production** ប្រសិនបើអ្នកធានាថាបាន deploy HTML ដោយ loads versions របស់ React នៅចុងបញ្ចប់នៅក្នុង `production.min.js`៖
 
 ```js
 <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
 ```
 
-If you don't have a minification step for your scripts, [here's one way to set it up](https://gist.github.com/gaearon/42a2ffa41b8319948f9be4076286e1f3).
+ប្រសិនបើអ្នកមិនមានជំហ៊ាន minification សម្រាប់ scripts របស់អ្នក [នេះជាវិធីមួយដើម្បីបង្កើតវាឡើង](https://gist.github.com/gaearon/42a2ffa41b8319948f9be4076286e1f3)។
 
 ## Optional: Try React with JSX {#optional-try-react-with-jsx}
 
