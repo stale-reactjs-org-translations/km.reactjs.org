@@ -147,9 +147,9 @@ return (
 );
 ```
 
-These two code snippets are equivalent. While **JSX is [completely optional](/docs/react-without-jsx.html)**, many people find it helpful for writing UI code -- both with React and with other libraries.
+ទំរង់នៃការសរសេរកូដទាំងពីរខាងលើគឺដូចគ្នា ហើយនិងបង្ហាញលទ្ធផលដូចគ្នា។ ខណៈពេលដែល **JSX គឺ [completely optional](/docs/react-without-jsx.html)** មនុស្សជាច្រើនយល់ថាវាមានប្រយោជន៍សម្រាប់ការសរសេរ UI កូដ​ -- ទាំងជាមួយ React និងជាមួយ libraries ផ្សេងៗ។
 
-You can play with JSX using [this online converter](https://babeljs.io/repl#?babili=false&browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=Q&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&sourceType=module&lineWrap=true&presets=es2015%2Creact%2Cstage-2%2Cstage-3&prettier=true&targets=Node-6.12&version=6.26.0&envVersion=).
+អ្នកអាចលេងជាមួយ JSX ដោយប្រើ [this online converter](https://babeljs.io/repl#?babili=false&browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=Q&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&sourceType=module&lineWrap=true&presets=es2015%2Creact%2Cstage-2%2Cstage-3&prettier=true&targets=Node-6.12&version=6.26.0&envVersion=)។
 
 ### Quickly Try JSX {#quickly-try-jsx}
 
