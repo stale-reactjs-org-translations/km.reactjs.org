@@ -123,7 +123,7 @@ ReactDOM.render(e(LikeButton), domContainer);
 
 ## Optional: Try React with JSX {#optional-try-react-with-jsx}
 
-In the examples above, we only relied on features that are natively supported by the browsers. This is why we used a JavaScript function call to tell React what to display:
+នៅក្នុងឧទាហរណ៍ខាងលើ យើងគ្រាន់តែពឹងផ្អែកលើលក្ខណៈពិសេសដែលបាន support ដោយ browsers។​ នេះ​ជាហេតុដែលយើងបានប្រើ Javascript function call ដើម្បីប្រាប់ទៅ React នូវអ្វីដែលត្រូវបង្ហាញ៖
 
 ```js
 const e = React.createElement;
@@ -136,7 +136,7 @@ return e(
 );
 ```
 
-However, React also offers an option to use [JSX](/docs/introducing-jsx.html) instead:
+មួយវិញទៀត React ក៏ផ្តល់ជូននូវជម្រើសដើម្បីប្រើ [JSX](/docs/introducing-jsx.html) ជំនួសផងដែរ៖
 
 ```js
 // Display a "Like" <button>
