@@ -92,21 +92,21 @@ These two lines of code find the `<div>` we added to our HTML in the first step,
 
 ពិនិត្យមើលផ្នែកបន្ទាប់ដើម្បីទទួលបានគន្លឹះបន្ថែមទៀតស្តីពីការ integrate React។
 
-**[មើល source កូដរបស់ឧទាហរណ៍ពេញលេញ ](https://gist.github.com/gaearon/6668a1f6986742109c00a581ce704605)**
+**[មើល source កូដរបស់ឧទាហរណ៍ពេញលេញ](https://gist.github.com/gaearon/6668a1f6986742109c00a581ce704605)**
 
 **[ទាញយកឧទាហរណ៍ពេញលេញ (2KB zipped)](https://gist.github.com/gaearon/6668a1f6986742109c00a581ce704605/archive/f6c882b6ae18bde42dcf6fdb751aae93495a2275.zip)**
 
 ### Tip: Reuse a Component {#tip-reuse-a-component}
 
-Commonly, you might want to display React components in multiple places on the HTML page. Here is an example that displays the "Like" button three times and passes some data to it:
+ជាទូទៅ អ្នក​ប្រហែលជាចង់បង្ហាញ React components នៅកន្លែងច្រើននៅលើ HTML page។ នេះគឺជាឧទាហរណ៍ដែលបង្ហាញ "Like" ប៊ូតុងបីដង ហើយនិង​បេាះទិន្នន័យមួយចំនួនទៅអោយវា។
 
-[View the full example source code](https://gist.github.com/gaearon/faa67b76a6c47adbab04f739cba7ceda)
+[មើល source កូដរបស់ឧទាហរណ៍ពេញលេញ](https://gist.github.com/gaearon/faa67b76a6c47adbab04f739cba7ceda)
 
-[Download the full example (2KB zipped)](https://gist.github.com/gaearon/faa67b76a6c47adbab04f739cba7ceda/archive/9d0dd0ee941fea05fd1357502e5aa348abb84c12.zip)
+[ទាញយកឧទាហរណ៍ពេញលេញ (2KB zipped)](https://gist.github.com/gaearon/faa67b76a6c47adbab04f739cba7ceda/archive/9d0dd0ee941fea05fd1357502e5aa348abb84c12.zip)
 
->Note
+>ចំណាំ
 >
->This strategy is mostly useful while React-powered parts of the page are isolated from each other. Inside React code, it's easier to use [component composition](/docs/components-and-props.html#composing-components) instead.
+>យុទ្ធសាស្ត្រនេះគឺមានប្រយោជន៍បំផុត នៅខណៈពេល page នៃផ្នែល React-powered ត្រូវបានដាក់ដាច់ឆ្ងាយពីគ្នា ។ នៅក្នុង React កូដ វាគឺងាយស្រួលជាងក្នុងការប្រើ [component composition](/docs/components-and-props.html#composing-components) ជំនួសវិញ។
 
 ### Tip: Minify JavaScript for Production {#tip-minify-javascript-for-production}
 
