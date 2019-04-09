@@ -184,22 +184,25 @@ Congratulations! You just added a **production-ready JSX setup** to your project
 
 ### Run JSX Preprocessor {#run-jsx-preprocessor}
 
-Create a folder called `src` and run this terminal command:
+បង្កើតថតឯកសារ (folder) ដែលហៅថា `src` ហើយ run terminal command នេះ៖
 
 ```
 npx babel --watch src --out-dir . --presets react-app/prod 
 ```
 
->Note
+>ចំណាំ
 >
->`npx` is not a typo -- it's a [package runner tool that comes with npm 5.2+](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b).
+>`npx` មិនមែនជា typo ទេ -- វាគឺជា [package runner tool ដែលភ្ជាប់មកជាមួយ npm 5.2+](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b)។
 >
->If you see an error message saying "You have mistakenly installed the `babel` package", you might have missed [the previous step](#add-jsx-to-a-project). Perform it in the same folder, and then try again.
+>ប្រសិនបើអ្នកឃើញសារ error និយាយថា "You have mistakenly installed the `babel` package", អ្នកប្រហែលជាខកខាន [ជំហានមុន](#add-jsx-to-a-project). ធ្វើវានៅក្នុងថតឯកសារដូចគ្នាដដែល ហើយព្យាយាមម្តងទៀត។
 
-Don't wait for it to finish -- this command starts an automated watcher for JSX.
+កុំរង់ចាំដល់វាបញ្ចប់ -- command នេះ ចាប់ផ្តើម​ automated watcher សម្រាប់ JSX។
 
-If you now create a file called `src/like_button.js` with this **[JSX starter code](https://cdn.rawgit.com/gaearon/c8e112dc74ac44aac4f673f2c39d19d1/raw/09b951c86c1bf1116af741fa4664511f2f179f0a/like_button.js)**, the watcher will create a preprocessed `like_button.js` with the plain JavaScript code suitable for the browser. When you edit the source file with JSX, the transform will re-run automatically.
+ប្រសិនបើឥឡូវអ្នកបង្កើត file ដែលហៅថា `src/like_button.js` ជាមួយនិង **[JSX starter code](https://cdn.rawgit.com/gaearon/c8e112dc74ac44aac4f673f2c39d19d1/raw/09b951c86c1bf1116af741fa4664511f2f179f0a/like_button.js)** នេះ watcher នឹងបង្កើត preprocessed `like_button.js` ជាមួយនិង plain JavaScript កូដដែលសមរម្យឬមួយក៏អាចអោយ browser យល់ឬក៏ run បាន។ 
+ពេលអ្នកកែប្រែ source file ជាមួយ JSX, transform នឹង re-run ដោយស្វ័យប្រវត្តិ។
 
 As a bonus, this also lets you use modern JavaScript syntax features like classes without worrying about breaking older browsers. The tool we just used is called Babel, and you can learn more about it from [its documentation](https://babeljs.io/docs/en/babel-cli/).
 
-If you notice that you're getting comfortable with build tools and want them to do more for you, [the next section](/docs/create-a-new-react-app.html) describes some of the most popular and approachable toolchains. If not -- those script tags will do just fine!
+បន្ថែមពីលើនេះ នេះក៏អនុញ្ញាតឱ្យអ្នកប្រើផងដែរនូវ JavaScript syntax features ដូចជា classes ដោយគ្មានការព្រួយបារម្ភអំពីការ breaking browsers ចាស់ៗ។ ឧបករណ៍ (tools) ដែលយើងទើបតែបានប្រើហៅថា Babel ហើយអ្នកអាចរៀនបន្ថែមទៀតពីវានៅក្នុង [ឯកសាររបស់វា](https://babeljs.io/docs/en/babel-cli/)។
+
+ប្រសិនបើអ្នកសង្កេតឃើញថាអ្នកកំពុងតែមានជំនាញឬក៏ចំនេះដឹងជាមួយនិង build tools ហើយនិងចង់អោយវាធ្វើអ្វីច្រើនទៀតសម្រាប់អ្នក [ផ្នែកបន្ទាប់](/docs/create-a-new-react-app.html) ពិពណ៌នាអំពី toolchains ដែលមានប្រជាប្រិយភាពនិងងាយស្រួលប្រើបំផុតមួយចំនួន។ ប្រសិនបើអ្នកមិនចង់ប្រើ toolchains ទេ -- អ្នកអាចប្រើ script tags ទាំងនេាះ!
