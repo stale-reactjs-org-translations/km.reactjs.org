@@ -153,22 +153,23 @@ Keyboard focus សំដៅទៅលើ element នៅក្នុង DOM ដែ
 
 Skiplinks or Skip Navigation Links គឺជា navigation links មើលមិនឃើញដែលអាចឃើញវិញនៅពេលដែលក្តារចុចរបស់អ្នកប្រើប្រាស់មានទំនាក់ទំនងជាមួួយ page។ ក្នុងការអនុវត្តឬសរសេរជាមួយនឹង page anchors ផ្ទាល់ខ្លួនគឺមានភាពងាយស្រួលក៏ដូចជាការដាក់ស្ទីល៖
 
-Also use landmark elements and roles, such as `<main>` and `<aside>`, to demarcate page regions as assistive technology allow the user to quickly navigate to these sections.
+ប្រើប្រាស់ landmark elements និង roles ដូចជ​ា `<main>` និង `<aside>` ដើម្បីកំណត់ព្រំដែនតាមទំព័រសំរាប់ជួយដល់ការ navigate របស់អ្នកប្រើប្រាស់ទៅកាន់តាមផ្នែក។
 
-Read more about the use of these elements to enhance accessibility here:
+ស្វែងយល់ពីការប្រើប្រាស់នៃ elements ទាំងនោះដើម្បីបង្កើនលទ្ធភាព៖
 
 - [Accessible Landmarks](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 
 ### Programmatically managing focus {#programmatically-managing-focus}
 
-Our React applications continuously modify the HTML DOM during runtime, sometimes leading to keyboard focus being lost or set to an unexpected element. In order to repair this,
-we need to programmatically nudge the keyboard focus in the right direction. For example, by resetting keyboard focus to a button that opened a modal window after that modal window is closed.
+កម្មវិធី React របស់យើងបន្តកែប្រែ DOM របស់ HTML កំឡុងពេលដំណើរការ ពេលខ្លះនាំឱ្យក្តាចុចបាត់បង់ focus ឬ កំណត់ទៅធាតុផ្សេងដោយមិនមានការរំពឹងទុក។ ដើម្បីជួសជុលវា,
+យើងត្រូវការដាក់កម្មវិធីផ្តោតលើក្តារចុចឱ្យបានត្រឹមត្រូវ។ ឧទាហរណ៍ដោយកំណត់ការផ្តោតលើក្តារចុចទៅលើប៊ូតុងបន្ទាប់ពី modal windows នោះត្រូវបានបិទ។
 
-MDN Web Docs takes a look at this and describes how we can build [keyboard-navigable JavaScript widgets](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets).
+នេះជាវេបសាយនៃឯកសាររបស់ MDN និងមានបង្ហាញយើងពីរបៀបបង្កើត MDN
+[keyboard-navigable JavaScript widgets](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets).
 
-To set focus in React, we can use [Refs to DOM elements](/docs/refs-and-the-dom.html).
+ដើម្បីដាក់ focus ក្នុង React យើងអាចប្រើ [Refs to DOM elements](/docs/refs-and-the-dom.html).
 
-Using this, we first create a ref to an element in the JSX of a component class:
+ដើម្បីប្រើវាយើងដំបូងបង្កើត ref ទៅកាន់ element នៅក្នុង JSX នៃ component class៖
 
 ```javascript{4-5,8-9,13}
 class CustomTextInput extends React.Component {
@@ -190,7 +191,7 @@ class CustomTextInput extends React.Component {
 }
 ```
 
-Then we can focus it elsewhere in our component when needed:
+បន្ទាប់មកយើងអាច focus នៅកន្លែងផ្សេងៗក្នុង component របស់យើងនៅពេលដែលត្រូវការ៖
 
  ```javascript
  focus() {
@@ -200,8 +201,7 @@ Then we can focus it elsewhere in our component when needed:
  }
  ```
 
-Sometimes a parent component needs to set focus to an element in a child component. We can do this by [exposing DOM refs to parent components](/docs/refs-and-the-dom.html#exposing-dom-refs-to-parent-components)
-through a special prop on the child component that forwards the parent's ref to the child's DOM node.
+ពេលខ្លះ component មេត្រូវតែដាក់ focus ទៅ element នៅក្នុង component កូន។ យើងអាចដាក់បានដោយ [exposing DOM refs to parent components](/docs/refs-and-the-dom.html#exposing-dom-refs-to-parent-components) តាមរយះ prop ពិសេសនៅលើ component កូនដែលផ្តល់តាម ref នៃមេ ទៅកាន់ DOM node របស់កូន។
 
 ```javascript{4,12,16}
 function CustomTextInput(props) {
@@ -228,12 +228,11 @@ class Parent extends React.Component {
 this.inputElement.current.focus();
 ```
 
-When using a HOC to extend components, it is recommended to [forward the ref](/docs/forwarding-refs.html) to the wrapped component using the `forwardRef` function of React. If a third party HOC
-does not implement ref forwarding, the above pattern can still be used as a fallback.
+នៅពេលប្រើ HOC ដើម្បីពង្រីក component
+យើងណែនាំ [forward the ref](/docs/forwarding-refs.html) សំរាប់ខ្ចប់ component ដោយប្រើ `forwardRef` function នៃ React។
+ប្រសិនបើជំនួយការរបស់ HOC មិនបានដាក់បញ្ចូល ref forwardingទេ លំនាំខាងលើនៅតែអាចប្រើជា fallback បាន។
 
-A great focus management example is the [react-aria-modal](https://github.com/davidtheclark/react-aria-modal). This is a relatively rare example of a fully accessible modal window. Not only does it set initial focus on
-the cancel button (preventing the keyboard user from accidentally activating the success action) and trap keyboard focus inside the modal, it also resets focus back to the element that
-initially triggered the modal.
+[react-aria-modal](https://github.com/davidtheclark/react-aria-modal) គឺជាឧទាហរណ៏នៃការគ្រប់គ្រង focus ដ៏ល្អ។ នេះជាឧទាហរណ៍ដ៏កម្រនៃ accessible modal window ពេញលេញ។ មិនត្រឹមតែកំណត់អាទិភាព focus លើប៊ូតុង cancel (ការពារអ្នកប្រើ keyboard ពីការធ្វើសកម្មភាពជោគជ័យដោយគ្មានបំណង) និងលាក់ keyboard focus នៅក្នុង modal ហើយវាកំណត់ឡើងវិញនៃ focus ទៅកាន់ element ដែលធ្វើឱ្យ modal ដំណើរការ។
 
 >Note:
 >
