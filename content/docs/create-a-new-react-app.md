@@ -8,7 +8,7 @@ prev: add-react-to-a-website.html
 next: cdn-links.html
 ---
 
-Use an integrated toolchain for the best user and developer experience.
+ប្រើចង្កោមឧបករណ៍ដែលបានរួមបញ្ចូលគ្នា (integrated toolchain) សម្រាប់អ្នកប្រើប្រាស់ (user) ដ៏ល្អបំផុត ហើយនិងសម្រាប់បទពិសោធរបស់ developer។
 
 This page describes a few popular React toolchains which help with tasks like:
 
