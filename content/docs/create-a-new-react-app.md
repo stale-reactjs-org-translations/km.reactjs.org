@@ -64,9 +64,9 @@ When you're ready to deploy to production, running `npm run build` will create a
 
 ### Gatsby {#gatsby}
 
-[Gatsby](https://www.gatsbyjs.org/) is the best way to create **static websites** with React. It lets you use React components, but outputs pre-rendered HTML and CSS to guarantee the fastest load time.
+[Gatsby](https://www.gatsbyjs.org/) គឺជាវិធីដ៏ល្អបំផុតក្នុងការបង្កើត **static websites** ជាមួយ React។ វាអនុញ្ញាតឱ្យអ្នកប្រើ React components, ប៉ុន្ត HTMl និង CSS ត្រូវបានបង្ហាញមុនដើម្បីធានាថាពេលវេលា load មានល្បឿនលឿនបំផុត។
 
-Learn Gatsby from [its official guide](https://www.gatsbyjs.org/docs/) and a [gallery of starter kits](https://www.gatsbyjs.org/docs/gatsby-starters/).
+រៀន Gatsby ពី [ឯកសារណែនាំផ្លូវការរបស់វា](https://www.gatsbyjs.org/docs/) និង [gallery of starter kits](https://www.gatsbyjs.org/docs/gatsby-starters/)។
 
 ### More Flexible Toolchains {#more-flexible-toolchains}
 
