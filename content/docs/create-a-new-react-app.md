@@ -27,7 +27,7 @@ next: cdn-links.html
 
 នេះគឺជា **វិធីងាយស្រួលបំផុតដើម្បីបញ្ចូល React ទៅក្នុងវេបសាយដែលមានស្រាប់។** អ្នកអាចបន្ថែមឧបករណ៍មានប្រសិទ្ធភាពដែលមានទំហំធំប្រសិនបើអ្នករកឃើញថាវាមានប្រយោជន៍!
 
-## ឧបករណ៍មានប្រសិទ្ធភាព (Toolchains) ដែលបានណែនាំ  {#recommended-toolchains}
+## ឧបករណ៍មានប្រសិទ្ធភាព   (Toolchains) ដែលបានណែនាំ  {#recommended-toolchains}
 
 ក្រុម React ជាបឋមសូមផ្តល់ដំបូន្មាននូវដំណេាះស្រាយដូចនេះ៖
 
@@ -80,16 +80,16 @@ The following toolchains offer more flexiblity and choice. We recommend them to 
 
 - **[Razzle](https://github.com/jaredpalmer/razzle)** is a server-rendering framework that doesn't require any configuration, but offers more flexibility than Next.js.
 
-## Creating a Toolchain from Scratch {#creating-a-toolchain-from-scratch}
+## ការបង្កើតឧបករណ៍មានប្រសិទ្ធភាព    (Toolchain) មួយពីទទេ {#creating-a-toolchain-from-scratch}
 
-A JavaScript build toolchain typically consists of:
+ឧបករណ៍មានប្រសិទ្ធភាពមួយរបស់ JavaScript ជាធម្មតាមាន៖
 
-* A **package manager**, such as [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/). It lets you take advantage of a vast ecosystem of third-party packages, and easily install or update them.
+* **package manager** មួយ, ដូចជា [Yarn](https://yarnpkg.com/) ឬ [npm](https://www.npmjs.com/)។ វាអនុញ្ញាតឱ្យអ្នកទាញយកគុណប្រយោជន៍ពី ecosystem ដ៏ធំនៃ third-party packages ហើយនិងងាយស្រួលដំឡើងឬធ្វើឱ្យវាទាន់សម័យ។
 
-* A **bundler**, such as [webpack](https://webpack.js.org/) or [Parcel](https://parceljs.org/). It lets you write modular code and bundle it together into small packages to optimize load time.
+* **bundler** មួយ, ដូចជា [webpack](https://webpack.js.org/) or [Parcel](https://parceljs.org/)។ វាអនុញ្ញាតឱ្យអ្នកសរសេរ modular កូដហើយនិង bundle វាជាមួយគ្នាទៅជា packages តូចមួយដើម្បីបង្កើនប្រសិទ្ធភាពក្នុងការ load time។
 
-* A **compiler** such as [Babel](https://babeljs.io/). It lets you write modern JavaScript code that still works in older browsers.
+* **compiler** មួយ, ដូចជា [Babel](https://babeljs.io/). វាអនុញ្ញាតឱ្យអ្នកសរសេរ JavaScript កូដដែលទំនើបដែលនៅតែដំណើរការនៅក្នុង browsers ចាស់ៗ។
 
-If you prefer to set up your own JavaScript toolchain from scratch, [check out this guide](https://blog.usejournal.com/creating-a-react-app-from-scratch-f3c693b84658) that re-creates some of the Create React App functionality.
+ប្រសិនបើអ្នកចង់រៀបចំដំឡើងឧបករណ៍មានប្រសិទ្ធភាព (JavaScript toolchain) របស់អ្នកពីទទេ [សូមពិនិត្យមើលការណែនាំនេះ](https://blog.usejournal.com/creating-a-react-app-from-scratch-f3c693b84658) ដែលនឹងបង្កើតឡើងវិញនូវ functionality មួយចំនួនរបស់ Create React App។
 
-Don't forget to ensure your custom toolchain [is correctly set up for production](/docs/optimizing-performance.html#use-the-production-build).
+កុំភ្លេចធានាថាឧបករណ៍មានប្រសិទ្ធភាព (custom toolchain) ផ្ទាល់ខ្លួនរបស់អ្នក [ត្រូវបានដំឡើងយ៉ាងត្រឹមត្រូវសម្រាប់ production](/docs/optimizing-performance.html#use-the-production-build)។
