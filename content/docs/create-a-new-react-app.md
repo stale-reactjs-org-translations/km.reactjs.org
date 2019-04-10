@@ -68,9 +68,9 @@ When you're ready to deploy to production, running `npm run build` will create a
 
 រៀន Gatsby ពី [ឯកសារណែនាំផ្លូវការរបស់វា](https://www.gatsbyjs.org/docs/) និង [gallery of starter kits](https://www.gatsbyjs.org/docs/gatsby-starters/)។
 
-### More Flexible Toolchains {#more-flexible-toolchains}
+### ឧបករណ៍មានប្រសិទ្ធភាព (Toolchains) ដែលអាចបត់បែនបានកាន់តែច្រើន (Flexible) {#more-flexible-toolchains}
 
-The following toolchains offer more flexiblity and choice. We recommend them to more experienced users:
+ឧបករណ៍មានប្រសិទ្ធភាព (toolchains) ខាងក្រោមនេះ ផ្តល់នូវភាពបត់បែន (flexiblity) និងជម្រើសកាន់តែច្រើន។ We recommend them to more experienced users:
 
 - **[Neutrino](https://neutrinojs.org/)** combines the power of [webpack](https://webpack.js.org/) with the simplicity of presets, and includes a preset for [React apps](https://neutrinojs.org/packages/react/) and [React components](https://neutrinojs.org/packages/react-components/).
 
