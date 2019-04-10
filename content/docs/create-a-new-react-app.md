@@ -10,7 +10,7 @@ next: cdn-links.html
 
 ប្រើចង្កោមឧបករណ៍ដែលបានរួមបញ្ចូលគ្នា (integrated toolchain) សម្រាប់អ្នកប្រើប្រាស់ (user) ដ៏ល្អបំផុត ហើយនិងសម្រាប់បទពិសោធរបស់ developer។
 
-This page describes a few popular React toolchains which help with tasks like:
+ទំព័រនេះពិពណ៌នាឧបករណ៍មានប្រសិទ្ធភាព (toolchains) មួយចំនួនដែលពេញនិយមដែលជួយក្នុងការងារដូចជា៖
 
 * Scaling to many files and components.
 * Using third-party libraries from npm.
@@ -18,7 +18,7 @@ This page describes a few popular React toolchains which help with tasks like:
 * Live-editing CSS and JS in development.
 * Optimizing the output for production.
 
-The toolchains recommended on this page **don't require configuration to get started**.
+ឧបករណ៍មានប្រសិទ្ធភាព (toolchains) ដែលត្រូវានណែនាំនៅលើទំព័រនេះ **មិនទាមទារការ configuration ដើម្បីចាប់ផ្តើមទេ**។
 
 ## You Might Not Need a Toolchain {#you-might-not-need-a-toolchain}
 
