@@ -20,11 +20,12 @@ next: cdn-links.html
 
 ឧបករណ៍មានប្រសិទ្ធភាព (toolchains) ដែលត្រូវានណែនាំនៅលើទំព័រនេះ **មិនទាមទារការ configuration ដើម្បីចាប់ផ្តើមទេ**។
 
-## You Might Not Need a Toolchain {#you-might-not-need-a-toolchain}
+## អ្នកប្រហែលមិនត្រូវការឧបករណ៍មានប្រសិទ្ធភាព (Toolchain) ទេ {#you-might-not-need-a-toolchain}
 
-If you don't experience the problems described above or don't feel comfortable using JavaScript tools yet, consider [adding React as a plain `<script>` tag on an HTML page](/docs/add-react-to-a-website.html), optionally [with JSX](/docs/add-react-to-a-website.html#optional-try-react-with-jsx).
+ប្រសិនបើអ្នកមិនជួបប្រទះបញ្ហាដែលបានពិពណ៌នាខាងលើ ឬក៏មិនមានអារម្មណ៍ថាស្រួល (comfortable) ក្នុងការប្រើឧបករណ៍មានប្រសិទ្ធភាព (tools) របស់ JavaScript នៅឡើយទេ សូមពិចារណា [ការបន្ថែម React ជា plain `<script>` tag នៅលើ ទំព័រ HTML](/docs/add-react-to-a-website.html), 
+ស្រេចចិត្ត (optionally) [ជាមួយ JSX](/docs/add-react-to-a-website.html#optional-try-react-with-jsx)។
 
-This is also **the easiest way to integrate React into an existing website.** You can always add a larger toolchain if you find it helpful!
+នេះគឺជា **វិធីងាយស្រួលបំផុតដើម្បីបញ្ចូល React ទៅក្នុងវេបសាយដែលមានស្រាប់។** អ្នកអាចបន្ថែមឧបករណ៍មានប្រសិទ្ធភាពដែលមានទំហំធំប្រសិនបើអ្នករកឃើញថាវាមានប្រយោជន៍!
 
 ## Recommended Toolchains {#recommended-toolchains}
 
