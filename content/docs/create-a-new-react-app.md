@@ -27,14 +27,14 @@ next: cdn-links.html
 
 នេះគឺជា **វិធីងាយស្រួលបំផុតដើម្បីបញ្ចូល React ទៅក្នុងវេបសាយដែលមានស្រាប់។** អ្នកអាចបន្ថែមឧបករណ៍មានប្រសិទ្ធភាពដែលមានទំហំធំប្រសិនបើអ្នករកឃើញថាវាមានប្រយោជន៍!
 
-## Recommended Toolchains {#recommended-toolchains}
+## ឧបករណ៍មានប្រសិទ្ធភាព (Toolchains) ដែលបានណែនាំ  {#recommended-toolchains}
 
-The React team primarily recommends these solutions:
+ក្រុម React ជាបឋមសូមផ្តល់ដំបូន្មាននូវដំណេាះស្រាយដូចនេះ៖
 
-- If you're **learning React** or **creating a new [single-page](/docs/glossary.html#single-page-application) app,** use [Create React App](#create-react-app).
-- If you're building a **server-rendered website with Node.js,** try [Next.js](#nextjs).
-- If you're building a **static content-oriented website,** try [Gatsby](#gatsby).
-- If you're building a **component library** or **integrating with an existing codebase**, try [More Flexible Toolchains](#more-flexible-toolchains).
+- ប្រសិនបើអ្នក **កំពុងតែរៀន  React** ឬ **កំពុងបង្កើត  [single-page](/docs/glossary.html#single-page-application) app ថ្មីមួយ** អ្នកអាចប្រើ [Create React App](#create-react-app)។
+- ប្រសិនបើអ្នកកំពុងតែបង្កើត **គេហទំព័រ  server-rendered ជាមួយ Node.js** អ្នកអាចសាកល្បង [Next.js](#nextjs)។
+- ប្រសិនបើអ្នកកំពុងតែបង្កើត **static content-oriented website** អ្នកអាចសាកល្បង [Gatsby](#gatsby)។
+- ប្រសិនបើអ្នកកំពុងតែបង្កើត **component library** ឬ **integrating with an existing codebase** អ្នកអាចសាកល្បង [More Flexible Toolchains](#more-flexible-toolchains)។
 
 ### Create React App {#create-react-app}
 
