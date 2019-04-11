@@ -8,9 +8,9 @@ prev: add-react-to-a-website.html
 next: cdn-links.html
 ---
 
-Use an integrated toolchain for the best user and developer experience.
+ប្រើចង្កោមឧបករណ៍ដែលបានរួមបញ្ចូលគ្នា (integrated toolchain) សម្រាប់អ្នកប្រើប្រាស់ (user) ដ៏ល្អបំផុត ហើយនិងសម្រាប់បទពិសោធរបស់ developer។
 
-This page describes a few popular React toolchains which help with tasks like:
+ទំព័រនេះពិពណ៌នាឧបករណ៍មានប្រសិទ្ធភាព (toolchains) មួយចំនួនដែលពេញនិយមដែលជួយក្នុងការងារដូចជា៖
 
 * Scaling to many files and components.
 * Using third-party libraries from npm.
@@ -18,28 +18,29 @@ This page describes a few popular React toolchains which help with tasks like:
 * Live-editing CSS and JS in development.
 * Optimizing the output for production.
 
-The toolchains recommended on this page **don't require configuration to get started**.
+ឧបករណ៍មានប្រសិទ្ធភាព (toolchains) ដែលត្រូវានណែនាំនៅលើទំព័រនេះ **មិនទាមទារការ configuration ដើម្បីចាប់ផ្តើមទេ**។
 
-## You Might Not Need a Toolchain {#you-might-not-need-a-toolchain}
+## អ្នកប្រហែលមិនត្រូវការឧបករណ៍មានប្រសិទ្ធភាព (Toolchain) ទេ {#you-might-not-need-a-toolchain}
 
-If you don't experience the problems described above or don't feel comfortable using JavaScript tools yet, consider [adding React as a plain `<script>` tag on an HTML page](/docs/add-react-to-a-website.html), optionally [with JSX](/docs/add-react-to-a-website.html#optional-try-react-with-jsx).
+ប្រសិនបើអ្នកមិនជួបប្រទះបញ្ហាដែលបានពិពណ៌នាខាងលើ ឬក៏មិនមានអារម្មណ៍ថាស្រួល (comfortable) ក្នុងការប្រើឧបករណ៍មានប្រសិទ្ធភាព (tools) របស់ JavaScript នៅឡើយទេ សូមពិចារណា [ការបន្ថែម React ជា plain `<script>` tag នៅលើ ទំព័រ HTML](/docs/add-react-to-a-website.html), 
+ស្រេចចិត្ត (optionally) [ជាមួយ JSX](/docs/add-react-to-a-website.html#optional-try-react-with-jsx)។
 
-This is also **the easiest way to integrate React into an existing website.** You can always add a larger toolchain if you find it helpful!
+នេះគឺជា **វិធីងាយស្រួលបំផុតដើម្បីបញ្ចូល React ទៅក្នុងវេបសាយដែលមានស្រាប់។** អ្នកអាចបន្ថែមឧបករណ៍មានប្រសិទ្ធភាពដែលមានទំហំធំប្រសិនបើអ្នករកឃើញថាវាមានប្រយោជន៍!
 
-## Recommended Toolchains {#recommended-toolchains}
+## ឧបករណ៍មានប្រសិទ្ធភាព   (Toolchains) ដែលបានណែនាំ  {#recommended-toolchains}
 
-The React team primarily recommends these solutions:
+ក្រុម React ជាបឋមសូមផ្តល់ដំបូន្មាននូវដំណេាះស្រាយដូចនេះ៖
 
-- If you're **learning React** or **creating a new [single-page](/docs/glossary.html#single-page-application) app,** use [Create React App](#create-react-app).
-- If you're building a **server-rendered website with Node.js,** try [Next.js](#nextjs).
-- If you're building a **static content-oriented website,** try [Gatsby](#gatsby).
-- If you're building a **component library** or **integrating with an existing codebase**, try [More Flexible Toolchains](#more-flexible-toolchains).
+- ប្រសិនបើអ្នក **កំពុងតែរៀន  React** ឬ **កំពុងបង្កើត  [single-page](/docs/glossary.html#single-page-application) app ថ្មីមួយ** អ្នកអាចប្រើ [Create React App](#create-react-app)។
+- ប្រសិនបើអ្នកកំពុងតែបង្កើត **គេហទំព័រ  server-rendered ជាមួយ Node.js** អ្នកអាចសាកល្បង [Next.js](#nextjs)។
+- ប្រសិនបើអ្នកកំពុងតែបង្កើត **static content-oriented website** អ្នកអាចសាកល្បង [Gatsby](#gatsby)។
+- ប្រសិនបើអ្នកកំពុងតែបង្កើត **component library** ឬ **integrating with an existing codebase** អ្នកអាចសាកល្បង [More Flexible Toolchains](#more-flexible-toolchains)។
 
 ### Create React App {#create-react-app}
 
-[Create React App](https://github.com/facebookincubator/create-react-app) is a comfortable environment for **learning React**, and is the best way to start building **a new [single-page](/docs/glossary.html#single-page-application) application** in React.
+[Create React App](https://github.com/facebookincubator/create-react-app) គឺជា environment ដែលផ្តល់ភាពសុខស្រួល (comfortable) មួយសម្រាប់ **ការរៀន React** ហើយគឺជាវិធីដ៏ល្អបំផុតដើម្បីចាប់ផ្តើមបង្កើត **[single-page](/docs/glossary.html#single-page-application) application ថ្មីមួយ** នៅក្នុង​ React។
 
-It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 6 and npm >= 5.2 on your machine. To create a project, run:
+វាបង្កើតនូវ development environment របស់អ្នកដូច្នេះអ្នកអាចប្រើលក្ខណៈពិសេសចុងក្រោយបំផុតរបស់ JavaScript (latest JavaScript features), ផ្តល់ developer នូវបទពិសោធដ៏អស្ចារ្យបំផុត, ហើយនិងបង្កើនប្រសិទ្ធភាព app របស់អ្នកសម្រាប់ production។ អ្នកនឹងត្រូវមាន Node >= 6 និង npm >= 5.2 នៅលើម៉ាស៊ីនរបស់អ្នក។ ដើម្បីបង្កើត product, run៖
 
 ```bash
 npx create-react-app my-app
@@ -47,48 +48,48 @@ cd my-app
 npm start
 ```
 
->Note
+>ចំណាំ
 >
->`npx` on the first line is not a typo -- it's a [package runner tool that comes with npm 5.2+](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b).
+>`npx` នៅលើបន្ទាត់ទីមួយគឺមិនមែនជា typo ទេ -- វាគឺជា [package runner tool ដែលភ្ជាប់មកជាមួយ npm 5.2+](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b)។
 
-Create React App doesn't handle backend logic or databases; it just creates a frontend build pipeline, so you can use it with any backend you want. Under the hood, it uses [Babel](https://babeljs.io/) and [webpack](https://webpack.js.org/), but you don't need to know anything about them.
+Create React App មិនដោះស្រាយ​ (doesn't handle) នូវ backend logic ឬ databases នេាះទេ; វាគ្រាន់តែបង្កើតនូវ frontend build pipeline មួយ ដូចច្នេះអ្នកអាចវាជាមួយ backend ផ្សេងៗដែលអ្នកចូលចិត្ត។ បច្ចេកទេសខាងក្រោយ, វាប្រើ [Babel](https://babeljs.io/) និង [webpack](https://webpack.js.org/) ប៉ុន្តែអ្នកមិនចាំបាច់ដឹងអ្វីអំពីពួកវាទេ។
 
-When you're ready to deploy to production, running `npm run build` will create an optimized build of your app in the `build` folder. You can learn more about Create React App [from its README](https://github.com/facebookincubator/create-react-app#create-react-app-) and the [User Guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#table-of-contents).
+នៅពេលអ្នកត្រៀមខ្លួនរួចរាល់ហើយដើម្បី deploy ទៅកាន់ production, running `npm run build` និងបង្កើត optimized build មួយសម្រាប់ app របស់អ្នកនៅក្នុងថតឯកសារ `build`។ អ្នកអាចស្វែងយល់បន្ថែមអំពី Create React App [ពី README របស់វា](https://github.com/facebookincubator/create-react-app#create-react-app-) និង [ការណែនាំសម្រាប់អ្នកប្រើប្រាស់](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#table-of-contents)។
 
 ### Next.js {#nextjs}
 
-[Next.js](https://nextjs.org/) is a popular and lightweight framework for **static and server‑rendered applications** built with React. It includes **styling and routing solutions** out of the box, and assumes that you're using [Node.js](https://nodejs.org/) as the server environment.
+[Next.js](https://nextjs.org/) គឺជា framework ដែលស្រាលហើយនិងពេញនិយមមួយសម្រាប់ **static និង server‑rendered applications** បង្កើតជាមួយ React។ វារួមបញ្ចូលទាំង **styling និង routing solutions** out of the box, ហើយសន្មត់ថាអ្នកកំពុងប្រើ [Node.js](https://nodejs.org/) ជា server environment។
 
-Learn Next.js from [its official guide](https://nextjs.org/learn/).
+រៀន Next.js ពី [ឯកសារណែនាំផ្លូវការរបស់វា](https://nextjs.org/learn/)។
 
 ### Gatsby {#gatsby}
 
-[Gatsby](https://www.gatsbyjs.org/) is the best way to create **static websites** with React. It lets you use React components, but outputs pre-rendered HTML and CSS to guarantee the fastest load time.
+[Gatsby](https://www.gatsbyjs.org/) គឺជាវិធីដ៏ល្អបំផុតក្នុងការបង្កើត **static websites** ជាមួយ React។ វាអនុញ្ញាតឱ្យអ្នកប្រើ React components, ប៉ុន្ត HTMl និង CSS ត្រូវបានបង្ហាញមុនដើម្បីធានាថាពេលវេលា load មានល្បឿនលឿនបំផុត។
 
-Learn Gatsby from [its official guide](https://www.gatsbyjs.org/docs/) and a [gallery of starter kits](https://www.gatsbyjs.org/docs/gatsby-starters/).
+រៀន Gatsby ពី [ឯកសារណែនាំផ្លូវការរបស់វា](https://www.gatsbyjs.org/docs/) និង [gallery of starter kits](https://www.gatsbyjs.org/docs/gatsby-starters/)។
 
-### More Flexible Toolchains {#more-flexible-toolchains}
+### ឧបករណ៍មានប្រសិទ្ធភាព (Toolchains) ដែលអាចបត់បែនបានកាន់តែច្រើន (Flexible) {#more-flexible-toolchains}
 
-The following toolchains offer more flexiblity and choice. We recommend them to more experienced users:
+ឧបករណ៍មានប្រសិទ្ធភាព (toolchains) ខាងក្រោមនេះ ផ្តល់នូវភាពបត់បែន (flexiblity) និងជម្រើសកាន់តែច្រើន។ យើងសូមណែនាំពួកវាទៅកាន់អ្នកប្រើប្រាស់ (user) ដែលមានបទពិសោធន៍ច្រើន៖
 
-- **[Neutrino](https://neutrinojs.org/)** combines the power of [webpack](https://webpack.js.org/) with the simplicity of presets, and includes a preset for [React apps](https://neutrinojs.org/packages/react/) and [React components](https://neutrinojs.org/packages/react-components/).
+- **[Neutrino](https://neutrinojs.org/)** រួមបញ្ចូលគ្នានូវអំណាច (power) នៃ [webpack](https://webpack.js.org/) ជាមួយភាពសាមញ្ញនៃ presets ហើយនិងរួមបញ្ចូលទាំង preset សម្រាប់ [React apps](https://neutrinojs.org/packages/react/) និង [React components](https://neutrinojs.org/packages/react-components/)។
 
-- **[nwb](https://github.com/insin/nwb)** is particularly great for [publishing React components for npm](https://github.com/insin/nwb/blob/master/docs/guides/ReactComponents.md#developing-react-components-and-libraries-with-nwb). It [can be used](https://github.com/insin/nwb/blob/master/docs/guides/ReactApps.md#developing-react-apps-with-nwb) for creating React apps, too. 
+- **[nwb](https://github.com/insin/nwb)** គឺអស្ចារ្យណាស់សម្រាប់ [ការ publishing React components សម្រាប់ npm](https://github.com/insin/nwb/blob/master/docs/guides/ReactComponents.md#developing-react-components-and-libraries-with-nwb)។ វា [អាចត្រូវបានប្រើ](https://github.com/insin/nwb/blob/master/docs/guides/ReactApps.md#developing-react-apps-with-nwb) សម្រាប់បង្កើត React apps ផងដែរ។
 
-- **[Parcel](https://parceljs.org/)** is a fast, zero configuration web application bundler that [works with React](https://parceljs.org/recipes.html#react).
+- **[Parcel](https://parceljs.org/)** គឺលឿនណាស់, គឺជា zero configuration web application bundler ដែល [ធ្វើការជាមួយ React](https://parceljs.org/recipes.html#react)។
 
-- **[Razzle](https://github.com/jaredpalmer/razzle)** is a server-rendering framework that doesn't require any configuration, but offers more flexibility than Next.js.
+- **[Razzle](https://github.com/jaredpalmer/razzle)** គឺជា server-rendering framework មួយដែលមិនទាមទារនូវការ​ configuration ច្រើនប៉ុន្តែផ្តល់នូវភាពបត់បែន (flexibility) ច្រើនជាង Next.js។
 
-## Creating a Toolchain from Scratch {#creating-a-toolchain-from-scratch}
+## ការបង្កើតឧបករណ៍មានប្រសិទ្ធភាព    (Toolchain) មួយពីទទេ {#creating-a-toolchain-from-scratch}
 
-A JavaScript build toolchain typically consists of:
+ឧបករណ៍មានប្រសិទ្ធភាពមួយរបស់ JavaScript ជាធម្មតាមាន៖
 
-* A **package manager**, such as [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/). It lets you take advantage of a vast ecosystem of third-party packages, and easily install or update them.
+* **package manager** មួយ, ដូចជា [Yarn](https://yarnpkg.com/) ឬ [npm](https://www.npmjs.com/)។ វាអនុញ្ញាតឱ្យអ្នកទាញយកគុណប្រយោជន៍ពី ecosystem ដ៏ធំនៃ third-party packages ហើយនិងងាយស្រួលដំឡើងឬធ្វើឱ្យវាទាន់សម័យ។
 
-* A **bundler**, such as [webpack](https://webpack.js.org/) or [Parcel](https://parceljs.org/). It lets you write modular code and bundle it together into small packages to optimize load time.
+* **bundler** មួយ, ដូចជា [webpack](https://webpack.js.org/) or [Parcel](https://parceljs.org/)។ វាអនុញ្ញាតឱ្យអ្នកសរសេរ modular កូដហើយនិង bundle វាជាមួយគ្នាទៅជា packages តូចមួយដើម្បីបង្កើនប្រសិទ្ធភាពក្នុងការ load time។
 
-* A **compiler** such as [Babel](https://babeljs.io/). It lets you write modern JavaScript code that still works in older browsers.
+* **compiler** មួយ, ដូចជា [Babel](https://babeljs.io/). វាអនុញ្ញាតឱ្យអ្នកសរសេរ JavaScript កូដដែលទំនើបដែលនៅតែដំណើរការនៅក្នុង browsers ចាស់ៗ។
 
-If you prefer to set up your own JavaScript toolchain from scratch, [check out this guide](https://blog.usejournal.com/creating-a-react-app-from-scratch-f3c693b84658) that re-creates some of the Create React App functionality.
+ប្រសិនបើអ្នកចង់រៀបចំដំឡើងឧបករណ៍មានប្រសិទ្ធភាព (JavaScript toolchain) របស់អ្នកពីទទេ [សូមពិនិត្យមើលការណែនាំនេះ](https://blog.usejournal.com/creating-a-react-app-from-scratch-f3c693b84658) ដែលនឹងបង្កើតឡើងវិញនូវ functionality មួយចំនួនរបស់ Create React App។
 
-Don't forget to ensure your custom toolchain [is correctly set up for production](/docs/optimizing-performance.html#use-the-production-build).
+កុំភ្លេចធានាថាឧបករណ៍មានប្រសិទ្ធភាព (custom toolchain) ផ្ទាល់ខ្លួនរបស់អ្នក [ត្រូវបានដំឡើងយ៉ាងត្រឹមត្រូវសម្រាប់ production](/docs/optimizing-performance.html#use-the-production-build)។
