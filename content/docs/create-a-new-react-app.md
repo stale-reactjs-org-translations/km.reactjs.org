@@ -70,15 +70,15 @@ When you're ready to deploy to production, running `npm run build` will create a
 
 ### ឧបករណ៍មានប្រសិទ្ធភាព (Toolchains) ដែលអាចបត់បែនបានកាន់តែច្រើន (Flexible) {#more-flexible-toolchains}
 
-ឧបករណ៍មានប្រសិទ្ធភាព (toolchains) ខាងក្រោមនេះ ផ្តល់នូវភាពបត់បែន (flexiblity) និងជម្រើសកាន់តែច្រើន។ We recommend them to more experienced users:
+ឧបករណ៍មានប្រសិទ្ធភាព (toolchains) ខាងក្រោមនេះ ផ្តល់នូវភាពបត់បែន (flexiblity) និងជម្រើសកាន់តែច្រើន។ យើងសូមណែនាំពួកវាទៅកាន់អ្នកប្រើប្រាស់ (user) ដែលមានបទពិសោធន៍ច្រើន៖
 
-- **[Neutrino](https://neutrinojs.org/)** combines the power of [webpack](https://webpack.js.org/) with the simplicity of presets, and includes a preset for [React apps](https://neutrinojs.org/packages/react/) and [React components](https://neutrinojs.org/packages/react-components/).
+- **[Neutrino](https://neutrinojs.org/)** រួមបញ្ចូលគ្នានូវអំណាច (power) នៃ [webpack](https://webpack.js.org/) ជាមួយភាពសាមញ្ញនៃ presets ហើយនិងរួមបញ្ចូលទាំង preset សម្រាប់ [React apps](https://neutrinojs.org/packages/react/) និង [React components](https://neutrinojs.org/packages/react-components/)។
 
-- **[nwb](https://github.com/insin/nwb)** is particularly great for [publishing React components for npm](https://github.com/insin/nwb/blob/master/docs/guides/ReactComponents.md#developing-react-components-and-libraries-with-nwb). It [can be used](https://github.com/insin/nwb/blob/master/docs/guides/ReactApps.md#developing-react-apps-with-nwb) for creating React apps, too. 
+- **[nwb](https://github.com/insin/nwb)** គឺអស្ចារ្យណាស់សម្រាប់ [ការ publishing React components សម្រាប់ npm](https://github.com/insin/nwb/blob/master/docs/guides/ReactComponents.md#developing-react-components-and-libraries-with-nwb)។ វា [អាចត្រូវបានប្រើ](https://github.com/insin/nwb/blob/master/docs/guides/ReactApps.md#developing-react-apps-with-nwb) សម្រាប់បង្កើត React apps ផងដែរ។
 
-- **[Parcel](https://parceljs.org/)** is a fast, zero configuration web application bundler that [works with React](https://parceljs.org/recipes.html#react).
+- **[Parcel](https://parceljs.org/)** គឺលឿនណាស់, គឺជា zero configuration web application bundler ដែល [ធ្វើការជាមួយ React](https://parceljs.org/recipes.html#react)។
 
-- **[Razzle](https://github.com/jaredpalmer/razzle)** is a server-rendering framework that doesn't require any configuration, but offers more flexibility than Next.js.
+- **[Razzle](https://github.com/jaredpalmer/razzle)** គឺជា server-rendering framework មួយដែលមិនទាមទារនូវការ​ configuration ច្រើនប៉ុន្តែផ្តល់នូវភាពបត់បែន (flexibility) ច្រើនជាង Next.js។
 
 ## ការបង្កើតឧបករណ៍មានប្រសិទ្ធភាព    (Toolchain) មួយពីទទេ {#creating-a-toolchain-from-scratch}
 
