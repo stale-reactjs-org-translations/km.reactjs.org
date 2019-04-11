@@ -6,21 +6,21 @@ prev: create-a-new-react-app.html
 next: hello-world.html
 ---
 
-Both React and ReactDOM are available over a CDN.
+ទាំង React និង ReactDOm គឺមាននៅលើ CDN។
 
 ```html
 <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 ```
 
-The versions above are only meant for development, and are not suitable for production. Minified and optimized production versions of React are available at:
+កំណែ (versions) ខាងលើគឺមានន័យតែសម្រាប់ development និងមិនសមស្របសម្រាប់ production។ កំណែ production (production versions) ដែលបាន minified និង optimized នៃ React គឺមាននៅ៖
 
 ```html
 <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
 ```
 
-To load a specific version of `react` and `react-dom`, replace `16` with the version number.
+ដើម្បី load កំណែជាក់លាក់ (specific version) មួយនៃ​​​`react` និង `react-dom`​ជាមួយលេខកំណែ (version number)។
 
 ### Why the `crossorigin` Attribute? {#why-the-crossorigin-attribute}
 
