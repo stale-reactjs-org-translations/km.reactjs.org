@@ -24,14 +24,14 @@ next: hello-world.html
 
 ### Why the `crossorigin` Attribute? {#why-the-crossorigin-attribute}
 
-If you serve React from a CDN, we recommend to keep the [`crossorigin`](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes) attribute set:
+ប្រសិនបើអ្នកប្រើ React ពី CDN យើងសូមណែនាំឱ្យរក្សាការ set [`crossorigin`](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes) attribute។
 
 ```html
 <script crossorigin src="..."></script>
 ```
 
-We also recommend to verify that the CDN you are using sets the `Access-Control-Allow-Origin: *` HTTP header:
+យើងក៏សូមណែនាំឱ្យផ្ទៀងផ្ទាត់ថា CDN ដែលអ្នកកំពុងប្រើប្រាស់ sets នូវ `Access-Control-Allow-Origin: *` HTTP header៖
 
 ![Access-Control-Allow-Origin: *](../images/docs/cdn-cors-header.png)
 
-This enables a better [error handling experience](/blog/2017/07/26/error-handling-in-react-16.html) in React 16 and later.
+នេះធ្វើឱ្យប្រសើរឡើងនូវ [error handling experience](/blog/2017/07/26/error-handling-in-react-16.html) នៅក្នុង React 16 និងក្រោយៗ។
