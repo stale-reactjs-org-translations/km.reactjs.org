@@ -8,7 +8,7 @@ redirect_from:
   - "tips/false-in-jsx.html"
 ---
 
-In React, you can create distinct components that encapsulate behavior you need. Then, you can render only some of them, depending on the state of your application.
+នៅក្នុង React អ្នកអាចបង្កើត components ខុសៗគ្នាដែល encapsulate ឥរិយាបទ (behavior) ដែលអ្នកត្រូវការ។ បន្ទាប់មកទៀតអ្នកអាច render ពួកវាមួយចំនួនប៉ុណ្ណោះ ដោយអាស្រ័យលើ state នៃ application របស់អ្នក។​
 
 Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like [`if`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) or the [conditional operator](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) to create elements representing the current state, and let React update the UI to match them.
 
