@@ -10,9 +10,9 @@ redirect_from:
 
 នៅក្នុង React អ្នកអាចបង្កើត components ខុសៗគ្នាដែល encapsulate ឥរិយាបទ (behavior) ដែលអ្នកត្រូវការ។ បន្ទាប់មកទៀតអ្នកអាច render ពួកវាមួយចំនួនប៉ុណ្ណោះ ដោយអាស្រ័យលើ state នៃ application របស់អ្នក។​
 
-Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like [`if`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) or the [conditional operator](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) to create elements representing the current state, and let React update the UI to match them.
+Conditional rendering នៅក្នុង React ធ្វើការដូចគ្នា និង conditions នៅក្នុង JavaScript។ ប្រើ JavaScript operators ដូចជា [`if`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) ឬក៏ [conditional operator](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) ដើម្បីបង្កើត elements ដែលតំណាងអោយ current state ហើយអនុញ្ញាតឱ្យ React ធ្វើបច្ចុប្បន្នភាព UI ដែលត្រូវនិង conditions។
 
-Consider these two components:
+ពិចារណា components ទាំងពីរនេះ៖
 
 ```js
 function UserGreeting(props) {
@@ -24,7 +24,7 @@ function GuestGreeting(props) {
 }
 ```
 
-We'll create a `Greeting` component that displays either of these components depending on whether a user is logged in:
+យើងនឹងបង្កើត `Greeting` component ដែលបង្ហាញ (displays) components ទាំងនេះដោយអាស្រ័យលើថាអ្នកប្រើប្រាស់បាន logged in ឬក៏អត់៖
 
 ```javascript{3-7,11,12}
 function Greeting(props) {
@@ -42,9 +42,9 @@ ReactDOM.render(
 );
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/ZpVxNq?editors=0011)
+[**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/ZpVxNq?editors=0011)
 
-This example renders a different greeting depending on the value of `isLoggedIn` prop.
+ឧទាហរណ៍នេះ renders greeting ខុសគ្នាដោយអាស្រ័យលើតម្លៃនៃ `isLoggedIn` prop។
 
 ### Element Variables {#element-variables}
 
