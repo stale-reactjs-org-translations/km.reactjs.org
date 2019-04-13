@@ -157,9 +157,9 @@ ReactDOM.render(
 
 ### Inline If-Else with Conditional Operator {#inline-if-else-with-conditional-operator}
 
-Another method for conditionally rendering elements inline is to use the JavaScript conditional operator [`condition ? true : false`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Conditional_Operator).
+Method ផ្សេងទៀតសម្រាប់ដាក់លក្ខខណ្ឌក្នុងការ render elements ជាលក្ខណះ inline គឺប្រើ JavaScript conditional operator [`condition ? true : false`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)។
 
-In the example below, we use it to conditionally render a small block of text.
+នៅក្នុងឧទាហរណ៍ខាងក្រោម យើងប្រើវាដើម្បីដាក់លក្ខខណ្ឌក្នុងការ render នូវ small block មួយរបស់ text។
 
 ```javascript{5}
 render() {
@@ -172,7 +172,7 @@ render() {
 }
 ```
 
-It can also be used for larger expressions although it is less obvious what's going on:
+វាក៏អាចត្រូវបានប្រើសម្រាប់ expressions ធំជាងនេះ បើទោះបីជាវាមិនសូវច្បាស់ពីអ្វីដែលនឹងកើតឡើង៖
 
 ```js{5,7,9}
 render() {
@@ -189,7 +189,7 @@ render() {
 }
 ```
 
-Just like in JavaScript, it is up to you to choose an appropriate style based on what you and your team consider more readable. Also remember that whenever conditions become too complex, it might be a good time to [extract a component](/docs/components-and-props.html#extracting-components).
+ដូចនៅក្នុង JavaScrip វាអាស្រ័យទៅលើអ្នកក្នុងការជ្រើសរើស style ដែលសមរម្យមួយដោយផ្អែកលើអ្វីដែលអ្នកនិងក្រុមរបស់អ្នកពិចារណាថាកូដគឺ more readable។ ចងចាំផងដែរថានៅពេលណាដែលលក្ខខណ្ឌប្រែជាស្មុគស្មាញ វាអាចជាពេលវេលាដ៏ល្អមួយដើម្បី [extract a component](/docs/components-and-props.html#extracting-components)។
 
 ### Preventing Component from Rendering {#preventing-component-from-rendering}
 
