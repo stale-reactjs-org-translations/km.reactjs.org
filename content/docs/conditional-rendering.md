@@ -48,9 +48,10 @@ ReactDOM.render(
 
 ### Element Variables {#element-variables}
 
-You can use variables to store elements. This can help you conditionally render a part of the component while the rest of the output doesn't change.
+អ្នកអាចប្រើ variables ដើម្បី​រក្សាទុក elements។ នេះអាចជួយអ្នកក្នុងការដាក់លក្ខខណ្ឌ render ផ្នែក​មួយ​នៃ component ខណៈពេលដែលលទ្ធផល (output) មិនផ្លាស់ប្តូរទេ។
 
-Consider these two new components representing Logout and Login buttons:
+សូមពិចារណាពី components ពីរនេះដែលតំណាងអោយ Logout និង Login 
+ប៊ូតុង៖
 
 ```js
 function LoginButton(props) {
@@ -70,9 +71,9 @@ function LogoutButton(props) {
 }
 ```
 
-In the example below, we will create a [stateful component](/docs/state-and-lifecycle.html#adding-local-state-to-a-class) called `LoginControl`.
+នៅក្នុងឧទាហរណ៍ខាងក្រោម យើងនឹងបង្កើត [stateful component](/docs/state-and-lifecycle.html#adding-local-state-to-a-class) មួយដែលត្រូវបានហៅថា `LoginControl`។
 
-It will render either `<LoginButton />` or `<LogoutButton />` depending on its current state. It will also render a `<Greeting />` from the previous example:
+វានឹង render ទាំង `<LoginButton />` ឬក៏ `<LogoutButton />` ដោយអាស្រ័យលើ current state របស់វា។ វានឹង render `<Greeting />` ផងដែរ ដែលតពីឧទាហរណ៍មុន៖
 
 ```javascript{20-25,29,30}
 class LoginControl extends React.Component {
@@ -116,9 +117,10 @@ ReactDOM.render(
 );
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/QKzAgB?editors=0010)
+[**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/QKzAgB?editors=0010)
 
-While declaring a variable and using an `if` statement is a fine way to conditionally render a component, sometimes you might want to use a shorter syntax. There are a few ways to inline conditions in JSX, explained below.
+ខណៈពេលកំពុងប្រកាស variable មួយ ការប្រើ `if` statement គឺជាវិធីដ៏ល្អដើម្បីដាក់លក្ខខណ្ឌក្នុងការ​ render component មួយ 
+ហើយពេលខ្លះអ្នកប្រហែលជាចង់ប្រើ​ syntax ដែលសរសេរខ្លីជាងនេះ។ មានវិធីមួយចំនួនក្នុងការដាក់លក្ខខណ្ឌលក្ខណះ inline (inline conditions) ក្នុង JSX ហើយត្រូវបានពន្យល់ដូចខាងក្រោម។
 
 ### Inline If with Logical && Operator {#inline-if-with-logical--operator}
 
