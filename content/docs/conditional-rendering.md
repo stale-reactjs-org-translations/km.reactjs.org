@@ -122,7 +122,7 @@ ReactDOM.render(
 ខណៈពេលកំពុងប្រកាស variable មួយ ការប្រើ `if` statement គឺជាវិធីដ៏ល្អដើម្បីដាក់លក្ខខណ្ឌក្នុងការ​ render component មួយ 
 ហើយពេលខ្លះអ្នកប្រហែលជាចង់ប្រើ​ syntax ដែលសរសេរខ្លីជាងនេះ។ មានវិធីមួយចំនួនក្នុងការដាក់លក្ខខណ្ឌលក្ខណះ inline (inline conditions) ក្នុង JSX ហើយត្រូវបានពន្យល់ដូចខាងក្រោម។
 
-### Inline If with Logical && Operator {#inline-if-with-logical--operator}
+### Inline If ជាមួយ  Logical && Operator {#inline-if-with-logical--operator}
 
 អ្នកប្រហែល [បង្កប់ (embed) expressions មួយចំនួននៅក្នុង JSX](/docs/introducing-jsx.html#embedding-expressions-in-jsx) ដោយការដាក់រុំពួកវានៅក្នុងដង្កៀប​អង្កាញ់ (curly braces)។ នេះរួមបញ្ចូលទាំង JavaScript logical `&&` operator។ វាអាចងាយស្រួលសម្រាប់ការដាក់លក្ខខណ្ឌរួមជាមួយ element មួយ៖
 
@@ -155,7 +155,7 @@ ReactDOM.render(
 ដូច្នេះប្រសិនបើលក្ខខណ្ឌគឺ `true` នេាះ element នៅខាងស្តាំបន្ទាប់ពី `&&` 
 នឹងបង្ហាញនៅក្នុងលទ្ធផល (output)។ ប្រសិនបើវាគឺ `false` នេាះ React នឹងមិនអើពើ (ignore) ហើយរំលងវា។
 
-### Inline If-Else with Conditional Operator {#inline-if-else-with-conditional-operator}
+### Inline If-Else ជាមួយ  Conditional Operator {#inline-if-else-with-conditional-operator}
 
 Method ផ្សេងទៀតសម្រាប់ដាក់លក្ខខណ្ឌក្នុងការ render elements ជាលក្ខណះ inline គឺប្រើ JavaScript conditional operator [`condition ? true : false`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)។
 
@@ -191,7 +191,7 @@ render() {
 
 ដូចនៅក្នុង JavaScrip វាអាស្រ័យទៅលើអ្នកក្នុងការជ្រើសរើស style ដែលសមរម្យមួយដោយផ្អែកលើអ្វីដែលអ្នកនិងក្រុមរបស់អ្នកពិចារណាថាកូដគឺ more readable។ ចងចាំផងដែរថានៅពេលណាដែលលក្ខខណ្ឌប្រែជាស្មុគស្មាញ វាអាចជាពេលវេលាដ៏ល្អមួយដើម្បី [extract a component](/docs/components-and-props.html#extracting-components)។
 
-### Preventing Component from Rendering {#preventing-component-from-rendering}
+### បង្ការ Component ពីការ Render {#preventing-component-from-rendering}
 
 ក្នុងករណីកម្រអ្នកប្រហែលជាចង់អោយ​ component មួយ លាក់ខ្លួនវា (hide itself) ទោះបីជាវាត្រូវបាន render ដោយ component ផ្សេង។ ដើម្បីធ្វើដូចនេះអ្នកត្រូវ return `null` ជំនួសអោយលទ្ធផល (output) render របស់វា។
 
