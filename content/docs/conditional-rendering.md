@@ -193,9 +193,9 @@ Just like in JavaScript, it is up to you to choose an appropriate style based on
 
 ### Preventing Component from Rendering {#preventing-component-from-rendering}
 
-In rare cases you might want a component to hide itself even though it was rendered by another component. To do this return `null` instead of its render output.
+ក្នុងករណីកម្រអ្នកប្រហែលជាចង់អោយ​ component មួយ លាក់ខ្លួនវា (hide itself) ទោះបីជាវាត្រូវបាន render ដោយ component ផ្សេង។ ដើម្បីធ្វើដូចនេះអ្នកត្រូវ return `null` ជំនួសអោយលទ្ធផល (output) render របស់វា។
 
-In the example below, the `<WarningBanner />` is rendered depending on the value of the prop called `warn`. If the value of the prop is `false`, then the component does not render:
+នៅក្នុងឧទាហរណ៍ខាងក្រោម `<WarningBanner />` ត្រូវបាន render ដោយអាស្រ័យ​លើតម្លៃរបស់ props ដែលត្រូវបានហៅថា `warn`។ ប្រសិនបើតម្លៃរបស់ props គឺ `false` អញ្ជឹង component នឹងមិន render។
 
 ```javascript{2-4,29}
 function WarningBanner(props) {
@@ -241,6 +241,6 @@ ReactDOM.render(
 );
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/Xjoqwm?editors=0010)
+[**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/Xjoqwm?editors=0010)
 
-Returning `null` from a component's `render` method does not affect the firing of the component's lifecycle methods. For instance `componentDidUpdate` will still be called.
+ការ return `null` ពី `render` method របស់ component មួយមិនប៉ះពាល់ដល់ការ firing នៃ lifecycle methods របស់ component ទេ។ ឧទាហរណ៍ `componentDidUpdate` នឹងនៅតែត្រូវបាន call។
