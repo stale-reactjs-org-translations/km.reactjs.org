@@ -6,7 +6,7 @@ prev: conditional-rendering.html
 next: forms.html
 ---
 
-ដំបូង សូមពិនិត្យឡើងវិញពីរបៀបដែលអ្នក transform lists នៅក្នុង JavaScript។​
+ដំបូងសូមពិនិត្យឡើងវិញពីរបៀបដែលអ្នកផ្លាស់ប្តូរ (transform) lists នៅក្នុង JavaScript។​
 
 កូដត្រូវបានផ្តល់អោយដូចខាងក្រោម, យើងប្រើ [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) function ដើម្បីទទួលបាន array នៃ `numbers` មួយហើយទ្វេដងតំលៃរបស់ពួកវា។ យើង assign array ថ្មីដែលបាន​​ return ដោយ `map()` ទៅអោយ variable `doubled` ហើយនិងធ្វើការ log វា៖
 
@@ -22,9 +22,9 @@ console.log(doubled);
 
 ### Rendering Multiple Components {#rendering-multiple-components}
 
-You can build collections of elements and [include them in JSX](/docs/introducing-jsx.html#embedding-expressions-in-jsx) using curly braces `{}`.
+អ្នកអាចបង្កើត collections នៃ elements និង [បញ្ចូលពួកវាទៅក្នុង JSX](/docs/introducing-jsx.html#embedding-expressions-in-jsx) ដោយការប្រើដង្កៀប​អង្កាញ់ (curly braces) `{}`។
 
-Below, we loop through the `numbers` array using the JavaScript [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) function. We return a `<li>` element for each item. Finally, we assign the resulting array of elements to `listItems`:
+កូដខាងក្រោមនេះ យើងធ្វើការ loop `numbers` array ដោយការប្រើ JavaScript [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) function។ យើង return `<li>` element មួយសម្រាប់ item នីមួយៗ។ ទីបំផុត, យើង assign លទ្ធផល array នៃ elements ទៅអោយ `listItems`៖
 
 ```javascript{2-4}
 const numbers = [1, 2, 3, 4, 5];
@@ -33,7 +33,7 @@ const listItems = numbers.map((number) =>
 );
 ```
 
-We include the entire `listItems` array inside a `<ul>` element, and [render it to the DOM](/docs/rendering-elements.html#rendering-an-element-into-the-dom):
+យើងរួមបញ្ចូល `listItems` array ទាំងមូលដែលនៅខាងក្នុង `<ul>` element មួយ ហើយនិង [render វាទៅកាន់ DOM](/docs/rendering-elements.html#rendering-an-element-into-the-dom)៖
 
 ```javascript{2}
 ReactDOM.render(
@@ -42,9 +42,9 @@ ReactDOM.render(
 );
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/GjPyQr?editors=0011)
+[**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/GjPyQr?editors=0011)
 
-This code displays a bullet list of numbers between 1 and 5.
+កូដនេះបង្ហាញ (displays) bullet list មួយនៃតួលេខចន្លេាះពី១និង៥។
 
 ### Basic List Component {#basic-list-component}
 
