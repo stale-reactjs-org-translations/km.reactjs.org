@@ -8,7 +8,7 @@ next: forms.html
 
 ដំបូង សូមពិនិត្យឡើងវិញពីរបៀបដែលអ្នក transform lists នៅក្នុង JavaScript។​
 
-Given the code below, we use the [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) function to take an array of `numbers` and double their values. We assign the new array returned by `map()` to the variable `doubled` and log it:
+កូដត្រូវបានផ្តល់អោយដូចខាងក្រោម, យើងប្រើ [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) function ដើម្បីទទួលបាន array នៃ `numbers` មួយហើយទ្វេដងតំលៃរបស់ពួកវា។ យើង assign array ថ្មីដែលបាន​​ return ដោយ `map()` ទៅអោយ variable `doubled` ហើយនិងធ្វើការ log វា៖
 
 ```javascript{2}
 const numbers = [1, 2, 3, 4, 5];
@@ -16,9 +16,9 @@ const doubled = numbers.map((number) => number * 2);
 console.log(doubled);
 ```
 
-This code logs `[2, 4, 6, 8, 10]` to the console.
+កូដនេះ logs `[2, 4, 6, 8, 10]` ទៅកាន់ console។
 
-In React, transforming arrays into lists of [elements](/docs/rendering-elements.html) is nearly identical.
+នៅក្នុង React, ការផ្លាស់ប្តូរ (transforming) arrays ចូលទៅក្នុង lists នៃ [elements](/docs/rendering-elements.html) គឺស្ទើរតែដូចគ្នាបេះបិទ។
 
 ### Rendering Multiple Components {#rendering-multiple-components}
 
