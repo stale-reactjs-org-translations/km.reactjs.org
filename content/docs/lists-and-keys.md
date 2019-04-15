@@ -48,9 +48,9 @@ ReactDOM.render(
 
 ### Basic List Component {#basic-list-component}
 
-Usually you would render lists inside a [component](/docs/components-and-props.html).
+ជាធម្មតាអ្នកនឹង render lists នៅខាងក្នុង [component](/docs/components-and-props.html) មួយ។
 
-We can refactor the previous example into a component that accepts an array of `numbers` and outputs a list of elements.
+យើងអាច refactor ឧទាហរណ៍មុនទៅក្នុង component មួយដែលទទួលយក array នៃ `numbers` ហើយនិង បង្ហាញលទ្ធផល (outputs) list នៃ elements មួយ។
 
 ```javascript{3-5,7,13}
 function NumberList(props) {
