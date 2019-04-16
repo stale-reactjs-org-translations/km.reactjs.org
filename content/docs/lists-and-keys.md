@@ -98,7 +98,7 @@ ReactDOM.render(
 
 ## Keys {#keys}
 
-Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity:
+Keys ជួយ React កំណត់អត្តសញ្ញាណថាតើ items មួយណាដែលបានផ្លាស់ប្តូរ, បានបន្ថែម, ឬក៏បានលុបចេញ។ Keys គួរតែត្រូវបានផ្តល់ទៅឱ្យ elements នៅខាងក្នុង array ដើម្បីផ្តល់ឱ្យ elements នូវអត្តសញ្ញាណដែលមានស្ថិរភាពមួយ៖
 
 ```js{3}
 const numbers = [1, 2, 3, 4, 5];
@@ -109,7 +109,7 @@ const listItems = numbers.map((number) =>
 );
 ```
 
-The best way to pick a key is to use a string that uniquely identifies a list item among its siblings. Most often you would use IDs from your data as keys:
+វិធីល្អបំផុតដើម្បីជ្រើសរើស key គឺប្រើ string កំណត់អត្តសញ្ញាណតែមួយគត់នូវ item របស់ list មួយក្នុងចំណោម siblings វា។ ភាគច្រើនអ្នកនឹងប្រើ IDs ទិន្នន័យរបស់អ្នកជា keys៖
 
 ```js{2}
 const todoItems = todos.map((todo) =>
@@ -119,7 +119,7 @@ const todoItems = todos.map((todo) =>
 );
 ```
 
-When you don't have stable IDs for rendered items, you may use the item index as a key as a last resort:
+នៅពេលដែលអ្នកមិនមាន IDs មានស្ថេរភាពសម្រាប់ render items អ្នកប្រហែល index របស់ item ជា key ដែលជាជម្រើសចុងក្រោយ៖
 
 ```js{2,3}
 const todoItems = todos.map((todo, index) =>
@@ -130,9 +130,10 @@ const todoItems = todos.map((todo, index) =>
 );
 ```
 
-We don't recommend using indexes for keys if the order of items may change. This can negatively impact performance and may cause issues with component state. Check out Robin Pokorny's article for an [in-depth explanation on the negative impacts of using an index as a key](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318). If you choose not to assign an explicit key to list items then React will default to using indexes as keys.
+យើងមិនណែនាំឱ្យប្រើ indexes សម្រាប់ keys នេាះទេប្រសិនបើលំដាប់ (order) របស់ items ប្រហែលអាចត្រូវបានផ្លាស់ប្តូរតម្លៃ។ នេះអាចផ្តល់ផលប៉ះពាល់អវិជ្ជមានដល់ដំណើរការ ហើយនិងអាចបណ្តាលឱ្យមានបញ្ហាដល់ state របស់ component។ ពិនិត្យមើលអត្ថបទរបស់ Robin Pokorny សម្រាប់ [ការពន្យល់ស៊ីជម្រៅលើផលប៉ះពាល់អវិជ្ជមាននៃការប្រើប្រាស់ index ជា key](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318)។ 
+ប្រសិនបើអ្នកជ្រើសរើសមិន assign key ជាក់លាក់មួយទៅអោយ items របស់ list បន្ទាប់មក React នឹងប្រើ indexes ជា keys ដោយ default។
 
-Here is an [in-depth explanation about why keys are necessary](/docs/reconciliation.html#recursing-on-children) if you're interested in learning more.
+នេះគឺជា [ការពន្យល់យ៉ាងស៊ីជម្រៅអំពីហេតុអ្វី keys គឺចាំបាច់](/docs/reconciliation.html#recursing-on-children) ប្រសិនបើអ្នកចាប់អារម្មណ៍ចង់រៀនបន្ថែម។
 
 ### Extracting Components with Keys {#extracting-components-with-keys}
 
