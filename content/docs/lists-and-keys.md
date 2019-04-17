@@ -137,11 +137,11 @@ const todoItems = todos.map((todo, index) =>
 
 ### Extracting Components with Keys {#extracting-components-with-keys}
 
-Keys only make sense in the context of the surrounding array.
+Keys ប្រើតែនៅក្នុង context ដែលមានការប្រើ array។
 
-For example, if you [extract](/docs/components-and-props.html#extracting-components) a `ListItem` component, you should keep the key on the `<ListItem />` elements in the array rather than on the `<li>` element in the `ListItem` itself.
+ឧទាហរណ៍ ប្រសិនបើអ្នក [extract](/docs/components-and-props.html#extracting-components) `ListItem` component មួយ អ្នកគួរតែរក្សារ key នៅលើ `<ListItem />` elements នៅក្នុង array ជាជាងនៅលើ `<li>` element នៅក្នុង `ListItem` ខ្លួនវា។
 
-**Example: Incorrect Key Usage**
+**ឧទាហរណ៍៖ ការប្រើប្រាស់ Key មិនបានត្រឹមត្រូវ**
 
 ```javascript{4,5,14,15}
 function ListItem(props) {
@@ -174,7 +174,7 @@ ReactDOM.render(
 );
 ```
 
-**Example: Correct Key Usage**
+**ឧទាហរណ៍៖ ការប្រើប្រាស់ Key បានត្រឹមត្រូវ**
 
 ```javascript{2,3,9,10}
 function ListItem(props) {
@@ -203,9 +203,9 @@ ReactDOM.render(
 );
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/ZXeOGM?editors=0010)
+[**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/ZXeOGM?editors=0010)
 
-A good rule of thumb is that elements inside the `map()` call need keys.
+ច្បាប់មួយដ៏ល្អនេាះគឺថា elements ដែលនៅខាងក្នុង `map()` ចាំបាច់ត្រូវការ keys។
 
 ### Keys Must Only Be Unique Among Siblings {#keys-must-only-be-unique-among-siblings}
 
