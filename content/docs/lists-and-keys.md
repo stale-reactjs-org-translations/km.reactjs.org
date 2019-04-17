@@ -264,7 +264,7 @@ With the example above, the `Post` component can read `props.id`, but not `props
 
 ### Embedding map() in JSX {#embedding-map-in-jsx}
 
-In the examples above we declared a separate `listItems` variable and included it in JSX:
+នៅក្នុងឧទាហរណ៍ខាងលើ យើងបានប្រកាសនូវ `listItems` variable ដាច់ដោយឡែកហើយនិងបានបញ្ចូលវានៅក្នុង JSX៖
 
 ```js{3-6}
 function NumberList(props) {
@@ -281,7 +281,7 @@ function NumberList(props) {
 }
 ```
 
-JSX allows [embedding any expression](/docs/introducing-jsx.html#embedding-expressions-in-jsx) in curly braces so we could inline the `map()` result:
+JSX អនុញ្ញាតនូវ [ការបង្កប់ (embedding) expression មួយចំនួន](/docs/introducing-jsx.html#embedding-expressions-in-jsx) ក្នុងដង្កៀប​អង្កាញ់ (curly braces) ដូច្នេះយើងអាច inline លទ្ធផលរបស់ `map()`៖
 
 ```js{5-8}
 function NumberList(props) {
@@ -297,6 +297,8 @@ function NumberList(props) {
 }
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/BLvYrB?editors=0010)
+[**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/BLvYrB?editors=0010)
 
 Sometimes this results in clearer code, but this style can also be abused. Like in JavaScript, it is up to you to decide whether it is worth extracting a variable for readability. Keep in mind that if the `map()` body is too nested, it might be a good time to [extract a component](/docs/components-and-props.html#extracting-components).
+
+ពេលខ្លះលទ្ធផលនេះ នៅក្នុង code ដែល clear ជាងនេះ, ប៉ុន្តែ style នេះក៏អាចត្រូវបានប្រើក្នុងផ្លូវខុសឬមិនសមរម្យ។ ដូចជានៅក្នុង JavaScript, វាអាស្រ័យលើអ្នកក្នុងការសម្រេចថាតើវាមានតម្លៃឬយ៉ាងណាក្នុងការ extract variable មួយដែលអាចអោយគេអានបាន (readability)។ សូមចងចាំថាប្រសិនបើ `map()` body គឺ nested ពេក, វាអាចជាពេលវេលាដ៏ល្អមួយដើម្បី [extract component មួយ](/docs/components-and-props.html#extracting-components)។
