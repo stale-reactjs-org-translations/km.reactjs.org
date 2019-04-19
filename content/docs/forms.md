@@ -25,7 +25,8 @@ Form នេះមានលក្ខណះជា default HTML នៃការ bro
 
 ## Controlled Components {#controlled-components}
 
-In HTML, form elements such as `<input>`, `<textarea>`, and `<select>` typically maintain their own state and update it based on user input. In React, mutable state is typically kept in the state property of components, and only updated with [`setState()`](/docs/react-component.html#setstate).
+នៅក្នុង HTML form elements ដូចជា `<input>`, `<textarea>`, និង `<select>` ជាធម្មតា maintain state ដោយខ្លួនរបស់ពួកវាហើយធ្វើបច្ចុប្បន្នភាព (update) វាដោយផ្អែកលើការបញ្ចូលរបស់អ្នកប្រើ។ ក្នុង React, state ដែលអាចប្ដូរតម្លៃបានជាធម្មតាត្រូវបានរក្សារនៅក្នុង state property នៃ components និងបានធ្វើបច្ចុប្បន្នភាពតែជាមួយ [`setState()`](/docs/react-component.html#setstate)។
+
 
 We can combine the two by making the React state be the "single source of truth". Then the React component that renders a form also controls what happens in that form on subsequent user input. An input form element whose value is controlled by React in this way is called a "controlled component".
 
