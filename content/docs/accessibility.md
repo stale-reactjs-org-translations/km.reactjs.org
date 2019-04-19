@@ -234,21 +234,20 @@ this.inputElement.current.focus();
 
 [react-aria-modal](https://github.com/davidtheclark/react-aria-modal) គឺជាឧទាហរណ៏នៃការគ្រប់គ្រង focus ដ៏ល្អ។ នេះជាឧទាហរណ៍ដ៏កម្រនៃ accessible modal window ពេញលេញ។ មិនត្រឹមតែកំណត់អាទិភាព focus លើប៊ូតុង cancel (ការពារអ្នកប្រើ keyboard ពីការធ្វើសកម្មភាពជោគជ័យដោយគ្មានបំណង) និងលាក់ keyboard focus នៅក្នុង modal ហើយវាកំណត់ឡើងវិញនៃ focus ទៅកាន់ element ដែលធ្វើឱ្យ modal ដំណើរការ។
 
->Note:
+>ចំណាំ:
 >
->While this is a very important accessibility feature, it is also a technique that should be used judiciously. Use it to repair the keyboard focus flow when it is disturbed, not to try and anticipate how
->users want to use applications.
+>ខណៈនេះជា accessibility feature ដ៏សំខាន់ ដូច្នេះវាក៏ជាជាបច្ចេកទេសដែលគួរត្រូវតែបានប្រើដោយត្រឹមត្រូវ។
+> ប្រើវាដើម្បីជួសជុលលំហូរនៃ keyboard focus នៅពេលវាត្រូវបានរំខាន, កុំព្យាយាមនិងរំពឹងមើលពីរបៀបដែលអ្នកប្រើចង់ប្រើកម្មវិធី។
 
 ## Mouse and pointer events {#mouse-and-pointer-events}
 
-Ensure that all functionality exposed through a mouse or pointer event can also be accessed using the keyboard alone. Depending only on the pointer device will lead to many cases where
-keyboard users cannot use your application.
+ធានាថាមុខងារទាំងអស់ដែលធ្វើការតាមរយះ mouse ឬ pointer event ក៏អាចប្រើប្រាស់បានដោយ keybaord តែឯងបាន។ ការពឹងទៅលើឧបករណ៍ pointer តែមួយមុខនឹងនាំមកនូវបញ្ហាផ្សេងៗទៅដល់អ្នកប្រើប្រាស់ keybaord ទៅកាន់កម្មវិធីរបស់អ្នក។
 
-To illustrate this, let's look at a prolific example of broken accessibility caused by click events. This is the outside click pattern, where a user can disable an opened popover by clicking outside the element.
+ដើម្បីបង្ហាញពីចំនុចនេះសូមមើលឧទាហរណ៍ដ៏អស្ចារ្យមួយនៃភាពងាយស្រួលដែលបណ្តាលមកពីការចុចព្រឹត្តិការណ៍។ នេះគឺជាលំនាំចុចខាងក្រៅដែលអ្នកប្រើអាចបិទដំណើរការ popover ដែលបានបើកដោយចុចខាងក្រៅ element។
 
 <img src="../images/docs/outerclick-with-mouse.gif" alt="A toggle button opening a popover list implemented with the click outside pattern and operated with a mouse showing that the close action works." />
 
-This is typically implemented by attaching a `click` event to the `window` object that closes the popover:
+នេះត្រូវបានអនុវត្តជាធម្មតាដោយការភ្ជាប់មួយព្រឹត្តិការណ៍ `click` ទៅកាន់នឹងវត្ថុរបស់ `window` ដែលអាចបិទ popover នោះ៖
 
 ```javascript{12-14,26-30}
 class OuterClickExample extends React.Component {
@@ -299,12 +298,11 @@ constructor(props) {
 }
 ```
 
-This may work fine for users with pointer devices, such as a mouse, but operating this with the keyboard alone leads to broken functionality when tabbing to the next element
-as the `window` object never receives a `click` event. This can lead to obscured functionality which blocks users from using your application.
+វាប្រហែលជាដំណើរប្រក្រតីធម្មតាជាមួួយនឹងអ្នកប្រើប្រាស់ឧបករណ៍ចង្អុលដូចជា mouse។ ប៉ុន្តែបើធ្វើប្រតិបត្តការណ៍ជាមួយតែ keybaord អាចនឹងជួបបញ្ហានៅពេលដែលចុចដើម្បីផ្តូរទៅកាន់ element បន្ទាប់បណ្តាលឱ្យ `window` មិនបានទទួលប្រតិការណ៍ចុច។ វាអាចនាំឱ្យមុខងារដែលមិនច្បាស់លាស់ដែលរារាំងអ្នកប្រើពីការប្រើកម្មវិធីរបស់អ្នក។
 
 <img src="../images/docs/outerclick-with-keyboard.gif" alt="A toggle button opening a popover list implemented with the click outside pattern and operated with the keyboard showing the popover not being closed on blur and it obscuring other screen elements." />
 
-The same functionality can be achieved by using an appropriate event handlers instead, such as `onBlur` and `onFocus`:
+functionality ដូចគ្នាអាចសម្រេចបានដោយប្រើព្រឹត្តិការណ៍សមរម្យជំនួសវិញដើម្បីដោះស្រាយ ដូចជា `onBlur` និង `onFocus`៖
 
 ```javascript{19-29,31-34,37-38,40-41}
 class BlurExample extends React.Component {
@@ -366,23 +364,23 @@ class BlurExample extends React.Component {
 }
 ```
 
-This code exposes the functionality to both pointer device and keyboard users. Also note the added `aria-*` props to support screen-reader users. For simplicity's sake
-the keyboard events to enable `arrow key` interaction of the popover options have not been implemented.
+កូដនេះបង្ហាញពីមុខងារទាំងអ្នកប្រើឧបករណ៍ចង្អុលនិងអ្នកប្រើក្តារចុច។ ហើយចាំថាដាក់បន្ថែម `aria-*` props សម្រាប់ជួយអ្នកប្រើប្រាស់។ សម្រាប់ភាពសាមញ្ញរបស់
+ព្រឹត្តិការណ៍ក្តារចុចដើម្បីបើកដំណើរការរវាងនឹង 'key arrow' នៃជម្រើស popover មិនត្រូវបានអនុវត្ត។
 
 <img src="../images/docs/blur-popover-close.gif" alt="A popover list correctly closing for both mouse and keyboard users." />
 
-This is one example of many cases where depending on only pointer and mouse events will break functionality for keyboard users. Always testing with the keyboard will immediately
-highlight the problem areas which can then be fixed by using keyboard aware event handlers.
+នេះជាឧទាហរណ៍មួយនៃករណីជាច្រើនដែលអាស្រ័យលើតែព្រឹត្តិការណ៍ចង្អុល ឬ mouse នាំឱ្យមានបញ្ហាដល់អ្នកប្រើប្រាស់ក្តារចុច។ តែងតែសាកល្បងជាមួយនឹងក្តារចុចភ្លាមៗ ដើម្បីរកបញ្ហាដែលអាចកែតំរូវដោយប្រើព្រឹត្តិការការពាររបស់ក្តាចុច។
 
 ## More Complex Widgets {#more-complex-widgets}
 
 A more complex user experience should not mean a less accessible one. Whereas accessibility is most easily achieved by coding as close to HTML as possible,
 even the most complex widget can be coded accessibly.
+បទពិសោធអ្នកប្រើដែលស្មុគស្មាញមិនគួរមានន័យថាអាចចូលប្រើបានតិចជាងមួយទេ។
 
-Here we require knowledge of [ARIA Roles](https://www.w3.org/TR/wai-aria/#roles) as well as [ARIA States and Properties](https://www.w3.org/TR/wai-aria/#states_and_properties).
-These are toolboxes filled with HTML attributes that are fully supported in JSX and enable us to construct fully accessible, highly functional React components.
+ទីនេះយើងត្រូវការចំណេះដឹងនៃ [ARIA Roles](https://www.w3.org/TR/wai-aria/#roles) ដូចជា [ARIA States and Properties](https://www.w3.org/TR/wai-aria/#states_and_properties)។ ទាំងនេះគឺជាប្រអប់ឧបករណ៍ដែលបំពេញដោយ attributes របស់ HTML ដែលត្រូវបានគាំទ្រយ៉ាងពេញលេញនៅក្នុង JSX និងអាចឱ្យយើងបង្កើត components របស់ React ដែលអាចចូលដំណើរការបានយ៉ាងពេញលេញ។
 
 Each type of widget has a specific design pattern and is expected to function in a certain way by users and user agents alike:
+ប្រភេទធាតុក្រាហ្វិកនីមួយៗមានលំនាំរចនាជាក់លាក់ហើយត្រូវបានគេរំពឹងថានឹងដំណើរការតាមវិធីជាក់ស្តែងដោយអ្នកប្រើនិងភ្នាក់ងារអ្នកប្រើដូចគ្នា៖
 
 - [WAI-ARIA Authoring Practices - Design Patterns and Widgets](https://www.w3.org/TR/wai-aria-practices/#aria_ex)
 - [Heydon Pickering - ARIA Examples](https://heydonworks.com/practical_aria_examples/)
@@ -393,30 +391,37 @@ Each type of widget has a specific design pattern and is expected to function in
 ### Setting the language {#setting-the-language}
 
 Indicate the human language of page texts as screen reader software uses this to select the correct voice settings:
+ចង្អុលបង្ហាញភាសាមនុស្សនៃអត្ថបទទំព័រដែលជាកម្មវិធីអានអេក្រង់ប្រើនេះដើម្បីជ្រើសការកំណត់សំឡេងត្រឹមត្រូវ៖
 
 - [WebAIM - Document Language](https://webaim.org/techniques/screenreader/#language)
 
 ### Setting the document title {#setting-the-document-title}
 
 Set the document `<title>` to correctly describe the current page content as this ensures that the user remains aware of the current page context:
+កំណត់ឯកសារ `<title>` ដើម្បីពិពណ៌នាខ្លឹមសារទំព័របច្ចុប្បន្នយ៉ាងត្រឹមត្រូវដែលវាធានាថាអ្នកប្រើប្រាស់នៅតែដឹងពីបរិបទទំព័របច្ចុប្បន្ន៖
 
 - [WCAG - Understanding the Document Title Requirement](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
 
 We can set this in React using the [React Document Title Component](https://github.com/gaearon/react-document-title).
+យើងអាចកំណត់វានៅក្នុងការឆ្លើយតបដោយប្រើប៊ូតុង [React Document Title Component](https://github.com/gaearon/react-document-title)។
 
 ### Color contrast {#color-contrast}
 
 Ensure that all readable text on your website has sufficient color contrast to remain maximally readable by users with low vision:
+ត្រូវប្រាកដថាអត្ថបទទាំងអស់ដែលអាចអានបាននៅលើគេហទំព័ររបស់អ្នកមានភាពផ្ទុយគ្នាពណ៌គ្រប់គ្រាន់ដើម្បីនៅតែអាចអានបានដោយអ្នកប្រើដែលមានពន្លឺតិចតួច៖
 
 - [WCAG - Understanding the Color Contrast Requirement](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 - [Everything About Color Contrast And Why You Should Rethink It](https://www.smashingmagazine.com/2014/10/color-contrast-tips-and-tools-for-accessibility/)
 - [A11yProject - What is Color Contrast](https://a11yproject.com/posts/what-is-color-contrast/)
 
 It can be tedious to manually calculate the proper color combinations for all cases in your website so instead, you can [calculate an entire accessible color palette with Colorable](https://jxnblk.com/colorable/).
+វាអាចធុញទ្រាន់ក្នុងការគណនាបន្សំពណ៌ត្រឹមត្រូវសម្រាប់គ្រប់ករណីទាំងអស់នៅក្នុងគេហទំព័ររបស់អ្នកដូច្នេះ អ្នកអាចធ្វើបាន [calculate an entire accessible color palette with Colorable](https://jxnblk.com/colorable/)។
 
 Both the aXe and WAVE tools mentioned below also include color contrast tests and will report on contrast errors.
+ទាំងឧបករណ៍ aXe និង WAVE ដែលបានរៀបរាប់ខាងក្រោមក៏មានការធ្វើតេស្តកម្រិតពណ៌ហើយនឹងរាយការណ៍អំពីកំហុសឆ្គងផងដែរ។
 
 If you want to extend your contrast testing abilities you can use these tools:
+ប្រសិនបើអ្នកចង់ពង្រីកសមត្ថភាពសាកល្បងកម្រិតពណ៌របស់អ្នកអ្នកអាចប្រើឧបករណ៍ទាំងនេះ៖
 
 - [WebAIM - Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [The Paciello Group - Color Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/)
