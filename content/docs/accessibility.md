@@ -417,40 +417,36 @@ Ensure that all readable text on your website has sufficient color contrast to r
 It can be tedious to manually calculate the proper color combinations for all cases in your website so instead, you can [calculate an entire accessible color palette with Colorable](https://jxnblk.com/colorable/).
 វាអាចធុញទ្រាន់ក្នុងការគណនាបន្សំពណ៌ត្រឹមត្រូវសម្រាប់គ្រប់ករណីទាំងអស់នៅក្នុងគេហទំព័ររបស់អ្នកដូច្នេះ អ្នកអាចធ្វើបាន [calculate an entire accessible color palette with Colorable](https://jxnblk.com/colorable/)។
 
-Both the aXe and WAVE tools mentioned below also include color contrast tests and will report on contrast errors.
 ទាំងឧបករណ៍ aXe និង WAVE ដែលបានរៀបរាប់ខាងក្រោមក៏មានការធ្វើតេស្តកម្រិតពណ៌ហើយនឹងរាយការណ៍អំពីកំហុសឆ្គងផងដែរ។
 
-If you want to extend your contrast testing abilities you can use these tools:
-ប្រសិនបើអ្នកចង់ពង្រីកសមត្ថភាពសាកល្បងកម្រិតពណ៌របស់អ្នកអ្នកអាចប្រើឧបករណ៍ទាំងនេះ៖
+ប្រសិនបើអ្នកចង់ពង្រីកសមត្ថភាព និងសាកល្បងកម្រិតពណ៌របស់អ្នក អ្នកអាចប្រើឧបករណ៍ទាំងនេះ៖
 
 - [WebAIM - Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [The Paciello Group - Color Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/)
 
 ## Development and Testing Tools {#development-and-testing-tools}
 
-There are a number of tools we can use to assist in the creation of accessible web applications.
+មានឧបករណ៍មួយចំនួនដែលយើងអាចប្រើដើម្បីជួយក្នុងការបង្កើតកម្មវិធី web បាន។
 
 ### The keyboard {#the-keyboard}
 
-By far the easiest and also one of the most important checks is to test if your entire website can be reached and used with the keyboard alone. Do this by:
+រហូតមកដល់ពេលនេះ អ្វីដែលងាយស្រួល និងជាចំនុចសំខាន់បំផុតគឺត្រួតពិនិត្យថាតើ website ទាំងមូលអាចចូលទៅកាន់បាន និងអាចប្រើជាមួយក្តាចុចតែឯងបាន។ ដោយធ្វើដូចខាងក្រោមនេះ៖
 
-1. Plugging out your mouse.
-1. Using `Tab` and `Shift+Tab` to browse.
-1. Using `Enter` to activate elements.
-1. Where required, using your keyboard arrow keys to interact with some elements, such as menus and dropdowns.
+1. ដក mouse របស់អ្នកចេញ។
+1. ការប្រើ `Tab` និង `Shift+Tab` ដើម្បីស្វែងរក។
+1. ការប្រើ `Enter` ដើម្បីធ្វើសកម្មភាពលើ elements។
+1. ការប្រើសញ្ញាព្រួញនៃក្តាចុចដើម្បីមានទំនាក់ទំនងជាមួយ elements ខ្លះដូចជា menus និង dropdowns នៅពេលដែលចាំបាច់។
 
 ### Development assistance {#development-assistance}
 
-We can check some accessibility features directly in our JSX code. Often intellisense checks are already provided in JSX aware IDE's for the ARIA roles, states and properties. We also
-have access to the following tool:
+យើងអាចពិនិត្យមើល accessibility features មួយចំនួនដោយផ្ទាល់នៅក្នុងកូដ JSX របស់យើង។ ជារឿយៗការពិនិត្យដោយ intellisense ត្រូវបានផ្តល់រួចហើយនៅក្នុង JSX IDE's សម្រាប់ roles states និង properties របស់ ARIA។ យើងផងដែរ
+មានសិទ្ធិចូលទៅឧបករណ៍ដូចខាងក្រោម៖
 
 #### eslint-plugin-jsx-a11y {#eslint-plugin-jsx-a11y}
 
-The [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y) plugin for ESLint provides AST linting feedback regarding accessibility issues in your JSX. Many
-IDE's allow you to integrate these findings directly into code analysis and source code windows.
+[eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y) ជាកម្មវិធីជំនួយ សម្រាប់ ESLint ដោយផ្តល់ AST linting មតិត្រឡប់ផ្អែកទៅលើបញ្ហាក្នុង JSX របស់អ្នក។ មាន IDE ជាច្រើនអនុញ្ញាតឱ្យអ្នកភ្ចាប់ជំនួយនេះដោយ​ផ្ទាល់ទៅកាន់ការវិភាគកូដ និង windows នៃប្រភពកូដ។
 
-[Create React App](https://github.com/facebookincubator/create-react-app) has this plugin with a subset of rules activated. If you want to enable even more accessibility rules,
-you can create an `.eslintrc` file in the root of your project with this content:
+[Create React App](https://github.com/facebookincubator/create-react-app) មានកម្មវិធីជំនួយនេះជាមួយសំណុំរងនៃច្បាប់ activated។ ប្រសិនបើអ្នកចង់បើកច្បាប់កាន់តែច្រើន អ្នកអាចបង្កើត file `.eslintrc` នៅក្នុងទីតាំងដើមនៃ project របស់អ្នកជាមួយនឹងមាតិកាដូចខាងក្រោម៖
 
   ```json
   {
@@ -461,14 +457,13 @@ you can create an `.eslintrc` file in the root of your project with this content
 
 ### Testing accessibility in the browser {#testing-accessibility-in-the-browser}
 
-A number of tools exist that can run accessibility audits on web pages in your browser. Please use them in combination with other accessibility checks mentioned here as they can only
-test the technical accessibility of your HTML.
+មាន tools មួយចំនួនដែលមានស្រាប់ អាចដំណើរការត្រួតពិនិត្យលើគេហទំព័រក្នុង broswer របស់អ្នកបាន។ សូមប្រើរបស់ទាំងនោះដោយរួមបញ្ចូលជាមួយការត្រួតពិនិត្យផ្សេងៗដែលបានលើកឡើងទីនេះ ដែលវាអាចត្រឹមតែសាកល្បងបច្ចេកទេស accessibility នៃ HTML របស់អ្នក។
 
 #### aXe, aXe-core and react-axe {#axe-axe-core-and-react-axe}
 
-Deque Systems offers [aXe-core](https://github.com/dequelabs/axe-core) for automated and end-to-end accessibility tests of your applications. This module includes integrations for Selenium.
+ប្រព័ន្ធ Deque ផ្តល់ឱ្យ [aXe-core](https://github.com/dequelabs/axe-core) សំរាប់ធ្វើការសាកល្បងដោយស្វ័យប្រវត្តិ និងពីដើមដល់ចុងកម្មវិធីរបស់អ្នក។ module នេះរួមបញ្ចូលទំនាក់ទំនងសម្រាប់ Selenium ។
 
-[The Accessibility Engine](https://www.deque.com/products/axe/) or aXe, is an accessibility inspector browser extension built on `aXe-core`.
+[The Accessibility Engine](https://www.deque.com/products/axe/) ឬ aXe គឺជាកម្មវិធីបន្ថែមដែលអាចចូលបានរបស់ inspector browser បានស្ថាបនាលើ `aXe-core`។
 
 You can also use the [react-axe](https://github.com/dylanb/react-axe) module to report these accessibility findings directly to the console while developing and debugging.
 
