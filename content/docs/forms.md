@@ -79,7 +79,7 @@ handleChange(event) {
 
 ## The textarea Tag {#the-textarea-tag}
 
-In HTML, a `<textarea>` element defines its text by its children:
+នៅក្នុង HTML `<textarea>` element កំណត់ text របស់វាដោយ children របស់វា៖
 
 ```html
 <textarea>
@@ -87,7 +87,7 @@ In HTML, a `<textarea>` element defines its text by its children:
 </textarea>
 ```
 
-In React, a `<textarea>` uses a `value` attribute instead. This way, a form using a `<textarea>` can be written very similarly to a form that uses a single-line input:
+នៅក្នុង React `<textarea>` ប្រើ `value` attribute ជំនួសវិញ។ មធ្យោបាយនេះ, ការប្រើ form ជាមួយ `<textarea>` អាចត្រូវបានសរសេរស្រដៀងទៅនឹង form ដែលប្រើ single-line input៖
 
 ```javascript{4-6,12-14,26}
 class EssayForm extends React.Component {
@@ -124,7 +124,7 @@ class EssayForm extends React.Component {
 }
 ```
 
-Notice that `this.state.value` is initialized in the constructor, so that the text area starts off with some text in it.
+សម្គាល់​ឃើញ​ថា `this.state.value` គឺត្រូវបាន initialize នៅក្នុង constructor ដូច្នេះ text area ចាប់ផ្តើមជាមួយនិង text មួយចំនួននៅខាងក្នុងវា។
 
 ## The select Tag {#the-select-tag}
 
