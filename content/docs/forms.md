@@ -27,10 +27,9 @@ Form នេះមានលក្ខណះជា default HTML នៃការ bro
 
 នៅក្នុង HTML form elements ដូចជា `<input>`, `<textarea>`, និង `<select>` ជាធម្មតា maintain state ដោយខ្លួនរបស់ពួកវាហើយធ្វើបច្ចុប្បន្នភាព (update) វាដោយផ្អែកលើការបញ្ចូលរបស់អ្នកប្រើ។ ក្នុង React, state ដែលអាចប្ដូរតម្លៃបានជាធម្មតាត្រូវបានរក្សារនៅក្នុង state property នៃ components និងបានធ្វើបច្ចុប្បន្នភាពតែជាមួយ [`setState()`](/docs/react-component.html#setstate)។
 
+យើងអាចផ្សំទាំងពីរបញ្ចូលគ្នាដោយបង្កើត React state ជា "single source of truth"។ បន្ទាប់មកទៀត React component ដែល renders form ក៏គ្រប់គ្រងផងដែរនូវអ្វីដែលកើតឡើងនៅក្នុង form ទៅលើការបញ្ចូលរបស់អ្នកប្រើប្រាស់ជាបន្តបន្ទាប់។ input form element ដែល value របស់វាត្រូវបានគ្រប់គ្រងដោយ React នៅក្នុងវិធីនេះត្រូវបានគេហៅថា​​ "controlled component"។
 
-We can combine the two by making the React state be the "single source of truth". Then the React component that renders a form also controls what happens in that form on subsequent user input. An input form element whose value is controlled by React in this way is called a "controlled component".
-
-For example, if we want to make the previous example log the name when it is submitted, we can write the form as a controlled component:
+ឧទាហរណ៍ ប្រសិនបើអ្នកចង់បង្កើតឧទាហរណ៍មុនដោយអោយវា log នូវ name នៅពេលដែលវាត្រូវបាន submit យើងអាចសរសេរ form ជា controlled component៖
 
 ```javascript{4,10-12,24}
 class NameForm extends React.Component {
@@ -65,11 +64,14 @@ class NameForm extends React.Component {
 }
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/VmmPgp?editors=0010)
+[**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/VmmPgp?editors=0010)
 
 Since the `value` attribute is set on our form element, the displayed value will always be `this.state.value`, making the React state the source of truth. Since `handleChange` runs on every keystroke to update the React state, the displayed value will update as the user types.
 
-With a controlled component, every state mutation will have an associated handler function. This makes it straightforward to modify or validate user input. For example, if we wanted to enforce that names are written with all uppercase letters, we could write `handleChange` as:
+ដែល `value` attribute គឺ set នៅលើ form element របស់យើង, តម្លៃដែលបានបង្ហាញនឹងតែងតែជា `this.state.value`, ការបង្កើត React state ជា source of truth។ ដែល `handleChange` runs នៅលើគ្រប់ក្តារចុចដើម្បីធ្វើបច្ចុប្បន្នភាព (update) React state, 
+តម្លៃដែលបានបង្ហាញនឹងធ្វើបច្ចុប្បន្នភាពដូចអ្វីដែលអ្នកប្រើប្រាស់វាយ។
+
+ជាមួយនិង controlled component, រាល់ state ដែលអាចផ្លាស់ប្តូរនឹងមាន handler function ដែលជាប់ទាក់ទង។ This makes it straightforward to modify or validate user input. For example, if we wanted to enforce that names are written with all uppercase letters, we could write `handleChange` as:
 
 ```javascript{2}
 handleChange(event) {
