@@ -66,12 +66,10 @@ class NameForm extends React.Component {
 
 [**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/VmmPgp?editors=0010)
 
-Since the `value` attribute is set on our form element, the displayed value will always be `this.state.value`, making the React state the source of truth. Since `handleChange` runs on every keystroke to update the React state, the displayed value will update as the user types.
-
 ដែល `value` attribute គឺ set នៅលើ form element របស់យើង, តម្លៃដែលបានបង្ហាញនឹងតែងតែជា `this.state.value`, ការបង្កើត React state ជា source of truth។ ដែល `handleChange` runs នៅលើគ្រប់ក្តារចុចដើម្បីធ្វើបច្ចុប្បន្នភាព (update) React state, 
 តម្លៃដែលបានបង្ហាញនឹងធ្វើបច្ចុប្បន្នភាពដូចអ្វីដែលអ្នកប្រើប្រាស់វាយ។
 
-ជាមួយនិង controlled component, រាល់ state ដែលអាចផ្លាស់ប្តូរនឹងមាន handler function ដែលជាប់ទាក់ទង។ This makes it straightforward to modify or validate user input. For example, if we wanted to enforce that names are written with all uppercase letters, we could write `handleChange` as:
+ជាមួយនិង controlled component, រាល់ state ដែលអាចផ្លាស់ប្តូរនឹងមាន handler function ដែលជាប់ទាក់ទង។ នេះធ្វើឱ្យវាងាយស្រួលដើម្បីកែប្រែឬក៏ validate ការបញ្ចូលរបស់អ្នកប្រើប្រាស់។ ឧទាហរណ៍ ប្រសិនបើយើងចង់បង្ខំអោយ names ត្រូវបានសរសេរជាមួយអក្សរធំទាំងអស់ (uppercase letters) យើងអាចសរសេរ `handleChange` ដូចនេះ៖
 
 ```javascript{2}
 handleChange(event) {
