@@ -128,7 +128,7 @@ class EssayForm extends React.Component {
 
 ## The select Tag {#the-select-tag}
 
-In HTML, `<select>` creates a drop-down list. For example, this HTML creates a drop-down list of flavors:
+នៅក្នុង HTML `<select>` បង្កើតតារាង drop-down។ ឧទាហរណ៍ HTML នេះបង្កើតតារាង drop-down មួយនៃរស់ជាតិ៖
 
 ```html
 <select>
@@ -139,7 +139,8 @@ In HTML, `<select>` creates a drop-down list. For example, this HTML creates a d
 </select>
 ```
 
-Note that the Coconut option is initially selected, because of the `selected` attribute. React, instead of using this `selected` attribute, uses a `value` attribute on the root `select` tag. This is more convenient in a controlled component because you only need to update it in one place. For example:
+ចំណាំ​ថា Coconut option ត្រូវបានជ្រើសរើសដំបូង ដោយសារ `selected` attribute។ React, ជំនួសឱ្យការប្រើ `selected` attribute នេះ, ​ប្រើ `value` attribute នៅលើ root `select` tag។ នេះគឺកាន់តែងាយស្រួលនៅក្នុង controlled component ពីព្រេាះអ្នកគ្រានតែត្រូវការ update វានៅកន្លែងតែមួយ។ ឧទាហរណ៍៖
+
 
 ```javascript{4,10-12,24}
 class FlavorForm extends React.Component {
@@ -179,7 +180,7 @@ class FlavorForm extends React.Component {
 }
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/JbbEzX?editors=0010)
+[**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/JbbEzX?editors=0010)
 
 Overall, this makes it so that `<input type="text">`, `<textarea>`, and `<select>` all work very similarly - they all accept a `value` attribute that you can use to implement a controlled component.
 
