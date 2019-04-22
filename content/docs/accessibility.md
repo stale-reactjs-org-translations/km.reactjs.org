@@ -373,13 +373,10 @@ class BlurExample extends React.Component {
 
 ## More Complex Widgets {#more-complex-widgets}
 
-A more complex user experience should not mean a less accessible one. Whereas accessibility is most easily achieved by coding as close to HTML as possible,
-even the most complex widget can be coded accessibly.
-បទពិសោធអ្នកប្រើដែលស្មុគស្មាញមិនគួរមានន័យថាអាចចូលប្រើបានតិចជាងមួយទេ។
+បទពិសោធអ្នកប្រើដែលស្មុគស្មាញមិនគួរមានន័យថាអាចចូលប្រើបានតិចជាងម្តងទេ។ ខណះពេលដែល accessibility គឺជារឿងងាយស្រួលបំផុតក្នុងការសម្រេចដោយការ coding មានលក្ខណៈដូចទៅនឹង HTML តាមដែលអាចធ្វើបាន។
 
 ទីនេះយើងត្រូវការចំណេះដឹងនៃ [ARIA Roles](https://www.w3.org/TR/wai-aria/#roles) ដូចជា [ARIA States and Properties](https://www.w3.org/TR/wai-aria/#states_and_properties)។ ទាំងនេះគឺជាប្រអប់ឧបករណ៍ដែលបំពេញដោយ attributes របស់ HTML ដែលត្រូវបានគាំទ្រយ៉ាងពេញលេញនៅក្នុង JSX និងអាចឱ្យយើងបង្កើត components របស់ React ដែលអាចចូលដំណើរការបានយ៉ាងពេញលេញ។
 
-Each type of widget has a specific design pattern and is expected to function in a certain way by users and user agents alike:
 ប្រភេទធាតុក្រាហ្វិកនីមួយៗមានលំនាំរចនាជាក់លាក់ហើយត្រូវបានគេរំពឹងថានឹងដំណើរការតាមវិធីជាក់ស្តែងដោយអ្នកប្រើនិងភ្នាក់ងារអ្នកប្រើដូចគ្នា៖
 
 - [WAI-ARIA Authoring Practices - Design Patterns and Widgets](https://www.w3.org/TR/wai-aria-practices/#aria_ex)
@@ -390,31 +387,26 @@ Each type of widget has a specific design pattern and is expected to function in
 
 ### Setting the language {#setting-the-language}
 
-Indicate the human language of page texts as screen reader software uses this to select the correct voice settings:
-ចង្អុលបង្ហាញភាសាមនុស្សនៃអត្ថបទទំព័រដែលជាកម្មវិធីអានអេក្រង់ប្រើនេះដើម្បីជ្រើសការកំណត់សំឡេងត្រឹមត្រូវ៖
+បង្ហាញទំព័រអត្ថបទនៃភាសារមនុស្សជាកម្មវិធី screen reader ប្រើដើម្បីជ្រើសរើស voice settings យ៉ាងត្រឹមត្រូវ៖
 
 - [WebAIM - Document Language](https://webaim.org/techniques/screenreader/#language)
 
 ### Setting the document title {#setting-the-document-title}
 
-Set the document `<title>` to correctly describe the current page content as this ensures that the user remains aware of the current page context:
 កំណត់ឯកសារ `<title>` ដើម្បីពិពណ៌នាខ្លឹមសារទំព័របច្ចុប្បន្នយ៉ាងត្រឹមត្រូវដែលវាធានាថាអ្នកប្រើប្រាស់នៅតែដឹងពីបរិបទទំព័របច្ចុប្បន្ន៖
 
 - [WCAG - Understanding the Document Title Requirement](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
 
-We can set this in React using the [React Document Title Component](https://github.com/gaearon/react-document-title).
-យើងអាចកំណត់វានៅក្នុងការឆ្លើយតបដោយប្រើប៊ូតុង [React Document Title Component](https://github.com/gaearon/react-document-title)។
+យើងអាចកំណត់វានៅក្នុង React ដោយប្រើ [React Document Title Component](https://github.com/gaearon/react-document-title)។
 
 ### Color contrast {#color-contrast}
 
-Ensure that all readable text on your website has sufficient color contrast to remain maximally readable by users with low vision:
-ត្រូវប្រាកដថាអត្ថបទទាំងអស់ដែលអាចអានបាននៅលើគេហទំព័ររបស់អ្នកមានភាពផ្ទុយគ្នាពណ៌គ្រប់គ្រាន់ដើម្បីនៅតែអាចអានបានដោយអ្នកប្រើដែលមានពន្លឺតិចតួច៖
+ត្រូវប្រាកដថាអត្ថបទទាំងអស់ដែលអាចអានបាននៅលើគេហទំព័ររបស់អ្នកមានភាពផ្ទុយគ្នាពណ៌គ្រប់គ្រាន់ដើម្បីនៅតែអាចអានបានដោយអ្នកប្រើដែលមានបញ្ហាភ្នែក៖
 
 - [WCAG - Understanding the Color Contrast Requirement](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 - [Everything About Color Contrast And Why You Should Rethink It](https://www.smashingmagazine.com/2014/10/color-contrast-tips-and-tools-for-accessibility/)
 - [A11yProject - What is Color Contrast](https://a11yproject.com/posts/what-is-color-contrast/)
 
-It can be tedious to manually calculate the proper color combinations for all cases in your website so instead, you can [calculate an entire accessible color palette with Colorable](https://jxnblk.com/colorable/).
 វាអាចធុញទ្រាន់ក្នុងការគណនាបន្សំពណ៌ត្រឹមត្រូវសម្រាប់គ្រប់ករណីទាំងអស់នៅក្នុងគេហទំព័ររបស់អ្នកដូច្នេះ អ្នកអាចធ្វើបាន [calculate an entire accessible color palette with Colorable](https://jxnblk.com/colorable/)។
 
 ទាំងឧបករណ៍ aXe និង WAVE ដែលបានរៀបរាប់ខាងក្រោមក៏មានការធ្វើតេស្តកម្រិតពណ៌ហើយនឹងរាយការណ៍អំពីកំហុសឆ្គងផងដែរ។
@@ -465,18 +457,17 @@ It can be tedious to manually calculate the proper color combinations for all ca
 
 [The Accessibility Engine](https://www.deque.com/products/axe/) ឬ aXe គឺជាកម្មវិធីបន្ថែមដែលអាចចូលបានរបស់ inspector browser បានស្ថាបនាលើ `aXe-core`។
 
-You can also use the [react-axe](https://github.com/dylanb/react-axe) module to report these accessibility findings directly to the console while developing and debugging.
+អ្នកក៏អាចប្រើ [react-axe](https://github.com/dylanb/react-axe) module សម្រាប់រាយការក្នុងការរកដោយផ្ទាល់ទៅកាន់ console ខណះដែលកំពុង developing និង debugging។
 
 #### WebAIM WAVE {#webaim-wave}
 
-The [Web Accessibility Evaluation Tool](https://wave.webaim.org/extension/) is another accessibility browser extension.
+[Web Accessibility Evaluation Tool](https://wave.webaim.org/extension/) គឺជាកម្មវិធីបន្ថែមមួយទៀតនៅលើ broswer។
 
 #### Accessibility inspectors and the Accessibility Tree {#accessibility-inspectors-and-the-accessibility-tree}
 
-[The Accessibility Tree](https://www.paciellogroup.com/blog/2015/01/the-browser-accessibility-tree/) is a subset of the DOM tree that contains accessible objects for every DOM element that should be exposed
-to assistive technology, such as screen readers.
+[The Accessibility Tree](https://www.paciellogroup.com/blog/2015/01/the-browser-accessibility-tree/) គឺជាសំណុំរងនៃប្រព័ន្ធ DOM ដែលមានផ្ទុក accessible objects សម្រាប់គ្រប់ element របស់ DOM មួយណាបង្ហាញថាជួយដល់បច្ចេកទេស ដូចជាអេក្រង់សម្រាប់អ្នកអាន។
 
-In some browsers we can easily view the accessibility information for each element in the accessibility tree:
+នៅក្នុង browsers ខ្លះយើងអាចមើលព័ត៌មាន accessibility នៃ element និមួយៗក្នុងប្រព័ន្ធ accessibility៖
 
 - [Using the Accessibility Inspector in Firefox](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector)
 - [Activate the Accessibility Inspector in Chrome](https://gist.github.com/marcysutton/0a42f815878c159517a55e6652e3b23a)
@@ -484,26 +475,26 @@ In some browsers we can easily view the accessibility information for each eleme
 
 ### Screen readers {#screen-readers}
 
-Testing with a screen reader should form part of your accessibility tests.
+ការធ្វើតេស្តជាមួយកម្មវិធីអេក្រង់សម្រាប់អានគួរតែបង្កើតជាផ្នែកនៃការសាកល្បង accessibility របស់អ្នក។
 
-Please note that browser / screen reader combinations matter. It is recommended that you test your application in the browser best suited to your screen reader of choice.
+សូមចំណាំថាបន្សំនឹងមានបញ្ហារវាង browser / អេក្រង់សម្រាប់អ្នកអាន។ វាបានត្រូវនែណាំជាជម្រើសដ៏ល្អមួយគឺឱ្យអ្នកធ្វើតេស្តកម្មវិធីនៃ screen reader នៅក្នុង browser។
 
 ### Commonly Used Screen Readers {#commonly-used-screen-readers}
 
 #### NVDA in Firefox {#nvda-in-firefox}
 
-[NonVisual Desktop Access](https://www.nvaccess.org/) or NVDA is an open source Windows screen reader that is widely used.
+[NonVisual Desktop Access](https://www.nvaccess.org/) ឬ NVDA គឺជា open source Windows screen reader ដែលត្រូវបានប្រើយ៉ាងទូលំទូលាយ។
 
-Refer to the following guides on how to best use NVDA:
+ខាងក្រោមគឺជារបៀបប្រើប្រាស់ NVDA៖
 
 - [WebAIM - Using NVDA to Evaluate Web Accessibility](https://webaim.org/articles/nvda/)
 - [Deque - NVDA Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts)
 
 #### VoiceOver in Safari {#voiceover-in-safari}
 
-VoiceOver is an integrated screen reader on Apple devices.
+VoiceOver គឺជាការភ្ចាប់រវាង screen reader នៅលើឧបករណ៍របស់ Apple។
 
-Refer to the following guides on how activate and use VoiceOver:
+ខាងក្រោមគឺជារបៀប activate និង ប្រើប្រាស់ VoiceOver៖
 
 - [WebAIM - Using VoiceOver to Evaluate Web Accessibility](https://webaim.org/articles/voiceover/)
 - [Deque - VoiceOver for OS X Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts)
@@ -511,9 +502,9 @@ Refer to the following guides on how activate and use VoiceOver:
 
 #### JAWS in Internet Explorer {#jaws-in-internet-explorer}
 
-[Job Access With Speech](https://www.freedomscientific.com/Products/software/JAWS/) or JAWS, is a prolifically used screen reader on Windows.
+[Job Access With Speech](https://www.freedomscientific.com/Products/software/JAWS/) or JAWS, គឺជាការប្រើដៅយសេរីនៃ screen reader នៅលើ Windows។
 
-Refer to the following guides on how to best use JAWS:
+ខាងក្រោមគឺជារបៀបប្រើប្រាស់ JAWS៖
 
 - [WebAIM - Using JAWS to Evaluate Web Accessibility](https://webaim.org/articles/jaws/)
 - [Deque - JAWS Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts)
@@ -522,9 +513,9 @@ Refer to the following guides on how to best use JAWS:
 
 #### ChromeVox in Google Chrome {#chromevox-in-google-chrome}
 
-[ChromeVox](https://www.chromevox.com/) is an integrated screen reader on Chromebooks and is available [as an extension](https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) for Google Chrome.
+[ChromeVox](https://www.chromevox.com/) គឺជាការភ្ចាប់ screen reader នៅលើ Chromebooks និងអាចរកបាន [ជាកម្មវិធីបន្ថែម](https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) សម្រាប់ Google Chrome។
 
-Refer to the following guides on how best to use ChromeVox:
+ខាងក្រោមគឺជារបៀបប្រើប្រាស់ ChromeVox៖
 
 - [Google Chromebook Help - Use the Built-in Screen Reader](https://support.google.com/chromebook/answer/7031755?hl=en)
 - [ChromeVox Classic Keyboard Shortcuts Reference](https://www.chromevox.com/keyboard_shortcuts.html)
