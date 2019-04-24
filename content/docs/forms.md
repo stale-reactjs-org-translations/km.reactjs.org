@@ -295,6 +295,8 @@ setTimeout(function() {
 
 It can sometimes be tedious to use controlled components, because you need to write an event handler for every way your data can change and pipe all of the input state through a React component. This can become particularly annoying when you are converting a preexisting codebase to React, or integrating a React application with a non-React library. In these situations, you might want to check out [uncontrolled components](/docs/uncontrolled-components.html), an alternative technique for implementing input forms.
 
+ពេលខ្លះវាអាចធុញទ្រាន់ក្នុងការប្រើ controlled components, ពីព្រោះអ្នកត្រូវសរសេរ event handler សម្រាប់គ្រប់វិធីដែល data របស់អ្នកអាចផ្លាស់ប្តូរហើយនិង pipe input state ទាំងអស់តាមរយៈ React component។ 
+
 ## Fully-Fledged Solutions {#fully-fledged-solutions}
 
 If you're looking for a complete solution including validation, keeping track of the visited fields, and handling form submission, [Formik](https://jaredpalmer.com/formik) is one of the popular choices. However, it is built on the same principles of controlled components and managing state — so don't neglect to learn them.
