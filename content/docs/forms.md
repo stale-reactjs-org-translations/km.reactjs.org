@@ -182,11 +182,11 @@ class FlavorForm extends React.Component {
 
 [**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/JbbEzX?editors=0010)
 
-Overall, this makes it so that `<input type="text">`, `<textarea>`, and `<select>` all work very similarly - they all accept a `value` attribute that you can use to implement a controlled component.
+ជារួម, នេះធ្វើឱ្យវាដូច្នេះ `<input type="text">`, `<textarea>`, និង `<select>` ដំណើរការស្រដៀងគ្នាទាំងអស់ - ពួកវាទាំងអស់ទទួលយក `value` attribute ដែលអ្នកអាចប្រើដើម្បី implement controlled component។
 
-> Note
+> ចំណាំ
 >
-> You can pass an array into the `value` attribute, allowing you to select multiple options in a `select` tag:
+> អ្នកអាចបេាះ array​ ទៅអោយ `value` attribute, អនុញ្ញាតឱ្យអ្នកជ្រើសរើសជម្រើសច្រើននៅក្នុង `select` tag៖
 >
 >```js
 ><select multiple={true} value={['B', 'C']}>
