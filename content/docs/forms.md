@@ -299,4 +299,4 @@ It can sometimes be tedious to use controlled components, because you need to wr
 
 ## Fully-Fledged Solutions {#fully-fledged-solutions}
 
-If you're looking for a complete solution including validation, keeping track of the visited fields, and handling form submission, [Formik](https://jaredpalmer.com/formik) is one of the popular choices. However, it is built on the same principles of controlled components and managing state — so don't neglect to learn them.
+ប្រសិនបើអ្នកកំពុងស្វែងរកដំណោះស្រាយពេញលេញរួមបញ្ចូលទាំង validation, ការរក្សារការតាមដាននៃ visited fields, ហើយនិងការ handle ការ submit form, [Formik](https://jaredpalmer.com/formik) គឺជាផ្នែកមួយនៃជម្រើសដ៏ពេញនិយម។ ទោះជាយ៉ាងណាក៏ដោយ វាត្រូវបានបង្កើតតាមគោលការណ៍ដូចគ្នានៃ controlled components និងការគ្រប់គ្រង state — ដូច្នេះកុំភ្លេចរៀនវា។
