@@ -194,13 +194,13 @@ class FlavorForm extends React.Component {
 
 ## The file input Tag {#the-file-input-tag}
 
-In HTML, an `<input type="file">` lets the user choose one or more files from their device storage to be uploaded to a server or manipulated by JavaScript via the [File API](https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications).
+នៅក្នុង HTML, `<input type="file">` អនុញ្ញាតឱ្យអ្នកប្រើប្រាស់ជ្រើសរើសឯកសារ (files )មួយឬច្រើនពីឧបករណ៍ផ្ទុករបស់ពួកគេដើម្បី upload ទៅកាន់ server ឬក៏រៀបចំដោយ JavaScript តាម​រយៈ [File API](https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications)។
 
 ```html
 <input type="file" />
 ```
 
-Because its value is read-only, it is an **uncontrolled** component in React. It is discussed together with other uncontrolled components [later in the documentation](/docs/uncontrolled-components.html#the-file-input-tag).
+ដោយសារតែតម្លៃរបស់វាគឺបានតែអាន, វាគឺជា **uncontrolled** component នៅក្នុង React។ វាត្រូវបានគេយកមកពិភាក្សាជាមួយនិង uncontrolled components ផ្សេងទៀត [នៅពេលក្រោយនៅក្នុងឯកសារ](/docs/uncontrolled-components.html#the-file-input-tag)។
 
 ## Handling Multiple Inputs {#handling-multiple-inputs}
 
