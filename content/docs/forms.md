@@ -204,9 +204,9 @@ class FlavorForm extends React.Component {
 
 ## Handling Multiple Inputs {#handling-multiple-inputs}
 
-When you need to handle multiple controlled `input` elements, you can add a `name` attribute to each element and let the handler function choose what to do based on the value of `event.target.name`.
+នៅពេលអ្នកត្រូវការ handle controlled `input` elements ច្រើន, អ្នកអាចបន្ថែម `name` attribute ទៅកាន់ element នីមួយៗហើយនិងអនុញ្ញាតឱ្យ handler function ជ្រើសរើសអ្វីដែលត្រូវធ្វើដោយផ្អែកលើតម្លៃនៃ `event.target.name` ។
 
-For example:
+ឧទាហរណ៍៖
 
 ```javascript{15,18,28,37}
 class Reservation extends React.Component {
@@ -256,9 +256,9 @@ class Reservation extends React.Component {
 }
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/wgedvV?editors=0010)
+[**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/wgedvV?editors=0010)
 
-Note how we used the ES6 [computed property name](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names) syntax to update the state key corresponding to the given input name:
+ចំណាំរបៀបដែលយើងប្រើ ES6 [computed property name](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names) syntax ដើម្បីធ្វើបច្ចុប្បន្នភាព state key ដែលត្រូវគ្នានិង input name ដែលត្រូវបានផ្តល់អោយ៖
 
 ```js{2}
 this.setState({
@@ -274,7 +274,7 @@ partialState[name] = value;
 this.setState(partialState);
 ```
 
-Also, since `setState()` automatically [merges a partial state into the current state](/docs/state-and-lifecycle.html#state-updates-are-merged), we only needed to call it with the changed parts.
+ដូចគ្នា, ដែល `setState()` [ធ្នើការបញ្ចូលគ្នានូវ partial state ទៅក្នុង current state](/docs/state-and-lifecycle.html#state-updates-are-merged) ដោយស្វ័យប្រវត្តិ, យើងគ្រាន់តែត្រូវការ call វាជាមួយនិងផ្នែកណាដែលត្រូវបានផ្លាស់ប្តូរ។
 
 ## Controlled Input Null Value {#controlled-input-null-value}
 
