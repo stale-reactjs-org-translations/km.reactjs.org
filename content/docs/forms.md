@@ -278,9 +278,9 @@ this.setState(partialState);
 
 ## Controlled Input Null Value {#controlled-input-null-value}
 
-Specifying the value prop on a [controlled component](/docs/forms.html#controlled-components) prevents the user from changing the input unless you desire so. If you've specified a `value` but the input is still editable, you may have accidentally set `value` to `undefined` or `null`.
+ការបញ្ជាក់ value props នៅលើ [controlled component](/docs/forms.html#controlled-components) ការពារអ្នកប្រើប្រាស់ពីការផ្លាស់ប្តូរ input លុះត្រាតែអ្នកចង់ធ្វើដូច្នេះ។ ប្រសិនបើអ្នកមិនបានបញ្ជាក់ `value` ប៉ុន្តែ input នៅតែអាចកែបាន, អ្នកប្រហែលជាបានកំណត់ `value` ជា `undefined` ឬក៏ `null` ដោយចៃដន្យ។
 
-The following code demonstrates this. (The input is locked at first but becomes editable after a short delay.)
+កូដខាងក្រោមបង្ហាញដូចនេះ។ (input ត្រូវបាន lock ពេលដំបូង ប៉ុន្តែបានក្លាយជាអាចកែបានបន្ទាប់ពីមានការពន្យាពេលខ្លីមួយ។)
 
 ```javascript
 ReactDOM.render(<input value="hi" />, mountNode);
