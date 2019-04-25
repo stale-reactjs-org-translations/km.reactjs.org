@@ -342,11 +342,11 @@ this.setState({comment: 'Hello'});
 
 ### ការបន្ទាន់សម័យរបស់ State អាចជា Asynchronous {#state-updates-may-be-asynchronous}
 
-React may batch multiple `setState()` calls into a single update for performance.
+React អាចមានច្រើន batch `setState()` ហៅចូលទៅក្នុងការធ្វើបច្ចុប្បន្នភាពតែមួយសម្រាប់ performance។
 
-Because `this.props` and `this.state` may be updated asynchronously, you should not rely on their values for calculating the next state.
+ពីព្រោះ `this.props` និង `this.state` អាចត្រូវបានធ្វើបច្ចុប្បន្នភាព asynchronously,អ្នកមិនគួរពឹងផ្អែកលើតម្លៃរបស់វាសម្រាប់ការគណនាបន្ទាប់ពី state នោះទេ។
 
-For example, this code may fail to update the counter:
+ឧទាហរណ៍, code នេះ អាចបរាជ័យក្នុងការធ្វើបច្ចុប្បន្នភាពនៃ counter:
 
 ```js
 // Wrong
@@ -355,7 +355,7 @@ this.setState({
 });
 ```
 
-To fix it, use a second form of `setState()` that accepts a function rather than an object. That function will receive the previous state as the first argument, and the props at the time the update is applied as the second argument:
+ដើម្បីធ្វើការកែតម្រូវ, ប្រើសំណុំបែបបទទីពីរនៃ `setState()` ដែលទទួលយក function ជាជាងមួយ object. function នោះ នឹងទទួលបាន state ពីមុនជាតម្លៃដំបូង និង props នៅពេលដែលការ update ត្រូវបានអនុវត្តជាតម្លៃបន្ទាប់:
 
 ```js
 // Correct
@@ -364,7 +364,7 @@ this.setState((state, props) => ({
 }));
 ```
 
-We used an [arrow function](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions) above, but it also works with regular functions:
+យើង​បានប្រើ [arrow function](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions) ខាងលើ, ប៉ុន្តែវាក៏ធ្វើការជាមួយ regular functions ផងដែរ:
 
 ```js
 // Correct
@@ -377,9 +377,9 @@ this.setState(function(state, props) {
 
 ### ការបន្ទាន់សម័យ State ត្រូវបានបញ្ចូលគ្នា {#state-updates-are-merged}
 
-When you call `setState()`, React merges the object you provide into the current state.
+នៅពេលអ្នកហៅ `setState()`, React ធ្វើការបញ្ចូល object ដែលអ្នកបានផ្តល់ជូននៅក្នុង state បច្ចុប្បន្ន។
 
-For example, your state may contain several independent variables:
+ឧទាហរណ៍, state របស់អ្នក អាចមានអថេរ(variables) ឯករាជ្យជាច្រើន:
 
 ```js{4,5}
   constructor(props) {
@@ -391,7 +391,7 @@ For example, your state may contain several independent variables:
   }
 ```
 
-Then you can update them independently with separate `setState()` calls:
+បន្ទាប់មកអ្នកអាចធ្វើការ update ពួកវាដាច់ដោយឡែកពីគ្នា `setState()` ដោយការហៅ:
 
 ```js{4,10}
   componentDidMount() {
@@ -409,27 +409,27 @@ Then you can update them independently with separate `setState()` calls:
   }
 ```
 
-The merging is shallow, so `this.setState({comments})` leaves `this.state.posts` intact, but completely replaces `this.state.comments`.
+ការរួមបញ្ចូលគ្នាគឺ shallow, ដូច្នេះ `this.setState({comments})` leaves `this.state.posts` intact, ប៉ុន្តែជំនួសទាំងស្រុងដោយ `this.state.comments`.
 
 ## ទិន្នន័យ Flows Down {#the-data-flows-down}
 
-Neither parent nor child components can know if a certain component is stateful or stateless, and they shouldn't care whether it is defined as a function or a class.
+ទាំងparentនិង child components មិនអាចដឹងថាវាមាន component ជាក់លាក់មួយគឺ stateful or stateless, ហើយពួកគេមិនគួរខ្វល់ថា តើវាត្រូវបានគេកំណត់ថាជា function ឬ a class នោះទេ.
 
-This is why state is often called local or encapsulated. It is not accessible to any component other than the one that owns and sets it.
+នេះ​ជាមូលហេតុដែល state គឺជាញឹកញាប់ហៅ local ឬ encapsulated។ វាមិនអាចប្រើបាន វាមិនអាចចូលទៅដល់ component ណាមួយក្រៅពី object ដែលមាននិងកំណត់ដោយខ្លួនវាទេ។
 
-A component may choose to pass its state down as props to its child components:
+Component អាចជ្រើសរើសដើម្បី pass state down ដូច props ទៅ child components:
 
 ```js
 <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
 ```
 
-This also works for user-defined components:
+នេះក៏ដំណើរការសម្រាប់ user-defined components:
 
 ```js
 <FormattedDate date={this.state.date} />
 ```
 
-The `FormattedDate` component would receive the `date` in its props and wouldn't know whether it came from the `Clock`'s state, from the `Clock`'s props, or was typed by hand:
+`FormattedDate` component នឹងទទួលបាន `date` នៅក្នុង props របស់ខ្លួន ហើយនឹងមិនដឹងថាតើវាមកពី `Clock`state ណាមួយនោះទេ, ពី `Clock` props, ឬត្រូវបានវាយដោយដៃ:
 
 ```js
 function FormattedDate(props) {
@@ -439,11 +439,11 @@ function FormattedDate(props) {
 
 [**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/zKRqNB?editors=0010)
 
-This is commonly called a "top-down" or "unidirectional" data flow. Any state is always owned by some specific component, and any data or UI derived from that state can only affect components "below" them in the tree.
+នេះត្រូវបានគេហៅជាទូទៅថា "top-down" ឬ "unidirectional" data flow. ណាមួយ state គឺតែងតែជាកម្មសិទ្ធិរបស់ជាក់លាក់របស់ component, និងណាមួយ data ឬ UI derived ពី state នោះ អាចប៉ះពាល់តែ components "below" វាតែប៉ុណ្ណោះនៅក្នុង tree.
 
-If you imagine a component tree as a waterfall of props, each component's state is like an additional water source that joins it at an arbitrary point but also flows down.
+ប្រសិនបើអ្នកស្រមៃថា component tree ដូចជា waterfall នៃ props, គ្រប់ component's state គឺដូចជាប្រភពទឹកបន្ថែម ដែលចូលរួមជាមួយវានៅចំណុចមួយដែលបំពានប៉ុន្តែវាហូរចុះក្រោមផងដែរ.
 
-To show that all components are truly isolated, we can create an `App` component that renders three `<Clock>`s:
+ដើម្បីបង្ហាញថា components ទាំងអស់ ពិតជា isolated, យើងអាចបង្កើត `App` component ដែល renders `<Clock>` បីដង:
 
 ```js{4-6}
 function App() {
@@ -464,6 +464,6 @@ ReactDOM.render(
 
 [**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/vXdGmd?editors=0010)
 
-Each `Clock` sets up its own timer and updates independently.
+`Clock` មួយៗបង្កើត Timer ផ្ទាល់ខ្លួនវាហើយធ្វើបច្ចុប្បន្នភាពដោយឯករាជ្យ។
 
-In React apps, whether a component is stateful or stateless is considered an implementation detail of the component that may change over time. You can use stateless components inside stateful components, and vice versa.
+នៅក្នុងកម្មវិធី React, ថាតើ component គឺ stateful ឬ stateless គឺ ចាត់ទុកថាជាការអនុវត្ដន៍លម្អិតនៃទី component ដែលអាចផ្លាស់ប្តូរតាមពេលវេលា. លោក​អ្នក​អាច​ប្រើប្រាស់ stateless components នៅក្នុង stateful components, និងផ្ទុយមកវិញ។
