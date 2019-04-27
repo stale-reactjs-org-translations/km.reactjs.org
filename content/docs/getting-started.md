@@ -118,7 +118,11 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 អ្នកក៏អាច follow [@reactjs account](https://twitter.com/reactjs) នៅលើ Twitter ប៉ុន្តែអ្នកនឹងមិនខកខានអ្វីដែលចាំបាច់ប្រសិនបើអ្នកគ្រាន់តែអាន blog។
 
+<<<<<<< HEAD
 មិនមែនគ្រប់ការចេញផ្សាយ (release) របស់ React ត្រូវបានប្រកាសប្រាប់នៅក្នុង blog នេាះទេ ប៉ុន្តែអ្នកអាចរកឃើញការផ្លាស់ប្តូរលម្អិតសម្រាប់រៀងរាល់ការចេញផ្សាយ (release) [នៅក្នុង `CHANGELOG.md` file ក្នុង React repository](https://github.com/facebook/react/blob/master/CHANGELOG.md) ក៏ដូចជានៅលើទំព័រ [Releases](https://github.com/facebook/react)។
+=======
+Not every React release deserves its own blog post, but you can find a detailed changelog for every release [in the `CHANGELOG.md` file in the React repository](https://github.com/facebook/react/blob/master/CHANGELOG.md), as well as on the [Releases](https://github.com/facebook/react/releases) page.
+>>>>>>> 4244fc646618de6bae934686f93dd04c9000d9ae
 
 ## កំណែឯកសារ {#versioned-documentation}
 

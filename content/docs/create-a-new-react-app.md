@@ -54,7 +54,11 @@ npm start
 
 Create React App មិនដោះស្រាយ​ (doesn't handle) នូវ backend logic ឬ databases នេាះទេ; វាគ្រាន់តែបង្កើតនូវ frontend build pipeline មួយ ដូចច្នេះអ្នកអាចវាជាមួយ backend ផ្សេងៗដែលអ្នកចូលចិត្ត។ បច្ចេកទេសខាងក្រោយ, វាប្រើ [Babel](https://babeljs.io/) និង [webpack](https://webpack.js.org/) ប៉ុន្តែអ្នកមិនចាំបាច់ដឹងអ្វីអំពីពួកវាទេ។
 
+<<<<<<< HEAD
 នៅពេលអ្នកត្រៀមខ្លួនរួចរាល់ហើយដើម្បី deploy ទៅកាន់ production, running `npm run build` និងបង្កើត optimized build មួយសម្រាប់ app របស់អ្នកនៅក្នុងថតឯកសារ `build`។ អ្នកអាចស្វែងយល់បន្ថែមអំពី Create React App [ពី README របស់វា](https://github.com/facebookincubator/create-react-app#create-react-app-) និង [ការណែនាំសម្រាប់អ្នកប្រើប្រាស់](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#table-of-contents)។
+=======
+When you're ready to deploy to production, running `npm run build` will create an optimized build of your app in the `build` folder. You can learn more about Create React App [from its README](https://github.com/facebookincubator/create-react-app#create-react-app--) and the [User Guide](https://facebook.github.io/create-react-app/).
+>>>>>>> 4244fc646618de6bae934686f93dd04c9000d9ae
 
 ### Next.js {#nextjs}
 
@@ -70,7 +74,11 @@ Create React App មិនដោះស្រាយ​ (doesn't handle) នូវ
 
 ### ឧបករណ៍មានប្រសិទ្ធភាព (Toolchains) ដែលអាចបត់បែនបានកាន់តែច្រើន (Flexible) {#more-flexible-toolchains}
 
+<<<<<<< HEAD
 ឧបករណ៍មានប្រសិទ្ធភាព (toolchains) ខាងក្រោមនេះ ផ្តល់នូវភាពបត់បែន (flexiblity) និងជម្រើសកាន់តែច្រើន។ យើងសូមណែនាំពួកវាទៅកាន់អ្នកប្រើប្រាស់ (user) ដែលមានបទពិសោធន៍ច្រើន៖
+=======
+The following toolchains offer more flexibility and choice. We recommend them to more experienced users:
+>>>>>>> 4244fc646618de6bae934686f93dd04c9000d9ae
 
 - **[Neutrino](https://neutrinojs.org/)** រួមបញ្ចូលគ្នានូវអំណាច (power) នៃ [webpack](https://webpack.js.org/) ជាមួយភាពសាមញ្ញនៃ presets ហើយនិងរួមបញ្ចូលទាំង preset សម្រាប់ [React apps](https://neutrinojs.org/packages/react/) និង [React components](https://neutrinojs.org/packages/react-components/)។
 
