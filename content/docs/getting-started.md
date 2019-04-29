@@ -102,7 +102,11 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 ### Advanced Concepts {#advanced-concepts}
 
+<<<<<<< HEAD
 នៅពេលដែលអ្នកសម្របជាមួយនិង [គំនិតចម្បង](#main-concepts) ហើយនិងបានលេងជាមួយ React បន្តិច អ្នកប្រហែលជាចាប់អារម្មណ៍ជាមួយនិងប្រធានបទកម្រិតខ្ពស់បន្ថែមទៀត។ ផ្នែកនេះនឹងណែនាំអ្នកនូវអានុភាពរបស់ React ប៉ុន្តែលក្ខណៈពិសេសរបស់ React នេះមិនសូវត្រូវបានគេប្រើជាញឹកញាប់ទេ។ លក្ខណៈពិសេសនេាះមានដូចជា [context](/docs/context.html) និង [refs](/docs/refs-and-the-dom.html)។
+=======
+Once you're comfortable with the [main concepts](/docs/hello-world.html) and played with React a little bit, you might be interested in more advanced topics. This section will introduce you to the powerful, but less commonly used React features like [context](/docs/context.html) and [refs](/docs/refs-and-the-dom.html).
+>>>>>>> b8b3db7acbba117addeea8a7fb86957eb046d7ce
 
 ### API Reference {#api-reference}
 
