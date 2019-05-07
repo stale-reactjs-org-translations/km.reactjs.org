@@ -102,11 +102,7 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 ### Advanced Concepts {#advanced-concepts}
 
-<<<<<<< HEAD
-នៅពេលដែលអ្នកសម្របជាមួយនិង [គំនិតចម្បង](#main-concepts) ហើយនិងបានលេងជាមួយ React បន្តិច អ្នកប្រហែលជាចាប់អារម្មណ៍ជាមួយនិងប្រធានបទកម្រិតខ្ពស់បន្ថែមទៀត។ ផ្នែកនេះនឹងណែនាំអ្នកនូវអានុភាពរបស់ React ប៉ុន្តែលក្ខណៈពិសេសរបស់ React នេះមិនសូវត្រូវបានគេប្រើជាញឹកញាប់ទេ។ លក្ខណៈពិសេសនេាះមានដូចជា [context](/docs/context.html) និង [refs](/docs/refs-and-the-dom.html)។
-=======
-Once you're comfortable with the [main concepts](/docs/hello-world.html) and played with React a little bit, you might be interested in more advanced topics. This section will introduce you to the powerful, but less commonly used React features like [context](/docs/context.html) and [refs](/docs/refs-and-the-dom.html).
->>>>>>> ad6687e25e021b79e8a7a2e071fd846cf657b71f
+នៅពេលដែលអ្នកសម្របជាមួយនិង [គំនិតចម្បង](/docs/hello-world.html) ហើយនិងបានលេងជាមួយ React បន្តិច អ្នកប្រហែលជាចាប់អារម្មណ៍ជាមួយនិងប្រធានបទកម្រិតខ្ពស់បន្ថែមទៀត។ ផ្នែកនេះនឹងណែនាំអ្នកនូវអានុភាពរបស់ React ប៉ុន្តែលក្ខណៈពិសេសរបស់ React នេះមិនសូវត្រូវបានគេប្រើជាញឹកញាប់ទេ។ លក្ខណៈពិសេសនេាះមានដូចជា [context](/docs/context.html) និង [refs](/docs/refs-and-the-dom.html)។
 
 ### API Reference {#api-reference}
 
@@ -122,11 +118,7 @@ Once you're comfortable with the [main concepts](/docs/hello-world.html) and pla
 
 អ្នកក៏អាច follow [@reactjs account](https://twitter.com/reactjs) នៅលើ Twitter ប៉ុន្តែអ្នកនឹងមិនខកខានអ្វីដែលចាំបាច់ប្រសិនបើអ្នកគ្រាន់តែអាន blog។
 
-<<<<<<< HEAD
-មិនមែនគ្រប់ការចេញផ្សាយ (release) របស់ React ត្រូវបានប្រកាសប្រាប់នៅក្នុង blog នេាះទេ ប៉ុន្តែអ្នកអាចរកឃើញការផ្លាស់ប្តូរលម្អិតសម្រាប់រៀងរាល់ការចេញផ្សាយ (release) [នៅក្នុង `CHANGELOG.md` file ក្នុង React repository](https://github.com/facebook/react/blob/master/CHANGELOG.md) ក៏ដូចជានៅលើទំព័រ [Releases](https://github.com/facebook/react)។
-=======
-Not every React release deserves its own blog post, but you can find a detailed changelog for every release [in the `CHANGELOG.md` file in the React repository](https://github.com/facebook/react/blob/master/CHANGELOG.md), as well as on the [Releases](https://github.com/facebook/react/releases) page.
->>>>>>> 4244fc646618de6bae934686f93dd04c9000d9ae
+មិនមែនគ្រប់ការចេញផ្សាយ (release) របស់ React ត្រូវបានប្រកាសប្រាប់នៅក្នុង blog នេាះទេ ប៉ុន្តែអ្នកអាចរកឃើញការផ្លាស់ប្តូរលម្អិតសម្រាប់រៀងរាល់ការចេញផ្សាយ (release) [នៅក្នុង `CHANGELOG.md` file ក្នុង React repository](https://github.com/facebook/react/blob/master/CHANGELOG.md) ក៏ដូចជានៅលើទំព័រ [Releases](https://github.com/facebook/react/releases)។
 
 ## កំណែឯកសារ {#versioned-documentation}
 
