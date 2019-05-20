@@ -552,7 +552,11 @@ class Board extends React.Component {
 
 ### ហេតុអ្វីបានជាភាពមិនអាចប្រែប្រួលបានមានសារះសំខាន់?        {#why-immutability-is-important}
 
+<<<<<<< HEAD
 នៅក្នុងឧទាហរណ៍របស់កូដមុន យើងបានស្នើឱ្យអ្នកប្រើ `.slice()` operator ដើម្បីបង្កើតច្បាប់ចម្លងនៃ `squares` array ដើម្បីកែប្រែជំនួសអោយការកែប្រែ array ដែលមានស្រាប់។ ឥឡូវនេះយើងនឹងពិភាក្សាគ្នាអំពីភាពមិនចេះប្រែប្រួលហើយហេតុអ្វីក៏ភាពមិនប្រែប្រួលជាការសំខាន់ក្នុងការរៀនសូត្រ។
+=======
+In the previous code example, we suggested that you use the `.slice()` method to create a copy of the `squares` array to modify instead of modifying the existing array. We'll now discuss immutability and why immutability is important to learn.
+>>>>>>> 7b217c701075b1af7ddabd6a237ed847df98853c
 
 មានវិធីពីរយ៉ាងក្នុងការផ្លាស់ប្តូរទិន្នន័យ។ វិធីសាស្រ្តដំបូងគឺ *ផ្លាស់ប្តូរ* ទិន្នន័យ ដោយការផ្លាស់ប្តូរតម្លៃទិន្នន័យដោយផ្ទាល់។ វិធីសាស្ត្រទីពីរគឺជំនួសទិន្នន័យជាមួយច្បាប់ចម្លងថ្មីដែលមានការផ្លាស់ប្តូរតាមដែលអ្នកចង់បាន។
 
