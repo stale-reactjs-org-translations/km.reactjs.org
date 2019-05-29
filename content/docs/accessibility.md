@@ -228,6 +228,7 @@ class Parent extends React.Component {
 this.inputElement.current.focus();
 ```
 
+
 នៅពេលប្រើ HOC ដើម្បីពង្រីក component
 យើងណែនាំ [forward the ref](/docs/forwarding-refs.html) សំរាប់ខ្ចប់ component ដោយប្រើ `forwardRef` function នៃ React។
 ប្រសិនបើជំនួយការរបស់ HOC មិនបានដាក់បញ្ចូល ref forwardingទេ លំនាំខាងលើនៅតែអាចប្រើជា fallback បាន។
@@ -241,7 +242,7 @@ this.inputElement.current.focus();
 
 ## Mouse and pointer events {#mouse-and-pointer-events}
 
-ធានាថាមុខងារទាំងអស់ដែលធ្វើការតាមរយះ mouse ឬ pointer event ក៏អាចប្រើប្រាស់បានដោយ keybaord តែឯងបាន។ ការពឹងទៅលើឧបករណ៍ pointer តែមួយមុខនឹងនាំមកនូវបញ្ហាផ្សេងៗទៅដល់អ្នកប្រើប្រាស់ keybaord ទៅកាន់កម្មវិធីរបស់អ្នក។
+ធានាថាមុខងារទាំងអស់ដែលធ្វើការតាមរយះ mouse ឬ pointer event ក៏អាចប្រើប្រាស់បានដោយ keyboard តែឯងបាន។ ការពឹងទៅលើឧបករណ៍ pointer តែមួយមុខនឹងនាំមកនូវបញ្ហាផ្សេងៗទៅដល់អ្នកប្រើប្រាស់ keyboard ទៅកាន់កម្មវិធីរបស់អ្នក។
 
 ដើម្បីបង្ហាញពីចំនុចនេះសូមមើលឧទាហរណ៍ដ៏អស្ចារ្យមួយនៃភាពងាយស្រួលដែលបណ្តាលមកពីការចុចព្រឹត្តិការណ៍។ នេះគឺជាលំនាំចុចខាងក្រៅដែលអ្នកប្រើអាចបិទដំណើរការ popover ដែលបានបើកដោយចុចខាងក្រៅ element។
 
@@ -298,7 +299,7 @@ constructor(props) {
 }
 ```
 
-វាប្រហែលជាដំណើរប្រក្រតីធម្មតាជាមួួយនឹងអ្នកប្រើប្រាស់ឧបករណ៍ចង្អុលដូចជា mouse។ ប៉ុន្តែបើធ្វើប្រតិបត្តការណ៍ជាមួយតែ keybaord អាចនឹងជួបបញ្ហានៅពេលដែលចុចដើម្បីផ្តូរទៅកាន់ element បន្ទាប់បណ្តាលឱ្យ `window` មិនបានទទួលប្រតិការណ៍ចុច។ វាអាចនាំឱ្យមុខងារដែលមិនច្បាស់លាស់ដែលរារាំងអ្នកប្រើពីការប្រើកម្មវិធីរបស់អ្នក។
+វាប្រហែលជាដំណើរប្រក្រតីធម្មតាជាមួួយនឹងអ្នកប្រើប្រាស់ឧបករណ៍ចង្អុលដូចជា mouse។ ប៉ុន្តែបើធ្វើប្រតិបត្តការណ៍ជាមួយតែ keyboard អាចនឹងជួបបញ្ហានៅពេលដែលចុចដើម្បីផ្តូរទៅកាន់ element បន្ទាប់បណ្តាលឱ្យ `window` មិនបានទទួលប្រតិការណ៍ចុច។ វាអាចនាំឱ្យមុខងារដែលមិនច្បាស់លាស់ដែលរារាំងអ្នកប្រើពីការប្រើកម្មវិធីរបស់អ្នក។
 
 <img src="../images/docs/outerclick-with-keyboard.gif" alt="A toggle button opening a popover list implemented with the click outside pattern and operated with the keyboard showing the popover not being closed on blur and it obscuring other screen elements." />
 
