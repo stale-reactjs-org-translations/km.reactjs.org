@@ -245,7 +245,7 @@ class Square extends React.Component {
 
 ប្រសិនជាយើង click លើ Square ឥឡូវ​នេះ យើងគួរតែទទួលបាននូវ alert មួយនៅក្នុង browser យើង។
 
-សម្រាប់ event handlers 
+សម្រាប់ event handlers
 
 >ចំណាំ
 >
@@ -476,7 +476,7 @@ class Square extends React.Component {
 }
 ```
 
-នៅពេលដែល Square ត្រូវបាន click `onClick` function ដែលត្រូវបានផ្តល់ដោយ Board ត្រូវបានហៅ។ 
+នៅពេលដែល Square ត្រូវបាន click `onClick` function ដែលត្រូវបានផ្តល់ដោយ Board ត្រូវបានហៅ។
 នេះគឺជាការពិនិត្យឡើងវិញនូវរបៀបដែលវាសម្រេច៖
 
 ១. `onClick` prop នៅលើ built-in DOM `<button>` component ប្រាប់ React ដើម្បីបង្កើត click event listener មួយ។<br>
@@ -596,7 +596,7 @@ var newPlayer = Object.assign({}, player, {score: 2});
 
 ឥឡូវនេះយើងនឹងផ្លាស់ប្តូរ Square អោយក្លាយជា **function component**។
 
-នៅក្នុង React **function components** គឺជាវិធីសាមញ្ញក្នុងការសរសេរ components ដែលមានតែ `render` method ហើយមិនមាន state ដែលជារបស់ពួកគេផ្ទាល់។ ជំនួសឱ្យការកំណត់ class មួយដែល extends `React.Component`, យើងអាចសរសេរ function មួយដែលទទួល `props` ជា input ហើយ returns នូវអ្វីដែលគួរត្រូវបាន​ render។ Function components 
+នៅក្នុង React **function components** គឺជាវិធីសាមញ្ញក្នុងការសរសេរ components ដែលមានតែ `render` method ហើយមិនមាន state ដែលជារបស់ពួកគេផ្ទាល់។ ជំនួសឱ្យការកំណត់ class មួយដែល extends `React.Component`, យើងអាចសរសេរ function មួយដែលទទួល `props` ជា input ហើយ returns នូវអ្វីដែលគួរត្រូវបាន​ render។ Function components
 មានការធុញទ្រាន់តិចតួចក្នុងការសរសេរជាង classes និង components ជាច្រើនអាចត្រូវបានបញ្ជាក់តាមវិធីនេះ។
 
 Replace the Square class with this function:
@@ -619,7 +619,7 @@ function Square(props) {
 
 >ចំណាំ
 >
->នៅពេលយើងបានកែប្រែ Square អោយក្លាយជា function component យើងក៏បានផ្លាស់ប្តូរផងដែរនូវ `onClick={() => this.props.onClick()}` អោយទៅជាខ្លី `onClick={props.onClick}` (ចំណាំការខ្វះវង់ក្រចក*ទាំងពីរ*ខាង)។ នៅក្នុង class, យើងបានប្រើ arrow function មួយដើម្បីចូលប្រើ តម្លៃ `this` ដែលត្រឹមត្រូវ បន្តែនៅក្នុង function component 
+>នៅពេលយើងបានកែប្រែ Square អោយក្លាយជា function component យើងក៏បានផ្លាស់ប្តូរផងដែរនូវ `onClick={() => this.props.onClick()}` អោយទៅជាខ្លី `onClick={props.onClick}` (ចំណាំការខ្វះវង់ក្រចក*ទាំងពីរ*ខាង)។ នៅក្នុង class, យើងបានប្រើ arrow function មួយដើម្បីចូលប្រើ តម្លៃ `this` ដែលត្រឹមត្រូវ បន្តែនៅក្នុង function component
 យើងមិនចាំបាច់ព្រួយបារម្ភពី `this` ទេ។
 
 ### Taking Turns {#taking-turns}
@@ -1118,7 +1118,7 @@ Keys មិនចាំបាច់ជា globally unique; ពួកគេគ្
 
 ### Implementing Time Travel {#implementing-time-travel}
 
-នៅក្នុង history រ​បស់ tic-tac-toe ហ្គេម រាល់ការផ្លាស់ទីនីមួយៗពីមុនគឺមាន unique ID ដែលទាក់ទងជាមួយវា៖ វាជាចំនួនលេខតគ្នានៃការផ្លាស់ទី។ 
+នៅក្នុង history រ​បស់ tic-tac-toe ហ្គេម រាល់ការផ្លាស់ទីនីមួយៗពីមុនគឺមាន unique ID ដែលទាក់ទងជាមួយវា៖ វាជាចំនួនលេខតគ្នានៃការផ្លាស់ទី។
 ការផ្លាស់ទីគឺមិនដែលត្រូវបាន re-order  លុប ឬបញ្ចូលនៅកណ្តាល ដូច្នេះវាមានសុវត្ថិភាពក្នុងការប្រើ move index ជា key។
 
 នៅក្នុង `render` method របស់ Game component យើងអាចបន្ថែម key ដូចនេះ `<li key={move}>` ហើយការព្រមានរបស់ React ពី keys គួរតែបាត់៖
