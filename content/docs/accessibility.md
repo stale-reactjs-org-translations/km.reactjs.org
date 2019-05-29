@@ -73,7 +73,7 @@ function Glossary(props) {
 }
 ```
 
-អ្នកអាចធ្វើការ map ក្រុមនៃធាតុទៅជាអារេនៃ fragment ដូចដែលអ្នកចង់បានប្រភេទធាតុផ្សេងៗទៀតផងដែរ៖
+អ្នកអាចធ្វើការ map ក្រុមនៃធាតុទៅជា array នៃ fragment ដូចដែលអ្នកចង់បានប្រភេទធាតុផ្សេងៗទៀតផងដែរ៖
 
 ```javascript{6,9}
 function Glossary(props) {
@@ -109,7 +109,7 @@ function ListItem({ item }) {
 ## Accessible Forms {#accessible-forms}
 
 ### ការដាក់ស្លាកឈ្មោះ {#labeling}
-គ្រប់ HTML form control ទាំងអស់ដូចជា `<input>` និង `<textarea>` ត្រូវការការដាក់ឈ្មោះដែលងាយល់។
+គ្រប់ HTML form control ទាំងអស់ដូចជា `<input>` និង `<textarea>` ត្រូវការការដាក់ឈ្មោះដែលងាយយល់។
 យើងត្រូវតែផ្តល់ឬមានការពិពណ៌នានៃស្លាក ដែលអាចអោយអ្នកប្រើប្រាស់មើលឃើញ។
 
 ធនធានខាងក្រោមនេះនឹងបង្ហាញយើងពីរបៀបដាក់ឈ្មោះ៖
@@ -449,7 +449,7 @@ class BlurExample extends React.Component {
 
 ### Testing accessibility in the browser {#testing-accessibility-in-the-browser}
 
-មាន tools មួយចំនួនដែលមានស្រាប់ អាចដំណើរការត្រួតពិនិត្យលើគេហទំព័រក្នុង broswer របស់អ្នកបាន។ សូមប្រើរបស់ទាំងនោះដោយរួមបញ្ចូលជាមួយការត្រួតពិនិត្យផ្សេងៗដែលបានលើកឡើងទីនេះ ដែលវាអាចត្រឹមតែសាកល្បងបច្ចេកទេស accessibility នៃ HTML របស់អ្នក។
+មាន tools មួយចំនួនដែលមានស្រាប់ អាចដំណើរការត្រួតពិនិត្យលើគេហទំព័រក្នុង browser របស់អ្នកបាន។ សូមប្រើរបស់ទាំងនោះដោយរួមបញ្ចូលជាមួយការត្រួតពិនិត្យផ្សេងៗដែលបានលើកឡើងទីនេះ ដែលវាអាចត្រឹមតែសាកល្បងបច្ចេកទេស accessibility នៃ HTML របស់អ្នក។
 
 #### aXe, aXe-core and react-axe {#axe-axe-core-and-react-axe}
 
@@ -461,7 +461,7 @@ class BlurExample extends React.Component {
 
 #### WebAIM WAVE {#webaim-wave}
 
-[Web Accessibility Evaluation Tool](https://wave.webaim.org/extension/) គឺជាកម្មវិធីបន្ថែមមួយទៀតនៅលើ broswer។
+[Web Accessibility Evaluation Tool](https://wave.webaim.org/extension/) គឺជាកម្មវិធីបន្ថែមមួយទៀតនៅលើ browser។
 
 #### Accessibility inspectors and the Accessibility Tree {#accessibility-inspectors-and-the-accessibility-tree}
 
