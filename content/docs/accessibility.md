@@ -4,19 +4,20 @@ title: Accessibility
 permalink: docs/accessibility.html
 ---
 
-## Why Accessibility? {#why-accessibility}
+## ហេតុអ្វីបានជា Accessibility? {#why-accessibility}
 
-Web accessibility (also referred to as [**a11y**](https://en.wiktionary.org/wiki/a11y)) is the design and creation of websites that can be used by everyone. Accessibility support is necessary to allow assistive technology to interpret web pages.
+Web accessibility (ក៏អាចហៅបានជា[**a11y**](https://en.wiktionary.org/wiki/a11y)) គឺជាការរចនានិងបង្កើតគេហទំព័រដែលអាចប្រើប្រាស់បានដោយមនុស្សគ្រប់គ្នា។ Accessibility supportគឺចាំបាច់សំរាប់ឱ្យបច្ចេកវិទ្យាជំនួយបកប្រែទៅជាគេហទំព័រ។
 
 React fully supports building accessible websites, often by using standard HTML techniques.
+Reactគាំទ្រយ៉ាងពេញលេញក្នុងការបង្កើតគេហទំព័រដែលអាចចូលដំណើរការបានដោយប្រើបច្ចេកទេសស្តង់ដាររបស់ HTML។
 
-## Standards and Guidelines {#standards-and-guidelines}
+## ស្តង់ដារ និង ការណែនាំ {#standards-and-guidelines}
 
 ### WCAG {#wcag}
 
-The [Web Content Accessibility Guidelines](https://www.w3.org/WAI/intro/wcag) provides guidelines for creating accessible web sites.
+[ការណែនាំមាតិកាលទ្ធភាពប្រើប្រាស់គេហទំព័រ | Web Content Accessibility Guidelines](https://www.w3.org/WAI/intro/wcag) ផ្តល់នូវគោលការណ៍ណែនាំសម្រាប់បង្កើតគេហទំព័រដែលអាចចូលដំណើរការបាន។
 
-The following WCAG checklists provide an overview:
+បញ្ជីផ្ទៀងផ្ទាត់ WCAG ខាងក្រោមនេះនឹងផ្តល់នូវសេចក្តីសង្ខេបទូទៅ:
 
 - [WCAG checklist from Wuhcag](https://www.wuhcag.com/wcag-checklist/)
 - [WCAG checklist from WebAIM](https://webaim.org/standards/wcag/checklist)
@@ -24,9 +25,9 @@ The following WCAG checklists provide an overview:
 
 ### WAI-ARIA {#wai-aria}
 
-The [Web Accessibility Initiative - Accessible Rich Internet Applications](https://www.w3.org/WAI/intro/aria) document contains techniques for building fully accessible JavaScript widgets.
+[Web Accessibility Initiative - Accessible Rich Internet Applications](https://www.w3.org/WAI/intro/aria) គឺជាឯកសារដែលមាននូវបច្ចេកទេសសំរាប់បង្កើត(ធាតុក្រាហ្វិក JavaScript ឬ JavaScript widgets) យ៉ាងពេញលេញមួយ។
 
-Note that all `aria-*` HTML attributes are fully supported in JSX. Whereas most DOM properties and attributes in React are camelCased, these attributes should be hyphen-cased (also known as kebab-case, lisp-case, etc) as they are in plain HTML:
+ចំណាំថា attribute `aria-*` ទាំងអស់របស់ HTML អាចប្រើប្រាស់យ៉ាងពេញលេញនៅក្នុង JSX ។ ខណៈពេលដែល properties និង attibutes ភាគច្រើនរបស់ DOM ក្នុង React ប្រើប្រាស់ជាស្ទីល camelCased ដែល attributes ទាំងនោះគួរតែសរសេរបែប hyphen-cased (ត្រូវបានគេស្គាល់ដូចជា kebab-case, lisp-case ជាដើម) ដែលដូចទៅនឹងការសរសេរក្នុង HTML ធម្មតា:
 
 ```javascript{3,4}
 <input
@@ -40,19 +41,18 @@ Note that all `aria-*` HTML attributes are fully supported in JSX. Whereas most 
 ```
 
 ## Semantic HTML {#semantic-html}
-Semantic HTML is the foundation of accessibility in a web application. Using the various HTML elements to reinforce the meaning of information
-in our websites will often give us accessibility for free.
+Semantic HTML គឺជាមូលដ្ឋានគ្រឹះនៃភាពងាយស្រួលនៅក្នុងកម្មវិធីបណ្តាញ។ ការប្រើធាតុ HTML ផ្សេងៗដើម្បីពង្រឹងអត្ថន័យនៃពត៌មាន
+នៅក្នុងគេហទំព័ររបស់យើងនឹងផ្តល់អោយយើងប្រើប្រាស់ដោយឥតគិតថ្លៃ។
 
-- [MDN HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+- [អត្ថបទយោងរបស់ធាតុ MDN HTML | MDN HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
-Sometimes we break HTML semantics when we add `<div>` elements to our JSX to make our React code work, especially when working with lists (`<ol>`, `<ul>` and `<dl>`) and the HTML `<table>`.
-In these cases we should rather use [React Fragments](/docs/fragments.html) to group together multiple elements.
+ពេលខ្លះដើម្បីអោយកូត React របស់យើងដើរ យើងបានបន្ថែមធាតុ `<div>` ទៅកាន់ JSX ដែលអាចបំបែក HTML semantics ជាពិសេសនៅពេលដែលធ្វើការជាមួយ(បញ្ជី | lists) (`<ol>`, `<ul>` និង `<dl>`) និង HTML `<table>`។
+ក្នុងករណីនេះយើងគួរតែប្រើ [React Fragments](/docs/fragments.html) ដើម្បីដាក់ធាតុច្រើនរួមបញ្ចូលជាក្រុម។
 
-For example,
+ឧទាហរណ៍៖
 
 ```javascript{1,5,8}
 import React, { Fragment } from 'react';
-
 function ListItem({ item }) {
   return (
     <Fragment>
@@ -73,7 +73,7 @@ function Glossary(props) {
 }
 ```
 
-You can map a collection of items to an array of fragments as you would any other type of element as well:
+អ្នកអាចធ្វើការ map ក្រុមនៃធាតុទៅជា array នៃ fragment ដូចដែលអ្នកចង់បានប្រភេទធាតុផ្សេងៗទៀតផងដែរ៖
 
 ```javascript{6,9}
 function Glossary(props) {
@@ -91,7 +91,7 @@ function Glossary(props) {
 }
 ```
 
-When you don't need any props on the Fragment tag you can use the [short syntax](/docs/fragments.html#short-syntax), if your tooling supports it:
+នៅពេលដែលអ្នកមិនត្រូវការ props លើ Fragment tag អ្នកអាចប្រើបែប [short syntax](/docs/fragments.html#short-syntax) បើសិនជាឧបករណ៍របស់អ្នកគាំទ្រ៖
 
 ```javascript{3,6}
 function ListItem({ item }) {
@@ -104,72 +104,72 @@ function ListItem({ item }) {
 }
 ```
 
-For more info, see [the Fragments documentation](/docs/fragments.html).
+សូមចូលទៅកាន់ [the Fragments documentation](/docs/fragments.html) សំរាប់ព័ត៌មានបន្ថែម។
 
 ## Accessible Forms {#accessible-forms}
 
-### Labeling {#labeling}
-Every HTML form control, such as `<input>` and `<textarea>`, needs to be labeled accessibly. We need to provide descriptive labels that are also exposed to screen readers.
+### ការដាក់ស្លាកឈ្មោះ {#labeling}
+គ្រប់ HTML form control ទាំងអស់ដូចជា `<input>` និង `<textarea>` ត្រូវការការដាក់ឈ្មោះដែលងាយយល់។
+យើងត្រូវតែផ្តល់ឬមានការពិពណ៌នានៃស្លាក ដែលអាចអោយអ្នកប្រើប្រាស់មើលឃើញ។
 
-The following resources show us how to do this:
+ធនធានខាងក្រោមនេះនឹងបង្ហាញយើងពីរបៀបដាក់ឈ្មោះ៖
 
 - [The W3C shows us how to label elements](https://www.w3.org/WAI/tutorials/forms/labels/)
 - [WebAIM shows us how to label elements](https://webaim.org/techniques/forms/controls)
 - [The Paciello Group explains accessible names](https://www.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/)
 
-Although these standard HTML practices can be directly used in React, note that the `for` attribute is written as `htmlFor` in JSX:
+
+យើងក៏អាចប្រើប្រាស់នៅក្នុង React ដូចទៅនឹងការអនុវត្តតាមស្តង់ដាររបស់ HTML ខាងលើផងដែរ។ ចំណាំថា នៅក្នុង JSX `for` attribute គឺសរសេរទៅជា `htmlFor`៖
 
 ```javascript{1}
 <label htmlFor="namedInput">Name:</label>
 <input id="namedInput" type="text" name="name"/>
 ```
 
-### Notifying the user of errors {#notifying-the-user-of-errors}
+### ផ្តល់ដំណឹងដល់អ្នកប្រើប្រាស់ពេលដែលមាន errors {#notifying-the-user-of-errors}
 
-Error situations need to be understood by all users. The following link shows us how to expose error texts to screen readers as well:
+គ្រប់ស្ថានភាព Error ទាំងអស់ត្រូវតែយល់ដោយអ្នកប្រើប្រាស់ទាំងអស់។ link ខាងក្រោមនឹងប្រាប់យើងពីរបៀបបង្ហាញសារ error ទៅកាន់អេក្រង់អ្នកអាន៖
 
 - [The W3C demonstrates user notifications](https://www.w3.org/WAI/tutorials/forms/notifications/)
 - [WebAIM looks at form validation](https://webaim.org/techniques/formvalidation/)
 
 ## Focus Control {#focus-control}
 
-Ensure that your web application can be fully operated with the keyboard only:
+ត្រូវប្រាកដថាកម្មវិធីគេហទំព័ររបស់អ្នកអាចដំណើរការបានតែជាមួយក្តារចុចប៉ុណ្ណោះ៖
 
 - [WebAIM talks about keyboard accessibility](https://webaim.org/techniques/keyboard/)
 
 ### Keyboard focus and focus outline {#keyboard-focus-and-focus-outline}
 
-Keyboard focus refers to the current element in the DOM that is selected to accept input from the keyboard. We see it everywhere as a focus outline similar to that shown in the following image:
+Keyboard focus សំដៅទៅលើ element នៅក្នុង DOM ដែលបានត្រូវ selected ឬឈរលើសំរាប់ចាំទទួលការបញ្ចូលពី keybaord។ យើងអាចឃើញសន្ថានលក្ខណៈរបស់វាគ្រប់ទីកន្លែង ដែលដូចនឹងរូបភាពបានបង្ហាញខាងក្រោម៖
 
 <img src="../images/docs/keyboard-focus.png" alt="Blue keyboard focus outline around a selected link." />
 
-Only ever use CSS that removes this outline, for example by setting `outline: 0`, if you are replacing it with another focus outline implementation.
+ប្រសិនបើអ្នកជំនួស focus outline ជាមួយនឹងការដាក់ focus outline ផ្សេងទៀត មានតែប្រើ CSS ដើម្បីដក outline នេះចេញ។ ឧទាហរណ៍ដូចជាការដាក់ `outline: 0`។
 
 ### Mechanisms to skip to desired content {#mechanisms-to-skip-to-desired-content}
 
-Provide a mechanism to allow users to skip past navigation sections in your application as this assists and speeds up keyboard navigation.
+ផ្តល់វិធីសាស្រ្តដែលអនុញ្ញាតឱ្យអ្នកប្រើប្រាស់អាចរំលង ផ្នែក navigation ពីមុនក្នុងកម្មវិធីរបស់អ្នក ដែលអាចជួយនិងពន្លឿនល្បឿន navigation របស់ក្តាចុច។
 
-Skiplinks or Skip Navigation Links are hidden navigation links that only become visible when keyboard users interact with the page. They are very easy to implement with
-internal page anchors and some styling:
+Skiplinks or Skip Navigation Links គឺជា navigation links មើលមិនឃើញដែលអាចឃើញវិញនៅពេលដែលក្តារចុចរបស់អ្នកប្រើប្រាស់មានទំនាក់ទំនងជាមួួយ page។ ក្នុងការអនុវត្តឬសរសេរជាមួយនឹង page anchors ផ្ទាល់ខ្លួនគឺមានភាពងាយស្រួលក៏ដូចជាការដាក់ស្ទីល៖
 
-- [WebAIM - Skip Navigation Links](https://webaim.org/techniques/skipnav/)
+ប្រើប្រាស់ landmark elements និង roles ដូចជ​ា `<main>` និង `<aside>` ដើម្បីកំណត់ព្រំដែនតាមទំព័រសំរាប់ជួយដល់ការ navigate របស់អ្នកប្រើប្រាស់ទៅកាន់តាមផ្នែក។
 
-Also use landmark elements and roles, such as `<main>` and `<aside>`, to demarcate page regions as assistive technology allow the user to quickly navigate to these sections.
-
-Read more about the use of these elements to enhance accessibility here:
+ស្វែងយល់ពីការប្រើប្រាស់នៃ elements ទាំងនោះដើម្បីបង្កើនលទ្ធភាព៖
 
 - [Accessible Landmarks](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 
 ### Programmatically managing focus {#programmatically-managing-focus}
 
-Our React applications continuously modify the HTML DOM during runtime, sometimes leading to keyboard focus being lost or set to an unexpected element. In order to repair this,
-we need to programmatically nudge the keyboard focus in the right direction. For example, by resetting keyboard focus to a button that opened a modal window after that modal window is closed.
+កម្មវិធី React របស់យើងបន្តកែប្រែ DOM របស់ HTML កំឡុងពេលដំណើរការ ពេលខ្លះនាំឱ្យក្តាចុចបាត់បង់ focus ឬ កំណត់ទៅធាតុផ្សេងដោយមិនមានការរំពឹងទុក។ ដើម្បីជួសជុលវា,
+យើងត្រូវការដាក់កម្មវិធីផ្តោតលើក្តារចុចឱ្យបានត្រឹមត្រូវ។ ឧទាហរណ៍ដោយកំណត់ការផ្តោតលើក្តារចុចទៅលើប៊ូតុងបន្ទាប់ពី modal windows នោះត្រូវបានបិទ។
 
-MDN Web Docs takes a look at this and describes how we can build [keyboard-navigable JavaScript widgets](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets).
+នេះជាវេបសាយនៃឯកសាររបស់ MDN និងមានបង្ហាញយើងពីរបៀបបង្កើត MDN
+[keyboard-navigable JavaScript widgets](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets).
 
-To set focus in React, we can use [Refs to DOM elements](/docs/refs-and-the-dom.html).
+ដើម្បីដាក់ focus ក្នុង React យើងអាចប្រើ [Refs to DOM elements](/docs/refs-and-the-dom.html).
 
-Using this, we first create a ref to an element in the JSX of a component class:
+ដើម្បីប្រើវាយើងដំបូងបង្កើត ref ទៅកាន់ element នៅក្នុង JSX នៃ component class៖
 
 ```javascript{4-5,8-9,13}
 class CustomTextInput extends React.Component {
@@ -191,7 +191,7 @@ class CustomTextInput extends React.Component {
 }
 ```
 
-Then we can focus it elsewhere in our component when needed:
+បន្ទាប់មកយើងអាច focus នៅកន្លែងផ្សេងៗក្នុង component របស់យើងនៅពេលដែលត្រូវការ៖
 
  ```javascript
  focus() {
@@ -201,8 +201,7 @@ Then we can focus it elsewhere in our component when needed:
  }
  ```
 
-Sometimes a parent component needs to set focus to an element in a child component. We can do this by [exposing DOM refs to parent components](/docs/refs-and-the-dom.html#exposing-dom-refs-to-parent-components)
-through a special prop on the child component that forwards the parent's ref to the child's DOM node.
+ពេលខ្លះ component មេត្រូវតែដាក់ focus ទៅ element នៅក្នុង component កូន។ យើងអាចដាក់បានដោយ [exposing DOM refs to parent components](/docs/refs-and-the-dom.html#exposing-dom-refs-to-parent-components) តាមរយះ prop ពិសេសនៅលើ component កូនដែលផ្តល់តាម ref នៃមេ ទៅកាន់ DOM node របស់កូន។
 
 ```javascript{4,12,16}
 function CustomTextInput(props) {
@@ -229,28 +228,27 @@ class Parent extends React.Component {
 this.inputElement.current.focus();
 ```
 
-When using a HOC to extend components, it is recommended to [forward the ref](/docs/forwarding-refs.html) to the wrapped component using the `forwardRef` function of React. If a third party HOC
-does not implement ref forwarding, the above pattern can still be used as a fallback.
 
-A great focus management example is the [react-aria-modal](https://github.com/davidtheclark/react-aria-modal). This is a relatively rare example of a fully accessible modal window. Not only does it set initial focus on
-the cancel button (preventing the keyboard user from accidentally activating the success action) and trap keyboard focus inside the modal, it also resets focus back to the element that
-initially triggered the modal.
+នៅពេលប្រើ HOC ដើម្បីពង្រីក component
+យើងណែនាំ [forward the ref](/docs/forwarding-refs.html) សំរាប់ខ្ចប់ component ដោយប្រើ `forwardRef` function នៃ React។
+ប្រសិនបើជំនួយការរបស់ HOC មិនបានដាក់បញ្ចូល ref forwardingទេ លំនាំខាងលើនៅតែអាចប្រើជា fallback បាន។
 
->Note:
+[react-aria-modal](https://github.com/davidtheclark/react-aria-modal) គឺជាឧទាហរណ៏នៃការគ្រប់គ្រង focus ដ៏ល្អ។ នេះជាឧទាហរណ៍ដ៏កម្រនៃ accessible modal window ពេញលេញ។ មិនត្រឹមតែកំណត់អាទិភាព focus លើប៊ូតុង cancel (ការពារអ្នកប្រើ keyboard ពីការធ្វើសកម្មភាពជោគជ័យដោយគ្មានបំណង) និងលាក់ keyboard focus នៅក្នុង modal ហើយវាកំណត់ឡើងវិញនៃ focus ទៅកាន់ element ដែលធ្វើឱ្យ modal ដំណើរការ។
+
+>ចំណាំ:
 >
->While this is a very important accessibility feature, it is also a technique that should be used judiciously. Use it to repair the keyboard focus flow when it is disturbed, not to try and anticipate how
->users want to use applications.
+>ខណៈនេះជា accessibility feature ដ៏សំខាន់ ដូច្នេះវាក៏ជាជាបច្ចេកទេសដែលគួរត្រូវតែបានប្រើដោយត្រឹមត្រូវ។
+> ប្រើវាដើម្បីជួសជុលលំហូរនៃ keyboard focus នៅពេលវាត្រូវបានរំខាន, កុំព្យាយាមនិងរំពឹងមើលពីរបៀបដែលអ្នកប្រើចង់ប្រើកម្មវិធី។
 
 ## Mouse and pointer events {#mouse-and-pointer-events}
 
-Ensure that all functionality exposed through a mouse or pointer event can also be accessed using the keyboard alone. Depending only on the pointer device will lead to many cases where
-keyboard users cannot use your application.
+ធានាថាមុខងារទាំងអស់ដែលធ្វើការតាមរយះ mouse ឬ pointer event ក៏អាចប្រើប្រាស់បានដោយ keyboard តែឯងបាន។ ការពឹងទៅលើឧបករណ៍ pointer តែមួយមុខនឹងនាំមកនូវបញ្ហាផ្សេងៗទៅដល់អ្នកប្រើប្រាស់ keyboard ទៅកាន់កម្មវិធីរបស់អ្នក។
 
-To illustrate this, let's look at a prolific example of broken accessibility caused by click events. This is the outside click pattern, where a user can disable an opened popover by clicking outside the element.
+ដើម្បីបង្ហាញពីចំនុចនេះសូមមើលឧទាហរណ៍ដ៏អស្ចារ្យមួយនៃភាពងាយស្រួលដែលបណ្តាលមកពីការចុចព្រឹត្តិការណ៍។ នេះគឺជាលំនាំចុចខាងក្រៅដែលអ្នកប្រើអាចបិទដំណើរការ popover ដែលបានបើកដោយចុចខាងក្រៅ element។
 
 <img src="../images/docs/outerclick-with-mouse.gif" alt="A toggle button opening a popover list implemented with the click outside pattern and operated with a mouse showing that the close action works." />
 
-This is typically implemented by attaching a `click` event to the `window` object that closes the popover:
+នេះត្រូវបានអនុវត្តជាធម្មតាដោយការភ្ជាប់មួយព្រឹត្តិការណ៍ `click` ទៅកាន់នឹងវត្ថុរបស់ `window` ដែលអាចបិទ popover នោះ៖
 
 ```javascript{12-14,26-30}
 class OuterClickExample extends React.Component {
@@ -301,12 +299,11 @@ constructor(props) {
 }
 ```
 
-This may work fine for users with pointer devices, such as a mouse, but operating this with the keyboard alone leads to broken functionality when tabbing to the next element
-as the `window` object never receives a `click` event. This can lead to obscured functionality which blocks users from using your application.
+វាប្រហែលជាដំណើរប្រក្រតីធម្មតាជាមួួយនឹងអ្នកប្រើប្រាស់ឧបករណ៍ចង្អុលដូចជា mouse។ ប៉ុន្តែបើធ្វើប្រតិបត្តការណ៍ជាមួយតែ keyboard អាចនឹងជួបបញ្ហានៅពេលដែលចុចដើម្បីផ្តូរទៅកាន់ element បន្ទាប់បណ្តាលឱ្យ `window` មិនបានទទួលប្រតិការណ៍ចុច។ វាអាចនាំឱ្យមុខងារដែលមិនច្បាស់លាស់ដែលរារាំងអ្នកប្រើពីការប្រើកម្មវិធីរបស់អ្នក។
 
 <img src="../images/docs/outerclick-with-keyboard.gif" alt="A toggle button opening a popover list implemented with the click outside pattern and operated with the keyboard showing the popover not being closed on blur and it obscuring other screen elements." />
 
-The same functionality can be achieved by using an appropriate event handlers instead, such as `onBlur` and `onFocus`:
+functionality ដូចគ្នាអាចសម្រេចបានដោយប្រើព្រឹត្តិការណ៍សមរម្យជំនួសវិញដើម្បីដោះស្រាយ ដូចជា `onBlur` និង `onFocus`៖
 
 ```javascript{19-29,31-34,37-38,40-41}
 class BlurExample extends React.Component {
@@ -368,23 +365,20 @@ class BlurExample extends React.Component {
 }
 ```
 
-This code exposes the functionality to both pointer device and keyboard users. Also note the added `aria-*` props to support screen-reader users. For simplicity's sake
-the keyboard events to enable `arrow key` interaction of the popover options have not been implemented.
+កូដនេះបង្ហាញពីមុខងារទាំងអ្នកប្រើឧបករណ៍ចង្អុលនិងអ្នកប្រើក្តារចុច។ ហើយចាំថាដាក់បន្ថែម `aria-*` props សម្រាប់ជួយអ្នកប្រើប្រាស់។ សម្រាប់ភាពសាមញ្ញរបស់
+ព្រឹត្តិការណ៍ក្តារចុចដើម្បីបើកដំណើរការរវាងនឹង 'key arrow' នៃជម្រើស popover មិនត្រូវបានអនុវត្ត។
 
 <img src="../images/docs/blur-popover-close.gif" alt="A popover list correctly closing for both mouse and keyboard users." />
 
-This is one example of many cases where depending on only pointer and mouse events will break functionality for keyboard users. Always testing with the keyboard will immediately
-highlight the problem areas which can then be fixed by using keyboard aware event handlers.
+នេះជាឧទាហរណ៍មួយនៃករណីជាច្រើនដែលអាស្រ័យលើតែព្រឹត្តិការណ៍ចង្អុល ឬ mouse នាំឱ្យមានបញ្ហាដល់អ្នកប្រើប្រាស់ក្តារចុច។ តែងតែសាកល្បងជាមួយនឹងក្តារចុចភ្លាមៗ ដើម្បីរកបញ្ហាដែលអាចកែតំរូវដោយប្រើព្រឹត្តិការការពាររបស់ក្តាចុច។
 
 ## More Complex Widgets {#more-complex-widgets}
 
-A more complex user experience should not mean a less accessible one. Whereas accessibility is most easily achieved by coding as close to HTML as possible,
-even the most complex widget can be coded accessibly.
+បទពិសោធអ្នកប្រើដែលស្មុគស្មាញមិនគួរមានន័យថាអាចចូលប្រើបានតិចជាងម្តងទេ។ ខណះពេលដែល accessibility គឺជារឿងងាយស្រួលបំផុតក្នុងការសម្រេចដោយការ coding មានលក្ខណៈដូចទៅនឹង HTML តាមដែលអាចធ្វើបាន។
 
-Here we require knowledge of [ARIA Roles](https://www.w3.org/TR/wai-aria/#roles) as well as [ARIA States and Properties](https://www.w3.org/TR/wai-aria/#states_and_properties).
-These are toolboxes filled with HTML attributes that are fully supported in JSX and enable us to construct fully accessible, highly functional React components.
+ទីនេះយើងត្រូវការចំណេះដឹងនៃ [ARIA Roles](https://www.w3.org/TR/wai-aria/#roles) ដូចជា [ARIA States and Properties](https://www.w3.org/TR/wai-aria/#states_and_properties)។ ទាំងនេះគឺជាប្រអប់ឧបករណ៍ដែលបំពេញដោយ attributes របស់ HTML ដែលត្រូវបានគាំទ្រយ៉ាងពេញលេញនៅក្នុង JSX និងអាចឱ្យយើងបង្កើត components របស់ React ដែលអាចចូលដំណើរការបានយ៉ាងពេញលេញ។
 
-Each type of widget has a specific design pattern and is expected to function in a certain way by users and user agents alike:
+ប្រភេទធាតុក្រាហ្វិកនីមួយៗមានលំនាំរចនាជាក់លាក់ហើយត្រូវបានគេរំពឹងថានឹងដំណើរការតាមវិធីជាក់ស្តែងដោយអ្នកប្រើនិងភ្នាក់ងារអ្នកប្រើដូចគ្នា៖
 
 - [WAI-ARIA Authoring Practices - Design Patterns and Widgets](https://www.w3.org/TR/wai-aria-practices/#aria_ex)
 - [Heydon Pickering - ARIA Examples](https://heydonworks.com/practical_aria_examples/)
@@ -394,60 +388,58 @@ Each type of widget has a specific design pattern and is expected to function in
 
 ### Setting the language {#setting-the-language}
 
-Indicate the human language of page texts as screen reader software uses this to select the correct voice settings:
+បង្ហាញទំព័រអត្ថបទនៃភាសារមនុស្សជាកម្មវិធី screen reader ប្រើដើម្បីជ្រើសរើស voice settings យ៉ាងត្រឹមត្រូវ៖
 
 - [WebAIM - Document Language](https://webaim.org/techniques/screenreader/#language)
 
 ### Setting the document title {#setting-the-document-title}
 
-Set the document `<title>` to correctly describe the current page content as this ensures that the user remains aware of the current page context:
+កំណត់ឯកសារ `<title>` ដើម្បីពិពណ៌នាខ្លឹមសារទំព័របច្ចុប្បន្នយ៉ាងត្រឹមត្រូវដែលវាធានាថាអ្នកប្រើប្រាស់នៅតែដឹងពីបរិបទទំព័របច្ចុប្បន្ន៖
 
 - [WCAG - Understanding the Document Title Requirement](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html)
 
-We can set this in React using the [React Document Title Component](https://github.com/gaearon/react-document-title).
+យើងអាចកំណត់វានៅក្នុង React ដោយប្រើ [React Document Title Component](https://github.com/gaearon/react-document-title)។
 
 ### Color contrast {#color-contrast}
 
-Ensure that all readable text on your website has sufficient color contrast to remain maximally readable by users with low vision:
+ត្រូវប្រាកដថាអត្ថបទទាំងអស់ដែលអាចអានបាននៅលើគេហទំព័ររបស់អ្នកមានភាពផ្ទុយគ្នាពណ៌គ្រប់គ្រាន់ដើម្បីនៅតែអាចអានបានដោយអ្នកប្រើដែលមានបញ្ហាភ្នែក៖
 
 - [WCAG - Understanding the Color Contrast Requirement](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 - [Everything About Color Contrast And Why You Should Rethink It](https://www.smashingmagazine.com/2014/10/color-contrast-tips-and-tools-for-accessibility/)
 - [A11yProject - What is Color Contrast](https://a11yproject.com/posts/what-is-color-contrast/)
 
-It can be tedious to manually calculate the proper color combinations for all cases in your website so instead, you can [calculate an entire accessible color palette with Colorable](https://jxnblk.com/colorable/).
+វាអាចធុញទ្រាន់ក្នុងការគណនាបន្សំពណ៌ត្រឹមត្រូវសម្រាប់គ្រប់ករណីទាំងអស់នៅក្នុងគេហទំព័ររបស់អ្នកដូច្នេះ អ្នកអាចធ្វើបាន [calculate an entire accessible color palette with Colorable](https://jxnblk.com/colorable/)។
 
-Both the aXe and WAVE tools mentioned below also include color contrast tests and will report on contrast errors.
+ទាំងឧបករណ៍ aXe និង WAVE ដែលបានរៀបរាប់ខាងក្រោមក៏មានការធ្វើតេស្តកម្រិតពណ៌ហើយនឹងរាយការណ៍អំពីកំហុសឆ្គងផងដែរ។
 
-If you want to extend your contrast testing abilities you can use these tools:
+ប្រសិនបើអ្នកចង់ពង្រីកសមត្ថភាព និងសាកល្បងកម្រិតពណ៌របស់អ្នក អ្នកអាចប្រើឧបករណ៍ទាំងនេះ៖
 
 - [WebAIM - Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [The Paciello Group - Color Contrast Analyzer](https://www.paciellogroup.com/resources/contrastanalyser/)
 
 ## Development and Testing Tools {#development-and-testing-tools}
 
-There are a number of tools we can use to assist in the creation of accessible web applications.
+មានឧបករណ៍មួយចំនួនដែលយើងអាចប្រើដើម្បីជួយក្នុងការបង្កើតកម្មវិធី web បាន។
 
 ### The keyboard {#the-keyboard}
 
-By far the easiest and also one of the most important checks is to test if your entire website can be reached and used with the keyboard alone. Do this by:
+រហូតមកដល់ពេលនេះ អ្វីដែលងាយស្រួល និងជាចំនុចសំខាន់បំផុតគឺត្រួតពិនិត្យថាតើ website ទាំងមូលអាចចូលទៅកាន់បាន និងអាចប្រើជាមួយក្តាចុចតែឯងបាន។ ដោយធ្វើដូចខាងក្រោមនេះ៖
 
-1. Plugging out your mouse.
-1. Using `Tab` and `Shift+Tab` to browse.
-1. Using `Enter` to activate elements.
-1. Where required, using your keyboard arrow keys to interact with some elements, such as menus and dropdowns.
+1. ដក mouse របស់អ្នកចេញ។
+1. ការប្រើ `Tab` និង `Shift+Tab` ដើម្បីស្វែងរក។
+1. ការប្រើ `Enter` ដើម្បីធ្វើសកម្មភាពលើ elements។
+1. ការប្រើសញ្ញាព្រួញនៃក្តាចុចដើម្បីមានទំនាក់ទំនងជាមួយ elements ខ្លះដូចជា menus និង dropdowns នៅពេលដែលចាំបាច់។
 
 ### Development assistance {#development-assistance}
 
-We can check some accessibility features directly in our JSX code. Often intellisense checks are already provided in JSX aware IDE's for the ARIA roles, states and properties. We also
-have access to the following tool:
+យើងអាចពិនិត្យមើល accessibility features មួយចំនួនដោយផ្ទាល់នៅក្នុងកូដ JSX របស់យើង។ ជារឿយៗការពិនិត្យដោយ intellisense ត្រូវបានផ្តល់រួចហើយនៅក្នុង JSX IDE's សម្រាប់ roles states និង properties របស់ ARIA។ យើងផងដែរ
+មានសិទ្ធិចូលទៅឧបករណ៍ដូចខាងក្រោម៖
 
 #### eslint-plugin-jsx-a11y {#eslint-plugin-jsx-a11y}
 
-The [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y) plugin for ESLint provides AST linting feedback regarding accessibility issues in your JSX. Many
-IDE's allow you to integrate these findings directly into code analysis and source code windows.
+[eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y) ជាកម្មវិធីជំនួយ សម្រាប់ ESLint ដោយផ្តល់ AST linting មតិត្រឡប់ផ្អែកទៅលើបញ្ហាក្នុង JSX របស់អ្នក។ មាន IDE ជាច្រើនអនុញ្ញាតឱ្យអ្នកភ្ចាប់ជំនួយនេះដោយ​ផ្ទាល់ទៅកាន់ការវិភាគកូដ និង windows នៃប្រភពកូដ។
 
-[Create React App](https://github.com/facebookincubator/create-react-app) has this plugin with a subset of rules activated. If you want to enable even more accessibility rules,
-you can create an `.eslintrc` file in the root of your project with this content:
+[Create React App](https://github.com/facebookincubator/create-react-app) មានកម្មវិធីជំនួយនេះជាមួយសំណុំរងនៃច្បាប់ activated។ ប្រសិនបើអ្នកចង់បើកច្បាប់កាន់តែច្រើន អ្នកអាចបង្កើត file `.eslintrc` នៅក្នុងទីតាំងដើមនៃ project របស់អ្នកជាមួយនឹងមាតិកាដូចខាងក្រោម៖
 
   ```json
   {
@@ -458,27 +450,25 @@ you can create an `.eslintrc` file in the root of your project with this content
 
 ### Testing accessibility in the browser {#testing-accessibility-in-the-browser}
 
-A number of tools exist that can run accessibility audits on web pages in your browser. Please use them in combination with other accessibility checks mentioned here as they can only
-test the technical accessibility of your HTML.
+មាន tools មួយចំនួនដែលមានស្រាប់ អាចដំណើរការត្រួតពិនិត្យលើគេហទំព័រក្នុង browser របស់អ្នកបាន។ សូមប្រើរបស់ទាំងនោះដោយរួមបញ្ចូលជាមួយការត្រួតពិនិត្យផ្សេងៗដែលបានលើកឡើងទីនេះ ដែលវាអាចត្រឹមតែសាកល្បងបច្ចេកទេស accessibility នៃ HTML របស់អ្នក។
 
 #### aXe, aXe-core and react-axe {#axe-axe-core-and-react-axe}
 
-Deque Systems offers [aXe-core](https://github.com/dequelabs/axe-core) for automated and end-to-end accessibility tests of your applications. This module includes integrations for Selenium.
+ប្រព័ន្ធ Deque ផ្តល់ឱ្យ [aXe-core](https://github.com/dequelabs/axe-core) សំរាប់ធ្វើការសាកល្បងដោយស្វ័យប្រវត្តិ និងពីដើមដល់ចុងកម្មវិធីរបស់អ្នក។ module នេះរួមបញ្ចូលទំនាក់ទំនងសម្រាប់ Selenium ។
 
-[The Accessibility Engine](https://www.deque.com/products/axe/) or aXe, is an accessibility inspector browser extension built on `aXe-core`.
+[The Accessibility Engine](https://www.deque.com/products/axe/) ឬ aXe គឺជាកម្មវិធីបន្ថែមដែលអាចចូលបានរបស់ inspector browser បានស្ថាបនាលើ `aXe-core`។
 
-You can also use the [react-axe](https://github.com/dylanb/react-axe) module to report these accessibility findings directly to the console while developing and debugging.
+អ្នកក៏អាចប្រើ [react-axe](https://github.com/dylanb/react-axe) module សម្រាប់រាយការក្នុងការរកដោយផ្ទាល់ទៅកាន់ console ខណះដែលកំពុង developing និង debugging។
 
 #### WebAIM WAVE {#webaim-wave}
 
-The [Web Accessibility Evaluation Tool](https://wave.webaim.org/extension/) is another accessibility browser extension.
+[Web Accessibility Evaluation Tool](https://wave.webaim.org/extension/) គឺជាកម្មវិធីបន្ថែមមួយទៀតនៅលើ browser។
 
 #### Accessibility inspectors and the Accessibility Tree {#accessibility-inspectors-and-the-accessibility-tree}
 
-[The Accessibility Tree](https://www.paciellogroup.com/blog/2015/01/the-browser-accessibility-tree/) is a subset of the DOM tree that contains accessible objects for every DOM element that should be exposed
-to assistive technology, such as screen readers.
+[The Accessibility Tree](https://www.paciellogroup.com/blog/2015/01/the-browser-accessibility-tree/) គឺជាសំណុំរងនៃប្រព័ន្ធ DOM ដែលមានផ្ទុក accessible objects សម្រាប់គ្រប់ element របស់ DOM មួយណាបង្ហាញថាជួយដល់បច្ចេកទេស ដូចជាអេក្រង់សម្រាប់អ្នកអាន។
 
-In some browsers we can easily view the accessibility information for each element in the accessibility tree:
+នៅក្នុង browsers ខ្លះយើងអាចមើលព័ត៌មាន accessibility នៃ element និមួយៗក្នុងប្រព័ន្ធ accessibility៖
 
 - [Using the Accessibility Inspector in Firefox](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector)
 - [Activate the Accessibility Inspector in Chrome](https://gist.github.com/marcysutton/0a42f815878c159517a55e6652e3b23a)
@@ -486,26 +476,26 @@ In some browsers we can easily view the accessibility information for each eleme
 
 ### Screen readers {#screen-readers}
 
-Testing with a screen reader should form part of your accessibility tests.
+ការធ្វើតេស្តជាមួយកម្មវិធីអេក្រង់សម្រាប់អានគួរតែបង្កើតជាផ្នែកនៃការសាកល្បង accessibility របស់អ្នក។
 
-Please note that browser / screen reader combinations matter. It is recommended that you test your application in the browser best suited to your screen reader of choice.
+សូមចំណាំថាបន្សំនឹងមានបញ្ហារវាង browser / អេក្រង់សម្រាប់អ្នកអាន។ វាបានត្រូវនែណាំជាជម្រើសដ៏ល្អមួយគឺឱ្យអ្នកធ្វើតេស្តកម្មវិធីនៃ screen reader នៅក្នុង browser។
 
 ### Commonly Used Screen Readers {#commonly-used-screen-readers}
 
 #### NVDA in Firefox {#nvda-in-firefox}
 
-[NonVisual Desktop Access](https://www.nvaccess.org/) or NVDA is an open source Windows screen reader that is widely used.
+[NonVisual Desktop Access](https://www.nvaccess.org/) ឬ NVDA គឺជា open source Windows screen reader ដែលត្រូវបានប្រើយ៉ាងទូលំទូលាយ។
 
-Refer to the following guides on how to best use NVDA:
+ខាងក្រោមគឺជារបៀបប្រើប្រាស់ NVDA៖
 
 - [WebAIM - Using NVDA to Evaluate Web Accessibility](https://webaim.org/articles/nvda/)
 - [Deque - NVDA Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts)
 
 #### VoiceOver in Safari {#voiceover-in-safari}
 
-VoiceOver is an integrated screen reader on Apple devices.
+VoiceOver គឺជាការភ្ចាប់រវាង screen reader នៅលើឧបករណ៍របស់ Apple។
 
-Refer to the following guides on how activate and use VoiceOver:
+ខាងក្រោមគឺជារបៀប activate និង ប្រើប្រាស់ VoiceOver៖
 
 - [WebAIM - Using VoiceOver to Evaluate Web Accessibility](https://webaim.org/articles/voiceover/)
 - [Deque - VoiceOver for OS X Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts)
@@ -513,9 +503,9 @@ Refer to the following guides on how activate and use VoiceOver:
 
 #### JAWS in Internet Explorer {#jaws-in-internet-explorer}
 
-[Job Access With Speech](https://www.freedomscientific.com/Products/software/JAWS/) or JAWS, is a prolifically used screen reader on Windows.
+[Job Access With Speech](https://www.freedomscientific.com/Products/software/JAWS/) or JAWS, គឺជាការប្រើដៅយសេរីនៃ screen reader នៅលើ Windows។
 
-Refer to the following guides on how to best use JAWS:
+ខាងក្រោមគឺជារបៀបប្រើប្រាស់ JAWS៖
 
 - [WebAIM - Using JAWS to Evaluate Web Accessibility](https://webaim.org/articles/jaws/)
 - [Deque - JAWS Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts)
@@ -524,9 +514,9 @@ Refer to the following guides on how to best use JAWS:
 
 #### ChromeVox in Google Chrome {#chromevox-in-google-chrome}
 
-[ChromeVox](https://www.chromevox.com/) is an integrated screen reader on Chromebooks and is available [as an extension](https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) for Google Chrome.
+[ChromeVox](https://www.chromevox.com/) គឺជាការភ្ចាប់ screen reader នៅលើ Chromebooks និងអាចរកបាន [ជាកម្មវិធីបន្ថែម](https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) សម្រាប់ Google Chrome។
 
-Refer to the following guides on how best to use ChromeVox:
+ខាងក្រោមគឺជារបៀបប្រើប្រាស់ ChromeVox៖
 
 - [Google Chromebook Help - Use the Built-in Screen Reader](https://support.google.com/chromebook/answer/7031755?hl=en)
 - [ChromeVox Classic Keyboard Shortcuts Reference](https://www.chromevox.com/keyboard_shortcuts.html)
