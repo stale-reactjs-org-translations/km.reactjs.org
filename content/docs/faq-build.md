@@ -6,27 +6,25 @@ layout: docs
 category: FAQ
 ---
 
-### Do I need to use JSX with React? {#do-i-need-to-use-jsx-with-react}
+### តើខ្ញ៉ំត្រូវតែប្រើ JSX ជាមួយ React មែនដែរឬទេ? {#do-i-need-to-use-jsx-with-react}
+មិនមែនទេ! សូមចុចlinkនេះដើម្បីអានអំពីការប្រើប្រាស់ ["React ដោយគ្មាន JSX"](/docs/react-without-jsx.html)
 
-No! Check out ["React Without JSX"](/docs/react-without-jsx.html) to learn more.
+### តើខ្ញ៉ំត្រូវចាំបាច់ប្រើ ES6(+) ជាមួយ React មែនដែរឬទេ? {#do-i-need-to-use-es6--with-react}
+មិនមែនទេ! សូមចុចlinkនេះដើម្បីអានអំពីការប្រើប្រាស់ ["React ដោយគ្មាន ES6(+)"](/docs/react-without-es6.html)
 
-### Do I need to use ES6 (+) with React? {#do-i-need-to-use-es6--with-react}
-
-No! Check out ["React Without ES6"](/docs/react-without-es6.html) to learn more.
-
-### How can I write comments in JSX? {#how-can-i-write-comments-in-jsx}
+### តើខ្ញ៉ំអាចសរសេរ comments នៅក្នុង JSX ដោយរបៀបណា? {#how-can-i-write-comments-in-jsx}
 
 ```jsx
 <div>
-  {/* Comment goes here */}
+  {/* Comment សរសេរនៅទីនេះ */}
   Hello, {name}!
 </div>
 ```
 
 ```jsx
 <div>
-  {/* It also works 
-  for multi-line comments. */}
-  Hello, {name}! 
+  {/* អ្នកក៏អាចសរសេរ
+    Comment បានច្រើនជួរផងដែរ */}
+  Hello, {name}!
 </div>
 ```
