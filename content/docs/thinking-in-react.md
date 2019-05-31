@@ -8,9 +8,9 @@ redirect_from:
 prev: composition-vs-inheritance.html
 ---
 
-React is, in our opinion, the premier way to build big, fast Web apps with JavaScript. It has scaled very well for us at Facebook and Instagram.
+នៅក្នុងគំនិតរបស់ពួកយើង React គឺជាវិធីសំខាន់បំផុតដើម្បីកសាង Web apps ជាមួយ JavaScript ដ៏ធំមួយ។ វាបានគ្រប់គ្រងការងារនិងដំណើរការដែលកំពុងកើនឡើង (scale) បានយ៉ាងល្អសម្រាប់យើងនៅ Facebook និង Instagram។
 
-One of the many great parts of React is how it makes you think about apps as you build them. In this document, we'll walk you through the thought process of building a searchable product data table using React.
+ផ្នែកមួយនៃផ្នែកដ៏អស្ចារ្យជាច្រើននៃ React គឺរបៀបដែលវាធ្វើឱ្យអ្នកគិតអំពី apps នៅពេលអ្នកបង្កើតពួកវា, នៅក្នុងឯកសារនេះ យើងនឹងនាំអ្នកឆ្លងកាត់ដំណើរការនៃការបង្កើតតារាងទិន្នន័យរបស់ផលិតផលដែលអាច search បានដោយការប្រើ React។
 
 ## Start With A Mock {#start-with-a-mock}
 
