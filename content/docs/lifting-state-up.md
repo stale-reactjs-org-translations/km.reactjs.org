@@ -9,11 +9,12 @@ redirect_from:
   - "docs/flux-todo-list.html"
 ---
 
-ជារឿយៗ components ជាច្រើនត្រូវឆ្លុះបញ្ចាំងពីការផ្លាស់ប្តូរទិន្នន័យដូចគ្នា។ We recommend lifting the shared state up to their closest common ancestor. Let's see how this works in action.
+យើង​សូម​ផ្ដល់​អនុសាសន៍​ពីការលើក state ដែលត្រូវបាន shared ទៅកាន់ ancestor រួមគ្នាដែលជិតស្និទ្ធបំផុត។ តោះយើងមើលរបៀបដែលវាដំណើរការ។
 
-In this section, we will create a temperature calculator that calculates whether the water would boil at a given temperature.
+នៅក្នុងផ្នែកនេះ យើងនឹងបង្កើតម៉ាសុីនគណនាសីតុណ្ហាភាពដែលគណនាថាទឹកនឹងឆ្អិននៅសីតុណ្ហាភាពដែលបានផ្តល់ឱ្យ។
 
-We will start with a component called `BoilingVerdict`. It accepts the `celsius` temperature as a prop, and prints whether it is enough to boil the water:
+យើងនឹងចាប់ផ្តើមជាមួយ component មួយដែលត្រូវបានគេហៅថា `BoilingVerdict`។ 
+វាទទួលយកសីតុណ្ហាភាព `celsius` ជា props ហើយ prints ថាតើវាគ្រប់គ្រាន់ដើម្បីដាំទឹក៖
 
 ```js{3,5}
 function BoilingVerdict(props) {
@@ -24,9 +25,9 @@ function BoilingVerdict(props) {
 }
 ```
 
-Next, we will create a component called `Calculator`. It renders an `<input>` that lets you enter the temperature, and keeps its value in `this.state.temperature`.
+បន្ទាប់មកទៀត យើងនឹងបង្កើត component មួយដែលត្រូវបានគេហៅថា `Calculator`។ វា renders `<input>` មួយដែលអនុញ្ញាតឱ្យអ្នកបញ្ចូលសីតុណ្ហភាព ហើយរក្សាតម្លៃរបស់វានៅក្នុង `this.state.temperature`។
 
-Additionally, it renders the `BoilingVerdict` for the current input value.
+លើសពីនេះទៀត វា renders `BoilingVerdict` សម្រាប់តម្លៃបញ្ចូលបច្ចុប្បន្ន។
 
 ```js{5,9,13,17-21}
 class Calculator extends React.Component {
@@ -56,7 +57,7 @@ class Calculator extends React.Component {
 }
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/ZXeOBm?editors=0010)
+[**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/ZXeOBm?editors=0010)
 
 ## Adding a Second Input {#adding-a-second-input}
 
