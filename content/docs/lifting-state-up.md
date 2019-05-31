@@ -119,7 +119,7 @@ class Calculator extends React.Component {
 
 ## Writing Conversion Functions {#writing-conversion-functions}
 
-First, we will write two functions to convert from Celsius to Fahrenheit and back:
+ដំបូង យើងនឹងសរសេរ functions ពីរដើម្បីបម្លែងពី Celsius ទៅជា Fahrenheit ហើយនិងពី Fahrenheit ទៅជា Celsius៖
 
 ```js
 function toCelsius(fahrenheit) {
@@ -131,9 +131,9 @@ function toFahrenheit(celsius) {
 }
 ```
 
-These two functions convert numbers. We will write another function that takes a string `temperature` and a converter function as arguments and returns a string. We will use it to calculate the value of one input based on the other input.
+functions ពីរនេះបម្លែងលេខ។ យើងនឹងសរសេរ function ផ្សេងទៀតដែលទទួលយក string `temperature` ហើយនិង converter function មួយជា arguments ហើយ returns នូវ string មួយ។ យើងនឹងប្រើវាដើម្បីគណនាតម្លៃនៃ input មួយដោយផ្អែកលើ input ផ្សេង។
 
-It returns an empty string on an invalid `temperature`, and it keeps the output rounded to the third decimal place:
+វា returns string ទទេមួយនៅលើ `temperature` (សីតុណ្ហាភាព) មិនត្រឹមត្រួវមួយ ហើយវារក្សាទុក output (ទិន្នផល) ដែល rounded ទៅខ្ទង់ទសភាគទីបី៖
 
 ```js
 function tryConvert(temperature, convert) {
@@ -147,7 +147,7 @@ function tryConvert(temperature, convert) {
 }
 ```
 
-For example, `tryConvert('abc', toCelsius)` returns an empty string, and `tryConvert('10.22', toFahrenheit)` returns `'50.396'`.
+ឧទាហរណ៍ `tryConvert('abc', toCelsius)` returns នូវ string ទទេមួយ ហើយ `tryConvert('10.22', toFahrenheit)` returns នូវ​ `'50.396'`។
 
 ## Lifting State Up {#lifting-state-up}
 
