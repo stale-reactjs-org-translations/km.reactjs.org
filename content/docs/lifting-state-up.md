@@ -61,9 +61,9 @@ class Calculator extends React.Component {
 
 ## Adding a Second Input {#adding-a-second-input}
 
-Our new requirement is that, in addition to a Celsius input, we provide a Fahrenheit input, and they are kept in sync.
+តម្រូវការថ្មីរបស់យើងគឺថា បន្ថែមពីលើ Celsius input យើងផ្តល់ជូននូវ Fahrenheit input ហើយពួកវាត្រូវបានរក្សាទុកក្នុងលក្ខណះ sync។
 
-We can start by extracting a `TemperatureInput` component from `Calculator`. We will add a new `scale` prop to it that can either be `"c"` or `"f"`:
+យើងអាចចាប់ផ្តើមដោយការទាញយក `TemperatureInput` component ពី `Calculator`។ យើងនឹងបន្ថែម `scale` prop ថ្មីមួយអោយវាដែលអាចជា `"c"` ឬ `"f"`៖
 
 ```js{1-4,19,22}
 const scaleNames = {
@@ -96,7 +96,7 @@ class TemperatureInput extends React.Component {
 }
 ```
 
-We can now change the `Calculator` to render two separate temperature inputs:
+ឥឡូវនេះយើងអាចផ្លាស់ប្តូរ `Calculator` ដើម្បី render temperature inputs ពីរដាច់ដោយឡែកពីគ្នា៖
 
 ```js{5,6}
 class Calculator extends React.Component {
@@ -111,11 +111,11 @@ class Calculator extends React.Component {
 }
 ```
 
-[**Try it on CodePen**](https://codepen.io/gaearon/pen/jGBryx?editors=0010)
+[**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/jGBryx?editors=0010)
 
-We have two inputs now, but when you enter the temperature in one of them, the other doesn't update. This contradicts our requirement: we want to keep them in sync.
+ឥឡូវ​នេះយើងមាន inputs ចំនួនពីរ ប៉ុន្តែនៅពេលដែលអ្នកបញ្ចូលសីតុណ្ហភាពមួយក្នុងចំណោមពួកវា inputs ផ្សេងៗទៀតមិន update នេាះទេ។ នេះផ្ទុយនឹងតម្រូវការរបស់យើង៖ យើងចង់រក្សាវាក្នុងលក្ខណះ sync។
 
-We also can't display the `BoilingVerdict` from `Calculator`. The `Calculator` doesn't know the current temperature because it is hidden inside the `TemperatureInput`.
+យើងក៏មិនអាចបង្ហាញផងដែរនូវ `BoilingVerdict` ពី `Calculator`។ `Calculator` មិនដឹងពីសីតុណ្ហភាពបច្ចុប្បន្ ពីព្រោះវាត្រូវបានលាក់នៅខាងក្នុង `TemperatureInput`។
 
 ## Writing Conversion Functions {#writing-conversion-functions}
 
