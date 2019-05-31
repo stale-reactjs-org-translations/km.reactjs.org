@@ -33,15 +33,15 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
 
 ## Step 1: Break The UI Into A Component Hierarchy {#step-1-break-the-ui-into-a-component-hierarchy}
 
-The first thing you'll want to do is to draw boxes around every component (and subcomponent) in the mock and give them all names. If you're working with a designer, they may have already done this, so go talk to them! Their Photoshop layer names may end up being the names of your React components!
+រឿងដំបូងដែលអ្នកនឹងចង់ធ្វើគឺគូសប្រអប់នៅជុំវិញ component ទាំងអស់ (និង subcomponent) នៅក្នុង mock និងដាក់ឈ្មោះឱ្យពួកវា។ ប្រសិនបើអ្នកកំពុងតែធ្វើការជាមួយ designer ពួកគេប្រហែលជាបានធ្វើរួចហើយ ដូច្នេះសូមទៅនិយាយជាមួយពួកគេ! ឈ្មោះ Photoshop layer របស់ពួកគេអាចនឹងក្លាយជាឈ្មោះនៃ React components របស់អ្នក!
 
-But how do you know what should be its own component? Just use the same techniques for deciding if you should create a new function or object. One such technique is the [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle), that is, a component should ideally only do one thing. If it ends up growing, it should be decomposed into smaller subcomponents.
+ប៉ុន្ដែតើអ្នកដឹងដោយរបៀបណាអ្វីដែលជា component របស់វាផ្ទាល់? រាន់តែប្រើបច្ចេកទេសដូចគ្នាដើម្បីសម្រេចចិត្តថាអ្នកគួរតែបង្កើត function ឬក៏ object ថ្មីមួយ។ បច្ចេកទេសបែបនេាះគឺ [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle), component មួយគួរតែធ្វើរឿងតែមួយគត់។ ប្រសិនបើវាបន្តរីកធំទៅៗ វាគួរតែត្រូវបានគេបំបែកទៅជា subcomponents តូចៗ។
 
-Since you're often displaying a JSON data model to a user, you'll find that if your model was built correctly, your UI (and therefore your component structure) will map nicely. That's because UI and data models tend to adhere to the same *information architecture*, which means the work of separating your UI into components is often trivial. Just break it up into components that represent exactly one piece of your data model.
+ដែលអ្នកតែងតែបង្ហាញ JSON data model ទៅអោយអ្នកប្រើប្រាស់, អ្នកនឹងរកឃើញថាប្រសិនបើ model របស់អ្នកត្រូវបានបង្កើតឡើងដោយត្រឹមត្រូវ, UI របស់អ្នក (ហើយនិងរចនាសម្ព័ន្ធ component របស់អ្នក) នឹង map បានយ៉ាងល្អ។ នោះពីព្រេាះតែ UI និង data models មាននិន្នាការប្រកាន់ខ្ជាប់នូវ *ស្ថាបត្យកម្មព័ត៌មាន* ដូចគ្នា, ដែលមានន័យថាការងារនៃការបំបែក UI របស់អ្នកទៅជា components គឺមិនសូវសំខាន់។ គ្រាន់តែបំបែកវាជា components ដែលតំណាងឱ្យបំណែកមួយជាក់លាក់នៃ data model របស់អ្នក។
 
 ![Component diagram](../images/blog/thinking-in-react-components.png)
 
-You'll see here that we have five components in our simple app. We've italicized the data each component represents.
+អ្នកនឹងឃើញនៅទីនេះថាយើងមាន៥ components នៅក្នុង app ដ៏សាមញ្ញរបស់យើង។ We've italicized the data each component represents.
 
   1. **`FilterableProductTable` (orange):** contains the entirety of the example
   2. **`SearchBar` (blue):** receives all *user input*
