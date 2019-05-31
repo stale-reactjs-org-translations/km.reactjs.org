@@ -14,11 +14,11 @@ prev: composition-vs-inheritance.html
 
 ## Start With A Mock {#start-with-a-mock}
 
-Imagine that we already have a JSON API and a mock from our designer. The mock looks like this:
+ស្រមៃថាយើងមាន JSON API មួយនិង mock មួយសម្រាប់ designer របស់យើងរួចហើយ។ Mock មើលទៅដូចនេះ៖
 
 ![Mockup](../images/blog/thinking-in-react-mock.png)
 
-Our JSON API returns some data that looks like this:
+JSON API របស់យើង returns ទិន្នន័យមួយចំនួនដែលមើលទៅដូចនេះ៖
 
 ```
 [
