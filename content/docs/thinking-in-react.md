@@ -41,15 +41,15 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
 
 ![Component diagram](../images/blog/thinking-in-react-components.png)
 
-អ្នកនឹងឃើញនៅទីនេះថាយើងមាន៥ components នៅក្នុង app ដ៏សាមញ្ញរបស់យើង។ We've italicized the data each component represents.
+អ្នកនឹងឃើញនៅទីនេះថាយើងមាន៥ components នៅក្នុង app ដ៏សាមញ្ញរបស់យើង។ ដែលទិន្នន័យតំណាងដោយ component នីមួយៗ។
 
-  1. **`FilterableProductTable` (orange):** contains the entirety of the example
-  2. **`SearchBar` (blue):** receives all *user input*
-  3. **`ProductTable` (green):** displays and filters the *data collection* based on *user input*
-  4. **`ProductCategoryRow` (turquoise):** displays a heading for each *category*
-  5. **`ProductRow` (red):** displays a row for each *product*
+  1. **`FilterableProductTable` (orange):** មានឧទាហរណ៍ទាំងមូល
+  2. **`SearchBar` (blue):** ទទួលការ *input របស់អ្នកប្រើប្រាស់* ទាំងអស់
+  3. **`ProductTable` (green):** បង្ហាញនិងច្រេាះយក *បណ្តុំ data* ដោយផ្អែកលើ *ការ input របស់អ្នកប្រើប្រាស់*
+  4. **`ProductCategoryRow` (turquoise):** បង្ហាញ heading សម្រាប់ *category* នីមួយៗ
+  5. **`ProductRow` (red):** បង្ហាញជួរដេកសម្រាប់ *ផលិតផល* នីមួយៗ
 
-If you look at `ProductTable`, you'll see that the table header (containing the "Name" and "Price" labels) isn't its own component. This is a matter of preference, and there's an argument to be made either way. For this example, we left it as part of `ProductTable` because it is part of rendering the *data collection* which is `ProductTable`'s responsibility. However, if this header grows to be complex (i.e. if we were to add affordances for sorting), it would certainly make sense to make this its own `ProductTableHeader` component.
+ប្រសិនបើអ្នកក្រឡេកមើល `ProductTable` អ្នកនឹងឃើញថា header របស់តារាង (មានស្លាក "Name" និង "Price") គឺមិនមែនជា component របស់វាផ្ទាល់ទេ។ This is a matter of preference, and there's an argument to be made either way. For this example, we left it as part of `ProductTable` because it is part of rendering the *data collection* which is `ProductTable`'s responsibility. However, if this header grows to be complex (i.e. if we were to add affordances for sorting), it would certainly make sense to make this its own `ProductTableHeader` component.
 
 Now that we've identified the components in our mock, let's arrange them into a hierarchy. This is easy. Components that appear within another component in the mock should appear as a child in the hierarchy:
 
