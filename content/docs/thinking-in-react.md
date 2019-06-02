@@ -49,9 +49,10 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
   4. **`ProductCategoryRow` (turquoise):** បង្ហាញ heading សម្រាប់ *category* នីមួយៗ
   5. **`ProductRow` (red):** បង្ហាញជួរដេកសម្រាប់ *ផលិតផល* នីមួយៗ
 
-ប្រសិនបើអ្នកក្រឡេកមើល `ProductTable` អ្នកនឹងឃើញថា header របស់តារាង (មានស្លាក "Name" និង "Price") គឺមិនមែនជា component របស់វាផ្ទាល់ទេ។ This is a matter of preference, and there's an argument to be made either way. For this example, we left it as part of `ProductTable` because it is part of rendering the *data collection* which is `ProductTable`'s responsibility. However, if this header grows to be complex (i.e. if we were to add affordances for sorting), it would certainly make sense to make this its own `ProductTableHeader` component.
+ប្រសិនបើអ្នកក្រឡេកមើល `ProductTable` អ្នកនឹងឃើញថា header របស់តារាង (មានស្លាក "Name" និង "Price") គឺមិនមែនជា component របស់វាផ្ទាល់ទេ។ នេះជាបញ្ហាចំណង់ចំណូលចិត្ត, ហើយមាន argument មួយត្រូវបានបង្កើតឡើងតាមវិធីផ្សេង។ 
+សម្រាប់ឧទាហរណ៍នេះ, យើងទុកវាជាផ្នែកមួយ `ProductTable` ពីព្រេាះវាជាផ្នែកមួយនៃការ render *បណ្តុំ data* ដែលជាការ responsibility របស់ `ProductTable`។ ទោះយ៉ាងណា, ប្រសិនបើ header នេះកាន់តែធំទៅៗទៅជាស្មុគស្មាញ (i.e. ប្រសិនបើយើងចង់បន្ថែម sorting feature), វាពិតជាគំណិតត្រឹមត្រូវក្នុងការបង្កើត `ProductTableHeader` component សម្រាប់ `ProductTable`។
 
-Now that we've identified the components in our mock, let's arrange them into a hierarchy. This is easy. Components that appear within another component in the mock should appear as a child in the hierarchy:
+ឥឡូវនេះយើងបានកំណត់ components នៅក្នុង mock របស់យើងរួចរាល់ហើយ, តេាះរៀបចំពួកវាទៅជារចនាសម្ព័ន្ធ (hierarchy)។ នេះគឺងាយស្រួល។ Components ដែលនៅក្នុង component ផ្សេងនៅក្នុង mock គួរតែជា child នៅក្នុង រចនាសម្ព័ន្ធ (hierarchy)៖
 
   * `FilterableProductTable`
     * `SearchBar`
