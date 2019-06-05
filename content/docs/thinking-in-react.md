@@ -72,9 +72,9 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
 អ្នកអាចបង្កើតជាលក្ខណះ top-down ឬ bottom-up។ អ្នកអាចចាប់ផ្តើមបង្កើត component higher up នៅក្នុងរចនាសម្ព័ន្ធ (hierarchy) (ឧទាហរណ៍ ការចាប់ផ្តើមជាមួយ `FilterableProductTable`) ឬក៏ជាមួយ component ដែលនៅក្នុងវា (`ProductRow`)។ នៅក្នុងឧទាហរណ៏សាមញ្ញ 
 វាជាធម្មតាងាយស្រួលក្នុងការប្រើ top-down សម្រាប់ products ធំៗ, ហើយវាកាន់តែងាយស្រួលក្នុងការប្រើ bottom-up ហើយនិងសរសេរ tests។
 
-At the end of this step, you'll have a library of reusable components that render your data model. The components will only have `render()` methods since this is a static version of your app. The component at the top of the hierarchy (`FilterableProductTable`) will take your data model as a prop. If you make a change to your underlying data model and call `ReactDOM.render()` again, the UI will be updated. It's easy to see how your UI is updated and where to make changes since there's nothing complicated going on. React's **one-way data flow** (also called *one-way binding*) keeps everything modular and fast.
+នៅចុងបញ្ចប់នៃជំហាននេះ, អ្នកនឹងមាន library មួយជា reusable components ដែល render data model របស់អ្នក។ Components នឹងមានតែ `render` methods ដែលនេះគឺជា static version មួយនៃ app របស់អ្នក។ Component ដែលនៅផ្នែកខាងលើគេនៃរចនាសម្ព័ន្ធ (hierarchy) (`FilterableProductTable`) នឺងទទួលយក data model របស់អ្នកជា prop មួយ។ ប្រសិនបើអ្នកធ្វើការផ្លាស់ប្តូរ data model មូលដ្ឋានរបស់អ្នកហើយ call `ReactDOM.render()` ម្តងទៀត, UI នឹងត្រូវបានធ្វើបច្ចុប្បន្នភាព។ វាងាយស្រួលដើម្បីឃើញពីរបៀបដែល UI របស់អ្នកធ្វើបច្ចុប្បន្នភាពហើយនិងក្ន្លែងដែលធ្វើការផ្លាស់ប្តូរ ពីព្រេាះមិនមានអ្វីដែលស្មុគស្មាញបន្តទៀត។ **one-way data flow** របស់ React (ត្រូវបានគេហៅផងដែរថា *one-way binding*) រក្សារអ្វីគ្រប់យ៉ាងជាលក្ខណះ modular ហើយនិងលឿន។
 
-Simply refer to the [React docs](/docs/) if you need help executing this step.
+ប្រសិនបើអ្នកត្រូវការជំនួយក្នុងការអនុវត្តជំហាននេះសូមចូលទៅកាន់ [React docs](/docs/)។
 
 ### A Brief Interlude: Props vs State {#a-brief-interlude-props-vs-state}
 
