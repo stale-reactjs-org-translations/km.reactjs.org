@@ -16,7 +16,11 @@ Tutorial នេះសម្រាប់ទាំងអ្នកដែលមា�
 
 ## មុនពេលដែលយើងចាប់ផ្តើម tutorial {#before-we-start-the-tutorial}
 
+<<<<<<< HEAD
 យើងនិងបង្កើតហ្គេមដ៏តូចមួយនៅក្នុង tutorial នេះ។ **អ្នកអាច skip វាបានពីព្រេាះអ្នកមិនមែនជាអ្នកបង្កើតហ្គេមនេាះទេ -- ប៉ុន្តែអ្នកគួរតែសាកល្បងវា។**  Techniques ដែលអ្នកនិងរៀននៅក្នុង tutorial នេះគឺមូលដ្ឋានគ្រឺះដើម្បីបង្កើត React apps ហើយនិងការយល់ដឹងយ៉ាងសុីជម្រៅពី React។
+=======
+We will build a small game during this tutorial. **You might be tempted to skip it because you're not building games -- but give it a chance.** The techniques you'll learn in the tutorial are fundamental to building any React app, and mastering it will give you a deep understanding of React.
+>>>>>>> 5dca78b7e3b078df79615cfa6e8cf8464f8b397a
 
 >ពត៌មានជំនួយ
 >
