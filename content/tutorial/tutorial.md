@@ -16,7 +16,11 @@ Tutorial នេះសម្រាប់ទាំងអ្នកដែលមា�
 
 ## មុនពេលដែលយើងចាប់ផ្តើម tutorial {#before-we-start-the-tutorial}
 
+<<<<<<< HEAD
 យើងនិងបង្កើតហ្គេមដ៏តូចមួយនៅក្នុង tutorial នេះ។ **អ្នកអាច skip វាបានពីព្រេាះអ្នកមិនមែនជាអ្នកបង្កើតហ្គេមនេាះទេ -- ប៉ុន្តែអ្នកគួរតែសាកល្បងវា។**  Techniques ដែលអ្នកនិងរៀននៅក្នុង tutorial នេះគឺមូលដ្ឋានគ្រឺះដើម្បីបង្កើត React apps ហើយនិងការយល់ដឹងយ៉ាងសុីជម្រៅពី React។
+=======
+We will build a small game during this tutorial. **You might be tempted to skip it because you're not building games -- but give it a chance.** The techniques you'll learn in the tutorial are fundamental to building any React app, and mastering it will give you a deep understanding of React.
+>>>>>>> 6dcb963479953586f462ce31fddf35158c0598a0
 
 >ពត៌មានជំនួយ
 >
@@ -338,7 +342,11 @@ React Devtools extension សម្រាប់ [Chrome](https://chrome.google.co
 
 React DevTools អាចអោយអ្នកឆែកមើល props ហើយនិង state របស់ React components បាន។
 
+<<<<<<< HEAD
 បន្ទាប់ពីដំឡើង React DevTools, អ្នកអាច right-click លើ element ដែលមាននៅលើ page, click "Inspect" ដើម្បីបើក developer tools, ហើយ React tab នឹងលេចឡើងនៅផ្ទាំងចុងក្រោយខាងស្តាំ។
+=======
+After installing React DevTools, you can right-click on any element on the page, click "Inspect" to open the developer tools, and the React tabs ("⚛️ Components" and "⚛️ Profiler") will appear as the last tabs to the right. Use "⚛️ Components" to inspect the component tree.
+>>>>>>> 6dcb963479953586f462ce31fddf35158c0598a0
 
 **ទោះជាយ៉ាងណាក៏ដោយ, សូមកត់សម្គាល់ថាមានជំហានបន្ថែមមួយចំនួនទៀតដើម្បីអោយវាដំណើរការជាមួយ CodePen​៖**
 

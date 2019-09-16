@@ -122,7 +122,11 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 ## កំណែឯកសារ {#versioned-documentation}
 
+<<<<<<< HEAD
 ឯកសារនេះតែងតែឆ្លុះបញ្ចាំងពីកំណែដែលមានស្ថេរភាពចុងក្រោយបំផុតរបស់ React។ តាំងពី​ React 16 អ្នកអាចរកកំណែចាស់របស់ឯកសារ [នៅលើទំព័រដាច់ដោយឡែក](/versions)។ សូមចំណាំថាឯកសារសម្រាប់កំណែមុនៗគឺត្រូវបានគេកត់ត្រាទុក ប៉ុន្តែមិនត្រូវបានគេធ្វើបច្ចុប្បន្នភាពនេាះទេ។
+=======
+This documentation always reflects the latest stable version of React. Since React 16, you can find older versions of the documentation on a [separate page](/versions). Note that documentation for past versions is snapshotted at the time of the release, and isn't being continuously updated.
+>>>>>>> 6dcb963479953586f462ce31fddf35158c0598a0
 
 ## មានអ្វីដែលខ្វះខាត?  {#something-missing}
 
