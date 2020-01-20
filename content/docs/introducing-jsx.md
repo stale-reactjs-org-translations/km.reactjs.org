@@ -180,4 +180,8 @@ const element = {
 
 >**ព័ត៌មានជំនួយ:**
 >
+<<<<<<< HEAD
 >យើងសូមណែនាំឱ្យប្រើ ["Babel" និយមន័យភាសា](https://babeljs.io/docs/editors) សម្រាប់កម្មវិធីកែសម្រួល(Text Editor)របស់អ្នក ដូច្នេះកូដ ES6 និង JSX ត្រូវបានបន្លិចឱ្យបានត្រឹមត្រូវ។ តំបន់បណ្តាញនេះប្រើពណ៌ចម្រុះ [Oceanic Next](https://labs.voronianski.com/oceanic-next-color-scheme/) ដែលអាចប្រើជាមួយវា។
+=======
+>We recommend using the ["Babel" language definition](https://babeljs.io/docs/editors) for your editor of choice so that both ES6 and JSX code is properly highlighted.
+>>>>>>> c8aef5dc0dc340e800fbb7963a94adb97da9803b

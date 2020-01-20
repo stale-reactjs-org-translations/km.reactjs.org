@@ -471,7 +471,7 @@ class BlurExample extends React.Component {
 នៅក្នុង browsers ខ្លះយើងអាចមើលព័ត៌មាន accessibility នៃ element និមួយៗក្នុងប្រព័ន្ធ accessibility៖
 
 - [Using the Accessibility Inspector in Firefox](https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector)
-- [Activate the Accessibility Inspector in Chrome](https://gist.github.com/marcysutton/0a42f815878c159517a55e6652e3b23a)
+- [Using the Accessibility Inspector in Chrome](https://developers.google.com/web/tools/chrome-devtools/accessibility/reference#pane)
 - [Using the Accessibility Inspector in OS X Safari](https://developer.apple.com/library/content/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html)
 
 ### Screen readers {#screen-readers}
@@ -495,7 +495,11 @@ class BlurExample extends React.Component {
 
 VoiceOver គឺជាការភ្ចាប់រវាង screen reader នៅលើឧបករណ៍របស់ Apple។
 
+<<<<<<< HEAD
 ខាងក្រោមគឺជារបៀប activate និង ប្រើប្រាស់ VoiceOver៖
+=======
+Refer to the following guides on how to activate and use VoiceOver:
+>>>>>>> c8aef5dc0dc340e800fbb7963a94adb97da9803b
 
 - [WebAIM - Using VoiceOver to Evaluate Web Accessibility](https://webaim.org/articles/voiceover/)
 - [Deque - VoiceOver for OS X Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts)
