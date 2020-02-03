@@ -16,7 +16,11 @@ Tutorial នេះសម្រាប់ទាំងអ្នកដែលមា�
 
 ## មុនពេលដែលយើងចាប់ផ្តើម tutorial {#before-we-start-the-tutorial}
 
+<<<<<<< HEAD
 យើងនិងបង្កើតហ្គេមដ៏តូចមួយនៅក្នុង tutorial នេះ។ **អ្នកអាច skip វាបានពីព្រេាះអ្នកមិនមែនជាអ្នកបង្កើតហ្គេមនេាះទេ -- ប៉ុន្តែអ្នកគួរតែសាកល្បងវា។**  Techniques ដែលអ្នកនិងរៀននៅក្នុង tutorial នេះគឺមូលដ្ឋានគ្រឺះដើម្បីបង្កើត React apps ហើយនិងការយល់ដឹងយ៉ាងសុីជម្រៅពី React។
+=======
+We will build a small game during this tutorial. **You might be tempted to skip it because you're not building games -- but give it a chance.** The techniques you'll learn in the tutorial are fundamental to building any React app, and mastering it will give you a deep understanding of React.
+>>>>>>> 12eaa7a95df236dc19f9d36893519f2cc2500828
 
 >ពត៌មានជំនួយ
 >
@@ -121,7 +125,11 @@ import './index.css';
 
 ### ជំនួយ, ខ្ញុំជាប់គាំងហើយ!   {#help-im-stuck}
 
+<<<<<<< HEAD
 ប្រសិនជាអ្នកជាប់គាំង អ្នកអាចឆែកមើល [community support resources](/community/support.html)។ ជាពិសេស [Reactiflux Chat](https://discord.gg/0ZcbPKXt5bZjGY5n) គឺជាវិធីដ៏ល្អមួយដើម្បីទទួលបានជំនួយយ៉ាងឆាប់រហ័ស។ ប្រសិនបើអ្នកមិនទទួលបានចម្លើយទេ ឬប្រសិនបើអ្នកនៅជាប់គាំង សូមរាយការណ៍នូវបញ្ហា ហើយយើងនឹងជួយអ្នក។
+=======
+If you get stuck, check out the [community support resources](/community/support.html). In particular, [Reactiflux Chat](https://discord.gg/reactiflux) is a great way to get help quickly. If you don't receive an answer, or if you remain stuck, please file an issue, and we'll help you out.
+>>>>>>> 12eaa7a95df236dc19f9d36893519f2cc2500828
 
 ## ទិដ្ឋភាពទូទៅ   {#overview}
 
@@ -199,6 +207,7 @@ class Board extends React.Component {
   renderSquare(i) {
     return <Square value={i} />;
   }
+}
 ```
 
 ផ្លាស់ប្តូរ `render` method របស់ Square component ដើម្បីបង្ហាញ value ដោយការជំនួសដោយ `{/* TODO */}` ជាមួយនិង `{this.props.value}`​៖
@@ -338,7 +347,11 @@ React Devtools extension សម្រាប់ [Chrome](https://chrome.google.co
 
 React DevTools អាចអោយអ្នកឆែកមើល props ហើយនិង state របស់ React components បាន។
 
+<<<<<<< HEAD
 បន្ទាប់ពីដំឡើង React DevTools, អ្នកអាច right-click លើ element ដែលមាននៅលើ page, click "Inspect" ដើម្បីបើក developer tools, ហើយ React tab នឹងលេចឡើងនៅផ្ទាំងចុងក្រោយខាងស្តាំ។
+=======
+After installing React DevTools, you can right-click on any element on the page, click "Inspect" to open the developer tools, and the React tabs ("⚛️ Components" and "⚛️ Profiler") will appear as the last tabs to the right. Use "⚛️ Components" to inspect the component tree.
+>>>>>>> 12eaa7a95df236dc19f9d36893519f2cc2500828
 
 **ទោះជាយ៉ាងណាក៏ដោយ, សូមកត់សម្គាល់ថាមានជំហានបន្ថែមមួយចំនួនទៀតដើម្បីអោយវាដំណើរការជាមួយ CodePen​៖**
 
