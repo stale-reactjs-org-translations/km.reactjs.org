@@ -6,26 +6,29 @@ layout: docs
 category: FAQ
 ---
 
-### How can I make an AJAX call? {#how-can-i-make-an-ajax-call}
+### តើខ្ញុំអាចហៅ AJAX មកប្រើតាមរបៀបណា? {#how-can-i-make-an-ajax-call}
 
-You can use any AJAX library you like with React. Some popular ones are [Axios](https://github.com/axios/axios), [jQuery AJAX](https://api.jquery.com/jQuery.ajax/), and the browser built-in [window.fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+ជាមួយ React អ្នកអាចប្រើ AJAX library មួយណាក៏បានតាមដែលអ្នកចង់ប្រើ។ ខាងក្រោមនេះ គីជាlibrary មួយចំនូនដែលត្រូវបានគេប្រើប្រាស់ច្រើនក្នុងពេលបច្ចុប្បន្ន៖
+  1. [Axios](https://github.com/axios/axios)
+  2. [jQuery AJAX](https://api.jquery.com/jQuery.ajax/)
+  3. [window.fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) (ដែលជាមុខងារ មានស្រាប់ក្នុងកម្មវិធីសម្រាប់បើកវែបសាយ(browser))
 
-### Where in the component lifecycle should I make an AJAX call? {#where-in-the-component-lifecycle-should-i-make-an-ajax-call}
+### តើខ្ញុំគួរហៅAJAX មកប្រើនៅក្នុងវដ្ដណាក្នុង Component lifecycle? {#where-in-the-component-lifecycle-should-i-make-an-ajax-call}
 
-You should populate data with AJAX calls in the [`componentDidMount`](/docs/react-component.html#mounting) lifecycle method. This is so you can use `setState` to update your component when the data is retrieved.
+អ្នកគួរតែធ្វើការលើទិន្នន័យជាមួយ AJAX នៅក្នុង lifecycle method ឈ្មោះ [`componentDidMount`](/docs/react-component.html#mounting)។ វិធីនេះធ្វើឲ្យអ្នកអាចប្រើប្រាស់method `setState` ដើម្បីupdate componentរបស់អ្នក នៅពេលទិន្នន័យត្រូវបានទាញយកមកប្រើ។
 
-### Example: Using AJAX results to set local state {#example-using-ajax-results-to-set-local-state}
+### ឧទាហរណ៏: ការប្រើប្រាស់លទ្ធផលទិន្នន័យដែលបានពី AJAX ដើម្បី set តម្លៃអោយstateក្នុងlocal {#example-using-ajax-results-to-set-local-state}
 
-The component below demonstrates how to make an AJAX call in `componentDidMount` to populate local component state. 
+Componentខាងក្រោមនឹងបង្ហាញពីរបៀបហៅ AJAX មកប្រើក្នុងmethod `componentDidMount` ដើម្បីធ្វើការលើ state component ក្នុង local។
 
-The example API returns a JSON object like this:
+ខាងក្រោមជាឧទាហរណ៏របស់APIដែលផ្ដល់ JSON object តែមួយមានសណ្ឋានដូចនេះ៖
 
 ```
 {
   "items": [
     { "id": 1, "name": "Apples",  "price": "$2" },
     { "id": 2, "name": "Peaches", "price": "$5" }
-  ] 
+  ]
 }
 ```
 
