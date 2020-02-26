@@ -70,6 +70,10 @@ React DOM React DOM ប្រៀបធៀបធាតុនិងchildrenរប�
 
 ![DOM inspector បានបង្ហាញពីភាពទាន់សម័យ](../images/docs/granular-dom-updates.gif)
 
+<<<<<<< HEAD
 ទោះបីជាយើងបង្កើតធាតុពិពណ៌នាអំពីមែកធាង UI ទាំងមូលនៅលើគ្រប់ធី, មានតែ text node ដែលមាតិការបស់វាត្រូវបានផ្លាស់ប្តូរត្រូវបានធ្វើបច្ចុប្បន្នភាពដោយ React DOM ។
+=======
+Even though we create an element describing the whole UI tree on every tick, only the text node whose contents have changed gets updated by React DOM.
+>>>>>>> 821e20726266bc8113353d0c2b6d885f82e584a8
 
 តាមបទពិសោធរបស់យើង, ការគិតអំពីវិធីដែលចំណុចប្រទាក់អ្នកប្រើគួរមើលទៅនៅពេលណាមួយដែលបានផ្តល់ឱ្យជាជាងការផ្លាស់ប្តូរវាតាមពេលវេលាលុបបំបាត់កំហុសទាំងមូល។
