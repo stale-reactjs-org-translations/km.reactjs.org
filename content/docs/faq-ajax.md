@@ -6,22 +6,22 @@ layout: docs
 category: FAQ
 ---
 
-### តើខ្ញ៉ំអាចហៅAJAX មកប្រើតាមរបៀបណា? {#how-can-i-make-an-ajax-call}
+### តើខ្ញុំអាចហៅ AJAX មកប្រើតាមរបៀបណា? {#how-can-i-make-an-ajax-call}
 
-ជាមូួយReact អ្នកអាចប្រើAJAX library មួយណាក៏បានតាមដែលអ្នកចង់ប្រើ។ ខាងក្រោមនេះ គីជាlibrary មួយចំនូនដែលត្រូវបានគេប្រើប្រាស់ច្រើនក្នុងពេលបច្ចុប្បន្ន:
+ជាមួយ React អ្នកអាចប្រើ AJAX library មួយណាក៏បានតាមដែលអ្នកចង់ប្រើ។ ខាងក្រោមនេះ គីជាlibrary មួយចំនូនដែលត្រូវបានគេប្រើប្រាស់ច្រើនក្នុងពេលបច្ចុប្បន្ន៖
   1. [Axios](https://github.com/axios/axios)
   2. [jQuery AJAX](https://api.jquery.com/jQuery.ajax/)
   3. [window.fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) (ដែលជាមុខងារ មានស្រាប់ក្នុងកម្មវិធីសម្រាប់បើកវែបសាយ(browser))
 
-### តើខ្ញ៉ំគួរហៅAJAX មកប្រើនៅក្នុងវដ្ដណាក្នុងComponent lifecycle? {#where-in-the-component-lifecycle-should-i-make-an-ajax-call}
+### តើខ្ញុំគួរហៅAJAX មកប្រើនៅក្នុងវដ្ដណាក្នុង Component lifecycle? {#where-in-the-component-lifecycle-should-i-make-an-ajax-call}
 
-អ្នកគួរតែធ្វើការលើទិន្នន័យជាមួយAJAXនៅក្នុងlifecycle methodឈ្មោះ [`componentDidMount`](/docs/react-component.html#mounting)។ វិធីនេះធ្វើឲ្យអ្នកអាចប្រើប្រាស់method `setState` ដើម្បីupdate componentរបស់អ្នក នៅពេលទិន្នន័យត្រូវបានទាញយកមកប្រើ។
+អ្នកគួរតែធ្វើការលើទិន្នន័យជាមួយ AJAX នៅក្នុង lifecycle method ឈ្មោះ [`componentDidMount`](/docs/react-component.html#mounting)។ វិធីនេះធ្វើឲ្យអ្នកអាចប្រើប្រាស់method `setState` ដើម្បីupdate componentរបស់អ្នក នៅពេលទិន្នន័យត្រូវបានទាញយកមកប្រើ។
 
-### ឧទាហរណ៏: ការប្រើប្រាស់លទ្ធផលទិន្នន័យដែលបានពីAJAX ដើម្បីsetតម្លៃអោយstateក្នុងlocal {#example-using-ajax-results-to-set-local-state}
+### ឧទាហរណ៏: ការប្រើប្រាស់លទ្ធផលទិន្នន័យដែលបានពី AJAX ដើម្បី set តម្លៃអោយstateក្នុងlocal {#example-using-ajax-results-to-set-local-state}
 
-Componentខាងក្រោមនឹងបង្ហាញពីរបៀបហៅAJAXមកប្រើក្នុងmethod `componentDidMount` ដើម្បីធ្វើការលើstate componentក្នុងlocal។
+Componentខាងក្រោមនឹងបង្ហាញពីរបៀបហៅ AJAX មកប្រើក្នុងmethod `componentDidMount` ដើម្បីធ្វើការលើ state component ក្នុង local។
 
-ខាងក្រោមជាឧទាហរណ៏របស់APIដែលផ្ដល់JSON objectតែមួយមានសណ្ឋានដូចនេះ៖
+ខាងក្រោមជាឧទាហរណ៏របស់APIដែលផ្ដល់ JSON object តែមួយមានសណ្ឋានដូចនេះ៖
 
 ```
 {
