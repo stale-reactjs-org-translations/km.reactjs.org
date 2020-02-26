@@ -327,12 +327,6 @@ class Calculator extends React.Component {
 ប្រសិនបើមានអ្វីអាចទាញចេញពី props ឬក័ state, វាប្រហែលជាមិនគួរនៅក្នុង state, ឧទាហរណ៍, ជំនួសឱ្យការរក្សាទុកទាំង `celsiusValue` និង `fahrenheitValue`, យើងរក្សាទុកតែការកែប្រែចុងក្រោយនូវ `temperature` និង `scale` របស់វាប៉ុណ្ណោះ។ តម្លៃនៃការ input ផ្សេងៗអាច
 តែងតែអាចគណនាពីពួកវាបាននៅក្នុង `render` method។ នេះអនុញ្ញាតឱ្យយើងសម្អាត (clear) ឬអនុវត្ត (apply) field ផ្សេង ដោយមិនបាត់បង់ precision ក្នុងការបញ្ចូលរបស់អ្នកប្រើប្រាស់។
 
-<<<<<<< HEAD
-នៅពេលដែលអ្នកឃើញអ្វីមួយខុសនៅក្នុង UI, អ្នកអាចប្រើ [React Developer Tools](https://github.com/facebook/react-devtools) ដើម្បី inspect props ហើយនិង move up the tree រហូតដល់អ្នករកឃើញ​ component ដែលទទួលខុសត្រូវសម្រាប់ធ្វើបច្ចុប្បន្នភាព​ state។ 
-នេះអនុញ្ញាតឱ្យអ្នកតាមដានកំហុសទៅកាន់ប្រភពរបស់វា៖
-=======
-When you see something wrong in the UI, you can use [React Developer Tools](https://github.com/facebook/react/tree/master/packages/react-devtools) to inspect the props and move up the tree until you find the component responsible for updating the state. This lets you trace the bugs to their source:
->>>>>>> 12eaa7a95df236dc19f9d36893519f2cc2500828
+នៅពេលដែលអ្នកឃើញអ្វីមួយខុសនៅក្នុង UI, អ្នកអាចប្រើ [React Developer Tools](https://github.com/facebook/react/tree/master/packages/react-devtools) ដើម្បី inspect props ហើយនិង move up the tree រហូតដល់អ្នករកឃើញ​ component ដែលទទួលខុសត្រូវសម្រាប់ធ្វើបច្ចុប្បន្នភាព​ state។ នេះអនុញ្ញាតឱ្យអ្នកតាមដានកំហុសទៅកាន់ប្រភពរបស់វា៖
 
 <img src="../images/docs/react-devtools-state.gif" alt="Monitoring State in React DevTools" max-width="100%" height="100%">
-
