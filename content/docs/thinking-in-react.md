@@ -145,4 +145,4 @@ Let's think about what we want to happen. We want to make sure that whenever the
 
 ## And That's It {#and-thats-it}
 
-Hopefully, this gives you an idea of how to think about building components and applications with React. While it may be a little more typing than you're used to, remember that code is read far more than it's written, and it's less difficult to read this modular, explicit code. As you start to build large libraries of components, you'll appreciate this explicitness and modularity, and with code reuse, your lines of code will start to shrink. :)
+សង្ឃឹមថានេះផ្តល់ឱ្យអ្នកនូវគំនិតនៃការគិតអំពីការបង្កើត components ហើយនិង applications ជាមួយ React។ ខណៈពេលដែលវាអាចជាការវាយច្រើនជាងអ្នកធ្លាប់ប្រើ, សូមចាំថាកូដត្រូវបានអានច្រើនជាងអ្វីដែលបានសរសេរ, ហើយវាពិបាកក្នុងការអាន modular នេះ, code គឺច្បាស់លាស់ណាស់។ ដូចដែលអ្នកចាប់ផ្តើមបង្កើត libraries ធំៗនៃ components, អ្នកនឹងពេញចិត្តនូវ explicitness និង modularity នេះ, ហើយនិងជាមួយការកាត់បន្ថយកូដ, បន្ទាត់នៃកូដរបស់អ្នកនឹងចាប់ផ្តើមកាត់បន្ថយ។ :)
