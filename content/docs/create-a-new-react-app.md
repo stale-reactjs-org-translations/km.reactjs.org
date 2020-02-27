@@ -80,7 +80,7 @@ Create React App មិនដោះស្រាយ​ (doesn't handle) នូវ
 
 - **[Razzle](https://github.com/jaredpalmer/razzle)** គឺជា server-rendering framework មួយដែលមិនទាមទារនូវការ​ configuration ច្រើនប៉ុន្តែផ្តល់នូវភាពបត់បែន (flexibility) ច្រើនជាង Next.js។
 
-## ការបង្កើតឧបករណ៍មានប្រសិទ្ធភាព    (Toolchain) មួយពីទទេ {#creating-a-toolchain-from-scratch}
+## ការបង្កើតឧបករណ៍មានប្រសិទ្ធភាព (Toolchain) មួយពីទទេ {#creating-a-toolchain-from-scratch}
 
 ឧបករណ៍មានប្រសិទ្ធភាពមួយរបស់ JavaScript ជាធម្មតាមាន៖
 

@@ -48,8 +48,7 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 ### Create a New React App {#create-a-new-react-app}
 
-នៅពេលចាប់ផ្តើម React project [HTML page សាមញ្ញមួយជាមួយនិង script tags](/docs/add-react-to-a-website.html) នៅតែជាជំរើសល្អបំផុត។ 
-វាត្រូវការពេលតែមួយនាទីប៉ុណ្ណោះដើម្បីតំឡើង!
+នៅពេលចាប់ផ្តើម React project [HTML page សាមញ្ញមួយជាមួយនិង script tags](/docs/add-react-to-a-website.html) នៅតែជាជំរើសល្អបំផុត។ វាត្រូវការពេលតែមួយនាទីប៉ុណ្ណោះដើម្បីតំឡើង!
 
 នៅពេលកម្មវិធីរបស់អ្នកលូតលាស់ធំទៅៗ អ្នកប្រហែលជាចង់ពិចារណាក្នុងការរៀបចំតំឡើងអោយកាន់តែល្អ។ មាន JavaScript toolchains ជាច្រើន ដែលយើងណែនាំអោយប្រើសម្រាប់កម្មវិធីធំៗ។ ពួកវាអាចដំណើការជាមួយនិងការ configuration តិចបំផុត ហើយអនុញ្ញាតឱ្យអ្នកទទួលបានផលប្រយោជន៍ពេញលេញពី rich React ecosystem។ [រៀនពីរបៀប។](/docs/create-a-new-react-app.html)
 
