@@ -246,11 +246,7 @@ class Clock extends React.Component {
   }
 ```
 
-<<<<<<< HEAD
-ចំណាំ របៀបដែលយើងរក្សាទុក timer ID អោយបានត្រឹមត្រូវលើ `this`.
-=======
-Note how we save the timer ID right on `this` (`this.timerID`).
->>>>>>> 99a18287c163e328f87709cb224742ccac3e113a
+ចំណាំ របៀបដែលយើងរក្សាទុក timer ID អោយបានត្រឹមត្រូវលើ `this` (`this.timerID`)។
 
 ខណៈពេល `this.props` ត្រូវបានបង្កើតឡើងដោយ React ខ្លួនឯង និង `this.state` មានអត្ថន័យពិសេស, អ្នកមានសិទ្ធិបន្ថែម fields ទៅ class ដោយខ្លួនឯង ប្រសិនបើអ្នកត្រូវការរក្សាទុកអ្វីមួយដែលមិនចូលរួមនៅក្នុង data flow (ដូចជា timer ID).
 

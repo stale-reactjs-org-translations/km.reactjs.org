@@ -48,16 +48,10 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 ### Create a New React App {#create-a-new-react-app}
 
-<<<<<<< HEAD
 នៅពេលចាប់ផ្តើម React project [HTML page សាមញ្ញមួយជាមួយនិង script tags](/docs/add-react-to-a-website.html) នៅតែជាជំរើសល្អបំផុត។ 
-វាត្រូវការពេលតែមួយនាទីប៉ុណ្ណោះដើម្បីដំឡើង!
+វាត្រូវការពេលតែមួយនាទីប៉ុណ្ណោះដើម្បីតំឡើង!
 
-នៅពេលកម្មវិធីរបស់អ្នកលូតលាស់ធំទៅៗ អ្នកប្រហែលជាចង់ពិចារណាក្នុងការរៀបចំដំឡើងអោយកាន់តែល្អ។ មាន [JavaScript toolchains ជាច្រើន](/docs/create-a-new-react-app.html) ដែលយើងណែនាំអោយប្រើសម្រាប់កម្មវិធីធំៗ។ ពួកវាអាចដំណើការជាមួយនិងការ configuration តិចបំផុត ហើយអនុញ្ញាតឱ្យអ្នកទទួលបានផលប្រយោជន៍ពេញលេញពី rich React ecosystem។
-=======
-When starting a React project, a [simple HTML page with script tags](/docs/add-react-to-a-website.html) might still be the best option. It only takes a minute to set up!
-
-As your application grows, you might want to consider a more integrated setup. There are several JavaScript toolchains we recommend for larger applications. Each of them can work with little to no configuration and lets you take full advantage of the rich React ecosystem. [Learn how.](/docs/create-a-new-react-app.html)
->>>>>>> 99a18287c163e328f87709cb224742ccac3e113a
+នៅពេលកម្មវិធីរបស់អ្នកលូតលាស់ធំទៅៗ អ្នកប្រហែលជាចង់ពិចារណាក្នុងការរៀបចំតំឡើងអោយកាន់តែល្អ។ មាន JavaScript toolchains ជាច្រើន ដែលយើងណែនាំអោយប្រើសម្រាប់កម្មវិធីធំៗ។ ពួកវាអាចដំណើការជាមួយនិងការ configuration តិចបំផុត ហើយអនុញ្ញាតឱ្យអ្នកទទួលបានផលប្រយោជន៍ពេញលេញពី rich React ecosystem។ [រៀនពីរបៀប។](/docs/create-a-new-react-app.html)
 
 ## រៀន React {#learn-react}
 
@@ -124,19 +118,11 @@ As your application grows, you might want to consider a more integrated setup. T
 
 អ្នកក៏អាច follow [@reactjs account](https://twitter.com/reactjs) នៅលើ Twitter ប៉ុន្តែអ្នកនឹងមិនខកខានអ្វីដែលចាំបាច់ប្រសិនបើអ្នកគ្រាន់តែអាន blog។
 
-<<<<<<< HEAD
 មិនមែនគ្រប់ការចេញផ្សាយ (release) របស់ React ត្រូវបានប្រកាសប្រាប់នៅក្នុង blog នេាះទេ ប៉ុន្តែអ្នកអាចរកឃើញការផ្លាស់ប្តូរលម្អិតសម្រាប់រៀងរាល់ការចេញផ្សាយ (release) [នៅក្នុង `CHANGELOG.md` file ក្នុង React repository](https://github.com/facebook/react/blob/master/CHANGELOG.md) ក៏ដូចជានៅលើទំព័រ [Releases](https://github.com/facebook/react/releases)។
-=======
-Not every React release deserves its own blog post, but you can find a detailed changelog for every release in the [`CHANGELOG.md` file in the React repository](https://github.com/facebook/react/blob/master/CHANGELOG.md), as well as on the [Releases](https://github.com/facebook/react/releases) page.
->>>>>>> 99a18287c163e328f87709cb224742ccac3e113a
 
 ## កំណែឯកសារ {#versioned-documentation}
 
-<<<<<<< HEAD
-ឯកសារនេះតែងតែឆ្លុះបញ្ចាំងពីកំណែដែលមានស្ថេរភាពចុងក្រោយបំផុតរបស់ React។ តាំងពី​ React 16 អ្នកអាចរកកំណែចាស់របស់ឯកសារ [នៅលើទំព័រដាច់ដោយឡែក](/versions)។ សូមចំណាំថាឯកសារសម្រាប់កំណែមុនៗគឺត្រូវបានគេកត់ត្រាទុក ប៉ុន្តែមិនត្រូវបានគេធ្វើបច្ចុប្បន្នភាពនេាះទេ។
-=======
-This documentation always reflects the latest stable version of React. Since React 16, you can find older versions of the documentation on a [separate page](/versions). Note that documentation for past versions is snapshotted at the time of the release, and isn't being continuously updated.
->>>>>>> 99a18287c163e328f87709cb224742ccac3e113a
+ឯកសារនេះតែងតែឆ្លុះបញ្ចាំងពីកំណែរប្រែដែលមានស្ថេរភាពចុងក្រោយបំផុតរបស់ React។ តាំងពី​ React 16 អ្នកអាចរកកំណែរប្រែចាស់របស់ឯកសារ [នៅលើទំព័រដាច់ដោយឡែក](/versions)។ សូមចំណាំថាឯកសារសម្រាប់កំណែរប្រែមុនៗគឺត្រូវបានគេកត់ត្រាទុក ប៉ុន្តែមិនត្រូវបានគេធ្វើបច្ចុប្បន្នភាពនេាះទេ។
 
 ## មានអ្វីដែលខ្វះខាត?  {#something-missing}
 
