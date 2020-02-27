@@ -69,13 +69,13 @@ Optional: [ទាញយកឧទាហរណ៍ពេញលេញ (2KB zipped)](
 
 បង្កើត file មួយហៅថា `like_button.js` ជាប់និង HTML page របស់អ្នក។
 
-បើក **[this starter code](https://cdn.rawgit.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js)** ហើយ paste វាចូលក្នុង file ដែលអ្នកបានបង្កើត។
+បើក **[this starter code](https://gist.github.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js)** ហើយ paste វាចូលក្នុង file ដែលអ្នកបានបង្កើត។
 
 >ពត៌មានជំនួយ
 >
 >កូដនេះកំណត់ React component ហៅថា `LikeButton`។ កុំបារម្ភប្រសិនបើអ្នកមិនទាន់យល់វានៅឡើយ -- យើងនឹង cover ពីការបង្កើត blocks នៃ React នៅពេលក្រោយនៅក្នុង [hands-on tutorial](/tutorial/tutorial.html) និង [main concepts guide](/docs/hello-world.html)។ សម្រាប់ពេល​ឥលូវ​នេះ តោះយើងគ្រាន់តែបង្ហាញវានៅលើអេក្រង់!
 
-បន្ទាប់ **[the starter code](https://cdn.rawgit.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js)**, បន្ថែមពីរបន្ទាត់នៅក្រោមបាតនៃ `like_button.js`៖
+បន្ទាប់ **[the starter code](https://gist.github.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js)**, បន្ថែមពីរបន្ទាត់នៅក្រោមបាតនៃ `like_button.js`៖
 
 ```js{3,4}
 // ... the starter code you pasted ...
@@ -149,11 +149,7 @@ return (
 
 ទំរង់នៃការសរសេរកូដទាំងពីរខាងលើគឺដូចគ្នា ហើយនិងបង្ហាញលទ្ធផលដូចគ្នា។ ខណៈពេលដែល **JSX គឺ [completely optional](/docs/react-without-jsx.html)** មនុស្សជាច្រើនយល់ថាវាមានប្រយោជន៍សម្រាប់ការសរសេរ UI កូដ​ -- ទាំងជាមួយ React និងជាមួយ libraries ផ្សេងៗ។
 
-<<<<<<< HEAD
-អ្នកអាចលេងជាមួយ JSX ដោយប្រើ [this online converter](https://babeljs.io/repl#?babili=false&browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=Q&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&sourceType=module&lineWrap=true&presets=es2015%2Creact%2Cstage-2%2Cstage-3&prettier=true&targets=Node-6.12&version=6.26.0&envVersion=)។
-=======
-You can play with JSX using [this online converter](https://babeljs.io/en/repl#?babili=false&browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=DwIwrgLhD2B2AEcDCAbAlgYwNYF4DeAFAJTw4B88EAFmgM4B0tAphAMoQCGETBe86WJgBMAXJQBOYJvAC-RGWQBQ8FfAAyaQYuAB6cFDhkgA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=7.4.3).
->>>>>>> 4244fc646618de6bae934686f93dd04c9000d9ae
+អ្នកអាចលេងជាមួយ JSX ដោយប្រើ [this online converter](https://babeljs.io/en/repl#?babili=false&browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=DwIwrgLhD2B2AEcDCAbAlgYwNYF4DeAFAJTw4B88EAFmgM4B0tAphAMoQCGETBe86WJgBMAXJQBOYJvAC-RGWQBQ8FfAAyaQYuAB6cFDhkgA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=7.4.3)។
 
 ### Quickly Try JSX {#quickly-try-jsx}
 
@@ -202,10 +198,8 @@ npx babel --watch src --out-dir . --presets react-app/prod
 
 កុំរង់ចាំដល់វាបញ្ចប់ -- command នេះ ចាប់ផ្តើម​ automated watcher សម្រាប់ JSX។
 
-ប្រសិនបើឥឡូវអ្នកបង្កើត file ដែលហៅថា `src/like_button.js` ជាមួយនិង **[JSX starter code](https://cdn.rawgit.com/gaearon/c8e112dc74ac44aac4f673f2c39d19d1/raw/09b951c86c1bf1116af741fa4664511f2f179f0a/like_button.js)** នេះ watcher នឹងបង្កើត preprocessed `like_button.js` ជាមួយនិង plain JavaScript កូដដែលសមរម្យឬមួយក៏អាចអោយ browser យល់ឬក៏ run បាន។ 
+ប្រសិនបើឥឡូវអ្នកបង្កើត file ដែលហៅថា `src/like_button.js` ជាមួយនិង **[JSX starter code](https://gist.github.com/gaearon/c8e112dc74ac44aac4f673f2c39d19d1/raw/09b951c86c1bf1116af741fa4664511f2f179f0a/like_button.js)** នេះ watcher នឹងបង្កើត preprocessed `like_button.js` ជាមួយនិង plain JavaScript កូដដែលសមរម្យឬមួយក៏អាចអោយ browser យល់ឬក៏ run បាន។ 
 ពេលអ្នកកែប្រែ source file ជាមួយ JSX, transform នឹង re-run ដោយស្វ័យប្រវត្តិ។
-
-As a bonus, this also lets you use modern JavaScript syntax features like classes without worrying about breaking older browsers. The tool we just used is called Babel, and you can learn more about it from [its documentation](https://babeljs.io/docs/en/babel-cli/).
 
 បន្ថែមពីលើនេះ នេះក៏អនុញ្ញាតឱ្យអ្នកប្រើផងដែរនូវ JavaScript syntax features ដូចជា classes ដោយគ្មានការព្រួយបារម្ភអំពីការ breaking browsers ចាស់ៗ។ ឧបករណ៍ (tools) ដែលយើងទើបតែបានប្រើហៅថា Babel ហើយអ្នកអាចរៀនបន្ថែមទៀតពីវានៅក្នុង [ឯកសាររបស់វា](https://babeljs.io/docs/en/babel-cli/)។
 

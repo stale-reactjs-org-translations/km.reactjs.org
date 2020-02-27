@@ -121,7 +121,7 @@ import './index.css';
 
 ### ជំនួយ, ខ្ញុំជាប់គាំងហើយ!   {#help-im-stuck}
 
-ប្រសិនជាអ្នកជាប់គាំង អ្នកអាចឆែកមើល [community support resources](/community/support.html)។ ជាពិសេស [Reactiflux Chat](https://discord.gg/0ZcbPKXt5bZjGY5n) គឺជាវិធីដ៏ល្អមួយដើម្បីទទួលបានជំនួយយ៉ាងឆាប់រហ័ស។ ប្រសិនបើអ្នកមិនទទួលបានចម្លើយទេ ឬប្រសិនបើអ្នកនៅជាប់គាំង សូមរាយការណ៍នូវបញ្ហា ហើយយើងនឹងជួយអ្នក។
+ប្រសិនជាអ្នកជាប់គាំង អ្នកអាចឆែកមើល [community support resources](/community/support.html)។ ជាពិសេស [Reactiflux Chat](https://discord.gg/reactiflux) គឺជាវិធីដ៏ល្អមួយដើម្បីទទួលបានជំនួយយ៉ាងឆាប់រហ័ស។ ប្រសិនបើអ្នកមិនទទួលបានចម្លើយទេ ឬប្រសិនបើអ្នកនៅជាប់គាំង សូមរាយការណ៍នូវបញ្ហា ហើយយើងនឹងជួយអ្នក។
 
 ## ទិដ្ឋភាពទូទៅ   {#overview}
 
@@ -199,6 +199,7 @@ class Board extends React.Component {
   renderSquare(i) {
     return <Square value={i} />;
   }
+}
 ```
 
 ផ្លាស់ប្តូរ `render` method របស់ Square component ដើម្បីបង្ហាញ value ដោយការជំនួសដោយ `{/* TODO */}` ជាមួយនិង `{this.props.value}`​៖
@@ -338,7 +339,7 @@ React Devtools extension សម្រាប់ [Chrome](https://chrome.google.co
 
 React DevTools អាចអោយអ្នកឆែកមើល props ហើយនិង state របស់ React components បាន។
 
-បន្ទាប់ពីដំឡើង React DevTools, អ្នកអាច right-click លើ element ដែលមាននៅលើ page, click "Inspect" ដើម្បីបើក developer tools, ហើយ React tab នឹងលេចឡើងនៅផ្ទាំងចុងក្រោយខាងស្តាំ។
+បន្ទាប់ពីដំឡើង React DevTools, អ្នកអាច right-click លើ element ដែលមាននៅលើ page, click "Inspect" ដើម្បីបើក developer tools, ហើយ React tab ("⚛️ Components" និង "⚛️ Profiler") នឹងលេចឡើងនៅផ្ទាំងចុងក្រោយខាងស្តាំ។ ប្រើ "⚛️ Components" ដើម្បី inspect មើល component tree។
 
 **ទោះជាយ៉ាងណាក៏ដោយ, សូមកត់សម្គាល់ថាមានជំហានបន្ថែមមួយចំនួនទៀតដើម្បីអោយវាដំណើរការជាមួយ CodePen​៖**
 

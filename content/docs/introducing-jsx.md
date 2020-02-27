@@ -180,4 +180,4 @@ const element = {
 
 >**ព័ត៌មានជំនួយ:**
 >
->យើងសូមណែនាំឱ្យប្រើ ["Babel" និយមន័យភាសា](https://babeljs.io/docs/editors) សម្រាប់កម្មវិធីកែសម្រួល(Text Editor)របស់អ្នក ដូច្នេះកូដ ES6 និង JSX ត្រូវបានបន្លិចឱ្យបានត្រឹមត្រូវ។ តំបន់បណ្តាញនេះប្រើពណ៌ចម្រុះ [Oceanic Next](https://labs.voronianski.com/oceanic-next-color-scheme/) ដែលអាចប្រើជាមួយវា។
+>យើងសូមណែនាំឱ្យប្រើ ["Babel" និយមន័យភាសា](https://babeljs.io/docs/editors) សម្រាប់កម្មវិធីកែសម្រួល(Text Editor) របស់អ្នក ដូច្នេះកូដ ES6 និង JSX ត្រូវបានបន្លិចឱ្យបានត្រឹមត្រូវ។

@@ -35,9 +35,9 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
 
 រឿងដំបូងដែលអ្នកនឹងចង់ធ្វើគឺគូសប្រអប់នៅជុំវិញ component ទាំងអស់ (និង subcomponent) នៅក្នុង mock និងដាក់ឈ្មោះឱ្យពួកវា។ ប្រសិនបើអ្នកកំពុងតែធ្វើការជាមួយ designer ពួកគេប្រហែលជាបានធ្វើរួចហើយ ដូច្នេះសូមទៅនិយាយជាមួយពួកគេ! ឈ្មោះ Photoshop layer របស់ពួកគេអាចនឹងក្លាយជាឈ្មោះនៃ React components របស់អ្នក!
 
-ប៉ុន្ដែតើអ្នកដឹងដោយរបៀបណាអ្វីដែលជា component របស់វាផ្ទាល់? រាន់តែប្រើបច្ចេកទេសដូចគ្នាដើម្បីសម្រេចចិត្តថាអ្នកគួរតែបង្កើត function ឬក៏ object ថ្មីមួយ។ បច្ចេកទេសបែបនេាះគឺ [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle), component មួយគួរតែធ្វើរឿងតែមួយគត់។ ប្រសិនបើវាបន្តរីកធំទៅៗ វាគួរតែត្រូវបានគេបំបែកទៅជា subcomponents តូចៗ។
+ប៉ុន្ដែតើអ្នកដឹងដោយរបៀបណាអ្វីដែលជា component របស់វាផ្ទាល់? គ្រាន់តែប្រើបច្ចេកទេសដូចគ្នាដើម្បីសម្រេចចិត្តថាអ្នកគួរតែបង្កើត function ឬក៏ object ថ្មីមួយ។ ដែលបច្ចេកទេសបែបនេាះគឺ [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle), component មួយគួរតែធ្វើរឿងតែមួយគត់។ ប្រសិនបើវាបន្តរីកធំទៅៗ វាគួរតែត្រូវបានគេបំបែកទៅជា subcomponents តូចៗ។
 
-ដែលអ្នកតែងតែបង្ហាញ JSON data model ទៅអោយអ្នកប្រើប្រាស់, អ្នកនឹងរកឃើញថាប្រសិនបើ model របស់អ្នកត្រូវបានបង្កើតឡើងដោយត្រឹមត្រូវ, UI របស់អ្នក (ហើយនិងរចនាសម្ព័ន្ធ component របស់អ្នក) នឹង map បានយ៉ាងល្អ។ នោះពីព្រេាះតែ UI និង data models មាននិន្នាការប្រកាន់ខ្ជាប់នូវ *ស្ថាបត្យកម្មព័ត៌មាន* ដូចគ្នា, ដែលមានន័យថាការងារនៃការបំបែក UI របស់អ្នកទៅជា components គឺមិនសូវសំខាន់។ គ្រាន់តែបំបែកវាជា components ដែលតំណាងឱ្យបំណែកមួយជាក់លាក់នៃ data model របស់អ្នក។
+ដែលអ្នកតែងតែបង្ហាញ JSON data model ទៅអោយអ្នកប្រើប្រាស់, អ្នកនឹងរកឃើញថាប្រសិនបើ model របស់អ្នកត្រូវបានបង្កើតឡើងដោយត្រឹមត្រូវ, UI របស់អ្នក (ហើយនិងរចនាសម្ព័ន្ធ component របស់អ្នក) នឹង map បានយ៉ាងល្អ។ នោះពីព្រេាះតែ UI និង data models មាននិន្នាការប្រកាន់ខ្ជាប់នូវ *ស្ថាបត្យកម្មព័ត៌មាន* ដូចគ្នា។ គ្រាន់តែបំបែកវាជា components ដែលតំណាងឱ្យបំណែកមួយជាក់លាក់នៃ data model របស់អ្នក។ ការបំបែក UI របស់អ្នកទៅជា components, ដែល component នីមួយៗ ត្រូវនឹងផ្នែកមួយនៃគំរូទិន្នន័យរបស់អ្នក។
 
 ![Component diagram](../images/blog/thinking-in-react-components.png)
 
@@ -72,19 +72,19 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
 អ្នកអាចបង្កើតជាលក្ខណះ top-down ឬ bottom-up។ អ្នកអាចចាប់ផ្តើមបង្កើត component higher up នៅក្នុងរចនាសម្ព័ន្ធ (hierarchy) (ឧទាហរណ៍ ការចាប់ផ្តើមជាមួយ `FilterableProductTable`) ឬក៏ជាមួយ component ដែលនៅក្នុងវា (`ProductRow`)។ នៅក្នុងឧទាហរណ៏សាមញ្ញ 
 វាជាធម្មតាងាយស្រួលក្នុងការប្រើ top-down សម្រាប់ products ធំៗ, ហើយវាកាន់តែងាយស្រួលក្នុងការប្រើ bottom-up ហើយនិងសរសេរ tests។
 
-នៅចុងបញ្ចប់នៃជំហាននេះ, អ្នកនឹងមាន library មួយជា reusable components ដែល render data model របស់អ្នក។ Components នឹងមានតែ `render` methods ដែលនេះគឺជា static version មួយនៃ app របស់អ្នក។ Component ដែលនៅផ្នែកខាងលើគេនៃរចនាសម្ព័ន្ធ (hierarchy) (`FilterableProductTable`) នឺងទទួលយក data model របស់អ្នកជា prop មួយ។ ប្រសិនបើអ្នកធ្វើការផ្លាស់ប្តូរ data model មូលដ្ឋានរបស់អ្នកហើយ call `ReactDOM.render()` ម្តងទៀត, UI នឹងត្រូវបានធ្វើបច្ចុប្បន្នភាព។ វាងាយស្រួលដើម្បីឃើញពីរបៀបដែល UI របស់អ្នកធ្វើបច្ចុប្បន្នភាពហើយនិងក្ន្លែងដែលធ្វើការផ្លាស់ប្តូរ ពីព្រេាះមិនមានអ្វីដែលស្មុគស្មាញបន្តទៀត។ **one-way data flow** របស់ React (ត្រូវបានគេហៅផងដែរថា *one-way binding*) រក្សារអ្វីគ្រប់យ៉ាងជាលក្ខណះ modular ហើយនិងលឿន។
+នៅចុងបញ្ចប់នៃជំហាននេះ, អ្នកនឹងមាន library មួយជា reusable components ដែល render data model របស់អ្នក។ Components នឹងមានតែ `render` methods ដែលនេះគឺជា static version មួយនៃ app របស់អ្នក។ Component ដែលនៅផ្នែកខាងលើគេនៃរចនាសម្ព័ន្ធ (hierarchy) (`FilterableProductTable`) នឺងទទួលយក data model របស់អ្នកជា prop មួយ។ ប្រសិនបើអ្នកធ្វើការផ្លាស់ប្តូរ data model មូលដ្ឋានរបស់អ្នកហើយ call `ReactDOM.render()` ម្តងទៀត, UI នឹងត្រូវបានធ្វើបច្ចុប្បន្នភាព។ អ្នកអាចឃើញពីរបៀដែល UI របស់អ្នកធ្វើបច្ចុប្បន្នភាព ហើយនិងកន្លែងដែលវាផ្លាស់ប្តូរ។ **one-way data flow** របស់ React (ត្រូវបានគេហៅផងដែរថា *one-way binding*) រក្សារអ្វីគ្រប់យ៉ាងជាលក្ខណះ modular ហើយនិងលឿន។
 
 ប្រសិនបើអ្នកត្រូវការជំនួយក្នុងការអនុវត្តជំហាននេះសូមចូលទៅកាន់ [React docs](/docs/)។
 
 ### A Brief Interlude: Props vs State {#a-brief-interlude-props-vs-state}
 
-There are two types of "model" data in React: props and state. It's important to understand the distinction between the two; skim [the official React docs](/docs/interactivity-and-dynamic-uis.html) if you aren't sure what the difference is.
+There are two types of "model" data in React: props and state. It's important to understand the distinction between the two; skim [the official React docs](/docs/state-and-lifecycle.html) if you aren't sure what the difference is. See also [FAQ: What is the difference between state and props?](/docs/faq-state.html#what-is-the-difference-between-state-and-props)
 
 ## Step 3: Identify The Minimal (but complete) Representation Of UI State {#step-3-identify-the-minimal-but-complete-representation-of-ui-state}
 
-To make your UI interactive, you need to be able to trigger changes to your underlying data model. React makes this easy with **state**.
+To make your UI interactive, you need to be able to trigger changes to your underlying data model. React achieves this with **state**.
 
-To build your app correctly, you first need to think of the minimal set of mutable state that your app needs. The key here is [DRY: *Don't Repeat Yourself*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). Figure out the absolute minimal representation of the state your application needs and compute everything else you need on-demand. For example, if you're building a TODO list, just keep an array of the TODO items around; don't keep a separate state variable for the count. Instead, when you want to render the TODO count, simply take the length of the TODO items array.
+To build your app correctly, you first need to think of the minimal set of mutable state that your app needs. The key here is [DRY: *Don't Repeat Yourself*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). Figure out the absolute minimal representation of the state your application needs and compute everything else you need on-demand. For example, if you're building a TODO list, keep an array of the TODO items around; don't keep a separate state variable for the count. Instead, when you want to render the TODO count, take the length of the TODO items array.
 
 Think of all of the pieces of data in our example application. We have:
 
@@ -93,7 +93,7 @@ Think of all of the pieces of data in our example application. We have:
   * The value of the checkbox
   * The filtered list of products
 
-Let's go through each one and figure out which one is state. Simply ask three questions about each piece of data:
+Let's go through each one and figure out which one is state. Ask three questions about each piece of data:
 
   1. Is it passed in from a parent via props? If so, it probably isn't state.
   2. Does it remain unchanged over time? If so, it probably isn't state.
@@ -119,7 +119,7 @@ For each piece of state in your application:
   * Identify every component that renders something based on that state.
   * Find a common owner component (a single component above all the components that need the state in the hierarchy).
   * Either the common owner or another component higher up in the hierarchy should own the state.
-  * If you can't find a component where it makes sense to own the state, create a new component simply for holding the state and add it somewhere in the hierarchy above the common owner component.
+  * If you can't find a component where it makes sense to own the state, create a new component solely for holding the state and add it somewhere in the hierarchy above the common owner component.
 
 Let's run through this strategy for our application:
 
@@ -137,14 +137,12 @@ You can start seeing how your application will behave: set `filterText` to `"bal
 
 So far, we've built an app that renders correctly as a function of props and state flowing down the hierarchy. Now it's time to support data flowing the other way: the form components deep in the hierarchy need to update the state in `FilterableProductTable`.
 
-React makes this data flow explicit to make it easy to understand how your program works, but it does require a little more typing than traditional two-way data binding.
+React makes this data flow explicit to help you understand how your program works, but it does require a little more typing than traditional two-way data binding.
 
 If you try to type or check the box in the current version of the example, you'll see that React ignores your input. This is intentional, as we've set the `value` prop of the `input` to always be equal to the `state` passed in from `FilterableProductTable`.
 
 Let's think about what we want to happen. We want to make sure that whenever the user changes the form, we update the state to reflect the user input. Since components should only update their own state, `FilterableProductTable` will pass callbacks to `SearchBar` that will fire whenever the state should be updated. We can use the `onChange` event on the inputs to be notified of it. The callbacks passed by `FilterableProductTable` will call `setState()`, and the app will be updated.
 
-Though this sounds complex, it's really just a few lines of code. And it's really explicit how your data is flowing throughout the app.
-
 ## And That's It {#and-thats-it}
 
-Hopefully, this gives you an idea of how to think about building components and applications with React. While it may be a little more typing than you're used to, remember that code is read far more than it's written, and it's extremely easy to read this modular, explicit code. As you start to build large libraries of components, you'll appreciate this explicitness and modularity, and with code reuse, your lines of code will start to shrink. :)
+Hopefully, this gives you an idea of how to think about building components and applications with React. While it may be a little more typing than you're used to, remember that code is read far more than it's written, and it's less difficult to read this modular, explicit code. As you start to build large libraries of components, you'll appreciate this explicitness and modularity, and with code reuse, your lines of code will start to shrink. :)
