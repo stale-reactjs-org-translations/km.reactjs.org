@@ -495,11 +495,7 @@ class BlurExample extends React.Component {
 
 VoiceOver គឺជាការភ្ចាប់រវាង screen reader នៅលើឧបករណ៍របស់ Apple។
 
-<<<<<<< HEAD
-ខាងក្រោមគឺជារបៀប activate និង ប្រើប្រាស់ VoiceOver៖
-=======
-Refer to the following guides on how to activate and use VoiceOver:
->>>>>>> 071f5b0e1622465fb6fe5cf6c1cbd2aaef7c5ef4
+សូមមើលការណែនាំពីរបៀប activate ហើយនិង ប្រើប្រាស់ VoiceOver ដូចខាងក្រោម៖
 
 - [WebAIM - Using VoiceOver to Evaluate Web Accessibility](https://webaim.org/articles/voiceover/)
 - [Deque - VoiceOver for OS X Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts)
