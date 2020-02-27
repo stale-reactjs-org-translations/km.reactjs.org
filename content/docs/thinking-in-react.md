@@ -137,7 +137,7 @@ You can start seeing how your application will behave: set `filterText` to `"bal
 
 រហូតមកដល់ពេលនេះយើងបានបង្កើត app មួយដែល renders យ៉ាងត្រឹមត្រូវនូវ function មួយនៃ props និង​ state ដោយអនុវត្តតាម flowing down the hierarchy។ ឥឡូវនេះដល់ពេលដែលត្រូវ support នូវលំហូរ data តាមវីធីផ្សេង៖ form components ដែលនៅជ្រៅក្នុង hierarchy តំរូវអោយ update the state នៅក្នុង `FilterableProductTable`។
 
-React makes this data flow explicit to help you understand how your program works, but it does require a little more typing than traditional two-way data binding.
+React បង្កើតលំហូរ data ច្បាស់លាស់ដើម្បីជួយអ្នកឱ្យយល់ពីរបៀបដែលកម្មវិធីរបស់អ្នកដំណើរការ, ប៉ុន្តែវាមិនតំរូវឱ្យមានការ typing ច្រើនជាង traditional two-way data binding នេាះទេ។
 
 If you try to type or check the box in the current version of the example, you'll see that React ignores your input. This is intentional, as we've set the `value` prop of the `input` to always be equal to the `state` passed in from `FilterableProductTable`.
 
