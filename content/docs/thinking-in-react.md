@@ -139,7 +139,8 @@ You can start seeing how your application will behave: set `filterText` to `"bal
 
 React បង្កើតលំហូរ data ច្បាស់លាស់ដើម្បីជួយអ្នកឱ្យយល់ពីរបៀបដែលកម្មវិធីរបស់អ្នកដំណើរការ, ប៉ុន្តែវាមិនតំរូវឱ្យមានការ typing ច្រើនជាង traditional two-way data binding នេាះទេ។
 
-If you try to type or check the box in the current version of the example, you'll see that React ignores your input. This is intentional, as we've set the `value` prop of the `input` to always be equal to the `state` passed in from `FilterableProductTable`.
+ប្រសិនបើអ្នកព្យាយាម type ឬក៏ពិនិត្យ the box នៅក្នុងកំណែបច្ចុប្បន្ននៃឧទាហរណ៍នេះ,​ អ្នកនឹងឃើញថា React មិនអើពើនឹងការបញ្ចូលរបស់អ្នក។ នេះគឺជាចេតនា, 
+ដូចដែលយើងបាន set `value` prop នៃ the `input` ដែលតែងតែស្មើរទៅនិង the `state` ដែលបានបេាះពី `FilterableProductTable`។
 
 Let's think about what we want to happen. We want to make sure that whenever the user changes the form, we update the state to reflect the user input. Since components should only update their own state, `FilterableProductTable` will pass callbacks to `SearchBar` that will fire whenever the state should be updated. We can use the `onChange` event on the inputs to be notified of it. The callbacks passed by `FilterableProductTable` will call `setState()`, and the app will be updated.
 
