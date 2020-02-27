@@ -142,7 +142,7 @@ React បង្កើតលំហូរ data ច្បាស់លាស់ដ�
 ប្រសិនបើអ្នកព្យាយាម type ឬក៏ពិនិត្យ the box នៅក្នុងកំណែបច្ចុប្បន្ននៃឧទាហរណ៍នេះ,​ អ្នកនឹងឃើញថា React មិនអើពើនឹងការបញ្ចូលរបស់អ្នក។ នេះគឺជាចេតនា, 
 ដូចដែលយើងបាន set `value` prop នៃ the `input` ដែលតែងតែស្មើរទៅនិង the `state` ដែលបានបេាះពី `FilterableProductTable`។
 
-Let's think about what we want to happen. We want to make sure that whenever the user changes the form, we update the state to reflect the user input. Since components should only update their own state, `FilterableProductTable` will pass callbacks to `SearchBar` that will fire whenever the state should be updated. We can use the `onChange` event on the inputs to be notified of it. The callbacks passed by `FilterableProductTable` will call `setState()`, and the app will be updated.
+តោះគិតអំពីអ្វីដែលយើងចង់អោយកើតឡើង។ យើងចង់ធ្វើឱ្យប្រាកដថានៅពេលណាដែលអ្នកប្រើប្រាស់ផ្លាស់ប្តូរ form, យើងធ្វើបច្ចុប្បន្នភាព state ដើម្បីឆ្លុះបញ្ចាំងពីការបញ្ចូលរបស់អ្នកប្រើប្រាស់។ ដែល components គួរតែធ្វើបច្ចុប្បន្នភាពនូវ state ផ្ទាល់ខ្លួនរបស់ពួកវា, `FilterableProductTable` នឹងបេាះ callbacks ទៅកាន់ `SearchBar` ដែលនឹង fire រាល់ពេលដែល state គួរតែត្រូវបានគេធ្វើបច្ចុប្បន្នភាព។ យើងអាចប្រើ `onChange` event ទៅលើ inputs ដើម្បីជូនដំណឹងអំពីវា។ The callbacks ត្រូវបានបេាះដោយ `FilterableProductTable` នឹង call `setState()`, ហើយ app នឹងត្រូវបានគេធ្វើបច្ចុប្បន្នភាព។
 
 ## And That's It {#and-thats-it}
 
