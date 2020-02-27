@@ -133,9 +133,9 @@ You can start seeing how your application will behave: set `filterText` to `"bal
 
 ## Step 5: Add Inverse Data Flow {#step-5-add-inverse-data-flow}
 
-<p data-height="600" data-theme-id="0" data-slug-hash="LzWZvb" data-default-tab="js,result" data-user="rohan10" data-embed-version="2" data-pen-title="Thinking In React: Step 5" class="codepen">See the Pen <a href="https://codepen.io/gaearon/pen/LzWZvb">Thinking In React: Step 5</a> on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="600" data-theme-id="0" data-slug-hash="LzWZvb" data-default-tab="js,result" data-user="rohan10" data-embed-version="2" data-pen-title="Thinking In React: Step 5" class="codepen">សូមមើល Pen <a href="https://codepen.io/gaearon/pen/LzWZvb">Thinking In React: Step 5</a> នៅលើ <a href="https://codepen.io">CodePen</a>.</p>
 
-So far, we've built an app that renders correctly as a function of props and state flowing down the hierarchy. Now it's time to support data flowing the other way: the form components deep in the hierarchy need to update the state in `FilterableProductTable`.
+រហូតមកដល់ពេលនេះយើងបានបង្កើត app មួយដែល renders យ៉ាងត្រឹមត្រូវនូវ function មួយនៃ props និង​ state ដោយអនុវត្តតាម flowing down the hierarchy។ ឥឡូវនេះដល់ពេលដែលត្រូវ support នូវលំហូរ data តាមវីធីផ្សេង៖ form components ដែលនៅជ្រៅក្នុង hierarchy តំរូវអោយ update the state នៅក្នុង `FilterableProductTable`។
 
 React makes this data flow explicit to help you understand how your program works, but it does require a little more typing than traditional two-way data binding.
 
