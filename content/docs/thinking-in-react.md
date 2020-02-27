@@ -62,7 +62,7 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
 
 ## Step 2: Build A Static Version in React {#step-2-build-a-static-version-in-react}
 
-<p data-height="600" data-theme-id="0" data-slug-hash="BwWzwm" data-default-tab="js" data-user="lacker" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/gaearon/pen/BwWzwm">Thinking In React: Step 2</a> on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="600" data-theme-id="0" data-slug-hash="BwWzwm" data-default-tab="js" data-user="lacker" data-embed-version="2" class="codepen">សូមមើល Pen <a href="https://codepen.io/gaearon/pen/BwWzwm">Thinking In React: Step 2</a> នៅលើ <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ឥឡូវ​នេះអ្នកមានរចនាសម្ព័ន្ធ component របស់អ្នក, វាដល់ពេលដែលត្រូវ implement app របស់អ្នក។ វិធីងាយស្រួលបំផុតគឺត្រូវបង្កើត version មួយដែលទទួលយក data model របស់អ្នកហើយ render UI បន្តែមិនមាន interactivity ទេ។ វាជាការល្អបំផុតក្នុងការបំបែកដំណើរការទាំងនេះ ពីព្រេាះការបង្កើត static version មួយតម្រូវឱ្យមានការ typing ច្រើននិងមិនមានការគិតទាល់តែសេាះ, ហើយការបន្ថែម interactivity តម្រូវឱ្យមានការគិតច្រើននិងមិនមបានការ typing ច្រើន។ យើងនឹងឃើញថាហេតុអ្វី។
@@ -108,9 +108,9 @@ So finally, our state is:
 
 ## Step 4: Identify Where Your State Should Live {#step-4-identify-where-your-state-should-live}
 
-<p data-height="600" data-theme-id="0" data-slug-hash="qPrNQZ" data-default-tab="js" data-user="lacker" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/gaearon/pen/qPrNQZ">Thinking In React: Step 4</a> on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="600" data-theme-id="0" data-slug-hash="qPrNQZ" data-default-tab="js" data-user="lacker" data-embed-version="2" class="codepen">សូមមើល Pen <a href="https://codepen.io/gaearon/pen/qPrNQZ">Thinking In React: Step 4</a> នៅលើ <a href="https://codepen.io">CodePen</a>.</p>
 
-OK, so we've identified what the minimal set of app state is. Next, we need to identify which component mutates, or *owns*, this state.
+អូខេ, ដូច្នេះយើងបានកំណត់ថាតើអ្វីជា minnimal set of app state។ បន្ទាប់ទៀត, យើងត្រូវកំណត់ថាតើ component មួយណាដែលផ្លាស់ប្តូរ, ឬក៏ *owns*, នេះគឺ state។
 
 Remember: React is all about one-way data flow down the component hierarchy. It may not be immediately clear which component should own what state. **This is often the most challenging part for newcomers to understand,** so follow these steps to figure it out:
 
