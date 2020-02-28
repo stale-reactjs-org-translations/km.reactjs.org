@@ -40,11 +40,7 @@ next: cdn-links.html
 
 [Create React App](https://github.com/facebookincubator/create-react-app) គឺជា environment ដែលផ្តល់ភាពសុខស្រួល (comfortable) មួយសម្រាប់ **ការរៀន React** ហើយគឺជាវិធីដ៏ល្អបំផុតដើម្បីចាប់ផ្តើមបង្កើត **[single-page](/docs/glossary.html#single-page-application) application ថ្មីមួយ** នៅក្នុង​ React។
 
-<<<<<<< HEAD
-វាបង្កើតនូវ development environment របស់អ្នកដូច្នេះអ្នកអាចប្រើលក្ខណៈពិសេសចុងក្រោយបំផុតរបស់ JavaScript (latest JavaScript features), ផ្តល់ developer នូវបទពិសោធដ៏អស្ចារ្យបំផុត, ហើយនិងបង្កើនប្រសិទ្ធភាព app របស់អ្នកសម្រាប់ production។ អ្នកនឹងត្រូវមាន Node >= 6 និង npm >= 5.2 នៅលើម៉ាស៊ីនរបស់អ្នក។ ដើម្បីបង្កើត product, run៖
-=======
-It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 8.10 and npm >= 5.6 on your machine. To create a project, run:
->>>>>>> 5b6ad388804aaa5cf5504ccd04329f52960e17ae
+វាបង្កើតនូវ development environment របស់អ្នកដូច្នេះអ្នកអាចប្រើលក្ខណៈពិសេសចុងក្រោយបំផុតរបស់ JavaScript (latest JavaScript features), ផ្តល់ developer នូវបទពិសោធដ៏អស្ចារ្យបំផុត, ហើយនិងបង្កើនប្រសិទ្ធភាព app របស់អ្នកសម្រាប់ production។ អ្នកនឹងត្រូវមាន Node >= ៨.១០ និង npm >= ៥.៦ នៅលើម៉ាស៊ីនរបស់អ្នក។ ដើម្បីបង្កើត product, run៖
 
 ```bash
 npx create-react-app my-app
@@ -58,11 +54,7 @@ npm start
 
 Create React App មិនដោះស្រាយ​ (doesn't handle) នូវ backend logic ឬ databases នេាះទេ; វាគ្រាន់តែបង្កើតនូវ frontend build pipeline មួយ ដូចច្នេះអ្នកអាចវាជាមួយ backend ផ្សេងៗដែលអ្នកចូលចិត្ត។ បច្ចេកទេសខាងក្រោយ, វាប្រើ [Babel](https://babeljs.io/) និង [webpack](https://webpack.js.org/) ប៉ុន្តែអ្នកមិនចាំបាច់ដឹងអ្វីអំពីពួកវាទេ។
 
-<<<<<<< HEAD
-នៅពេលអ្នកត្រៀមខ្លួនរួចរាល់ហើយដើម្បី deploy ទៅកាន់ production, running `npm run build` និងបង្កើត optimized build មួយសម្រាប់ app របស់អ្នកនៅក្នុងថតឯកសារ `build`។ អ្នកអាចស្វែងយល់បន្ថែមអំពី Create React App [ពី README របស់វា](https://github.com/facebookincubator/create-react-app#create-react-app-) និង [ការណែនាំសម្រាប់អ្នកប្រើប្រាស់](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#table-of-contents)។
-=======
-When you're ready to deploy to production, running `npm run build` will create an optimized build of your app in the `build` folder. You can learn more about Create React App [from its README](https://github.com/facebookincubator/create-react-app#create-react-app--) and the [User Guide](https://facebook.github.io/create-react-app/).
->>>>>>> 4244fc646618de6bae934686f93dd04c9000d9ae
+នៅពេលអ្នកត្រៀមខ្លួនរួចរាល់ហើយដើម្បី deploy ទៅកាន់ production, running `npm run build` និងបង្កើត optimized build មួយសម្រាប់ app របស់អ្នកនៅក្នុងថតឯកសារ `build`។ អ្នកអាចស្វែងយល់បន្ថែមអំពី Create React App [ពី README របស់វា](https://github.com/facebookincubator/create-react-app#create-react-app-) និង [ការណែនាំសម្រាប់អ្នកប្រើប្រាស់](https://facebook.github.io/create-react-app/)។
 
 ### Next.js {#nextjs}
 
@@ -78,21 +70,13 @@ When you're ready to deploy to production, running `npm run build` will create a
 
 ### ឧបករណ៍មានប្រសិទ្ធភាព (Toolchains) ដែលអាចបត់បែនបានកាន់តែច្រើន (Flexible) {#more-flexible-toolchains}
 
-<<<<<<< HEAD
 ឧបករណ៍មានប្រសិទ្ធភាព (toolchains) ខាងក្រោមនេះ ផ្តល់នូវភាពបត់បែន (flexiblity) និងជម្រើសកាន់តែច្រើន។ យើងសូមណែនាំពួកវាទៅកាន់អ្នកប្រើប្រាស់ (user) ដែលមានបទពិសោធន៍ច្រើន៖
-=======
-The following toolchains offer more flexibility and choice. We recommend them to more experienced users:
->>>>>>> 4244fc646618de6bae934686f93dd04c9000d9ae
 
 - **[Neutrino](https://neutrinojs.org/)** រួមបញ្ចូលគ្នានូវអំណាច (power) នៃ [webpack](https://webpack.js.org/) ជាមួយភាពសាមញ្ញនៃ presets ហើយនិងរួមបញ្ចូលទាំង preset សម្រាប់ [React apps](https://neutrinojs.org/packages/react/) និង [React components](https://neutrinojs.org/packages/react-components/)។
 
-<<<<<<< HEAD
 - **[nwb](https://github.com/insin/nwb)** គឺអស្ចារ្យណាស់សម្រាប់ [ការ publishing React components សម្រាប់ npm](https://github.com/insin/nwb/blob/master/docs/guides/ReactComponents.md#developing-react-components-and-libraries-with-nwb)។ វា [អាចត្រូវបានប្រើ](https://github.com/insin/nwb/blob/master/docs/guides/ReactApps.md#developing-react-apps-with-nwb) សម្រាប់បង្កើត React apps ផងដែរ។
 
 - **[Parcel](https://parceljs.org/)** គឺលឿនណាស់, គឺជា zero configuration web application bundler ដែល [ធ្វើការជាមួយ React](https://parceljs.org/recipes.html#react)។
-=======
-- **[Parcel](https://parceljs.org/)** is a fast, zero configuration web application bundler that [works with React](https://parceljs.org/recipes.html#react).
->>>>>>> 5b6ad388804aaa5cf5504ccd04329f52960e17ae
 
 - **[Razzle](https://github.com/jaredpalmer/razzle)** គឺជា server-rendering framework មួយដែលមិនទាមទារនូវការ​ configuration ច្រើនប៉ុន្តែផ្តល់នូវភាពបត់បែន (flexibility) ច្រើនជាង Next.js។
 

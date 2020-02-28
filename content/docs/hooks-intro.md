@@ -31,12 +31,7 @@ function Example() {
 
 >បញ្ជាក់
 >
-<<<<<<< HEAD
->React 16.8.0 គឺជាកំណែដំបូងបំផុតដែលអាចប្រើប្រាស់ជាមួយ Hooks។ នៅពេលដែលអ្នកចង់ upgrade កុំភ្លេច update packages ទាំងអស់ រួមទាំង React DOM។ ចំណែកឯ React Native អាចប្រើប្រាស់ Hooks បាននៅ stable release។
-=======
->React 16.8.0 is the first release to support Hooks. When upgrading, don't forget to update all packages, including React DOM.
->React Native supports Hooks since [the 0.59 release of React Native](https://facebook.github.io/react-native/blog/2019/03/12/releasing-react-native-059).
->>>>>>> 5b6ad388804aaa5cf5504ccd04329f52960e17ae
+>React ១៦.៨.០ គឺជាកំណែរប្រែរដំបូងបំផុតដែលអាចប្រើប្រាស់ជាមួយ Hooks។ នៅពេលដែលអ្នកចង់ upgrade កុំភ្លេច update packages ទាំងអស់ រួមទាំង React DOM។ ចំណែកឯ React Native អាចប្រើប្រាស់ Hooks បានតាំងពី [React Native ជំនាន់ ០.៥៩](https://facebook.github.io/react-native/blog/2019/03/12/releasing-react-native-059)។
 
 ## វីដេអូនៃការណែនាំ {#video-introduction}
 
