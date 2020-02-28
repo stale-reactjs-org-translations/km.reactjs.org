@@ -112,7 +112,7 @@ So finally, our state is:
 
 អូខេ, ដូច្នេះយើងបានកំណត់ថាតើអ្វីជា minnimal set of app state។ បន្ទាប់ទៀត, យើងត្រូវកំណត់ថាតើ component មួយណាដែលផ្លាស់ប្តូរ, ឬក៏ *owns*, នេះគឺ state។
 
-Remember: React is all about one-way data flow down the component hierarchy. It may not be immediately clear which component should own what state. **This is often the most challenging part for newcomers to understand,** so follow these steps to figure it out:
+សូមចងចាំថា៖ React គឺមានលំហូរទិន្នន័យតែមួយផ្លូវចុះទៅ component hierarchy ក្រោមៗ។ វាប្រហែលជាមិនច្បាស់ថាតើ component មួយណាគួរមាន state មួយណា។ **ជារឿយៗនេះគឺជាផ្នែកដែលពិបាកបំផុតសម្រាប់អ្នកចំណូលថ្មីក្នុងការស្វែងយល់** ដូច្នេះធ្វើតាមជំហានទាំងនេះដើម្បីដោះស្រាយ៖
 
 For each piece of state in your application:
 
