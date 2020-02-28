@@ -114,12 +114,12 @@ So finally, our state is:
 
 សូមចងចាំថា៖ React គឺមានលំហូរទិន្នន័យតែមួយផ្លូវចុះទៅ component hierarchy ក្រោមៗ។ វាប្រហែលជាមិនច្បាស់ថាតើ component មួយណាគួរមាន state មួយណា។ **ជារឿយៗនេះគឺជាផ្នែកដែលពិបាកបំផុតសម្រាប់អ្នកចំណូលថ្មីក្នុងការស្វែងយល់** ដូច្នេះធ្វើតាមជំហានទាំងនេះដើម្បីដោះស្រាយ៖
 
-For each piece of state in your application:
+សម្រាប់ state នីមួយៗ នៅក្នុង application របស់អ្នក៖
 
-  * Identify every component that renders something based on that state.
-  * Find a common owner component (a single component above all the components that need the state in the hierarchy).
-  * Either the common owner or another component higher up in the hierarchy should own the state.
-  * If you can't find a component where it makes sense to own the state, create a new component solely for holding the state and add it somewhere in the hierarchy above the common owner component.
+  * កំនត់គ្រប់ component ទាំងអស់ដែល renders អ្វីមួយដោយផ្អែកលើ state មួយនេាះ។
+  * ស្វែងរក component រួមមួយ (single component មួយដែលនៅពីលើ components ទាំងអស់ដែលត្រូវការ state នៅក្នុង hierarchy)។
+  * ទាំងម្ចាស់រួមនិង component​ higher up ផ្សេងទៀតនៅក្នុង hierarchy គួរតែជាម្ចាស់នៃ state។
+  * ប្រសិនបើអ្នកមិនអាចស្វែងរក component មួយដែលសម្យហេតុសម្យផលដែលត្រូវជាម្ចាស់ state, បង្កើត component តែមួយគត់សម្រាប់ការកាន់កាប់ state ហើយនិងបន្ថែមវានៅកន្លែងណាមួយក្នុង hierarchy ពីលើ component ម្ចាស់ដើមរួម។
 
 Let's run through this strategy for our application:
 
