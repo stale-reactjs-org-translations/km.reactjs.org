@@ -82,7 +82,7 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
 
 ## Step 3: Identify The Minimal (but complete) Representation Of UI State {#step-3-identify-the-minimal-but-complete-representation-of-ui-state}
 
-To make your UI interactive, you need to be able to trigger changes to your underlying data model. React achieves this with **state**.
+ដើម្បីបង្កើត UI interactive, អ្នកត្រូវការដើម្បីអាចផ្លាស់ប្តូរ trigger ទៅលើគំរូទិន្នន័យមូលដ្ឋាន។ React អាចសម្រេចបែបនេះបានជាមួយ **state**។
 
 To build your app correctly, you first need to think of the minimal set of mutable state that your app needs. The key here is [DRY: *Don't Repeat Yourself*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). Figure out the absolute minimal representation of the state your application needs and compute everything else you need on-demand. For example, if you're building a TODO list, keep an array of the TODO items around; don't keep a separate state variable for the count. Instead, when you want to render the TODO count, take the length of the TODO items array.
 
