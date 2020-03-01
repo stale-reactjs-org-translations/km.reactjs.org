@@ -121,10 +121,10 @@ So finally, our state is:
   * ទាំងម្ចាស់រួមនិង component​ higher up ផ្សេងទៀតនៅក្នុង hierarchy គួរតែជាម្ចាស់នៃ state។
   * ប្រសិនបើអ្នកមិនអាចស្វែងរក component មួយដែលសម្យហេតុសម្យផលដែលត្រូវជាម្ចាស់ state, បង្កើត component តែមួយគត់សម្រាប់ការកាន់កាប់ state ហើយនិងបន្ថែមវានៅកន្លែងណាមួយក្នុង hierarchy ពីលើ component ម្ចាស់ដើមរួម។
 
-Let's run through this strategy for our application:
+តេាះធ្វើតាមយុទ្ធសាស្ត្រនេះសម្រាប់ application របស់យើង៖
 
-  * `ProductTable` needs to filter the product list based on state and `SearchBar` needs to display the search text and checked state.
-  * The common owner component is `FilterableProductTable`.
+  * `ProductTable` ត្រូវ filter តារាងផលិតផល (product list) ដោយផ្អែកលើ state និង `SearchBar` ត្រូវបង្ហាញ search text និង checked state.
+  * Component ដែលជាម្ចាស់រួមគឺ `FilterableProductTable`។
   * It conceptually makes sense for the filter text and checked value to live in `FilterableProductTable`
 
 Cool, so we've decided that our state lives in `FilterableProductTable`. First, add an instance property `this.state = {filterText: '', inStockOnly: false}` to `FilterableProductTable`'s `constructor` to reflect the initial state of your application. Then, pass `filterText` and `inStockOnly` to `ProductTable` and `SearchBar` as a prop. Finally, use these props to filter the rows in `ProductTable` and set the values of the form fields in `SearchBar`.
