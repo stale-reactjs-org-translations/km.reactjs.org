@@ -123,11 +123,11 @@ So finally, our state is:
 
 តេាះធ្វើតាមយុទ្ធសាស្ត្រនេះសម្រាប់ application របស់យើង៖
 
-  * `ProductTable` ត្រូវ filter តារាងផលិតផល (product list) ដោយផ្អែកលើ state និង `SearchBar` ត្រូវបង្ហាញ search text និង checked state.
+  * `ProductTable` ត្រូវ filter តារាងផលិតផល (product list) ដោយផ្អែកលើ state និង `SearchBar` ត្រូវបង្ហាញ search text និង checked state។
   * Component ដែលជាម្ចាស់រួមគឺ `FilterableProductTable`។
-  * It conceptually makes sense for the filter text and checked value to live in `FilterableProductTable`
+  * វាសម្យហេតុសម្យផលសម្រាប់ filter text ហើយនិងពិនិត្យតម្លៃដើម្បី live នៅក្នុង `FilterableProductTable`។
 
-Cool, so we've decided that our state lives in `FilterableProductTable`. First, add an instance property `this.state = {filterText: '', inStockOnly: false}` to `FilterableProductTable`'s `constructor` to reflect the initial state of your application. Then, pass `filterText` and `inStockOnly` to `ProductTable` and `SearchBar` as a prop. Finally, use these props to filter the rows in `ProductTable` and set the values of the form fields in `SearchBar`.
+Cool, ដូច្នេះយើងបានសម្រេចចិត្តថា state របស់យើង lives នៅក្នុង `FilterableProductTable`។ តំបូង, បន្ថែម instance property មួយ `this.state = {filterText: '', inStockOnly: false}` ទៅអោយ `constructor` របស់ `FilterableProductTable` ដើម្បីឆ្លុះបញ្ចាំង state តំបូង (initial state) នៃ application របស់អ្នក។ បន្ទាប់មក, បេាះ `filterText` និង `inStockOnly` ទៅអោយ `ProductTable` និង `SearchBar` ជា prop មួយ។ ចុងក្រោយ, ប្រើ props ទាំងនេាះដើម្បី filter rows នៅក្នុង `ProductTable` ហើយនិងកំនត់តម្លៃនៃ form fields នៅក្នុង `SearchBar`។
 
 You can start seeing how your application will behave: set `filterText` to `"ball"` and refresh your app. You'll see that the data table is updated correctly.
 
