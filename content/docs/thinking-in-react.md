@@ -129,7 +129,7 @@ So finally, our state is:
 
 Cool, ដូច្នេះយើងបានសម្រេចចិត្តថា state របស់យើង lives នៅក្នុង `FilterableProductTable`។ តំបូង, បន្ថែម instance property មួយ `this.state = {filterText: '', inStockOnly: false}` ទៅអោយ `constructor` របស់ `FilterableProductTable` ដើម្បីឆ្លុះបញ្ចាំង state តំបូង (initial state) នៃ application របស់អ្នក។ បន្ទាប់មក, បេាះ `filterText` និង `inStockOnly` ទៅអោយ `ProductTable` និង `SearchBar` ជា prop មួយ។ ចុងក្រោយ, ប្រើ props ទាំងនេាះដើម្បី filter rows នៅក្នុង `ProductTable` ហើយនិងកំនត់តម្លៃនៃ form fields នៅក្នុង `SearchBar`។
 
-You can start seeing how your application will behave: set `filterText` to `"ball"` and refresh your app. You'll see that the data table is updated correctly.
+អ្នកអាចចាប់ផ្តើមមើលឃើញថា application របស់អ្នកនិងមានអ្វី៖ កំនត់ `filterText` អោយ `"ball"` និង refresh app របស់អ្នក។ អ្នកនឹងឃើញថាតារាងទិន្នន័យត្រូវបានធ្វើបច្ចុប្បន្នភាពយ៉ាងត្រឹមត្រូវ។
 
 ## Step 5: Add Inverse Data Flow {#step-5-add-inverse-data-flow}
 
