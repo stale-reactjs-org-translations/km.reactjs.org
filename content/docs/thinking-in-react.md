@@ -84,27 +84,27 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
 
 ដើម្បីបង្កើត UI interactive, អ្នកត្រូវការដើម្បីអាចផ្លាស់ប្តូរ trigger ទៅលើគំរូទិន្នន័យមូលដ្ឋាន។ React អាចសម្រេចបែបនេះបានជាមួយ **state**។
 
-To build your app correctly, you first need to think of the minimal set of mutable state that your app needs. The key here is [DRY: *Don't Repeat Yourself*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). Figure out the absolute minimal representation of the state your application needs and compute everything else you need on-demand. For example, if you're building a TODO list, keep an array of the TODO items around; don't keep a separate state variable for the count. Instead, when you want to render the TODO count, take the length of the TODO items array.
+ដើម្បីបង្កើត app របស់អ្នកយ៉ាងត្រឹមត្រូវ, តំបូងអ្នកតម្រូវអោយគិតពីសំណុំអប្បបរមានៃ state អាចផ្លាស់ប្តូរបានដែល app របស់អ្នកត្រូវការ។ គន្លឹះគឺនៅទីនេះ [DRY: *Don't Repeat Yourself*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)។ រកមើលការតំណាងតិចតួចបំផុតនៃ state ដែល application របស់អ្នកត្រូវការហើយនិងគណនាអ្វីៗផ្សេងទៀតដែលអ្នកត្រូវការតាមតម្រូវការ។ ឧទាហរណ៍, ប្រសិនបើអ្នកកំពុងតែបង្កើតតារាង TODO មួយ, រក្សាទុក array មួយនៃធាតុ (items) របស់ TODO នៅជុំវិញ; កុំរក្សាទុក state variable ដាច់ដោយឡែកសម្រាប់ការរាប់។ ជំនួសដោយ, ពេលដែលអ្នកចង់ render TODO count, យកប្រវែងនៃធាតុរបស់ TODO array។
 
-Think of all of the pieces of data in our example application. We have:
+គិតពីបំណែកទាំងអស់នៃទិន្នន័យនៅក្នុងឧទាហរណ៍នៃ application របស់យើង។ យើងមាន៖
 
-  * The original list of products
-  * The search text the user has entered
-  * The value of the checkbox
-  * The filtered list of products
+  * បញ្ជីផលិតផលដើម
+  * search text ដែលអ្នកប្រើប្រាស់បានបញ្ចូល
+  * តម្លៃនៃ checkbox
+  * បញ្ជីផលិតផល (products) ដែលបាន filtered
 
-Let's go through each one and figure out which one is state. Ask three questions about each piece of data:
+តេាះក្រឡេកមើលវាមួយៗហើយស្វែងយល់មួយណាគឺជា state។ សួរបីសំណួរអំពីបំណែកនៃទិន្នន័យនីមួយៗ៖
 
-  1. Is it passed in from a parent via props? If so, it probably isn't state.
-  2. Does it remain unchanged over time? If so, it probably isn't state.
-  3. Can you compute it based on any other state or props in your component? If so, it isn't state.
+  ១. វាត្រូវបានគេបេាះពី parent មួយតាមរយៈ​ props? ដូច្នេះ, វាប្រហែលជាមិនមែនជា state។
+  ២. តើវានៅតែមិនផ្លាស់ប្តូរតាមពេលវេលា? ដូច្នេះ, វាប្រហែលជាមិនមែនជា state។
+  ៣. តើអ្នកអាចគណនាវាដោយផ្អែកលើ state ផ្សេងឬ props ដែលនៅក្នុង component របស់អ្នក? ដូច្នេះ, វាប្រហែលជាមិនមែនជា state។
 
-The original list of products is passed in as props, so that's not state. The search text and the checkbox seem to be state since they change over time and can't be computed from anything. And finally, the filtered list of products isn't state because it can be computed by combining the original list of products with the search text and value of the checkbox.
+បញ្ជីដើមនៃផលិតផលត្រូវបាន passed ចូលដែលជា props, ដូច្នេះនេះគឺមិនមែនជា state។ search text និង checkbox ហាក់ដូចជា state ដែលពួកវាផ្លាស់ប្តូរ (change) គ្រប់ពេលវេលាហើយនិងមិនអាចត្រូវបានគណនាពីអ្វីផ្សេងៗទៀត។ ហើយជាចុងក្រោយ, បញ្ជីផលិតផល (products) ដែលបាន filtered គឺមិនមែនជា state ពីព្រេាះវាអាចត្រូវបានគណនាដោយបញ្ចូលគ្នារវាងបញ្ជីផលិតផលដើមជាមួយនិង search text និងតម្លៃនៃ checkbox។
 
-So finally, our state is:
+ដូច្នេះចុងក្រោយ, state របស់យើងគឺ៖
 
-  * The search text the user has entered
-  * The value of the checkbox
+  * search text អ្នកប្រើប្រាស់បានបញ្ចូល
+  * តម្លៃនៃ checkbox
 
 ## Step 4: Identify Where Your State Should Live {#step-4-identify-where-your-state-should-live}
 
