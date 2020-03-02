@@ -45,7 +45,7 @@ function Example() {
 
 #### Declaring multiple state variables {#declaring-multiple-state-variables}
 
-You can use the State Hook more than once in a single component:
+អ្នកអាចប្រើ State Hook ច្រើនជាងមួយក្នុង component មួយ៖
 
 ```js
 function ExampleWithManyStates() {
@@ -57,7 +57,7 @@ function ExampleWithManyStates() {
 }
 ```
 
-The [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring) syntax lets us give different names to the state variables we declared by calling `useState`. These names aren't a part of the `useState` API. Instead, React assumes that if you call `useState` many times, you do it in the same order during every render. We'll come back to why this works and when this is useful later.
+The [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring) syntax អនុញ្ញាតឱ្យយើងដាក់ឈ្មេាះផ្សេងៗឱ្យ state variables យើងបានប្រកាសដោយការ call `useState`។ រាល់ការ rende ទាំងនេាះ។ យើងនឹងត្រលប់ទៅមើល មូលហេតុដែលវាដំណើរការ ហើយនិងនៅពេលដែលវាប្រយោជន៍នៅពេលក្រោយ។
 
 #### But what is a Hook? {#but-what-is-a-hook}
 
