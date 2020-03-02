@@ -61,13 +61,13 @@ The [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScrip
 
 #### But what is a Hook? {#but-what-is-a-hook}
 
-Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks don't work inside classes -- they let you use React without classes. (We [don't recommend](/docs/hooks-intro.html#gradual-adoption-strategy) rewriting your existing components overnight but you can start using Hooks in the new ones if you'd like.)
+Hooks គឺជា functions ដែលអនុញ្ញាតឱ្យអ្នក​ “hook into” React state និង lifecycle features ពី function components។ Hooks អត់ដំណើរនៅក្នុង classes ទេ -- ពួកវាអនុញ្ញាតឱ្យអ្នកប្រើ React ដោយមិនមាន classes។ (យើង [មិនណែនាំ](/docs/hooks-intro.html#gradual-adoption-strategy) ឱ្យសរសេរឡើងវិញនូវ components របស់អ្នកនេាះទេ ប៉ុន្តែអ្នកអាចចាប់ផ្តើមការប្រើ Hooks នៅក្នុង components ថ្មីប្រសិនបើអ្នកចង់។)
 
-React provides a few built-in Hooks like `useState`. You can also create your own Hooks to reuse stateful behavior between different components. We'll look at the built-in Hooks first.
+React ផ្តល់នូវ built-in Hooks មួយចំនួនដូចជា `useState`។ អ្នកក៏អាចបង្កើត Hooks ផ្ទាល់ខ្លួនរបស់អ្នកដើម្បីកាត់បន្ថយលក្ខណះ stateful រវាង components ផ្សេងៗគ្នា។ យើងនឹងក្រឡេកទៅមើល built-in Hooks មុនគេ។
 
->Detailed Explanation
+>ការពន្យល់យ៉ាងលម្អិត
 >
->You can learn more about the State Hook on a dedicated page: [Using the State Hook](/docs/hooks-state.html).
+>អ្នកអាចរៀនបន្ថែមពី State Hook លើទំព័រផ្សេង៖ [ការប្រើ State Hook](/docs/hooks-state.html)។
 
 ## ⚡️ Effect Hook {#effect-hook}
 
