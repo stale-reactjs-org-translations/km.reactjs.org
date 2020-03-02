@@ -8,8 +8,6 @@ prev: hooks-intro.html
 
 *Hooks* គឺជាការបន្ថែមថ្មីនៅក្នុង React ១៦.៨។ ពួកវាអនុញ្ញាតឱ្យអ្នកប្រើ state និង React features ផ្សេងៗដោយមិនចាំបាច់សរសេរ class។
 
-Hooks are [backwards-compatible](/docs/hooks-intro.html#no-breaking-changes). This page provides an overview of Hooks for experienced React users. This is a fast-paced overview. If you get confused, look for a yellow box like this:
-
 Hooks គឺជា [backwards-compatible](/docs/hooks-intro.html#no-breaking-changes)។ ទំព័រនេះផ្តល់នូវទិដ្ឋភាពទូទៅ (overview) នៃ Hooks សម្រាប់អ្នកប្រើប្រាស់ដែលមានបទពិសោធន៍លើ React។ នេះគឺជាការ overview ខ្លីៗ។ ប្រសិនបើអ្នកច្រឡំ, សូមមើលប្រអប់ពណ៌លឿងខាងក្រោម៖
 
 >ការពន្យល់យ៉ាងលម្អិត
@@ -20,7 +18,7 @@ Hooks គឺជា [backwards-compatible](/docs/hooks-intro.html#no-breaking-cha
 
 ## 📌 State Hook {#state-hook}
 
-This example renders a counter. When you click the button, it increments the value:
+ឧទាហរណ៍នេះ renders នូវ counter។ នៅពេលដែលអ្នកចុចលើ​ប៊ូតុង, វាបង្កើនតម្លៃ៖
 
 ```js{1,4,5}
 import React, { useState } from 'react';
