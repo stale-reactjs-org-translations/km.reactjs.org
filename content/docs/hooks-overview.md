@@ -10,11 +10,13 @@ prev: hooks-intro.html
 
 Hooks are [backwards-compatible](/docs/hooks-intro.html#no-breaking-changes). This page provides an overview of Hooks for experienced React users. This is a fast-paced overview. If you get confused, look for a yellow box like this:
 
->Detailed Explanation
->
->Read the [Motivation](/docs/hooks-intro.html#motivation) to learn why we're introducing Hooks to React.
+Hooks គឺជា [backwards-compatible](/docs/hooks-intro.html#no-breaking-changes)។ ទំព័រនេះផ្តល់នូវទិដ្ឋភាពទូទៅ (overview) នៃ Hooks សម្រាប់អ្នកប្រើប្រាស់ដែលមានបទពិសោធន៍លើ React។ នេះគឺជាការ overview ខ្លីៗ។ ប្រសិនបើអ្នកច្រឡំ, សូមមើលប្រអប់ពណ៌លឿងខាងក្រោម៖
 
-**↑↑↑ Each section ends with a yellow box like this.** They link to detailed explanations.
+>ការពន្យល់យ៉ាងលម្អិត
+>
+>សូមអាន [Motivation](/docs/hooks-intro.html#motivation) ដើម្បីរៀនពីមូលហេតុដែលយើងណែនាំ Hooks។
+
+**↑↑↑ ផ្នែកនីមួយៗបញ្ចប់ដោយប្រអប់ពណ៌លឿងដូចនេះ។** ពួកវាភ្ជាប់ទៅនឹងការពន្យល់លម្អិត។
 
 ## 📌 State Hook {#state-hook}
 
