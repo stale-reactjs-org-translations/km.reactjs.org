@@ -38,9 +38,10 @@ function Example() {
 }
 ```
 
-Here, `useState` is a *Hook* (we'll talk about what this means in a moment). We call it inside a function component to add some local state to it. React will preserve this state between re-renders. `useState` returns a pair: the *current* state value and a function that lets you update it. You can call this function from an event handler or somewhere else. It's similar to `this.setState` in a class, except it doesn't merge the old and new state together. (We'll show an example comparing `useState` to `this.state` in [Using the State Hook](/docs/hooks-state.html).)
+នេះ, `useState` គឺជា *Hook* មួយ (យើងនឹងនិយាយអំពីវាថាតើវាមានន័យដូចម៉្តេចក្នុងពេលបន្តិចទៀតនេះ)។ យើង call វានៅខាងក្នុង function component ដើម្បីបន្ថែម local state មួយចំនួន។ React នឹងការពារ state នេះរវាង re-renders។ `useState` returns នូវ pair ដូចនេះ៖ តម្លៃរបស់ *current* state និង function ដែលអនុញ្ញាតឱ្យអ្នក update វា។ អ្នកអាច call function នេះពី event handler ឬក៏អ្វីផ្សេងទៀត។ វាស្រដៀងនឹង `this.setState` នៅក្នុង class, 
+លើកលែងវា កុំបញ្ចូលចូលគ្នារវាង state ចាស់និង state ថ្មីជាមួយគ្នា។ (យើងនឹងបង្ហាញឧទាហរណ៍ប្រៀបធៀបមួយនៃការប្រើ `useState` ជំនួសអោយ `this.state` នៅក្នុង [ការប្រើប្រាស់ State Hook](/docs/hooks-state.html)។)
 
-The only argument to `useState` is the initial state. In the example above, it is `0` because our counter starts from zero. Note that unlike `this.state`, the state here doesn't have to be an object -- although it can be if you want. The initial state argument is only used during the first render.
+`useState` មាន argument តែមួយគត់គឺ initial state។ ក្នុងឧទាហរណ៍ខាងលើ, វាគឺ `0` ពីព្រេាះ counter របស់យើងចាប់ផ្តើមពីសូន្យ។ ចំណាំថា វាមិនដូច `this.state` នេាះទេ, state នៅទីនេះវាមិនត្រូវតែជា object នេាះទេ -- វាអាចជាអ្វីផ្សេងៗប្រសិនបើអ្នកចង់។ initial state argument គឺត្រូវបានគេប្រើតែកំឡុងពេល render តំបូងតែប៉ុណ្ណោះ។
 
 #### Declaring multiple state variables {#declaring-multiple-state-variables}
 
