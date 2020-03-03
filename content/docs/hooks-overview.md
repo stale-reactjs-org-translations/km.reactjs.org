@@ -100,11 +100,10 @@ function Example() {
 }
 ```
 
-When you call `useEffect`, you're telling React to run your "effect" function after flushing changes to the DOM. Effects are declared inside the component so they have access to its props and state. By default, React runs the effects after every render -- *including* the first render. (We'll talk more about how this compares to class lifecycles in [Using the Effect Hook](/docs/hooks-effect.html).)
+នៅពេលដែលអ្នក call `useEffect`, អ្នកកំពុងតែប្រាប់ React អោយ run "effect" function របស់អ្នកបន្ទាប់ពីការផ្លាស់ប្តូរចំពេាះ DOM។ Effect ត្រូវបានប្រកាស (declare) ខាងក្នុង component ដូច្នេះពួកវាមានសិទ្ធិចូលដំណើរការ props និង state របស់ពួកវា។ តាម​លំនាំដើម (by default), React runs effects បន្ទាប់ពី រាល់ពេល render -- *រួមទាំង* ពេល render តំបូង។ (
+យើងនឹងនិយាយបន្ថែមទៀតអំពីរបៀបធៀបវាទៅនឹង class lifecycles នៅក្នុង [ការប្រើ Effect Hook](/docs/hooks-effect.html)។)
 
-នៅពេលដែលអ្នក call `useEffect`, អ្នកកំពុងតែប្រាប់ React អោយ run "effect" function របស់អ្នកបន្ទាប់ពីការផ្លាស់ប្តូរចំពេាះ DOM។ Effect ត្រូវបានប្រកាស (declare) ខាងក្នុង component ដូច្នេះពួកវាមានសិទ្ធិចូលដំណើរការ props និង state របស់ពួកវា។ 
-
-Effects may also optionally specify how to "clean up" after them by returning a function. For example, this component uses an effect to subscribe to a friend's online status, and cleans up by unsubscribing from it:
+Effects ប្រហែលអាចជារបៀបដើម្បី "clean up" ដោយការ return ពី function។ ឧទាហរណ៍, component នេះប្រើ effect ដើម្បី subscribe ទៅកាន់ online status របស់ friend មួយនាក់, ហើយនិង cleans up ដោយការ unsubscribe ពីវា៖
 
 ```js{10-16}
 import React, { useState, useEffect } from 'react';
@@ -131,9 +130,9 @@ function FriendStatus(props) {
 }
 ```
 
-In this example, React would unsubscribe from our `ChatAPI` when the component unmounts, as well as before re-running the effect due to a subsequent render. (If you want, there's a way to [tell React to skip re-subscribing](/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects) if the `props.friend.id` we passed to `ChatAPI` didn’t change.)
+ក្នុងឧទាហរណ៍នេះ, React នឹង unsubscribe ពី `ChatAPI` របស់យើង នៅពេលដែល component unmounts, ក៏ដូចជាបន្ទាប់ពី re-running effect ដោយសារតែ render បន្តបន្ទាប់។ (ប្រសិនបើអ្នកចង់, មានវិធីមួយដើម្បី [ប្រាប់ React អោយ skip ការ re-subscribe](/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects) ប្រសិនបើ `props.friend.id` ដែលយើងបាន pass ទៅអោយ `ChatAPI` មិនបានផ្លាស់ប្តូរ។)
 
-Just like with `useState`, you can use more than a single effect in a component:
+ដូចទៅនឹង `useState`, អ្នកអាចប្រើ effect ច្រើនជាងតែមួយ នៅក្នុង component មួយ៖
 
 ```js{3,8}
 function FriendStatusWithCounter(props) {
@@ -156,11 +155,11 @@ function FriendStatusWithCounter(props) {
   // ...
 ```
 
-Hooks let you organize side effects in a component by what pieces are related (such as adding and removing a subscription), rather than forcing a split based on lifecycle methods.
+Hooks អនុញ្ញាតឱ្យអ្នករៀបចំ side effects នៅក្នុង component ដោយ បំណែកអ្វីដែលទាក់ទងគ្នា (ដូចជាការបន្ថែមនិងការយកចេញ subscription), ជាជាងបង្ខំឱ្យមានការបំបែកដោយផ្អែកលើ lifecycle methods។
 
->Detailed Explanation
+>ការពន្យល់យ៉ាងលម្អិត
 >
->You can learn more about `useEffect` on a dedicated page: [Using the Effect Hook](/docs/hooks-effect.html).
+>អ្នកអាចស្វែងយល់បន្ថែមអំពី `useEffect` លើទំព័រផ្សេង៖ [ការប្រើប្រាស់ Effect Hook](/docs/hooks-effect.html)។
 
 ## ✌️ Rules of Hooks {#rules-of-hooks}
 
