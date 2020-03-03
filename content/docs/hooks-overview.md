@@ -71,7 +71,7 @@ React ផ្តល់នូវ built-in Hooks មួយចំនួនដូច�
 
 ## ⚡️ Effect Hook {#effect-hook}
 
-You've likely performed data fetching, subscriptions, or manually changing the DOM from React components before. We call these operations "side effects" (or "effects" for short) because they can affect other components and can't be done during rendering.
+អ្នកទំនងជាចូលចិត្តអនុវត្ត data fetching, subscriptions, ឬក៏ផ្លាស់ប្តូរ DOM ដោយផ្ទាល់ពី React components ពីមុន។ យើងហៅប្រតិបត្តិការទាំងនេះថា "side effects" (ឬ "effects" for short) ពីព្រេាះពួកវាអាចធ្វើអោយប៉ះពាល់ components ផ្សេងៗហើយនិងមិនអាច done កំឡុងពេល rendering។
 
 The Effect Hook, `useEffect`, adds the ability to perform side effects from a function component. It serves the same purpose as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` in React classes, but unified into a single API. (We'll show examples comparing `useEffect` to these methods in [Using the Effect Hook](/docs/hooks-effect.html).)
 
