@@ -75,7 +75,7 @@ React ផ្តល់នូវ built-in Hooks មួយចំនួនដូច�
 
 Effect Hook, `useEffect`, បន្ថែមសមត្ថភាពក្នុងការអនុវត្ត side effects ពី function component។ វាបម្រើគោលបំណងដូចគ្នានឹង `componentDidMount`, `componentDidUpdate`, និង `componentWillUnmount` ក្នុង React classes។ ប៉ុន្តែបានបង្រួបបង្រួមចូលទៅក្នុង API តែមួយ។ (យើងនឹងបង្ហាញឧទាហរណ៍ប្រៀបធៀបរវាង `useEffect` ទៅនឹង methods ទាំងនេាះក្នុង [Using the Effect Hook](/docs/hooks-effect.html)។)
 
-For example, this component sets the document title after React updates the DOM:
+ឧទាហរណ៍, component នេះ sets នូវ document title បន្ទាប់ពី React ធ្វើបច្ចុប្បន្នភាព DOM៖
 
 ```js{1,6-10}
 import React, { useState, useEffect } from 'react';
@@ -101,6 +101,8 @@ function Example() {
 ```
 
 When you call `useEffect`, you're telling React to run your "effect" function after flushing changes to the DOM. Effects are declared inside the component so they have access to its props and state. By default, React runs the effects after every render -- *including* the first render. (We'll talk more about how this compares to class lifecycles in [Using the Effect Hook](/docs/hooks-effect.html).)
+
+នៅពេលដែលអ្នក call `useEffect`, អ្នកកំពុងតែប្រាប់ React អោយ run "effect" function របស់អ្នកបន្ទាប់ពីការផ្លាស់ប្តូរចំពេាះ DOM។ Effect ត្រូវបានប្រកាស (declare) ខាងក្នុង component ដូច្នេះពួកវាមានសិទ្ធិចូលដំណើរការ props និង state របស់ពួកវា។ 
 
 Effects may also optionally specify how to "clean up" after them by returning a function. For example, this component uses an effect to subscribe to a friend's online status, and cleans up by unsubscribing from it:
 
