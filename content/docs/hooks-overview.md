@@ -231,15 +231,15 @@ function FriendListItem(props) {
 }
 ```
 
-The state of these components is completely independent. Hooks are a way to reuse *stateful logic*, not state itself. In fact, each *call* to a Hook has a completely isolated state -- so you can even use the same custom Hook twice in one component.
+State នៃ components ទាំងនេះគឺ ឯករាជ្យទាំងស្រុង។ Hooks គឺជាមធ្យោបាយដើម្បីកាត់បន្ថយ *stateful logic*, មិនមែន state ខ្លួនវាផ្ទាល់។ តាមពិត, *call* នីមួយៗ ទៅកាន់ Hook មួយ មាន state ដាច់ឆ្ងាយទាំងស្រុង -- ដូច្នេះអ្នកអាចសូម្បីតែប្រើ custom Hook ដូចគ្នាពីរដងនៅក្នុង component តែមួយ។
 
-Custom Hooks are more of a convention than a feature. If a function's name starts with "`use`" and it calls other Hooks, we say it is a custom Hook. The `useSomething` naming convention is how our linter plugin is able to find bugs in the code using Hooks.
+Custom Hooks គឺលើសពី convention មួយជាង feature មួយ។ ប្រសិនបើឈ្មេាះរបស់ function ផ្តើមដោយ "`use`" និងវា call ថា Hooks ផ្សេង, យើងអាចនិយាយបានថាវាគឺជា custom Hook មួយ។ `useSomething` convention នៃការដាក់ឈ្មេាះគឺជារបៀបដែល linter plugin របស់យើងគឺអាចរកឃើញ bugs នៅក្នុង code ដែលកំពុងប្រើ Hooks។
 
-You can write custom Hooks that cover a wide range of use cases like form handling, animation, declarative subscriptions, timers, and probably many more we haven't considered. We are excited to see what custom Hooks the React community will come up with.
+អ្នកអាចសរសេរ custom Hooks ដែលគ្រប់ដណ្តប់នូវការករណីប្រើប្រាស់យ៉ាងទូលំទូលាយដូចជា form handling, animation, declarative subscriptions, timers, និងអ្វីៗផ្សេងៗទៀតដែលយើមិនបានគិតដល់។ យើងរំភើបណាស់ដែលបានឃើញអ្វីដែល សហគមន៍ React custom Hooks នឹងមកជាមួយ។
 
->Detailed Explanation
+>ការពន្យល់យ៉ាងលម្អិត
 >
->You can learn more about custom Hooks on a dedicated page: [Building Your Own Hooks](/docs/hooks-custom.html).
+>អ្នកអាចស្វែងយល់បន្ថែមអំពី custom Hooks លើទំព័រផ្សេង៖ [ការបង្កើត Hooks ផ្ទាល់ខ្លួនរបស់អ្នក](/docs/hooks-custom.html)។
 
 ## 🔌 Other Hooks {#other-hooks}
 
