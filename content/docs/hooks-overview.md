@@ -176,11 +176,11 @@ Hooks គឺ JavaScript functions, ប៉ុន្តែពួកគេដាក
 
 ## 💡 Building Your Own Hooks {#building-your-own-hooks}
 
-Sometimes, we want to reuse some stateful logic between components. Traditionally, there were two popular solutions to this problem: [higher-order components](/docs/higher-order-components.html) and [render props](/docs/render-props.html). Custom Hooks let you do this, but without adding more components to your tree.
+ជួនកាល, យើងចង់កាត់បន្ថយ stateful logic មួយចំនួនរវាង components។ ជាប្រពៃណី, មានដំណោះស្រាយពេញនិយមពីរចំពោះបញ្ហានេះ៖ [higher-order components](/docs/higher-order-components.html) និង [render props](/docs/render-props.html)។ Custom Hooks អនុញ្ញាតឱ្យអ្នកធ្វើរឿងនេះបាន, ប៉ុន្តែដោយមិនបន្ថែមទៀត components ទៅកាន់ tree របស់អ្នក។
 
-Earlier on this page, we introduced a `FriendStatus` component that calls the `useState` and `useEffect` Hooks to subscribe to a friend's online status. Let's say we also want to reuse this subscription logic in another component.
+មុននេះនៅលើទំព័រនេះ, យើងបានណែនាំ `FriendStatus` component មួយដែល calls `useState` និង `useEffect` Hooks ដើម្បី subscribe ទៅកាន់ online status របស់ friend ម្នាក់។ តេាះនិយាយថា យើងក៏ចង់កាត់បន្ថយ subscription logic នេះនៅក្នុង component ផ្សេង។
 
-First, we'll extract this logic into a custom Hook called `useFriendStatus`:
+តំបូង, យើងនឹងស្រង់ (extract) logic នេះចូលទៅក្នុង custom Hook ដែលត្រូវបានគេហៅថា `useFriendStatus`៖
 
 ```js{3}
 import React, { useState, useEffect } from 'react';
@@ -203,9 +203,9 @@ function useFriendStatus(friendID) {
 }
 ```
 
-It takes `friendID` as an argument, and returns whether our friend is online.
+វាទទួលយក `friendID` ដែលជា argument, ហើយ returns ថា friend យើងគឺ online។
 
-Now we can use it from both components:
+ឥឡូវ​នេះយើងអាចប្រើវាពី components ទាំងពីរ៖
 
 
 ```js{2}
