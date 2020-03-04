@@ -6,7 +6,7 @@ next: hooks-effect.html
 prev: hooks-overview.html
 ---
 
-*Hooks* are a new addition in React 16.8. They let you use state and other React features without writing a class.
+Hooks គឺជាការបន្ថែមថ្មីនៅក្នុង React ១៦.៨។ ពួកវាអនុញ្ញាតឱ្យអ្នកប្រើ state និង React features ផ្សេងៗដោយមិនចាំបាច់សរសេរ class។
 
 The [introduction page](/docs/hooks-intro.html) used this example to get familiar with Hooks:
 
