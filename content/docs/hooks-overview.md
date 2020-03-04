@@ -268,8 +268,8 @@ function Todos() {
 
 ## Next Steps {#next-steps}
 
-Phew, that was fast! If some things didn't quite make sense or you'd like to learn more in detail, you can read the next pages, starting with the [State Hook](/docs/hooks-state.html) documentation.
+Phew, នេះគឺលឿនមែនទែន! ប្រសិនបើមានរឿងខ្លះមិនសមហេតុផល ឬក៏អ្នកចង់រៀនលម្អិតបន្ថែមទៀត, អ្នកអាចអាននៅទំព័របន្ទាប់, ចាប់ផ្តើមជាមួយឯកសារ [State Hook](/docs/hooks-state.html)។
 
-You can also check out the [Hooks API reference](/docs/hooks-reference.html) and the [Hooks FAQ](/docs/hooks-faq.html).
+អ្នកអាចពិនិត្យផងដែរនូវ [Hooks API reference](/docs/hooks-reference.html) ហើយនិង [Hooks FAQ](/docs/hooks-faq.html) របស់យើង។
 
-Finally, don't miss the [introduction page](/docs/hooks-intro.html) which explains *why* we're adding Hooks and how we'll start using them side by side with classes -- without rewriting our apps.
+ជាចុងក្រោយ, កុំខកខាន [introduction page](/docs/hooks-intro.html) ដែលពន្យល់ *ហេតុអ្វី* យើកំពុងបន្ថែម Hooks និងរបៀបដែលយើងនឹងចាប់ផ្តើមការប្រើប្រាស់ពួកវានៅក្បែរគ្នាជាមួយ classes -- ដោយគ្មានការសរសេរឡើងវិញនូវ app របស់យើង។
