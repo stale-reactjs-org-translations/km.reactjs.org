@@ -243,7 +243,8 @@ Custom Hooks គឺលើសពី convention មួយជាង feature មួ�
 
 ## 🔌 Other Hooks {#other-hooks}
 
-There are a few less commonly used built-in Hooks that you might find useful. For example, [`useContext`](/docs/hooks-reference.html#usecontext) lets you subscribe to React context without introducing nesting:
+មានតិចតួចដែលត្រូវបានប្រើជាទូទៅ built-in Hooks ដែលអ្នកប្រហែលយល់ថា useful។ ឧទាហរណ៍, [`useContext`](/docs/hooks-reference.html#usecontext) 
+អនុញ្ញាតឱ្យអ្នក subscribe ទៅកាន់ React context ដោយមិនមានការណែនាំ nesting៖
 
 ```js{2,3}
 function Example() {
@@ -253,7 +254,7 @@ function Example() {
 }
 ```
 
-And [`useReducer`](/docs/hooks-reference.html#usereducer) lets you manage local state of complex components with a reducer:
+ហើយនិង [`useReducer`](/docs/hooks-reference.html#usereducer) អនុញ្ញាតឱ្យអ្នកគ្រប់គ្រង local state នៃ components ស្មុគស្មាញជាមួយនិង reducer៖
 
 ```js{2}
 function Todos() {
@@ -261,9 +262,9 @@ function Todos() {
   // ...
 ```
 
->Detailed Explanation
+>ការពន្យល់យ៉ាងលម្អិត
 >
->You can learn more about all the built-in Hooks on a dedicated page: [Hooks API Reference](/docs/hooks-reference.html).
+>អ្នកអាចស្វែងយល់បន្ថែមអំពី built-in Hooks ទាំងអស់ លើទំព័រផ្សេង៖: [Hooks API Reference](/docs/hooks-reference.html)។
 
 ## Next Steps {#next-steps}
 
