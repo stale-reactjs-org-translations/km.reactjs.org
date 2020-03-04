@@ -165,14 +165,14 @@ Hooks អនុញ្ញាតឱ្យអ្នករៀបចំ side effects 
 
 Hooks គឺ JavaScript functions, ប៉ុន្តែពួកគេដាក់ចេញច្បាប់ (rule) ពីរបន្ថែមទៀត៖
 
-* Only call Hooks **at the top level**. Don’t call Hooks inside loops, conditions, or nested functions.
-* Only call Hooks **from React function components**. Don’t call Hooks from regular JavaScript functions. (There is just one other valid place to call Hooks -- your own custom Hooks. We'll learn about them in a moment.)
+* Call Hooks តែ **នៅ top level**។ កុំ call Hooks នៅខាងក្នុង loops, លក្ខខណ្ឌ (conditions), ឬក៏ nested functions។
+* Call Hooks តែ **ពី React function components**។ កុំ call Hooks ពី JavaScript functions។ (មានកន្លែងត្រឹមត្រូវមួយតែមួយផ្សេងទៀតដើម្បី call Hooks -- Customs Hooks របស់អ្នកផ្ទាល់។ យើងនឹងរៀនអំពីពួកគេក្នុងពេលបន្តិចទៀតនេះ។)
 
-We provide a [linter plugin](https://www.npmjs.com/package/eslint-plugin-react-hooks) to enforce these rules automatically. We understand these rules might seem limiting or confusing at first, but they are essential to making Hooks work well.
+យើងផ្តល់នូវ [linter plugin](https://www.npmjs.com/package/eslint-plugin-react-hooks) មួយដើម្បីអនុវត្តច្បាប់ទាំងនេះដោយស្វ័យប្រវត្តិ។​ យើងយល់ថាច្បាប់ទាំងនេះមើលទៅដូចជាមានកំណត់ឬច្របូកច្របល់នៅពេលដំបូង, ប៉ុន្តែវាចាំបាច់ណាស់ក្នុងការធ្វើឱ្យ Hooks ដំណើរការល្អ។
 
->Detailed Explanation
+>ការពន្យល់យ៉ាងលម្អិត
 >
->You can learn more about these rules on a dedicated page: [Rules of Hooks](/docs/hooks-rules.html).
+>អ្នកអាចស្វែងយល់បន្ថែមអំពីច្បាប់​ (rules) នេះលើទំព័រផ្សេង៖ [ច្បាប់ (Rules) នៃ Hooks](/docs/hooks-rules.html)។
 
 ## 💡 Building Your Own Hooks {#building-your-own-hooks}
 
