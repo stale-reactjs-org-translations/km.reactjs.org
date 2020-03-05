@@ -8,7 +8,7 @@ prev: hooks-overview.html
 
 Hooks គឺជាការបន្ថែមថ្មីនៅក្នុង React ១៦.៨។ ពួកវាអនុញ្ញាតឱ្យអ្នកប្រើ state និង React features ផ្សេងៗដោយមិនចាំបាច់សរសេរ class។
 
-The [introduction page](/docs/hooks-intro.html) used this example to get familiar with Hooks:
+[ទំព័រណែនាំ](/docs/hooks-intro.html) បានប្រើឧទាហរណ៍នេះដើម្បីស៊ាំ (get familiar) ជាមួយ Hooks
 
 ```js{4-5}
 import React, { useState } from 'react';
@@ -28,7 +28,7 @@ function Example() {
 }
 ```
 
-We'll start learning about Hooks by comparing this code to an equivalent class example.
+យើងនឹងចាប់ផ្តើមរៀនពី Hooks ដោយប្រៀបធៀបកូដនេះទៅនឹងឧទាហរណ៍កំរិតស្មើរគ្នាឬដូចគ្នា។
 
 ## Equivalent Class Example {#equivalent-class-example}
 
