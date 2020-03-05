@@ -6,19 +6,19 @@ next: hooks-state.html
 prev: hooks-intro.html
 ---
 
-*Hooks* are a new addition in React 16.8. They let you use state and other React features without writing a class.
+*Hooks* គឺជាការបន្ថែមថ្មីនៅក្នុង React ១៦.៨។ ពួកវាអនុញ្ញាតឱ្យអ្នកប្រើ state និង React features ផ្សេងៗដោយមិនចាំបាច់សរសេរ class។
 
-Hooks are [backwards-compatible](/docs/hooks-intro.html#no-breaking-changes). This page provides an overview of Hooks for experienced React users. This is a fast-paced overview. If you get confused, look for a yellow box like this:
+Hooks គឺជា [backwards-compatible](/docs/hooks-intro.html#no-breaking-changes)។ ទំព័រនេះផ្តល់នូវទិដ្ឋភាពទូទៅ (overview) នៃ Hooks សម្រាប់អ្នកប្រើប្រាស់ដែលមានបទពិសោធន៍លើ React។ នេះគឺជាការ overview ខ្លីៗ។ ប្រសិនបើអ្នកច្រឡំ, សូមមើលប្រអប់ពណ៌លឿងខាងក្រោម៖
 
->Detailed Explanation
+>ការពន្យល់យ៉ាងលម្អិត
 >
->Read the [Motivation](/docs/hooks-intro.html#motivation) to learn why we're introducing Hooks to React.
+>សូមអាន [Motivation](/docs/hooks-intro.html#motivation) ដើម្បីរៀនពីមូលហេតុដែលយើងណែនាំ Hooks។
 
-**↑↑↑ Each section ends with a yellow box like this.** They link to detailed explanations.
+**↑↑↑ ផ្នែកនីមួយៗបញ្ចប់ដោយប្រអប់ពណ៌លឿងដូចនេះ។** ពួកវាភ្ជាប់ទៅនឹងការពន្យល់លម្អិត។
 
 ## 📌 State Hook {#state-hook}
 
-This example renders a counter. When you click the button, it increments the value:
+ឧទាហរណ៍នេះ renders នូវ counter។ នៅពេលដែលអ្នកចុចលើ​ប៊ូតុង, វាបង្កើនតម្លៃ៖
 
 ```js{1,4,5}
 import React, { useState } from 'react';
@@ -38,13 +38,14 @@ function Example() {
 }
 ```
 
-Here, `useState` is a *Hook* (we'll talk about what this means in a moment). We call it inside a function component to add some local state to it. React will preserve this state between re-renders. `useState` returns a pair: the *current* state value and a function that lets you update it. You can call this function from an event handler or somewhere else. It's similar to `this.setState` in a class, except it doesn't merge the old and new state together. (We'll show an example comparing `useState` to `this.state` in [Using the State Hook](/docs/hooks-state.html).)
+នេះ, `useState` គឺជា *Hook* មួយ (យើងនឹងនិយាយអំពីវាថាតើវាមានន័យដូចម៉្តេចក្នុងពេលបន្តិចទៀតនេះ)។ យើង call វានៅខាងក្នុង function component ដើម្បីបន្ថែម local state មួយចំនួន។ React នឹងការពារ state នេះរវាង re-renders។ `useState` returns នូវ pair ដូចនេះ៖ តម្លៃរបស់ *current* state និង function ដែលអនុញ្ញាតឱ្យអ្នក update វា។ អ្នកអាច call function នេះពី event handler ឬក៏អ្វីផ្សេងទៀត។ វាស្រដៀងនឹង `this.setState` នៅក្នុង class, 
+លើកលែងវា កុំបញ្ចូលចូលគ្នារវាង state ចាស់និង state ថ្មីជាមួយគ្នា។ (យើងនឹងបង្ហាញឧទាហរណ៍ប្រៀបធៀបមួយនៃការប្រើ `useState` ជំនួសអោយ `this.state` នៅក្នុង [ការប្រើប្រាស់ State Hook](/docs/hooks-state.html)។)
 
-The only argument to `useState` is the initial state. In the example above, it is `0` because our counter starts from zero. Note that unlike `this.state`, the state here doesn't have to be an object -- although it can be if you want. The initial state argument is only used during the first render.
+`useState` មាន argument តែមួយគត់គឺ initial state។ ក្នុងឧទាហរណ៍ខាងលើ, វាគឺ `0` ពីព្រេាះ counter របស់យើងចាប់ផ្តើមពីសូន្យ។ ចំណាំថា វាមិនដូច `this.state` នេាះទេ, state នៅទីនេះវាមិនត្រូវតែជា object នេាះទេ -- វាអាចជាអ្វីផ្សេងៗប្រសិនបើអ្នកចង់។ initial state argument គឺត្រូវបានគេប្រើតែកំឡុងពេល render តំបូងតែប៉ុណ្ណោះ។
 
 #### Declaring multiple state variables {#declaring-multiple-state-variables}
 
-You can use the State Hook more than once in a single component:
+អ្នកអាចប្រើ State Hook ច្រើនជាងមួយក្នុង component មួយ៖
 
 ```js
 function ExampleWithManyStates() {
@@ -56,25 +57,25 @@ function ExampleWithManyStates() {
 }
 ```
 
-The [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring) syntax lets us give different names to the state variables we declared by calling `useState`. These names aren't a part of the `useState` API. Instead, React assumes that if you call `useState` many times, you do it in the same order during every render. We'll come back to why this works and when this is useful later.
+The [array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring) syntax អនុញ្ញាតឱ្យយើងដាក់ឈ្មេាះផ្សេងៗឱ្យ state variables យើងបានប្រកាសដោយការ call `useState`។ រាល់ការ rende ទាំងនេាះ។ យើងនឹងត្រលប់ទៅមើល មូលហេតុដែលវាដំណើរការ ហើយនិងនៅពេលដែលវាប្រយោជន៍នៅពេលក្រោយ។
 
 #### But what is a Hook? {#but-what-is-a-hook}
 
-Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks don't work inside classes -- they let you use React without classes. (We [don't recommend](/docs/hooks-intro.html#gradual-adoption-strategy) rewriting your existing components overnight but you can start using Hooks in the new ones if you'd like.)
+Hooks គឺជា functions ដែលអនុញ្ញាតឱ្យអ្នក​ “hook into” React state និង lifecycle features ពី function components។ Hooks អត់ដំណើរនៅក្នុង classes ទេ -- ពួកវាអនុញ្ញាតឱ្យអ្នកប្រើ React ដោយមិនមាន classes។ (យើង [មិនណែនាំ](/docs/hooks-intro.html#gradual-adoption-strategy) ឱ្យសរសេរឡើងវិញនូវ components របស់អ្នកនេាះទេ ប៉ុន្តែអ្នកអាចចាប់ផ្តើមការប្រើ Hooks នៅក្នុង components ថ្មីប្រសិនបើអ្នកចង់។)
 
-React provides a few built-in Hooks like `useState`. You can also create your own Hooks to reuse stateful behavior between different components. We'll look at the built-in Hooks first.
+React ផ្តល់នូវ built-in Hooks មួយចំនួនដូចជា `useState`។ អ្នកក៏អាចបង្កើត Hooks ផ្ទាល់ខ្លួនរបស់អ្នកដើម្បីកាត់បន្ថយលក្ខណះ stateful រវាង components ផ្សេងៗគ្នា។ យើងនឹងក្រឡេកទៅមើល built-in Hooks មុនគេ។
 
->Detailed Explanation
+>ការពន្យល់យ៉ាងលម្អិត
 >
->You can learn more about the State Hook on a dedicated page: [Using the State Hook](/docs/hooks-state.html).
+>អ្នកអាចរៀនបន្ថែមពី State Hook លើទំព័រផ្សេង៖ [ការប្រើ State Hook](/docs/hooks-state.html)។
 
 ## ⚡️ Effect Hook {#effect-hook}
 
-You've likely performed data fetching, subscriptions, or manually changing the DOM from React components before. We call these operations "side effects" (or "effects" for short) because they can affect other components and can't be done during rendering.
+អ្នកទំនងជាចូលចិត្តអនុវត្ត data fetching, subscriptions, ឬក៏ផ្លាស់ប្តូរ DOM ដោយផ្ទាល់ពី React components ពីមុន។ យើងហៅប្រតិបត្តិការទាំងនេះថា "side effects" (ឬ "effects" for short) ពីព្រេាះពួកវាអាចធ្វើអោយប៉ះពាល់ components ផ្សេងៗហើយនិងមិនអាច done កំឡុងពេល rendering។
 
-The Effect Hook, `useEffect`, adds the ability to perform side effects from a function component. It serves the same purpose as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` in React classes, but unified into a single API. (We'll show examples comparing `useEffect` to these methods in [Using the Effect Hook](/docs/hooks-effect.html).)
+Effect Hook, `useEffect`, បន្ថែមសមត្ថភាពក្នុងការអនុវត្ត side effects ពី function component។ វាបម្រើគោលបំណងដូចគ្នានឹង `componentDidMount`, `componentDidUpdate`, និង `componentWillUnmount` ក្នុង React classes។ ប៉ុន្តែបានបង្រួបបង្រួមចូលទៅក្នុង API តែមួយ។ (យើងនឹងបង្ហាញឧទាហរណ៍ប្រៀបធៀបរវាង `useEffect` ទៅនឹង methods ទាំងនេាះក្នុង [Using the Effect Hook](/docs/hooks-effect.html)។)
 
-For example, this component sets the document title after React updates the DOM:
+ឧទាហរណ៍, component នេះ sets នូវ document title បន្ទាប់ពី React ធ្វើបច្ចុប្បន្នភាព DOM៖
 
 ```js{1,6-10}
 import React, { useState, useEffect } from 'react';
@@ -99,9 +100,10 @@ function Example() {
 }
 ```
 
-When you call `useEffect`, you're telling React to run your "effect" function after flushing changes to the DOM. Effects are declared inside the component so they have access to its props and state. By default, React runs the effects after every render -- *including* the first render. (We'll talk more about how this compares to class lifecycles in [Using the Effect Hook](/docs/hooks-effect.html).)
+នៅពេលដែលអ្នក call `useEffect`, អ្នកកំពុងតែប្រាប់ React អោយ run "effect" function របស់អ្នកបន្ទាប់ពីការផ្លាស់ប្តូរចំពេាះ DOM។ Effect ត្រូវបានប្រកាស (declare) ខាងក្នុង component ដូច្នេះពួកវាមានសិទ្ធិចូលដំណើរការ props និង state របស់ពួកវា។ តាម​លំនាំដើម (by default), React runs effects បន្ទាប់ពី រាល់ពេល render -- *រួមទាំង* ពេល render តំបូង។ (
+យើងនឹងនិយាយបន្ថែមទៀតអំពីរបៀបធៀបវាទៅនឹង class lifecycles នៅក្នុង [ការប្រើ Effect Hook](/docs/hooks-effect.html)។)
 
-Effects may also optionally specify how to "clean up" after them by returning a function. For example, this component uses an effect to subscribe to a friend's online status, and cleans up by unsubscribing from it:
+Effects ប្រហែលអាចជារបៀបដើម្បី "clean up" ដោយការ return ពី function។ ឧទាហរណ៍, component នេះប្រើ effect ដើម្បី subscribe ទៅកាន់ online status របស់ friend មួយនាក់, ហើយនិង cleans up ដោយការ unsubscribe ពីវា៖
 
 ```js{10-16}
 import React, { useState, useEffect } from 'react';
@@ -128,9 +130,9 @@ function FriendStatus(props) {
 }
 ```
 
-In this example, React would unsubscribe from our `ChatAPI` when the component unmounts, as well as before re-running the effect due to a subsequent render. (If you want, there's a way to [tell React to skip re-subscribing](/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects) if the `props.friend.id` we passed to `ChatAPI` didn’t change.)
+ក្នុងឧទាហរណ៍នេះ, React នឹង unsubscribe ពី `ChatAPI` របស់យើង នៅពេលដែល component unmounts, ក៏ដូចជាបន្ទាប់ពី re-running effect ដោយសារតែ render បន្តបន្ទាប់។ (ប្រសិនបើអ្នកចង់, មានវិធីមួយដើម្បី [ប្រាប់ React អោយ skip ការ re-subscribe](/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects) ប្រសិនបើ `props.friend.id` ដែលយើងបាន pass ទៅអោយ `ChatAPI` មិនបានផ្លាស់ប្តូរ។)
 
-Just like with `useState`, you can use more than a single effect in a component:
+ដូចទៅនឹង `useState`, អ្នកអាចប្រើ effect ច្រើនជាងតែមួយ នៅក្នុង component មួយ៖
 
 ```js{3,8}
 function FriendStatusWithCounter(props) {
@@ -153,32 +155,32 @@ function FriendStatusWithCounter(props) {
   // ...
 ```
 
-Hooks let you organize side effects in a component by what pieces are related (such as adding and removing a subscription), rather than forcing a split based on lifecycle methods.
+Hooks អនុញ្ញាតឱ្យអ្នករៀបចំ side effects នៅក្នុង component ដោយ បំណែកអ្វីដែលទាក់ទងគ្នា (ដូចជាការបន្ថែមនិងការយកចេញ subscription), ជាជាងបង្ខំឱ្យមានការបំបែកដោយផ្អែកលើ lifecycle methods។
 
->Detailed Explanation
+>ការពន្យល់យ៉ាងលម្អិត
 >
->You can learn more about `useEffect` on a dedicated page: [Using the Effect Hook](/docs/hooks-effect.html).
+>អ្នកអាចស្វែងយល់បន្ថែមអំពី `useEffect` លើទំព័រផ្សេង៖ [ការប្រើប្រាស់ Effect Hook](/docs/hooks-effect.html)។
 
 ## ✌️ Rules of Hooks {#rules-of-hooks}
 
-Hooks are JavaScript functions, but they impose two additional rules:
+Hooks គឺ JavaScript functions, ប៉ុន្តែពួកគេដាក់ចេញច្បាប់ (rule) ពីរបន្ថែមទៀត៖
 
-* Only call Hooks **at the top level**. Don’t call Hooks inside loops, conditions, or nested functions.
-* Only call Hooks **from React function components**. Don’t call Hooks from regular JavaScript functions. (There is just one other valid place to call Hooks -- your own custom Hooks. We'll learn about them in a moment.)
+* Call Hooks តែ **នៅ top level**។ កុំ call Hooks នៅខាងក្នុង loops, លក្ខខណ្ឌ (conditions), ឬក៏ nested functions។
+* Call Hooks តែ **ពី React function components**។ កុំ call Hooks ពី JavaScript functions។ (មានកន្លែងត្រឹមត្រូវមួយតែមួយផ្សេងទៀតដើម្បី call Hooks -- Customs Hooks របស់អ្នកផ្ទាល់។ យើងនឹងរៀនអំពីពួកគេក្នុងពេលបន្តិចទៀតនេះ។)
 
-We provide a [linter plugin](https://www.npmjs.com/package/eslint-plugin-react-hooks) to enforce these rules automatically. We understand these rules might seem limiting or confusing at first, but they are essential to making Hooks work well.
+យើងផ្តល់នូវ [linter plugin](https://www.npmjs.com/package/eslint-plugin-react-hooks) មួយដើម្បីអនុវត្តច្បាប់ទាំងនេះដោយស្វ័យប្រវត្តិ។​ យើងយល់ថាច្បាប់ទាំងនេះមើលទៅដូចជាមានកំណត់ឬច្របូកច្របល់នៅពេលដំបូង, ប៉ុន្តែវាចាំបាច់ណាស់ក្នុងការធ្វើឱ្យ Hooks ដំណើរការល្អ។
 
->Detailed Explanation
+>ការពន្យល់យ៉ាងលម្អិត
 >
->You can learn more about these rules on a dedicated page: [Rules of Hooks](/docs/hooks-rules.html).
+>អ្នកអាចស្វែងយល់បន្ថែមអំពីច្បាប់​ (rules) នេះលើទំព័រផ្សេង៖ [ច្បាប់ (Rules) នៃ Hooks](/docs/hooks-rules.html)។
 
 ## 💡 Building Your Own Hooks {#building-your-own-hooks}
 
-Sometimes, we want to reuse some stateful logic between components. Traditionally, there were two popular solutions to this problem: [higher-order components](/docs/higher-order-components.html) and [render props](/docs/render-props.html). Custom Hooks let you do this, but without adding more components to your tree.
+ជួនកាល, យើងចង់កាត់បន្ថយ stateful logic មួយចំនួនរវាង components។ ជាប្រពៃណី, មានដំណោះស្រាយពេញនិយមពីរចំពោះបញ្ហានេះ៖ [higher-order components](/docs/higher-order-components.html) និង [render props](/docs/render-props.html)។ Custom Hooks អនុញ្ញាតឱ្យអ្នកធ្វើរឿងនេះបាន, ប៉ុន្តែដោយមិនបន្ថែមទៀត components ទៅកាន់ tree របស់អ្នក។
 
-Earlier on this page, we introduced a `FriendStatus` component that calls the `useState` and `useEffect` Hooks to subscribe to a friend's online status. Let's say we also want to reuse this subscription logic in another component.
+មុននេះនៅលើទំព័រនេះ, យើងបានណែនាំ `FriendStatus` component មួយដែល calls `useState` និង `useEffect` Hooks ដើម្បី subscribe ទៅកាន់ online status របស់ friend ម្នាក់។ តេាះនិយាយថា យើងក៏ចង់កាត់បន្ថយ subscription logic នេះនៅក្នុង component ផ្សេង។
 
-First, we'll extract this logic into a custom Hook called `useFriendStatus`:
+តំបូង, យើងនឹងស្រង់ (extract) logic នេះចូលទៅក្នុង custom Hook ដែលត្រូវបានគេហៅថា `useFriendStatus`៖
 
 ```js{3}
 import React, { useState, useEffect } from 'react';
@@ -201,9 +203,9 @@ function useFriendStatus(friendID) {
 }
 ```
 
-It takes `friendID` as an argument, and returns whether our friend is online.
+វាទទួលយក `friendID` ដែលជា argument, ហើយ returns ថា friend យើងគឺ online។
 
-Now we can use it from both components:
+ឥឡូវ​នេះយើងអាចប្រើវាពី components ទាំងពីរ៖
 
 
 ```js{2}
@@ -229,19 +231,20 @@ function FriendListItem(props) {
 }
 ```
 
-The state of these components is completely independent. Hooks are a way to reuse *stateful logic*, not state itself. In fact, each *call* to a Hook has a completely isolated state -- so you can even use the same custom Hook twice in one component.
+State នៃ components ទាំងនេះគឺ ឯករាជ្យទាំងស្រុង។ Hooks គឺជាមធ្យោបាយដើម្បីកាត់បន្ថយ *stateful logic*, មិនមែន state ខ្លួនវាផ្ទាល់។ តាមពិត, *call* នីមួយៗ ទៅកាន់ Hook មួយ មាន state ដាច់ឆ្ងាយទាំងស្រុង -- ដូច្នេះអ្នកអាចសូម្បីតែប្រើ custom Hook ដូចគ្នាពីរដងនៅក្នុង component តែមួយ។
 
-Custom Hooks are more of a convention than a feature. If a function's name starts with "`use`" and it calls other Hooks, we say it is a custom Hook. The `useSomething` naming convention is how our linter plugin is able to find bugs in the code using Hooks.
+Custom Hooks គឺលើសពី convention មួយជាង feature មួយ។ ប្រសិនបើឈ្មេាះរបស់ function ផ្តើមដោយ "`use`" និងវា call ថា Hooks ផ្សេង, យើងអាចនិយាយបានថាវាគឺជា custom Hook មួយ។ `useSomething` convention នៃការដាក់ឈ្មេាះគឺជារបៀបដែល linter plugin របស់យើងគឺអាចរកឃើញ bugs នៅក្នុង code ដែលកំពុងប្រើ Hooks។
 
-You can write custom Hooks that cover a wide range of use cases like form handling, animation, declarative subscriptions, timers, and probably many more we haven't considered. We are excited to see what custom Hooks the React community will come up with.
+អ្នកអាចសរសេរ custom Hooks ដែលគ្រប់ដណ្តប់នូវការករណីប្រើប្រាស់យ៉ាងទូលំទូលាយដូចជា form handling, animation, declarative subscriptions, timers, និងអ្វីៗផ្សេងៗទៀតដែលយើមិនបានគិតដល់។ យើងរំភើបណាស់ដែលបានឃើញអ្វីដែល សហគមន៍ React custom Hooks នឹងមកជាមួយ។
 
->Detailed Explanation
+>ការពន្យល់យ៉ាងលម្អិត
 >
->You can learn more about custom Hooks on a dedicated page: [Building Your Own Hooks](/docs/hooks-custom.html).
+>អ្នកអាចស្វែងយល់បន្ថែមអំពី custom Hooks លើទំព័រផ្សេង៖ [ការបង្កើត Hooks ផ្ទាល់ខ្លួនរបស់អ្នក](/docs/hooks-custom.html)។
 
 ## 🔌 Other Hooks {#other-hooks}
 
-There are a few less commonly used built-in Hooks that you might find useful. For example, [`useContext`](/docs/hooks-reference.html#usecontext) lets you subscribe to React context without introducing nesting:
+មានតិចតួចដែលត្រូវបានប្រើជាទូទៅ built-in Hooks ដែលអ្នកប្រហែលយល់ថា useful។ ឧទាហរណ៍, [`useContext`](/docs/hooks-reference.html#usecontext) 
+អនុញ្ញាតឱ្យអ្នក subscribe ទៅកាន់ React context ដោយមិនមានការណែនាំ nesting៖
 
 ```js{2,3}
 function Example() {
@@ -251,7 +254,7 @@ function Example() {
 }
 ```
 
-And [`useReducer`](/docs/hooks-reference.html#usereducer) lets you manage local state of complex components with a reducer:
+ហើយនិង [`useReducer`](/docs/hooks-reference.html#usereducer) អនុញ្ញាតឱ្យអ្នកគ្រប់គ្រង local state នៃ components ស្មុគស្មាញជាមួយនិង reducer៖
 
 ```js{2}
 function Todos() {
@@ -259,14 +262,14 @@ function Todos() {
   // ...
 ```
 
->Detailed Explanation
+>ការពន្យល់យ៉ាងលម្អិត
 >
->You can learn more about all the built-in Hooks on a dedicated page: [Hooks API Reference](/docs/hooks-reference.html).
+>អ្នកអាចស្វែងយល់បន្ថែមអំពី built-in Hooks ទាំងអស់ លើទំព័រផ្សេង៖: [Hooks API Reference](/docs/hooks-reference.html)។
 
 ## Next Steps {#next-steps}
 
-Phew, that was fast! If some things didn't quite make sense or you'd like to learn more in detail, you can read the next pages, starting with the [State Hook](/docs/hooks-state.html) documentation.
+Phew, នេះគឺលឿនមែនទែន! ប្រសិនបើមានរឿងខ្លះមិនសមហេតុផល ឬក៏អ្នកចង់រៀនលម្អិតបន្ថែមទៀត, អ្នកអាចអាននៅទំព័របន្ទាប់, ចាប់ផ្តើមជាមួយឯកសារ [State Hook](/docs/hooks-state.html)។
 
-You can also check out the [Hooks API reference](/docs/hooks-reference.html) and the [Hooks FAQ](/docs/hooks-faq.html).
+អ្នកអាចពិនិត្យផងដែរនូវ [Hooks API reference](/docs/hooks-reference.html) ហើយនិង [Hooks FAQ](/docs/hooks-faq.html) របស់យើង។
 
-Finally, don't miss the [introduction page](/docs/hooks-intro.html) which explains *why* we're adding Hooks and how we'll start using them side by side with classes -- without rewriting our apps.
+ជាចុងក្រោយ, កុំខកខាន [introduction page](/docs/hooks-intro.html) ដែលពន្យល់ *ហេតុអ្វី* យើកំពុងបន្ថែម Hooks និងរបៀបដែលយើងនឹងចាប់ផ្តើមការប្រើប្រាស់ពួកវានៅក្បែរគ្នាជាមួយ classes -- ដោយគ្មានការសរសេរឡើងវិញនូវ app របស់យើង។
