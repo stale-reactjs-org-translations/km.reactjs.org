@@ -158,14 +158,13 @@ We declare a state variable called `count`, and set it to `0`. React will rememb
 
 ## Reading State {#reading-state}
 
-When we want to display the current count in a class, we read `this.state.count`:
+នៅពេលយើងចង់បង្ហាញ current count ​នៅក្នុង class, យើងអាន (read) ពី​ `this.state.count`៖
 
 ```js
   <p>You clicked {this.state.count} times</p>
 ```
 
-In a function, we can use `count` directly:
-
+នៅក្នុង function, យើងអាចប្រើ `count` ដោយ​ផ្ទាល់៖
 
 ```js
   <p>You clicked {count} times</p>
