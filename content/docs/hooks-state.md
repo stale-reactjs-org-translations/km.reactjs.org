@@ -172,7 +172,7 @@ We declare a state variable called `count`, and set it to `0`. React will rememb
 
 ## Updating State {#updating-state}
 
-In a class, we need to call `this.setState()` to update the `count` state:
+នៅក្នុង class, យើងត្រូវការ call `this.setState()` ដើម្បីធ្វើបច្ចុប្បន្នភាព (update) `count` state៖
 
 ```js{1}
   <button onClick={() => this.setState({ count: this.state.count + 1 })}>
@@ -180,7 +180,7 @@ In a class, we need to call `this.setState()` to update the `count` state:
   </button>
 ```
 
-In a function, we already have `setCount` and `count` as variables so we don't need `this`:
+នៅក្នុង​ function, យើងមាន `setCount` និង `count` ជា variables រួចជាស្រេច ដូច្នេះយើងមិនត្រូវការ `this`៖
 
 ```js{1}
   <button onClick={() => setCount(count + 1)}>
