@@ -58,7 +58,7 @@ class Example extends React.Component {
 
 State ចាប់ផ្តើមដោយ `{ count: 0 }`, និងយើងតម្លើង `state.count` នៅពេល user ចុចប៊ូតុងដោយការ call `this.setState()`។ យើងនឹងប្រើអត្ថបទខ្លីៗចាប់ពី class នេះ ពេញទំព័រនេះ។
 
->ចំណាំ
+>ចំណាំ៖
 >
 >អ្នកប្រហែលជាកំពុងតែឆ្ងល់ហើយ ហេតុអ្វីយើងកំពុងតែប្រើ counter នៅទីនេះជជំនួសអោយឧទាហរណ៍ជាក់ស្តែង។ នេះគឺដើម្បីជួយយើងឱ្យផ្តោតលើ API ខណៈពេលដែលយើងកំពុងធ្វើជំហានដំបូងរបស់យើងជាមួយ Hooks។
 
@@ -89,7 +89,7 @@ Hooks ** មិន ** ធ្វើការនៅខាងក្នុង classe
 
 ## What's a Hook? {#whats-a-hook}
 
-Our new example starts by importing the `useState` Hook from React:
+ឧទាហរណ៍ថ្មីរបស់យើងចាប់ផ្តើមដោយការ import `useState` Hook ពី React៖
 
 ```js{1}
 import React, { useState } from 'react';
@@ -99,13 +99,14 @@ function Example() {
 }
 ```
 
-**What is a Hook?** A Hook is a special function that lets you "hook into" React features. For example, `useState` is a Hook that lets you add React state to function components. We'll learn other Hooks later.
+**តើ Hook គឺជាអ្វី?** Hook គឺជា function ពិសេសមួយដែលអនុញ្ញាតឱ្យអ្នក "hook into" លក្ខណៈពិសេស (features) របស់ React។ ឧទាហរណ៍, `useState` គឺជា Hook ដែលអនុញ្ញាតឱ្យអ្នកបន្ថែម React state ទៅកាន់ function components។
 
-**When would I use a Hook?** If you write a function component and realize you need to add some state to it, previously you had to convert it to a class. Now you can use a Hook inside the existing function component. We're going to do that right now!
+**តើខ្ញុំនឹងប្រើ Hook នៅពេលណា?** ប្រសិនបើអ្នកសរសេរ function component មួយហើយដឹងថាអ្នកត្រូវការបន្ថែម state មួយចំនួនអោយវា, ពីមុនអ្នកត្រូវតែបំលែងវាជាស class។ ឥឡូវ​នេះអ្នកអាចប្រើ Hook នៅខាងក្នុង function component ដែលមានស្រាប់។ យើងនឹងធ្វើវាឥឡូវនេះ!
 
->Note:
+>ចំណាំ៖
 >
->There are some special rules about where you can and can't use Hooks within a component. We'll learn them in [Rules of Hooks](/docs/hooks-rules.html).
+>មានច្បាប់ពិសេសមួយចំនួនអំពីកន្លែងដែលអ្នកអាចនិងមិនអាចប្រើប Hooks នៅក្នុង component មួយបាន។ 
+យើងនឹងរៀនវានៅក្នុង [វិធាននៃ Hooks](/docs/hooks-rules.html)។
 
 ## Declaring a State Variable {#declaring-a-state-variable}
 
