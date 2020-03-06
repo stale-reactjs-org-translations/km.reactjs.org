@@ -64,7 +64,7 @@ State ចាប់ផ្តើមដោយ `{ count: 0 }`, និងយើងត
 
 ## Hooks and Function Components {#hooks-and-function-components}
 
-As a reminder, function components in React look like this:
+ជាការរំលឹក, function components នៅក្នុង React មើលទៅដូចនេះ៖
 
 ```js
 const Example = (props) => {
@@ -73,7 +73,7 @@ const Example = (props) => {
 }
 ```
 
-or this:
+ឬក៏ដូចនេះ៖
 
 ```js
 function Example(props) {
@@ -82,9 +82,10 @@ function Example(props) {
 }
 ```
 
-You might have previously known these as "stateless components". We're now introducing the ability to use React state from these, so we prefer the name "function components".
+អ្នកប្រហែលជាធ្លាប់បានស្គាល់ពីមុនថាទាំងនេះជា "stateless components"។ ឥឡូវនេះយើងកំពុងណែនាំសមត្ថភាពក្នុងការប្រើប្រាស់ React state ពីទីនេះ, 
+ដូច្នេះយើងចូលចិត្តឈ្មោះ "function components" ជាង។
 
-Hooks **don't** work inside classes. But you can use them instead of writing classes.
+Hooks ** មិន ** ធ្វើការនៅខាងក្នុង classes ទេ។ ប៉ុន្តែអ្នកអាចប្រើវាជំនួសឱ្យការសរសេរ classes។
 
 ## What's a Hook? {#whats-a-hook}
 
