@@ -274,8 +274,10 @@ We provide more recommendations on splitting independent state variables [in the
 
 ## Next Steps {#next-steps}
 
-On this page we've learned about one of the Hooks provided by React, called `useState`. We're also sometimes going to refer to it as the "State Hook". It lets us add local state to React function components -- which we did for the first time ever!
+នៅលើទំព័រនេះយើងបានរៀនអំពី Hooks មួយដែលផ្តល់ដោយ React, ត្រូវបានគេហៅថា `useState`។ 
+ពេលខ្លះយើងក៏នឹងយោងទៅវាជា "State Hook"។ វាអនុញ្ញាតឱ្យយើងបន្ថែម local state ទៅអោយ React function components -- ដែលយើងបានធ្វើជាលើកដំបូងដែលមិនធ្លាប់មាន!
 
-We also learned a little bit more about what Hooks are. Hooks are functions that let you "hook into" React features from function components. Their names always start with `use`, and there are more Hooks we haven't seen yet.
+យើងក៏បានរៀនថែមបន្តិចផងដែរអំពី៖ អ្វីគឺជា Hooks។ Hooks គឺជា function ដែលអនុញ្ញាតឱ្យអ្នក "hook into" លក្ខណៈពិសេស (features) របស់ React ពី function components។ ឈ្មោះរបស់ពួកវាតែងតែចាប់ផ្តើមជាមួយ `use`, ហើយមាន Hooks ច្រើនទៀតដែលយើងមិនទាន់បានឃើញនៅឡើយ។
 
-**Now let's continue by [learning the next Hook: `useEffect`.](/docs/hooks-effect.html)** It lets you perform side effects in components, and is similar to lifecycle methods in classes.
+**ឥឡូវសូមបន្តដោយ [ការរៀន Hook បន្ទាប់៖ `useEffect`.](/docs/hooks-effect.html)** 
+វាអនុញ្ញាតឱ្យអ្នកអនុវត្ត side effects នៅក្នុង components, ហើយវាស្រដៀងទៅនឹង lifecycle methods នៅក្នុង classes។
