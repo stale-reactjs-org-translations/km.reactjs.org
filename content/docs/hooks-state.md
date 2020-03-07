@@ -251,7 +251,7 @@ JavaScript syntax នេះត្រូវបានគេហៅថា ["array de
 
 ### Tip: Using Multiple State Variables {#tip-using-multiple-state-variables}
 
-Declaring state variables as a pair of `[something, setSomething]` is also handy because it lets us give *different* names to different state variables if we want to use more than one:
+ការប្រកាស state variables ជា pair នៃ `[something, setSomething]` គឺងាយស្រួលក្នុងការប្រើ ពីព្រេាះវាអនុញ្ញាតឱ្យយើងផ្តល់ឱ្យឈ្មេាះ *ផ្សេង* ទៅអោយ state variables ផ្សេងគ្នា ប្រសិនបើយើងចង់ប្រើច្រើនជាងមួយ៖
 
 ```js
 function ExampleWithManyStates() {
@@ -261,7 +261,8 @@ function ExampleWithManyStates() {
   const [todos, setTodos] = useState([{ text: 'Learn Hooks' }]);
 ```
 
-In the above component, we have `age`, `fruit`, and `todos` as local variables, and we can update them individually:
+នៅក្នុង component ខាងលើ, យើងមាន `age`, `fruit`, និង `todos` ជា local variables, 
+ហើយយើងអាចធ្វើបច្ចុប្បន្នភាពពួកវាមួយៗ៖
 
 ```js
   function handleOrangeClick() {
@@ -270,9 +271,10 @@ In the above component, we have `age`, `fruit`, and `todos` as local variables, 
   }
 ```
 
-You **don't have to** use many state variables. State variables can hold objects and arrays just fine, so you can still group related data together. However, unlike `this.setState` in a class, updating a state variable always *replaces* it instead of merging it.
+អ្នក **មិនចាំបាច់** ប្រើ state variables ច្រើនទេ។ State variables អាចផ្ទុក objects និង arrays បានល្អ, ដូច្នេះអ្នកនៅតែអាចដាក់ទិន្នន័យទាក់ទងក្រុមជាមួយគ្នា។ ទោះយ៉ាងណាក៏ដោយ, មិនដូច `this.setState` នៅក្នុង class, ការធ្វើបច្ចុប្បន្នភាព state variable តែងតែ *replace* វា
+ជំនួសឱ្យការច្របាច់បញ្ចូល (merging) វា។
 
-We provide more recommendations on splitting independent state variables [in the FAQ](/docs/hooks-faq.html#should-i-use-one-or-many-state-variables).
+យើងផ្តល់នូវអនុសាសន៍ (recommendations) បន្ថែមទៀតលើការបែងចែក independent state variables [នៅក្នុងសំណួរគេសួរញឹកញាប់](/docs/hooks-faq.html#should-i-use-one-or-many-state-variables)។
 
 ## Next Steps {#next-steps}
 
