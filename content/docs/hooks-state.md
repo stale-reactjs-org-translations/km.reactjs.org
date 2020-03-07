@@ -221,19 +221,19 @@ This might seem like a lot to take in at first. Don't rush it! If you're lost in
 
 ### Tip: What Do Square Brackets Mean? {#tip-what-do-square-brackets-mean}
 
-You might have noticed the square brackets when we declare a state variable:
+អ្នកប្រហែលជាកត់សម្គាល់វង់ក្រចកការ៉េនៅពេលយើងប្រកាស state variable៖
 
 ```js
   const [count, setCount] = useState(0);
 ```
 
-The names on the left aren't a part of the React API. You can name your own state variables:
+ឈ្មោះនៅខាងឆ្វេងមិនមែនជាផ្នែកមួយនៃ React API នេាះទេ។ អ្នកអាចដាក់ឈ្មោះ state variables ផ្ទាល់ខ្លួនរបស់អ្នក។
 
 ```js
   const [fruit, setFruit] = useState('banana');
 ```
 
-This JavaScript syntax is called ["array destructuring"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring). It means that we're making two new variables `fruit` and `setFruit`, where `fruit` is set to the first value returned by `useState`, and `setFruit` is the second. It is equivalent to this code:
+JavaScript syntax នេះត្រូវបានគេហៅថា ["array destructuring"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring)។ វាមានន័យថាយើងកំពុងបង្កើត variables ថ្មីពីរ `fruit` and `setFruit`, ដែល `fruit` គឺ set ទៅអោយតម្លៃទីមួយដែលបាន return ដោយ `useState`, ហើយ `setFruit` គឺទីពីរ។ វាស្មើនឹងកូដនេះ៖
 
 ```js
   var fruitStateVariable = useState('banana'); // Returns a pair
@@ -241,11 +241,13 @@ This JavaScript syntax is called ["array destructuring"](https://developer.mozil
   var setFruit = fruitStateVariable[1]; // Second item in a pair
 ```
 
-When we declare a state variable with `useState`, it returns a pair — an array with two items. The first item is the current value, and the second is a function that lets us update it. Using `[0]` and `[1]` to access them is a bit confusing because they have a specific meaning. This is why we use array destructuring instead.
+នៅពេលដែលយើងប្រកាស state variable ជាមួយ `useState`, វា returns មួយគូរ — array មួយជាមួយ
+ធាតុពីរ។ ធាតុទីមួយគឺ តម្លៃ​​បច្ចុប្បន្ន, និង ទីពីរគឺ function ដែលអនុញ្ញាតឱ្យយើងធ្វើបច្ចុប្បន្នភាពវា។ ការប្រើ `[0]` និង `[1]` ដើម្បីចូលប្រើ (access) ពួកវា គឺមានការច្របូកច្របល់បន្តិច ពីព្រេាះពួកវាមានអត្ថន័យជាក់លាក់។ នេះជាមូលហេតុដែលយើងប្រើ array destructuring ជំនួសវិញ។
 
->Note
+>ចំណាំ៖
 >
->You might be curious how React knows which component `useState` corresponds to since we're not passing anything like `this` back to React. We'll answer [this question](/docs/hooks-faq.html#how-does-react-associate-hook-calls-with-components) and many others in the FAQ section.
+>អ្នកប្រហែលជាចង់ដឹងចង់ឃើញពីរបៀប React ដឹង component មួយណាដែល `useState`
+>អ្នកប្រហែលជាចង់ដឹងថាតើ React ដឹងថាសមាសធាតុមួយណាដែល `useState` ត្រូវនឹង ដែលយើងមិនបានកំពុង pass អ្វីទាំងអស់ ដូចជា `this` ត្រឡប់អោយ React។​ យើងនឹងឆ្លើយ [សំណួរនេះ](/docs/hooks-faq.html#how-does-react-associate-hook-calls-with-components)  និងផ្នែកផ្សេងទៀតជាច្រើននៅក្នុងផ្នែកសំណួរគេសួរញឹកញាប់។
 
 ### Tip: Using Multiple State Variables {#tip-using-multiple-state-variables}
 
