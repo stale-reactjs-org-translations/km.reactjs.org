@@ -141,7 +141,7 @@ function Example() {
 
 **តើអ្វីដែល `useState` return?** វា returns គូរ (pair) នៃ តម្លៃ៖ state បច្ចុប្បន្ន (current) និង function ដែលធ្វើបច្ចុប្បន្នភាព (update) វា។ នេះជាហេតុផលដែលយើងសរសេរ `const [count, setCount] = useState()`។ នេះគឺស្រដៀងនឹង `this.state.count` និង `this.setState` នៅក្នុង class, លើកលែងតែអ្នកទទួលពួកគេនៅក្នុងគូរ (pair)។ ប្រសិនបើអ្នកមិនស៊ាំ (familiar) ជាមួយនិង syntax ដែលយើងបានប្រើ, យើងនឹងត្រលប់ទៅវាវិញ [នៅផ្នែកខាងក្រោមនៃទំព័រនេះ](/docs/hooks-state.html#tip-what-do-square-brackets-mean)។
 
-Now that we know what the `useState` Hook does, our example should make more sense:
+ឥឡូវយើងដឹងពីអ្វីដែល `useState` Hook ធ្វើ, ឧទាហរណ៍របស់យើងគួរតែអោយយើងយល់បានកាន់តែច្រើន៖
 
 ```js{4,5}
 import React, { useState } from 'react';
@@ -151,13 +151,13 @@ function Example() {
   const [count, setCount] = useState(0);
 ```
 
-We declare a state variable called `count`, and set it to `0`. React will remember its current value between re-renders, and provide the most recent one to our function. If we want to update the current `count`, we can call `setCount`.
+យើងប្រកាស state variable មួយដែលគេហៅថា `count` និង set វា `0`។ React នឹងចាំតម្លៃបច្ចុប្បន្នរបស់វា រវាង re-renders, និងផ្តល់នូវតម្លៃដែលថ្មីបំផុតអោយ function របស់យើង។ ប្រសិនបើយើងចង់ធ្វើបច្ចុប្បន្នភាព current `count`, យើងអាច call `setCount`។
 
->Note
+>ចំណាំ
 >
->You might be wondering: why is `useState` not named `createState` instead?
+>អ្នកប្រហែលជាឆ្ងល់៖ ហេតុអ្វីដាក់ឈ្មេាះ `useState` មិនដាក់ឈ្មេាះ `createState` ជំនួស?
 >
->"Create" wouldn't be quite accurate because the state is only created the first time our component renders. During the next renders, `useState` gives us the current state. Otherwise it wouldn't be "state" at all! There's also a reason why Hook names *always* start with `use`. We'll learn why later in the [Rules of Hooks](/docs/hooks-rules.html).
+>"Create" នឹងមិនមានភាពត្រឹមត្រូវទេពីព្រោះ state ត្រូវបានបង្កើតឡើងតែពេល component របស់យើង renders លើកតំបូង។ ក្នុងអំឡុង renders បន្ទាប់, `useState` ផ្តល់ឱ្យយើងនូវ current state។ បើមិនដូច្នោះទេ វានឹងមិនមែនជា "state" ទាំងស្រុង! នេះជាមូលហេតុដែល Hook *តែងតែ* ដាក់ឈ្មេាះផ្តើមដោយ `use`។ យើងនឹងរៀនពីមូលហេតុនៅពេលក្រោយ នៅក្នុង [វិធាននៃ Hooks](/docs/hooks-rules.html)។
 
 ## Reading State {#reading-state}
 
