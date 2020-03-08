@@ -110,7 +110,7 @@ function Example() {
 
 ## Declaring a State Variable {#declaring-a-state-variable}
 
-In a class, we initialize the `count` state to `0` by setting `this.state` to `{ count: 0 }` in the constructor:
+នៅក្នុង class, យើងផ្តល់តម្លៃតំបូងអោយ `count` state នូវតម្លៃ `0` ដោយការ set `this.state` ជា `{ count: 0 }` នៅក្នុង constructor៖
 
 ```js{4-6}
 class Example extends React.Component {
@@ -122,7 +122,7 @@ class Example extends React.Component {
   }
 ```
 
-In a function component, we have no `this`, so we can't assign or read `this.state`. Instead, we call the `useState` Hook directly inside our component:
+នៅក្នុង function component, យើងមិនមាន `this`, ដូច្នេះយើងមិនអាច assign ឬ អាន (read) `this.state`​។ ជំនួសទៅវិញ, យើង call `useState` Hook ដោយផ្ទាល់នៅខាងក្នុង component របស់យើង៖
 
 ```js{4,5}
 import React, { useState } from 'react';
@@ -132,11 +132,14 @@ function Example() {
   const [count, setCount] = useState(0);
 ```
 
-**What does calling `useState` do?** It declares a "state variable". Our variable is called `count` but we could call it anything else, like `banana`. This is a way to "preserve" some values between the function calls — `useState` is a new way to use the exact same capabilities that `this.state` provides in a class. Normally, variables "disappear" when the function exits but state variables are preserved by React.
+**តើការហៅ (call) `useState` ធ្វើអ្វី?** វាប្រកាស "state variable"។ Variable របស់យើងត្រូវបានគេហៅថា `count` ប៉ុន្តែយើងអាចហៅវាថាជាអ្វីផ្សេង, ដូចជា `banana`។ នេះគឺជាវិធីដើម្បី "រក្សា" តម្លៃមួយចំនួនរវាង function calls — `useState` 
+គឺជាវិធីថ្មីដើម្បីប្រើសមត្ថភាពដូចគ្នាដែល `this.state` ផ្តល់ជូននៅក្នុង class។ ជាធម្មតា, variables "បាត់ (disappear)" នៅពេល function exits ប៉ុន្តែ state variables ត្រូវបានរក្សាទុកដោយ React។
 
-**What do we pass to `useState` as an argument?** The only argument to the `useState()` Hook is the initial state. Unlike with classes, the state doesn't have to be an object. We can keep a number or a string if that's all we need. In our example, we just want a number for how many times the user clicked, so pass `0` as initial state for our variable. (If we wanted to store two different values in state, we would call `useState()` twice.)
+**តើអ្វីដែលយើងបេាះ (pass) អោយ​ `useState` ជា argument?** argument តែមួយគត់សម្រាប់ `useState()` Hook គឺ initial state។ មិនដូចជាមួយ classes, state 
+មិនចាំបាច់ជា object។ យើងអាចរក្សាទុក number ឬ string 
+ប្រសិនបើនោះជាអ្វីដែលយើងត្រូវការ។ ក្នុងឧទាហរណ៍របស់យើង, យើងគ្រាន់តែចង់បាន number សម្រាប់ ចំនួនដងដែលអ្នកប្រើប្រាស់ចុច, ដូច្នេះបេាះ (pass) `0` ជា initial state សម្រាប់ variable របស់យើង។ (ប្រសិនបើយើងចង់រក្សាទុកតម្លៃពីរផ្សេងគ្នានៅក្នុង state, យើងនឹង call `useState()` ពីរដង។)
 
-**What does `useState` return?** It returns a pair of values: the current state and a function that updates it. This is why we write `const [count, setCount] = useState()`. This is similar to `this.state.count` and `this.setState` in a class, except you get them in a pair. If you're not familiar with the syntax we used, we'll come back to it [at the bottom of this page](/docs/hooks-state.html#tip-what-do-square-brackets-mean).
+**តើអ្វីដែល `useState` return?** វា returns គូរ (pair) នៃ តម្លៃ៖ state បច្ចុប្បន្ន (current) និង function ដែលធ្វើបច្ចុប្បន្នភាព (update) វា។ នេះជាហេតុផលដែលយើងសរសេរ `const [count, setCount] = useState()`។ នេះគឺស្រដៀងនឹង `this.state.count` និង `this.setState` នៅក្នុង class, លើកលែងតែអ្នកទទួលពួកគេនៅក្នុងគូរ (pair)។ ប្រសិនបើអ្នកមិនស៊ាំ (familiar) ជាមួយនិង syntax ដែលយើងបានប្រើ, យើងនឹងត្រលប់ទៅវាវិញ [នៅផ្នែកខាងក្រោមនៃទំព័រនេះ](/docs/hooks-state.html#tip-what-do-square-brackets-mean)។
 
 Now that we know what the `useState` Hook does, our example should make more sense:
 
