@@ -193,7 +193,7 @@ function Example() {
 
 ## Recap {#recap}
 
-Let's now **recap what we learned line by line** and check our understanding.
+ឥឡូវតោះ **សរុបនូវអ្វីដែលយើងបានរៀនពីមួយបន្ទាត់ទៅមួយបន្ទាត់** និងពិនិត្យមើលការយល់ដឹងរបស់យើង។
 
 <!--
   I'm not proud of this line markup. Please somebody fix this.
@@ -216,11 +216,11 @@ Let's now **recap what we learned line by line** and check our understanding.
 14:  }
 ```
 
-* **Line 1:** We import the `useState` Hook from React. It lets us keep local state in a function component.
-* **Line 4:** Inside the `Example` component, we declare a new state variable by calling the `useState` Hook. It returns a pair of values, to which we give names. We're calling our variable `count` because it holds the number of button clicks. We initialize it to zero by passing `0` as the only `useState` argument. The second returned item is itself a function. It lets us update the `count` so we'll name it `setCount`.
-* **Line 9:** When the user clicks, we call `setCount` with a new value. React will then re-render the `Example` component, passing the new `count` value to it.
+* **បន្ទាត់ទី១៖** យើង import `useState` Hook ពី React។ វាអនុញ្ញាតឱ្យយើងរក្សា local state នៅក្នុង function component។
+* **បន្ទាត់ទី៤៖** នៅខាងក្នុង `Example` component, យើងប្រកាស state variable ថ្មីមួយដោយការ call `useState` Hook។ វា returns គូរ (pair) នៃតម្លៃ, ដែលយើងដាក់ឈ្មោះ។ យើងកំពុង call variable `count` របស់យើង ពីព្រេាះ វាផ្ទុកនូវចំនួននៃការចុចប៊ូតុង។ យើងចាប់ផ្តើមដោយលេខសូន្យ ដោយការបេាះ (pass) `0` ជា arument តែមួយគត់របស់ `useState`។ ធាតុទីពីរគឺ function របស់វាផ្ទាល់។ វាអនុញ្ញាតឱ្យយើងធ្វើបច្ចុប្បន្នភាព `count` ដូច្នេះយើងនឹងដាក់ឈ្មេាះវា `setCount`។
+* **បន្ទាត់ទី៩៖** នៅពេលអ្នកប្រើប្រាស់ចុច, យើង call `setCount` ជាមួយតម្លៃថ្មី។ React នឹង re-render `Example` component, បេាះតម្លៃ `count` ថ្មីទៅអោយវា។
 
-This might seem like a lot to take in at first. Don't rush it! If you're lost in the explanation, look at the code above again and try to read it from top to bottom. We promise that once you try to "forget" how state works in classes, and look at this code with fresh eyes, it will make sense.
+ដំបូងវាហាក់ដូចជាច្រើនណាស់ដែលត្រូវរៀនតំបូង។ កុំប្រញាប់! ប្រសិនបើអ្នកតាមមិនទាន់នៅក្នុងការពន្យល់, មើលកូដខាងលើម្តងទៀតហើយព្យាយាមអានវាពីលើចុះក្រោម។ យើងសន្យាថានៅពេលអ្នកព្យាយាម "បំភ្លេច" របៀបដែល state ដំណើរការនៅក្នុង classes, ហើយមើលកូដនេះ, វានឹងសមហេតុផល។
 
 ### Tip: What Do Square Brackets Mean? {#tip-what-do-square-brackets-mean}
 
