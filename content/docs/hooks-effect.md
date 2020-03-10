@@ -8,7 +8,7 @@ prev: hooks-state.html
 
 *Hooks* គឺជាការបន្ថែមថ្មីនៅក្នុង React ១៦.៨។ ពួកវាអនុញ្ញាតឱ្យអ្នកប្រើ state និង React features ផ្សេងៗដោយមិនចាំបាច់សរសេរ class។
 
-The *Effect Hook* lets you perform side effects in function components:
+*Effect Hook* អនុញ្ញាតឱ្យអ្នកអនុវត្ត side effects នៅក្នុង function components៖
 
 ```js{1,6-10}
 import React, { useState, useEffect } from 'react';
@@ -33,15 +33,16 @@ function Example() {
 }
 ```
 
-This snippet is based on the [counter example from the previous page](/docs/hooks-state.html), but we added a new feature to it: we set the document title to a custom message including the number of clicks.
+អត្ថបទខ្លីនេះមានមូលដ្ឋានលើ [counter example ពីទំព័រមុន](/docs/hooks-state.html), ប៉ុន្តែយើងបានបន្ថែមមុខងារ (feature) ថ្មីទៅវា៖ យើង set document title អោយ​ custom message រួមទាំង ចំនួននៃការចុច។
 
-Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects. Whether or not you're used to calling these operations "side effects" (or just "effects"), you've likely performed them in your components before.
+ការទាញយកទិន្នន័យ (Data fetching), setting up a subscription, និង ការផ្លាស់ប្តូរ DOM ដោយដៃ នៅក្នុង React components គឺជាឧទាហរណ៍ទាំងអស់នៃ side effects។ ថា​តើ​បាន​ឬ​មិន​បាន អ្នកធ្លាប់ហៅប្រតិបត្តិការទាំងនេះ "side effects" (ឬគ្រាន់តែ "effects"), អ្នកទំនងជាបានអនុវត្តពួកវាក្នុង components របស់អ្នកពីមុនមក។
 
->Tip
+>គន្លឹះ
 >
->If you're familiar with React class lifecycle methods, you can think of `useEffect` Hook as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` combined.
+>ប្រសិនបើអ្នកសុាំ (familiar) ជាមួយ React class lifecycle methods, អ្នកអាចគិតថា `useEffect` Hook គឺដូចទៅនឹង `componentDidMount`, `componentDidUpdate`, និង `componentWillUnmount` 
+រួមបញ្ចូលគ្នា។
 
-There are two common kinds of side effects in React components: those that don't require cleanup, and those that do. Let's look at this distinction in more detail.
+មានពីរប្រភេទនៃ side effects ក្នុង React components៖ ប្រភេទដែលមិនទាមទារអោយ cleanup, និងប្រភេទដេលទាមទារអោយ clearnup។ សូមក្រឡេកមើលភាពខុសគ្នានេះឱ្យកាន់តែលម្អិត។
 
 ## Effects Without Cleanup {#effects-without-cleanup}
 
