@@ -50,9 +50,10 @@ function Example() {
 
 ### Example Using Classes {#example-using-classes}
 
-In React class components, the `render` method itself shouldn't cause side effects. It would be too early -- we typically want to perform our effects *after* React has updated the DOM.
+នៅក្នុង React class components, `render` method ខ្លួនឯងមិនគួរបណ្តាលឱ្យ side effects។ 
+វាលឿនពេកហើយ -- ជាធម្មតាយើងចង់អនុវត្ត (perform) effects របស់យើង *បន្ទាប់ពី* React បានធ្វើបច្ចុប្បន្នភាព DOM។
 
-This is why in React classes, we put side effects into `componentDidMount` and `componentDidUpdate`. Coming back to our example, here is a React counter class component that updates the document title right after React makes changes to the DOM:
+នេះ​ជាមូលហេតុដែលនៅក្នុង React classes, យើងដាក់ side effects ចូលទៅក្នុង `componentDidMount` និង `componentDidUpdate`។ ត្រលប់មកឧទាហរណ៍របស់យើងវិញ, នេះគឺជា React counter class component ដែលធ្វើបច្ចុប្បន្នភាព document title បន្ទាប់ពី React បានផ្លាស់ប្តូរ DOM៖
 
 ```js{9-15}
 class Example extends React.Component {
@@ -84,11 +85,11 @@ class Example extends React.Component {
 }
 ```
 
-Note how **we have to duplicate the code between these two lifecycle methods in class.**
+កត់សំគាល់របៀប **យើងមាន duplicate code រវាង lifecycle methods ពីរនេះនៅក្នុង class។**
 
-This is because in many cases we want to perform the same side effect regardless of whether the component just mounted, or if it has been updated. Conceptually, we want it to happen after every render -- but React class components don't have a method like this. We could extract a separate method but we would still have to call it in two places.
+នេះដោយសារតែក្នុងករណីជាច្រើនដែលយើងចង់អនុវត្ត side effect ដូចគ្នា ដោយមិនគិតថាតើ component ទើបតែត្រូវបាន mount ទេ, ឬក៏វាបានធ្វើបច្ចុប្បន្នភាព។ តាមគំនិត, យើងចង់អោយវាកើតឡើងបន្ទាប់ពីរាល់ពេល render -- ប៉ុន្តែ React class components មិនមាន method ដូចនេះ។ យើងអាច extract method ដាច់ដោយឡែក ប៉ុន្តែយើងនឹងនៅតែត្រូវ call វានៅពីរកន្លែងផ្សេងគ្នា។
 
-Now let's see how we can do the same with the `useEffect` Hook.
+ឥឡូវ​នេះតោះមើលរបៀបដែលយើងអាចធ្វើបានដូចគ្នាជាមួយ `useEffect` Hook។
 
 ### Example Using Hooks {#example-using-hooks}
 
