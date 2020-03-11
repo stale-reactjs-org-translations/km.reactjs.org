@@ -34,7 +34,11 @@ const element = <h1>Hello, world</h1>;
 
 កម្មវិធីដែលបានបង្កើតឡើងដោយគ្រាន់តែមានReactធម្មតាមាន root DOM តែមួយ។ ប្រសិនបើអ្នកកំពុងដាក់បញ្ចូល React ទៅក្នុងកម្មវិធីដែលមានស្រាប់ អ្នកប្រហែលជាអាចមាន root DOM ជាច្រើនទៅតាមចំណងចង់បានរបស់អ្នក។
 
+<<<<<<< HEAD
 ដើម្បីបង្ហាញធាតុReactទៅក្នុង root DOM សូមធ្វើការផ្តល់ទៅឱ្យ `ReactDOM.render()`:
+=======
+To render a React element into a root DOM node, pass both to [`ReactDOM.render()`](/docs/react-dom.html#render):
+>>>>>>> fb382ccb13e30e0d186b88ec357bb51e91de6504
 
 `embed:rendering-elements/render-an-element.js`
 
@@ -46,7 +50,11 @@ const element = <h1>Hello, world</h1>;
 
 ធាតុReact[គឺមិនប្រែប្រួល(immutable)](https://en.wikipedia.org/wiki/Immutable_object)។ នៅពេលអ្នកបង្កើតធាតុមួយអ្នកមិនអាចផ្លាស់ប្តូរ children ឬគុណលក្ខណៈរបស់វាបានទេ។ ធាតុមួយគឺដូចជាស៊ុមតែមួយនៅក្នុងខ្សែភាពយន្ត: វាតំណាងឱ្យចំណុចប្រទាក់អ្នកប្រើនៅចំណុចជាក់លាក់មួយនៅក្នុងពេលណាមួយ។
 
+<<<<<<< HEAD
 ជាមួយនឹងចំណេះដឹងរបស់យើង, វិធីតែមួយគត់ដើម្បីធ្វើឱ្យ UI ទាន់សម័យគឺបង្កើតធាតុថ្មីt, ហើយបញ្ជូនវាទៅ `ReactDOM.render()`.
+=======
+With our knowledge so far, the only way to update the UI is to create a new element, and pass it to [`ReactDOM.render()`](/docs/react-dom.html#render).
+>>>>>>> fb382ccb13e30e0d186b88ec357bb51e91de6504
 
 សូមពិចារណាអំពីគំរូម៉ោងនាឡិកានេះ:
 
@@ -54,11 +62,19 @@ const element = <h1>Hello, world</h1>;
 
 [សាកល្បងវានៅលើ CodePen](codepen://rendering-elements/update-rendered-element)
 
+<<<<<<< HEAD
 វាហៅ `ReactDOM.render()` រាល់វិនាទី [`setInterval()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval) ត្រូវបានហៅឲត្រលប់វិញ.
+=======
+It calls [`ReactDOM.render()`](/docs/react-dom.html#render) every second from a [`setInterval()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval) callback.
+>>>>>>> fb382ccb13e30e0d186b88ec357bb51e91de6504
 
 >**ចំណាំ:**
 >
+<<<<<<< HEAD
 >នៅក្នុងការអនុវត្ត, React ភាគច្រើនហៅតែ `ReactDOM.render()` តែម្ដងប៉ុណ្ណោះ។ នៅផ្នែកបន្ទាប់ យើងនឹងរៀនពីរបៀបដែលកូដបែបនេះត្រូវបានបញ្ចូលក្នុង [stateful components](/docs/state-and-lifecycle.html).
+=======
+>In practice, most React apps only call [`ReactDOM.render()`](/docs/react-dom.html#render) once. In the next sections we will learn how such code gets encapsulated into [stateful components](/docs/state-and-lifecycle.html).
+>>>>>>> fb382ccb13e30e0d186b88ec357bb51e91de6504
 >
 >យើងផ្ដល់អនុសាសន៍ថាអ្នកមិនរំលងប្រធានបទពីព្រោះពួកគេមានការទាក់ទងគ្នា។
 
@@ -76,4 +92,8 @@ React DOM React DOM ប្រៀបធៀបធាតុនិងchildrenរប�
 Even though we create an element describing the whole UI tree on every tick, only the text node whose contents have changed gets updated by React DOM.
 >>>>>>> 821e20726266bc8113353d0c2b6d885f82e584a8
 
+<<<<<<< HEAD
 តាមបទពិសោធរបស់យើង, ការគិតអំពីវិធីដែលចំណុចប្រទាក់អ្នកប្រើគួរមើលទៅនៅពេលណាមួយដែលបានផ្តល់ឱ្យជាជាងការផ្លាស់ប្តូរវាតាមពេលវេលាលុបបំបាត់កំហុសទាំងមូល។
+=======
+In our experience, thinking about how the UI should look at any given moment, rather than how to change it over time, eliminates a whole class of bugs.
+>>>>>>> fb382ccb13e30e0d186b88ec357bb51e91de6504

@@ -43,7 +43,11 @@ class Welcome extends React.Component {
 
 componentsខាងលើនេះគឺសមមូលនឹងចំនុច React ។
 
+<<<<<<< HEAD
 Classesមានលក្ខណៈពិសេសបន្ថែមមួយចំនួនដែលយើងនឹងពិភាក្សានៅក្នុង[ផ្នែកបន្ទាប់](/docs/state-and-lifecycle.html). រហូតមកដល់ពេលនេះយើងនឹងប្រើមុខងារ components សម្រាប់ភាពស៊ីជំរៅរបស់វា។
+=======
+Function and Class components both have some additional features that we will discuss in the [next sections](/docs/state-and-lifecycle.html).
+>>>>>>> fb382ccb13e30e0d186b88ec357bb51e91de6504
 
 ## ការបង្កើតComponent {#rendering-a-component}
 
@@ -59,7 +63,11 @@ const element = <div />;
 const element = <Welcome name="Sara" />;
 ```
 
+<<<<<<< HEAD
 នៅពេលដែលមាន React មឃើញធាតុតំណាងឱ្យcomponentកំណត់ដោយអ្នកប្រើ, វាបញ្ជូនគុណលក្ខណៈ JSX ទៅcomponentនេះជាវត្ថុតែមួយ. យើងហៅវត្ថុនេះថា "props" ។
+=======
+When React sees an element representing a user-defined component, it passes JSX attributes and children to this component as a single object. We call this object "props".
+>>>>>>> fb382ccb13e30e0d186b88ec357bb51e91de6504
 
 ឧទាហរណ៏, កូដនេះធ្វើការមំលែងទៅជា "Hello, Sara" នៅលើទំព័រ:
 
