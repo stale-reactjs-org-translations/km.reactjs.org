@@ -46,7 +46,7 @@ function Example() {
 
 ## Effects Without Cleanup {#effects-without-cleanup}
 
-Sometimes, we want to **run some additional code after React has updated the DOM.** Network requests, manual DOM mutations, and logging are common examples of effects that don't require a cleanup. We say that because we can run them and immediately forget about them. Let's compare how classes and Hooks let us express such side effects.
+ពេលខ្លះ, យើងចង់ **run កូដបន្ថែមមួយចំនួនបន្ទាប់ពី React ធ្វើបច្ចុប្បន្នភាព DOM។** Network requests, ការផ្លាស់ប្តូរ DOM ដោយដៃ, និង logging គឺជា ឧទាហរណ៍ទូទៅនៃ effects ដែលមិនទាមទារអោយ cleanup។ យើងនិយាយដូច្នេះពីព្រេាះយើងអាច run ពួកវាហើយត្រូវភ្លេចអំពីពួកវាភ្លាម។ សូមប្រៀបធៀបរបៀប classes និង Hooks អនុញ្ញាតអោយយើងបង្ហាញពី side effects ទាំងនេាះ។
 
 ### Example Using Classes {#example-using-classes}
 
