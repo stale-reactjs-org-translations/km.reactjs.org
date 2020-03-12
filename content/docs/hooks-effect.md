@@ -39,7 +39,7 @@ function Example() {
 
 >គន្លឹះ
 >
->ប្រសិនបើអ្នកសុាំ (familiar) ជាមួយ React class lifecycle methods, អ្នកអាចគិតថា `useEffect` Hook គឺដូចទៅនឹង `componentDidMount`, `componentDidUpdate`, និង `componentWillUnmount` 
+>ប្រសិនបើអ្នកសុាំ (familiar) ជាមួយ React class lifecycle methods, អ្នកអាចគិតថា `useEffect` Hook គឺដូចទៅនឹង `componentDidMount`, `componentDidUpdate`, និង `componentWillUnmount`
 រួមបញ្ចូលគ្នា។
 
 មានពីរប្រភេទនៃ side effects ក្នុង React components៖ ប្រភេទដែលមិនទាមទារអោយ cleanup, និងប្រភេទដេលទាមទារអោយ clearnup។ សូមក្រឡេកមើលភាពខុសគ្នានេះឱ្យកាន់តែលម្អិត។
@@ -50,7 +50,7 @@ function Example() {
 
 ### Example Using Classes {#example-using-classes}
 
-នៅក្នុង React class components, `render` method ខ្លួនឯងមិនគួរបណ្តាលឱ្យ side effects។ 
+នៅក្នុង React class components, `render` method ខ្លួនឯងមិនគួរបណ្តាលឱ្យ side effects។
 វាលឿនពេកហើយ -- ជាធម្មតាយើងចង់អនុវត្ត (perform) effects របស់យើង *បន្ទាប់ពី* React បានធ្វើបច្ចុប្បន្នភាព DOM។
 
 នេះ​ជាមូលហេតុដែលនៅក្នុង React classes, យើងដាក់ side effects ចូលទៅក្នុង `componentDidMount` និង `componentDidUpdate`។ ត្រលប់មកឧទាហរណ៍របស់យើងវិញ, នេះគឺជា React counter class component ដែលធ្វើបច្ចុប្បន្នភាព document title បន្ទាប់ពី React បានផ្លាស់ប្តូរ DOM៖
@@ -93,7 +93,7 @@ class Example extends React.Component {
 
 ### Example Using Hooks {#example-using-hooks}
 
-We've already seen this example at the top of this page, but let's take a closer look at it:
+យើងបានឃើញឧទាហរណ៍នេះរួចហើយនៅផ្នែកខាងលើនៃទំព័រនេះ, ប៉ុន្តែសូមពិនិត្យឱ្យបានដិតដល់អំពីវា៖
 
 ```js{1,6-8}
 import React, { useState, useEffect } from 'react';
