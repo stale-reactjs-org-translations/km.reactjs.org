@@ -116,11 +116,13 @@ function Example() {
 }
 ```
 
-**What does `useEffect` do?** By using this Hook, you tell React that your component needs to do something after render. React will remember the function you passed (we'll refer to it as our "effect"), and call it later after performing the DOM updates. In this effect, we set the document title, but we could also perform data fetching or call some other imperative API.
+**តើ `useEffect` ធ្វើអ្វីខ្លះ?** ដោយការប្រើ Hook នេះ, អ្នកប្រាប់ React ថា compoent របស់អ្នក ត្រូវការធ្វើអ្វីមួយបន្ទាប់ពី render។ React នឹងចងចាំ function ដែលអ្នកបានបេាះ (pass) (យើងនឹងយោងទៅវាដូចជា "effect" របស់យើង), ហើយ call វាពេលក្រោយបន្ទាប់ពីការអនុវត្តការ
+ធ្វើបច្ចុប្បន្នភាព DOM។ នៅក្នុង effect នេះ, យើង set the document titile, ប៉ុន្តែយើងក៏អាចអនុវត្ត data fetching ឬ call API ចាំបាច់មួយចំនួនផ្សេងទៀត។
 
-**Why is `useEffect` called inside a component?** Placing `useEffect` inside the component lets us access the `count` state variable (or any props) right from the effect. We don't need a special API to read it -- it's already in the function scope. Hooks embrace JavaScript closures and avoid introducing React-specific APIs where JavaScript already provides a solution.
+**ហេតុអ្វី `useEffect` ត្រូវបាន call នៅខាងក្នុង component?** ការដាក់ `useEffect` នៅខាងក្នុង component អនុញ្ញាតឱ្យយើងចូលប្រើ (access) `count` state variable (ឬក៏ props ផ្សេងៗ) ពី effect។ យើងមិនត្រូវការ API ពិសេសដើម្បីអាន (read) វាទេ -- វាស្ថិតនៅក្នុងវិសាលភាព function រួចហើយ។ Hooks ភ្ជាប់មកជាមួយ JavaScript closures និង ចៀសវាងការណែនាំ React-specific APIs ដែល 
+JavaScript បានផ្តល់នូវដំណោះស្រាយរួចហើយ។
 
-**Does `useEffect` run after every render?** Yes! By default, it runs both after the first render *and* after every update. (We will later talk about [how to customize this](#tip-optimizing-performance-by-skipping-effects).) Instead of thinking in terms of "mounting" and "updating", you might find it easier to think that effects happen "after render". React guarantees the DOM has been updated by the time it runs the effects.
+**តើ `useEffect` run បន្ទាប់ពីរាល់ពេល render?** បាទ! By default, វា run ទាំងបន្ទាប់ពី render តំបូង *និង* ទាំងបន្ទាប់ពីរាល់ពេលធ្វើបច្ចុប្បន្នភាព (update)។ (យើងនឹងនិយាយពី [how to customize this](#tip-optimizing-performance-by-skipping-effects) នៅពេលក្រោយ។)​ ជំនួសឱ្យការគិតនៅក្នុងលក្ខខណ្ឌនៃ "mounting" និង "updating", អ្នកអាចគិតថាវាងាយស្រួលក្នុងការគិតថា effects កើតឡើង "បន្ទាប់ពី render"។ React ធានាថា DOM ត្រូវបានគេធ្វើបច្ចុប្បន្នភាពនៅពេលវា run the effects។
 
 ### Detailed Explanation {#detailed-explanation}
 
