@@ -192,11 +192,12 @@ class FriendStatus extends React.Component {
 }
 ```
 
-Notice how `componentDidMount` and `componentWillUnmount` need to mirror each other. Lifecycle methods force us to split this logic even though conceptually code in both of them is related to the same effect.
+សូមកត់សម្គាល់ពីរបៀបដែល `componentDidMount` និង `componentWillUnmount` ត្រូវការឆ្លុះគ្នា។ Lifecycle methods បង្ខំយើងបំបែក logic នេះទេាះបីជាតាមគំនិតរបស់កូដដែលនៅក្នុងពួកវាទាំងពីគឹជាប់ពាក់ពន្ធ័ effect ដូចគ្នាឬតែមួយ។
 
->Note
+>ចំណាំ
 >
->Eagle-eyed readers may notice that this example also needs a `componentDidUpdate` method to be fully correct. We'll ignore this for now but will come back to it in a [later section](#explanation-why-effects-run-on-each-update) of this page.
+>អ្នកអានដែលមានភ្នែកឥន្ទ្រី (Eagle-eyed readers) អាចកត់សម្គាល់ថាឧទាហរណ៍នេះក៏ត្រូវការផងដែរនូវ `componentDidUpdate` method ដើម្បីឱ្យបានត្រឹមត្រូវពេញលេញ។ 
+យើងនឹងមិនអើពើ (ignore) នឹងវាសម្រាប់ពេលនេះទេប៉ុន្តែយើងនឹងត្រឡប់មករកវានៅក្នុង [ផ្នែកក្រោយ](#explanation-why-effects-run-on-each-update) នៃទំព័រនេះ។
 
 ### Example Using Hooks {#example-using-hooks-1}
 
