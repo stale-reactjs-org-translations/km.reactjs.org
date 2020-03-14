@@ -148,7 +148,8 @@ JavaScript developers ដែលមានបទពិសោធន៍​ អាច
 
 ## Effects with Cleanup {#effects-with-cleanup}
 
-Earlier, we looked at how to express side effects that don't require any cleanup. However, some effects do. For example, **we might want to set up a subscription** to some external data source. In that case, it is important to clean up so that we don't introduce a memory leak! Let's compare how we can do it with classes and with Hooks.
+មុននេះ, យើងបានពិនិត្យមើលវិធីដើម្បីបង្ហាញ side effects ដែលមិនត្រូវការ cleanup។ ទោះយ៉ាងណាក៏ដោយ, effects មួយចំនួនត្រូវការ។ ឧទាហរណ៍, **យើងប្រហែលជាចង់ set up a subscription** អោយ external data source មួយចំនួន។ ក្នុងករណី​នេះ, វាជាការសំខាន់ដើម្បី clean up ដូច្នេះយើងមិនបង្កើត memory leak! 
+ចូរយើងប្រៀបធៀបរបៀបដែលយើងអាចធ្វើវាបានជាមួយ calleses និងជាមួយ Hooks។
 
 ### Example Using Classes {#example-using-classes-1}
 
