@@ -126,7 +126,7 @@ JavaScript បានផ្តល់នូវដំណោះស្រាយរួ
 
 ### Detailed Explanation {#detailed-explanation}
 
-Now that we know more about effects, these lines should make sense:
+ឥឡូវយើងដឹងកាន់តែច្បាស់ហើយអំពី effects, បន្ទាត់ទាំងនេះគួរតែធ្វើឱ្យយល់បាន៖
 
 ```js
 function Example() {
@@ -138,7 +138,7 @@ function Example() {
 }
 ```
 
-We declare the `count` state variable, and then we tell React we need to use an effect. We pass a function to the `useEffect` Hook. This function we pass *is* our effect. Inside our effect, we set the document title using the `document.title` browser API. We can read the latest `count` inside the effect because it's in the scope of our function. When React renders our component, it will remember the effect we used, and then run our effect after updating the DOM. This happens for every render, including the first one.
+យើងប្រកាស (declare) `count` state variable, ហើយបន្ទាប់មកយើងប្រាប់ React យើងត្រូវប្រើ effect។ យើងបេាះ (pass) function ទៅអោយ `useEffect` Hook។ function នេះយើងបេាះ (pass) *គឺ* effect របស់យើង។ នៅខាងក្នុង effect របស់យើង, យើង set the document title ដោយការប្រើ the `document.titile` របស់ browser API។ យើងអាច read `count` ចុងក្រោយដែលនៅខាងក្នុង effect ពីព្រោះវាស្ថិតនៅក្នុងវិសាលភាពនៃ function របស់យើង។ នៅពេល React renders component របស់យើង, វានឹងចងចាំ effect ដែលយើងបានប្រើ, ហើយបន្ទាប់មក run effect របស់យើងបន្ទាប់ពីធ្វើបច្ចុប្បន្នភាព DOM។ នេះកើតឡើងសម្រាប់រាល់ពេល render, រួមទាំងពេលដំបូង។
 
 Experienced JavaScript developers might notice that the function passed to `useEffect` is going to be different on every render. This is intentional. In fact, this is what lets us read the `count` value from inside the effect without worrying about it getting stale. Every time we re-render, we schedule a _different_ effect, replacing the previous one. In a way, this makes the effects behave more like a part of the render result -- each effect "belongs" to a particular render. We will see more clearly why this is useful [later on this page](#explanation-why-effects-run-on-each-update).
 
