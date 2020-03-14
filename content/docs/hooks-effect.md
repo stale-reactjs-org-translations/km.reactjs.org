@@ -140,11 +140,11 @@ function Example() {
 
 យើងប្រកាស (declare) `count` state variable, ហើយបន្ទាប់មកយើងប្រាប់ React យើងត្រូវប្រើ effect។ យើងបេាះ (pass) function ទៅអោយ `useEffect` Hook។ function នេះយើងបេាះ (pass) *គឺ* effect របស់យើង។ នៅខាងក្នុង effect របស់យើង, យើង set the document title ដោយការប្រើ the `document.titile` របស់ browser API។ យើងអាច read `count` ចុងក្រោយដែលនៅខាងក្នុង effect ពីព្រោះវាស្ថិតនៅក្នុងវិសាលភាពនៃ function របស់យើង។ នៅពេល React renders component របស់យើង, វានឹងចងចាំ effect ដែលយើងបានប្រើ, ហើយបន្ទាប់មក run effect របស់យើងបន្ទាប់ពីធ្វើបច្ចុប្បន្នភាព DOM។ នេះកើតឡើងសម្រាប់រាល់ពេល render, រួមទាំងពេលដំបូង។
 
-Experienced JavaScript developers might notice that the function passed to `useEffect` is going to be different on every render. This is intentional. In fact, this is what lets us read the `count` value from inside the effect without worrying about it getting stale. Every time we re-render, we schedule a _different_ effect, replacing the previous one. In a way, this makes the effects behave more like a part of the render result -- each effect "belongs" to a particular render. We will see more clearly why this is useful [later on this page](#explanation-why-effects-run-on-each-update).
+JavaScript developers ដែលមានបទពិសោធន៍​ អាចកត់សម្គាល់ឃើញថា function ដែលបានបេាះ (pass) អោយ `useEffect` នឹងមានភាពខុសគ្នានៅលើរាល់ការ render។ នេះគឺជាចេតនា។ តាមពិត, នេះជាអ្វីដែលអាចអោយយើងអាន (read) តម្លៃ `count` ពីខាងក្នុង effect ដោយមិនបារម្ភអំពីវាមិនទទួលបានតម្លៃចុងក្រោយ។ រាល់ពេលយើង re-render,​​យើងកំណត់ពេលវេលា effect _ផ្សេង_, ជំនួសមួយមុន។ តាមរបៀបមួយទៀត, បែបនេះធ្វើអោយ effect មានឥរិយាបទច្រើនដូចជាផ្នែកមួយនៃលទ្ធផល render -- effect និមួយៗ "belongs" ទៅ render ជាក់លាក់មួយ។ យើងនឹងឃើញកាន់តែច្បាស់ថាហេតុអ្វីបានជាវាមានប្រយោជន៍ [នៅពេលក្រោយនៅលើទំព័រនេះ](#explanation-why-effects-run-on-each-update)។
 
->Tip
+>គន្លឹះ
 >
->Unlike `componentDidMount` or `componentDidUpdate`, effects scheduled with `useEffect` don't block the browser from updating the screen. This makes your app feel more responsive. The majority of effects don't need to happen synchronously. In the uncommon cases where they do (such as measuring the layout), there is a separate [`useLayoutEffect`](/docs/hooks-reference.html#uselayouteffect) Hook with an API identical to `useEffect`.
+>មិន​ដូច `componentDidMount` ឬ `componentDidUpdate`, effects បានកំណត់ពេលជាមួយ `useEffect` ដោយមិន block browser ពីការធ្វើបច្ចុប្បន្នភាព screen។ វាធ្វើឱ្យកម្មវិធីរបស់អ្នកកាន់តែឆ្លើយតប (responsive)។ ភាគច្រើននៃ effect មិនចាំបាច់កើតឡើងដំណាលគ្នាទេ (synchronous)។ ក្នុងករណីមិនធម្មតាដែលពួកវាធ្វើ (ដូចជាវាស់ layout), មាន [`useLayoutEffect`](/docs/hooks-reference.html#uselayouteffect) Hook ដាច់ដោយឡែក ជាមួយ API ដូចគ្នាបេះបិទទៅនឹង `useEffect`។
 
 ## Effects with Cleanup {#effects-with-cleanup}
 
