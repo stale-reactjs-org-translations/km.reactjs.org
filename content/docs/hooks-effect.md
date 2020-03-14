@@ -153,7 +153,7 @@ JavaScript developers ដែលមានបទពិសោធន៍​ អាច
 
 ### Example Using Classes {#example-using-classes-1}
 
-In a React class, you would typically set up a subscription in `componentDidMount`, and clean it up in `componentWillUnmount`. For example, let's say we have a `ChatAPI` module that lets us subscribe to a friend's online status. Here's how we might subscribe and display that status using a class:
+នៅក្នុង React class, អ្នកនឹងធម្មតា set up a subscription ក្នុង `componentDidMount`, ហើយ clean up វានៅក្នុង `componentWillUnmount`។ ឧទាហរណ៍, ឧបមាថាយើងមាន `ChatAPI` module ដែលអនុញ្ញាតឱ្យយើង subscribe ទៅកាន់ online status របស់ friend។ នេះជារបៀបដែលយើងអាច subscribe និងបង្ហាញ status នេាះដោយការប្រើ class៖
 
 ```js{8-26}
 class FriendStatus extends React.Component {
