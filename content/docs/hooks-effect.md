@@ -241,7 +241,7 @@ function FriendStatus(props) {
 
 ## Recap {#recap}
 
-We've learned that `useEffect` lets us express different kinds of side effects after a component renders. Some effects might require cleanup so they return a function:
+យើងបានរៀននិងយល់ហើយថា `useEffect` អនុញ្ញាតឱ្យយើងបង្ហាញប្រភេទផ្សេងៗគ្នានៃ side effects បន្ទាប់ពី component renders។ effects មួយចំនួន ប្រហែលទាមទារអោយ cleanup ដូច្នេះពួកវា return function៖
 
 ```js
   useEffect(() => {
@@ -256,7 +256,7 @@ We've learned that `useEffect` lets us express different kinds of side effects a
   });
 ```
 
-Other effects might not have a cleanup phase, and don't return anything.
+effects ផ្សេងទៀត ប្រហែលជាមិនមានតំណាក់កាល cleanup, ហើយមិន return អ្វីទាំងអស់។
 
 ```js
   useEffect(() => {
@@ -264,11 +264,11 @@ Other effects might not have a cleanup phase, and don't return anything.
   });
 ```
 
-The Effect Hook unifies both use cases with a single API.
+Effect Hook បង្រួមករណីប្រើទាំងពីរជាមួយ API តែមួយ។
 
 -------------
 
-**If you feel like you have a decent grasp on how the Effect Hook works, or if you feel overwhelmed, you can jump to the [next page about Rules of Hooks](/docs/hooks-rules.html) now.**
+**ប្រសិនបើអ្នកមានអារម្មណ៍ថាអ្នកមានការចាប់យកបានយ៉ាងសមរម្យទៅលើរបៀបដែល Effect Hook ដំណើរការ, ឬប្រសិនបើអ្នកមានអារម្មណ៍ថាធុញទ្រាន់, អ្នកអាចក្រឡេកទៅមើ់ល [ទំព័របន្ទាប់អំពីច្បាប់នៃ Hooks](/docs/hooks-rules.html) ឥឡូវ​នេះ។**
 
 -------------
 
