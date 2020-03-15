@@ -232,11 +232,12 @@ function FriendStatus(props) {
 
 **ហេតុអ្វីយើងបាន return a function ពី effect របស់យើង?** នេះគឺជាយន្តការ optional cleanup សម្រាប់ effects។ រាល់ effect ប្រហែល return a function ដែល clearns up បន្ទាប់ពីវា។ នេះអនុញ្ញាតឱ្យយើងរក្សា logic សម្រាប់ការបន្ថែមនិងការយកចេញនូវ subscriptions នៅជិតគ្នា។ ពួកវាជាផ្នែកមួយនៃ effect ដូចគ្នា។
 
-**When exactly does React clean up an effect?** React performs the cleanup when the component unmounts. However, as we learned earlier, effects run for every render and not just once. This is why React *also* cleans up effects from the previous render before running the effects next time. We'll discuss [why this helps avoid bugs](#explanation-why-effects-run-on-each-update) and [how to opt out of this behavior in case it creates performance issues](#tip-optimizing-performance-by-skipping-effects) later below.
+**តើពេលណាពិតប្រាកដដែល React clean up effect?** React អនុវត្ត cleanup នៅពេល component unmounts។ ទោះយ៉ាងណាក៏ដោយ, ដូចដែលយើងបានរៀនមុននេះ, effects run សម្រាប់រាល់ render និងមិនមែនគ្រាន់តែមួយទេ។ នេះ​ជាហេតុ React cleans up effect ពី previous render មុនពេល ការ run effect ពេលបន្ទាប់ *ផងដែរ*។ 
+យើងនឹងពិភាក្សា [ហេតុអ្វីបានជាវាជួយជៀសវាង bugs](#explanation-why-effects-run-on-each-update) និង [របៀបក្នុងការដកខ្លួនចេញពីអាកប្បកិរិយានេះក្នុងករណីដែលវាបង្កើតជាបញ្ហានៃការអនុវត្ត](#tip-optimizing-performance-by-skipping-effects) ពេលក្រោយនៅខាងក្រោម។
 
->Note
+>ចំណាំ
 >
->We don't have to return a named function from the effect. We called it `cleanup` here to clarify its purpose, but you could return an arrow function or call it something different.
+>យើងមិនចាំបាច់ត្រូវ return named function មួយពី effect។ យើងហៅវាថា `clearnup` នៅទីនេះដើម្បីបញ្ជាក់ពីគោលបំណងរបស់វា, ប៉ុន្តែអ្នកអាច return arrow function មួយ ឬ call អ្វីផ្សេង។
 
 ## Recap {#recap}
 
