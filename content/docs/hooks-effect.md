@@ -201,9 +201,9 @@ class FriendStatus extends React.Component {
 
 ### Example Using Hooks {#example-using-hooks-1}
 
-Let's see how we could write this component with Hooks.
+តោះមើលពីរបៀបដែលយើងអាចសរសេរ component ជាមួយ Hooks។
 
-You might be thinking that we'd need a separate effect to perform the cleanup. But code for adding and removing a subscription is so tightly related that `useEffect` is designed to keep it together. If your effect returns a function, React will run it when it is time to clean up:
+អ្នកប្រហែលកំពុងគិតថា យើងនឹងត្រូវការបំបែក effect ដើម្បីអនុវត្ត cleanup។ ប៉ុន្តែកូដសម្រាប់ការបន្ថែមនិងការយកចេញ subscription គឺទាក់ទងយ៉ាងខ្លាំងជាមួយ `useEffect` ដែលត្រូវបាន design ដើម្បីរក្សារវាជាមួយគ្នា។ ប្រសិនបើ effect របស់អ្នក return a function, React នឹង run វានៅពេលវាជាពេលដែលត្រូវ clean up៖
 
 ```js{6-16}
 import React, { useState, useEffect } from 'react';
@@ -230,7 +230,7 @@ function FriendStatus(props) {
 }
 ```
 
-**Why did we return a function from our effect?** This is the optional cleanup mechanism for effects. Every effect may return a function that cleans up after it. This lets us keep the logic for adding and removing subscriptions close to each other. They're part of the same effect!
+**ហេតុអ្វីយើងបាន return a function ពី effect របស់យើង?** នេះគឺជាយន្តការ optional cleanup សម្រាប់ effects។ រាល់ effect ប្រហែល return a function ដែល clearns up បន្ទាប់ពីវា។ នេះអនុញ្ញាតឱ្យយើងរក្សា logic សម្រាប់ការបន្ថែមនិងការយកចេញនូវ subscriptions នៅជិតគ្នា។ ពួកវាជាផ្នែកមួយនៃ effect ដូចគ្នា។
 
 **When exactly does React clean up an effect?** React performs the cleanup when the component unmounts. However, as we learned earlier, effects run for every render and not just once. This is why React *also* cleans up effects from the previous render before running the effects next time. We'll discuss [why this helps avoid bugs](#explanation-why-effects-run-on-each-update) and [how to opt out of this behavior in case it creates performance issues](#tip-optimizing-performance-by-skipping-effects) later below.
 
