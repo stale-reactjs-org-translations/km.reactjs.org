@@ -274,7 +274,7 @@ Effect Hook បង្រួមករណីប្រើទាំងពីរជ�
 
 ## Tips for Using Effects {#tips-for-using-effects}
 
-We'll continue this page with an in-depth look at some aspects of `useEffect` that experienced React users will likely be curious about. Don't feel obligated to dig into them now. You can always come back to this page to learn more details about the Effect Hook.
+យើងនឹងបន្តទំព័រនេះដោយមើលឱ្យស៊ីជម្រៅលើទិដ្ឋភាពមួយចំនួននៃ `useEffect` ដែល experienced React users នឹងទំនងជាចង់ដឹងចង់ឃើញអំពីវា។ កុំមានអារម្មណ៍ថាមានកាតព្វកិច្ចដើម្បីជីកចូលពួកគេឥឡូវនេះ។ អ្នកអាចត្រលប់មកទំព័រនេះវិញដើម្បីរៀនព័ត៌មានលម្អិតបន្ថែមអំពី Effect Hook។
 
 ### Tip: Use Multiple Effects to Separate Concerns {#tip-use-multiple-effects-to-separate-concerns}
 
