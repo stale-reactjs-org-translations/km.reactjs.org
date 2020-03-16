@@ -176,11 +176,7 @@ const element = {
 
 វត្ថុ(Object)ទាំងនេះត្រូវបានគេហៅថា "React elements" ។ អ្នកអាចគិតថាពួកគេជាការពិពណ៌នាអំពីអ្វីដែលអ្នកចង់ឃើញនៅលើអេក្រង់។ React បានអានវត្ថុ(Object)ទាំងនេះហើយប្រើពួកវាដើម្បីបង្កើត DOM និងរក្សាវាឱ្យទាន់សម័យ(up to date)។
 
-<<<<<<< HEAD
-យើងនឹងធ្វើការស្វែងយល់ពីធាតុផ្សំ React ក្នុងការឆ្លើយតបទៅ DOM នៅក្នុងផ្នែកបន្ទាប់។
-=======
-We will explore rendering React elements to the DOM in the [next section](/docs/rendering-elements.html).
->>>>>>> fb382ccb13e30e0d186b88ec357bb51e91de6504
+យើងនឹងធ្វើការស្វែងយល់ React element ក្នុងការឆ្លើយតបទៅ DOM នៅក្នុង [ផ្នែកបន្ទាប់](/docs/rendering-elements.html)។
 
 >**ព័ត៌មានជំនួយ:**
 >

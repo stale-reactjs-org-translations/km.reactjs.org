@@ -293,11 +293,7 @@ class Square extends React.Component {
 
 >ចំណាំ
 >
-<<<<<<< HEAD
 >នៅក្នុង [JavaScript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) អ្នកតម្រូវអោយ call `super` នៅពេលធ្វើការកំណត់ constructor នៃ subclass។ React component classes ទាំងអស់ដែលមាន constructor គួរតែចាប់ផ្តើមជាមួយនិងការ call `super(props)`។
-=======
->In [JavaScript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), you need to always call `super` when defining the constructor of a subclass. All React component classes that have a `constructor` should start with a `super(props)` call.
->>>>>>> fb382ccb13e30e0d186b88ec357bb51e91de6504
 
 ឥឡូវ​នេះយើងនឹងផ្លាស់ប្តូរ `render` method របស់ Square ដើម្បីបង្ហាញតម្លៃ​បច្ចុប្ប​ន្នរបស់ state នៅពេលដែលត្រូវបាន click៖
 
