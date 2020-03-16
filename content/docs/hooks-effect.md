@@ -489,7 +489,7 @@ In the future, the second argument might get added automatically by a build-time
 
 ## Next Steps {#next-steps}
 
-Congratulations! This was a long page, but hopefully by the end most of your questions about effects were answered. You've learned both the State Hook and the Effect Hook, and there is a *lot* you can do with both of them combined. They cover most of the use cases for classes -- and where they don't, you might find the [additional Hooks](/docs/hooks-reference.html) helpful.
+សូមអបអរសាទរ! នេះជាទំព័រមួយដ៏វែង, ប៉ុន្តែសង្ឃឹមថានៅចុងបញ្ចប់ សំណួរភាគច្រើនរបស់អ្នកអំពី effects ត្រូវបានឆ្លើយ។ អ្នកបានរៀននិងយល់ដឹងទាំង State Hook និង Effect Hook, ហើយនៅមាន *ច្រើន* ទៀតដែលអ្នកអាចធ្វើបានជាមួយពួកវាទាំងពីរនៅពេលរួមបញ្ចូលគ្នា។ ពួកវា cover ភាគច្រើនលើករណីនៃការប្រើប្រាស់​ classes -- និងកន្លែងដែលពួកវាមិនប្រើ, អ្នកប្រហែលយល់ឃើញថា [additional Hooks](/docs/hooks-reference.html) មានប្រយោជន៍។
 
 We're also starting to see how Hooks solve problems outlined in [Motivation](/docs/hooks-intro.html#motivation). We've seen how effect cleanup avoids duplication in `componentDidUpdate` and `componentWillUnmount`, brings related code closer together, and helps us avoid bugs. We've also seen how we can separate effects by their purpose, which is something we couldn't do in classes at all.
 
