@@ -278,7 +278,8 @@ Effect Hook បង្រួមករណីប្រើទាំងពីរជ�
 
 ### Tip: Use Multiple Effects to Separate Concerns {#tip-use-multiple-effects-to-separate-concerns}
 
-One of the problems we outlined in the [Motivation](/docs/hooks-intro.html#complex-components-become-hard-to-understand) for Hooks is that class lifecycle methods often contain unrelated logic, but related logic gets broken up into several methods. Here is a component that combines the counter and the friend status indicator logic from the previous examples:
+បញ្ហាមួយក្នុងចំណោមបញ្ហាដែលយើងបានលើកឡើងនៅក្នុង [Motivation](/docs/hooks-intro.html#complex-components-become-hard-to-understand) សម្រាប់ Hooks គឺថា class lifecycle methods ជាញឹកញាមាន logic ដែលមិនទាក់ទងគ្នា, logic ដែលទាក់ទងគ្នា នឹងត្រូវបានបំបែកទៅជា methods ជាច្រើន។ នេះគឺជា component ដែលរួមបញ្ចូលគ្នារវាង counter និង friend status indicator logic ពី ឧទាហរណ៍មុន៖
+
 
 ```js
 class FriendStatusWithCounter extends React.Component {
