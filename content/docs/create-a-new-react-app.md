@@ -40,7 +40,7 @@ next: cdn-links.html
 
 [Create React App](https://github.com/facebookincubator/create-react-app) គឺជា environment ដែលផ្តល់ភាពសុខស្រួល (comfortable) មួយសម្រាប់ **ការរៀន React** ហើយគឺជាវិធីដ៏ល្អបំផុតដើម្បីចាប់ផ្តើមបង្កើត **[single-page](/docs/glossary.html#single-page-application) application ថ្មីមួយ** នៅក្នុង​ React។
 
-វាបង្កើតនូវ development environment របស់អ្នកដូច្នេះអ្នកអាចប្រើលក្ខណៈពិសេសចុងក្រោយបំផុតរបស់ JavaScript (latest JavaScript features), ផ្តល់ developer នូវបទពិសោធដ៏អស្ចារ្យបំផុត, ហើយនិងបង្កើនប្រសិទ្ធភាព app របស់អ្នកសម្រាប់ production។ អ្នកនឹងត្រូវមាន Node >= ៨.១០ និង npm >= ៥.៦ នៅលើម៉ាស៊ីនរបស់អ្នក។ ដើម្បីបង្កើត product, run៖
+វាបង្កើត (sets up)នូវ development environment របស់អ្នកដូច្នេះអ្នកអាចប្រើលក្ខណៈពិសេសចុងក្រោយបំផុតរបស់ JavaScript (latest JavaScript features), ផ្តល់ developer នូវបទពិសោធដ៏អស្ចារ្យបំផុត, ហើយនិងបង្កើនប្រសិទ្ធភាព app របស់អ្នកសម្រាប់ production។ អ្នកនឹងត្រូវមាន Node >= ៨.១០ និង npm >= ៥.៦ នៅលើម៉ាស៊ីនរបស់អ្នក។ ដើម្បីបង្កើត product, run៖
 
 ```bash
 npx create-react-app my-app

@@ -41,9 +41,9 @@ class Welcome extends React.Component {
 }
 ```
 
-componentsខាងលើនេះគឺសមមូលនឹងចំនុច React ។
+components ពីរខាងលើនេះគឺសមមូលនឹងទស្សនៈរបស់ React ។
 
-Classesមានលក្ខណៈពិសេសបន្ថែមមួយចំនួនដែលយើងនឹងពិភាក្សានៅក្នុង[ផ្នែកបន្ទាប់](/docs/state-and-lifecycle.html). រហូតមកដល់ពេលនេះយើងនឹងប្រើមុខងារ components សម្រាប់ភាពស៊ីជំរៅរបស់វា។
+Function និង Classes មានលក្ខណៈពិសេសបន្ថែមមួយចំនួនដែលយើងនឹងពិភាក្សានៅក្នុង[ផ្នែកបន្ទាប់](/docs/state-and-lifecycle.html).
 
 ## ការបង្កើតComponent {#rendering-a-component}
 
@@ -59,7 +59,7 @@ const element = <div />;
 const element = <Welcome name="Sara" />;
 ```
 
-នៅពេលដែលមាន React មឃើញធាតុតំណាងឱ្យcomponentកំណត់ដោយអ្នកប្រើ, វាបញ្ជូនគុណលក្ខណៈ JSX ទៅcomponentនេះជាវត្ថុតែមួយ. យើងហៅវត្ថុនេះថា "props" ។
+នៅពេលដែល React មើលឃើញ element ដែលតំណាងឱ្យ component ដែលកំណត់ដោយអ្នកប្រើប្រាស់, វាបញ្ជូន (passes) JSX attributes និង children ទៅអោយ component នេះជា single object។ យើងហៅ object នេះថា "props"។
 
 ឧទាហរណ៏, កូដនេះធ្វើការមំលែងទៅជា "Hello, Sara" នៅលើទំព័រ:
 
@@ -119,7 +119,7 @@ ReactDOM.render(
 
 [សាកល្បងនៅលើ CodePen](codepen://components-and-props/composing-components)
 
-ជាធម្មតា, កម្មវិធី Reactថ្មីមាន `App` component តែមួយនៅកំពូលបំផុត. ទោះយ៉ាងណា, ប្រសិនបើអ្នកធ្វើសមាហរណកម្មបញ្ចូលគ្នាទៅក្នុងកម្មវិធីដែលមានស្រាប់ អ្នកអាចចាប់ផ្តើមពីតូចឡើងដោយមាន component តូចមួយដូចជា `Button` ហើយជាបណ្តើរដំណើរ វិធីរបស់អ្នកទៅកំពូលនៃឋានានុក្រមទិដ្ឋភាព។
+ជាធម្មតា, កម្មវិធី React ថ្មីមាន `App` component តែមួយនៅកំពូលបំផុត. ទោះយ៉ាងណា, ប្រសិនបើអ្នកធ្វើសមាហរណកម្មបញ្ចូលគ្នាទៅក្នុងកម្មវិធីដែលមានស្រាប់ អ្នកអាចចាប់ផ្តើមពីតូចឡើងដោយមាន component តូចមួយដូចជា `Button` ហើយជាបណ្តើរដំណើរ វិធីរបស់អ្នកទៅកំពូលនៃឋានានុក្រមទិដ្ឋភាព។
 
 ## Extracting Components {#extracting-components}
 
