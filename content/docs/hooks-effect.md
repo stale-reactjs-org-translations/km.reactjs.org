@@ -366,9 +366,9 @@ function FriendStatusWithCounter(props) {
   }
 ```
 
-**But what happens if the `friend` prop changes** while the component is on the screen? Our component would continue displaying the online status of a different friend. This is a bug. We would also cause a memory leak or crash when unmounting since the unsubscribe call would use the wrong friend ID.
+**ប៉ុន្តែ តើអ្វីក់ើតឡើងបើសិន `friend` prop ផ្លាស់ប្តូរ** កំឡុងពេល component គឺនៅលើអេក្រង់? Component របស់យើងនឹងបន្តការបង្ហាញ online status នៃ friend ផ្សេងៗ។ នេះគឺជា bug។ យើងក៏នឹងបង្កឱ្យមាន memory leak ឬក៏ crash នៅពេល unmounting ដែល unsubscribe call នឹងប្រើខុស friend ID ។
 
-In a class component, we would need to add `componentDidUpdate` to handle this case:
+នៅក្នុង class component, យើងនឹងត្រូវការបន្ថែម `componentDidUpdate` ដើម្បី handle ករណីនេះ៖
 
 ```js{8-19}
   componentDidMount() {
@@ -399,9 +399,9 @@ In a class component, we would need to add `componentDidUpdate` to handle this c
   }
 ```
 
-Forgetting to handle `componentDidUpdate` properly is a common source of bugs in React applications.
+ការភ្លេច handle `componentDidUpdate` គឺជាប្រភពទូទៅនៃ bugs នៅក្នុង React applications។
 
-Now consider the version of this component that uses Hooks:
+ឥឡូវពិចារណាពី version នៃ component នេះដែលប្រើ Hooks៖
 
 ```js
 function FriendStatus(props) {
