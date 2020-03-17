@@ -439,7 +439,7 @@ ChatAPI.unsubscribeFromFriendStatus(300, handleStatusChange); // Clean up last e
 
 ### Tip: Optimizing Performance by Skipping Effects {#tip-optimizing-performance-by-skipping-effects}
 
-In some cases, cleaning up or applying the effect after every render might create a performance problem. In class components, we can solve this by writing an extra comparison with `prevProps` or `prevState` inside `componentDidUpdate`:
+ករណី​ខ្លះ, cleaning up ឬ applying the effect បន្ទាប់ពីរាល់ពេល render អាចបង្កើតបញ្ហាការអនុវត្ត។ នៅក្នុង class components, យើងអាចដោះស្រាយវាដោយការសរសេរបន្ថែមនូវការប្រៀបធៀបជាមួយ `prevProps` ឬ `prevState` ដែលនៅខាងក្នុង `componentDidUpdate`៖
 
 ```js
 componentDidUpdate(prevProps, prevState) {
@@ -449,7 +449,7 @@ componentDidUpdate(prevProps, prevState) {
 }
 ```
 
-This requirement is common enough that it is built into the `useEffect` Hook API. You can tell React to *skip* applying an effect if certain values haven't changed between re-renders. To do so, pass an array as an optional second argument to `useEffect`:
+តំរូវការនេះគឺជារឿងធម្មតាដែលវាត្រូវបានបង្កើតឡើងនៅក្នុង `useEffect` Hook API។ អ្នកអាចប្រាប់ React ដើម្បី *skip* ការ apply effect ប្រសិនបើតម្លៃជាក់លាក់មិនបានផ្លាស់ប្តូររវាងការ re-renders។ ដើម្បីធ្វើដូច្នេះ, បញ្ជូន (pass) array មួយជា optional second argument មួយអោយទៅ `useEffect`៖
 
 ```js{3}
 useEffect(() => {
@@ -457,11 +457,11 @@ useEffect(() => {
 }, [count]); // Only re-run the effect if count changes
 ```
 
-In the example above, we pass `[count]` as the second argument. What does this mean? If the `count` is `5`, and then our component re-renders with `count` still equal to `5`, React will compare `[5]` from the previous render and `[5]` from the next render. Because all items in the array are the same (`5 === 5`), React would skip the effect. That's our optimization.
+ក្នុងឧទាហរណ៍ខាងលើ, យើងបញ្ជូន `[count]` ជា argument ទីពីរ។ តើ​នេះ​មានន័យថា​ម៉េច​? ប្រសិនបើ `count` គឺ `5`, ហើយបន្ទាប់ component របស់យើង re-renders ជាមួយ `count` រហូតស្មើរនឹង `5`, React នឹងប្រៀបធៀប `[5]` ពី previous rende និង `[5]` ពី next render។ ពីព្រេាះ items ទាំងអស់នៅក្នុង arreay គឺដូចទៅនឹង (`5 === 5`), React នឹង skip the effect។ នោះហើយជាការបង្កើនប្រសិទ្ធភាពរបស់យើង។
 
-When we render with `count` updated to `6`, React will compare the items in the `[5]` array from the previous render to items in the `[6]` array from the next render. This time, React will re-apply the effect because `5 !== 6`. If there are multiple items in the array, React will re-run the effect even if just one of them is different.
+នៅពេលយើង render ជាមួយ `count` បានធ្វើបច្ចុប្បន្នភាពទៅជា `6`, React នឹងប្រៀបធៀប items ក្នុង `[5]` array ពី previous render ជាមួយ items ក្នុង `[6]` array ពី next render។ លើកនេះ, React នឹង re-apply the effect ពីព្រេាះ `5 !== 6`។ ប្រសិនបើមាន items ច្រើននៅក្នុង array, React នឹង re-run the effect សូម្បី ប្រសិនបើមួយនៃពួកវាគឺខុសគ្នា។
 
-This also works for effects that have a cleanup phase:
+នេះក៏ដំណើរការដែរសម្រាប់ effects ដែលមាន តំណាក់កាល cleanup មួយ៖
 
 ```js{10}
 useEffect(() => {
@@ -476,9 +476,9 @@ useEffect(() => {
 }, [props.friend.id]); // Only re-subscribe if props.friend.id changes
 ```
 
-In the future, the second argument might get added automatically by a build-time transformation.
+នៅពេលអនាគត, argument ទីពីរប្រហែលត្រូវបានបន្ថែមដោយស្វ័យប្រវត្តិដោយ build-time transformation មួយ។
 
->Note
+>ចំណាំ
 >
 >If you use this optimization, make sure the array includes **all values from the component scope (such as props and state) that change over time and that are used by the effect**. Otherwise, your code will reference stale values from previous renders. Learn more about [how to deal with functions](/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies) and [what to do when the array changes too often](/docs/hooks-faq.html#what-can-i-do-if-my-effect-dependencies-change-too-often).
 >
