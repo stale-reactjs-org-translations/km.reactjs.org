@@ -316,9 +316,9 @@ class FriendStatusWithCounter extends React.Component {
   // ...
 ```
 
-Note how the logic that sets `document.title` is split between `componentDidMount` and `componentDidUpdate`. The subscription logic is also spread between `componentDidMount` and `componentWillUnmount`. And `componentDidMount` contains code for both tasks.
+ចំណាំរបៀប logic ដែល sets `document.title` ត្រូវបានបំបែករវាង `componentDidMount` និង `componentDidUpdate`។ Subscription logic ក៏ត្រូវបានពង្រឺកផងដែររវាង `componentDidMount` និង `componentWillUnmount`។ ហើយ `componentDidMount` មានកូដសម្រាប់ tasks ទាំងពីរ។
 
-So, how can Hooks solve this problem? Just like [you can use the *State* Hook more than once](/docs/hooks-state.html#tip-using-multiple-state-variables), you can also use several effects. This lets us separate unrelated logic into different effects:
+ដូច្នេះតើ Hooks អាចដោះស្រាយបញ្ហានេះយ៉ាងដូចម្តេច? គ្រាន់តែដូច [អ្នកអាចប្រើ *State* Hook ច្រើនជាងមួយ](/docs/hooks-state.html#tip-using-multiple-state-variables), អ្នកក៏អាចប្រើ effects ច្រើនផងដែរ។ នេះអនុញ្ញាតឱ្យយើងបែងចែក logic ដែលមិនមានទំនាក់ទំនងគ្នា ទៅកាន់ effects ផ្សេងៗគ្នា៖
 
 ```js{3,8}
 function FriendStatusWithCounter(props) {
@@ -342,7 +342,7 @@ function FriendStatusWithCounter(props) {
 }
 ```
 
-**Hooks let us split the code based on what it is doing** rather than a lifecycle method name. React will apply *every* effect used by the component, in the order they were specified.
+**Hooks អនុញ្ញាតឱ្យយើងបំបែកកូដដោយផ្អែកលើអ្វីដែលវាកំពុងធ្វើ** ជាជាង lifecycle method name។ React នឹង apply *រាល់* effect ដែលបានប្រើយដោយ component, ក្នុងគោលបំណងដែលពួកវាត្រូវបានបញ្ជាក់។
 
 ### Explanation: Why Effects Run on Each Update {#explanation-why-effects-run-on-each-update}
 
