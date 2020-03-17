@@ -415,9 +415,9 @@ function FriendStatus(props) {
   });
 ```
 
-It doesn't suffer from this bug. (But we also didn't make any changes to it.)
+វាមិនទទួលរងពី bug នេះទេ។ (ប៉ុន្តែយើងក៏មិនបានធ្វើការផ្លាស់ប្តូរអ្វីដែរ។)
 
-There is no special code for handling updates because `useEffect` handles them *by default*. It cleans up the previous effects before applying the next effects. To illustrate this, here is a sequence of subscribe and unsubscribe calls that this component could produce over time:
+មិនមានកូដអ្វីពិសេសម្រាប់ការ handle updates ពីព្រេាះ `useEffect` handles ពួកវា *by default*។ វា cleans up effect ពីមុនៗ មុនពេល apply effects បន្ទាប់។ ដើម្បីបង្ហាញរឿងនេះ, នេះគឺជាលំដាប់នៃ subscribe និង unsubscribe calls ដែល component នេះអាចផលិតលើសម៉ោង៖
 
 ```js
 // Mount with { friend: { id: 100 } } props
@@ -435,7 +435,7 @@ ChatAPI.subscribeToFriendStatus(300, handleStatusChange);     // Run next effect
 ChatAPI.unsubscribeFromFriendStatus(300, handleStatusChange); // Clean up last effect
 ```
 
-This behavior ensures consistency by default and prevents bugs that are common in class components due to missing update logic.
+ឥរិយាបថនេះធានានូវភាពស្ថិតស្ថេរ by default និង រារាំង bugs ដែលធម្មតា នៅក្នុង class components ដោយសារតែបាត់ update logic។
 
 ### Tip: Optimizing Performance by Skipping Effects {#tip-optimizing-performance-by-skipping-effects}
 
