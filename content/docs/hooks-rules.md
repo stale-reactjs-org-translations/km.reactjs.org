@@ -25,9 +25,9 @@ Hooks គឺជា JavaScript functions, ប៉ុន្តែអ្នកត្
 
 ## ESLint Plugin {#eslint-plugin}
 
-We released an ESLint plugin called [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks) that enforces these two rules. You can add this plugin to your project if you'd like to try it:
+យើងបាន release ESLint plugin មួយ ត្រូវបានគេហៅថា [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks) ដែលអនុវត្តច្បាប់ទាំងពីរនេះ។ អ្នកអាចបន្ថែម plugin នេះទៅក្នុង project របស់អ្នក ប្រសិនបើអ្នកចង់សាកល្បងវា៖
 
-This plugin is included by default in [Create React App](/docs/create-a-new-react-app.html#create-react-app).
+Plugin នេះគឺត្រូវបានរួមបញ្ចូលដោយ default នៅក្នុង [Create React App](/docs/create-a-new-react-app.html#create-react-app)។
 
 ```bash
 npm install eslint-plugin-react-hooks --save-dev
@@ -49,6 +49,8 @@ npm install eslint-plugin-react-hooks --save-dev
 ```
 
 **You can skip to the next page explaining how to write [your own Hooks](/docs/hooks-custom.html) now.** On this page, we'll continue by explaining the reasoning behind these rules.
+
+**អ្នកអាចរំលងទៅទំព័របន្ទាប់ដែលពន្យល់ពីរបៀបសរសេរ [Hooks ផ្ទាល់ខ្លួនរបស់អ្នក](/docs/hooks-custom.html)**
 
 ## Explanation {#explanation}
 
