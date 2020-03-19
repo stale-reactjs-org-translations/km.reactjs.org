@@ -54,7 +54,7 @@ npm install eslint-plugin-react-hooks --save-dev
 
 ## Explanation {#explanation}
 
-As we [learned earlier](/docs/hooks-state.html#tip-using-multiple-state-variables), we can use multiple State or Effect Hooks in a single component:
+ដូចដែលយើង [បានរៀនមុននេះបន្តិច](/docs/hooks-state.html#tip-using-multiple-state-variables), យើងអាចប្រើ State ឬ Effect Hooks ច្រើ​ន នៅក្នុង single component មួយ៖
 
 ```js
 function Form() {
