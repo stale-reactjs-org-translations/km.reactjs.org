@@ -16,12 +16,12 @@ Hooks គឺជា JavaScript functions, ប៉ុន្តែអ្នកត្
 
 ### Only Call Hooks from React Functions {#only-call-hooks-from-react-functions}
 
-**Don't call Hooks from regular JavaScript functions.** Instead, you can:
+**កុំ call Hooks ពី regular JavaScript functions។** ជំនួស, អ្នកអាច៖
 
-* ✅ Call Hooks from React function components.
-* ✅ Call Hooks from custom Hooks (we'll learn about them [on the next page](/docs/hooks-custom.html)).
+* ✅ Call Hooks ពី React function components.
+* ✅ Call Hooks ពី custom Hooks (យើងនឹងរៀនអំពីពួកវា [នៅទំព័របន្ទាប់](/docs/hooks-custom.html)).
 
-By following this rule, you ensure that all stateful logic in a component is clearly visible from its source code.
+ដោយធ្វើតាមច្បាប់នេះ, អ្នកត្រូវធានាថា stateful logic ទាំងអស់ នៅក្នុង component គឺអាចមើលឃើញយ៉ាងច្បាស់ ពី source code របស់វា។
 
 ## ESLint Plugin {#eslint-plugin}
 
