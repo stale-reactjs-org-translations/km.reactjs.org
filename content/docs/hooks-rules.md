@@ -78,7 +78,7 @@ function Form() {
 }
 ```
 
-So how does React know which state corresponds to which `useState` call? The answer is that **React relies on the order in which Hooks are called**. Our example works because the order of the Hook calls is the same on every render:
+ដូច្នេះតើធ្វើដូចម្តេចទើប React ដឹងថា state មួយណា ត្រូវគ្នា នឹងការ call `userState`​ មួយណា? ចម្លើយគឺថា **React ពឹកផ្អែកលើលំដាប់ដែល Hooks ត្រូវបាន call**។ ឧទាហរណ៍របស់យើងដំណើរការពីព្រោះ លំដាប់នៃការ calls Hook គឺដូចគ្នានៅគ្រប់ការ render៖
 
 ```js
 // ------------
@@ -100,7 +100,7 @@ useEffect(updateTitle)     // 4. Replace the effect for updating the title
 // ...
 ```
 
-As long as the order of the Hook calls is the same between renders, React can associate some local state with each of them. But what happens if we put a Hook call (for example, the `persistForm` effect) inside a condition?
+ដរាបណាលំដាប់នៃការ calls Hooks គឺដូចគ្នារវាង renders, React អាចភ្ជាប់ local state មួយចំនួនទៅវិញទៅមក។ ប៉ុន្តែមានអ្វីកើតឡើង ប្រសិនបើយើងដាក់ការ call Hook មួយ (ឧទាហរណ៍, `persistForm` effect) នៅខាងក្នុង condition មួយ?
 
 ```js
   // 🔴 We're breaking the first rule by using a Hook in a condition
@@ -111,7 +111,7 @@ As long as the order of the Hook calls is the same between renders, React can as
   }
 ```
 
-The `name !== ''` condition is `true` on the first render, so we run this Hook. However, on the next render the user might clear the form, making the condition `false`. Now that we skip this Hook during rendering, the order of the Hook calls becomes different:
+`name !== ''` condition គឺ `true` ទៅលើការ render តំបូង, ដូច្នេះយើង run Hook នេះ។ ទោះយ៉ាងណាក៏ដោយ, ទៅលើការ render បន្ទាប់ user ប្រហែលជា clear the form, ធ្វើអោយ condition `false`។ ឥឡូវយើងរំលង (skip) Hook នេះកំឡុងពេល rendering, លំដាប់នៃការ calls Hook ក្លាយជាខុសគ្នា៖
 
 ```js
 useState('Mary')           // 1. Read the name state variable (argument is ignored)
@@ -120,9 +120,9 @@ useState('Poppins')        // 🔴 2 (but was 3). Fail to read the surname state
 useEffect(updateTitle)     // 🔴 3 (but was 4). Fail to replace the effect
 ```
 
-React wouldn't know what to return for the second `useState` Hook call. React expected that the second Hook call in this component corresponds to the `persistForm` effect, just like during the previous render, but it doesn't anymore. From that point, every next Hook call after the one we skipped would also shift by one, leading to bugs.
+React នឹងមិនដឹងអ្វីដែលត្រូវ return សម្រាប់ការ call `useState` ទីពីរ។ React រំពឹងថាការ call Hook ទីពីរនៅក្នុង component នេះ ត្រូវគ្នានឹង `persistForm` effect, ដូចនឹងកំឡុងពេល previous render, ប៉ុន្តែវាមិនមានទៀតទេ។ ពីចំនុចនេាះ, រាល់ការ call next Hook បន្ទាប់មកមួយដែលយើងបានរំលង (skip) ក៏នឹងផ្លាស់ប្តូរដោយមួយ,​ នាំទៅរក bugs។
 
-**This is why Hooks must be called on the top level of our components.** If we want to run an effect conditionally, we can put that condition *inside* our Hook:
+**នេះគឺជាមូលហេតុ Hook ត្រូវតែ ត្រូវបាន call នៅ top level នៃ components របស់យើង។** ប្រសិនបើយើងចង់ run effect ដោយមានលក្ខខណ្ឌ, យើងអាចដាក់ condtion នេាះ *នៅខាងក្នុង* Hook របស់យើង៖
 
 ```js
   useEffect(function persistForm() {
@@ -133,7 +133,7 @@ React wouldn't know what to return for the second `useState` Hook call. React ex
   });
 ```
 
-**Note that you don't need to worry about this problem if you use the [provided lint rule](https://www.npmjs.com/package/eslint-plugin-react-hooks).** But now you also know *why* Hooks work this way, and which issues the rule is preventing.
+**កត់សម្គាល់ថា អ្នកមិនចាំបាច់ព្រួយបារម្ភអំពីបញ្ហានេះទេប្រសិនបើអ្នកប្រើ [lint rule ដែលត្រូវបានផ្តល់អោយ](https://www.npmjs.com/package/eslint-plugin-react-hooks)។** តែឥឡូវអ្នកក៏ដឹងដែរ *ហេតុអ្វី* Hooks ដំណើរការតាមវិធីនេះ, ហើយបញ្ហា (issues) ណាមួយដែលវិធាន (rule) គឺកំពុងរារាំង (prevent)។
 
 ## Next Steps {#next-steps}
 
