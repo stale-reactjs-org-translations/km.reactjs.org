@@ -8,7 +8,7 @@ prev: hooks-rules.html
 
 *Hooks* គឺជាការបន្ថែមថ្មីនៅក្នុង React ១៦.៨។ ពួកវាអនុញ្ញាតឱ្យអ្នកប្រើ state និង React features ផ្សេងៗដោយមិនចាំបាច់សរសេរ class។
 
-Building your own Hooks lets you extract component logic into reusable functions.
+ការបង្កើត Hooks ផ្ទាល់ខ្លួនរបស់អ្នក អនុញ្ញាតឱ្យអ្នក extract component logic ទៅជា functions ដែលអាចប្រើឡើងវិញ (reusable)។
 
 When we were learning about [using the Effect Hook](/docs/hooks-effect.html#example-using-hooks-1), we saw this component from a chat application that displays a message indicating whether a friend is online or offline:
 
