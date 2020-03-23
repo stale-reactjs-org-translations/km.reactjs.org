@@ -69,9 +69,9 @@ function FriendListItem(props) {
 
 ## Extracting a Custom Hook {#extracting-a-custom-hook}
 
-When we want to share logic between two JavaScript functions, we extract it to a third function. Both components and Hooks are functions, so this works for them too!
+នៅពេលយើងចង់ share logic រវាង JavaScript functions ពីរ, យើង extract វាទៅជា function ទីបី។ ទាំង components និង Hooks គឺជា functions, ដូច្នេះការងារនេះក៏មានដំណើរការសម្រាប់ពួកវាដែរ!
 
-**A custom Hook is a JavaScript function whose name starts with "`use`" and that may call other Hooks.** For example, `useFriendStatus` below is our first custom Hook:
+**Custom Hook គឺជា JavaScript function ដែលមានឈ្មេាះផ្តើមដោយ "`use`" ហើយដែលអាចហៅថា Hook ផ្សេងទៀត។** ឧទាហរណ៍, `useFriendStatus` ខាងក្រោមគឺជា custom Hook តំបូងរបស់យើង៖
 
 ```js{3}
 import { useState, useEffect } from 'react';
