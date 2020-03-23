@@ -94,7 +94,7 @@ function useFriendStatus(friendID) {
 }
 ```
 
-There's nothing new inside of it -- the logic is copied from the components above. Just like in a component, make sure to only call other Hooks unconditionally at the top level of your custom Hook.
+មិនមានអ្វីថ្មីនៅខាងក្នុងវាទេ -- logic ត្រូវបាន copy ពី component ខាងលើ។ ដូចគ្នានឹង component ដែរ, ប្រាកដថា call Hooks ផ្សេងៗដែលគ្មាន condition នៅ top level នៃ custom Hook របស់អ្នក។
 
 Unlike a React component, a custom Hook doesn't need to have a specific signature. We can decide what it takes as arguments, and what, if anything, it should return. In other words, it's just like a normal function. Its name should always start with `use` so that you can tell at a glance that the [rules of Hooks](/docs/hooks-rules.html) apply to it.
 
