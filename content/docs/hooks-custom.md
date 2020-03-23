@@ -10,7 +10,7 @@ prev: hooks-rules.html
 
 ការបង្កើត Hooks ផ្ទាល់ខ្លួនរបស់អ្នក អនុញ្ញាតឱ្យអ្នក extract component logic ទៅជា functions ដែលអាចប្រើឡើងវិញ (reusable)។
 
-When we were learning about [using the Effect Hook](/docs/hooks-effect.html#example-using-hooks-1), we saw this component from a chat application that displays a message indicating whether a friend is online or offline:
+នៅពេលដែលយើងបានកំពុងរៀនពី [ការប្រើ Effect Hook](/docs/hooks-effect.html#example-using-hooks-1), យើងបានឃើញ component នេះពី chat application មួយដែលបង្ហាញ message អំពី friend ដែល online និង offline៖
 
 ```js{4-15}
 import React, { useState, useEffect } from 'react';
@@ -36,7 +36,7 @@ function FriendStatus(props) {
 }
 ```
 
-Now let's say that our chat application also has a contact list, and we want to render names of online users with a green color. We could copy and paste similar logic above into our `FriendListItem` component but it wouldn't be ideal:
+ឥឡូវសូមនិយាយថា chat application របស់យើង ក៏មាន contact list ដែរ, ហើយយើងចង់ render ឈ្មេាះនៃ users ដែល online ជាមួួយនិងពណ៌បៃតង។ យើងអាច copy និង paste logic ដែលស្រដៀងទៅក្នុង `FriendListItem` component របស់យើង ប៉ុន្តែវានឹងមិនល្អទេ៖
 
 ```js{4-15}
 import React, { useState, useEffect } from 'react';
@@ -63,9 +63,9 @@ function FriendListItem(props) {
 }
 ```
 
-Instead, we'd like to share this logic between `FriendStatus` and `FriendListItem`.
+ជំនួស, យើនឹង shate logic នេះរវាង `FriendStatus` និង `FriendListItem`។
 
-Traditionally in React, we've had two popular ways to share stateful logic between components: [render props](/docs/render-props.html) and [higher-order components](/docs/higher-order-components.html). We will now look at how Hooks solve many of the same problems without forcing you to add more components to the tree.
+ជាប្រពៃណីនៅក្នុង React, យើងមានវិធីប្រជាប្រិយពីរដើម្បី share stateful logic រវាង components៖ [render props](/docs/render-props.html) និង [higher-order components](/docs/higher-order-components.html)។ ឥឡូវនេះយើងនឹងពិនិត្យមើលរបៀប Hooks ដោះស្រាយបញ្ហាដូចគ្នាជាច្រើនដោយមិនបង្ខំអ្នកឱ្យបន្ថែម components ទៅកាន់ tree។
 
 ## Extracting a Custom Hook {#extracting-a-custom-hook}
 
