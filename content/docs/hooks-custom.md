@@ -114,9 +114,9 @@ function useFriendStatus(friendID) {
 
 ## Using a Custom Hook {#using-a-custom-hook}
 
-In the beginning, our stated goal was to remove the duplicated logic from the `FriendStatus` and `FriendListItem` components. Both of them want to know whether a friend is online.
+នៅពេល​ចាប់ផ្តើម, គោលដៅដែលបានបញ្ជាក់របស់យើងគឺលុប logic ដែលជាន់គ្នាពី `FriendStatus` និង `FriendListItem` components។ ពួកវាទាំងពីរចង់ដឹងថា តើ friend គឺ online ដែរឬទេ។
 
-Now that we've extracted this logic to a `useFriendStatus` hook, we can *just use it:*
+ឥឡូវ​នេះយើងបាន extract logic នេះទៅជា `useFriendStatus` hook, យើអាច *គ្រាន់តែប្រើវា៖*
 
 ```js{2}
 function FriendStatus(props) {
@@ -141,13 +141,13 @@ function FriendListItem(props) {
 }
 ```
 
-**Is this code equivalent to the original examples?** Yes, it works in exactly the same way. If you look closely, you'll notice we didn't make any changes to the behavior. All we did was to extract some common code between two functions into a separate function. **Custom Hooks are a convention that naturally follows from the design of Hooks, rather than a React feature.**
+**តើកូដនេះស្មើឬដូចនឹងឧទាហរណ៍ដើមទេ?** បាទ, វាដំណើរការតាមរបៀបដូចគ្នា។ ប្រសិនបើអ្នកមើលឱ្យច្បាស់លាស់, អ្នកនឹងសម្គាល់ឃើញថាយើងមិនបានធ្វើការផ្លាស់ប្តូរឥរិយាបទទេ។ អ្វីដែលយើងបានធ្វើគឺ extract code ធម្មតាខ្លះរវាង functions ពីរទៅជា function ដាច់ដោយឡែក។ **Custom Hooks គឺជា convention ដែលធ្វើតាមធម្មជាតិនៃការ design នៃ Hooks, ជាជាង React feature។**
 
-**Do I have to name my custom Hooks starting with “`use`”?** Please do. This convention is very important. Without it, we wouldn't be able to automatically check for violations of [rules of Hooks](/docs/hooks-rules.html) because we couldn't tell if a certain function contains calls to Hooks inside of it.
+**តើខ្ញុំត្រូវដាក់ឈ្មោះ custom Hooks របស់ខ្ញុំដោយចាប់ផ្តើមដោយ “`use`”?** សូមធ្វើវា។ Convention នេះ គឺសំខាន់ណាស់។ ដោយ​គ្មាន​វា, យើងនឹងមិនអាចត្រួតពិនិត្យដោយស្វ័យប្រវត្តិចំពោះការ violations នៃ [ច្បាប់នៃ​ Hooks](/docs/hooks-rules.html) ព្រោះយើងមិនអាចប្រាប់បានទេថាតើ function ជាក់លាក់មានការ calls ទៅកាន់ Hooks ដែលនៅខាងក្នុងវា។
 
-**Do two components using the same Hook share state?** No. Custom Hooks are a mechanism to reuse *stateful logic* (such as setting up a subscription and remembering the current value), but every time you use a custom Hook, all state and effects inside of it are fully isolated.
+**តើ components ពីរប្រើ Hook ដូចគ្នា share state ដែរឬទេ?** ទេ។ Custom Hooks គឺជាយន្តការដើម្បីប្រើឡើងវិញនូវ *stateful logic*  (ដូចជាការ setting up subscription និង ការចងចាំ current value), ប៉ុន្តែរាល់ពេលដែលអ្នកប្រើ custom Hook, state និង effects ទាំងអស់ដែលនៅខាងក្នុងវាគឺ fully isolated។
 
-**How does a custom Hook get isolated state?** Each *call* to a Hook gets isolated state. Because we call `useFriendStatus` directly, from React's point of view our component just calls `useState` and `useEffect`. And as we [learned](/docs/hooks-state.html#tip-using-multiple-state-variables) [earlier](/docs/hooks-effect.html#tip-use-multiple-effects-to-separate-concerns), we can call `useState` and `useEffect` many times in one component, and they will be completely independent.
+**តើ custom Hook អាច get state ដែលនៅឆ្ងាយយ៉ាងដូចម្តេច?** រាល់ *ការ call* ទៅកាន់ Hook ទទួលបាន isolated state។ ពីព្រេាះយើង call `useFriendStatus` ដោយផ្ទាល់, តាមទស្សនៈរបស់ React, component របស់យើងគ្រាន់តែ calls `useState` និង `useEffect`។ ហើយដូចដែលយើង [បានរៀន](/docs/hooks-state.html#tip-using-multiple-state-variables) [មុននេះ](/docs/hooks-effect.html#tip-use-multiple-effects-to-separate-concerns), យើងអាច call `useState` និង `useEffect` ច្រើនដងនៅក្នុង component មួយ, ហើយពួកគេនឹងឯករាជ្យទាំងស្រុង។
 
 ### Tip: Pass Information Between Hooks {#tip-pass-information-between-hooks}
 
