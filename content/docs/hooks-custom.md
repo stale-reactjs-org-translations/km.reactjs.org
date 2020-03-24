@@ -197,7 +197,7 @@ function ChatRecipientPicker() {
 
 ## `useYourImagination()` {#useyourimagination}
 
-Custom Hooks offer the flexibility of sharing logic that wasn't possible in React components before. You can write custom Hooks that cover a wide range of use cases like form handling, animation, declarative subscriptions, timers, and probably many more we haven't considered. What's more, you can build Hooks that are just as easy to use as React's built-in features.
+Custom Hooks ផ្តល់ជូននូវភាពបត់បែននៃការចែករំលែក logic ដែលមិនអាចទៅរួច នៅក្នុង React component ពីមុនមក។ អ្នកអាចសរសេរ custom Hooks ដែល cover ករណីប្រើប្រាស់ជាច្រើន ដូចជា form handling, animation, declarative subscriptions, timers, ហើយប្រហែលជាមានច្រើនទៀតដែលយើងមិនបានពិចារណា។ មាន​អ្វី​បន្ថែម, អ្នកអាចបង្កើត Hooks គឺគ្រាន់តែជាការងាយស្រួលក្នុងការប្រើជាលក្ខណៈពិសេសដែលភ្ជាប់មកជាមួយ React។
 
 Try to resist adding abstraction too early. Now that function components can do more, it's likely that the average function component in your codebase will become longer. This is normal -- don't feel like you *have to* immediately split it into Hooks. But we also encourage you to start spotting cases where a custom Hook could hide complex logic behind a simple interface, or help untangle a messy component.
 
