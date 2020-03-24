@@ -199,9 +199,9 @@ function ChatRecipientPicker() {
 
 Custom Hooks ផ្តល់ជូននូវភាពបត់បែននៃការចែករំលែក logic ដែលមិនអាចទៅរួច នៅក្នុង React component ពីមុនមក។ អ្នកអាចសរសេរ custom Hooks ដែល cover ករណីប្រើប្រាស់ជាច្រើន ដូចជា form handling, animation, declarative subscriptions, timers, ហើយប្រហែលជាមានច្រើនទៀតដែលយើងមិនបានពិចារណា។ មាន​អ្វី​បន្ថែម, អ្នកអាចបង្កើត Hooks គឺគ្រាន់តែជាការងាយស្រួលក្នុងការប្រើជាលក្ខណៈពិសេសដែលភ្ជាប់មកជាមួយ React។
 
-Try to resist adding abstraction too early. Now that function components can do more, it's likely that the average function component in your codebase will become longer. This is normal -- don't feel like you *have to* immediately split it into Hooks. But we also encourage you to start spotting cases where a custom Hook could hide complex logic behind a simple interface, or help untangle a messy component.
+ព្យាយាមទប់ទល់នឹងការបន្ថែម abstraction ឆាប់ពេក។ ឥឡូវ​នេះ function components នេាះអាចធ្វើបានច្រើនទៀត, វាទំនងជាថា មធ្យមភាគនៃ function component នៅក្នុង codebase របស់អ្នកនឹងក្លាយជាវែងជាងនេះ។ នេះគឺធម្មតា --​ កុំមានអារម្មណ៍ដូចអ្នក *ត្រូវតែ* បំបែកវាភ្លាមទៅជា Hooks។ ប៉ុន្តែយើងក៏លើកទឹកចិត្តអ្នកឱ្យចាប់ផ្តើមករណីដែល custom Hook អាចលាក់ logic ដែលស្មុគស្មាញអោយនៅពីក្រោយ interface សាមញ្ញមួយ, ឬក៏ជួយដេាះស្រាយបញ្ហារញ៉េរញ៉ៃរបស់ component។
 
-For example, maybe you have a complex component that contains a lot of local state that is managed in an ad-hoc way. `useState` doesn't make centralizing the update logic any easier so you might prefer to write it as a [Redux](https://redux.js.org/) reducer:
+ឧទាហរណ៍, ប្រហែលជាអ្នកមាន component ស្មុគស្មាញដែលមាន local state ជាច្រើនដែលត្រូវបានគ្រប់គ្រងតាមរបៀប ad-hoc។ `useState` មិនបង្កើត centralizing ដើម្បីធ្វើបច្ចុប្បន្នភាព logic កាន់តែងាយស្រួលឡើយ ដូច្នេះអ្នកប្រហែលជា prefer សរសេរវាជា [Redux](https://redux.js.org/) reducer៖
 
 ```js
 function todosReducer(state, action) {
@@ -218,9 +218,9 @@ function todosReducer(state, action) {
 }
 ```
 
-Reducers are very convenient to test in isolation, and scale to express complex update logic. You can further break them apart into smaller reducers if necessary. However, you might also enjoy the benefits of using React local state, or might not want to install another library.
+Reducers គឺងាយស្រួលណាស់ដើម្បី test ក្នុង isolation, និង scale ដើម្បីបង្ហាញការធ្វើបច្ចុប្បន្នភាព logic ដែលស្មុគស្មាញ។ អ្នកអាចបំបែកពួកវាដាច់ដោយឡែកពីគ្នាទៅជា reducers កាន់តែតូច បើចាំបាច់។ ទោះយ៉ាងណាក៏ដោយ, អ្នកក៏អាចរីករាយនឹងអត្ថប្រយោជន៍នៃការប្រើប្រាស់ React local state, ឬប្រហែលជាមិនចង់ install library ផ្សេង។
 
-So what if we could write a `useReducer` Hook that lets us manage the *local* state of our component with a reducer? A simplified version of it might look like this:
+ដូច្នេះចុះបើយើងអាចសរសេរ `useReducer` Hook ដែលអនុញ្ញាតឱ្យយើងគ្រប់គ្រង *local* state នៃ component របស់យើងជាមួយ reducer? កំណែសាមញ្ញរបស់វាអាចមើលទៅដូចនេះ៖
 
 ```js
 function useReducer(reducer, initialState) {
@@ -235,7 +235,7 @@ function useReducer(reducer, initialState) {
 }
 ```
 
-Now we could use it in our component, and let the reducer drive its state management:
+ឥឡូវនេះយើងអាចប្រើវានៅក្នុង component របស់យើង, ហើយអនុញ្ញាតឱ reducer drive state management របស់វា៖
 
 ```js{2}
 function Todos() {
@@ -249,4 +249,4 @@ function Todos() {
 }
 ```
 
-The need to manage local state with a reducer in a complex component is common enough that we've built the `useReducer` Hook right into React. You'll find it together with other built-in Hooks in the [Hooks API reference](/docs/hooks-reference.html).
+តម្រូវការដើម្បីគ្រប់គ្រង local state ជាមួយ reducer នៅក្នុង component ដែលស្មុគស្មាញ គឺជារឿងធម្មតា ដែលយើងបង្កើត `useReducer` Hook នៅក្នុង React។ អ្នកនឹងរកឃើញវាជាមួយគ្នានឹង built-in Hooks នៅក្នុង [Hooks API reference](/docs/hooks-reference.html)។
