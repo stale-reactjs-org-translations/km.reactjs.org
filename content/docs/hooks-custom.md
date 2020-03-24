@@ -96,9 +96,9 @@ function useFriendStatus(friendID) {
 
 មិនមានអ្វីថ្មីនៅខាងក្នុងវាទេ -- logic ត្រូវបាន copy ពី component ខាងលើ។ ដូចគ្នានឹង component ដែរ, ប្រាកដថា call Hooks ផ្សេងៗដែលគ្មាន condition នៅ top level នៃ custom Hook របស់អ្នក។
 
-Unlike a React component, a custom Hook doesn't need to have a specific signature. We can decide what it takes as arguments, and what, if anything, it should return. In other words, it's just like a normal function. Its name should always start with `use` so that you can tell at a glance that the [rules of Hooks](/docs/hooks-rules.html) apply to it.
+មិនដូច React component, Custom Hook មិនចាំបាច់មាន specific signature មួយ។ យើងអាចសម្រេចចិត្តថាតើវាត្រូវការ arguments អ្វី​, និងអ្វី​, បើ​មាន​អ្វី, វាគួរតែ return។ ក្នុង​ន័យ​ផ្សេងទៀត, វាគ្រាន់តែដូច function ធម្មតាមួយ។ ឈ្មេាះវាគួរតែចាប់ផ្តើមដោយ `use` ដូច្នេះអ្នកអាចប្រាប់ភ្លាមពី [ច្បាប់ នៃ Hooks](/docs/hooks-rules.html) ដើម្បី apply ទៅកាន់វា។
 
-The purpose of our `useFriendStatus` Hook is to subscribe us to a friend's status. This is why it takes `friendID` as an argument, and returns whether this friend is online:
+គោលបំណងនៃ `useFriendStatus` Hook របស់យើងគឺដើម្បី subscribe ពួកយើងទៅកាន់ status របស់ friend។ នេះជាមូលហេតុដែលវាត្រូវការ `friendID` ជា argument, ហើយ returns friend នេះគឺ online៖
 
 ```js
 function useFriendStatus(friendID) {
@@ -110,7 +110,7 @@ function useFriendStatus(friendID) {
 }
 ```
 
-Now let's see how we can use our custom Hook.
+ឥឡូវយើងនឹងមើលពីរបៀបដែលយើងអាចប្រើ  custom Hook របស់យើង។
 
 ## Using a Custom Hook {#using-a-custom-hook}
 
