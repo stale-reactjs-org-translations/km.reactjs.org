@@ -151,9 +151,9 @@ function FriendListItem(props) {
 
 ### Tip: Pass Information Between Hooks {#tip-pass-information-between-hooks}
 
-Since Hooks are functions, we can pass information between them.
+ដែល Hooks គឺជា functions, យើងអាចបញ្ជូន (pass) ព័ត៌មានរវាងពួកវា។
 
-To illustrate this, we'll use another component from our hypothetical chat example. This is a chat message recipient picker that displays whether the currently selected friend is online:
+ដើម្បីបង្ហាញរឿងនេះ, យើងនឹងប្រើ component ផ្សេងពីសម្មតិកម្មឧទាហរណ៍ chat របស់យើង។ នេះគឺ​ជា chat message recipient picker ដែលបង្ហាញថា តើ friend ដែលបាន select បច្ចុប្បន្ន គឺ online៖
 
 ```js{8-9,13}
 const friendList = [
@@ -184,16 +184,16 @@ function ChatRecipientPicker() {
 }
 ```
 
-We keep the currently chosen friend ID in the `recipientID` state variable, and update it if the user chooses a different friend in the `<select>` picker.
+យើងរក្សាទុក friend ID ដែលបានជ្រើសរើសបច្ចុប្បន្ននៅក្នុង `recipientID` state variable, ហើយ ធ្វើបច្ចុប្បន្នភាពវាប្រសិនបើ​ user ជ្រើសរើស friend ផ្សេងនៅក្នុង `<select>` picker។
 
-Because the `useState` Hook call gives us the latest value of the `recipientID` state variable, we can pass it to our custom `useFriendStatus` Hook as an argument:
+ព្រេាះការ call `useState` Hook ផ្តល់អោយយើងនូវតម្លៃចុងក្រោយនៃ `recipientID` state variable, យើងអាចបញ្ជូន (pass) វាទៅកាន់ custom `useFriendStatus` Hook របស់យើងជា argument មួយ៖
 
 ```js
   const [recipientID, setRecipientID] = useState(1);
   const isRecipientOnline = useFriendStatus(recipientID);
 ```
 
-This lets us know whether the *currently selected* friend is online. If we pick a different friend and update the `recipientID` state variable, our `useFriendStatus` Hook will unsubscribe from the previously selected friend, and subscribe to the status of the newly selected one.
+នេះអនុញ្ញាតឱ្យយើងដឹងថា តើ​ friend ដែល *ត្រូវបានជ្រើសរើសបច្ចុប្បន្ន* គឺ online ឬទេ។ ប្រសិនបើយើងជ្រើសរើសមិត្តភក្តិផ្សេង ហើយ ធ្វើបច្ចុប្បន្នភាព `recipientID` state variable, `useFriendStatus` Hook របស់យើងនឹង unsubscribe ពី friend ដែលបានជ្រើសរើសពីមុន, និង subscribe ទៅកាន់ status ដែលបានជ្រើសរើសថ្មី។
 
 ## `useYourImagination()` {#useyourimagination}
 
