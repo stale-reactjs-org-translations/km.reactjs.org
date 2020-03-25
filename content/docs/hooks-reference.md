@@ -8,9 +8,9 @@ next: hooks-faq.html
 
 *Hooks* គឺជាការបន្ថែមថ្មីនៅក្នុង React ១៦.៨។ ពួកវាអនុញ្ញាតឱ្យអ្នកប្រើ state និង React features ផ្សេងៗដោយមិនចាំបាច់សរសេរ class។
 
-This page describes the APIs for the built-in Hooks in React.
+ទំព័រនេះពិពណ៌នាពី APIs សម្រាប់ built-in Hooks នៅក្នុង React។
 
-If you're new to Hooks, you might want to check out [the overview](/docs/hooks-overview.html) first. You may also find useful information in the [frequently asked questions](/docs/hooks-faq.html) section.
+ប្រសិនបើអ្នកថ្មីជាមួយ Hooks, អ្នកប្រហែលជាចង់ពិនិត្យមើល [the overview](/docs/hooks-overview.html) ជាមុន។ អ្នកក៏អាចរកឃើញព័ត៌មានមានប្រយោជន៍នៅក្នុងផ្នែក [សំណួរ​ដែលគេ​ច្រើន​សួរ](/docs/hooks-faq.html)។
 
 - [Basic Hooks](#basic-hooks)
   - [`useState`](#usestate)
