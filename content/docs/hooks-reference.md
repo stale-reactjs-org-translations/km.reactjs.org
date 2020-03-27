@@ -33,7 +33,7 @@ next: hooks-faq.html
 const [state, setState] = useState(initialState);
 ```
 
-Returns a stateful value, and a function to update it.
+Returns stateful value មួយ, និង function មួយធ្វើបច្ចុប្បន្នភាពវា។
 
 During the initial render, the returned state (`state`) is the same as the value passed as the first argument (`initialState`).
 
