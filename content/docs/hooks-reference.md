@@ -33,21 +33,22 @@ next: hooks-faq.html
 const [state, setState] = useState(initialState);
 ```
 
-Returns a stateful value, and a function to update it.
+Returns stateful value មួយ, និង function មួយដើម្បីធ្វើបច្ចុប្បន្នភាពវា។
 
-During the initial render, the returned state (`state`) is the same as the value passed as the first argument (`initialState`).
+កំឡុងពេល the initial render, the returned state គឺដូចគ្នានឹងតម្លៃដែលបានបញ្ជូន (pass) ជា argument ទីមួយ (`initialState`)។
 
-The `setState` function is used to update the state. It accepts a new state value and enqueues a re-render of the component.
+The `setState` function ត្រូវបានប្រើដើម្បីធ្វើបច្ចុប្បន្នភាព state។ វាទទួលយក state value ថ្មីមួយ ហើយ enqueues re-render នៃ component។
 
 ```js
 setState(newState);
 ```
 
-During subsequent re-renders, the first value returned by `useState` will always be the most recent state after applying updates.
+កំឡុងពេល re-renders ជាបន្តបន្ទាប់, តម្លៃដែលបាន return តំបូងដោយ `useState` នឹង
+តែងតែជា state ថ្មីបំផុតបន្ទាប់ពីអនុវត្តបច្ចុប្បន្នភាព។
 
->Note
+>ចំណាំ
 >
->React guarantees that `setState` function identity is stable and won't change on re-renders. This is why it's safe to omit from the `useEffect` or `useCallback` dependency list.
+> React ធានាថា ការកំណត់ `setState` function គឺ stable និងមិនផ្លាស់ប្តូរលើ re-renders។ នេះជាមូលហេតុដែលអាចលុបចោលបានពី `useEffect` or `useCallback` តារាង dependency។
 
 #### Functional updates {#functional-updates}
 
