@@ -87,7 +87,7 @@ function Counter({initialCount}) {
 
 #### Lazy initial state {#lazy-initial-state}
 
-The `initialState` argument is the state used during the initial render. In subsequent renders, it is disregarded. If the initial state is the result of an expensive computation, you may provide a function instead, which will be executed only on the initial render:
+The `initialState` argument គឺជា state ដែលបានប្រើកំឡុងពេល render តំបូង។ ក្នុងការ renders ជាបន្តបន្ទាប់, វាត្រូវបានគេមិនយកចិត្តទុកដាក់។ ប្រសិនបើ initial state គឺជាលទ្ធផលនៃការគណនាខ្លាំង, អ្នកអាចផ្តល់នូវ function ជំនួសវិញ, ដែលនឹងត្រូវបានប្រតិបត្តិតែលើការ render តំបូងប៉ុណ្ណោះ៖
 
 ```js
 const [state, setState] = useState(() => {
