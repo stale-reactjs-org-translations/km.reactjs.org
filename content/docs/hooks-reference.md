@@ -52,7 +52,7 @@ setState(newState);
 
 #### Functional updates {#functional-updates}
 
-If the new state is computed using the previous state, you can pass a function to `setState`. The function will receive the previous value, and return an updated value. Here's an example of a counter component that uses both forms of `setState`:
+ប្រសិនបើ new state ត្រូវបានគណនាដោយការប្រើ state ពីមុន, អ្នកអាចបញ្ជូន (pass) function ទៅអោយ `setState`។ Function នឹងទទួលតម្លៃពីមុន, ហើយ return តម្លៃដែលបានធ្វើបច្ចុប្បន្នភាព។ នេះជាឧទាហរណ៍នៃ counter component ដែលប្រើ form ទាំងពីរនៃ `setState`៖
 
 ```js
 function Counter({initialCount}) {
@@ -68,13 +68,13 @@ function Counter({initialCount}) {
 }
 ```
 
-The "+" and "-" buttons use the functional form, because the updated value is based on the previous value. But the "Reset" button uses the normal form, because it always sets the count back to the initial value.
+ប៊ូតុង "+" និង "-" ប្រើ functional form, ពីព្រេាះ value ដែលបានធ្វើបច្ចុប្បន្នភាពផ្អែកលើតម្លៃមុន។ ប៉ុន្តែប៊ូតុង "Reset" ប្រើ form ធម្មតា, ពីព្រេាះវាតែងតែ sets the count ត្រឡប់ទៅតម្លៃដំបូងវិញ។
 
-If your update function returns the exact same value as the current state, the subsequent rerender will be skipped completely.
+ប្រសិនបើ update function returns នូវតម្លៃដូចគ្នានឹង current state, the subsequent rerender នឹងត្រូវរំលង (skip) ទាំងស្រុង។
 
-> Note
+> ចំណាំ
 >
-> Unlike the `setState` method found in class components, `useState` does not automatically merge update objects. You can replicate this behavior by combining the function updater form with object spread syntax:
+> មិនដូច `setState` method ដែលនៅក្នុង class components, `useState` មិន merge នូវ update objects ដោយស្វ័យប្រវត្តិឡើយ។ អ្នកអាចចម្លងឥរិយាបថនេះឡើងវិញដោយការរួមបញ្ចូលគ្នានូវតម្រង់ funtion updater ជាមួយ object spread syntax៖
 >
 > ```js
 > setState(prevState => {
@@ -83,7 +83,7 @@ If your update function returns the exact same value as the current state, the s
 > });
 > ```
 >
-> Another option is `useReducer`, which is more suited for managing state objects that contain multiple sub-values.
+> ជម្រើសផ្សេងទៀតគឺ `useReducer`, ដែលកាន់តែសមស្របសម្រាប់ការគ្រប់គ្រង state objects ដែលមា​ន sub-values ច្រើន។
 
 #### Lazy initial state {#lazy-initial-state}
 
