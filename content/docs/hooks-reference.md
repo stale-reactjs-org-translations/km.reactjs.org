@@ -98,9 +98,9 @@ const [state, setState] = useState(() => {
 
 #### Bailing out of a state update {#bailing-out-of-a-state-update}
 
-If you update a State Hook to the same value as the current state, React will bail out without rendering the children or firing effects. (React uses the [`Object.is` comparison algorithm](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is#Description).)
+ប្រសិនបើអ្នកធ្វើបច្ចុប្បន្នភាព State Hook អោយតម្លៃដូចគ្នានឹង current state, React នឹងធានាអោយនៅក្រៅដោយមិនធ្វើការ render children ឬ firing effects។ (React ប្រើ [`Object.is` comparison algorithm](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is#Description)។)
 
-Note that React may still need to render that specific component again before bailing out. That shouldn't be a concern because React won't unnecessarily go "deeper" into the tree. If you're doing expensive calculations while rendering, you can optimize them with `useMemo`.
+ចំណាំ​ថា React នៅតែត្រូវការ render component ជាក់លាក់នេាំម្តងទៀតមុនពេលការធានាអោយនៅក្រៅ។ នោះមិនគួរជាការព្រួយបារម្ភទេ ពីព្រោះ React នឹងមិនចាំបាច់ទៅ "កាន់តែជ្រៅ" ទៅក្នុង tree។ ប្រសិនបើអ្នកកំពុងធ្វើការគណនាខ្លាំងនៅពេលធ្វើការ render, អ្នកអាចបង្កើនប្រសិទ្ធភាពពួកវាជាមួយ `useMemo`។
 
 ### `useEffect` {#useeffect}
 
