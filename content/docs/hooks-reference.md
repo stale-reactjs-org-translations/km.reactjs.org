@@ -108,13 +108,13 @@ const [state, setState] = useState(() => {
 useEffect(didUpdate);
 ```
 
-Accepts a function that contains imperative, possibly effectful code.
+ទទួល function ដែលមានភាពចាំបាច់, possibly effectful code។
 
-Mutations, subscriptions, timers, logging, and other side effects are not allowed inside the main body of a function component (referred to as React's _render phase_). Doing so will lead to confusing bugs and inconsistencies in the UI.
+Mutations, subscriptions, timers, logging, និង side effects ផ្សេងៗទៀតមិនត្រូវបានអនុញ្ញាតនៅក្នុង body នៃ function componen (សំដៅដល់ _ដំណាក់កាល render_ របស់ React)។ ការធ្វើដូច្នេះនឹងនាំឱ្យមាន confusing bugs និង ភាពមិនស៊ីចង្វាក់គ្នា ក្នុង UI។
 
-Instead, use `useEffect`. The function passed to `useEffect` will run after the render is committed to the screen. Think of effects as an escape hatch from React's purely functional world into the imperative world.
+ជំនួស, ប្រើ `useEffect`។ function ដែលបានបញ្ជូន (pass) ទៅកាន់ `useEffect` និង run បន្ទាប់ពីការ render ត្រូវបាន commit ទៅកាន់ screen។ គិត​អំពី effects ជាការរត់គេចខ្លួនពី React's purely functional world ចូលទៅក្នុងពិភពចាំបាច់។
 
-By default, effects run after every completed render, but you can choose to fire them [only when certain values have changed](#conditionally-firing-an-effect).
+ដោយ default, effects run បន្ទាប់ពីរាល់ការ render ត្រូវបានបញ្ចប់, ប៉ុន្តែអ្នកអាចជ្រើសរើសដើម្បី fire ពួកវា [តែនៅពេលដែលតម្លៃជាក់លាក់បានផ្លាស់ប្តូរ](#conditionally-firing-an-effect)។
 
 #### Cleaning up an effect {#cleaning-up-an-effect}
 
