@@ -118,7 +118,7 @@ Mutations, subscriptions, timers, logging, និង side effects ផ្សេ�
 
 #### Cleaning up an effect {#cleaning-up-an-effect}
 
-Often, effects create resources that need to be cleaned up before the component leaves the screen, such as a subscription or timer ID. To do this, the function passed to `useEffect` may return a clean-up function. For example, to create a subscription:
+ជាញឹកញាប់, effects បង្កើត resources ដែលត្រូវការសម្អាត (clean up) មុនពេល component ចាកចេញពី screen, ដូចជា subscription ឬ timer ID។ ដើម្បីធ្វើដូចនេះ, function ដែលបានបញ្ជូនទៅ  `useEffect` អាច return clean-up function វិញ។ ឧទាហរណ៍, ដើម្បីបង្កើត subscription មួយ៖
 
 ```js
 useEffect(() => {
@@ -130,7 +130,7 @@ useEffect(() => {
 });
 ```
 
-The clean-up function runs before the component is removed from the UI to prevent memory leaks. Additionally, if a component renders multiple times (as they typically do), the **previous effect is cleaned up before executing the next effect**. In our example, this means a new subscription is created on every update. To avoid firing an effect on every update, refer to the next section.
+The clean-up function runs មុន component ត្រូវបានលុបពី UI ដើម្បីការពារ memory leaks។ បន្ថែម, ប្រសិនបើ component មួយ renders ច្រើនដង (ដូចដែលពួកវាធ្វើជាធម្មតា), **previous effect ត្រូវបានសម្អាតមុនពេលការប្រតិបត្តិ next effect**។ ក្នុងឧទាហរណ៍របស់យើង, នេះ​មានន័យថា subscription ថ្មីមួយតត្រូវបានបង្កើតនៅរាល់ការធ្វើបច្ចុប្បន្នភាព។ ដើម្បីចៀសវាងការ firing effect លើរាល់ការធ្វើបច្ចុប្បន្នភាព, យោងទៅផ្នែកបន្ទាប់។
 
 #### Timing of effects {#timing-of-effects}
 
