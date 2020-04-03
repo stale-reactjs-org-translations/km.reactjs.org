@@ -134,9 +134,9 @@ The clean-up function runs មុន component ត្រូវបានលុប
 
 #### Timing of effects {#timing-of-effects}
 
-Unlike `componentDidMount` and `componentDidUpdate`, the function passed to `useEffect` fires **after** layout and paint, during a deferred event. This makes it suitable for the many common side effects, like setting up subscriptions and event handlers, because most types of work shouldn't block the browser from updating the screen.
+មិនដូច `componentDidMount` និង `componentDidUpdate`, the function ដែលបានបញ្ជូនទៅ `useEffect` fires **បន្ទាប់ពី** layout និង paint, ក្នុងកំឡុងពេល event ពន្យាពេល។ នេះធ្វើឱ្យវាសមស្របសម្រាប់ side effects ទូទៅជាច្រើន, ដូចជាការ set up subscriptions និង event handlers, ពីព្រោះប្រភេទការងារភាគច្រើនមិនគួរ block the browser ពីការធ្វើបច្ចុប្បន្នភាព screen។
 
-However, not all effects can be deferred. For example, a DOM mutation that is visible to the user must fire synchronously before the next paint so that the user does not perceive a visual inconsistency. (The distinction is conceptually similar to passive versus active event listeners.) For these types of effects, React provides one additional Hook called [`useLayoutEffect`](#uselayouteffect). It has the same signature as `useEffect`, and only differs in when it is fired.
+ទោះយ៉ាងណាក៏ដោយ, មិនមែនសុទ្ធតែ effects ទាំងអស់អាចត្រូវបានពន្យាលពេលនេាះទេ។ ឧទាហរណ៍, DOM mutation មួយដែល visible ទៅកាន់ user ត្រូវតែ fire synchronously មុនពេល the next paint ដូច្នេះ user មិនយល់ភាពមិនត្រូវគ្នា។ (The distinction is conceptually similar to passive versus active event listeners.) For these types of effects, React provides one additional Hook called [`useLayoutEffect`](#uselayouteffect). It has the same signature as `useEffect`, and only differs in when it is fired.
 
 Although `useEffect` is deferred until after the browser has painted, it's guaranteed to fire before any new renders. React will always flush a previous render's effects before starting a new update.
 
