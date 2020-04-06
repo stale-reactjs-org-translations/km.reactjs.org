@@ -142,11 +142,11 @@ Although `useEffect` is deferred until after the browser has painted, it's guara
 
 #### Conditionally firing an effect {#conditionally-firing-an-effect}
 
-The default behavior for effects is to fire the effect after every completed render. That way an effect is always recreated if one of its dependencies changes.
+ឥរិយាបទដើមសម្រាប់ effects គឺ fire the effect បន្ទាប់ពីរាល់ការ render ត្រូវបានបញ្ចប់។ មធ្យោបាយនេះ effect គឺតែងតែត្រូវបានបង្កើតឡើងវិញ ប្រសិនបើមួយនៃ dependencies របស់វាផ្លាស់ប្តូរ។
 
-However, this may be overkill in some cases, like the subscription example from the previous section. We don't need to create a new subscription on every update, only if the `source` prop has changed.
+ទោះយ៉ាងណាក៏ដោយ, នេះប្រហែលជា overkill ក្នុងករណីមួយចំនួន, ដូចជាឧទាហរណ៍ subscription ពីផ្នែកមុន។ យើងមិនចាំបាច់បង្កើត subscription ថ្មីលើរាល់ការធ្វើបច្ចុប្បន្នភាពទេ, លុះត្រាតែ `source` prop ត្រូវបានផ្លាស់ប្តូរ។
 
-To implement this, pass a second argument to `useEffect` that is the array of values that the effect depends on. Our updated example now looks like this:
+ដើម្បី implement ដូចនេះ, បញ្ជូន argument ទីពីរទៅកាន់ `useEffect` ដែលគឺជា array នៃតម្លៃដែល effect ផ្អែកលើ។ ឧទាហរណ៍ដែលបានធ្វើបច្ចុប្បន្នភាពរបស់យើងឥឡូវនេះមើលទៅដូចនេះ៖
 
 ```js
 useEffect(
