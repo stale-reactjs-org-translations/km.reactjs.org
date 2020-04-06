@@ -160,9 +160,9 @@ useEffect(
 );
 ```
 
-Now the subscription will only be recreated when `props.source` changes.
+ឥឡូវ​នេះ the subscription នឹងត្រូវបានបង្កើតឡើងវិញតែនៅពេលដែល `props.source` ផ្លាស់ប្តូរ។
 
->Note
+>ចំណាំ
 >
 >If you use this optimization, make sure the array includes **all values from the component scope (such as props and state) that change over time and that are used by the effect**. Otherwise, your code will reference stale values from previous renders. Learn more about [how to deal with functions](/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies) and what to do when the [array values change too often](/docs/hooks-faq.html#what-can-i-do-if-my-effect-dependencies-change-too-often).
 >
