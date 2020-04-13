@@ -69,13 +69,7 @@ class NameForm extends React.Component {
 ដែល `value` attribute គឺ set នៅលើ form element របស់យើង, តម្លៃដែលបានបង្ហាញនឹងតែងតែជា `this.state.value`, ការបង្កើត React state ជា source of truth។ ដែល `handleChange` runs នៅលើគ្រប់ក្តារចុចដើម្បីធ្វើបច្ចុប្បន្នភាព (update) React state, 
 តម្លៃដែលបានបង្ហាញនឹងធ្វើបច្ចុប្បន្នភាពដូចអ្វីដែលអ្នកប្រើប្រាស់វាយ។
 
-ជាមួយនិង controlled component, រាល់ state ដែលអាចផ្លាស់ប្តូរនឹងមាន handler function ដែលជាប់ទាក់ទង។ នេះធ្វើឱ្យវាងាយស្រួលដើម្បីកែប្រែឬក៏ validate ការបញ្ចូលរបស់អ្នកប្រើប្រាស់។ ឧទាហរណ៍ ប្រសិនបើយើងចង់បង្ខំអោយ names ត្រូវបានសរសេរជាមួយអក្សរធំទាំងអស់ (uppercase letters) យើងអាចសរសេរ `handleChange` ដូចនេះ៖
-
-```javascript{2}
-handleChange(event) {
-  this.setState({value: event.target.value.toUpperCase()});
-}
-```
+ជាមួយនិង controlled component, តម្លៃរបស់ input គឺតែងតែ driven ដោយ React state។ ខណៈពេលនេះមានន័យថាអ្នកត្រូវវាយកូដបន្ថែមទៀត, ឥឡូវអ្នកអាចបញ្ជូនតម្លៃទៅកាន់ UI elements ផ្សេងៗដែរ, ឬ reset វាពី event handlers ផ្សេងៗ។
 
 ## The textarea Tag {#the-textarea-tag}
 
