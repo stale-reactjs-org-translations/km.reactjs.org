@@ -171,9 +171,11 @@ useEffect(
 >ប្រសិនបើយអ្នកបញ្ជូន array ទទេរមួយ (`[]`), props និង state នៅខាងក្នុង effect នឹងតែងតែមានតម្លៃ initial របស់ពួកវា។ ខណៈពេល កំពុងបញ្ជូន `[]` ជា argument ទីពីរ គឺកាន់តែខិតទៅជិតគ្រួសារ `componentDidMount` និង `componentWillUnmount` mental model, ជាធម្មតាមាន [better](/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies) [solutions](/docs/hooks-faq.html#what-can-i-do-if-my-effect-dependencies-change-too-often) ដើម្បីជៀសវាង re-running effect ញឹកញាប់ពេក។ ផងដែរ, កុំភ្លេចថា React ពន្យាពេល running `useEffect` រហូតដល់បន្ទាប់ពី browser has painted, ដូច្នេះការធ្វើការងារបន្ថែមគឺមិនមានបញ្ហាទេ។
 >
 >
->We recommend using the [`exhaustive-deps`](https://github.com/facebook/react/issues/14920) rule as part of our [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks#installation) package. It warns when dependencies are specified incorrectly and suggests a fix.
+>យើងសូមណែនាំឱ្យប្រើច្បាប់ [`exhaustive-deps`](https://github.com/facebook/react/issues/14920) 
+ជាផ្នែកមួយនៃ [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks#installation) package របស់យើង។ វាព្រមាននៅពេល dependencies ត្រូវបានបញ្ជាក់មិនត្រឹមត្រូវនិងស្នើឱ្យដោះស្រាយ។
 
-The array of dependencies is not passed as arguments to the effect function. Conceptually, though, that's what they represent: every value referenced inside the effect function should also appear in the dependencies array. In the future, a sufficiently advanced compiler could create this array automatically.
+The array នៃ dependencies មិនត្រូវបានបញ្ជូនជា arguments ទៅកាន់ effect function។ តាមគំនិត, 
+ទោះបីជា, នោះហើយជាអ្វីដែលពួកគេតំណាងឱ្យ៖ រាល់តម្លៃដែលបានយោងនៅខាងក្នុង effect function គួរតែ appear ផងដែរនៅក្នុង dependencies array។ នៅពេលអនាគត, sufficiently advanced compiler មួយអាចបង្កើត array នេះដោយស្វ័យប្រវត្តិ។
 
 ### `useContext` {#usecontext}
 
