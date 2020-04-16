@@ -185,7 +185,8 @@ const value = useContext(MyContext);
 
 ទទួលយក context object មួយ (តម្លៃដែលបាន return ពី from `React.createContext`) និង returns តម្លៃ context បច្ចុប្បន្ន សម្រាប់ context នេាះ។ តម្លៃ context បច្ចុប្បន្ន​ គឺត្រូវបានកំណត់ដោយ `តម្លៃ` prop នៃ `<MyContext.Provider>` ជិតបំផុតដែលនៅខាងលើ កំពុង call component នៅក្នុង tree។
 
-When the nearest `<MyContext.Provider>` above the component updates, this Hook will trigger a rerender with the latest context `value` passed to that `MyContext` provider. Even if an ancestor uses [`React.memo`](/docs/react-api.html#reactmemo) or [`shouldComponentUpdate`](/docs/react-component.html#shouldcomponentupdate), a rerender will still happen starting at the component itself using `useContext`.
+នៅពេលដែល nearest `<MyContext.Provider>` component ខាងលើធ្វើបច្ចុប្បន្នភាព, Hook នេះនឹង trigger នូវការ rerender ជាមួយ `តម្លៃ` context ចុងក្រោយ ដែលបានបញ្ជូនទៅកាន់ `MyContext` provider នេាះ។ តេាះបីជា ancester ប្រើ [`React.memo`](/docs/react-api.html#reactmemo) ឬ [`shouldComponentUpdate`](/docs/react-component.html#shouldcomponentupdate), rerender 
+នឹងនៅតែកើតឡើងចាប់ផ្តើមនៅ component ខ្លួនវាផ្ទាល់ដោយការប្រើ `useContext`។
 
 Don't forget that the argument to `useContext` must be the *context object itself*:
 
