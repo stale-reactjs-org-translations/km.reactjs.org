@@ -136,9 +136,9 @@ The clean-up function runs មុន component ត្រូវបានលុប
 
 មិនដូច `componentDidMount` និង `componentDidUpdate`, the function ដែលបានបញ្ជូនទៅ `useEffect` fires **បន្ទាប់ពី** layout និង paint, ក្នុងកំឡុងពេល event ពន្យាពេល។ នេះធ្វើឱ្យវាសមស្របសម្រាប់ side effects ទូទៅជាច្រើន, ដូចជាការ set up subscriptions និង event handlers, ពីព្រោះប្រភេទការងារភាគច្រើនមិនគួរ block the browser ពីការធ្វើបច្ចុប្បន្នភាព screen។
 
-ទោះយ៉ាងណាក៏ដោយ, មិនមែនសុទ្ធតែ effects ទាំងអស់អាចត្រូវបានពន្យាលពេលនេាះទេ។ ឧទាហរណ៍, DOM mutation មួយដែល visible ទៅកាន់ user ត្រូវតែ fire synchronously មុនពេល the next paint ដូច្នេះ user មិនយល់ភាពមិនត្រូវគ្នា។ (The distinction is conceptually similar to passive versus active event listeners.) For these types of effects, React provides one additional Hook called [`useLayoutEffect`](#uselayouteffect). It has the same signature as `useEffect`, and only differs in when it is fired.
+ទោះយ៉ាងណាក៏ដោយ, មិនមែនសុទ្ធតែ effects ទាំងអស់អាចត្រូវបានពន្យាលពេលនេាះទេ។ ឧទាហរណ៍, DOM mutation មួយដែល visible ទៅកាន់ user ត្រូវតែ fire synchronously មុនពេល the next paint ដូច្នេះ user មិនយល់ភាពមិនត្រូវគ្នា។ (The distinction is conceptually similar to passive versus active event listeners.) For these types of effects, React ផ្តល់នូវ Hook មួយបន្ថែមទៀតដែលគេហៅថា [`useLayoutEffect`](#uselayouteffect)។ វាមាន signature ដូចគ្នានឹង `useEffect`, and only differs in when it is fired។
 
-Although `useEffect` is deferred until after the browser has painted, it's guaranteed to fire before any new renders. React will always flush a previous render's effects before starting a new update.
+ទោះបីជា `useEffect` ត្រូវបានពន្យាពេលរហូតដល់បន្ទាប់ពី the browser has painted, វាត្រូវបានធានាថា fire មុនការ renders ថ្មីៗ។ React នឹងតែងតែ flush នូវ effects របស់ render ពីមុន មុនពេលចាប់ផ្តើមនូវ ការ update ថ្មី។
 
 #### Conditionally firing an effect {#conditionally-firing-an-effect}
 
