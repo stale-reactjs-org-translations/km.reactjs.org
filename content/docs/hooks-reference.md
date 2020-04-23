@@ -190,17 +190,17 @@ const value = useContext(MyContext);
 
 កុំភ្លេចថា​ argument ទៅកាន់ `useContext` ត្រូវតែជា *context object ខ្លួនវាផ្ទាល់*៖
 
- * **Correct:** `useContext(MyContext)`
- * **Incorrect:** `useContext(MyContext.Consumer)`
- * **Incorrect:** `useContext(MyContext.Provider)`
+ * **ត្រឹមត្រូវ:** `useContext(MyContext)`
+ * **មិន​ត្រឹមត្រូវ:** `useContext(MyContext.Consumer)`
+ * **មិន​ត្រឹមត្រូវ:** `useContext(MyContext.Provider)`
 
-A component calling `useContext` will always re-render when the context value changes. If re-rendering the component is expensive, you can [optimize it by using memoization](https://github.com/facebook/react/issues/15156#issuecomment-474590693).
+Component ដែលកំពុង call `useContext` នឹងតែងតែ re-render នៅពេលដែល តម្លៃ context ផ្លាស់ប្តូរ។ ប្រសិនបើការ re-render the component គឺ ធ្ងន់, អ្នកអាច [បង្កើនប្រសិទ្ធភាពវាដោយប្រើ memoization](https://github.com/facebook/react/issues/15156#issuecomment-474590693)។
 
->Tip
+>គន្លឹះ
 >
->If you're familiar with the context API before Hooks, `useContext(MyContext)` is equivalent to `static contextType = MyContext` in a class, or to `<MyContext.Consumer>`.
+>ប្រសិនបើអ្នកសុាំជាមួយនឹង context API មុន Hooks, `useContext(MyContext)` គឺស្មើនឹង `static contextType = MyContext` នៅក្នុង class មួយ, ឬ `<MyContext.Consumer>`។
 >
->`useContext(MyContext)` only lets you *read* the context and subscribe to its changes. You still need a `<MyContext.Provider>` above in the tree to *provide* the value for this context.
+>`useContext(MyContext)` គ្រាន់តែអនុញ្ញាតឱ្យអ្នក *read* the context និង subscribe ទៅកាន់ការផ្លាស់ប្តូររបស់វា។ អ្នកនៅតែត្រូវការ `<MyContext.Provider>` ខាងលើនៅក្នុង tree ដើម្បី *ផ្តល់* តម្លៃសម្រាប់ context នេះ។
 
 **Putting it together with Context.Provider**
 ```js{31-36}
