@@ -202,7 +202,7 @@ Component ដែលកំពុង call `useContext` នឹងតែងតែ re
 >
 >`useContext(MyContext)` គ្រាន់តែអនុញ្ញាតឱ្យអ្នក *read* the context និង subscribe ទៅកាន់ការផ្លាស់ប្តូររបស់វា។ អ្នកនៅតែត្រូវការ `<MyContext.Provider>` ខាងលើនៅក្នុង tree ដើម្បី *ផ្តល់* តម្លៃសម្រាប់ context នេះ។
 
-**Putting it together with Context.Provider**
+**ដាក់វាបញ្ចូលគ្នាជាមួយ Context.Provider**
 ```js{31-36}
 const themes = {
   light: {
@@ -243,7 +243,7 @@ function ThemedButton() {
   );
 }
 ```
-This example is modified for hooks from a previous example in the [Context Advanced Guide](/docs/context.html), where you can find more information about when and how to use Context.
+ឧទាហរណ៍នេះត្រូវបានកែប្រែសម្រាប់ hooks ពី ឧទាហរណ៍មុននៅក្នុង [Context Advanced Guide](/docs/context.html), ដែលអ្នកអាចស្វែងរកព័ត៌មានបន្ថែមអំពីពេលវេលានិងរបៀបប្រើ Context។
 
 
 ## Additional Hooks {#additional-hooks}
