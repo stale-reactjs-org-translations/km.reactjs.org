@@ -248,7 +248,7 @@ function ThemedButton() {
 
 ## Additional Hooks {#additional-hooks}
 
-The following Hooks are either variants of the basic ones from the previous section, or only needed for specific edge cases. Don't stress about learning them up front.
+Hooks ខាងក្រោម គឺជា variants នៃមូលដ្ឋានគ្រឹះពីផ្នែកមុន, ឬត្រូវការសម្រាប់ករណីជាក់លាក់។ កុំតប់ប្រមល់អំពីការរៀនវានៅខាងមុខ។
 
 ### `useReducer` {#usereducer}
 
