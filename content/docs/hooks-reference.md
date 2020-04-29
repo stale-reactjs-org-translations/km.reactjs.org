@@ -258,9 +258,9 @@ const [state, dispatch] = useReducer(reducer, initialArg, init);
 
 ជំរើសមួយដើម្បី [`useState`](#usestate)។ ទទួលយក reducer មួយនៃប្រភេទ `(state, action) => newState`, ហើយ returns state ដែលបា​នផ្គូផ្គងបច្ចុប្បន្ន (the current state paired) ជាមួយ `dispatch` method។ (ប្រសិនបើអ្នកសុាំជាមួយនឹង Redux, អ្នកដឹងពីរបៀបដែលវាដំណើរការ។)
 
-`useReducer` is usually preferable to `useState` when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one. `useReducer` also lets you optimize performance for components that trigger deep updates because [you can pass `dispatch` down instead of callbacks](/docs/hooks-faq.html#how-to-avoid-passing-callbacks-down).
+`useReducer` ច្រើនតែចូលចិត្ត `useState` នៅពេលអ្នកមាន state logic ស្មុគស្មាញដែលពាក់ព័ន្ធនឹង sub-values ឬ នៅពេល state បន្ទាប់អាស្រ័យនឹង state មុន។ `useReducer` ក៏អនុញ្ញាតឱ្យអ្នកបង្កើនប្រសិទ្ធភាពការអនុវត្តសម្រាប់ components ដែលបង្កឱ្យមានការធ្វើបច្ចុប្បន្នភាពស៊ីជម្រៅ ពីព្រេាះ [អ្នកអាចបញ្ជូន `dispatch` down ជំនួសអោយ callbacks](/docs/hooks-faq.html#how-to-avoid-passing-callbacks-down)។
 
-Here's the counter example from the [`useState`](#usestate) section, rewritten to use a reducer:
+នេះគឺជា ឧទាហរណ៍ counter ពីផ្នែក [`useState`](#usestate), ដែលបានសរសេរឡើងវិញដោយប្រើ reducer៖
 
 ```js
 const initialState = {count: 0};
