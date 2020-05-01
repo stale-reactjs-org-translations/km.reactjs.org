@@ -288,9 +288,9 @@ function Counter() {
 }
 ```
 
->Note
+>ចំណាំ
 >
->React guarantees that `dispatch` function identity is stable and won't change on re-renders. This is why it's safe to omit from the `useEffect` or `useCallback` dependency list.
+>React ធានាថា `dispatch` function identity គឺមានស្ថេរភាពនិងមិនផ្លាស់ប្តូរនៅលើការ re-renders។ នេះជាមូលហេតុដែលវាមានសុវត្ថិភាពក្នុងការលុបចេញពី the `useEffect` ឬ `useCallback` បញ្ជី dependency។
 
 #### Specifying the initial state {#specifying-the-initial-state}
 
