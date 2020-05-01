@@ -294,7 +294,7 @@ function Counter() {
 
 #### Specifying the initial state {#specifying-the-initial-state}
 
-There are two different ways to initialize `useReducer` state. You may choose either one depending on the use case. The simplest way is to pass the initial state as a second argument:
+មានវិធីពីរយ៉ាងផ្សេងគ្នាដើម្បី initialize `useReducer` state។ អ្នកអាចជ្រើសរើសយកមួយអាស្រ័យលើករណីប្រើប្រាស់។ វិធីសាមញ្ញបំផុតគឺបញ្ជូន the initial state ជា argument ទី២៖
 
 ```js{3}
   const [state, dispatch] = useReducer(
@@ -303,9 +303,9 @@ There are two different ways to initialize `useReducer` state. You may choose ei
   );
 ```
 
->Note
+>ចំណាំ
 >
->React doesn’t use the `state = initialState` argument convention popularized by Redux. The initial value sometimes needs to depend on props and so is specified from the Hook call instead. If you feel strongly about this, you can call `useReducer(reducer, undefined, reducer)` to emulate the Redux behavior, but it's not encouraged.
+> React មិនប្រើ the `state = initialState` argument convention ដែលពេញនិយមដោយ Redux។ តម្លៃ initial ជួនកាលត្រូវការការពឹងពាក់លើ props ហើយដូច្នេះត្រូវបានបញ្ជាក់ពីការ call Hook ជំនួសវិញ។ ប្រសិនបើអ្នកមានអារម្មណ៍យ៉ាងខ្លាំងអំពីរឿងនេះ, អ្នកអាច call `useReducer(reducer, undefined, reducer)` ដើម្បីធ្វើត្រាប់តាមឥរិយាបទ Redux, ប៉ុន្តែវាមិនត្រូវបានលើកទឹកចិត្តទេ។
 
 #### Lazy initialization {#lazy-initialization}
 
