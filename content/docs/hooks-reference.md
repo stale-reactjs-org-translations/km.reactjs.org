@@ -366,9 +366,9 @@ const memoizedCallback = useCallback(
 
 Returns a [memoized](https://en.wikipedia.org/wiki/Memoization) callback.
 
-Pass an inline callback and an array of dependencies. `useCallback` will return a memoized version of the callback that only changes if one of the dependencies has changed. This is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders (e.g. `shouldComponentUpdate`).
+បញ្ជូន inline callback មួយនិង array មួយនៃ dependencies។ `useCallback` នឹង return memoized version មួយនៃ the callback ដែលគ្រាន់តែផ្លាស់ប្តូរ ប្រសិនបើមួយនៃ the dependencies បានផ្លាស់ប្តូរ។ វាមានប្រយោជន៍នៅពេលកំពុងបញ្ជូន callbacks ដើម្បីបង្កើនប្រសិទ្ធភាព child components ដែលពឹងផ្អែកលើ reference ដែលមានសម្ថភាពដើម្បីការពារការ renders ដែលមិនចាំបាច់ (e.g. `shouldComponentUpdate`)។
 
-`useCallback(fn, deps)` is equivalent to `useMemo(() => fn, deps)`.
+`useCallback(fn, deps)` គឺស្មើនឹង `useMemo(() => fn, deps)`.
 
 > Note
 >
