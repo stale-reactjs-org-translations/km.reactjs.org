@@ -349,9 +349,9 @@ function Counter({initialCount}) {
 
 #### Bailing out of a dispatch {#bailing-out-of-a-dispatch}
 
-If you return the same value from a Reducer Hook as the current state, React will bail out without rendering the children or firing effects. (React uses the [`Object.is` comparison algorithm](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is#Description).)
+ប្រសិនបើអ្នក return តម្លៃដូចគ្នាពី Reducer Hook មួយជា the current state, React នឹងចាកចេញដោយមិនមានការ render the children ឬ firing effects។ (React ប្រើ the [`Object.is` comparison algorithm](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is#Description)។)
 
-Note that React may still need to render that specific component again before bailing out. That shouldn't be a concern because React won't unnecessarily go "deeper" into the tree. If you're doing expensive calculations while rendering, you can optimize them with `useMemo`.
+ចំណាំ​ថា React ប្រហែលនឹងត្រូវការ render component ជាក់លាក់នេាះម្តងទៀតមុនពេលការចាកចេញ។ នោះមិនគួរជាការព្រួយបារម្ភទេពីព្រោះ React នឹងមិនចាំបាច់ចូល "ជ្រៅ" ទៅក្នុង the tree ។ ប្រសិនបើអ្នកកំពុងធ្វើការគណនាខ្លាំងកំឡុងពេលការ render, អ្នកអាចបង្កើនប្រសិទ្ធភាពពួកវាជាមួយ `useMemo`។
 
 ### `useCallback` {#usecallback}
 
