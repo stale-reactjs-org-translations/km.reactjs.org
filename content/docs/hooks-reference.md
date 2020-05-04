@@ -309,9 +309,9 @@ function Counter() {
 
 #### Lazy initialization {#lazy-initialization}
 
-You can also create the initial state lazily. To do this, you can pass an `init` function as the third argument. The initial state will be set to `init(initialArg)`.
+អ្នកក៏អាចបង្កើត the initial state lazily។ ដើម្បីធ្វើដូចនេះ, អ្នកអាចបញ្ជូន `init` function មួយជា argument ទីបី។ The initial state នឹងត្រូវបាន set ទៅជា `init(initialArg)`។
 
-It lets you extract the logic for calculating the initial state outside the reducer. This is also handy for resetting the state later in response to an action:
+វាអនុញ្ញាតឱ្យអ្នក extract the logic សម្រាប់ការគណនា the initial state នៅខាងក្រៅ the reducer។ នេះក៏ងាយស្រួលផងដែរសម្រាប់ការ reset the state នៅពេលក្រោយក្នុងការ response ទៅកាន់ action មួយ៖
 
 ```js{1-3,11-12,19,24}
 function init(initialCount) {
