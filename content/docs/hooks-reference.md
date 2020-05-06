@@ -382,11 +382,11 @@ Returns a [memoized](https://en.wikipedia.org/wiki/Memoization) callback.
 const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
 ```
 
-Returns a [memoized](https://en.wikipedia.org/wiki/Memoization) value.
+Returns តម្លៃ [memoized](https://en.wikipedia.org/wiki/Memoization) មួយ។
 
-Pass a "create" function and an array of dependencies. `useMemo` will only recompute the memoized value when one of the dependencies has changed. This optimization helps to avoid expensive calculations on every render.
+បញ្ជូន "create" function មួយ និង array នៃ dependencies មួយ។ `useMemo` នឹងគណនាឡើងវិញនូវតម្លៃ memoized នៅពេល dependency មួយនៃ dependencies ទាំងអស់បានផ្លាស់ប្តូរ។ ការបង្កើនប្រសិទ្ធិភាពនេះជួយអោយជៀសវាងការគណនាខ្លាំងទៅលើរាល់ការ render។
 
-Remember that the function passed to `useMemo` runs during rendering. Don't do anything there that you wouldn't normally do while rendering. For example, side effects belong in `useEffect`, not `useMemo`.
+ចងចាំ​ថា function ដែលបានបញ្ជូនអោយ `useMemo` runs កំឡុងពេល rendering។ កុំធ្វើអ្វីនៅទីនោះ ដែលអ្នកនឹងមិនធ្វើនៅកំឡុងពេល rendering។ ឧទាហរណ៍, side effects ដែលជាកម្មសិទ្ធិរបស់​ `useEffect`, មិនមែន `useMemo`។
 
 If no array is provided, a new value will be computed on every render.
 
