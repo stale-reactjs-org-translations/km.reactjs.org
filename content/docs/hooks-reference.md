@@ -370,11 +370,11 @@ Returns a [memoized](https://en.wikipedia.org/wiki/Memoization) callback.
 
 `useCallback(fn, deps)` គឺស្មើនឹង `useMemo(() => fn, deps)`.
 
-> Note
+> ចំណាំ
 >
-> The array of dependencies is not passed as arguments to the callback. Conceptually, though, that's what they represent: every value referenced inside the callback should also appear in the dependencies array. In the future, a sufficiently advanced compiler could create this array automatically.
+> The array នៃ dependencies គឺមិនត្រូវបានបញ្ជូនជា arguments ទៅកាន់ callback។ តាមគំនិត, ទោះបីជា, នោះហើយជាអ្វីដែលពួកគេតំណាងឱ្យ៖ គ្រប់តម្លៃ referenced ដែលនៅខាងក្នុង callback ក៏គួរតែបង្ហាញនៅក្នុង the dependencies array។ នៅពេលអនាគត, advanced compiler គ្រប់គ្រាន់មួយអាចបង្កើត array ដោយស្វ័យប្រវត្តិ។
 >
-> We recommend using the [`exhaustive-deps`](https://github.com/facebook/react/issues/14920) rule as part of our [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks#installation) package. It warns when dependencies are specified incorrectly and suggests a fix.
+> យើងសូមណែនាំឱ្យប្រើច្បាប់ the [`exhaustive-deps`](https://github.com/facebook/react/issues/14920) ជាផ្នែកនៃ [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks#installation) package របស់យើង។ វាព្រមាននៅពេល dependencies ត្រូវបានបញ្ជាក់មិនត្រឹមត្រូវនិងស្នើឱ្យដោះស្រាយ។
 
 ### `useMemo` {#usememo}
 
