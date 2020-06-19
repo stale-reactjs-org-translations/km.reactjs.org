@@ -388,7 +388,7 @@ Returns តម្លៃ [memoized](https://en.wikipedia.org/wiki/Memoization) �
 
 ចងចាំ​ថា function ដែលបានបញ្ជូនអោយ `useMemo` runs កំឡុងពេល rendering។ កុំធ្វើអ្វីនៅទីនោះ ដែលអ្នកនឹងមិនធ្វើនៅកំឡុងពេល rendering។ ឧទាហរណ៍, side effects ដែលជាកម្មសិទ្ធិរបស់​ `useEffect`, មិនមែន `useMemo`។
 
-If no array is provided, a new value will be computed on every render.
+ប្រសិនបើគ្មាន array ត្រូវបានផ្តល់, តម្លៃថ្មីនឹងត្រូវបានគណនាលើរាល់ការ render។
 
 **You may rely on `useMemo` as a performance optimization, not as a semantic guarantee.** In the future, React may choose to "forget" some previously memoized values and recalculate them on next render, e.g. to free memory for offscreen components. Write your code so that it still works without `useMemo` — and then add it to optimize performance.
 
