@@ -392,11 +392,11 @@ Returns តម្លៃ [memoized](https://en.wikipedia.org/wiki/Memoization) �
 
 **អ្នកអាច reply លើ `useMemo` ជាការបង្កើនប្រសិទ្ធិភាព, តែមិនមែនជាការធានារលើ logic នេាះទេ.** នៅពេលអនាគត, React អាចជ្រើសរើស "បំភ្លេច" នូវតម្លៃដែលបានចងចាំពីមុន ហើយគណនាពួកវាឡើងវិញលើការ render បន្ទាប់, e.g. ដើម្បី free memory សម្រាប់ offscreen components។ សរសេរ code របស់អ្នកដូច្នេះវានៅតែដំណើរការដោយគ្មាន `useMemo` — ហើយបន្ទាប់មកបន្ថែមវាដើម្បីបង្កើនប្រសិទ្ធភាពប្រតិបត្តិការ។
 
-> Note
+> ចំណាំ
 >
-> The array of dependencies is not passed as arguments to the function. Conceptually, though, that's what they represent: every value referenced inside the function should also appear in the dependencies array. In the future, a sufficiently advanced compiler could create this array automatically.
+> The array នៃ dependencies មិនត្រូវបានបញ្ជូនជា arguments ទៅកាន់ function។ តាមគំនិត, ទោះយ៉ាងណា, នោះហើយជាអ្វីដែលពួកគេ represent៖ គ្រប់តម្លៃ referenced នៅខាងក្នុង function ក៏គួរបង្ហាញនៅក្នុង the dependencies array។ នៅពេលអនាគត, compliler មួយដែលជឿនលឿនគ្រប់គ្រាន់អាចបង្កើត array នេះដោយស្វ័យប្រវត្តិ។
 >
-> We recommend using the [`exhaustive-deps`](https://github.com/facebook/react/issues/14920) rule as part of our [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks#installation) package. It warns when dependencies are specified incorrectly and suggests a fix.
+> យើងសូមណែនាំឱ្យប្រើប្រាស់ច្បាប់ [`exhaustive-deps`](https://github.com/facebook/react/issues/14920) ជាផ្នែកនៃ [`eslint-plugin-react-hooks`](https://www.npmjs.com/package/eslint-plugin-react-hooks#installation) package របស់យើង។ វាព្រមាននៅពេលភាពអាស្រ័យត្រូវបានបញ្ជាក់មិនត្រឹមត្រូវនិងស្នើឱ្យមានការជួសជុល។
 
 ### `useRef` {#useref}
 
