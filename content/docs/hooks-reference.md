@@ -406,7 +406,7 @@ const refContainer = useRef(initialValue);
 
 `useRef` returns a mutable ref object whose `.current` property is initialized to the passed argument (`initialValue`). The returned object will persist for the full lifetime of the component.
 
-A common use case is to access a child imperatively:
+ករណីប្រើប្រាស់ទូទៅគឺដើម្បី access child ជាបន្ទាន់៖
 
 ```js
 function TextInputWithFocusButton() {
