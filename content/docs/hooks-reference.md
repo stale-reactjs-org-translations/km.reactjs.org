@@ -460,13 +460,14 @@ In this example, a parent component that renders `<FancyInput ref={inputRef} />`
 
 ### `useLayoutEffect` {#uselayouteffect}
 
-The signature is identical to `useEffect`, but it fires synchronously after all DOM mutations. Use this to read layout from the DOM and synchronously re-render. Updates scheduled inside `useLayoutEffect` will be flushed synchronously, before the browser has a chance to paint.
+The signature គឺដូចគ្នាបេះបិទទៅនឹង `useEffect`, ប៉ុន្តែវា fires synchronously បន្ទាប់ពីការផ្លាស់ប្តូរ DOM ទាំងអស់។ ប្រើវាដើម្បីអាន layout ពី DOM និង synchronously re-render។ ការធ្វើបច្ចុប្បន្នភាពដែលបានកំណត់ពេលនៅខាងក្នុង `useLayoutEffect` នឹងត្រូវបានបញ្ចូលក្នុងពេលដំណាលគ្នា, មុនពេលកម្មវិធីរុករកមានឱកាសគូរ។
 
-Prefer the standard `useEffect` when possible to avoid blocking visual updates.
+ចូលចិត្តស្តង់ដារ `useEffect` នៅពេលដែលអាចធ្វើទៅបានដើម្បីជៀសវាងការទប់ស្កាត់ការធ្វើឱ្យទាន់សម័យដែលមើលឃើញ។
 
-> Tip
+> គន្លឹះ
 >
-> If you're migrating code from a class component, note `useLayoutEffect` fires in the same phase as `componentDidMount` and `componentDidUpdate`. However, **we recommend starting with `useEffect` first** and only trying `useLayoutEffect` if that causes a problem.
+> ប្រសិនបើអ្នកកំពុង​​ migrate code ពី class component មួយ, ចំណាំ `useLayoutEffect` fires នៅក្នុងដំណាក់កាលដូចគ្នានឹង `componentDidMount` និង `componentDidUpdate`។ 
+ទោះយ៉ាងណាក៏ដោយ, ** យើងណែនាំអោយចាប់ផ្តើមជាមួយ `useEffect` មុន** ហើយមានតែការព្យាយាមប្រើ `useLayoutEffect` ប្រសិនបើវាបង្កបញ្ហា។
 >
 >If you use server rendering, keep in mind that *neither* `useLayoutEffect` nor `useEffect` can run until the JavaScript is downloaded. This is why React warns when a server-rendered component contains `useLayoutEffect`. To fix this, either move that logic to `useEffect` (if it isn't necessary for the first render), or delay showing that component until after the client renders (if the HTML looks broken until `useLayoutEffect` runs).
 >
