@@ -478,9 +478,9 @@ Prefer the standard `useEffect` when possible to avoid blocking visual updates.
 useDebugValue(value)
 ```
 
-`useDebugValue` can be used to display a label for custom hooks in React DevTools.
+`useDebugValue` អាចត្រូវបានប្រើដើម្បីបង្ហាញ label សម្រាប់ custom hooks នៅក្នុង React DevTools។
 
-For example, consider the `useFriendStatus` custom Hook described in ["Building Your Own Hooks"](/docs/hooks-custom.html):
+ឧទាហរណ៍, ពិចារណាអំពី the `useFriendStatus` custom Hook ដែលបានពិពណ៌នានៅក្នុង ["Building Your Own Hooks"](/docs/hooks-custom.html)៖
 
 ```js{6-8}
 function useFriendStatus(friendID) {
@@ -496,9 +496,9 @@ function useFriendStatus(friendID) {
 }
 ```
 
-> Tip
+> គន្លឹះ
 >
-> We don't recommend adding debug values to every custom Hook. It's most valuable for custom Hooks that are part of shared libraries.
+> យើងមិនណែនាំឱ្យបន្ថែមតម្លៃ debug ទៅអោយគ្រប់ custom Hook ទាំងអស់នេាះទេ។ វាមានតម្លៃបំផុតសម្រាប់ custom Hooks ដែលផ្នែកមួយនៃ shared libraries។
 
 #### Defer formatting debug values {#defer-formatting-debug-values}
 
