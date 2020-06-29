@@ -502,11 +502,11 @@ function useFriendStatus(friendID) {
 
 #### Defer formatting debug values {#defer-formatting-debug-values}
 
-In some cases formatting a value for display might be an expensive operation. It's also unnecessary unless a Hook is actually inspected.
+ក្នុងករណីខ្លះការ format តម្លៃមួយសម្រាប់ការបង្ហាញអាចជាប្រតិបត្តិការ expensive។ វាក៏មិនចាំបាច់ដែរដរាបណា Hook ត្រូវបានត្រួតពិនិត្យ។
 
-For this reason `useDebugValue` accepts a formatting function as an optional second parameter. This function is only called if the Hooks are inspected. It receives the debug value as a parameter and should return a formatted display value.
+សម្រាប់ហេតុផលនេះ `useDebugValue` ទទួលយក formatting function ជា optional second parameter។ Function នេះ ត្រូវបានហៅតែក្នុងករណីដែល Hooks ត្រូវបានត្រួតពិនិត្យ។ វាទទួល តម្លៃ debug ជា parameter ហើយគួរតែ return តម្លៃបង្ហាញដែលត្រូវបាន format ។
 
-For example a custom Hook that returned a `Date` value could avoid calling the `toDateString` function unnecessarily by passing the following formatter:
+ឧទាហរណ៍ custom Hook ដែល returned តម្លៃ `Date` អាចជៀសវាងការហៅ `toDateString` function ដែលមិនចាំបាច់ដោយការបញ្ជូន formatter ខាងក្រោម៖
 
 ```js
 useDebugValue(date, date => date.toDateString());
