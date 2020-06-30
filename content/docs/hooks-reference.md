@@ -424,16 +424,16 @@ function TextInputWithFocusButton() {
 }
 ```
 
-Essentially, `useRef` is like a "box" that can hold a mutable value in its `.current` property.
+សំខាន់, `useRef` គឺដូចជា "ប្រអប់" មួយដែលអាចដែលអាចរក្សាតម្លៃដែលអាចផ្លាស់ប្តូរបាននៅក្នុង `.current` property របស់វា។
 
-You might be familiar with refs primarily as a way to [access the DOM](/docs/refs-and-the-dom.html). If you pass a ref object to React with `<div ref={myRef} />`, React will set its `.current` property to the corresponding DOM node whenever that node changes.
+អ្នកប្រហែលជា familiar ជាមួយ refs ចម្បង ដែលជាមធ្យោបាយដើម្បី [access the DOM](/docs/refs-and-the-dom.html)។ ប្រសិនបើអ្នកបញ្ជូន ref object មួយទៅកាន់ React ជាមួយ `<div ref={myRef} />`, React នឹង set `.current` property របស់វា ទៅកាន់ the corresponding DOM node គ្រប់ពេលដែល node នេាះផ្លាស់ប្តូរ។
 
-However, `useRef()` is useful for more than the `ref` attribute. It's [handy for keeping any mutable value around](/docs/hooks-faq.html#is-there-something-like-instance-variables) similar to how you'd use instance fields in classes.
+ទោះយ៉ាងណាក៏ដោយ, `useRef ()` មានប្រយោជន៍ជាង the `ref` attribute។ វាគឺ [
+ងាយស្រួលសម្រាប់រក្សាតម្លៃដែលអាចផ្លាស់ប្តូរបាន](/docs/hooks-faq.html#is-there-something-like-instance-variables) ស្រដៀងគ្នាទៅនឹងវិធីដែលអ្នកប្រើ instance fields នៅក្នុង classes។
 
-This works because `useRef()` creates a plain JavaScript object. The only difference between `useRef()` and creating a `{current: ...}` object yourself is that `useRef` will give you the same ref object on every render.
+វាដំណើរការពីព្រោះ `useRef()` បង្កើត plain JavaScript object មួយ។ ភាពខុសគ្នាតែមួយរវាង `useRef()` និង ការបង្កើត `{current: ...}` object ខ្លួនអ្នកគឺថា `useRef` នឹងផ្តល់ឱ្យអ្នកនូវ ref object ដូចគ្នាលើរាល់ការ render។
 
-Keep in mind that `useRef` *doesn't* notify you when its content changes. Mutating the `.current` property doesn't cause a re-render. If you want to run some code when React attaches or detaches a ref to a DOM node, you may want to use a [callback ref](/docs/hooks-faq.html#how-can-i-measure-a-dom-node) instead.
-
+ចងចាំថា `useRef` *មិន​* ជូនដំណឹងដល់អ្នកទេនៅពេលដែល content របស់វាផ្លាស់ប្តូរ។ ការផ្លាស់ប្តូរ `.current` property មិនប៉ះពាល់ដល់ការ re-render។ ប្រសិនបើអ្នកចង់ run code ខ្លះ នៅពេល React ភ្ជាប់ឬផ្ដាច់ ref ទៅកាន់ DOM node, អ្នកប្រហែលជាចង់ប្រើ [callback ref](/docs/hooks-faq.html#how-can-i-measure-a-dom-node) ជំនួសវិញ។
 
 ### `useImperativeHandle` {#useimperativehandle}
 
