@@ -441,7 +441,7 @@ function TextInputWithFocusButton() {
 useImperativeHandle(ref, createHandle, [deps])
 ```
 
-`useImperativeHandle` customizes the instance value that is exposed to parent components when using `ref`. As always, imperative code using refs should be avoided in most cases. `useImperativeHandle` should be used with [`forwardRef`](/docs/react-api.html#reactforwardref):
+`useImperativeHandle` ប្តូរ instance value ដែល ្រូវបានប៉ះពាល់ ទៅកាន់ parent components នៅពេលកំពុងប្រើ `ref`។ ដូច​រាល់​ដង, ការចាំបាច់ប្រើ code refs គួរតែជៀសវាងនៅក្នុងករណីជាច្រើន។ `useImperativeHandle` គួរតែប្រើជាមួយ [`forwardRef`](/docs/react-api.html#reactforwardref)៖
 
 ```js
 function FancyInput(props, ref) {
@@ -456,7 +456,7 @@ function FancyInput(props, ref) {
 FancyInput = forwardRef(FancyInput);
 ```
 
-In this example, a parent component that renders `<FancyInput ref={inputRef} />` would be able to call `inputRef.current.focus()`.
+ក្នុងឧទាហរណ៍នេះ, parent component ដែល renders `<FancyInput ref={inputRef} />` គួរតែអាច call `inputRef.current.focus()`។
 
 ### `useLayoutEffect` {#uselayouteffect}
 
