@@ -124,7 +124,11 @@ ReactDOM.render(
 
 ### Inline If ជាមួយ  Logical && Operator {#inline-if-with-logical--operator}
 
+<<<<<<< HEAD
 អ្នកប្រហែល [បង្កប់ (embed) expressions មួយចំនួននៅក្នុង JSX](/docs/introducing-jsx.html#embedding-expressions-in-jsx) ដោយការដាក់រុំពួកវានៅក្នុងដង្កៀប​អង្កាញ់ (curly braces)។ នេះរួមបញ្ចូលទាំង JavaScript logical `&&` operator។ វាអាចងាយស្រួលសម្រាប់ការដាក់លក្ខខណ្ឌរួមជាមួយ element មួយ៖
+=======
+You may [embed expressions in JSX](/docs/introducing-jsx.html#embedding-expressions-in-jsx) by wrapping them in curly braces. This includes the JavaScript logical `&&` operator. It can be handy for conditionally including an element:
+>>>>>>> d16f1ee7958b5f80ef790265ba1b8711d4f228d6
 
 ```js{6-10}
 function Mailbox(props) {
