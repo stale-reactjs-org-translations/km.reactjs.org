@@ -589,7 +589,11 @@ var newPlayer = Object.assign({}, player, {score: 2});
 
 #### ការកំណត់នៅពេល re-render នៅក្នុង React {#determining-when-to-re-render-in-react}
 
+<<<<<<< HEAD
 អត្ថប្រយោជន៍សំខាន់នៃភាពមិនប្រែប្រួលគឺថាវាជួយអ្នកបង្កើត _pure components_ នៅក្នុង React។ ទិន្នន័យដែលអាចផ្លាស់ប្តូរបានអាចកំណត់បានយ៉ាងងាយស្រួលប្រសិនបើការផ្លាស់ប្តូរត្រូវបានធ្វើឡើងដែលជួយកំណត់នៅពេល component តម្រូវការ re-rendering។
+=======
+The main benefit of immutability is that it helps you build _pure components_ in React. Immutable data can easily determine if changes have been made, which helps to determine when a component requires re-rendering.
+>>>>>>> 25cc703d1f23f1782ff96c5c7882a806f8741ec4
 
 អ្នកអាចស្វែងយល់បន្ថែមអំពី `shouldComponentUpdate()` និងរបៀបដែលអ្នកអាចបង្កើត *pure components* ដោយការអាន [Optimizing Performance](/docs/optimizing-performance.html#examples)។
 
@@ -1074,7 +1078,11 @@ const doubled = numbers.map(x => x * 2); // [2, 4, 6]
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/EmmGEa?editors=0010)**
 
+<<<<<<< HEAD
 សម្រាប់ការផ្លាស់ប្តូរនីមួយៗក្នុង history របស់ tic-tac-toes ហ្គេម យើងបង្កើត list នៃ item `<li>` ដែលមានប៊ូតុងមួយ `<button>`។ ប៊ូតុងមាន `onClick` handler មួយដែល calls method មួយមានឈ្មេាះថា `this.jumpTo()`។ យើងមិនបាន implement `jumpTo()` method នៅឡើយទេ។ សម្រាប់ពេលនេះយើងគួរតែមើលឃើញ list នៃការផ្លាស់ទីដែលបានកើតឡើងនៅក្នុងហ្គេមហើយនិង warning ក្នុង developer tools console ដែលនិយាយថា៖
+=======
+For each move in the tic-tac-toe game's history, we create a list item `<li>` which contains a button `<button>`. The button has a `onClick` handler which calls a method called `this.jumpTo()`. We haven't implemented the `jumpTo()` method yet. For now, we should see a list of the moves that have occurred in the game and a warning in the developer tools console that says:
+>>>>>>> 25cc703d1f23f1782ff96c5c7882a806f8741ec4
 
 >  Warning:
 >  Each child in an array or iterator should have a unique "key" prop. Check the render method of "Game".
@@ -1225,7 +1233,11 @@ class Game extends React.Component {
 * រក្សារ history របស់ហ្គេមដែលជាដំណើរការហ្គេម
 * អនុញ្ញាតឱ្យអ្នកលេងពិនិត្យឡើងវិញនូវ history របស់ហ្គេម ហើយនិងមើលឃើញនូវ versions នៃ board របស់ហ្គេ​ម។
 
+<<<<<<< HEAD
 ការងារល្អ! យើងសង្ឃឹមថាឥឡូវនេះអ្នកមានអារម្មណ៍ថាអ្នកមានការយល់ដឹងសមរម្យពីរបៀបដែល React ធ្វើការ។
+=======
+Nice work! We hope you now feel like you have a decent grasp of how React works.
+>>>>>>> 25cc703d1f23f1782ff96c5c7882a806f8741ec4
 
 មើលលទ្ធផលចុងក្រោយនៅទីនេះ៖ **[Final Result](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)**។
 
