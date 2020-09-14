@@ -2,6 +2,8 @@
 id: accessibility
 title: Accessibility
 permalink: docs/accessibility.html
+prev: integrating-with-other-libraries.html
+next: code-splitting.html
 ---
 
 ## ហេតុអ្វីបានជា Accessibility? {#why-accessibility}
