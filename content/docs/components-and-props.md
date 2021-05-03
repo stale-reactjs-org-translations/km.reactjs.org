@@ -232,7 +232,11 @@ function Comment(props) {
 
 [សាកល្បងនៅលើ CodePen](codepen://components-and-props/extracting-components-continued)
 
+<<<<<<< HEAD
 ការទាញយក components អាចមើលទៅដូចជាការងារដ៏ធុញទ្រាន់នៅពេលដំបូង ប៉ុន្តែវាមានភាពទូលំទូលាយនៃការប្រើ components ឡើងវិញ នៅក្នុងកម្មវិធីធំៗ។ ច្បាប់ល្អគឺថា ប្រសិនបើផ្នែកនៃ UI របស់អ្នកត្រូវបានប្រើច្រើនដង (`Button`, `Panel`, `Avatar`) ឬស្មុគ្រស្មាញគ្រប់គ្រាន់ដោយ Component ខ្លួនឯង(`App`, `FeedStory`, `Comment`) វាជាបេក្ខជនដ៏ល្អដើម្បីក្លាយជាcomponentប្រើម្តងទៀត។
+=======
+Extracting components might seem like grunt work at first, but having a palette of reusable components pays off in larger apps. A good rule of thumb is that if a part of your UI is used several times (`Button`, `Panel`, `Avatar`), or is complex enough on its own (`App`, `FeedStory`, `Comment`), it is a good candidate to be extracted to a separate component.
+>>>>>>> c3c93e2a7ff1b1f7b8735a3a87d4b10937eaaf91
 
 ## Props គឺមិនអាចកែសម្រួល {#props-are-read-only}
 
