@@ -12,7 +12,11 @@ Hooks គឺជា JavaScript functions, ប៉ុន្តែអ្នកត្
 
 ### Only Call Hooks at the Top Level {#only-call-hooks-at-the-top-level}
 
+<<<<<<< HEAD
 **កុំ call Hooks នៅខាងក្នុង loops, conditions, ឬ nested functions។** ជំនួស, តែងតែប្រើ Hooks នៅ top level នៃ React function របស់អ្នក។ ដោយធ្វើតាមច្បាប់នេះ, អ្នកត្រូវធានាថា Hooks ត្រូវបាន call នៅក្នុងលំដាប់ដូចគ្នារាល់ពេលដែល component renders។ នោះហើយជាអ្វីដែលអនុញ្ញាតឱ្យ React ដើម្បីការពារយ៉ាងត្រឹមត្រូវនូវ state នៃ Hooks រវាង ការហៅ `useState` និង `useEffect` ច្រើន។ (ប្រសិនបើអ្នកចង់ដឹង, យើងនឹងពន្យល់រឿងនេះឱ្យកាន់តែស៊ីជម្រៅ [ខាងក្រោម](#explanation)។)
+=======
+**Don't call Hooks inside loops, conditions, or nested functions.** Instead, always use Hooks at the top level of your React function, before any early returns. By following this rule, you ensure that Hooks are called in the same order each time a component renders. That's what allows React to correctly preserve the state of Hooks between multiple `useState` and `useEffect` calls. (If you're curious, we'll explain this in depth [below](#explanation).)
+>>>>>>> e60bca04f3da690256ce019bd8907c2b368589ee
 
 ### Only Call Hooks from React Functions {#only-call-hooks-from-react-functions}
 
