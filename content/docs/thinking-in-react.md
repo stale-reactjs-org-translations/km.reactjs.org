@@ -86,7 +86,11 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
 
 ដើម្បីបង្កើត app របស់អ្នកយ៉ាងត្រឹមត្រូវ, តំបូងអ្នកតម្រូវអោយគិតពីសំណុំអប្បបរមានៃ state អាចផ្លាស់ប្តូរបានដែល app របស់អ្នកត្រូវការ។ គន្លឹះគឺនៅទីនេះ [DRY: *Don't Repeat Yourself*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)។ រកមើលការតំណាងតិចតួចបំផុតនៃ state ដែល application របស់អ្នកត្រូវការហើយនិងគណនាអ្វីៗផ្សេងទៀតដែលអ្នកត្រូវការតាមតម្រូវការ។ ឧទាហរណ៍, ប្រសិនបើអ្នកកំពុងតែបង្កើតតារាង TODO មួយ, រក្សាទុក array មួយនៃធាតុ (items) របស់ TODO នៅជុំវិញ; កុំរក្សាទុក state variable ដាច់ដោយឡែកសម្រាប់ការរាប់។ ជំនួសដោយ, ពេលដែលអ្នកចង់ render TODO count, យកប្រវែងនៃធាតុរបស់ TODO array។
 
+<<<<<<< HEAD
 គិតពីបំណែកទាំងអស់នៃទិន្នន័យនៅក្នុងឧទាហរណ៍នៃ application របស់យើង។ យើងមាន៖
+=======
+Think of all the pieces of data in our example application. We have:
+>>>>>>> f3baa6d075c8de475b688abf035d7054bc8a9606
 
   * បញ្ជីផលិតផលដើម
   * search text ដែលអ្នកប្រើប្រាស់បានបញ្ចូល
