@@ -54,8 +54,8 @@ Optional: [ទាញយកឧទាហរណ៍ពេញលេញ (2KB zipped)](
 
   <!-- Load React. -->
   <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 
   <!-- Load our React component. -->
   <script src="like_button.js"></script>
@@ -84,7 +84,11 @@ const domContainer = document.querySelector('#like_button_container');
 ReactDOM.render(e(LikeButton), domContainer);
 ```
 
+<<<<<<< HEAD
 ពីរបន្ទាត់នៃកូដនេះគឺថាការស្វែងរក `<div>` ដែលយើងបានបន្ថែមទៅកាន់ HTML នៅក្នុងជំហ៊ានដំបូងរបស់យើង ហើយបន្ទាប់មកបង្ហាញ "Like" ប៊ូតុង React component របស់យើងនៅខាងក្នុងវា។
+=======
+These two lines of code find the `<div>` we added to our HTML in the first step, and then display our "Like" button React component inside of it.
+>>>>>>> f3baa6d075c8de475b688abf035d7054bc8a9606
 
 ### That's It! {#thats-it}
 
@@ -115,8 +119,8 @@ ReactDOM.render(e(LikeButton), domContainer);
 ប្រសិនបើអ្នក minify scripts របស់ application រួចហើយ, **គេហទំព័រ​របស់​អ្នកនឹងរួចរាល់សម្រាប់ production** ប្រសិនបើអ្នកធានាថាបាន deploy HTML ដោយ loads versions របស់ React នៅចុងបញ្ចប់នៅក្នុង `production.min.js`៖
 
 ```js
-<script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
 ```
 
 ប្រសិនបើអ្នកមិនមានជំហ៊ាន minification សម្រាប់ scripts របស់អ្នក [នេះជាវិធីមួយដើម្បីបង្កើតវាឡើង](https://gist.github.com/gaearon/42a2ffa41b8319948f9be4076286e1f3)។
@@ -187,7 +191,7 @@ Congratulations! You just added a **production-ready JSX setup** to your project
 បង្កើតថតឯកសារ (folder) ដែលហៅថា `src` ហើយ run terminal command នេះ៖
 
 ```
-npx babel --watch src --out-dir . --presets react-app/prod 
+npx babel --watch src --out-dir . --presets react-app/prod
 ```
 
 >ចំណាំ
