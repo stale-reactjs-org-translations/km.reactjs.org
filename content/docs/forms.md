@@ -9,7 +9,11 @@ redirect_from:
   - "docs/forms-zh-CN.html"
 ---
 
+<<<<<<< HEAD
 HTML form elements ធ្វើការខុសគ្នាបន្តិចពី DOM elements ផ្សេងៗនៅក្នុង React ពីព្រេាះ form elements ជាធម្មតាវារក្សារទុកនូវ internal state មួយចំនួន។ ឧទាហរណ៍ form នេះគឺជា plain HTML ទទួលយកឈ្មោះតែមួយ៖
+=======
+HTML form elements work a bit differently from other DOM elements in React, because form elements naturally keep some internal state. For example, this form in plain HTML accepts a single name:
+>>>>>>> 0bb0303fb704147452a568472e968993f0729c28
 
 ```html
 <form>
@@ -31,7 +35,7 @@ Form នេះមានលក្ខណះជា default HTML នៃការ bro
 
 ឧទាហរណ៍ ប្រសិនបើអ្នកចង់បង្កើតឧទាហរណ៍មុនដោយអោយវា log នូវ name នៅពេលដែលវាត្រូវបាន submit យើងអាចសរសេរ form ជា controlled component៖
 
-```javascript{4,10-12,24}
+```javascript{4,10-12,21,24}
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
@@ -216,7 +220,7 @@ class Reservation extends React.Component {
 
   handleInputChange(event) {
     const target = event.target;
-    const value = target.name === 'isGoing' ? target.checked : target.value;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
 
     this.setState({
