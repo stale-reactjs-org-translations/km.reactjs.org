@@ -420,12 +420,15 @@ this.setState(function(state, props) {
 Component អាចជ្រើសរើសដើម្បី pass state down ដូច props ទៅ child components:
 
 ```js
+<<<<<<< HEAD
 <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
 ```
 
 នេះក៏ដំណើរការសម្រាប់ user-defined components:
 
 ```js
+=======
+>>>>>>> 0bb0303fb704147452a568472e968993f0729c28
 <FormattedDate date={this.state.date} />
 ```
 
