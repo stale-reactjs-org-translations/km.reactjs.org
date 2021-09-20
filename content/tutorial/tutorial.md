@@ -174,7 +174,11 @@ JSX ភ្ជាប់មកជាមួយនូវអានុភាពរប�
 `ShoppingList` component ដែលនៅខាងលើគឺ renders តែ built-in DOM components តែប៉ុណ្ណេះដូចជា `<div />` ហើយនិ `<li />`។ ប៉ុន្តែអ្នកអាចបង្កើតហើយនិង render custom React components ផងដែរ។ ឧទាហរណ៍ ឥឡូវ​នេះយើងអាចយោងទៅលើ shopping list ដោយសរសេរ `<ShoppingList />`។ React component នីមួយៗគឺ encapsulated ហើយនិង
 អាចដំណើរការដោយឯករាជ្យ; នេះអនុញ្ញាតឱ្យអ្នកបង្កើត UI ដែលស្មុគ្រស្មាញពី components ដែលសាមញ្ញ។
 
+<<<<<<< HEAD
 ## ការត្រួតពិនិត្យ   Starter Code {#inspecting-the-starter-code}
+=======
+### Inspecting the Starter Code {#inspecting-the-starter-code}
+>>>>>>> f0a9793dff9f8e86ec365bfadb0b4b23c6f618ce
 
 បើសិនជាអ្នកនិងធ្វើការលើ tutorial **នៅក្នុង  browser** បើកកូដនេះក្នុងផ្ទាំងថ្មី៖ **[Starter Code](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)**។ បើសិនជាអ្នកនឹងធ្វើការលើ tutorial **នៅក្នុងកុំព្យូទ័ររបស់អ្នក** បើក `src/index.js` នៅក្នុង project folder (អ្នកបានប៉ះឯកសារនេះរួចហើយកំឡុងពេល [setup](#setup-option-2-local-development-environment))។
 
@@ -236,7 +240,7 @@ class Square extends React.Component {
 class Square extends React.Component {
   render() {
     return (
-      <button className="square" onClick={function() { alert('click'); }}>
+      <button className="square" onClick={function() { console.log('click'); }}>
         {this.props.value}
       </button>
     );
@@ -244,7 +248,11 @@ class Square extends React.Component {
 }
 ```
 
+<<<<<<< HEAD
 ប្រសិនជាយើង click លើ Square ឥឡូវ​នេះ យើងគួរតែទទួលបាននូវ alert មួយនៅក្នុង browser យើង។
+=======
+If you click on a Square now, you should see 'click' in your browser's devtools console.
+>>>>>>> f0a9793dff9f8e86ec365bfadb0b4b23c6f618ce
 
 សម្រាប់ event handlers
 
@@ -256,7 +264,7 @@ class Square extends React.Component {
 >class Square extends React.Component {
 >  render() {
 >    return (
->      <button className="square" onClick={() => alert('click')}>
+>      <button className="square" onClick={() => console.log('click')}>
 >        {this.props.value}
 >      </button>
 >    );
@@ -264,7 +272,11 @@ class Square extends React.Component {
 >}
 >```
 >
+<<<<<<< HEAD
 >សូមកត់សម្គាល់ពីបៀបជាមួយ `onClick={() => alert('click')}`, យើងនឹងបញ្ជូន *function មួយ* ជា `onClick` prop។ វា fire តែពេលបន្ទាប់ពី click តែប៉ុណ្ណោះ។ បំភ្លេច `() =>` ហើយសរសេរ `onClick={alert('click')}` គឺជាកំហុសធម្មតា, ហើយនិង fire ការ alert រាល់ពេលដែល component ធ្វើការ re-renders។
+=======
+>Notice how with `onClick={() => console.log('click')}`, we're passing *a function* as the `onClick` prop. React will only call this function after a click. Forgetting `() =>` and writing `onClick={console.log('click')}` is a common mistake, and would fire every time the component re-renders.
+>>>>>>> f0a9793dff9f8e86ec365bfadb0b4b23c6f618ce
 
 ជំហានបន្ទាប់, យើងចង់អោយ Square component "ចងចាំ" ថាវាត្រូវបានគេ click ហើយនិងបំពេញវាជាមួយនិងសញ្ញា "X"។ ដើម្បី "ចងចាំ" អ្វីមួយ, component ប្រើ **state**។
 
@@ -283,7 +295,7 @@ class Square extends React.Component {
 
   render() {
     return (
-      <button className="square" onClick={() => alert('click')}>
+      <button className="square" onClick={() => console.log('click')}>
         {this.props.value}
       </button>
     );
@@ -553,7 +565,11 @@ class Board extends React.Component {
 
 ### ហេតុអ្វីបានជាភាពមិនអាចប្រែប្រួលបានមានសារះសំខាន់?        {#why-immutability-is-important}
 
+<<<<<<< HEAD
 នៅក្នុងឧទាហរណ៍របស់កូដមុន យើងបានស្នើឱ្យអ្នកប្រើ `.slice()` operator ដើម្បីបង្កើតច្បាប់ចម្លងនៃ `squares` array ដើម្បីកែប្រែជំនួសអោយការកែប្រែ array ដែលមានស្រាប់។ ឥឡូវនេះយើងនឹងពិភាក្សាគ្នាអំពីភាពមិនចេះប្រែប្រួលហើយហេតុអ្វីក៏ភាពមិនប្រែប្រួលជាការសំខាន់ក្នុងការរៀនសូត្រ។
+=======
+In the previous code example, we suggested that you create a copy of the `squares` array using the `slice()` method instead of modifying the existing array. We'll now discuss immutability and why immutability is important to learn.
+>>>>>>> f0a9793dff9f8e86ec365bfadb0b4b23c6f618ce
 
 មានវិធីពីរយ៉ាងក្នុងការផ្លាស់ប្តូរទិន្នន័យ។ វិធីសាស្រ្តដំបូងគឺ *ផ្លាស់ប្តូរ* ទិន្នន័យ ដោយការផ្លាស់ប្តូរតម្លៃទិន្នន័យដោយផ្ទាល់។ វិធីសាស្ត្រទីពីរគឺជំនួសទិន្នន័យជាមួយច្បាប់ចម្លងថ្មីដែលមានការផ្លាស់ប្តូរតាមដែលអ្នកចង់បាន។
 
@@ -589,7 +605,11 @@ var newPlayer = Object.assign({}, player, {score: 2});
 
 #### ការកំណត់នៅពេល re-render នៅក្នុង React {#determining-when-to-re-render-in-react}
 
+<<<<<<< HEAD
 អត្ថប្រយោជន៍សំខាន់នៃភាពមិនប្រែប្រួលគឺថាវាជួយអ្នកបង្កើត _pure components_ នៅក្នុង React។ ទិន្នន័យដែលអាចផ្លាស់ប្តូរបានអាចកំណត់បានយ៉ាងងាយស្រួលប្រសិនបើការផ្លាស់ប្តូរត្រូវបានធ្វើឡើងដែលជួយកំណត់នៅពេល component តម្រូវការ re-rendering។
+=======
+The main benefit of immutability is that it helps you build _pure components_ in React. Immutable data can easily determine if changes have been made, which helps to determine when a component requires re-rendering.
+>>>>>>> f0a9793dff9f8e86ec365bfadb0b4b23c6f618ce
 
 អ្នកអាចស្វែងយល់បន្ថែមអំពី `shouldComponentUpdate()` និងរបៀបដែលអ្នកអាចបង្កើត *pure components* ដោយការអាន [Optimizing Performance](/docs/optimizing-performance.html#examples)។
 
@@ -1074,7 +1094,11 @@ const doubled = numbers.map(x => x * 2); // [2, 4, 6]
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/EmmGEa?editors=0010)**
 
+<<<<<<< HEAD
 សម្រាប់ការផ្លាស់ប្តូរនីមួយៗក្នុង history របស់ tic-tac-toes ហ្គេម យើងបង្កើត list នៃ item `<li>` ដែលមានប៊ូតុងមួយ `<button>`។ ប៊ូតុងមាន `onClick` handler មួយដែល calls method មួយមានឈ្មេាះថា `this.jumpTo()`។ យើងមិនបាន implement `jumpTo()` method នៅឡើយទេ។ សម្រាប់ពេលនេះយើងគួរតែមើលឃើញ list នៃការផ្លាស់ទីដែលបានកើតឡើងនៅក្នុងហ្គេមហើយនិង warning ក្នុង developer tools console ដែលនិយាយថា៖
+=======
+For each move in the tic-tac-toe game's history, we create a list item `<li>` which contains a button `<button>`. The button has a `onClick` handler which calls a method called `this.jumpTo()`. We haven't implemented the `jumpTo()` method yet. For now, we should see a list of the moves that have occurred in the game and a warning in the developer tools console that says:
+>>>>>>> f0a9793dff9f8e86ec365bfadb0b4b23c6f618ce
 
 >  Warning:
 >  Each child in an array or iterator should have a unique "key" prop. Check the render method of "Game".
@@ -1225,7 +1249,11 @@ class Game extends React.Component {
 * រក្សារ history របស់ហ្គេមដែលជាដំណើរការហ្គេម
 * អនុញ្ញាតឱ្យអ្នកលេងពិនិត្យឡើងវិញនូវ history របស់ហ្គេម ហើយនិងមើលឃើញនូវ versions នៃ board របស់ហ្គេ​ម។
 
+<<<<<<< HEAD
 ការងារល្អ! យើងសង្ឃឹមថាឥឡូវនេះអ្នកមានអារម្មណ៍ថាអ្នកមានការយល់ដឹងសមរម្យពីរបៀបដែល React ធ្វើការ។
+=======
+Nice work! We hope you now feel like you have a decent grasp of how React works.
+>>>>>>> f0a9793dff9f8e86ec365bfadb0b4b23c6f618ce
 
 មើលលទ្ធផលចុងក្រោយនៅទីនេះ៖ **[Final Result](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)**។
 
