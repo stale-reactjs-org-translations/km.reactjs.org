@@ -1074,7 +1074,11 @@ const doubled = numbers.map(x => x * 2); // [2, 4, 6]
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/EmmGEa?editors=0010)**
 
+<<<<<<< HEAD
 សម្រាប់ការផ្លាស់ប្តូរនីមួយៗក្នុង history របស់ tic-tac-toes ហ្គេម យើងបង្កើត list នៃ item `<li>` ដែលមានប៊ូតុងមួយ `<button>`។ ប៊ូតុងមាន `onClick` handler មួយដែល calls method មួយមានឈ្មេាះថា `this.jumpTo()`។ យើងមិនបាន implement `jumpTo()` method នៅឡើយទេ។ សម្រាប់ពេលនេះយើងគួរតែមើលឃើញ list នៃការផ្លាស់ទីដែលបានកើតឡើងនៅក្នុងហ្គេមហើយនិង warning ក្នុង developer tools console ដែលនិយាយថា៖
+=======
+For each move in the tic-tac-toe game's history, we create a list item `<li>` which contains a button `<button>`. The button has a `onClick` handler which calls a method called `this.jumpTo()`. We haven't implemented the `jumpTo()` method yet. For now, we should see a list of the moves that have occurred in the game and a warning in the developer tools console that says:
+>>>>>>> c9b990070fc35d31b56957263e1ea9fe2fe67b40
 
 >  Warning:
 >  Each child in an array or iterator should have a unique "key" prop. Check the render method of "Game".
@@ -1225,7 +1229,11 @@ class Game extends React.Component {
 * រក្សារ history របស់ហ្គេមដែលជាដំណើរការហ្គេម
 * អនុញ្ញាតឱ្យអ្នកលេងពិនិត្យឡើងវិញនូវ history របស់ហ្គេម ហើយនិងមើលឃើញនូវ versions នៃ board របស់ហ្គេ​ម។
 
+<<<<<<< HEAD
 ការងារល្អ! យើងសង្ឃឹមថាឥឡូវនេះអ្នកមានអារម្មណ៍ថាអ្នកមានការយល់ដឹងសមរម្យពីរបៀបដែល React ធ្វើការ។
+=======
+Nice work! We hope you now feel like you have a decent grasp of how React works.
+>>>>>>> c9b990070fc35d31b56957263e1ea9fe2fe67b40
 
 មើលលទ្ធផលចុងក្រោយនៅទីនេះ៖ **[Final Result](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)**។
 
