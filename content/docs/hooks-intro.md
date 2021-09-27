@@ -98,7 +98,11 @@ React មិនបានផ្តល់នូវវិធី "attach" reusable b
 
 ពួកយើងយល់អំពីការដាក់បញ្ចូល new primitive ទៅលើ React គឺអាចមានហានិភ័យខ្លាំង។ សម្រាប់អ្នកអានដែលចង់ដឹងខ្លាំងអំពីវា យើងបានរៀបចំ [detailed RFC](https://github.com/reactjs/rfcs/pull/68) ដែលស៊ីជម្រៅជាមួយពត៌មានពិស្តារ ហើយនិងផ្តល់នូវទស្សនវិស័យបន្ថែមទៅលើការសំរេចចិត្តនិងភាពទាក់ទិនគ្នា។
 
+<<<<<<< HEAD
 **Crucially, Hooks ដំណើរការជាមួយនិងកូដដែលអ្នកធ្លាប់សរសេរ ដូច្នេះអ្នកអាចចាប់ផ្តើមប្រើវាបន្តិចម្តងៗ។** មិនបាច់ប្រញាប់ប្រញាល់ migrate ទៅ Hooks នោះទេ។ មួយទៀតគួរតែជៀសពី "big rewrites" ជាពិសេសសម្រាប់កូដដែលមើលទៅស្មុគស្មាញជាមួយ class components។ វាត្រូវការពេលបន្តិចបន្តួចដើម្បីចាប់ផ្តើមជាមួយនិងផ្នត់គំនិតនេះ "thinking in Hooks"។ សម្រាប់បទពិសោធន៍របស់ពួកយើងផ្ទាល់ វាជាពេលមួយដ៏ល្អសម្រាប់ ការប្រើប្រាស់ Hooks នៅក្នុង components ថ្មីៗក៏ដូចជា components មួយចំនួនដែលមិនសូវសំខាន់ហើយមិនស្មុគស្មាញ ពីព្រោះសមាជិកផ្សេងៗនៅក្នុងក្រុមរបស់អ្នកឆាប់ងាយយល់អំពីវា។ បន្ទាប់ពីអ្នកសាក Hooks រួចហើយ ពេលទំនេរអាច [send us feedback](https://github.com/facebook/react/issues/new) ទោះជាវិជ្ជមានឬអវិជ្ជមានក៏ដោយ។
+=======
+**Crucially, Hooks work side-by-side with existing code so you can adopt them gradually.** There is no rush to migrate to Hooks. We recommend avoiding any "big rewrites", especially for existing, complex class components. It takes a bit of a mind shift to start "thinking in Hooks". In our experience, it's best to practice using Hooks in new and non-critical components first, and ensure that everybody on your team feels comfortable with them. After you give Hooks a try, please feel free to [send us feedback](https://github.com/facebook/react/issues/new), positive or negative.
+>>>>>>> 4fab3d31469ab7a53dbf8b50cab5d57880a0c035
 
 យើងមានបំណងចង់ឲ្យ Hooks អាចប្រើប្រាស់បានជាមួយករណីដែលមានស្រាប់ទាំងអស់ជាមួយនឹង classes។ ប៉ុន្តែ **ពួកយើងនៅតែបន្តគាំទ្រ class components សម្រាប់ថ្ងៃអនាគត** នៅ Facebook យើងមានរាប់ពាន់ components ដែលបានសរសេរជាមួយ classes ហើយពួកយើងពិតជាគ្មានគម្រោងថានឹងសរសេរវាឡើងវិញនោះទេ។ ផ្ទុយទៅវិញ យើងចាប់ផ្តើមប្រើ Hooks នៅក្នុងកូដថ្មី side by side ជាមួយនិង classes។
 

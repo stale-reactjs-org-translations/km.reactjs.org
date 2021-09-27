@@ -228,6 +228,10 @@ class Parent extends React.Component {
 this.inputElement.current.focus();
 ```
 
+<<<<<<< HEAD
+=======
+When using a [HOC](/docs/higher-order-components.html) to extend components, it is recommended to [forward the ref](/docs/forwarding-refs.html) to the wrapped component using the `forwardRef` function of React. If a third party HOC does not implement ref forwarding, the above pattern can still be used as a fallback.
+>>>>>>> 4fab3d31469ab7a53dbf8b50cab5d57880a0c035
 
 នៅពេលប្រើ HOC ដើម្បីពង្រីក component
 យើងណែនាំ [forward the ref](/docs/forwarding-refs.html) សំរាប់ខ្ចប់ component ដោយប្រើ `forwardRef` function នៃ React។
