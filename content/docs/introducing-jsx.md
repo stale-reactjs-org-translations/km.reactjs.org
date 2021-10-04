@@ -180,4 +180,8 @@ const element = {
 
 >**ព័ត៌មានជំនួយ:**
 >
+<<<<<<< HEAD
 >យើងសូមណែនាំឱ្យប្រើ ["Babel" និយមន័យភាសា](https://babeljs.io/docs/editors) សម្រាប់កម្មវិធីកែសម្រួល(Text Editor) របស់អ្នក ដូច្នេះកូដ ES6 និង JSX ត្រូវបានបន្លិចឱ្យបានត្រឹមត្រូវ។
+=======
+>We recommend using the ["Babel" language definition](https://babeljs.io/docs/en/next/editors) for your editor of choice so that both ES6 and JSX code is properly highlighted.
+>>>>>>> 23d03a854ba21aeea0a03a0bd5185e0def9237d6
