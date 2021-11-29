@@ -40,7 +40,11 @@ next: cdn-links.html
 
 [Create React App](https://github.com/facebookincubator/create-react-app) គឺជា environment ដែលផ្តល់ភាពសុខស្រួល (comfortable) មួយសម្រាប់ **ការរៀន React** ហើយគឺជាវិធីដ៏ល្អបំផុតដើម្បីចាប់ផ្តើមបង្កើត **[single-page](/docs/glossary.html#single-page-application) application ថ្មីមួយ** នៅក្នុង​ React។
 
+<<<<<<< HEAD
 វាបង្កើត (sets up)នូវ development environment របស់អ្នកដូច្នេះអ្នកអាចប្រើលក្ខណៈពិសេសចុងក្រោយបំផុតរបស់ JavaScript (latest JavaScript features), ផ្តល់ developer នូវបទពិសោធដ៏អស្ចារ្យបំផុត, ហើយនិងបង្កើនប្រសិទ្ធភាព app របស់អ្នកសម្រាប់ production។ អ្នកនឹងត្រូវមាន Node >= ៨.១០ និង npm >= ៥.៦ នៅលើម៉ាស៊ីនរបស់អ្នក។ ដើម្បីបង្កើត product, run៖
+=======
+It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have [Node >= 14.0.0 and npm >= 5.6](https://nodejs.org/en/) on your machine. To create a project, run:
+>>>>>>> 0057efa12c1aa2271ef80d7a84d622732bdfa85c
 
 ```bash
 npx create-react-app my-app
@@ -74,7 +78,13 @@ Create React App មិនដោះស្រាយ​ (doesn't handle) នូវ
 
 - **[Neutrino](https://neutrinojs.org/)** រួមបញ្ចូលគ្នានូវអំណាច (power) នៃ [webpack](https://webpack.js.org/) ជាមួយភាពសាមញ្ញនៃ presets ហើយនិងរួមបញ្ចូលទាំង preset សម្រាប់ [React apps](https://neutrinojs.org/packages/react/) និង [React components](https://neutrinojs.org/packages/react-components/)។
 
+<<<<<<< HEAD
 - **[nwb](https://github.com/insin/nwb)** គឺអស្ចារ្យណាស់សម្រាប់ [ការ publishing React components សម្រាប់ npm](https://github.com/insin/nwb/blob/master/docs/guides/ReactComponents.md#developing-react-components-and-libraries-with-nwb)។ វា [អាចត្រូវបានប្រើ](https://github.com/insin/nwb/blob/master/docs/guides/ReactApps.md#developing-react-apps-with-nwb) សម្រាប់បង្កើត React apps ផងដែរ។
+=======
+- **[Nx](https://nx.dev/react)** is a toolkit for full-stack monorepo development, with built-in support for React, Next.js, [Express](https://expressjs.com/), and more.
+
+- **[Parcel](https://parceljs.org/)** is a fast, zero configuration web application bundler that [works with React](https://parceljs.org/recipes/react/).
+>>>>>>> 0057efa12c1aa2271ef80d7a84d622732bdfa85c
 
 - **[Parcel](https://parceljs.org/)** គឺលឿនណាស់, គឺជា zero configuration web application bundler ដែល [ធ្វើការជាមួយ React](https://parceljs.org/recipes.html#react)។
 
