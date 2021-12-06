@@ -39,9 +39,13 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
 
 ដែលអ្នកតែងតែបង្ហាញ JSON data model ទៅអោយអ្នកប្រើប្រាស់, អ្នកនឹងរកឃើញថាប្រសិនបើ model របស់អ្នកត្រូវបានបង្កើតឡើងដោយត្រឹមត្រូវ, UI របស់អ្នក (ហើយនិងរចនាសម្ព័ន្ធ component របស់អ្នក) នឹង map បានយ៉ាងល្អ។ នោះពីព្រេាះតែ UI និង data models មាននិន្នាការប្រកាន់ខ្ជាប់នូវ *ស្ថាបត្យកម្មព័ត៌មាន* ដូចគ្នា។ គ្រាន់តែបំបែកវាជា components ដែលតំណាងឱ្យបំណែកមួយជាក់លាក់នៃ data model របស់អ្នក។ ការបំបែក UI របស់អ្នកទៅជា components, ដែល component នីមួយៗ ត្រូវនឹងផ្នែកមួយនៃគំរូទិន្នន័យរបស់អ្នក។
 
-![Component diagram](../images/blog/thinking-in-react-components.png)
+![Diagram showing nesting of components](../images/blog/thinking-in-react-components.png)
 
+<<<<<<< HEAD
 អ្នកនឹងឃើញនៅទីនេះថាយើងមាន៥ components នៅក្នុង app ដ៏សាមញ្ញរបស់យើង។ ដែលទិន្នន័យតំណាងដោយ component នីមួយៗ។
+=======
+You'll see here that we have five components in our app. We've italicized the data each component represents. The numbers in the image correspond to the numbers below.
+>>>>>>> aa70dcedc6db07987a814dba2b296cc4c5219860
 
   1. **`FilterableProductTable` (orange):** មានឧទាហរណ៍ទាំងមូល
   2. **`SearchBar` (blue):** ទទួលការ *input របស់អ្នកប្រើប្រាស់* ទាំងអស់
@@ -74,7 +78,11 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
 
 នៅចុងបញ្ចប់នៃជំហាននេះ, អ្នកនឹងមាន library មួយជា reusable components ដែល render data model របស់អ្នក។ Components នឹងមានតែ `render` methods ដែលនេះគឺជា static version មួយនៃ app របស់អ្នក។ Component ដែលនៅផ្នែកខាងលើគេនៃរចនាសម្ព័ន្ធ (hierarchy) (`FilterableProductTable`) នឺងទទួលយក data model របស់អ្នកជា prop មួយ។ ប្រសិនបើអ្នកធ្វើការផ្លាស់ប្តូរ data model មូលដ្ឋានរបស់អ្នកហើយ call `ReactDOM.render()` ម្តងទៀត, UI នឹងត្រូវបានធ្វើបច្ចុប្បន្នភាព។ អ្នកអាចឃើញពីរបៀដែល UI របស់អ្នកធ្វើបច្ចុប្បន្នភាព ហើយនិងកន្លែងដែលវាផ្លាស់ប្តូរ។ **one-way data flow** របស់ React (ត្រូវបានគេហៅផងដែរថា *one-way binding*) រក្សារអ្វីគ្រប់យ៉ាងជាលក្ខណះ modular ហើយនិងលឿន។
 
+<<<<<<< HEAD
 ប្រសិនបើអ្នកត្រូវការជំនួយក្នុងការអនុវត្តជំហាននេះសូមចូលទៅកាន់ [React docs](/docs/)។
+=======
+Refer to the [React docs](/docs/getting-started.html) if you need help executing this step.
+>>>>>>> aa70dcedc6db07987a814dba2b296cc4c5219860
 
 ### A Brief Interlude: Props vs State {#a-brief-interlude-props-vs-state}
 
@@ -86,7 +94,11 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
 
 ដើម្បីបង្កើត app របស់អ្នកយ៉ាងត្រឹមត្រូវ, តំបូងអ្នកតម្រូវអោយគិតពីសំណុំអប្បបរមានៃ state អាចផ្លាស់ប្តូរបានដែល app របស់អ្នកត្រូវការ។ គន្លឹះគឺនៅទីនេះ [DRY: *Don't Repeat Yourself*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)។ រកមើលការតំណាងតិចតួចបំផុតនៃ state ដែល application របស់អ្នកត្រូវការហើយនិងគណនាអ្វីៗផ្សេងទៀតដែលអ្នកត្រូវការតាមតម្រូវការ។ ឧទាហរណ៍, ប្រសិនបើអ្នកកំពុងតែបង្កើតតារាង TODO មួយ, រក្សាទុក array មួយនៃធាតុ (items) របស់ TODO នៅជុំវិញ; កុំរក្សាទុក state variable ដាច់ដោយឡែកសម្រាប់ការរាប់។ ជំនួសដោយ, ពេលដែលអ្នកចង់ render TODO count, យកប្រវែងនៃធាតុរបស់ TODO array។
 
+<<<<<<< HEAD
 គិតពីបំណែកទាំងអស់នៃទិន្នន័យនៅក្នុងឧទាហរណ៍នៃ application របស់យើង។ យើងមាន៖
+=======
+Think of all the pieces of data in our example application. We have:
+>>>>>>> aa70dcedc6db07987a814dba2b296cc4c5219860
 
   * បញ្ជីផលិតផលដើម
   * search text ដែលអ្នកប្រើប្រាស់បានបញ្ចូល
@@ -139,8 +151,12 @@ Cool, ដូច្នេះយើងបានសម្រេចចិត្ត�
 
 React បង្កើតលំហូរ data ច្បាស់លាស់ដើម្បីជួយអ្នកឱ្យយល់ពីរបៀបដែលកម្មវិធីរបស់អ្នកដំណើរការ, ប៉ុន្តែវាមិនតំរូវឱ្យមានការ typing ច្រើនជាង traditional two-way data binding នេាះទេ។
 
+<<<<<<< HEAD
 ប្រសិនបើអ្នកព្យាយាម type ឬក៏ពិនិត្យ the box នៅក្នុងកំណែបច្ចុប្បន្ននៃឧទាហរណ៍នេះ,​ អ្នកនឹងឃើញថា React មិនអើពើនឹងការបញ្ចូលរបស់អ្នក។ នេះគឺជាចេតនា, 
 ដូចដែលយើងបាន set `value` prop នៃ the `input` ដែលតែងតែស្មើរទៅនិង the `state` ដែលបានបេាះពី `FilterableProductTable`។
+=======
+If you try to type or check the box in the previous version of the example (step 4), you'll see that React ignores your input. This is intentional, as we've set the `value` prop of the `input` to always be equal to the `state` passed in from `FilterableProductTable`.
+>>>>>>> aa70dcedc6db07987a814dba2b296cc4c5219860
 
 តោះគិតអំពីអ្វីដែលយើងចង់អោយកើតឡើង។ យើងចង់ធ្វើឱ្យប្រាកដថានៅពេលណាដែលអ្នកប្រើប្រាស់ផ្លាស់ប្តូរ form, យើងធ្វើបច្ចុប្បន្នភាព state ដើម្បីឆ្លុះបញ្ចាំងពីការបញ្ចូលរបស់អ្នកប្រើប្រាស់។ ដែល components គួរតែធ្វើបច្ចុប្បន្នភាពនូវ state ផ្ទាល់ខ្លួនរបស់ពួកវា, `FilterableProductTable` នឹងបេាះ callbacks ទៅកាន់ `SearchBar` ដែលនឹង fire រាល់ពេលដែល state គួរតែត្រូវបានគេធ្វើបច្ចុប្បន្នភាព។ យើងអាចប្រើ `onChange` event ទៅលើ inputs ដើម្បីជូនដំណឹងអំពីវា។ The callbacks ត្រូវបានបេាះដោយ `FilterableProductTable` នឹង call `setState()`, ហើយ app នឹងត្រូវបានគេធ្វើបច្ចុប្បន្នភាព។
 
