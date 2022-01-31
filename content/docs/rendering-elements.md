@@ -38,7 +38,11 @@ const element = <h1>Hello, world</h1>;
 
 `embed:rendering-elements/render-an-element.js`
 
+<<<<<<< HEAD
 [សាកល្បងវានៅលើ CodePen](codepen://rendering-elements/render-an-element)
+=======
+**[Try it on CodePen](https://codepen.io/gaearon/pen/ZpvBNJ?editors=1010)**
+>>>>>>> 5f0549c86e7a9c0774e66687d1bc0118a681eb9d
 
 វាបង្ហាញ "ជំរាបសួរពិភពលោក" នៅលើទំព័រនេះ។
 
@@ -52,7 +56,11 @@ const element = <h1>Hello, world</h1>;
 
 `embed:rendering-elements/update-rendered-element.js`
 
+<<<<<<< HEAD
 [សាកល្បងវានៅលើ CodePen](codepen://rendering-elements/update-rendered-element)
+=======
+**[Try it on CodePen](https://codepen.io/gaearon/pen/gwoJZk?editors=1010)**
+>>>>>>> 5f0549c86e7a9c0774e66687d1bc0118a681eb9d
 
 វាហៅ [`ReactDOM.render()`](/docs/react-dom.html#render) រាល់វិនាទី ពី [`setInterval()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval) callback។
 
@@ -66,7 +74,11 @@ const element = <h1>Hello, world</h1>;
 
 React DOM React DOM ប្រៀបធៀបធាតុនិងchildrenរបស់វាទៅនឹងធាតុមួយមុន, ហើយអនុវត្តតែការធ្វើឱ្យទាន់សម័យ DOM ដែលចាំបាច់ដើម្បីនាំយក DOM ទៅជា state ដែលចង់បាន។
 
+<<<<<<< HEAD
 អ្នកអាចផ្ទៀងផ្ទាត់បានដោយត្រួតពិនិត្យមើល [ឧទាហរណ៍ចុងក្រោយ](codepen://rendering-elements/update-rendered-element)ជាមួយនឹងឧបករណ៍របស់browser:
+=======
+You can verify by inspecting the [last example](https://codepen.io/gaearon/pen/gwoJZk?editors=1010) with the browser tools:
+>>>>>>> 5f0549c86e7a9c0774e66687d1bc0118a681eb9d
 
 ![DOM inspector បានបង្ហាញពីភាពទាន់សម័យ](../images/docs/granular-dom-updates.gif)
 
