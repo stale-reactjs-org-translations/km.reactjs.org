@@ -67,7 +67,11 @@ ReactDOM.render(
 );
 ```
 
+<<<<<<< HEAD
 [សាកល្បងនៅលើ Codepen](codepen://introducing-jsx)
+=======
+**[Try it on CodePen](https://codepen.io/gaearon/pen/PGEjdG?editors=1010)**
+>>>>>>> 1e3b023d3192c36a2da7b72389debee2f0e0e8b0
 
 យើងធ្វើការបំបែក JSX នៅលើបន្ទាត់ជាច្រើនដើម្បីឲមានភាពងាយស្រួលសម្រាប់ការអាន។ ខណៈពេលដែលវាមិនត្រូវបានទាមទារ នៅពេលធ្វើដូចនេះ យើងក៏សូមផ្តល់អនុសាសន៍រុំវានៅក្នុងវង់ក្រចកដើម្បីជៀសវាងពីចំនុចគ្រោះថ្នាក់នៃ [បញ្ចូល semicolon ស្វ័យប្រវត្តិ](https://stackoverflow.com/q/2846283).
 
@@ -91,7 +95,7 @@ function getGreeting(user) {
 អ្នកអាចប្រើ quotes ដើម្បីបញ្ជាក់ string ជាគុណលក្ខណៈ:
 
 ```js
-const element = <div tabIndex="0"></div>;
+const element = <a href="https://www.reactjs.org"> link </a>;
 ```
 
 អ្នកក៏អាចប្រើដង្កៀបអង្កាញ់({})ដើម្បីបង្កប់កន្សោម JavaScript នៅក្នុងគុណលក្ខណៈ:
@@ -180,4 +184,8 @@ const element = {
 
 >**ព័ត៌មានជំនួយ:**
 >
+<<<<<<< HEAD
 >យើងសូមណែនាំឱ្យប្រើ ["Babel" និយមន័យភាសា](https://babeljs.io/docs/editors) សម្រាប់កម្មវិធីកែសម្រួល(Text Editor) របស់អ្នក ដូច្នេះកូដ ES6 និង JSX ត្រូវបានបន្លិចឱ្យបានត្រឹមត្រូវ។
+=======
+>We recommend using the ["Babel" language definition](https://babeljs.io/docs/en/next/editors) for your editor of choice so that both ES6 and JSX code is properly highlighted.
+>>>>>>> 1e3b023d3192c36a2da7b72389debee2f0e0e8b0
