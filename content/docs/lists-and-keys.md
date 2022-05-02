@@ -33,13 +33,14 @@ const listItems = numbers.map((number) =>
 );
 ```
 
+<<<<<<< HEAD
 យើងរួមបញ្ចូល `listItems` array ទាំងមូលដែលនៅខាងក្នុង `<ul>` element មួយ ហើយនិង [render វាទៅកាន់ DOM](/docs/rendering-elements.html#rendering-an-element-into-the-dom)៖
+=======
+Then, we can include the entire `listItems` array inside a `<ul>` element:
+>>>>>>> 5f3a9756e00e256735a5f52df19b403d8fdd3a9d
 
 ```javascript{2}
-ReactDOM.render(
-  <ul>{listItems}</ul>,
-  document.getElementById('root')
-);
+<ul>{listItems}</ul>
 ```
 
 [**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/GjPyQr?editors=0011)
@@ -64,10 +65,8 @@ function NumberList(props) {
 }
 
 const numbers = [1, 2, 3, 4, 5];
-ReactDOM.render(
-  <NumberList numbers={numbers} />,
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<NumberList numbers={numbers} />);
 ```
 
 នៅពេលដែលអ្នក run កូដនេះ អ្នកនឹងទទួលបានការព្រមាន (warning) មួយថា​ key គួរត្រូវបានផ្តល់ជូនសម្រាប់ list items។ "key" គឺជា string attribute ពិសេសមួយដែលអ្នកត្រូវតែរួមបញ្ចូលនៅពេលកំពុងបង្កើត lists នៃ elements។ យើងនឹងពិភាក្សាគ្នាពីមូលហេតុដែលវាសំខាន់នៅក្នុងផ្នែកបន្ទាប់។
@@ -86,12 +85,6 @@ function NumberList(props) {
     <ul>{listItems}</ul>
   );
 }
-
-const numbers = [1, 2, 3, 4, 5];
-ReactDOM.render(
-  <NumberList numbers={numbers} />,
-  document.getElementById('root')
-);
 ```
 
 [**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/jrXYRR?editors=0011)
@@ -166,12 +159,6 @@ function NumberList(props) {
     </ul>
   );
 }
-
-const numbers = [1, 2, 3, 4, 5];
-ReactDOM.render(
-  <NumberList numbers={numbers} />,
-  document.getElementById('root')
-);
 ```
 
 **ឧទាហរណ៍៖ ការប្រើប្រាស់ Key បានត្រឹមត្រូវ**
@@ -186,8 +173,7 @@ function NumberList(props) {
   const numbers = props.numbers;
   const listItems = numbers.map((number) =>
     // Correct! Key should be specified inside the array.
-    <ListItem key={number.toString()}
-              value={number} />
+    <ListItem key={number.toString()} value={number} />
   );
   return (
     <ul>
@@ -195,12 +181,6 @@ function NumberList(props) {
     </ul>
   );
 }
-
-const numbers = [1, 2, 3, 4, 5];
-ReactDOM.render(
-  <NumberList numbers={numbers} />,
-  document.getElementById('root')
-);
 ```
 
 [**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/ZXeOGM?editors=0010)
@@ -209,7 +189,11 @@ ReactDOM.render(
 
 ### Keys Must Only Be Unique Among Siblings {#keys-must-only-be-unique-among-siblings}
 
+<<<<<<< HEAD
 Keys ដែលត្រូវបានប្រើក្នុង arrays គួរតែមានតែមួយគត់ (unique) ក្នុងចំណោម siblings រ​បស់ពួកវា។ ទោះជាយ៉ាងណា ពួកវាមិនចាំបាច់មានតែមួយគត់ (unique) ជាលក្ខណះ global នេាះទេ។ យើងអាចប្រើ keys ដូចគ្នានៅពេលដែលយើងបង្កើត arrays ពីរផ្សេងគ្នា៖
+=======
+Keys used within arrays should be unique among their siblings. However, they don't need to be globally unique. We can use the same keys when we produce two different arrays:
+>>>>>>> 5f3a9756e00e256735a5f52df19b403d8fdd3a9d
 
 ```js{2,5,11,12,19,21}
 function Blog(props) {
@@ -241,10 +225,9 @@ const posts = [
   {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
   {id: 2, title: 'Installation', content: 'You can install React from npm.'}
 ];
-ReactDOM.render(
-  <Blog posts={posts} />,
-  document.getElementById('root')
-);
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Blog posts={posts} />);
 ```
 
 [**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/NRZYGN?editors=0010)
