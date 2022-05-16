@@ -63,26 +63,35 @@ const element = <Welcome name="Sara" />;
 
 ឧទាហរណ៏, កូដនេះធ្វើការមំលែងទៅជា "Hello, Sara" នៅលើទំព័រ:
 
-```js{1,5}
+```js{1,6}
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
 const element = <Welcome name="Sara" />;
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-);
+root.render(element);
 ```
 
+<<<<<<< HEAD
 [សាកល្បងនៅលើ CodePen](codepen://components-and-props/rendering-a-component)
+=======
+**[Try it on CodePen](https://codepen.io/gaearon/pen/YGYmEG?editors=1010)**
+>>>>>>> 951fae39f0e12dc061f1564d02b2f4707c0541c4
 
 ចូរយើងសង្ខេបនូវអ្វីដែលកើតឡើងនៅក្នុងឧទាហរណ៍នេះ:
 
+<<<<<<< HEAD
 1. យើង​ហៅ `ReactDOM.render()` ជាមួយនឹង `<Welcome name="Sara" />` ធាតុ។
 2. React ហៅ `Welcome` component ជាមួយ `{name: 'Sara'}` ជា props។
 3. `Welcome` component របស់យើង ត្រឡប់ជាមួយ `<h1>Hello, Sara</h1>` ជាលទ្ធផល។
 4. React DOM ធ្វើឱ្យទាន់សម័យមានប្រសិទ្ធិភាព DOM ដើម្បីផ្គូផ្គង `<h1>Hello, Sara</h1>`.
+=======
+1. We call `root.render()` with the `<Welcome name="Sara" />` element.
+2. React calls the `Welcome` component with `{name: 'Sara'}` as the props.
+3. Our `Welcome` component returns a `<h1>Hello, Sara</h1>` element as the result.
+4. React DOM efficiently updates the DOM to match `<h1>Hello, Sara</h1>`.
+>>>>>>> 951fae39f0e12dc061f1564d02b2f4707c0541c4
 
 >**ចំណាំ:** តែងតែចាប់ផ្ដើមឈ្មោះ component ជាមួយអក្សរធំ។
 >
@@ -110,14 +119,13 @@ function App() {
     </div>
   );
 }
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
 ```
 
+<<<<<<< HEAD
 [សាកល្បងនៅលើ CodePen](codepen://components-and-props/composing-components)
+=======
+**[Try it on CodePen](https://codepen.io/gaearon/pen/KgQKPr?editors=1010)**
+>>>>>>> 951fae39f0e12dc061f1564d02b2f4707c0541c4
 
 ជាធម្មតា, កម្មវិធី React ថ្មីមាន `App` component តែមួយនៅកំពូលបំផុត. ទោះយ៉ាងណា, ប្រសិនបើអ្នកធ្វើសមាហរណកម្មបញ្ចូលគ្នាទៅក្នុងកម្មវិធីដែលមានស្រាប់ អ្នកអាចចាប់ផ្តើមពីតូចឡើងដោយមាន component តូចមួយដូចជា `Button` ហើយជាបណ្តើរដំណើរ វិធីរបស់អ្នកទៅកំពូលនៃឋានានុក្រមទិដ្ឋភាព។
 
@@ -151,7 +159,11 @@ function Comment(props) {
 }
 ```
 
+<<<<<<< HEAD
 [សាកល្បងនៅលើ CodePen](codepen://components-and-props/extracting-components)
+=======
+**[Try it on CodePen](https://codepen.io/gaearon/pen/VKQwEo?editors=1010)**
+>>>>>>> 951fae39f0e12dc061f1564d02b2f4707c0541c4
 
 វាទទួលយក author (ជាវត្ថុ) text (ជាអក្សរ) និង date (ជាកាលបរិច្ឆេទ) ជាprops ហើយពិពណ៌នាអំពីមតិយោបល់នៅលើគេហទំព័រប្រព័ន្ធផ្សព្វផ្សាយសង្គមមួយ។
 
@@ -230,9 +242,15 @@ function Comment(props) {
 }
 ```
 
+<<<<<<< HEAD
 [សាកល្បងនៅលើ CodePen](codepen://components-and-props/extracting-components-continued)
 
 ការទាញយក components អាចមើលទៅដូចជាការងារដ៏ធុញទ្រាន់នៅពេលដំបូង ប៉ុន្តែវាមានភាពទូលំទូលាយនៃការប្រើ components ឡើងវិញ នៅក្នុងកម្មវិធីធំៗ។ ច្បាប់ល្អគឺថា ប្រសិនបើផ្នែកនៃ UI របស់អ្នកត្រូវបានប្រើច្រើនដង (`Button`, `Panel`, `Avatar`) ឬស្មុគ្រស្មាញគ្រប់គ្រាន់ដោយ Component ខ្លួនឯង(`App`, `FeedStory`, `Comment`) វាជាបេក្ខជនដ៏ល្អដើម្បីក្លាយជាcomponentប្រើម្តងទៀត។
+=======
+**[Try it on CodePen](https://codepen.io/gaearon/pen/rrJNJY?editors=1010)**
+
+Extracting components might seem like grunt work at first, but having a palette of reusable components pays off in larger apps. A good rule of thumb is that if a part of your UI is used several times (`Button`, `Panel`, `Avatar`), or is complex enough on its own (`App`, `FeedStory`, `Comment`), it is a good candidate to be extracted to a separate component.
+>>>>>>> 951fae39f0e12dc061f1564d02b2f4707c0541c4
 
 ## Props គឺមិនអាចកែសម្រួល {#props-are-read-only}
 
