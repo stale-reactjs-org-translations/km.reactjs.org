@@ -228,6 +228,10 @@ class Parent extends React.Component {
 this.inputElement.current.focus();
 ```
 
+<<<<<<< HEAD
+=======
+When using a [HOC](/docs/higher-order-components.html) to extend components, it is recommended to [forward the ref](/docs/forwarding-refs.html) to the wrapped component using the `forwardRef` function of React. If a third party HOC does not implement ref forwarding, the above pattern can still be used as a fallback.
+>>>>>>> d522a5f4a9faaf6fd314f4d15f1be65ca997760f
 
 នៅពេលប្រើ HOC ដើម្បីពង្រីក component
 យើងណែនាំ [forward the ref](/docs/forwarding-refs.html) សំរាប់ខ្ចប់ component ដោយប្រើ `forwardRef` function នៃ React។
@@ -458,7 +462,11 @@ class BlurExample extends React.Component {
 
 [The Accessibility Engine](https://www.deque.com/products/axe/) ឬ aXe គឺជាកម្មវិធីបន្ថែមដែលអាចចូលបានរបស់ inspector browser បានស្ថាបនាលើ `aXe-core`។
 
+<<<<<<< HEAD
 អ្នកក៏អាចប្រើ [react-axe](https://github.com/dylanb/react-axe) module សម្រាប់រាយការក្នុងការរកដោយផ្ទាល់ទៅកាន់ console ខណះដែលកំពុង developing និង debugging។
+=======
+You can also use the [@axe-core/react](https://github.com/dequelabs/axe-core-npm/tree/develop/packages/react) module to report these accessibility findings directly to the console while developing and debugging.
+>>>>>>> d522a5f4a9faaf6fd314f4d15f1be65ca997760f
 
 #### WebAIM WAVE {#webaim-wave}
 
