@@ -31,8 +31,13 @@ function Example() {
 
 >បញ្ជាក់
 >
+<<<<<<< HEAD
 >React ១៦.៨.០ គឺជាកំណែរប្រែរដំបូងបំផុតដែលអាចប្រើប្រាស់ជាមួយ Hooks។ នៅពេលកំពុង upgrade, កុំភ្លេច update packages ទាំងអស់, រួមទាំង React DOM។
 >React Native អាចប្រើប្រាស់ Hooks បានតាំងពី [React Native ជំនាន់ ០.៥៩](https://reactnative.dev/blog/2019/03/12/releasing-react-native-059)។
+=======
+>React 16.8.0 is the first release to support Hooks. When upgrading, don't forget to update all packages, including React DOM.
+>React Native has supported Hooks since [the 0.59 release of React Native](https://reactnative.dev/blog/2019/03/12/releasing-react-native-059).
+>>>>>>> df2673d1b6ec0cc6657fd58690bbf30fa1e6e0e6
 
 ## វីដេអូនៃការណែនាំ {#video-introduction}
 
@@ -96,9 +101,15 @@ React មិនបានផ្តល់នូវវិធី "attach" reusable b
 
 ពួកយើងយល់អំពី React developers ដែលផ្តោតទៅលើ shipping products ហើយមិនសូវជាមានពេលសិក្សាបន្ថែមអំពី new API ដែលចេញមកថ្មីៗ។ Hooks គឺថ្មីស្រឡាងតែម្តង ហើយវាប្រហែលជាល្អដែរ ប្រសិនបើយើងរង់ចាំគំរូឧទាហរណ៍បន្ថែម ក៏ដូចជាគន្លឹះខ្លះៗ មុនពេលដែលយើងចាប់ផ្តើមប្រើវា។
 
+<<<<<<< HEAD
 ពួកយើងយល់អំពីការដាក់បញ្ចូល new primitive ទៅលើ React គឺអាចមានហានិភ័យខ្លាំង។ សម្រាប់អ្នកអានដែលចង់ដឹងខ្លាំងអំពីវា យើងបានរៀបចំ [detailed RFC](https://github.com/reactjs/rfcs/pull/68) ដែលស៊ីជម្រៅជាមួយពត៌មានពិស្តារ ហើយនិងផ្តល់នូវទស្សនវិស័យបន្ថែមទៅលើការសំរេចចិត្តនិងភាពទាក់ទិនគ្នា។
 
 **Crucially, Hooks ដំណើរការជាមួយនិងកូដដែលអ្នកធ្លាប់សរសេរ ដូច្នេះអ្នកអាចចាប់ផ្តើមប្រើវាបន្តិចម្តងៗ។** មិនបាច់ប្រញាប់ប្រញាល់ migrate ទៅ Hooks នោះទេ។ មួយទៀតគួរតែជៀសពី "big rewrites" ជាពិសេសសម្រាប់កូដដែលមើលទៅស្មុគស្មាញជាមួយ class components។ វាត្រូវការពេលបន្តិចបន្តួចដើម្បីចាប់ផ្តើមជាមួយនិងផ្នត់គំនិតនេះ "thinking in Hooks"។ សម្រាប់បទពិសោធន៍របស់ពួកយើងផ្ទាល់ វាជាពេលមួយដ៏ល្អសម្រាប់ ការប្រើប្រាស់ Hooks នៅក្នុង components ថ្មីៗក៏ដូចជា components មួយចំនួនដែលមិនសូវសំខាន់ហើយមិនស្មុគស្មាញ ពីព្រោះសមាជិកផ្សេងៗនៅក្នុងក្រុមរបស់អ្នកឆាប់ងាយយល់អំពីវា។ បន្ទាប់ពីអ្នកសាក Hooks រួចហើយ ពេលទំនេរអាច [send us feedback](https://github.com/facebook/react/issues/new) ទោះជាវិជ្ជមានឬអវិជ្ជមានក៏ដោយ។
+=======
+We also understand that the bar for adding a new primitive to React is extremely high. For curious readers, we have prepared a [detailed RFC](https://github.com/reactjs/rfcs/pull/68) that dives into the motivation with more details, and provides extra perspective on the specific design decisions and related prior art.
+
+**Crucially, Hooks work side-by-side with existing code so you can adopt them gradually.** There is no rush to migrate to Hooks. We recommend avoiding any "big rewrites", especially for existing, complex class components. It takes a bit of a mind shift to start "thinking in Hooks". In our experience, it's best to practice using Hooks in new and non-critical components first, and ensure that everybody on your team feels comfortable with them. After you give Hooks a try, please feel free to [send us feedback](https://github.com/facebook/react/issues/new), positive or negative.
+>>>>>>> df2673d1b6ec0cc6657fd58690bbf30fa1e6e0e6
 
 យើងមានបំណងចង់ឲ្យ Hooks អាចប្រើប្រាស់បានជាមួយករណីដែលមានស្រាប់ទាំងអស់ជាមួយនឹង classes។ ប៉ុន្តែ **ពួកយើងនៅតែបន្តគាំទ្រ class components សម្រាប់ថ្ងៃអនាគត** នៅ Facebook យើងមានរាប់ពាន់ components ដែលបានសរសេរជាមួយ classes ហើយពួកយើងពិតជាគ្មានគម្រោងថានឹងសរសេរវាឡើងវិញនោះទេ។ ផ្ទុយទៅវិញ យើងចាប់ផ្តើមប្រើ Hooks នៅក្នុងកូដថ្មី side by side ជាមួយនិង classes។
 
