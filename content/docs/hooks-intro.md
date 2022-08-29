@@ -31,8 +31,13 @@ function Example() {
 
 >បញ្ជាក់
 >
+<<<<<<< HEAD
 >React ១៦.៨.០ គឺជាកំណែរប្រែរដំបូងបំផុតដែលអាចប្រើប្រាស់ជាមួយ Hooks។ នៅពេលកំពុង upgrade, កុំភ្លេច update packages ទាំងអស់, រួមទាំង React DOM។
 >React Native អាចប្រើប្រាស់ Hooks បានតាំងពី [React Native ជំនាន់ ០.៥៩](https://reactnative.dev/blog/2019/03/12/releasing-react-native-059)។
+=======
+>React 16.8.0 is the first release to support Hooks. When upgrading, don't forget to update all packages, including React DOM.
+>React Native has supported Hooks since [the 0.59 release of React Native](https://reactnative.dev/blog/2019/03/12/releasing-react-native-059).
+>>>>>>> ea9e9ab2817c8b7eff5ff60e8fe9b649fd747606
 
 ## វីដេអូនៃការណែនាំ {#video-introduction}
 
@@ -80,7 +85,11 @@ React មិនបានផ្តល់នូវវិធី "attach" reusable b
 
 ### Classes ធ្វើឲ្យមានភាពភ័ណ្ឌច្រឡំទាំងអ្នកសរសេរនិងម៉ាស៊ីន {#classes-confuse-both-people-and-machines}
 
+<<<<<<< HEAD
 ជាក់ស្តែង ដើម្បីធ្វើឲ្យកូដ reuse ហើយ organize ឲ្យមានសណ្តាប់ធ្នាប់ល្អគឺវាពិតជាពិបាកខ្លាំងណាស់។ ពួកយើងយល់ឃើញថា classes គឺជាឧបសគ្គដ៏ធំមួយសម្រាប់ការរៀន React។ អ្នកគួរតែយល់ដឹងអំពីពាក្យ `this` ដែលជាតួអង្គសំខាន់មួយនៅក្នុងភាសា JavaScript ហើយក៏ប្រហែលជាខុសគ្នាឆ្ងាយអំពីតួនាទីរបស់វានៅក្នុងភាសាដទៃទៀត។ អ្នកគួរតែចំណាំអំពីរបៀប bind the event handlers។ Without unstable [syntax proposals](https://babeljs.io/docs/en/babel-plugin-transform-class-properties/) the code is very verbose។ យើងអាចយល់អំពី props, state, និង top-down data flow យ៉ាងច្បាស់ប៉ុន្តែនៅមានឧបសគ្គបន្តិចបន្តួចជាមួយ classes។ ភាពខុសគ្នារវាង function ហើយនឹង class components នៅក្នុង React។ ហើយកាលៈទេសៈក្នុងការប្រើវាអាចនិងមិនមានការយល់ស្របរវាង experienced React developers។
+=======
+In addition to making code reuse and code organization more difficult, we've found that classes can be a large barrier to learning React. You have to understand how `this` works in JavaScript, which is very different from how it works in most languages. You have to remember to bind the event handlers. Without [ES2022 public class fields](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields#public_instance_fields), the code is very verbose. People can understand props, state, and top-down data flow perfectly well but still struggle with classes. The distinction between function and class components in React and when to use each one leads to disagreements even between experienced React developers.
+>>>>>>> ea9e9ab2817c8b7eff5ff60e8fe9b649fd747606
 
 ថ្វីបើ React ត្រូវបានដាក់ឲ្យប្រើប្រាស់រយៈពេល ៥ ឆ្នាំមកហើយ ក៏ពួកយើងចង់ឲ្យវា ត្រូវបានគេប្រើប្រាស់ ៥ ឆ្នាំទៅមុខទៀត។ ជាក់ស្តែង [Svelte](https://svelte.technology/), [Angular](https://angular.io/), [Glimmer](https://glimmerjs.com/), ហើយនឹង [ahead-of-time compilation](https://en.wikipedia.org/wiki/Ahead-of-time_compilation) នៃ components មានសក្តានុពលច្រើននាពេលអនាគត។ ជាពិសេសប្រសិនបើវាមិនកំណត់ចំពោះ templates។ ថ្មីៗកន្លងមកនេះ យើងបានពិសោធជាមួយ [component folding](https://github.com/facebook/react/issues/7323) ដែលបានប្រើ [Prepack](https://prepack.io/) ហើយយើងបានឃើញលទ្ធផលដំបូងទទួលបានជោគជ័យ។ However យើងបានរកឃើញ class components អាច encourage unintentional patterns ដែលអាចធ្វើឲ្យ optimizations ត្រឡប់ទៅ slower path។ Classes present issues for today's tools too។ ឧទាហរណ៍ classes មិនបាន minify ល្អឥតខ្ចោះនោះទេ ដែលអាចធ្វើឲ្យ hot reloading flaky ហើយនឹង unreliable។ យើងចង់ណែនាំ API មួយដែលអាចធ្វើឲ្យកូដស្ថិតនៅលើ optimizable path។
 
@@ -96,9 +105,15 @@ React មិនបានផ្តល់នូវវិធី "attach" reusable b
 
 ពួកយើងយល់អំពី React developers ដែលផ្តោតទៅលើ shipping products ហើយមិនសូវជាមានពេលសិក្សាបន្ថែមអំពី new API ដែលចេញមកថ្មីៗ។ Hooks គឺថ្មីស្រឡាងតែម្តង ហើយវាប្រហែលជាល្អដែរ ប្រសិនបើយើងរង់ចាំគំរូឧទាហរណ៍បន្ថែម ក៏ដូចជាគន្លឹះខ្លះៗ មុនពេលដែលយើងចាប់ផ្តើមប្រើវា។
 
+<<<<<<< HEAD
 ពួកយើងយល់អំពីការដាក់បញ្ចូល new primitive ទៅលើ React គឺអាចមានហានិភ័យខ្លាំង។ សម្រាប់អ្នកអានដែលចង់ដឹងខ្លាំងអំពីវា យើងបានរៀបចំ [detailed RFC](https://github.com/reactjs/rfcs/pull/68) ដែលស៊ីជម្រៅជាមួយពត៌មានពិស្តារ ហើយនិងផ្តល់នូវទស្សនវិស័យបន្ថែមទៅលើការសំរេចចិត្តនិងភាពទាក់ទិនគ្នា។
 
 **Crucially, Hooks ដំណើរការជាមួយនិងកូដដែលអ្នកធ្លាប់សរសេរ ដូច្នេះអ្នកអាចចាប់ផ្តើមប្រើវាបន្តិចម្តងៗ។** មិនបាច់ប្រញាប់ប្រញាល់ migrate ទៅ Hooks នោះទេ។ មួយទៀតគួរតែជៀសពី "big rewrites" ជាពិសេសសម្រាប់កូដដែលមើលទៅស្មុគស្មាញជាមួយ class components។ វាត្រូវការពេលបន្តិចបន្តួចដើម្បីចាប់ផ្តើមជាមួយនិងផ្នត់គំនិតនេះ "thinking in Hooks"។ សម្រាប់បទពិសោធន៍របស់ពួកយើងផ្ទាល់ វាជាពេលមួយដ៏ល្អសម្រាប់ ការប្រើប្រាស់ Hooks នៅក្នុង components ថ្មីៗក៏ដូចជា components មួយចំនួនដែលមិនសូវសំខាន់ហើយមិនស្មុគស្មាញ ពីព្រោះសមាជិកផ្សេងៗនៅក្នុងក្រុមរបស់អ្នកឆាប់ងាយយល់អំពីវា។ បន្ទាប់ពីអ្នកសាក Hooks រួចហើយ ពេលទំនេរអាច [send us feedback](https://github.com/facebook/react/issues/new) ទោះជាវិជ្ជមានឬអវិជ្ជមានក៏ដោយ។
+=======
+We also understand that the bar for adding a new primitive to React is extremely high. For curious readers, we have prepared a [detailed RFC](https://github.com/reactjs/rfcs/pull/68) that dives into the motivation with more details, and provides extra perspective on the specific design decisions and related prior art.
+
+**Crucially, Hooks work side-by-side with existing code so you can adopt them gradually.** There is no rush to migrate to Hooks. We recommend avoiding any "big rewrites", especially for existing, complex class components. It takes a bit of a mind shift to start "thinking in Hooks". In our experience, it's best to practice using Hooks in new and non-critical components first, and ensure that everybody on your team feels comfortable with them. After you give Hooks a try, please feel free to [send us feedback](https://github.com/facebook/react/issues/new), positive or negative.
+>>>>>>> ea9e9ab2817c8b7eff5ff60e8fe9b649fd747606
 
 យើងមានបំណងចង់ឲ្យ Hooks អាចប្រើប្រាស់បានជាមួយករណីដែលមានស្រាប់ទាំងអស់ជាមួយនឹង classes។ ប៉ុន្តែ **ពួកយើងនៅតែបន្តគាំទ្រ class components សម្រាប់ថ្ងៃអនាគត** នៅ Facebook យើងមានរាប់ពាន់ components ដែលបានសរសេរជាមួយ classes ហើយពួកយើងពិតជាគ្មានគម្រោងថានឹងសរសេរវាឡើងវិញនោះទេ។ ផ្ទុយទៅវិញ យើងចាប់ផ្តើមប្រើ Hooks នៅក្នុងកូដថ្មី side by side ជាមួយនិង classes។
 
