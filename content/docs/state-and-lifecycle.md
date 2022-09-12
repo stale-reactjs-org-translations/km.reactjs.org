@@ -10,9 +10,15 @@ next: handling-events.html
 
 ទំព័រនេះបង្ហាញពីគំនិតនៃ state និង lifecycle នៅក្នុង React component. អ្នកអាចរកឃើញ [លំអិត API component លំអិតនៅទីនេះ](/docs/react-component.html).
 
+<<<<<<< HEAD
 សូមពិចារណាគំរូនាឡិកាពី [ផ្នែកមួយនៃផ្នែកមុន](/docs/rendering-elements.html#updating-the-rendered-element). នៅក្នុង [ការបង្ហាញធាតុ](/docs/rendering-elements.html#rendering-an-element-into-the-dom),យើងទើបតែរៀនវិធីដើម្បីធ្វើបច្ចុប្បន្នភាព UI តែមួយប៉ុណ្ណោះ. យើង​ហៅ `ReactDOM.render()` ដើម្បីផ្លាស់ប្តូរលទ្ធផលបង្ហាញ:
+=======
+Consider the ticking clock example from [one of the previous sections](/docs/rendering-elements.html#updating-the-rendered-element). In [Rendering Elements](/docs/rendering-elements.html#rendering-an-element-into-the-dom), we have only learned one way to update the UI. We call `root.render()` to change the rendered output:
+>>>>>>> c7d858947f832d1ba4e78caebc391fd964ff6de6
 
-```js{8-11}
+```js{10}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+  
 function tick() {
   const element = (
     <div>
@@ -20,10 +26,7 @@ function tick() {
       <h2>It is {new Date().toLocaleTimeString()}.</h2>
     </div>
   );
-  ReactDOM.render(
-    element,
-    document.getElementById('root')
-  );
+  root.render(element);
 }
 
 setInterval(tick, 1000);
@@ -35,7 +38,9 @@ setInterval(tick, 1000);
 
 យើងអាចចាប់ផ្ដើមដោយ encapsulating របៀបមើលនាឡិកា:
 
-```js{3-6,12}
+```js{5-8,13}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
 function Clock(props) {
   return (
     <div>
@@ -46,10 +51,7 @@ function Clock(props) {
 }
 
 function tick() {
-  ReactDOM.render(
-    <Clock date={new Date()} />,
-    document.getElementById('root')
-  );
+  root.render(<Clock date={new Date()} />);
 }
 
 setInterval(tick, 1000);
@@ -62,10 +64,7 @@ setInterval(tick, 1000);
 ជាគំនិត យើងចង់សរសេរវាម្តងនិងមានការធ្វើឱ្យទាន់សម័យ 'Clock' ខ្លួនវាផ្ទាល់:
 
 ```js{2}
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('root')
-);
+root.render(<Clock />);
 ```
 
 ដើម្បីអនុវត្ត យើងត្រូវបន្ថែម "state" ទៅcomponent `Clock` ។
@@ -160,10 +159,7 @@ Class components គួរតែហៅ constructor ជាមួយ `props`.
 3) យក `date` ចេញពីធាតុ `<Clock />`:
 
 ```js{2}
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('root')
-);
+root.render(<Clock />);
 ```
 
 ក្រោយមកយើងនឹងបន្ថែមកូដកំណត់ពេលវេលាទៅ component ខ្លួនឯងវិញ។
@@ -187,10 +183,8 @@ class Clock extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Clock />);
 ```
 
 [**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/KgQpJd?editors=0010)
@@ -296,10 +290,8 @@ class Clock extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Clock />);
 ```
 
 [**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/amqdNA?editors=0010)
@@ -308,7 +300,11 @@ ReactDOM.render(
 
 តោះសង្ខេបឡើងវិញ អ្វីដែលកើតឡើងនិងលំដាប់ដែលវិធីសាស្រ្តត្រូវបានគេហៅថា:
 
+<<<<<<< HEAD
 1) ពេលណា​ `<Clock />` ត្រូវបានបញ្ជូនទៅ `ReactDOM.render()`, React ហៅ constructor នៃ `Clock` component. ចាប់តាំងពី `Clock` ត្រូវការបង្ហាញពេលវេលាបច្ចុប្បន្ន, វាចាប់ផ្ដើម `this.state` ជាមួយ object រួមទាំងពេលបច្ចុប្បន្ន។ ក្រោយមកយើងនឹងធ្វើបច្ចុប្បន្នភាព state។
+=======
+1) When `<Clock />` is passed to `root.render()`, React calls the constructor of the `Clock` component. Since `Clock` needs to display the current time, it initializes `this.state` with an object including the current time. We will later update this state.
+>>>>>>> c7d858947f832d1ba4e78caebc391fd964ff6de6
 
 2) React បន្ទាប់មកហៅ `Clock` component's `render()` method. នេះ​គឺជា​របៀបដែល React រៀនអ្វីដែលគួរត្រូវបានបង្ហាញនៅលើអេក្រង់។ React បន្ទាប់មកធ្វើឱ្យទាន់សម័យ DOM ដើម្បីផ្គូផ្គងទៅការបង្ហាញរបស់ `Clock`។
 
@@ -420,12 +416,15 @@ this.setState(function(state, props) {
 Component អាចជ្រើសរើសដើម្បី pass state down ដូច props ទៅ child components:
 
 ```js
+<<<<<<< HEAD
 <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
 ```
 
 នេះក៏ដំណើរការសម្រាប់ user-defined components:
 
 ```js
+=======
+>>>>>>> c7d858947f832d1ba4e78caebc391fd964ff6de6
 <FormattedDate date={this.state.date} />
 ```
 
@@ -455,11 +454,6 @@ function App() {
     </div>
   );
 }
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
 ```
 
 [**សាកល្បងនៅលើ CodePen**](https://codepen.io/gaearon/pen/vXdGmd?editors=0010)
