@@ -25,7 +25,11 @@ React មត្រូវបានរចនាឡើងពីការចាប�
 
 វានឹងមិនមានឧបករណ៍ស្មុគស្មាញឬក៏ការតម្រូវអោយតំឡើង -- **ដើម្បីបំពេញផ្នែកនេះ អ្នកត្រូវការតែការតភ្ជាប់អ៊ីធឺណិតប៉ុណ្ណោះ ហើយនិងពេលវេលារបស់អ្នករយៈពេល១នាទី។**
 
+<<<<<<< HEAD
 Optional: [ទាញយកឧទាហរណ៍ពេញលេញ (2KB zipped)](https://gist.github.com/gaearon/6668a1f6986742109c00a581ce704605/archive/f6c882b6ae18bde42dcf6fdb751aae93495a2275.zip)
+=======
+Optional: [Download the full example (2KB zipped)](https://gist.github.com/gaearon/6668a1f6986742109c00a581ce704605/archive/87f0b6f34238595b44308acfb86df6ea43669c08.zip)
+>>>>>>> d07016aea812d26c60252a952bff7ae3e70bde27
 
 ### Step 1: Add a DOM Container to the HTML {#step-1-add-a-dom-container-to-the-html}
 
@@ -54,8 +58,8 @@ Optional: [ទាញយកឧទាហរណ៍ពេញលេញ (2KB zipped)](
 
   <!-- Load React. -->
   <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
   <!-- Load our React component. -->
   <script src="like_button.js"></script>
@@ -75,16 +79,25 @@ Optional: [ទាញយកឧទាហរណ៍ពេញលេញ (2KB zipped)](
 >
 >កូដនេះកំណត់ React component ហៅថា `LikeButton`។ កុំបារម្ភប្រសិនបើអ្នកមិនទាន់យល់វានៅឡើយ -- យើងនឹង cover ពីការបង្កើត blocks នៃ React នៅពេលក្រោយនៅក្នុង [hands-on tutorial](/tutorial/tutorial.html) និង [main concepts guide](/docs/hello-world.html)។ សម្រាប់ពេល​ឥលូវ​នេះ តោះយើងគ្រាន់តែបង្ហាញវានៅលើអេក្រង់!
 
+<<<<<<< HEAD
 បន្ទាប់ **[the starter code](https://gist.github.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js)**, បន្ថែមពីរបន្ទាត់នៅក្រោមបាតនៃ `like_button.js`៖
+=======
+After **[the starter code](https://gist.github.com/gaearon/0b180827c190fe4fd98b4c7f570ea4a8/raw/b9157ce933c79a4559d2aa9ff3372668cce48de7/LikeButton.js)**, add three lines to the bottom of `like_button.js`:
+>>>>>>> d07016aea812d26c60252a952bff7ae3e70bde27
 
-```js{3,4}
+```js{3,4,5}
 // ... the starter code you pasted ...
 
 const domContainer = document.querySelector('#like_button_container');
-ReactDOM.render(e(LikeButton), domContainer);
+const root = ReactDOM.createRoot(domContainer);
+root.render(e(LikeButton));
 ```
 
+<<<<<<< HEAD
 ពីរបន្ទាត់នៃកូដនេះគឺថាការស្វែងរក `<div>` ដែលយើងបានបន្ថែមទៅកាន់ HTML នៅក្នុងជំហ៊ានដំបូងរបស់យើង ហើយបន្ទាប់មកបង្ហាញ "Like" ប៊ូតុង React component របស់យើងនៅខាងក្នុងវា។
+=======
+These three lines of code find the `<div>` we added to our HTML in the first step, create a React app with it, and then display our "Like" button React component inside of it.
+>>>>>>> d07016aea812d26c60252a952bff7ae3e70bde27
 
 ### That's It! {#thats-it}
 
@@ -94,7 +107,11 @@ ReactDOM.render(e(LikeButton), domContainer);
 
 **[មើល source កូដរបស់ឧទាហរណ៍ពេញលេញ](https://gist.github.com/gaearon/6668a1f6986742109c00a581ce704605)**
 
+<<<<<<< HEAD
 **[ទាញយកឧទាហរណ៍ពេញលេញ (2KB zipped)](https://gist.github.com/gaearon/6668a1f6986742109c00a581ce704605/archive/f6c882b6ae18bde42dcf6fdb751aae93495a2275.zip)**
+=======
+**[Download the full example (2KB zipped)](https://gist.github.com/gaearon/6668a1f6986742109c00a581ce704605/archive/87f0b6f34238595b44308acfb86df6ea43669c08.zip)**
+>>>>>>> d07016aea812d26c60252a952bff7ae3e70bde27
 
 ### Tip: Reuse a Component {#tip-reuse-a-component}
 
@@ -102,7 +119,11 @@ ReactDOM.render(e(LikeButton), domContainer);
 
 [មើល source កូដរបស់ឧទាហរណ៍ពេញលេញ](https://gist.github.com/gaearon/faa67b76a6c47adbab04f739cba7ceda)
 
+<<<<<<< HEAD
 [ទាញយកឧទាហរណ៍ពេញលេញ (2KB zipped)](https://gist.github.com/gaearon/faa67b76a6c47adbab04f739cba7ceda/archive/9d0dd0ee941fea05fd1357502e5aa348abb84c12.zip)
+=======
+[Download the full example (2KB zipped)](https://gist.github.com/gaearon/faa67b76a6c47adbab04f739cba7ceda/archive/279839cb9891bd41802ebebc5365e9dec08eeb9f.zip)
+>>>>>>> d07016aea812d26c60252a952bff7ae3e70bde27
 
 >ចំណាំ
 >
@@ -115,15 +136,19 @@ ReactDOM.render(e(LikeButton), domContainer);
 ប្រសិនបើអ្នក minify scripts របស់ application រួចហើយ, **គេហទំព័រ​របស់​អ្នកនឹងរួចរាល់សម្រាប់ production** ប្រសិនបើអ្នកធានាថាបាន deploy HTML ដោយ loads versions របស់ React នៅចុងបញ្ចប់នៅក្នុង `production.min.js`៖
 
 ```js
-<script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
 ```
 
 ប្រសិនបើអ្នកមិនមានជំហ៊ាន minification សម្រាប់ scripts របស់អ្នក [នេះជាវិធីមួយដើម្បីបង្កើតវាឡើង](https://gist.github.com/gaearon/42a2ffa41b8319948f9be4076286e1f3)។
 
 ## Optional: Try React with JSX {#optional-try-react-with-jsx}
 
+<<<<<<< HEAD
 នៅក្នុងឧទាហរណ៍ខាងលើ យើងគ្រាន់តែពឹងផ្អែកលើលក្ខណៈពិសេសដែលបាន support ដោយ browsers។​ នេះ​ជាហេតុដែលយើងបានប្រើ Javascript function call ដើម្បីប្រាប់ទៅ React នូវអ្វីដែលត្រូវបង្ហាញ៖
+=======
+In the examples above, we only relied on features that are natively supported by browsers. This is why we used a JavaScript function call to tell React what to display:
+>>>>>>> d07016aea812d26c60252a952bff7ae3e70bde27
 
 ```js
 const e = React.createElement;
@@ -149,7 +174,11 @@ return (
 
 ទំរង់នៃការសរសេរកូដទាំងពីរខាងលើគឺដូចគ្នា ហើយនិងបង្ហាញលទ្ធផលដូចគ្នា។ ខណៈពេលដែល **JSX គឺ [completely optional](/docs/react-without-jsx.html)** មនុស្សជាច្រើនយល់ថាវាមានប្រយោជន៍សម្រាប់ការសរសេរ UI កូដ​ -- ទាំងជាមួយ React និងជាមួយ libraries ផ្សេងៗ។
 
+<<<<<<< HEAD
 អ្នកអាចលេងជាមួយ JSX ដោយប្រើ [this online converter](https://babeljs.io/en/repl#?babili=false&browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=DwIwrgLhD2B2AEcDCAbAlgYwNYF4DeAFAJTw4B88EAFmgM4B0tAphAMoQCGETBe86WJgBMAXJQBOYJvAC-RGWQBQ8FfAAyaQYuAB6cFDhkgA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=7.4.3)។
+=======
+You can play with JSX using [this online converter](https://babeljs.io/en/repl#?babili=false&browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=DwIwrgLhD2B2AEcDCAbAlgYwNYF4DeAFAJTw4B88EAFmgM4B0tAphAMoQCGETBe86WJgBMAXJQBOYJvAC-RGWQBQ8FfAAyaQYuAB6cFDhkgA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=es2015%2Creact%2Cstage-2&prettier=false&targets=&version=7.15.7).
+>>>>>>> d07016aea812d26c60252a952bff7ae3e70bde27
 
 ### Quickly Try JSX {#quickly-try-jsx}
 
@@ -159,7 +188,11 @@ return (
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 ```
 
+<<<<<<< HEAD
 ឥឡូវ​នេះអ្នកអាចប្រើ JSX នៅក្នុង `<script>` tag ណាមួយដោយការបន្ថែមនូវ `type="text/babel"` attribute ទៅកាន់វា។ នេះគឺជា [ឧទាហរណ៍ HTML file ជាមួយ JSX](https://raw.githubusercontent.com/reactjs/reactjs.org/master/static/html/single-file-example.html) ដែលអ្នកអាចទាញយកនិងលេងជាមួយវា។
+=======
+Now you can use JSX in any `<script>` tag by adding `type="text/babel"` attribute to it. Here is [an example HTML file with JSX](https://raw.githubusercontent.com/reactjs/reactjs.org/main/static/html/single-file-example.html) that you can download and play with.
+>>>>>>> d07016aea812d26c60252a952bff7ae3e70bde27
 
 វិធីសាស្រ្តនេះគឺល្អសម្រាប់ការរៀននិងការបង្កើត demos ដែលសាមញ្ញ។ ទោះជាយ៉ាងណាវាធ្វើឱ្យគេហទំព័ររបស់អ្នកយឺត ហើយ **មិនសមរម្យសម្រាប់ production**។ 
 នៅពេលអ្នកត្រៀមខ្លួនរួចរាល់ដើម្បីបន្តទៅមុខទៀត, លុប `<script>` tag នេះនិង `type="text/babel"` attributes ដេលអ្នកបានបន្ថេម។ ជំនួសវិញ, នៅផ្នែកបន្ទាប់អ្នកនឹងរៀបចំ JSX preprocessor មួយដើម្បីបម្លែង (convert) `<script>` tags ទាំងអស់របស់អ្នកដោយស្វ័យប្រវត្តិ។
@@ -186,8 +219,8 @@ Congratulations! You just added a **production-ready JSX setup** to your project
 
 បង្កើតថតឯកសារ (folder) ដែលហៅថា `src` ហើយ run terminal command នេះ៖
 
-```
-npx babel --watch src --out-dir . --presets react-app/prod 
+```console
+npx babel --watch src --out-dir . --presets react-app/prod
 ```
 
 >ចំណាំ
