@@ -8,16 +8,14 @@ next: introducing-jsx.html
 
 ខាងក្រោមនេះជាឧទាហរណ៍តូចមួយរបស់ React
 
-```js
-ReactDOM.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('root')
-);
+```jsx
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<h1>Hello, world!</h1>);
 ```
 
 វាបង្ហាញពាក្យ "Hello, world!" ជាទំរង់ Heading នៅលើទំព័រ។
 
-[](codepen://hello-world)
+**[Try it on CodePen](https://codepen.io/gaearon/pen/rrpgNB?editors=1010)**
 
 សូមចុចលើតំណភ្ជាប់ខាងលើសំរាប់បើកផ្ទាំងសរសេរកូដនៅលើបណ្តាញ។ លោកអ្នកអាចកែកូដតាមចិត្ត ដើម្បីឃើញលទ្ធផល។ ទំព័រភាគច្រើនក្នុងមគ្គុទេសក៍នេះនឹងមានឧទាហរណ៍ដែលលោកអ្នកអាចកែបាន ដូចមួយនេះអញ្ចឹង។
 
@@ -41,7 +39,11 @@ React គឺបណ្ណាល័យរបស់ JavaScript ដូចនេះ�
 
 >ចំណាំ
 >
+<<<<<<< HEAD
 >នៅក្នុង​ការ​ណែនាំ​នេះអាចនឹង​មានការ​ប្រើ​ប្រាស់​ Syntax ថ្មីៗ​របស់ JavaScript នៅក្នុងឧទាហរណ៍​មួយចំនួន។ ប្រសិនបើអ្នកមិនបាន​ប្រើប្រាស់ JavaScript​ ក្នុងរយៈពេលប៉ុន្មានឆ្នាំ​ចុងក្រោយ, [ចំណុចទាំងបីនេះ](https://gist.github.com/gaearon/683e676101005de0add59e8bb345340c) អាចជួយអ្នកបានច្រើន។
+=======
+>This guide occasionally uses some newer JavaScript syntax in the examples. If you haven't worked with JavaScript in the last few years, [these three points](https://gist.github.com/gaearon/683e676101005de0add59e8bb345340c) should get you most of the way.
+>>>>>>> c883f623d597852b49f9314bb8133442ef9d3298
 
 
 ## តោះចាប់ផ្តើម {#lets-get-started}
