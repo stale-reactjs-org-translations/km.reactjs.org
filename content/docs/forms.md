@@ -9,7 +9,11 @@ redirect_from:
   - "docs/forms-zh-CN.html"
 ---
 
+<<<<<<< HEAD
 HTML form elements ធ្វើការខុសគ្នាបន្តិចពី DOM elements ផ្សេងៗនៅក្នុង React ពីព្រេាះ form elements ជាធម្មតាវារក្សារទុកនូវ internal state មួយចំនួន។ ឧទាហរណ៍ form នេះគឺជា plain HTML ទទួលយកឈ្មោះតែមួយ៖
+=======
+HTML form elements work a bit differently from other DOM elements in React, because form elements naturally keep some internal state. For example, this form in plain HTML accepts a single name:
+>>>>>>> 868d525a74b717a10e0f61bb576213e133aa8d07
 
 ```html
 <form>
@@ -31,7 +35,7 @@ Form នេះមានលក្ខណះជា default HTML នៃការ bro
 
 ឧទាហរណ៍ ប្រសិនបើអ្នកចង់បង្កើតឧទាហរណ៍មុនដោយអោយវា log នូវ name នៅពេលដែលវាត្រូវបាន submit យើងអាចសរសេរ form ជា controlled component៖
 
-```javascript{4,10-12,24}
+```javascript{4,10-12,21,24}
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
@@ -216,7 +220,7 @@ class Reservation extends React.Component {
 
   handleInputChange(event) {
     const target = event.target;
-    const value = target.name === 'isGoing' ? target.checked : target.value;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
 
     this.setState({
@@ -272,15 +276,19 @@ this.setState(partialState);
 
 ## Controlled Input Null Value {#controlled-input-null-value}
 
+<<<<<<< HEAD
 ការបញ្ជាក់ value props នៅលើ [controlled component](/docs/forms.html#controlled-components) ការពារអ្នកប្រើប្រាស់ពីការផ្លាស់ប្តូរ input លុះត្រាតែអ្នកចង់ធ្វើដូច្នេះ។ ប្រសិនបើអ្នកមិនបានបញ្ជាក់ `value` ប៉ុន្តែ input នៅតែអាចកែបាន, អ្នកប្រហែលជាបានកំណត់ `value` ជា `undefined` ឬក៏ `null` ដោយចៃដន្យ។
+=======
+Specifying the `value` prop on a [controlled component](/docs/forms.html#controlled-components) prevents the user from changing the input unless you desire so. If you've specified a `value` but the input is still editable, you may have accidentally set `value` to `undefined` or `null`.
+>>>>>>> 868d525a74b717a10e0f61bb576213e133aa8d07
 
 កូដខាងក្រោមបង្ហាញដូចនេះ។ (input ត្រូវបាន lock ពេលដំបូង ប៉ុន្តែបានក្លាយជាអាចកែបានបន្ទាប់ពីមានការពន្យាពេលខ្លីមួយ។)
 
 ```javascript
-ReactDOM.render(<input value="hi" />, mountNode);
+ReactDOM.createRoot(mountNode).render(<input value="hi" />);
 
 setTimeout(function() {
-  ReactDOM.render(<input value={null} />, mountNode);
+  ReactDOM.createRoot(mountNode).render(<input value={null} />);
 }, 1000);
 
 ```
