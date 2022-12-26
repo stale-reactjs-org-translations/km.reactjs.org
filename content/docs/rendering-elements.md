@@ -34,11 +34,19 @@ const element = <h1>Hello, world</h1>;
 
 កម្មវិធីដែលបានបង្កើតឡើងដោយគ្រាន់តែមានReactធម្មតាមាន root DOM តែមួយ។ ប្រសិនបើអ្នកកំពុងដាក់បញ្ចូល React ទៅក្នុងកម្មវិធីដែលមានស្រាប់ អ្នកប្រហែលជាអាចមាន root DOM ជាច្រើនទៅតាមចំណងចង់បានរបស់អ្នក។
 
+<<<<<<< HEAD
 ដើម្បីបង្ហាញ React element ទៅក្នុង root DOM node, បេាះ (pass) វាទាំងពីរទៅឱ្យ [`ReactDOM.render()`](/docs/react-dom.html#render)៖
 
 `embed:rendering-elements/render-an-element.js`
 
 [សាកល្បងវានៅលើ CodePen](codepen://rendering-elements/render-an-element)
+=======
+To render a React element, first pass the DOM element to [`ReactDOM.createRoot()`](/docs/react-dom-client.html#createroot), then pass the React element to `root.render()`:
+
+`embed:rendering-elements/render-an-element.js`
+
+**[Try it on CodePen](https://codepen.io/gaearon/pen/ZpvBNJ?editors=1010)**
+>>>>>>> 4b68508440a985598571f78f60637b6dccdd5a1a
 
 វាបង្ហាញ "ជំរាបសួរពិភពលោក" នៅលើទំព័រនេះ។
 
@@ -46,19 +54,33 @@ const element = <h1>Hello, world</h1>;
 
 ធាតុReact[គឺមិនប្រែប្រួល(immutable)](https://en.wikipedia.org/wiki/Immutable_object)។ នៅពេលអ្នកបង្កើតធាតុមួយអ្នកមិនអាចផ្លាស់ប្តូរ children ឬគុណលក្ខណៈរបស់វាបានទេ។ ធាតុមួយគឺដូចជាស៊ុមតែមួយនៅក្នុងខ្សែភាពយន្ត: វាតំណាងឱ្យចំណុចប្រទាក់អ្នកប្រើនៅចំណុចជាក់លាក់មួយនៅក្នុងពេលណាមួយ។
 
+<<<<<<< HEAD
 ជាមួយនឹងចំណេះដឹងរបស់យើងរហូតមកដល់ពេលនេះ, វិធីតែមួយគត់ដើម្បីធ្វើបច្ចុប្បន្នភាព UI គឺបង្កើត element ថ្មី, ហើយបញ្ជូន (pass) វាទៅ [`ReactDOM.render()`](/docs/react-dom.html#render)។
+=======
+With our knowledge so far, the only way to update the UI is to create a new element, and pass it to `root.render()`.
+>>>>>>> 4b68508440a985598571f78f60637b6dccdd5a1a
 
 សូមពិចារណាអំពីគំរូម៉ោងនាឡិកានេះ:
 
 `embed:rendering-elements/update-rendered-element.js`
 
+<<<<<<< HEAD
 [សាកល្បងវានៅលើ CodePen](codepen://rendering-elements/update-rendered-element)
 
 វាហៅ [`ReactDOM.render()`](/docs/react-dom.html#render) រាល់វិនាទី ពី [`setInterval()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval) callback។
+=======
+**[Try it on CodePen](https://codepen.io/gaearon/pen/gwoJZk?editors=1010)**
+
+It calls [`root.render()`](/docs/react-dom.html#render) every second from a [`setInterval()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval) callback.
+>>>>>>> 4b68508440a985598571f78f60637b6dccdd5a1a
 
 >**ចំណាំ:**
 >
+<<<<<<< HEAD
 >នៅក្នុងការអនុវត្ត, React apps ភាគច្រើនហៅតែ [`ReactDOM.render()`](/docs/react-dom.html#render) តែម្ដងប៉ុណ្ណោះ។ នៅផ្នែកបន្ទាប់ យើងនឹងរៀនពីរបៀបដែលកូដបែបនេះត្រូវបានបញ្ចូលក្នុង [stateful components](/docs/state-and-lifecycle.html).
+=======
+>In practice, most React apps only call `root.render()` once. In the next sections we will learn how such code gets encapsulated into [stateful components](/docs/state-and-lifecycle.html).
+>>>>>>> 4b68508440a985598571f78f60637b6dccdd5a1a
 >
 >យើងផ្ដល់អនុសាសន៍ថាអ្នកមិនរំលងប្រធានបទពីព្រោះពួកគេមានការទាក់ទងគ្នា។
 
@@ -66,7 +88,11 @@ const element = <h1>Hello, world</h1>;
 
 React DOM React DOM ប្រៀបធៀបធាតុនិងchildrenរបស់វាទៅនឹងធាតុមួយមុន, ហើយអនុវត្តតែការធ្វើឱ្យទាន់សម័យ DOM ដែលចាំបាច់ដើម្បីនាំយក DOM ទៅជា state ដែលចង់បាន។
 
+<<<<<<< HEAD
 អ្នកអាចផ្ទៀងផ្ទាត់បានដោយត្រួតពិនិត្យមើល [ឧទាហរណ៍ចុងក្រោយ](codepen://rendering-elements/update-rendered-element)ជាមួយនឹងឧបករណ៍របស់browser:
+=======
+You can verify by inspecting the [last example](https://codepen.io/gaearon/pen/gwoJZk?editors=1010) with the browser tools:
+>>>>>>> 4b68508440a985598571f78f60637b6dccdd5a1a
 
 ![DOM inspector បានបង្ហាញពីភាពទាន់សម័យ](../images/docs/granular-dom-updates.gif)
 
