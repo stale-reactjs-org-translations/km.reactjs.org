@@ -228,6 +228,10 @@ class Parent extends React.Component {
 this.inputElement.current.focus();
 ```
 
+<<<<<<< HEAD
+=======
+When using a [HOC](/docs/higher-order-components.html) to extend components, it is recommended to [forward the ref](/docs/forwarding-refs.html) to the wrapped component using the `forwardRef` function of React. If a third party HOC does not implement ref forwarding, the above pattern can still be used as a fallback.
+>>>>>>> 38bf76a4a7bec6072d086ce8efdeef9ebb7af227
 
 នៅពេលប្រើ HOC ដើម្បីពង្រីក component
 យើងណែនាំ [forward the ref](/docs/forwarding-refs.html) សំរាប់ខ្ចប់ component ដោយប្រើ `forwardRef` function នៃ React។
@@ -380,7 +384,7 @@ class BlurExample extends React.Component {
 
 ប្រភេទធាតុក្រាហ្វិកនីមួយៗមានលំនាំរចនាជាក់លាក់ហើយត្រូវបានគេរំពឹងថានឹងដំណើរការតាមវិធីជាក់ស្តែងដោយអ្នកប្រើនិងភ្នាក់ងារអ្នកប្រើដូចគ្នា៖
 
-- [WAI-ARIA Authoring Practices - Design Patterns and Widgets](https://www.w3.org/TR/wai-aria-practices/#aria_ex)
+- [ARIA Authoring Practices Guide (APG) - Design Patterns and Examples](https://www.w3.org/WAI/ARIA/apg/patterns/)
 - [Heydon Pickering - ARIA Examples](https://heydonworks.com/article/practical-aria-examples/)
 - [Inclusive Components](https://inclusive-components.design/)
 
@@ -408,7 +412,11 @@ class BlurExample extends React.Component {
 - [Everything About Color Contrast And Why You Should Rethink It](https://www.smashingmagazine.com/2014/10/color-contrast-tips-and-tools-for-accessibility/)
 - [A11yProject - What is Color Contrast](https://a11yproject.com/posts/what-is-color-contrast/)
 
+<<<<<<< HEAD
 វាអាចធុញទ្រាន់ក្នុងការគណនាបន្សំពណ៌ត្រឹមត្រូវសម្រាប់គ្រប់ករណីទាំងអស់នៅក្នុងគេហទំព័ររបស់អ្នកដូច្នេះ អ្នកអាចធ្វើបាន [calculate an entire accessible color palette with Colorable](https://jxnblk.com/colorable/)។
+=======
+It can be tedious to manually calculate the proper color combinations for all cases in your website so instead, you can [calculate an entire accessible color palette with Colorable](https://colorable.jxnblk.com/).
+>>>>>>> 38bf76a4a7bec6072d086ce8efdeef9ebb7af227
 
 ទាំងឧបករណ៍ aXe និង WAVE ដែលបានរៀបរាប់ខាងក្រោមក៏មានការធ្វើតេស្តកម្រិតពណ៌ហើយនឹងរាយការណ៍អំពីកំហុសឆ្គងផងដែរ។
 
@@ -458,7 +466,11 @@ class BlurExample extends React.Component {
 
 [The Accessibility Engine](https://www.deque.com/products/axe/) ឬ aXe គឺជាកម្មវិធីបន្ថែមដែលអាចចូលបានរបស់ inspector browser បានស្ថាបនាលើ `aXe-core`។
 
+<<<<<<< HEAD
 អ្នកក៏អាចប្រើ [react-axe](https://github.com/dylanb/react-axe) module សម្រាប់រាយការក្នុងការរកដោយផ្ទាល់ទៅកាន់ console ខណះដែលកំពុង developing និង debugging។
+=======
+You can also use the [@axe-core/react](https://github.com/dequelabs/axe-core-npm/tree/develop/packages/react) module to report these accessibility findings directly to the console while developing and debugging.
+>>>>>>> 38bf76a4a7bec6072d086ce8efdeef9ebb7af227
 
 #### WebAIM WAVE {#webaim-wave}
 
