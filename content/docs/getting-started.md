@@ -18,7 +18,17 @@ redirect_from:
   - "docs/environments.html"
 ---
 
+<<<<<<< HEAD
 ទំព័រនេះគឺទិដ្ឋភាពទូទៅនៃឯកសាររបស់ React ហើយនិង ធនធានផ្សេងៗពាក់ព័ន្ធនៃ React។
+=======
+> Try the new React documentation.
+> 
+> The new [Quick Start](https://beta.reactjs.org/learn) teaches modern React and includes live examples.
+>
+> The new docs will soon replace this site, which will be archived. [Provide feedback.](https://github.com/reactjs/reactjs.org/issues/3308)
+
+This page is an overview of the React documentation and related resources.
+>>>>>>> d4e42ab21f0cc7d8b79d1a619654e27c79e10af6
 
 **React** គឺជា JavaScript library សម្រាប់បង្កើត user interfaces។ រៀនអ្វីទាំងអស់ពី React នៅលើ [ទំព័រដើមរបស់យើង](/) ឬក៏ [នៅក្នុង tutorial](/tutorial/tutorial.html)។
 
@@ -36,10 +46,16 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 ### Online Playgrounds {#online-playgrounds}
 
+<<<<<<< HEAD
 ប្រសិនបើអ្នកចាប់អារម្មណ៍លេងជាមួយ React, អ្នកអាចប្រើ online កូដ playground។ សូមសាកល្បងគំរូ Hello World នៅលើ [CodePen](codepen://hello-world), [CodeSandbox](https://codesandbox.io/s/new), [Glitch](https://glitch.com/edit/#!/remix/starter-react-template), ឬក៏ [Stackblitz](https://stackblitz.com/fork/react)។
 
 ប្រសិនបើអ្នកចូលចិត្តប្រើ text editor របស់អ្នកជាង អ្នកអាច [ដោនឡូដ HTML file](https://raw.githubusercontent.com/reactjs/reactjs.org/master/static/html/single-file-example.html), កែសម្រួលវា ហើយនិងបើកវាពីប្រព័ន្ធឯកសារក្នុង browser កុំព្យូទ័របស់អ្នក។ ការបម្លែងកូដនឹងរត់យឺត 
 ដូច្នេះយើងសូមណែនាំក្នុងការប្រើវាសម្រាប់តែ demos ដែលសាមញ្ញ។
+=======
+If you're interested in playing around with React, you can use an online code playground. Try a Hello World template on [CodePen](codepen://hello-world), [CodeSandbox](https://codesandbox.io/s/new), or [Stackblitz](https://stackblitz.com/fork/react).
+
+If you prefer to use your own text editor, you can also [download this HTML file](https://raw.githubusercontent.com/reactjs/reactjs.org/main/static/html/single-file-example.html), edit it, and open it from the local filesystem in your browser. It does a slow runtime code transformation, so we'd only recommend using this for simple demos.
+>>>>>>> d4e42ab21f0cc7d8b79d1a619654e27c79e10af6
 
 ### បន្ថែម React ទៅកាន់វេបសាយមួយ {#add-react-to-a-website}
 
@@ -117,7 +133,11 @@ React ត្រូវបានគេរចនាឡើងតាំងពីដ�
 
 អ្នកក៏អាច follow [@reactjs account](https://twitter.com/reactjs) នៅលើ Twitter ប៉ុន្តែអ្នកនឹងមិនខកខានអ្វីដែលចាំបាច់ប្រសិនបើអ្នកគ្រាន់តែអាន blog។
 
+<<<<<<< HEAD
 មិនមែនគ្រប់ការចេញផ្សាយ (release) របស់ React ត្រូវបានប្រកាសប្រាប់នៅក្នុង blog នេាះទេ ប៉ុន្តែអ្នកអាចរកឃើញការផ្លាស់ប្តូរលម្អិតសម្រាប់រៀងរាល់ការចេញផ្សាយ (release) [នៅក្នុង `CHANGELOG.md` file ក្នុង React repository](https://github.com/facebook/react/blob/master/CHANGELOG.md) ក៏ដូចជានៅលើទំព័រ [Releases](https://github.com/facebook/react/releases)។
+=======
+Not every React release deserves its own blog post, but you can find a detailed changelog for every release in the [`CHANGELOG.md` file in the React repository](https://github.com/facebook/react/blob/main/CHANGELOG.md), as well as on the [Releases](https://github.com/facebook/react/releases) page.
+>>>>>>> d4e42ab21f0cc7d8b79d1a619654e27c79e10af6
 
 ## កំណែឯកសារ {#versioned-documentation}
 
