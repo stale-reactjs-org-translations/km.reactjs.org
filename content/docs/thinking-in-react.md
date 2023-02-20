@@ -8,7 +8,17 @@ redirect_from:
 prev: composition-vs-inheritance.html
 ---
 
+<<<<<<< HEAD
 នៅក្នុងគំនិតរបស់ពួកយើង React គឺជាវិធីសំខាន់បំផុតដើម្បីកសាង Web apps ជាមួយ JavaScript ដ៏ធំមួយ។ វាបានគ្រប់គ្រងការងារនិងដំណើរការដែលកំពុងកើនឡើង (scale) បានយ៉ាងល្អសម្រាប់យើងនៅ Facebook និង Instagram។
+=======
+> Try the new React documentation.
+> 
+> The updated [Thinking in React](https://beta.reactjs.org/learn/thinking-in-react) guide teaches modern React and includes live examples.
+>
+> The new docs will soon replace this site, which will be archived. [Provide feedback.](https://github.com/reactjs/reactjs.org/issues/3308)
+
+React is, in our opinion, the premier way to build big, fast Web apps with JavaScript. It has scaled very well for us at Facebook and Instagram.
+>>>>>>> 63c77695a95902595b6c2cc084a5c3650b15210a
 
 ផ្នែកមួយនៃផ្នែកដ៏អស្ចារ្យជាច្រើននៃ React គឺរបៀបដែលវាធ្វើឱ្យអ្នកគិតអំពី apps នៅពេលអ្នកបង្កើតពួកវា, នៅក្នុងឯកសារនេះ យើងនឹងនាំអ្នកឆ្លងកាត់ដំណើរការនៃការបង្កើតតារាងទិន្នន័យរបស់ផលិតផលដែលអាច search បានដោយការប្រើ React។
 
@@ -39,9 +49,13 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
 
 ដែលអ្នកតែងតែបង្ហាញ JSON data model ទៅអោយអ្នកប្រើប្រាស់, អ្នកនឹងរកឃើញថាប្រសិនបើ model របស់អ្នកត្រូវបានបង្កើតឡើងដោយត្រឹមត្រូវ, UI របស់អ្នក (ហើយនិងរចនាសម្ព័ន្ធ component របស់អ្នក) នឹង map បានយ៉ាងល្អ។ នោះពីព្រេាះតែ UI និង data models មាននិន្នាការប្រកាន់ខ្ជាប់នូវ *ស្ថាបត្យកម្មព័ត៌មាន* ដូចគ្នា។ គ្រាន់តែបំបែកវាជា components ដែលតំណាងឱ្យបំណែកមួយជាក់លាក់នៃ data model របស់អ្នក។ ការបំបែក UI របស់អ្នកទៅជា components, ដែល component នីមួយៗ ត្រូវនឹងផ្នែកមួយនៃគំរូទិន្នន័យរបស់អ្នក។
 
-![Component diagram](../images/blog/thinking-in-react-components.png)
+![Diagram showing nesting of components](../images/blog/thinking-in-react-components.png)
 
+<<<<<<< HEAD
 អ្នកនឹងឃើញនៅទីនេះថាយើងមាន៥ components នៅក្នុង app ដ៏សាមញ្ញរបស់យើង។ ដែលទិន្នន័យតំណាងដោយ component នីមួយៗ។
+=======
+You'll see here that we have five components in our app. We've italicized the data each component represents. The numbers in the image correspond to the numbers below.
+>>>>>>> 63c77695a95902595b6c2cc084a5c3650b15210a
 
   1. **`FilterableProductTable` (orange):** មានឧទាហរណ៍ទាំងមូល
   2. **`SearchBar` (blue):** ទទួលការ *input របស់អ្នកប្រើប្រាស់* ទាំងអស់
@@ -72,9 +86,15 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
 អ្នកអាចបង្កើតជាលក្ខណះ top-down ឬ bottom-up។ អ្នកអាចចាប់ផ្តើមបង្កើត component higher up នៅក្នុងរចនាសម្ព័ន្ធ (hierarchy) (ឧទាហរណ៍ ការចាប់ផ្តើមជាមួយ `FilterableProductTable`) ឬក៏ជាមួយ component ដែលនៅក្នុងវា (`ProductRow`)។ នៅក្នុងឧទាហរណ៏សាមញ្ញ 
 វាជាធម្មតាងាយស្រួលក្នុងការប្រើ top-down សម្រាប់ products ធំៗ, ហើយវាកាន់តែងាយស្រួលក្នុងការប្រើ bottom-up ហើយនិងសរសេរ tests។
 
+<<<<<<< HEAD
 នៅចុងបញ្ចប់នៃជំហាននេះ, អ្នកនឹងមាន library មួយជា reusable components ដែល render data model របស់អ្នក។ Components នឹងមានតែ `render` methods ដែលនេះគឺជា static version មួយនៃ app របស់អ្នក។ Component ដែលនៅផ្នែកខាងលើគេនៃរចនាសម្ព័ន្ធ (hierarchy) (`FilterableProductTable`) នឺងទទួលយក data model របស់អ្នកជា prop មួយ។ ប្រសិនបើអ្នកធ្វើការផ្លាស់ប្តូរ data model មូលដ្ឋានរបស់អ្នកហើយ call `ReactDOM.render()` ម្តងទៀត, UI នឹងត្រូវបានធ្វើបច្ចុប្បន្នភាព។ អ្នកអាចឃើញពីរបៀដែល UI របស់អ្នកធ្វើបច្ចុប្បន្នភាព ហើយនិងកន្លែងដែលវាផ្លាស់ប្តូរ។ **one-way data flow** របស់ React (ត្រូវបានគេហៅផងដែរថា *one-way binding*) រក្សារអ្វីគ្រប់យ៉ាងជាលក្ខណះ modular ហើយនិងលឿន។
 
 ប្រសិនបើអ្នកត្រូវការជំនួយក្នុងការអនុវត្តជំហាននេះសូមចូលទៅកាន់ [React docs](/docs/)។
+=======
+At the end of this step, you'll have a library of reusable components that render your data model. The components will only have `render()` methods since this is a static version of your app. The component at the top of the hierarchy (`FilterableProductTable`) will take your data model as a prop. If you make a change to your underlying data model and call `root.render()` again, the UI will be updated. You can see how your UI is updated and where to make changes. React's **one-way data flow** (also called *one-way binding*) keeps everything modular and fast.
+
+Refer to the [React docs](/docs/getting-started.html) if you need help executing this step.
+>>>>>>> 63c77695a95902595b6c2cc084a5c3650b15210a
 
 ### A Brief Interlude: Props vs State {#a-brief-interlude-props-vs-state}
 
@@ -86,7 +106,11 @@ JSON API របស់យើង returns ទិន្នន័យមួយចំ�
 
 ដើម្បីបង្កើត app របស់អ្នកយ៉ាងត្រឹមត្រូវ, តំបូងអ្នកតម្រូវអោយគិតពីសំណុំអប្បបរមានៃ state អាចផ្លាស់ប្តូរបានដែល app របស់អ្នកត្រូវការ។ គន្លឹះគឺនៅទីនេះ [DRY: *Don't Repeat Yourself*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)។ រកមើលការតំណាងតិចតួចបំផុតនៃ state ដែល application របស់អ្នកត្រូវការហើយនិងគណនាអ្វីៗផ្សេងទៀតដែលអ្នកត្រូវការតាមតម្រូវការ។ ឧទាហរណ៍, ប្រសិនបើអ្នកកំពុងតែបង្កើតតារាង TODO មួយ, រក្សាទុក array មួយនៃធាតុ (items) របស់ TODO នៅជុំវិញ; កុំរក្សាទុក state variable ដាច់ដោយឡែកសម្រាប់ការរាប់។ ជំនួសដោយ, ពេលដែលអ្នកចង់ render TODO count, យកប្រវែងនៃធាតុរបស់ TODO array។
 
+<<<<<<< HEAD
 គិតពីបំណែកទាំងអស់នៃទិន្នន័យនៅក្នុងឧទាហរណ៍នៃ application របស់យើង។ យើងមាន៖
+=======
+Think of all the pieces of data in our example application. We have:
+>>>>>>> 63c77695a95902595b6c2cc084a5c3650b15210a
 
   * បញ្ជីផលិតផលដើម
   * search text ដែលអ្នកប្រើប្រាស់បានបញ្ចូល
@@ -139,11 +163,19 @@ Cool, ដូច្នេះយើងបានសម្រេចចិត្ត�
 
 React បង្កើតលំហូរ data ច្បាស់លាស់ដើម្បីជួយអ្នកឱ្យយល់ពីរបៀបដែលកម្មវិធីរបស់អ្នកដំណើរការ, ប៉ុន្តែវាមិនតំរូវឱ្យមានការ typing ច្រើនជាង traditional two-way data binding នេាះទេ។
 
+<<<<<<< HEAD
 ប្រសិនបើអ្នកព្យាយាម type ឬក៏ពិនិត្យ the box នៅក្នុងកំណែបច្ចុប្បន្ននៃឧទាហរណ៍នេះ,​ អ្នកនឹងឃើញថា React មិនអើពើនឹងការបញ្ចូលរបស់អ្នក។ នេះគឺជាចេតនា, 
 ដូចដែលយើងបាន set `value` prop នៃ the `input` ដែលតែងតែស្មើរទៅនិង the `state` ដែលបានបេាះពី `FilterableProductTable`។
+=======
+If you try to type or check the box in the previous version of the example (step 4), you'll see that React ignores your input. This is intentional, as we've set the `value` prop of the `input` to always be equal to the `state` passed in from `FilterableProductTable`.
+>>>>>>> 63c77695a95902595b6c2cc084a5c3650b15210a
 
 តោះគិតអំពីអ្វីដែលយើងចង់អោយកើតឡើង។ យើងចង់ធ្វើឱ្យប្រាកដថានៅពេលណាដែលអ្នកប្រើប្រាស់ផ្លាស់ប្តូរ form, យើងធ្វើបច្ចុប្បន្នភាព state ដើម្បីឆ្លុះបញ្ចាំងពីការបញ្ចូលរបស់អ្នកប្រើប្រាស់។ ដែល components គួរតែធ្វើបច្ចុប្បន្នភាពនូវ state ផ្ទាល់ខ្លួនរបស់ពួកវា, `FilterableProductTable` នឹងបេាះ callbacks ទៅកាន់ `SearchBar` ដែលនឹង fire រាល់ពេលដែល state គួរតែត្រូវបានគេធ្វើបច្ចុប្បន្នភាព។ យើងអាចប្រើ `onChange` event ទៅលើ inputs ដើម្បីជូនដំណឹងអំពីវា។ The callbacks ត្រូវបានបេាះដោយ `FilterableProductTable` នឹង call `setState()`, ហើយ app នឹងត្រូវបានគេធ្វើបច្ចុប្បន្នភាព។
 
 ## And That's It {#and-thats-it}
 
+<<<<<<< HEAD
 សង្ឃឹមថានេះផ្តល់ឱ្យអ្នកនូវគំនិតនៃការគិតអំពីការបង្កើត components ហើយនិង applications ជាមួយ React។ ខណៈពេលដែលវាអាចជាការវាយច្រើនជាងអ្នកធ្លាប់ប្រើ, សូមចាំថាកូដត្រូវបានអានច្រើនជាងអ្វីដែលបានសរសេរ, ហើយវាពិបាកក្នុងការអាន modular នេះ, code គឺច្បាស់លាស់ណាស់។ ដូចដែលអ្នកចាប់ផ្តើមបង្កើត libraries ធំៗនៃ components, អ្នកនឹងពេញចិត្តនូវ explicitness និង modularity នេះ, ហើយនិងជាមួយការកាត់បន្ថយកូដ, បន្ទាត់នៃកូដរបស់អ្នកនឹងចាប់ផ្តើមកាត់បន្ថយ។ :)
+=======
+Hopefully, this gives you an idea of how to think about building components and applications with React. While it may be a little more typing than you're used to, remember that code is read far more often than it's written, and it's less difficult to read this modular, explicit code. As you start to build large libraries of components, you'll appreciate this explicitness and modularity, and with code reuse, your lines of code will start to shrink. :)
+>>>>>>> 63c77695a95902595b6c2cc084a5c3650b15210a
