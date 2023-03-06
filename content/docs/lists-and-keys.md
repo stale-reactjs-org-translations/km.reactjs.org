@@ -6,7 +6,20 @@ prev: conditional-rendering.html
 next: forms.html
 ---
 
+<<<<<<< HEAD
 ដំបូងសូមពិនិត្យឡើងវិញពីរបៀបដែលអ្នកផ្លាស់ប្តូរ (transform) lists នៅក្នុង JavaScript។​
+=======
+> Try the new React documentation.
+> 
+> These new documentation pages teach modern React and include live examples:
+>
+> - [Rendering Lists](https://beta.reactjs.org/learn/rendering-lists)
+>
+> The new docs will soon replace this site, which will be archived. [Provide feedback.](https://github.com/reactjs/reactjs.org/issues/3308)
+
+
+First, let's review how you transform lists in JavaScript.
+>>>>>>> ba290ad4e432f47a2a2f88d067dacaaa161b5200
 
 កូដត្រូវបានផ្តល់អោយដូចខាងក្រោម, យើងប្រើ [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) function ដើម្បីទទួលបាន array នៃ `numbers` មួយហើយទ្វេដងតំលៃរបស់ពួកវា។ យើង assign array ថ្មីដែលបាន​​ return ដោយ `map()` ទៅអោយ variable `doubled` ហើយនិងធ្វើការ log វា៖
 
@@ -33,13 +46,14 @@ const listItems = numbers.map((number) =>
 );
 ```
 
+<<<<<<< HEAD
 យើងរួមបញ្ចូល `listItems` array ទាំងមូលដែលនៅខាងក្នុង `<ul>` element មួយ ហើយនិង [render វាទៅកាន់ DOM](/docs/rendering-elements.html#rendering-an-element-into-the-dom)៖
+=======
+Then, we can include the entire `listItems` array inside a `<ul>` element:
+>>>>>>> ba290ad4e432f47a2a2f88d067dacaaa161b5200
 
 ```javascript{2}
-ReactDOM.render(
-  <ul>{listItems}</ul>,
-  document.getElementById('root')
-);
+<ul>{listItems}</ul>
 ```
 
 [**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/GjPyQr?editors=0011)
@@ -64,10 +78,8 @@ function NumberList(props) {
 }
 
 const numbers = [1, 2, 3, 4, 5];
-ReactDOM.render(
-  <NumberList numbers={numbers} />,
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<NumberList numbers={numbers} />);
 ```
 
 នៅពេលដែលអ្នក run កូដនេះ អ្នកនឹងទទួលបានការព្រមាន (warning) មួយថា​ key គួរត្រូវបានផ្តល់ជូនសម្រាប់ list items។ "key" គឺជា string attribute ពិសេសមួយដែលអ្នកត្រូវតែរួមបញ្ចូលនៅពេលកំពុងបង្កើត lists នៃ elements។ យើងនឹងពិភាក្សាគ្នាពីមូលហេតុដែលវាសំខាន់នៅក្នុងផ្នែកបន្ទាប់។
@@ -86,12 +98,6 @@ function NumberList(props) {
     <ul>{listItems}</ul>
   );
 }
-
-const numbers = [1, 2, 3, 4, 5];
-ReactDOM.render(
-  <NumberList numbers={numbers} />,
-  document.getElementById('root')
-);
 ```
 
 [**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/jrXYRR?editors=0011)
@@ -130,8 +136,12 @@ const todoItems = todos.map((todo, index) =>
 );
 ```
 
+<<<<<<< HEAD
 យើងមិនណែនាំឱ្យប្រើ indexes សម្រាប់ keys នេាះទេប្រសិនបើលំដាប់ (order) របស់ items ប្រហែលអាចត្រូវបានផ្លាស់ប្តូរតម្លៃ។ នេះអាចផ្តល់ផលប៉ះពាល់អវិជ្ជមានដល់ដំណើរការ ហើយនិងអាចបណ្តាលឱ្យមានបញ្ហាដល់ state របស់ component។ ពិនិត្យមើលអត្ថបទរបស់ Robin Pokorny សម្រាប់ [ការពន្យល់ស៊ីជម្រៅលើផលប៉ះពាល់អវិជ្ជមាននៃការប្រើប្រាស់ index ជា key](https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318)។ 
 ប្រសិនបើអ្នកជ្រើសរើសមិន assign key ជាក់លាក់មួយទៅអោយ items របស់ list បន្ទាប់មក React នឹងប្រើ indexes ជា keys ដោយ default។
+=======
+We don't recommend using indexes for keys if the order of items may change. This can negatively impact performance and may cause issues with component state. Check out Robin Pokorny's article for an [in-depth explanation on the negative impacts of using an index as a key](https://robinpokorny.com/blog/index-as-a-key-is-an-anti-pattern/). If you choose not to assign an explicit key to list items then React will default to using indexes as keys.
+>>>>>>> ba290ad4e432f47a2a2f88d067dacaaa161b5200
 
 នេះគឺជា [ការពន្យល់យ៉ាងស៊ីជម្រៅអំពីហេតុអ្វី keys គឺចាំបាច់](/docs/reconciliation.html#recursing-on-children) ប្រសិនបើអ្នកចាប់អារម្មណ៍ចង់រៀនបន្ថែម។
 
@@ -166,12 +176,6 @@ function NumberList(props) {
     </ul>
   );
 }
-
-const numbers = [1, 2, 3, 4, 5];
-ReactDOM.render(
-  <NumberList numbers={numbers} />,
-  document.getElementById('root')
-);
 ```
 
 **ឧទាហរណ៍៖ ការប្រើប្រាស់ Key បានត្រឹមត្រូវ**
@@ -186,8 +190,7 @@ function NumberList(props) {
   const numbers = props.numbers;
   const listItems = numbers.map((number) =>
     // Correct! Key should be specified inside the array.
-    <ListItem key={number.toString()}
-              value={number} />
+    <ListItem key={number.toString()} value={number} />
   );
   return (
     <ul>
@@ -195,12 +198,6 @@ function NumberList(props) {
     </ul>
   );
 }
-
-const numbers = [1, 2, 3, 4, 5];
-ReactDOM.render(
-  <NumberList numbers={numbers} />,
-  document.getElementById('root')
-);
 ```
 
 [**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/ZXeOGM?editors=0010)
@@ -209,7 +206,11 @@ ReactDOM.render(
 
 ### Keys Must Only Be Unique Among Siblings {#keys-must-only-be-unique-among-siblings}
 
+<<<<<<< HEAD
 Keys ដែលត្រូវបានប្រើក្នុង arrays គួរតែមានតែមួយគត់ (unique) ក្នុងចំណោម siblings រ​បស់ពួកវា។ ទោះជាយ៉ាងណា ពួកវាមិនចាំបាច់មានតែមួយគត់ (unique) ជាលក្ខណះ global នេាះទេ។ យើងអាចប្រើ keys ដូចគ្នានៅពេលដែលយើងបង្កើត arrays ពីរផ្សេងគ្នា៖
+=======
+Keys used within arrays should be unique among their siblings. However, they don't need to be globally unique. We can use the same keys when we produce two different arrays:
+>>>>>>> ba290ad4e432f47a2a2f88d067dacaaa161b5200
 
 ```js{2,5,11,12,19,21}
 function Blog(props) {
@@ -241,10 +242,9 @@ const posts = [
   {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
   {id: 2, title: 'Installation', content: 'You can install React from npm.'}
 ];
-ReactDOM.render(
-  <Blog posts={posts} />,
-  document.getElementById('root')
-);
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Blog posts={posts} />);
 ```
 
 [**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/NRZYGN?editors=0010)
