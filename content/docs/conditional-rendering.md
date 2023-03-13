@@ -8,7 +8,20 @@ redirect_from:
   - "tips/false-in-jsx.html"
 ---
 
+<<<<<<< HEAD
 នៅក្នុង React អ្នកអាចបង្កើត components ខុសៗគ្នាដែល encapsulate ឥរិយាបទ (behavior) ដែលអ្នកត្រូវការ។ បន្ទាប់មកទៀតអ្នកអាច render ពួកវាមួយចំនួនប៉ុណ្ណោះ ដោយអាស្រ័យលើ state នៃ application របស់អ្នក។​
+=======
+> Try the new React documentation.
+> 
+> These new documentation pages teach modern React and include live examples:
+>
+> - [Conditional Rendering](https://beta.reactjs.org/learn/conditional-rendering)
+>
+> The new docs will soon replace this site, which will be archived. [Provide feedback.](https://github.com/reactjs/reactjs.org/issues/3308)
+
+
+In React, you can create distinct components that encapsulate behavior you need. Then, you can render only some of them, depending on the state of your application.
+>>>>>>> 19aa5b4852c3905757edb16dd62f7e7506231210
 
 Conditional rendering នៅក្នុង React ធ្វើការដូចគ្នា និង conditions នៅក្នុង JavaScript។ ប្រើ JavaScript operators ដូចជា [`if`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) ឬក៏ [conditional operator](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) ដើម្បីបង្កើត elements ដែលតំណាងអោយ current state ហើយអនុញ្ញាតឱ្យ React ធ្វើបច្ចុប្បន្នភាព UI ដែលត្រូវនិង conditions។
 
@@ -35,11 +48,9 @@ function Greeting(props) {
   return <GuestGreeting />;
 }
 
-ReactDOM.render(
-  // Try changing to isLoggedIn={true}:
-  <Greeting isLoggedIn={false} />,
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root')); 
+// Try changing to isLoggedIn={true}:
+root.render(<Greeting isLoggedIn={false} />);
 ```
 
 [**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/ZpVxNq?editors=0011)
@@ -111,10 +122,8 @@ class LoginControl extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <LoginControl />,
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root')); 
+root.render(<LoginControl />);
 ```
 
 [**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/QKzAgB?editors=0010)
@@ -124,7 +133,11 @@ ReactDOM.render(
 
 ### Inline If ជាមួយ  Logical && Operator {#inline-if-with-logical--operator}
 
+<<<<<<< HEAD
 អ្នកប្រហែល [បង្កប់ (embed) expressions មួយចំនួននៅក្នុង JSX](/docs/introducing-jsx.html#embedding-expressions-in-jsx) ដោយការដាក់រុំពួកវានៅក្នុងដង្កៀប​អង្កាញ់ (curly braces)។ នេះរួមបញ្ចូលទាំង JavaScript logical `&&` operator។ វាអាចងាយស្រួលសម្រាប់ការដាក់លក្ខខណ្ឌរួមជាមួយ element មួយ៖
+=======
+You may [embed expressions in JSX](/docs/introducing-jsx.html#embedding-expressions-in-jsx) by wrapping them in curly braces. This includes the JavaScript logical `&&` operator. It can be handy for conditionally including an element:
+>>>>>>> 19aa5b4852c3905757edb16dd62f7e7506231210
 
 ```js{6-10}
 function Mailbox(props) {
@@ -142,10 +155,9 @@ function Mailbox(props) {
 }
 
 const messages = ['React', 'Re: React', 'Re:Re: React'];
-ReactDOM.render(
-  <Mailbox unreadMessages={messages} />,
-  document.getElementById('root')
-);
+
+const root = ReactDOM.createRoot(document.getElementById('root')); 
+root.render(<Mailbox unreadMessages={messages} />);
 ```
 
 [**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/ozJddz?editors=0010)
@@ -155,7 +167,24 @@ ReactDOM.render(
 ដូច្នេះប្រសិនបើលក្ខខណ្ឌគឺ `true` នេាះ element នៅខាងស្តាំបន្ទាប់ពី `&&` 
 នឹងបង្ហាញនៅក្នុងលទ្ធផល (output)។ ប្រសិនបើវាគឺ `false` នេាះ React នឹងមិនអើពើ (ignore) ហើយរំលងវា។
 
+<<<<<<< HEAD
 ### Inline If-Else ជាមួយ  Conditional Operator {#inline-if-else-with-conditional-operator}
+=======
+Note that returning a falsy expression will still cause the element after `&&` to be skipped but will return the falsy expression. In the example below, `<div>0</div>` will be returned by the render method.
+
+```javascript{2,5}
+render() {
+  const count = 0;
+  return (
+    <div>
+      {count && <h1>Messages: {count}</h1>}
+    </div>
+  );
+}
+```
+
+### Inline If-Else with Conditional Operator {#inline-if-else-with-conditional-operator}
+>>>>>>> 19aa5b4852c3905757edb16dd62f7e7506231210
 
 Method ផ្សេងទៀតសម្រាប់ដាក់លក្ខខណ្ឌក្នុងការ render elements ជាលក្ខណះ inline គឺប្រើ JavaScript conditional operator [`condition ? true : false`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)។
 
@@ -234,10 +263,8 @@ class Page extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Page />,
-  document.getElementById('root')
-);
+const root = ReactDOM.createRoot(document.getElementById('root')); 
+root.render(<Page />);
 ```
 
 [**សាកល្បងវានៅលើ CodePen**](https://codepen.io/gaearon/pen/Xjoqwm?editors=0010)

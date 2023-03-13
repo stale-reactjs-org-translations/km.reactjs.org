@@ -231,7 +231,11 @@ function FriendListItem(props) {
 }
 ```
 
+<<<<<<< HEAD
 State នៃ components ទាំងនេះគឺ ឯករាជ្យទាំងស្រុង។ Hooks គឺជាមធ្យោបាយដើម្បីកាត់បន្ថយ *stateful logic*, មិនមែន state ខ្លួនវាផ្ទាល់។ តាមពិត, *call* នីមួយៗ ទៅកាន់ Hook មួយ មាន state ដាច់ឆ្ងាយទាំងស្រុង -- ដូច្នេះអ្នកអាចសូម្បីតែប្រើ custom Hook ដូចគ្នាពីរដងនៅក្នុង component តែមួយ។
+=======
+The state of each component is completely independent. Hooks are a way to reuse *stateful logic*, not state itself. In fact, each *call* to a Hook has a completely isolated state -- so you can even use the same custom Hook twice in one component.
+>>>>>>> 19aa5b4852c3905757edb16dd62f7e7506231210
 
 Custom Hooks គឺលើសពី convention មួយជាង feature មួយ។ ប្រសិនបើឈ្មេាះរបស់ function ផ្តើមដោយ "`use`" និងវា call ថា Hooks ផ្សេង, យើងអាចនិយាយបានថាវាគឺជា custom Hook មួយ។ `useSomething` convention នៃការដាក់ឈ្មេាះគឺជារបៀបដែល linter plugin របស់យើងគឺអាចរកឃើញ bugs នៅក្នុង code ដែលកំពុងប្រើ Hooks។
 
